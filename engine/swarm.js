@@ -332,11 +332,12 @@ export function makeSwarmRenderer(ep, canvas) {
   }
 
   // harita aşamalarında detay balonu kaybolur (haritanın doğusu/kenarları mesajın parçası)
-  const firstGeo = tl.stops.find(s => s.shape === 'geo' || s.shape === 'sweep');
+  const MAPS = ['geo', 'sweep', 'flood'];
+  const firstGeo = tl.stops.find(s => MAPS.includes(s.shape));
   function drawLoupe(t, scale, box) {
     const cell = ep.cellMM * scale;
     let a = Math.min(1, Math.max(0, (6 - cell) / 3));
-    const mapKind = box.g.kind === 'geo' || box.g.kind === 'sweep';
+    const mapKind = MAPS.includes(box.g.kind);
     if (firstGeo) a *= t < tl.rw0 ? 1 - ease.exit(seg(t, firstGeo.t0, 0.4)) : (mapKind ? 0 : 1);
     if (a <= 0 || box.w < 60) return;
     const R = 132, inner = 34;

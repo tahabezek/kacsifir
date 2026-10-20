@@ -56,6 +56,21 @@ hedefimiz **< %60**.
 Her format **tek ana fikir + tek doruk + tek kırmızı** taşır. Süre 20–45 sn, son kare ilk kareye
 kusursuz döner (döngü izlenmeyi tekrar sayar).
 
+### "Hangisi daha şaşırtıcı?" — rakibi geçme planı
+Referans: Gri Meseleler "Şaşırtıcı Bilgiler" (98 Shorts, ~295 M izlenme, medyan ~2,5 M; 21–75 sn).
+Onların formatı konuşma; çok sayıda vakada sayı/olgu yanlış. **Bizim farkımız:**
+1. İlk saniyede "Hangisi daha şaşırtıcı?" + A vakasının tek uç sayısı (aynı kanca ritmi).
+2. İki vaka **aynı ölçekte** çizilir (gün başına km, geçen süre, derinlik…) — duyguyla değil cetvelle kıyas.
+3. Her sayı kaynaklı; efsaneler (Mordrake, Ziegland mermisi…) hiç kullanılmaz.
+4. Son: iki vaka yan yana + "Sen hangisine şaşırdın? A mı B mi?" (gerçek oy sorusu).
+Hazır eşleşmeler: `research/hangisi_daha_sasirtici.md` (kıyı kuşu ↔ Bushby, Krikalev ↔ Onoda,
+Alvarenga ↔ Okene, Manjhi ↔ Şili madencileri…).
+
+### Konu havuzu (öncelik)
+`research/topics.md` — öne çıkanlar: Bütün insanlık İstanbul'a sığar mı? · 20 milyon liralık banknot
+(6 sıfır) · Kleopatra–Ay'a iniş · Voyager 1 bir ışık günü (**18 Kasım 2026**, tarihli fırsat) ·
+Sayısal Loto (622 milyonda 1) · bir fincan kahve okyanustan büyük mü? · satranç tahtası ve buğday.
+
 ## 4. Paylaşılabilirlik (en güçlü sinyal: DM ile gönderme)
 
 Mosseri: izlenme süresi, beğeni ve **gönderme (send)** en önemli üç sinyal; takip etmeyenlerde

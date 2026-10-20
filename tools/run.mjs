@@ -12,7 +12,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { channelHealth, postsBetween, createReel } from './buffer.mjs';
-import { summary } from '../engine/summary.js';
+import { summary as tlSummary } from '../engine/summary.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const cfg = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
@@ -23,6 +23,8 @@ const log = (...a) => console.log(new Date().toISOString().slice(11, 19), ...a);
 const summary = [];
 
 // ——— durum defteri ———
+// Bu durumlardaki bölümler yayınlanmamış sayılır ve stoğa geri döner
+const NOT_USED = new Set(['failed', 'skipped']);
 function loadLedger() {
   if (!fs.existsSync(LEDGER)) return { slots: {} };
   return JSON.parse(fs.readFileSync(LEDGER, 'utf8'));
@@ -60,7 +62,7 @@ function episodes() {
     .sort((a, b) => rank(a.id) - rank(b.id) || a.id.localeCompare(b.id));
 }
 function nextEpisode(ledger, taken) {
-  const used = new Set(Object.values(ledger.slots).filter(s => s.status !== 'failed').map(s => s.episode));
+  const used = new Set(Object.values(ledger.slots).filter(s => !NOT_USED.has(s.status)).map(s => s.episode));
   return episodes().find(e => !used.has(e.id) && !taken.has(e.id));
 }
 
@@ -127,7 +129,7 @@ async function status() {
   const posts = await postsBetween(cfg.organizationId, cfg.channelId,
     new Date(now - 5 * 86400e3).toISOString(), new Date(now.getTime() + 7 * 86400e3).toISOString());
   const ledger = loadLedger();
-  const used = new Set(Object.values(ledger.slots).filter(s => s.status !== 'failed').map(s => s.episode));
+  const used = new Set(Object.values(ledger.slots).filter(s => !NOT_USED.has(s.status)).map(s => s.episode));
   const left = episodes().filter(e => !used.has(e.id)).length;
   console.log(JSON.stringify({
     channel: ch,
@@ -183,8 +185,8 @@ async function main() {
     if ((p.t - Date.now()) / 60e3 < cfg.minLeadMinutes) { ledger.slots[k].status = 'failed'; ledger.slots[k].error = 'süre geçti'; summary.push(`⚠️ ${k}: süre geçti, atlandı`); continue; }
     // yarış koruması: Buffer'a son bir kez bak
     const again = await postsBetween(cfg.organizationId, cfg.channelId, new Date(p.t - tol).toISOString(), new Date(p.t.getTime() + tol).toISOString());
-    if (again.length) { ledger.slots[k].status = 'exists'; log(`dolu (yarış) ${k}`); continue; }
-    const sm = summary(p.ep);
+    if (again.length) { ledger.slots[k].status = 'skipped'; ledger.slots[k].note = 'yuvada başka gönderi vardı; bölüm stoğa döndü'; log(`dolu (yarış) ${k}`); continue; }
+    const sm = tlSummary(p.ep);
     const thumb = Math.round((p.ep.coverAt ?? sm.cover) * 1000);
     const text = [p.ep.caption, (p.ep.hashtags || []).join(' ')].filter(Boolean).join('\n\n');
     ledger.slots[k].status = 'sending'; saveLedger(ledger);
@@ -205,7 +207,7 @@ async function main() {
 
 function finish(ledger) {
   saveLedger(ledger);
-  const used = new Set(Object.values(ledger.slots).filter(s => s.status !== 'failed').map(s => s.episode));
+  const used = new Set(Object.values(ledger.slots).filter(s => !NOT_USED.has(s.status)).map(s => s.episode));
   const left = episodes().filter(e => !used.has(e.id)).length;
   const days = left / cfg.slotsTR.length;
   if (days < cfg.lowBacklogWarnDays) summary.push(`⚠️ Bölüm stoğu azaldı: ${left} bölüm (${days.toFixed(1)} gün).`);

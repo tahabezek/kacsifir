@@ -83,13 +83,43 @@ export function carpetGeom(tl, ep, n) {
     const xmin = T[0][0];
     return { kind, A, key: s.ref.key, xcutKm: x, frac, w: (x - xmin) * 1e6, h: g.bboxKm[1] * 1e6, full: refBox(s.ref) };
   }
+  if (kind === 'flood') {
+    const g = GEO[s.ref.key], frac = Math.min(1, A / (g.areaKm2 * 1e12));
+    const T = g.flood.table;
+    let r = T[T.length - 1][0];
+    for (let i = 1; i < T.length; i++) if (T[i][1] >= frac) { const [r0, f0] = T[i - 1], [r1, f1] = T[i]; r = r0 + (r1 - r0) * ((frac - f0) / Math.max(1e-9, f1 - f0)); break; }
+    return { kind, A, key: s.ref.key, rKm: r, origin: g.flood.origin, frac, w: 2 * r * 1e6, h: 2 * r * 1e6, full: refBox(s.ref) };
+  }
   const side = Math.sqrt(A);
   return { kind: 'square', A, w: side, h: side };
 }
 
 // Kamera: px/mm. Halının ve görünen referansın kutusunu bölgeye sığdırır;
 // bekleme sırasında %8 doğrusal geri çekilme (sürekli hareket; yazılar sabit).
+// Yayılma (flood) durağı için kamera: önceki durağın çerçevesinden (merkez = yayılma kökeni)
+// ülke çerçevesine logaritmik açılış. Dönüş: { scale, cx, cy } (mm, ülke koordinatı) ya da null.
+export function floodCamera(tl, ep, t, zone) {
+  const fs = tl.stops.find(s => s.shape === 'flood');
+  if (!fs) return null;
+  const prev = tl.stops[fs.i - 1];
+  const fit = (w, h) => Math.min(zone.w / w, zone.h / h);
+  const A = refBox(prev.ref), B = refBox(fs.ref), o = GEO[fs.ref.key].flood.origin.map(v => v * 1e6);
+  const sA = fit(A.w * 1.04, A.h * 1.04), sB = fit(B.w * 1.04, B.h * 1.04);
+  let u;
+  if (t < fs.t0) return null;
+  if (t < tl.rw0) u = ease.state(seg(t, fs.t0, (fs.t1 - fs.t0) * 0.8));
+  else {
+    u = 1 - ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) * 0.35));
+    if (u <= 0) return null;
+  }
+  let scale = Math.exp(lerp(Math.log(sA), Math.log(sB), u));
+  if (t >= fs.t1 && t < tl.rw0) scale /= 1 + 0.08 * seg(t, fs.t1, Math.max(0.01, fs.t2 - fs.t1));
+  return { scale, cx: lerp(o[0], 0, u), cy: lerp(o[1], 0, u) };
+}
+
 export function cameraScale(tl, ep, t, zone) {
+  const fc = floodCamera(tl, ep, t, zone);
+  if (fc) return fc.scale;
   const fit = (w, h) => Math.min(zone.w / w, zone.h / h);
   const n = countAt(tl, t);
   const g = carpetGeom(tl, ep, n);

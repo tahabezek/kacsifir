@@ -4,7 +4,7 @@
 import { W, H, ease, seg, lerp, spring, mulberry32 } from './core.js';
 import { C, F, setFont, wrap, revealText, inOut, grain } from './tower.js';
 import { ANT_CARD, drawAnt } from './creatures.js';
-import { buildSwarmTimeline, countAt, stopAt, cameraScale, carpetGeom, refBox } from './swarm_core.js';
+import { buildSwarmTimeline, countAt, stopAt, cameraScale, carpetGeom, refBox, floodCamera } from './swarm_core.js';
 import { GEO } from './geo/shapes.js';
 
 const CREATURES = { ant: { card: ANT_CARD, draw: drawAnt } };
@@ -224,9 +224,16 @@ export function makeSwarmRenderer(ep, canvas) {
   }
 
   // halı yolu (px): şekle göre
-  function carpetPath(g, scale) {
-    const cx = zone.cx, cy = zone.cy;
+  function carpetPath(g, scale, cam) {
+    const cx = zone.cx - (cam ? cam.cx * scale : 0), cy = zone.cy - (cam ? cam.cy * scale : 0);
     ctx.beginPath();
+    if (g.kind === 'flood') {
+      const k = 1e6 * scale, G = GEO[g.key];
+      for (const r of G.rings) r.forEach(([px, py], i) => (i ? ctx.lineTo(cx + px * k, cy + py * k) : ctx.moveTo(cx + px * k, cy + py * k)));
+      const ox = cx + g.origin[0] * k, oy = cy + g.origin[1] * k, rr = g.rKm * k;
+      const tl0 = cx - G.bboxKm[0] * k / 2, tr0 = cx + G.bboxKm[0] * k / 2;
+      return { x0: Math.max(ox - rr, tl0), x1: Math.min(ox + rr, tr0), y1: Math.min(oy + rr, cy + G.bboxKm[1] * k / 2), disk: [ox, oy, rr], top: oy - rr };
+    }
     if (g.kind === 'geo') {
       const k = 1e6 * scale * g.f;
       for (const r of GEO[g.key].rings) r.forEach(([px, py], i) => (i ? ctx.lineTo(cx + px * k, cy + py * k) : ctx.moveTo(cx + px * k, cy + py * k)));
@@ -243,7 +250,7 @@ export function makeSwarmRenderer(ep, canvas) {
     return { x0: cx - w / 2, x1: cx + w / 2, y1: cy + h / 2 };
   }
 
-  function drawCarpet(t, n, scale, landedHero) {
+  function drawCarpet(t, n, scale, landedHero, cam) {
     const g = carpetGeom(tl, ep, n);
     const cell = ep.cellMM * scale;
     const cx = zone.cx, cy = zone.cy;
@@ -285,10 +292,11 @@ export function makeSwarmRenderer(ep, canvas) {
     }
     // doku: şekle kırpılmış karo
     ctx.save();
-    const b = carpetPath(g, scale);
-    ctx.clip(b.clipX != null ? 'nonzero' : 'nonzero');
+    const b = carpetPath(g, scale, cam);
+    ctx.clip();
     if (b.clipX != null) { ctx.beginPath(); ctx.rect(0, 0, b.clipX, H); ctx.clip(); }
-    const red = g.kind === 'sweep' && landedHero > 0;
+    if (b.disk) { ctx.beginPath(); ctx.arc(b.disk[0], b.disk[1], b.disk[2], 0, Math.PI * 2); ctx.clip(); }
+    const red = (g.kind === 'sweep' || g.kind === 'flood') && landedHero > 0;
     ctx.fillStyle = red ? C.red : 'rgba(28,27,24,0.10)';
     ctx.globalAlpha = red ? landedHero : 1;
     ctx.fillRect(0, 0, W, H);
@@ -297,7 +305,7 @@ export function makeSwarmRenderer(ep, canvas) {
     const src = mipFor(tpx);
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
     if (tpx >= 8) {
-      const ox = cx - 0.5 * cell, oy = cy - 0.5 * cell;
+      const ox = cx - (cam ? cam.cx * scale : 0) - 0.5 * cell, oy = cy - (cam ? cam.cy * scale : 0) - 0.5 * cell;
       const i0 = Math.floor((b.x0 - ox) / tpx) - 1, i1 = Math.ceil((b.x1 - ox) / tpx) + 1;
       const j0 = Math.floor((zone.top - 200 - oy) / tpx) - 1, j1 = Math.ceil((zone.bottom + 200 - oy) / tpx) + 1;
       for (let a = i0; a <= i1; a++) for (let bb = j0; bb <= j1; bb++) ctx.drawImage(src, ox + a * tpx, oy + bb * tpx, tpx, tpx);
@@ -306,7 +314,7 @@ export function makeSwarmRenderer(ep, canvas) {
       ctx.fillStyle = 'rgba(28,27,24,0.42)'; ctx.fillRect(0, 0, W, H);
     }
     ctx.restore();
-    return { x0: b.x0, x1: b.x1, y1: b.y1, w: b.x1 - b.x0, top: cy - g.h * scale / 2, g };
+    return { x0: b.x0, x1: b.x1, y1: b.y1, w: b.x1 - b.x0, top: b.top ?? cy - g.h * scale / 2, g };
   }
 
   // harita aşamalarında detay balonu kaybolur (haritanın doğusu/kenarları mesajın parçası)
@@ -342,7 +350,7 @@ export function makeSwarmRenderer(ep, canvas) {
 
   function drawDimension(box) {
     const g = box.g;
-    const y = zone.bottom + 26, x0 = box.x0, x1 = box.x1;
+    const y = zone.bottom + 26, x0 = Math.max(safe.x0, box.x0), x1 = Math.min(safe.x1, box.x1);
     ctx.strokeStyle = C.ink; ctx.lineWidth = 2;
     ctx.setLineDash([5, 6]);
     ctx.beginPath(); ctx.moveTo(x0, Math.min(box.y1 + 8, y)); ctx.lineTo(x0, y + 12);
@@ -379,7 +387,8 @@ export function makeSwarmRenderer(ep, canvas) {
     ctx.drawImage(grain(), 0, 0);
     drawGrid(t);
     const n = countAt(tl, t);
-    const scale = cameraScale(tl, ep, t, zone);
+    const cam = floodCamera(tl, ep, t, zone);
+    const scale = cam ? cam.scale : cameraScale(tl, ep, t, zone);
     const landed = tl.hero && t >= tl.hero.tl && t < tl.rw0 + 0.3;
     const heroP = tl.hero ? ease.enter(seg(t, tl.hero.tl, 0.3)) * (t < tl.rw0 ? 1 : 1 - ease.exit(seg(t, tl.rw0, 0.35))) : 0;
     // referanslar: önce halının altındakiler, sonra (oda/harita) üstte
@@ -387,15 +396,19 @@ export function makeSwarmRenderer(ep, canvas) {
     for (const s of tl.stops) {
       if (!s.ref) continue;
       const next = tl.stops[s.i + 1];
-      const vis = t >= s.t1 && t < (next ? next.t1 : tl.rw0 + 0.35);
+      const early = s.shape === 'flood';
+      const vis = t >= (early ? s.t0 : s.t1) && t < (next ? next.t1 : tl.rw0 + 0.35);
       if (!vis) continue;
       const out = t > (next ? next.t0 : tl.rw0) ? 1 - ease.exit(seg(t, next ? next.t0 : tl.rw0, 0.35)) : 1;
-      const p = ease.enter(seg(t, s.hero ? s.tl : s.t1, s.hero ? 0.45 : 0.55)) * out;
+      const p = ease.enter(seg(t, early ? s.t0 : s.hero ? s.tl : s.t1, early ? 1.2 : s.hero ? 0.45 : 0.55)) * out;
       if (['room', 'geo'].includes(s.ref.kind)) over.push({ s, p });
       else drawRef(ctx, s.ref, zone.cx, zone.cy, scale, p, C.ink);
     }
-    const box = drawCarpet(t, n, scale, heroP);
-    for (const { s, p } of over) if (p > 0) drawRef(ctx, s.ref, zone.cx, zone.cy, scale, p, s.hero && s.ref.kind === 'room' ? C.red : C.ink);
+    const box = drawCarpet(t, n, scale, heroP, cam);
+    for (const { s, p } of over) if (p > 0) {
+      const useCam = cam && s.shape === 'flood';
+      drawRef(ctx, s.ref, zone.cx - (useCam ? cam.cx * scale : 0), zone.cy - (useCam ? cam.cy * scale : 0), scale, p, s.hero && s.ref.kind === 'room' ? C.red : C.ink);
+    }
     drawLoupe(t, scale, box);
     drawDimension(box);
     drawText(t, n, landed);

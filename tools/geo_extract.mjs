@@ -100,11 +100,30 @@ out.turkey.sweepX = Xf;
 out.turkey.provincesNearSweep = trProv.filter(p => Math.abs(p.x - Xf) < 45).sort((a, b) => a.y - b.y).map(p => `${p.name} (${p.lon.toFixed(2)}°D, ${(p.x - Xf).toFixed(0)} km)`);
 out.turkey.sweepLon = 35 + (Xf + T.center[0]) / (KM_LON * Math.cos((39 * Math.PI) / 180));
 
+
+// İstanbul (Fatih, 28.976°D 41.013°K) merkezli daire ile Türkiye kesişimi: Monte Carlo yerine ince ızgara
+// merkez: İstanbul il sınırının (aynı veri) sınır kutusu merkezi — İstanbul basamağında ekran merkezi olan nokta
+const istLL = polys(ist.geometry).flatMap(pl => pl[0]);
+const istC = [(Math.min(...istLL.map(q => q[0])) + Math.max(...istLL.map(q => q[0]))) / 2, (Math.min(...istLL.map(q => q[1])) + Math.max(...istLL.map(q => q[1]))) / 2];
+out.istanbulCenterLonLat = istC.map(v => +v.toFixed(4));
+const O = P(istC); const ox = O[0] - T.center[0], oy = O[1] - T.center[1];
+const inside = (x, y) => { let c = false; for (const r of T.rings) for (let i = 0, j = r.length - 1; i < r.length; j = i++) { const [xi, yi] = r[i], [xj, yj] = r[j]; if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) c = !c; } return c; };
+const step = 4; const cells = [];
+const ysT = T.rings.flat().map(p => p[1]);
+for (let x = xmin; x <= xmax; x += step) for (let y = Math.min(...ysT); y <= Math.max(...ysT); y += step) if (inside(x, y)) cells.push(Math.hypot(x - ox, y - oy));
+cells.sort((a, b) => a - b);
+const flood = []; for (let k = 0; k <= 300; k++) { const fr = k / 300; flood.push([+cells[Math.min(cells.length - 1, Math.floor(fr * (cells.length - 1)))].toFixed(2), +fr.toFixed(4)]); }
+out.turkey.flood = { origin: [+ox.toFixed(3), +oy.toFixed(3)], table: flood };
+const rF = cells[Math.floor(frac * (cells.length - 1))];
+out.turkey.floodR = rF;
+out.turkey.provincesOnFloodEdge = trProv.map(q => ({ ...q, d: Math.hypot(q.x - ox, q.y - oy) })).filter(q => Math.abs(q.d - rF) < 60).sort((a, b) => a.x - b.x).map(q => `${q.name} (${(q.d - rF).toFixed(0)} km)`);
+out.turkey.provincesInside = trProv.map(q => ({ ...q, d: Math.hypot(q.x - ox, q.y - oy) })).filter(q => q.d < rF).length;
+
 fs.mkdirSync('engine/geo', { recursive: true });
 fs.writeFileSync('engine/geo/shapes.json', JSON.stringify(out));
 console.log({
   turkeyKm2: T.areaKm2, vaticanKm2: out.vatican.areaKm2, istanbulKm2: out.istanbul.areaKm2,
   istanbulName: ist && (ist.properties.name || ist.properties.display_name), points: { tr: T.rings.reduce((s, r) => s + r.length, 0), ist: out.istanbul.rings.reduce((s, r) => s + r.length, 0), va: out.vatican.rings.reduce((s, r) => s + r.length, 0) },
-  frac: frac.toFixed(4), sweepLonApprox: out.turkey.sweepLon.toFixed(2), near: out.turkey.provincesNearSweep,
+  floodRkm: out.turkey.floodR && out.turkey.floodR.toFixed(0), edge: out.turkey.provincesOnFloodEdge, insideCount: out.turkey.provincesInside, frac: frac.toFixed(4), sweepLonApprox: out.turkey.sweepLon.toFixed(2), near: out.turkey.provincesNearSweep,
   bytes: fs.statSync('engine/geo/shapes.json').size,
 });

@@ -1,8 +1,19 @@
 // Şablondan bağımsız zaman özeti: kritik, önizleme ve planlayıcı bunu okur.
 import { buildTimeline } from './core.js';
 import { buildSwarmTimeline } from './swarm_core.js';
+import { buildDocTimeline } from './doc.js';
 
 export function summary(ep) {
+  if (ep.template === 'doc') {
+    const tl = buildDocTimeline(ep), S = tl.S;
+    return {
+      duration: tl.duration, rw0: S.loop.t0, rw1: S.loop.t1, heroTl: tl.heroLand,
+      cover: 0,
+      keys: [0, ...tl.folds.map(f => f.t1 + 0.3), S.why.t0 + 1.2, S.why.t1 - 0.6, S.gallivan.t0 + 1.0, S.gallivan.t1 - 0.6, S.records.t1 - 0.6, S.hero.t0 + 1.5, tl.heroLand + 0.3, tl.heroLand + 1.5, S.loop.t0 + 0.3],
+      fast: tl.folds[3].t0 + (tl.folds[3].t1 - tl.folds[3].t0) / 2,
+      lastLand: S.records.t1 - 0.6, firstLand: tl.folds[0].t1,
+    };
+  }
   if (ep.template === 'swarm') {
     const tl = buildSwarmTimeline(ep);
     const S = tl.stops;

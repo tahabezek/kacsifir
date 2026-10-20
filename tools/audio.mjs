@@ -5,6 +5,7 @@ import { spawnSync } from 'node:child_process';
 import ffmpegPath from 'ffmpeg-static';
 import { buildTimeline, mulberry32, ease, seg, tallyPlan } from '../engine/core.js';
 import { swarmCues } from '../engine/swarm_core.js';
+import { docCues } from '../engine/doc.js';
 
 const SR = 48000;
 
@@ -26,7 +27,7 @@ function towerCues(ep) {
 }
 
 export function synth(ep) {
-  const tl = ep.template === 'swarm' ? swarmCues(ep) : towerCues(ep);
+  const tl = ep.template === 'swarm' ? swarmCues(ep) : ep.template === 'doc' ? docCues(ep) : towerCues(ep);
   const D = tl.duration;
   const N = Math.ceil(D * SR);
   const Lc = new Float32Array(N), Rc = new Float32Array(N);

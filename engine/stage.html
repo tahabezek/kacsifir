@@ -14,8 +14,8 @@ await Promise.all([
 ]);
 await document.fonts.ready;
 const canvas = document.getElementById('c');
-const r = ep.template === 'swarm'
-  ? (await import('./swarm.js')).makeSwarmRenderer(ep, canvas)
+const r = ep.template === 'swarm' ? (await import('./swarm.js')).makeSwarmRenderer(ep, canvas)
+  : ep.template === 'doc' ? (await import('./doc.js')).makeDocRenderer(ep, canvas)
   : makeRenderer(ep, canvas);
 window.DURATION = r.duration;
 window.TIMELINE = r.timeline;

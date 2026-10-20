@@ -1,0 +1,103 @@
+{
+  "id": "012",
+  "slug": "kagit-efsanesi",
+  "template": "doc",
+  "serial": "№ 012 · BELGESEL",
+  "bpm": 96,
+  "folds": 7,
+  "foldEvery": 1.5,
+  "silenceBeats": 0.8,
+  "heroLandBeat": 4,
+  "scenes": [
+    {
+      "id": "fold",
+      "beats": 12,
+      "title": [
+        "Bir kâğıdı en fazla",
+        "kaç kez katlayabilirsin?"
+      ]
+    },
+    {
+      "id": "why",
+      "beats": 10,
+      "title": [
+        "Peki neden",
+        "7'de duruyoruz?"
+      ]
+    },
+    {
+      "id": "gallivan",
+      "beats": 11,
+      "title": [
+        "Efsaneyi 2002'de bir",
+        "lise öğrencisi çürüttü"
+      ]
+    },
+    {
+      "id": "records",
+      "beats": 8,
+      "title": [
+        "Bugünkü rekor:",
+        "13 katlama"
+      ]
+    },
+    {
+      "id": "hero",
+      "beats": 10,
+      "title": [
+        "42 kez katlasaydın",
+        "ne olurdu?"
+      ]
+    },
+    {
+      "id": "loop",
+      "beats": 2.5
+    }
+  ],
+  "text": {
+    "foldSay": "Her katlamada kalınlık ikiye katlanır.",
+    "whyA": "Kıvrım kâğıdı yer: her katlama gereken uzunluğu yaklaşık 4 katına çıkarır.",
+    "whyB": "A4 tek yönde ancak 6 kez katlanır; 7. kat için 88 cm kâğıt gerekir.",
+    "gPlace": "POMONA, KALİFORNİYA",
+    "gWho": "Britney Gallivan, gereken uzunluğu hesaplayan formülü buldu:",
+    "gDid": "Sonra 1,2 km'lik tuvalet kâğıdını tek yönde 12 kez katladı.",
+    "hThickLabel": "KALINLIK",
+    "hThick": "439.805 km",
+    "hThickSay": "Ay'ı 55.000 km geçerdi.",
+    "hLenLabel": "GEREKEN KÂĞIT",
+    "hLen": "107.000",
+    "hLenUnit": "ışık yılı",
+    "hLenSay": "Işık bile bu kâğıdın bir ucundan öbürüne 107.000 yılda varırdı."
+  },
+  "records": [
+    {
+      "n": 7,
+      "label": [
+        "efsane"
+      ]
+    },
+    {
+      "n": 12,
+      "label": [
+        "2002",
+        "Gallivan"
+      ]
+    },
+    {
+      "n": 13,
+      "label": [
+        "2011",
+        "St. Mark's Okulu"
+      ]
+    }
+  ],
+  "caption": "\"Bir kâğıt en fazla 7 kez katlanır\" diye bilinir. 2002'de Kaliforniyalı lise öğrencisi Britney Gallivan bunu çürüttü: katlamak için gereken uzunluğu hesaplayan formülü buldu, sonra 1,2 km'lik tuvalet kâğıdını tek yönde 12 kez katladı. 2011'de St. Mark's Okulu öğrencileri MIT'nin koridorunda 13 katlamaya ulaştı.\n\nSorun kalınlık değil, kıvrım: her katlama gereken kâğıdı yaklaşık 4 katına çıkarır. 0,1 mm'lik bir kâğıdı 42 kez katlasaydın kalınlığı Ay'ı geçerdi, ama bunun için 107.000 ışık yılı uzunluğunda kâğıt gerekirdi.\n\nSen kaç kez katlayabildin? Yorumlara yaz.\n\nKaynaklar: Gallivan, How to Fold Paper in Half Twelve Times (2002) ve Guinness Dünya Rekorları · NPR, 2011 (St. Mark's Okulu, 13 katlama) · Gallivan formülü L = πt/6 · (2ⁿ+4)(2ⁿ−1), t = 0,1 mm · 15 Temmuz Şehitler (Boğaziçi) Köprüsü ana açıklığı 1.074 m.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#bilgi",
+    "#bilim",
+    "#belgesel"
+  ],
+  "foldStartBeat": 0.4
+}

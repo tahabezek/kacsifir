@@ -15,7 +15,10 @@ for (const f of files) {
   const ep = JSON.parse(fs.readFileSync(f, 'utf8'));
   glyphCheck(ep);
   let times;
-  if (ep.template === 'swarm') {
+  if (ep.template === 'doc') {
+    const sm = (await import('../engine/summary.js')).summary(ep);
+    times = process.env.ALL ? sm.keys : [0, sm.keys[4], sm.keys[9], sm.keys[13]];
+  } else if (ep.template === 'swarm') {
     const tl = buildSwarmTimeline(ep);
     const S = tl.stops;
     times = (process.env.ALL ? S.map(s => s.t1 + 0.7) : [0, S[2].t1 + 0.7, S[4].t1 + 0.7, tl.hero.tl + 1.8]);

@@ -71,12 +71,16 @@ export function glyphCheck(ep) {
     }
   }
   const covered = (fam, ch) => ch === ' ' || (ranges[fam] || []).some(([a, b]) => ch.codePointAt(0) >= a && ch.codePointAt(0) <= b);
-  const archivo = [...ep.question, ...(ep.items || []).flatMap(i => [i.name, i.kicker || '']),
-    ...((ep.format && ep.format.units) || []).map(u => u.name), ...(ep.stops || []).map(s => s.say || ''), ep.unit || '', '0123456789.,'];
-  const mono = [ep.serial, ...(ep.items || []).map(i => i.tag), '0123456789,. mcm'];
+  const skip = new Set(['caption', 'hashtags', 'slug', 'id', 'template', 'creature', 'shape', 'kind', 'key', 'disabledNote', '_not']);
+  const strings = [];
+  const walk = (v, k) => { if (skip.has(k)) return; if (typeof v === 'string') strings.push(k === 'serial' ? { mono: v } : v); else if (Array.isArray(v)) v.forEach(x => walk(x)); else if (v && typeof v === 'object') for (const [kk, vv] of Object.entries(v)) walk(vv, kk); };
+  walk(ep);
+  strings.push('0123456789.,');
   const bad = [];
-  for (const s of archivo) for (const ch of s) if (!covered('Archivo', ch)) bad.push(`Archivo:${ch}`);
-  for (const s of mono) for (const ch of s) if (!covered('IBM Plex Mono', ch)) bad.push(`Plex:${ch}`);
+  for (const str of strings) {
+    const monoOnly = typeof str === 'object';
+    for (const ch of monoOnly ? str.mono : str) { if (!monoOnly && !covered('Archivo', ch)) bad.push('Archivo:' + ch); if (!covered('IBM Plex Mono', ch)) bad.push('Plex:' + ch); }
+  }
   if (bad.length) throw new Error('Fontta olmayan karakter: ' + [...new Set(bad)].join(' '));
 }
 

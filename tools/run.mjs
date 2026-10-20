@@ -12,7 +12,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { channelHealth, postsBetween, createReel } from './buffer.mjs';
-import { buildTimeline } from '../engine/core.js';
+import { summary } from '../engine/summary.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const cfg = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
@@ -51,9 +51,13 @@ const slotKey = t => t.toISOString().slice(0, 16) + 'Z';
 
 // ——— bölüm stoğu ———
 function episodes() {
+  const qf = path.join(root, 'state', 'queue.json');
+  const order = fs.existsSync(qf) ? JSON.parse(fs.readFileSync(qf, 'utf8')).order : [];
+  const rank = id => (order.includes(id) ? order.indexOf(id) : order.length);
   return fs.readdirSync(path.join(root, 'episodes')).filter(f => f.endsWith('.json')).sort()
     .map(f => ({ file: path.join('episodes', f), ...JSON.parse(fs.readFileSync(path.join(root, 'episodes', f), 'utf8')) }))
-    .filter(e => !e.disabled);
+    .filter(e => !e.disabled)
+    .sort((a, b) => rank(a.id) - rank(b.id) || a.id.localeCompare(b.id));
 }
 function nextEpisode(ledger, taken) {
   const used = new Set(Object.values(ledger.slots).filter(s => s.status !== 'failed').map(s => s.episode));
@@ -180,8 +184,8 @@ async function main() {
     // yarış koruması: Buffer'a son bir kez bak
     const again = await postsBetween(cfg.organizationId, cfg.channelId, new Date(p.t - tol).toISOString(), new Date(p.t.getTime() + tol).toISOString());
     if (again.length) { ledger.slots[k].status = 'exists'; log(`dolu (yarış) ${k}`); continue; }
-    const tl = buildTimeline(p.ep);
-    const thumb = Math.round(Math.max(0, (tl.hero ? tl.hero.tl - 0.4 : 0)) * 1000);
+    const sm = summary(p.ep);
+    const thumb = Math.round((p.ep.coverAt ?? sm.cover) * 1000);
     const text = [p.ep.caption, (p.ep.hashtags || []).join(' ')].filter(Boolean).join('\n\n');
     ledger.slots[k].status = 'sending'; saveLedger(ledger);
     try {

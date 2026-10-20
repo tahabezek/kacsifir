@@ -8,8 +8,8 @@
   "rewindBeats": 2,
   "startFrac": 0.3,
   "question": [
-    "Güneş'in ışığı",
-    "kaç dakikada gelir?"
+    "Güneş'in ışığı bize",
+    "kaç dakikada ulaşır?"
   ],
   "format": {
     "dec": 100,

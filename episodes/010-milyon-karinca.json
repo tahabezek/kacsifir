@@ -1,0 +1,87 @@
+{
+  "id": "010",
+  "slug": "milyon-karinca",
+  "template": "swarm",
+  "serial": "№ 010 · BİR ARADA",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2.5,
+  "creature": "ant",
+  "unit": "karınca",
+  "cellMM": 5,
+  "question": [
+    "1 milyon karınca",
+    "bir arada nasıl görünür?"
+  ],
+  "stops": [
+    {
+      "n": 1,
+      "hold": 2.5,
+      "say": "Tek bir karınca yaklaşık 5 mm."
+    },
+    {
+      "n": 10,
+      "grow": 1.5,
+      "hold": 2,
+      "ref": {
+        "kind": "coin"
+      },
+      "say": "10 karınca bir 1 TL'nin üstüne sığar."
+    },
+    {
+      "n": 100,
+      "grow": 1.5,
+      "hold": 2,
+      "ref": {
+        "kind": "card"
+      },
+      "say": "100 karınca bir kredi kartına sığar."
+    },
+    {
+      "n": 1000,
+      "grow": 1.5,
+      "hold": 2,
+      "ref": {
+        "kind": "plate"
+      },
+      "say": "1.000 karınca bir tabağa sığar."
+    },
+    {
+      "n": 10000,
+      "grow": 1.5,
+      "hold": 2,
+      "ref": {
+        "kind": "tile"
+      },
+      "say": "10.000 karınca bir yer karosuna sığar."
+    },
+    {
+      "n": 100000,
+      "grow": 1.5,
+      "hold": 2,
+      "ref": {
+        "kind": "bed",
+        "dy": 180
+      },
+      "say": "100.000 karınca bir yatağı neredeyse kaplar."
+    },
+    {
+      "n": 1000000,
+      "grow": 3,
+      "hold": 7,
+      "hero": true,
+      "ref": {
+        "kind": "room"
+      },
+      "say": "Bir odanın zemini: 5 × 5 metre."
+    }
+  ],
+  "caption": "1 milyon karınca bir araya gelse 5 × 5 metrelik bir odanın zeminini baştan sona kaplar.\n\n10 tanesi bir 1 TL'ye, 100 tanesi bir kredi kartına, 100 bini bir çift kişilik yatağa sığar.\n\nDünyada yaklaşık 20 katrilyon karınca var. Bu, kişi başına 2,5 milyon karınca demek.\n\nSence senin evine kaç karınca sığar? Yorumlara yaz.\n\nVarsayım: 5 mm'lik bir işçi karınca, sıkışık dizilişte 5 × 5 mm yer kaplar. Kaynak (dünyadaki karınca sayısı): Schultheiss vd., PNAS, 2022.",
+  "hashtags": [
+    "#karınca",
+    "#doğa",
+    "#sayılar",
+    "#bilim",
+    "#ilginçbilgiler"
+  ]
+}

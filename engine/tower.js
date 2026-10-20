@@ -9,7 +9,7 @@ export const C = {
   paper: '#ECE5D5', ink: '#1C1B18', red: '#E0391C', graphite: '#8B8577',
   grid: 'rgba(28,27,24,0.07)', gridMajor: 'rgba(28,27,24,0.13)',
 };
-const F = {
+export const F = {
   head: s => `800 ${s}px Archivo`,
   name: s => `600 ${s}px Archivo`,
   mono: s => `500 ${s}px "IBM Plex Mono"`,
@@ -28,7 +28,8 @@ export function layout(ep, w = W, h = H) {
   const fill = 0.78 * (area.bottom - area.top);
   return {
     safe, cols, colW, down, area, ground, fill,
-    ledger: { x: safe.x0, w: cols[0] - 44 - safe.x0, y: down ? 720 : 668 },
+    ledger: { x: safe.x0, w: cols[0] - 44 - safe.x0 },
+    chartX0: cols[0] - 64,
     serial: { x: safe.x0, y: 318 },
     question: { x: safe.x0, y: 356, w: safe.x1 - safe.x0 },
     tagY: down ? ground - 22 : ground + 56,
@@ -36,9 +37,9 @@ export function layout(ep, w = W, h = H) {
 }
 
 // ——— Yardımcılar ———
-function setFont(ctx, f) { ctx.font = f; ctx.fontStretch = 'semi-condensed'; }
+export function setFont(ctx, f) { ctx.font = f; ctx.fontStretch = 'semi-condensed'; }
 
-function wrap(ctx, text, maxW) {
+export function wrap(ctx, text, maxW) {
   // sayı ile ardından gelen kelime ayrılmaz ("31 yaşını", "8 dakika", "%0,19'u")
   const raw = text.split(' ');
   const words = [];
@@ -56,7 +57,7 @@ function wrap(ctx, text, maxW) {
 }
 
 // Maskeli yazı açılışı: satır, kendi kutusunun içinde aşağıdan kayarak gelir (karartma yok).
-function revealText(ctx, text, x, y, size, p, color, align = 'left') {
+export function revealText(ctx, text, x, y, size, p, color, align = 'left') {
   if (p <= 0) return;
   const lh = size * 1.12;
   ctx.save();
@@ -72,7 +73,7 @@ function revealText(ctx, text, x, y, size, p, color, align = 'left') {
 }
 
 // Giriş/çıkış ilerlemesi: giriş 0,5 sn, çıkış 0,3 sn (girişin %60'ı)
-function inOut(t, tin, tout) {
+export function inOut(t, tin, tout) {
   if (t < tin) return 0;
   let p = ease.enter(seg(t, tin, 0.5));
   if (tout != null && t > tout) p *= 1 - ease.exit(seg(t, tout, 0.3));
@@ -81,7 +82,7 @@ function inOut(t, tin, tout) {
 
 // ——— Kâğıt dokusu: tohumlu, bir kez üretilir ———
 let grainCanvas = null;
-function grain() {
+export function grain() {
   if (grainCanvas) return grainCanvas;
   const g = document.createElement('canvas');
   g.width = W; g.height = H;
@@ -164,12 +165,14 @@ export function makeRenderer(ep, canvas) {
     }
   }
 
+  // Zemin cetveli yalnızca grafik bölgesinin altında: sol taraftaki defter güvenli alanın sonuna kadar iner.
   function drawGround() {
+    const x0 = L.chartX0;
     ctx.strokeStyle = C.ink; ctx.lineWidth = 3;
-    ctx.beginPath(); ctx.moveTo(L.safe.x0, L.ground); ctx.lineTo(L.safe.x1, L.ground); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x0, L.ground); ctx.lineTo(L.safe.x1, L.ground); ctx.stroke();
     ctx.lineWidth = 2;
     ctx.beginPath();
-    for (let i = 0, x = L.safe.x0; x <= L.safe.x1; i++, x += 24) {
+    for (let i = 0, x = x0; x <= L.safe.x1; i++, x += 24) {
       const len = i % 5 === 0 ? 18 : 9;
       const y0 = L.ground, y1 = L.down ? L.ground - len : L.ground + len;
       ctx.moveTo(x + 0.5, y0); ctx.lineTo(x + 0.5, y1);
@@ -177,16 +180,22 @@ export function makeRenderer(ep, canvas) {
     ctx.stroke();
   }
 
-  function drawQuestion() {
-    setFont(ctx, F.mono(40));
-    ctx.fillStyle = C.graphite; ctx.textAlign = 'left';
-    ctx.fillText(ep.serial, L.serial.x, L.serial.y);
-    // Soru: kare 0'dan itibaren ekranda, hiç kıpırdamaz
+  function questionSize() {
     let size = 112;
     setFont(ctx, F.head(size));
     while (size > 76 && ep.question.some(q => ctx.measureText(q).width > L.question.w)) {
       size -= 2; setFont(ctx, F.head(size));
     }
+    return size;
+  }
+
+  function drawQuestion() {
+    setFont(ctx, F.mono(40));
+    ctx.fillStyle = C.graphite; ctx.textAlign = 'left';
+    ctx.fillText(ep.serial, L.serial.x, L.serial.y);
+    // Soru: kare 0'dan itibaren ekranda, hiç kıpırdamaz
+    const size = questionSize();
+    setFont(ctx, F.head(size));
     ctx.fillStyle = C.ink;
     ep.question.forEach((q, i) => ctx.fillText(q, L.question.x, L.question.y + size * 0.86 + i * size * 1.0));
   }
@@ -196,11 +205,13 @@ export function makeRenderer(ep, canvas) {
   let rows = null;
   function ledgerRows() {
     if (rows) return rows;
-    const limit = (L.down ? L.area.bottom : L.ground) - 40;
+    const limit = L.safe.y1 - 10;
+    const qs = questionSize();
+    const top = Math.max(L.question.y + qs * 0.86 + (ep.question.length - 1) * qs + 64, L.down ? L.ground + 40 : 0);
     // Kahramanın açıklaması (kicker) bir sonraki satırla aynı yuvayı paylaşır:
     // açıklama, sonraki öğe girmeden 0,35 sn önce çıkar.
-    for (let k = 1; k >= 0.86; k -= 0.02) {
-      rows = []; let y = L.ledger.y;
+    for (let k = 1; k >= 0.7; k -= 0.02) {
+      rows = []; let y = top;
       const nameS = Math.max(44, Math.round(44 * k)), kickS = 46;
       let slotEnd = 0;
       tl.items.forEach((it, i) => {
@@ -208,25 +219,34 @@ export function makeRenderer(ep, canvas) {
         let numSize = Math.round((big ? 132 : 88) * k);
         // sayaç büyürken alabileceği en geniş metin bile defter genişliğine sığmalı
         const from = i === 0 ? it.value * tl.startFrac : tl.items[i - 1].value;
-        let widest = 0;
+        // Önce birim sayının yanına sığar mı? Sığmazsa sayı küçülmez, birim alt satıra iner;
+        // sayının kendisi de sığmıyorsa ancak o zaman küçülür.
+        let widest = 0, widestNum = 0;
         for (let s = 0; s <= 48; s++) {
           const v = Math.exp(lerp(Math.log(from), Math.log(it.value), s / 48));
           const f = formatValue(v, ep.format);
           setFont(ctx, F.head(numSize));
           const w1 = ctx.measureText(f.num).width;
-          setFont(ctx, F.name(Math.max(44, Math.round(numSize * 0.42))));
-          widest = Math.max(widest, w1 + numSize * 0.13 + ctx.measureText(f.unit).width);
+          const uS = Math.max(44, Math.round(numSize * 0.42));
+          setFont(ctx, F.name(uS));
+          widestNum = Math.max(widestNum, w1);
+          widest = Math.max(widest, w1 + uS * 0.3 + ctx.measureText(f.unit).width);
         }
-        if (widest > L.ledger.w) numSize = Math.max(56, Math.floor(numSize * L.ledger.w / widest));
+        let unitBelow = false;
+        if (widest > L.ledger.w) {
+          unitBelow = true;
+          if (widestNum > L.ledger.w) numSize = Math.max(56, Math.floor(numSize * L.ledger.w / widestNum));
+        }
         setFont(ctx, F.name(nameS));
         const nameLines = wrap(ctx, `${it.tag} · ${it.name}`, L.ledger.w);
         setFont(ctx, F.name(kickS));
         const kick = big && it.kicker ? wrap(ctx, it.kicker, L.ledger.w) : [];
         const next = tl.items[i + 1];
-        const r = { y, nameLines, numSize, nameS, kickS, kick, kickOut: next ? next.t0 - 0.35 : tl.rw0 };
+        const r = { y, nameLines, numSize, nameS, kickS, kick, unitBelow, kickOut: next ? next.t0 - 0.35 : tl.rw0 };
         y += nameLines.length * nameS * 1.12 + 6;
         r.numY = y + numSize * 0.8;
         y += numSize * 0.86 + 22;
+        if (unitBelow) { const uS = Math.max(44, Math.round(numSize * 0.42)); r.unitY = y + uS * 0.62; y += uS * 1.05; }
         r.kickY = y;
         const own = y + 8;
         slotEnd = kick.length ? y + kick.length * kickS * 1.2 + 26 : 0;
@@ -274,7 +294,8 @@ export function makeRenderer(ep, canvas) {
       revealText(ctx, num, L.ledger.x, r.numY, r.numSize, pNum, col);
       const uS = Math.max(44, Math.round(r.numSize * 0.42));
       setFont(ctx, F.name(uS));
-      revealText(ctx, unit, L.ledger.x + nw + uS * 0.3, r.numY, uS, pNum, col);
+      if (r.unitBelow) revealText(ctx, unit, L.ledger.x, r.unitY, uS, pNum, col);
+      else revealText(ctx, unit, L.ledger.x + nw + uS * 0.3, r.numY, uS, pNum, col);
       ctx.restore();
       // kicker: vuruştan 0,6 sn sonra, satır satır
       r.kick.forEach((ln, k) => {

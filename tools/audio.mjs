@@ -4,11 +4,29 @@ import fs from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import ffmpegPath from 'ffmpeg-static';
 import { buildTimeline, mulberry32, ease, seg, tallyPlan } from '../engine/core.js';
+import { swarmCues } from '../engine/swarm_core.js';
 
 const SR = 48000;
 
+// Kule şablonunun ses ipuçları (sürü şablonu: engine/swarm_core.js → swarmCues)
+function towerCues(ep) {
+  const t = buildTimeline(ep);
+  const tallies = [];
+  for (const it of t.items) {
+    const tp = tallyPlan(t, ep, it.i);
+    for (let j = 1; j <= tp.n; j++) tallies.push({ t: tp.start + (j / tp.n) * tp.dur, accent: j % 5 === 0 });
+  }
+  return {
+    beat: t.beat, duration: t.duration, rw0: t.rw0, rw1: t.rw1,
+    hero: t.hero ? { t1: t.hero.t1, tl: t.hero.tl } : null,
+    grows: t.items.map(it => ({ t0: it.t0, t1: it.t1, hero: !!it.hero })),
+    lands: t.items.filter(it => !it.hero).map(it => it.t1),
+    tallies,
+  };
+}
+
 export function synth(ep) {
-  const tl = buildTimeline(ep);
+  const tl = ep.template === 'swarm' ? swarmCues(ep) : towerCues(ep);
   const D = tl.duration;
   const N = Math.ceil(D * SR);
   const Lc = new Float32Array(N), Rc = new Float32Array(N);
@@ -121,23 +139,19 @@ export function synth(ep) {
     const off = t + tl.beat / 2;
     if (off < tl.rw0 && !silent(off)) shaker(off, 0.11);
   }
-  for (const it of tl.items) {
+  for (const g of tl.grows) {
     // büyüme boyunca 16'lıklar; şiddet büyüme hızını izler, perde yükselir
     const step = tl.beat / 4;
-    for (let t = it.t0; t < it.t1 - 0.01; t += step) {
-      const u = seg(t, it.t0, it.t1 - it.t0);
+    for (let t = g.t0; t < g.t1 - 0.01; t += step) {
+      const u = seg(t, g.t0, g.t1 - g.t0);
       const vel = Math.min(1, (ease.state(Math.min(1, u + 0.02)) - ease.state(Math.max(0, u - 0.02))) / 0.04 / 1.6);
-      const pitch = it.hero ? 700 * Math.pow(2.2, u) : 900 + 300 * u;
+      const pitch = g.hero ? 700 * Math.pow(2.2, u) : 900 + 300 * u;
       tick(t, 0.06 + 0.2 * vel, pitch, Math.sin(t * 7) * 0.3);
     }
-    if (!it.hero) thock(it.t1, 0.32);
-    // ölçü çentikleri: her çentiğe çok sessiz bir kalem tıkı (görüntüyle aynı takvim)
-    const tp = tallyPlan(tl, ep, it.i);
-    for (let j = 1; j <= tp.n; j++) {
-      const t = tp.start + (j / tp.n) * tp.dur;
-      if (t < tl.rw0) tick(t, j % 5 === 0 ? 0.07 : 0.04, j % 5 === 0 ? 2600 : 3100, 0.15);
-    }
   }
+  for (const t of tl.lands) thock(t, 0.32);
+  // ölçü çentikleri: her çentiğe çok sessiz bir kalem tıkı (görüntüyle aynı takvim)
+  for (const k of tl.tallies) if (k.t < tl.rw0) tick(k.t, k.accent ? 0.07 : 0.04, k.accent ? 2600 : 3100, 0.15);
   if (hero) {
     riser(hero.t1 - tl.beat * 3, hero.t1, 0.34);
     impact(hero.tl - 2 / 30, 0.95); // efekt, görsel oturmadan 2 kare önce başlar
@@ -175,8 +189,15 @@ export function masterAndMux(wav, silentMp4, outMp4) {
   const m = ff(['-hide_banner', '-i', wav, '-af', 'loudnorm=I=-14:TP=-2:LRA=11:print_format=json', '-f', 'null', '-']);
   const j = JSON.parse(m.slice(m.lastIndexOf('{'), m.lastIndexOf('}') + 1));
   const af = `loudnorm=I=-14:TP=-2:LRA=11:measured_I=${j.input_i}:measured_TP=${j.input_tp}:measured_LRA=${j.input_lra}:measured_thresh=${j.input_thresh}:offset=${j.target_offset}:linear=true`;
-  ff(['-y', '-loglevel', 'error', '-i', silentMp4, '-i', wav, '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
-    '-af', af + ',aresample=48000', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', outMp4]);
+  // AAC kodlaması tepeyi yükseltebilir: bitmiş dosyada ölç, true peak > −1,1 dBTP ise kazancı düşürüp yeniden kodla
+  let gainDb = 0;
+  for (let k = 0; k < 3; k++) {
+    ff(['-y', '-loglevel', 'error', '-i', silentMp4, '-i', wav, '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
+      '-af', af + `,volume=${gainDb}dB,aresample=48000`, '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', outMp4]);
+    const { TP } = measure(outMp4);
+    if (TP == null || TP <= -1.1) break;
+    gainDb -= TP + 1.3;
+  }
 }
 
 // Bitmiş dosyada ölçüm: entegre ses yüksekliği ve true peak

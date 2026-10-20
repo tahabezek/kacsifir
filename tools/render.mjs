@@ -71,8 +71,9 @@ export function glyphCheck(ep) {
     }
   }
   const covered = (fam, ch) => ch === ' ' || (ranges[fam] || []).some(([a, b]) => ch.codePointAt(0) >= a && ch.codePointAt(0) <= b);
-  const archivo = [...ep.question, ...ep.items.flatMap(i => [i.name, i.kicker || '']), ...ep.format.units.map(u => u.name), '0123456789.,'];
-  const mono = [ep.serial, ...ep.items.map(i => i.tag)];
+  const archivo = [...ep.question, ...(ep.items || []).flatMap(i => [i.name, i.kicker || '']),
+    ...((ep.format && ep.format.units) || []).map(u => u.name), ...(ep.stops || []).map(s => s.say || ''), ep.unit || '', '0123456789.,'];
+  const mono = [ep.serial, ...(ep.items || []).map(i => i.tag), '0123456789,. mcm'];
   const bad = [];
   for (const s of archivo) for (const ch of s) if (!covered('Archivo', ch)) bad.push(`Archivo:${ch}`);
   for (const s of mono) for (const ch of s) if (!covered('IBM Plex Mono', ch)) bad.push(`Plex:${ch}`);

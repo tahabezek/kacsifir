@@ -1,0 +1,73 @@
+name: kacsifir planlayıcı
+
+# Her çalıştırma önümüzdeki 48 saatin boş yuvalarını doldurur (Buffer customScheduled + dueAt).
+# GitHub cron saatlerce gecikebilir ya da hiç çalışmayabilir; bu yüzden günde 4 deneme var ve
+# her biri 2 günlük kuyruğu tamamlar. Bir çalıştırma kaçarsa önceki zaten doldurmuş olur.
+on:
+  schedule:
+    - cron: '7 0 * * *'
+    - cron: '7 6 * * *'
+    - cron: '37 11 * * *'
+    - cron: '7 17 * * *'
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: 'Sadece planla ve render et (medya/Buffer yok)'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: kacsifir
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Paketleri kur
+        run: npm ci
+
+      - name: Yuvaları doldur
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          KACSIFIR_PAUSED: ${{ vars.KACSIFIR_PAUSED }}
+          CHROME_PATH: /usr/bin/google-chrome
+          TZ: Europe/Istanbul
+          INPUT_DRY: ${{ github.event.inputs.dry }}
+        run: |
+          git config user.name "kacsifir-bot"
+          git config user.email "kacsifir-bot@users.noreply.github.com"
+          if [ "$INPUT_DRY" = "true" ]; then node tools/run.mjs --dry; else node tools/run.mjs; fi
+
+      - name: Durum defterini kaydet
+        if: always()
+        run: |
+          git add state/ledger.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "durum: $(date -u +%Y-%m-%dT%H:%MZ)"
+            for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+          fi
+
+      - name: Çıktıları sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kacsifir-${{ github.run_id }}
+          path: |
+            out/*/video.mp4
+            out/*/caption.txt
+            state/
+          retention-days: 7
+          if-no-files-found: ignore

@@ -1,0 +1,67 @@
+{
+  "id": "005",
+  "slug": "kagit-katlama",
+  "serial": "№ 005 · KATLAMA",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": [
+    "Bir kâğıdı 42 kez",
+    "katlasan?"
+  ],
+  "format": {
+    "dec": 100,
+    "units": [
+      {
+        "upTo": 1,
+        "div": 0.01,
+        "name": "cm"
+      },
+      {
+        "upTo": 1000,
+        "div": 1,
+        "name": "m"
+      },
+      {
+        "upTo": 1e+30,
+        "div": 1000,
+        "name": "km"
+      }
+    ]
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "10 kat",
+      "value": 0.1024,
+      "grow": 3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "23 kat (Burj Halife kadar)",
+      "value": 838.8608,
+      "grow": 4,
+      "hold": 3
+    },
+    {
+      "tag": "C",
+      "name": "42 kat",
+      "value": 439804651.1104,
+      "grow": 6,
+      "hold": 8.5,
+      "hero": true,
+      "kicker": "Ay'a kadar uzanır ve 55.000 km daha geçer."
+    }
+  ],
+  "caption": "0,1 mm'lik bir kâğıdı her katladığında kalınlığı iki katına çıkar. 10 katta 10 cm, 23 katta Burj Halife boyu, 42 katta 439.805 km: Ay'ı geçer.\n\nGerçekte bunu yapamazsın: rekor 12 kat (Britney Gallivan, 2002).\n\nKaç kata kadar denedin? Yorumlara yaz.\n\nHesap: 0,1 mm × 2⁴² · Dünya-Ay ortalama uzaklığı 384.400 km (NASA).",
+  "hashtags": [
+    "#matematik",
+    "#kağıt",
+    "#üstelbüyüme",
+    "#sayılar",
+    "#bilgi"
+  ]
+}

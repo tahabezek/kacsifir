@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block;width:1080px;height:1920px}</style>
+</head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script type="module">
+import { makeRenderer } from './tower.js';
+const q = new URLSearchParams(location.search);
+const ep = await (await fetch('../' + q.get('ep'))).json();
+await Promise.all([
+  document.fonts.load('800 100px Archivo'), document.fonts.load('600 44px Archivo'),
+  document.fonts.load('500 44px "IBM Plex Mono"'), document.fonts.load('500 40px "IBM Plex Mono"', '№ı'),
+  document.fonts.load('800 100px Archivo', 'ıİşŞğĞçÇöÖüÜâ'), document.fonts.load('600 44px Archivo', 'ıİşŞğĞçÇöÖüÜ'),
+]);
+await document.fonts.ready;
+const r = makeRenderer(ep, document.getElementById('c'));
+window.DURATION = r.duration;
+window.TIMELINE = r.timeline;
+window.renderFrame = t => { r.render(t); return true; };
+const t0 = Number(q.get('t') ?? 0);
+r.render(t0);
+window.__ready = true;
+</script></body></html>

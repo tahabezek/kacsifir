@@ -1,0 +1,29 @@
+{
+  "id": "001",
+  "slug": "milyar-saniye",
+  "serial": "№ 001 · ZAMAN",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": ["1 milyar saniye", "kaç yıl eder?"],
+  "format": {
+    "dec": 100,
+    "units": [
+      { "upTo": 60, "div": 1, "name": "saniye" },
+      { "upTo": 3600, "div": 60, "name": "dakika" },
+      { "upTo": 86400, "div": 3600, "name": "saat" },
+      { "upTo": 31557600, "div": 86400, "name": "gün" },
+      { "upTo": 1e30, "div": 31557600, "name": "yıl" }
+    ]
+  },
+  "items": [
+    { "tag": "A", "name": "1 milyon saniye", "value": 1e6, "grow": 3, "hold": 2.5 },
+    { "tag": "B", "name": "1 milyar saniye", "value": 1e9, "grow": 6, "hold": 9.5, "hero": true,
+      "kicker": "Doğduğun gün saymaya başlasan, 31 yaşını geçersin." },
+    { "tag": "C", "name": "1 trilyon saniye", "value": 1e12, "grow": 3, "hold": 3.5 }
+  ],
+  "caption": "1 milyon saniye 11,6 gün. 1 milyar saniye 31,7 yıl. 1 trilyon saniye ise 31.688 yıl — Son Buzul Çağı'na kadar geri gider.\n\nSen kaç tahmin etmiştin? Yorumlara yaz.\n\nHesap: 1 yıl = 365,25 gün = 31.557.600 saniye.",
+  "hashtags": ["#sayılar", "#bilgi", "#ölçek", "#bilim", "#ilginçbilgiler"]
+}

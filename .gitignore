@@ -1,0 +1,13 @@
+# gizli
+.env
+.env.*
+# üretilen
+node_modules/
+out/
+.media/
+logs/
+*.log
+# yerel araç artıkları
+brand/*.html
+brand/avatar_sheet.png
+brand/profile_preview.png

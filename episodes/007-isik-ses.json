@@ -1,0 +1,67 @@
+{
+  "id": "007",
+  "slug": "isik-ses",
+  "serial": "№ 007 · HIZ",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": [
+    "Işık, sesten",
+    "kaç kat hızlı?"
+  ],
+  "format": {
+    "dec": 100,
+    "units": [
+      {
+        "upTo": 277777.77777777775,
+        "div": 0.2777777777777778,
+        "name": "km/sa"
+      },
+      {
+        "upTo": 277777777.7777778,
+        "div": 277777.77777777775,
+        "name": "milyon km/sa"
+      },
+      {
+        "upTo": 1e+30,
+        "div": 277777777.7777778,
+        "name": "milyar km/sa"
+      }
+    ]
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "Ses",
+      "value": 343,
+      "grow": 3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "Uzay İstasyonu",
+      "value": 7660,
+      "grow": 3.5,
+      "hold": 3
+    },
+    {
+      "tag": "C",
+      "name": "Işık",
+      "value": 299792458,
+      "grow": 6,
+      "hold": 10.5,
+      "hero": true,
+      "kicker": "Sesten 874.000 kat hızlı: 1 saniyede Dünya'yı 7,5 kez dolaşır."
+    }
+  ],
+  "caption": "Ses saatte 1.235 km gider. Uzay İstasyonu 27.600 km. Işık ise saatte 1,08 milyar km: sesten 874.030 kat hızlı, 1 saniyede Dünya'nın çevresini 7,5 kez dolaşır.\n\nŞimşeği görüp gök gürültüsünü neden geç duyduğumuz bu.\n\nKaynak: ses hızı 343 m/s (20 °C hava) · ISS ≈7,66 km/s (NASA) · ışık hızı 299.792.458 m/s · Ekvator çevresi 40.075 km.",
+  "hashtags": [
+    "#fizik",
+    "#ışık",
+    "#ses",
+    "#bilim",
+    "#sayılar"
+  ]
+}

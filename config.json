@@ -1,0 +1,14 @@
+{
+  "organizationId": "6ad7ccd1ecbb2ff34fb155f0",
+  "channelId": "6ad7ceb2778b240e2f6f5177",
+  "slotsTR": ["08:30", "13:00", "20:30"],
+  "trUtcOffsetHours": 3,
+  "horizonHours": 48,
+  "minLeadMinutes": 25,
+  "slotToleranceMinutes": 10,
+  "mediaBaseUrl": "https://tahabezek.github.io/kacsifir/",
+  "mediaBranch": "media",
+  "mediaKeepDays": 4,
+  "shareToFeed": true,
+  "lowBacklogWarnDays": 3
+}

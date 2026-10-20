@@ -1,0 +1,20 @@
+{
+  "id": "003",
+  "slug": "dunyanin-merkezi",
+  "serial": "№ 003 · DERİNLİK",
+  "direction": "down",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": ["Dünya'nın merkezine", "ne kadar indik?"],
+  "format": { "dec": 100, "units": [ { "upTo": 1e30, "div": 1000, "name": "km" } ] },
+  "items": [
+    { "tag": "A", "name": "Mariana Çukuru", "value": 10935, "grow": 3, "hold": 2.5 },
+    { "tag": "B", "name": "Kola Kuyusu (insan yapımı)", "value": 12262, "grow": 2.5, "hold": 3 },
+    { "tag": "C", "name": "Dünya'nın merkezi", "value": 6371000, "grow": 6, "hold": 9, "hero": true,
+      "kicker": "En derin kuyumuz bu yolun yalnızca %0,19'u." }
+  ],
+  "caption": "İnsanlığın kazdığı en derin delik Kola Kuyusu: 12.262 m. Dünya'nın merkezine giden yolun yalnızca %0,19'u.\n\nSence neden daha derine inemedik? Yorumlara yaz.\n\nKaynak: Kola Süper Derin Kuyusu 12.262 m (1989) · Mariana Çukuru, Challenger Derinliği ≈10.935 m · Dünya'nın ortalama yarıçapı 6.371 km.",
+  "hashtags": ["#dünya", "#bilim", "#sayılar", "#jeoloji", "#bilgi"]
+}

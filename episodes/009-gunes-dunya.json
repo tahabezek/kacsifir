@@ -1,0 +1,62 @@
+{
+  "id": "009",
+  "slug": "gunes-dunya",
+  "serial": "№ 009 · HACİM",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": [
+    "Güneş'e kaç",
+    "Dünya sığar?"
+  ],
+  "format": {
+    "dec": 10,
+    "units": [
+      {
+        "upTo": 1000000,
+        "div": 1,
+        "name": "Dünya"
+      },
+      {
+        "upTo": 1e+30,
+        "div": 1000000,
+        "name": "milyon Dünya"
+      }
+    ]
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "Dünya",
+      "value": 1,
+      "grow": 3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "Jüpiter",
+      "value": 1321,
+      "grow": 4,
+      "hold": 3
+    },
+    {
+      "tag": "C",
+      "name": "Güneş",
+      "value": 1301000,
+      "grow": 6,
+      "hold": 9,
+      "hero": true,
+      "kicker": "Güneş Sistemi'nin kütlesinin %99,86'sı Güneş'te."
+    }
+  ],
+  "caption": "Jüpiter'in içine 1.321 Dünya sığar. Güneş'in içine ise yaklaşık 1,3 milyon.\n\nGüneş, Güneş Sistemi'ndeki toplam kütlenin %99,86'sını tek başına taşıyor.\n\nKaynak: NASA gezegen bilgi sayfaları (hacim oranları: Jüpiter 1.321 Dünya, Güneş 1.301.000 Dünya).",
+  "hashtags": [
+    "#uzay",
+    "#güneş",
+    "#jüpiter",
+    "#bilim",
+    "#sayılar"
+  ]
+}

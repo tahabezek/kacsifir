@@ -1,0 +1,67 @@
+{
+  "id": "008",
+  "slug": "kalp-atisi",
+  "serial": "№ 008 · KALP",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": [
+    "Kalbin bir ömürde",
+    "kaç kez atar?"
+  ],
+  "format": {
+    "dec": 100,
+    "units": [
+      {
+        "upTo": 1000000,
+        "div": 1,
+        "name": "kez"
+      },
+      {
+        "upTo": 1000000000,
+        "div": 1000000,
+        "name": "milyon kez"
+      },
+      {
+        "upTo": 1e+30,
+        "div": 1000000000,
+        "name": "milyar kez"
+      }
+    ]
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "Bir günde",
+      "value": 100800,
+      "grow": 3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "Bir yılda",
+      "value": 36817200,
+      "grow": 3.5,
+      "hold": 3
+    },
+    {
+      "tag": "C",
+      "name": "73 yıllık ömürde",
+      "value": 2687655600,
+      "grow": 6,
+      "hold": 8,
+      "hero": true,
+      "kicker": "28 yaşındaysan 1 milyarı geçtin bile."
+    }
+  ],
+  "caption": "Dakikada 70 atışla kalbin günde 100.800, yılda 36,8 milyon, 73 yıllık bir ömürde yaklaşık 2,7 milyar kez atar. Durmadan, tatil yapmadan.\n\nSen kaç yaşındasın? Kendi sayını hesapla: yaş × 36,8 milyon.\n\nVarsayım: dinlenme nabzı 70/dk · ömür 73 yıl (BM dünya ortalaması).",
+  "hashtags": [
+    "#kalp",
+    "#sağlık",
+    "#vücut",
+    "#sayılar",
+    "#bilgi"
+  ]
+}

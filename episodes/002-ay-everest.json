@@ -1,0 +1,20 @@
+{
+  "id": "002",
+  "slug": "ay-everest",
+  "serial": "№ 002 · MESAFE",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": ["Ay'a kaç Everest", "üst üste?"],
+  "format": { "dec": 10, "units": [ { "upTo": 1e30, "div": 8848.86, "name": "Everest" } ] },
+  "items": [
+    { "tag": "A", "name": "Everest · 8.849 m", "value": 8848.86, "grow": 3, "hold": 2.5 },
+    { "tag": "B", "name": "Uzay İstasyonu · ~400 km", "value": 400000, "grow": 4, "hold": 3 },
+    { "tag": "C", "name": "Ay · 384.400 km", "value": 384400000, "grow": 6, "hold": 9, "hero": true,
+      "kicker": "Uzay İstasyonu'na ise 45 tanesi yetiyor." }
+  ],
+  "caption": "Ay'a ulaşmak için Everest'i 43.441 kez üst üste koyman gerekir. Uzay İstasyonu'na 45 tanesi yetiyor.\n\nTahminin neydi? Yorumlara yaz.\n\nKaynak: Everest 8.848,86 m (Nepal-Çin ortak ölçümü, 2020) · Dünya-Ay ortalama uzaklığı 384.400 km (NASA) · ISS yörünge yüksekliği ~400 km (NASA).",
+  "hashtags": ["#uzay", "#ay", "#everest", "#sayılar", "#bilgi"]
+}

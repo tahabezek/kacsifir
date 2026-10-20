@@ -1,0 +1,77 @@
+{
+  "id": "004",
+  "slug": "gunes-isigi",
+  "serial": "№ 004 · IŞIK",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": [
+    "Güneş'in ışığı",
+    "kaç dakikada gelir?"
+  ],
+  "format": {
+    "dec": 100,
+    "units": [
+      {
+        "upTo": 60,
+        "div": 1,
+        "name": "saniye"
+      },
+      {
+        "upTo": 3600,
+        "div": 60,
+        "name": "dakika"
+      },
+      {
+        "upTo": 86400,
+        "div": 3600,
+        "name": "saat"
+      },
+      {
+        "upTo": 31557600,
+        "div": 86400,
+        "name": "gün"
+      },
+      {
+        "upTo": 1e+30,
+        "div": 31557600,
+        "name": "yıl"
+      }
+    ]
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "Ay'dan",
+      "value": 1.2822203819416966,
+      "grow": 3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "Güneş'ten",
+      "value": 499.0047838361564,
+      "grow": 6,
+      "hold": 9.5,
+      "hero": true,
+      "kicker": "Güneş şu an sönse, 8 dakika boyunca fark etmezdik."
+    },
+    {
+      "tag": "C",
+      "name": "En yakın yıldızdan",
+      "value": 134009348.4,
+      "grow": 3,
+      "hold": 3.5
+    }
+  ],
+  "caption": "Güneş'e baktığında 8 dakika 19 saniye önceki Güneş'i görürsün. Ay'ın ışığı 1,3 saniyede, en yakın yıldız Proxima Centauri'nin ışığı 4,2 yılda gelir.\n\nBunu biliyor muydun? Yorumlara yaz.\n\nKaynak: ışık hızı 299.792,458 km/s · Dünya-Güneş ortalama uzaklığı 149,6 milyon km (IAU) · Dünya-Ay 384.400 km (NASA) · Proxima Centauri 4,25 ışık yılı.",
+  "hashtags": [
+    "#uzay",
+    "#güneş",
+    "#ışık",
+    "#bilim",
+    "#sayılar"
+  ]
+}

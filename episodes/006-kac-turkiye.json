@@ -1,0 +1,62 @@
+{
+  "id": "006",
+  "slug": "kac-turkiye",
+  "serial": "№ 006 · NÜFUS",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 2,
+  "startFrac": 0.3,
+  "question": [
+    "Dünyaya kaç",
+    "Türkiye sığar?"
+  ],
+  "format": {
+    "dec": 100,
+    "units": [
+      {
+        "upTo": 1000000000,
+        "div": 1000000,
+        "name": "milyon kişi"
+      },
+      {
+        "upTo": 1e+30,
+        "div": 1000000000,
+        "name": "milyar kişi"
+      }
+    ]
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "İstanbul",
+      "value": 15700000,
+      "grow": 3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "Türkiye",
+      "value": 85660000,
+      "grow": 3,
+      "hold": 3
+    },
+    {
+      "tag": "C",
+      "name": "Dünya",
+      "value": 8200000000,
+      "grow": 6,
+      "hold": 7.5,
+      "hero": true,
+      "kicker": "Yani yaklaşık 96 Türkiye eder."
+    }
+  ],
+  "caption": "Dünya nüfusu 8,2 milyar. Türkiye 85,7 milyon. Yani dünyada yaklaşık 96 Türkiye var; her 100 kişiden 1'i Türkiye'de yaşıyor.\n\nTahminin kaçtı? Yorumlara yaz.\n\nKaynak: TÜİK ADNKS 2024 (Türkiye 85.664.944, İstanbul 15.701.602) · BM Dünya Nüfus Beklentileri (2025: 8,2 milyar).",
+  "hashtags": [
+    "#nüfus",
+    "#türkiye",
+    "#istanbul",
+    "#sayılar",
+    "#bilgi"
+  ]
+}

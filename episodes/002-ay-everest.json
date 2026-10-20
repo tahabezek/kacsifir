@@ -5,8 +5,8 @@
   "direction": "up",
   "bpm": 96,
   "silenceBeats": 0.8,
-  "rewindBeats": 2,
-  "startFrac": 0.3,
+  "rewindBeats": 3,
+  "startFrac": 1,
   "question": [
     "Ay'a ulaşmak için",
     "kaç Everest gerekir?"
@@ -26,7 +26,7 @@
       "tag": "A",
       "name": "Everest · 8.849 m",
       "value": 8848.86,
-      "grow": 3,
+      "grow": 0.8,
       "hold": 2.5
     },
     {

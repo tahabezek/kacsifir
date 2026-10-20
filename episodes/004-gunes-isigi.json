@@ -5,8 +5,8 @@
   "direction": "up",
   "bpm": 96,
   "silenceBeats": 0.8,
-  "rewindBeats": 2,
-  "startFrac": 0.3,
+  "rewindBeats": 3,
+  "startFrac": 1,
   "question": [
     "Güneş'in ışığı bize",
     "kaç dakikada ulaşır?"
@@ -46,7 +46,7 @@
       "tag": "A",
       "name": "Ay'dan",
       "value": 1.2822203819416966,
-      "grow": 3,
+      "grow": 0.8,
       "hold": 2.5
     },
     {

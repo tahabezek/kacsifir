@@ -62,12 +62,22 @@ export function shapeStop(tl, n) {
   return tl.stops[tl.stops.length - 1];
 }
 // Halının dünya geometrisi (mm): tür + sınır kutusu (+ tarama için x eşiği)
-export function carpetGeom(tl, ep, n) {
+// Şeklin büyüme ilerlemesi (log uzayında, 0..1): bir önceki durağın sayısından bu durağınkine
+export function shapeProgress(tl, s, n) {
+  const prev = tl.stops[s.i - 1];
+  if (!prev) return 1;
+  return Math.min(1, Math.max(0, (Math.log(n) - Math.log(prev.n)) / (Math.log(s.n) - Math.log(prev.n))));
+}
+const aspectOf = (st) => (st && st.shape === 'rect' ? refBox(st.ref).w / refBox(st.ref).h : 1);
+
+export function carpetGeom(tl, ep, n, force) {
   const A = n * ep.cellMM * ep.cellMM;
-  const s = shapeStop(tl, n);
+  const s = force || shapeStop(tl, n);
   const kind = s.shape || 'square';
   if (kind === 'rect') {
-    const R = refBox(s.ref), a = R.w / R.h;
+    // en-boy oranı bir önceki şekilden yumuşakça geçer (oda karesi → saha dikdörtgeni)
+    const u = shapeProgress(tl, s, n), a0 = aspectOf(tl.stops[s.i - 1]), a1 = aspectOf(s);
+    const a = Math.exp(lerp(Math.log(a0), Math.log(a1), ease.state(Math.min(1, u * 1.6))));
     const w = Math.sqrt(A * a);
     return { kind, A, w, h: A / w };
   }
@@ -101,19 +111,18 @@ export function carpetGeom(tl, ep, n) {
 export function floodCamera(tl, ep, t, zone) {
   const fs = tl.stops.find(s => s.shape === 'flood');
   if (!fs) return null;
+  const n = countAt(tl, t);
   const prev = tl.stops[fs.i - 1];
+  if (n <= prev.n * 1.000001) return null;
   const fit = (w, h) => Math.min(zone.w / w, zone.h / h);
   const A = refBox(prev.ref), B = refBox(fs.ref), o = GEO[fs.ref.key].flood.origin.map(v => v * 1e6);
   const sA = fit(A.w * 1.04, A.h * 1.04), sB = fit(B.w * 1.04, B.h * 1.04);
-  let u;
-  if (t < fs.t0) return null;
-  if (t < tl.rw0) u = ease.state(seg(t, fs.t0, (fs.t1 - fs.t0) * 0.8));
-  else {
-    u = 1 - ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) * 0.35));
-    if (u <= 0) return null;
-  }
+  // sayıya bağlı: ileri ve geri aynı yol
+  const u = ease.state(Math.min(1, shapeProgress(tl, fs, n) * 1.25));
   let scale = Math.exp(lerp(Math.log(sA), Math.log(sB), u));
-  if (t >= fs.t1 && t < tl.rw0) scale /= 1 + 0.08 * seg(t, fs.t1, Math.max(0.01, fs.t2 - fs.t1));
+  // bekleme kayması: ileri yönde %8'e çıkar, geri sarmanın ilk 0,5 sn'sinde söner
+  const drift = t < tl.rw0 ? 0.08 * seg(t, fs.t1, Math.max(0.01, fs.t2 - fs.t1)) : 0.08 * (1 - ease.state(seg(t, tl.rw0, 0.5)));
+  scale /= 1 + drift;
   return { scale, cx: lerp(o[0], 0, u), cy: lerp(o[1], 0, u) };
 }
 
@@ -138,13 +147,8 @@ export function cameraScale(tl, ep, t, zone) {
     const s = stopAt(tl, t);
     return fit(bw, bh) / (1 + 0.08 * seg(t, s.t1, Math.max(0.01, s.t2 - s.t1)));
   }
-  // geri sarma: kamera halıya kilitli; son referans kadrajından halıya yumuşak geçiş
-  const last = tl.stops[tl.stops.length - 1];
-  const r = ease.state(seg(t, tl.rw0, tl.rw1 - tl.rw0));
-  const g0 = carpetGeom(tl, ep, last.n);
-  const R = last.ref ? refBox(last.ref) : { w: g0.w, h: g0.h };
-  const s0 = fit(R.w * 1.04, R.h * 1.04) / 1.08, sc0 = fit(Math.max(g0.full ? g0.full.w : g0.w, minBox), Math.max(g0.full ? g0.full.h : g0.h, minBox));
-  return fit(bw, bh) * lerp(s0 / sc0, 1, ease.state(Math.min(1, r * 2.5)));
+  // geri sarma: kamera halının kutusuna kilitli (ileri hareketin aynası; boş kare yok)
+  return fit(Math.max(g.w, minBox) * 1.04, Math.max(g.h, minBox) * 1.04);
 }
 
 // Ses ipuçları: tower ile aynı biçim (audio.mjs ortak sentezleyicisi okur)

@@ -105,18 +105,34 @@ export function barHeight(tl, i, t) {
     h = Math.exp(lerp(Math.log(prev), Math.log(it.value), u));
   }
   if (t > tl.rw0) {
-    const c = rewindCap(tl, t);
-    if (i > 0 && c <= tl.items[i - 1].value * 1.0001) return 0;
-    h = Math.min(h, c);
+    // geri sarma: büyümenin tersi, sondan başa tek tek. Her sütun bir öncekinin boyuna iner ve onunla
+    // aynı boydayken kaybolur (belirdiği andaki durumun aynası; sıçrama yok).
+    const w = rewindWindow(tl, i);
+    if (!w) return h;
+    const u = ease.state(seg(t, w[0], w[1] - w[0]));
+    const to = i === 0 ? it.value * tl.startFrac : tl.items[i - 1].value;
+    if (i > 0 && t >= w[1]) return 0;
+    h = Math.exp(lerp(Math.log(it.value), Math.log(to), u));
   }
   return h;
 }
 
-export function rewindCap(tl, t) {
-  const vmax = tl.items[tl.items.length - 1].value;
-  const vmin = tl.items[0].value * tl.startFrac;
-  const r = ease.state(seg(t, tl.rw0, tl.rw1 - tl.rw0));
-  return Math.exp(lerp(Math.log(vmax), Math.log(vmin), r));
+function rewindWindow(tl, i) {
+  const n = tl.items.length, shrinkA = tl.startFrac < 1;
+  const segs = n - 1 + (shrinkA ? 1 : 0);
+  if (i === 0 && !shrinkA) return null;
+  const j = i === 0 ? n - 1 : n - 1 - i;
+  const w = (tl.rw1 - tl.rw0) / segs;
+  return [tl.rw0 + j * w, tl.rw0 + (j + 1) * w];
+}
+
+// Taralı/dolu geçişi yumuşak: sütun, sonraki öğe belirince 0,3 sn'de taralıya döner; geri sarmada tersi.
+export function solidness(tl, i, t) {
+  const next = tl.items[i + 1];
+  if (!next) return 1;
+  if (t < tl.rw0) return 1 - ease.state(seg(t, next.t0, 0.3));
+  const w = rewindWindow(tl, i + 1);
+  return w ? ease.state(seg(t, w[1] - 0.3, 0.3)) : 0;
 }
 
 // Kamera: ekranda tutulacak dünya yüksekliği. Büyüme sırasında sütunu 0,12 sn gecikmeyle izler.
@@ -133,8 +149,9 @@ function holdDrift(tl, t) {
 export function cameraHeight(tl, t) {
   const v0 = tl.items[0].value;
   if (t > tl.rw0) {
-    const r = ease.state(seg(t, tl.rw0, tl.rw1 - tl.rw0));
-    return Math.max(v0, rewindCap(tl, t) * lerp(1 + DRIFT, 1, r));
+    let hm = 0;
+    for (let i = 0; i < tl.items.length; i++) hm = Math.max(hm, barHeight(tl, i, t));
+    return Math.max(v0 * tl.startFrac, hm) * lerp(1 + DRIFT, 1, ease.state(seg(t, tl.rw0, 0.5)));
   }
   const lag = 0.12;
   let hmax = Math.max(v0, holdDrift(tl, t));

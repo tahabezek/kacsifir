@@ -5,8 +5,8 @@
   "direction": "up",
   "bpm": 96,
   "silenceBeats": 0.8,
-  "rewindBeats": 2,
-  "startFrac": 0.3,
+  "rewindBeats": 3,
+  "startFrac": 1,
   "question": [
     "Güneş'e kaç",
     "Dünya sığar?"
@@ -31,7 +31,7 @@
       "tag": "A",
       "name": "Dünya",
       "value": 1,
-      "grow": 3,
+      "grow": 0.8,
       "hold": 2.5
     },
     {

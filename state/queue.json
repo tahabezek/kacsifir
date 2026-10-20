@@ -1,4 +1,15 @@
 {
-  "_not": "Yayın sırası. Listede olmayan bölümler sona, dosya adına göre eklenir. 1. gün: 08:30 · 13:00 · 20:30",
-  "order": ["001", "006", "011", "005", "004", "002", "008", "010", "007", "003", "009"]
+  "_not": "Yayın sırası. Listede olmayan bölümler sona, dosya adına göre eklenir. Günde 3: 08:30 · 13:00 · 20:30",
+  "order": [
+    "001",
+    "005",
+    "011",
+    "004",
+    "006",
+    "002",
+    "008",
+    "007",
+    "003",
+    "009"
+  ]
 }

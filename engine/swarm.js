@@ -4,7 +4,7 @@
 import { W, H, ease, seg, lerp, spring, mulberry32 } from './core.js';
 import { C, F, setFont, wrap, revealText, inOut, grain } from './tower.js';
 import { ANT_CARD, drawAnt } from './creatures.js';
-import { buildSwarmTimeline, countAt, stopAt, cameraScale, carpetGeom, refBox, floodCamera } from './swarm_core.js';
+import { buildSwarmTimeline, countAt, stopAt, cameraScale, carpetGeom, refBox, floodCamera, shapeStop, shapeProgress } from './swarm_core.js';
 import { GEO } from './geo/shapes.js';
 
 const CREATURES = { ant: { card: ANT_CARD, draw: drawAnt } };
@@ -34,11 +34,12 @@ function fmtArea(mm2) {
   return `${km2 < 1 ? nf2.format(km2) : km2 < 10 ? nf1.format(km2) : nf.format(km2)} km²`;
 }
 // Sayaç: milyondan sonrası kelimeyle (tr-TR): 285,6 milyon · 19,6 milyar · 218 trilyon · 20 katrilyon
-const WORDS = [[1e15, 'katrilyon'], [1e12, 'trilyon'], [1e9, 'milyar'], [1e6, 'milyon']];
+// 10 milyona kadar rakamla (1.000.000), sonrası kelimeyle
+const WORDS = [[1e15, 'katrilyon'], [1e12, 'trilyon'], [1e9, 'milyar'], [1e7, 'milyon', 1e6]];
 function fmtCount(n) {
   const v = Math.max(1, n);
-  for (const [d, w] of WORDS) if (v >= d) {
-    const x = v / d;
+  for (const [lim, w, div] of WORDS) if (v >= lim) {
+    const x = v / (div || lim);
     const s = x < 100 ? nf1.format(Math.round(x * 10) / 10) : nf.format(x);
     return { num: s, word: w };
   }
@@ -177,7 +178,7 @@ export function makeSwarmRenderer(ep, canvas) {
   // ——— yerleşim ———
   let qSize = 112;
   setFont(ctx, F.head(qSize));
-  while (qSize > 76 && ep.question.some(q => ctx.measureText(q).width > safe.x1 - safe.x0)) { qSize -= 2; setFont(ctx, F.head(qSize)); }
+  while (qSize > 64 && ep.question.some(q => ctx.measureText(q).width > safe.x1 - safe.x0)) { qSize -= 2; setFont(ctx, F.head(qSize)); }
   const qTop = 356, qBottom = qTop + qSize * 0.86 + (ep.question.length - 1) * qSize;
   const counterY = qBottom + 150, sayY = counterY + 76, SAY = 50;
   setFont(ctx, F.name(SAY));
@@ -213,10 +214,12 @@ export function makeSwarmRenderer(ep, canvas) {
       const next = tl.stops[i + 1];
       let p;
       if (i === 0) {
-        p = t < (next ? next.t0 + 0.2 : tl.rw0) ? 1 - ease.exit(seg(t, next ? next.t0 : tl.rw0, 0.3)) : 0;
+        p = t < (next ? next.t0 + 0.2 : tl.rw0) ? 1 - ease.exit(seg(t, next ? next.t0 : tl.rw0, 0.18)) : 0;
         if (t >= tl.rw1 - 0.55) p = ease.enter(seg(t, tl.rw1 - 0.55, 0.5));
       } else {
-        p = inOut(t, s.tl + 0.08, next ? next.t1 - 0.35 : tl.rw0);
+        // sayaç durağa varmadan 0,04 sn önce girer; sayım yeniden başlayınca 180 ms'de çıkar
+        const tin = (s.hero ? s.tl : s.t1) - 0.04, tout = next ? next.t0 : tl.rw0;
+        p = t < tin ? 0 : ease.enter(seg(t, tin, 0.45)) * (t > tout ? 1 - ease.exit(seg(t, tout, 0.18)) : 1);
       }
       setFont(ctx, F.name(SAY));
       sayLines[i].forEach((ln, k) => revealText(ctx, ln, safe.x0, sayY + k * SAY * 1.18, SAY, Math.max(0, Math.min(1, p * 1.0 - k * 0.0)), s.hero && t >= s.tl ? C.red : C.ink));
@@ -290,17 +293,28 @@ export function makeSwarmRenderer(ep, canvas) {
       }
       return { x0: cx - side / 2, x1: cx + side / 2, y1: cy + side / 2, w: side, top: cy - side / 2, g };
     }
-    // doku: şekle kırpılmış karo
+    // doku: şekle kırpılmış karo. Şekil türü değişirken eski şekil (aynı alanda) ilk %30'luk ilerlemede erir.
+    const st = shapeStop(tl, n), prevSt = tl.stops[st.i - 1];
+    const changing = prevSt && (prevSt.shape || 'square') !== (st.shape || 'square') && st.shape !== 'rect';
+    const xu = changing ? Math.min(1, shapeProgress(tl, st, n) / 0.3) : 1;
+    if (xu < 1) {
+      const g0 = carpetGeom(tl, ep, n, prevSt);
+      ctx.save(); ctx.globalAlpha = 1 - xu;
+      carpetPath(g0, scale, null); ctx.clip();
+      ctx.fillStyle = 'rgba(28,27,24,0.42)'; ctx.fillRect(0, 0, W, H);
+      ctx.restore();
+    }
     ctx.save();
+    ctx.beginPath(); ctx.rect(safe.x0, zone.top - 30, safe.x1 - safe.x0, zone.bottom - zone.top + 40); ctx.clip();
     const b = carpetPath(g, scale, cam);
     ctx.clip();
     if (b.clipX != null) { ctx.beginPath(); ctx.rect(0, 0, b.clipX, H); ctx.clip(); }
     if (b.disk) { ctx.beginPath(); ctx.arc(b.disk[0], b.disk[1], b.disk[2], 0, Math.PI * 2); ctx.clip(); }
     const red = (g.kind === 'sweep' || g.kind === 'flood') && landedHero > 0;
     ctx.fillStyle = red ? C.red : 'rgba(28,27,24,0.10)';
-    ctx.globalAlpha = red ? landedHero : 1;
+    ctx.globalAlpha = (red ? landedHero : 1) * xu;
     ctx.fillRect(0, 0, W, H);
-    ctx.globalAlpha = red ? 0.32 + 0.68 * (1 - landedHero) : 1;
+    ctx.globalAlpha = (red ? 0.32 + 0.68 * (1 - landedHero) : 1) * xu;
     const tpx = Math.max(PERIOD * cell, 2);
     const src = mipFor(tpx);
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
@@ -350,6 +364,16 @@ export function makeSwarmRenderer(ep, canvas) {
 
   function drawDimension(box) {
     const g = box.g;
+    if (g.kind === 'geo' || g.kind === 'flood' || g.kind === 'sweep') {
+      // alan: çerçeveli not (teknik çizimde alan, doğrusal ölçü çizgisine yazılmaz)
+      const label = fmtArea(g.A);
+      setFont(ctx, F.mono(44));
+      const w = ctx.measureText(label).width + 40, x = zone.cx - w / 2, y = zone.bottom + 22;
+      ctx.fillStyle = C.paper; ctx.fillRect(x, y, w, 64);
+      ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.strokeRect(x + 0.5, y + 0.5, w, 64);
+      ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.fillText(label, zone.cx, y + 47); ctx.textAlign = 'left';
+      return;
+    }
     const y = zone.bottom + 26, x0 = Math.max(safe.x0, box.x0), x1 = Math.min(safe.x1, box.x1);
     ctx.strokeStyle = C.ink; ctx.lineWidth = 2;
     ctx.setLineDash([5, 6]);
@@ -405,12 +429,16 @@ export function makeSwarmRenderer(ep, canvas) {
       else drawRef(ctx, s.ref, zone.cx, zone.cy, scale, p, C.ink);
     }
     const box = drawCarpet(t, n, scale, heroP, cam);
+    ctx.save(); ctx.beginPath(); ctx.rect(safe.x0, zone.top - 30, safe.x1 - safe.x0, zone.bottom - zone.top + 40); ctx.clip();
     for (const { s, p } of over) if (p > 0) {
       const useCam = cam && s.shape === 'flood';
       drawRef(ctx, s.ref, zone.cx - (useCam ? cam.cx * scale : 0), zone.cy - (useCam ? cam.cy * scale : 0), scale, p, s.hero && s.ref.kind === 'room' ? C.red : C.ink);
     }
+    ctx.restore();
     drawLoupe(t, scale, box);
-    drawDimension(box);
+    // ölçü: geri sarmada gizli, döngü dikişinden önce geri gelir
+    const dimP = t < tl.rw0 ? 1 - ease.exit(seg(t, tl.rw0, 0.2)) : ease.enter(seg(t, tl.rw1 - 0.45, 0.4));
+    if (dimP > 0.01) { ctx.save(); ctx.globalAlpha = dimP; drawDimension(box); ctx.restore(); }
     drawText(t, n, landed);
   }
 

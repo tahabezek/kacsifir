@@ -5,8 +5,8 @@
   "direction": "up",
   "bpm": 96,
   "silenceBeats": 0.8,
-  "rewindBeats": 2,
-  "startFrac": 0.3,
+  "rewindBeats": 3,
+  "startFrac": 1,
   "question": [
     "1 milyar saniye",
     "kaç yıl eder?"
@@ -46,7 +46,7 @@
       "tag": "A",
       "name": "1 milyon saniye",
       "value": 1000000,
-      "grow": 3,
+      "grow": 0.8,
       "hold": 2.5
     },
     {
@@ -56,7 +56,7 @@
       "grow": 6,
       "hold": 9.5,
       "hero": true,
-      "kicker": "Doğduğun gün saymaya başlasan, 31 yaşını geçersin."
+      "kicker": "Doğduğun gün saymaya başlasan, bitirdiğinde 31 yaşını geçmiş olursun."
     },
     {
       "tag": "C",

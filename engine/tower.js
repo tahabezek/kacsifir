@@ -2,7 +2,7 @@
 // Teknik çizim dili: kâğıt zemin, mürekkep, tek kırmızı kalem, mimari ölçü çizgileri.
 import {
   W, H, ease, seg, lerp, spring, mulberry32, formatValue,
-  buildTimeline, barHeight, cameraHeight, activeIndex, tallyPlan,
+  buildTimeline, barHeight, cameraHeight, activeIndex, tallyPlan, solidness,
 } from './core.js';
 
 export const C = {
@@ -183,7 +183,7 @@ export function makeRenderer(ep, canvas) {
   function questionSize() {
     let size = 112;
     setFont(ctx, F.head(size));
-    while (size > 76 && ep.question.some(q => ctx.measureText(q).width > L.question.w)) {
+    while (size > 64 && ep.question.some(q => ctx.measureText(q).width > L.question.w)) {
       size -= 2; setFont(ctx, F.head(size));
     }
     return size;
@@ -316,9 +316,13 @@ export function makeRenderer(ep, canvas) {
       if (hp < 2) hp = 2; // görünmez kadar küçük: kıl payı çizgi
       const y = L.down ? L.ground : L.ground - hp;
       const isRed = it.hero && t >= it.tl;
-      if (i === a || isRed) {
+      const sol = isRed ? 1 : solidness(tl, i, t);
+      if (sol < 1) hatch(ctx, x, y, L.colW, hp, C.ink);
+      if (sol > 0) {
+        ctx.globalAlpha = sol;
         ctx.fillStyle = C.ink;
         ctx.fillRect(x, y, L.colW, hp);
+        ctx.globalAlpha = 1;
         if (isRed) {
           // kırmızı mürekkep tabandan yukarı dolar (250 ms)
           const f = ease.enter(seg(t, it.tl, 0.25));
@@ -327,8 +331,6 @@ export function makeRenderer(ep, canvas) {
           if (L.down) ctx.fillRect(x, L.ground, L.colW, fh);
           else ctx.fillRect(x, L.ground - fh, L.colW, fh);
         }
-      } else {
-        hatch(ctx, x, y, L.colW, hp, C.ink);
       }
       if ((i === a || isRed) && hp > 30 && t < tl.rw0) {
         // ölçü çentikleri (kâğıt rengi), her 5'te bir tam genişlik

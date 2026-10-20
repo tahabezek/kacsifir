@@ -43,7 +43,7 @@
     },
     {
       "id": "hero",
-      "beats": 10,
+      "beats": 13,
       "title": [
         "42 kez katlasaydın",
         "ne olurdu?"
@@ -67,7 +67,8 @@
     "hLenLabel": "GEREKEN KÂĞIT",
     "hLen": "107.000",
     "hLenUnit": "ışık yılı",
-    "hLenSay": "Işık bile bu kâğıdın bir ucundan öbürüne 107.000 yılda varırdı."
+    "hLenSay": "Işık bile bu kâğıdın bir ucundan öbürüne 107.000 yılda varırdı.",
+    "foldMyth": "Efsane der ki: 7'den fazlası imkânsız."
   },
   "records": [
     {

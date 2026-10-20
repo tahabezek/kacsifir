@@ -30,8 +30,8 @@ export function layout(ep, w = W, h = H) {
     safe, cols, colW, down, area, ground, fill,
     ledger: { x: safe.x0, w: cols[0] - 44 - safe.x0 },
     chartX0: cols[0] - 64,
-    serial: { x: safe.x0, y: 318 },
-    question: { x: safe.x0, y: 356, w: safe.x1 - safe.x0 },
+    serial: { x: safe.x0, y: 336 },
+    question: { x: safe.x0, y: 374, w: safe.x1 - safe.x0 },
     tagY: down ? ground - 22 : ground + 56,
   };
 }
@@ -59,7 +59,7 @@ export function wrap(ctx, text, maxW) {
 // Maskeli yazı açılışı: satır, kendi kutusunun içinde aşağıdan kayarak gelir (karartma yok).
 export function revealText(ctx, text, x, y, size, p, color, align = 'left') {
   if (p <= 0) return;
-  const lh = size * 1.12;
+  const lh = size * 1.26;  // virgül ve kuyruklu harfler kesilmesin
   ctx.save();
   ctx.beginPath();
   const left = align === 'right' ? x - 2000 : align === 'center' ? x - 1000 : x - 4;

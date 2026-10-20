@@ -22,7 +22,7 @@ export function buildSwarmTimeline(ep) {
 export function countAt(tl, t) {
   const S = tl.stops;
   if (t >= tl.rw0) {
-    const r = ease.state(seg(t, tl.rw0, tl.rw1 - tl.rw0));
+    const r = ease.state(seg(t, tl.rw0, Math.max(0.2, tl.rw1 - tl.rw0 - 0.45)));
     return Math.exp(lerp(Math.log(S[S.length - 1].n), Math.log(S[0].n), r));
   }
   let n = S[0].n;
@@ -115,7 +115,8 @@ export function floodCamera(tl, ep, t, zone) {
   const prev = tl.stops[fs.i - 1];
   if (n <= prev.n * 1.000001) return null;
   const fit = (w, h) => Math.min(zone.w / w, zone.h / h);
-  const A = refBox(prev.ref), B = refBox(fs.ref), o = GEO[fs.ref.key].flood.origin.map(v => v * 1e6);
+  const side = Math.sqrt(prev.n) * ep.cellMM;
+  const A = prev.ref ? refBox(prev.ref) : { w: side, h: side }, B = refBox(fs.ref), o = GEO[fs.ref.key].flood.origin.map(v => v * 1e6);
   const sA = fit(A.w * 1.04, A.h * 1.04), sB = fit(B.w * 1.04, B.h * 1.04);
   // sayıya bağlı: ileri ve geri aynı yol
   const u = ease.state(Math.min(1, shapeProgress(tl, fs, n) * 1.25));

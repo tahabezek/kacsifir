@@ -79,7 +79,7 @@ export function makeDocRenderer(ep, canvas) {
 
   // ——— başlıklar: her sahnenin kendi başlığı (maskeyle girer/çıkar); kare 0'da soru ekranda ———
   function titles(t) {
-    setFont(ctx, F.mono(40)); ctx.fillStyle = C.graphite; ctx.fillText(ep.serial, SAFE.x0, 318);
+    setFont(ctx, F.mono(40)); ctx.fillStyle = C.graphite; ctx.fillText(ep.serial, SAFE.x0, 336);
     for (const sc of ep.scenes) {
       const s = S[sc.id];
       if (!s.title) continue;
@@ -91,7 +91,7 @@ export function makeDocRenderer(ep, canvas) {
       if (p <= 0) continue;
       let size = 104; setFont(ctx, F.head(size));
       while (size > 64 && s.title.some(q => ctx.measureText(q).width > SAFE.x1 - SAFE.x0)) { size -= 2; setFont(ctx, F.head(size)); }
-      s.title.forEach((q, i) => revealText(ctx, q, SAFE.x0, 356 + size * 0.86 + i * size, size, p, s.id === 'hero' && t >= tl.heroLand ? C.ink : C.ink));
+      s.title.forEach((q, i) => revealText(ctx, q, SAFE.x0, 374 + size * 0.86 + i * size, size, p, s.id === 'hero' && t >= tl.heroLand ? C.ink : C.ink));
     }
   }
 
@@ -154,9 +154,10 @@ export function makeDocRenderer(ep, canvas) {
     ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.beginPath();
     for (let mm = 0; mm <= 14; mm += 1) { const yy = rb - mm * R; ctx.moveTo(rx - (mm % 5 ? 10 : 22), yy); ctx.lineTo(rx - 2, yy); }
     ctx.moveTo(rx - 2, rb); ctx.lineTo(rx - 2, rb - 14 * R); ctx.stroke();
-    setFont(ctx, F.mono(36)); ctx.fillStyle = C.ink; ctx.textAlign = 'center';
-    ctx.fillText(`${nf1.format(thick)} mm`, rx + 17, rb - th - 16);
-    setFont(ctx, F.mono(30)); ctx.fillStyle = C.graphite; ctx.fillText('kalınlık', rx + 17, rb + 40); ctx.fillText('20:1', rx + 17, rb + 74);
+    setFont(ctx, F.mono(36)); ctx.fillStyle = C.ink; ctx.textAlign = 'left';
+    ctx.fillText(`${nf1.format(thick)} mm`, rx + 44, rb - th + 12);
+    ctx.textAlign = 'center';
+    setFont(ctx, F.mono(34)); ctx.fillStyle = C.graphite; ctx.fillText('kalınlık', rx + 17, rb + 44); ctx.fillText('20:1', rx + 17, rb + 82);
     ctx.textAlign = 'left';
     // sayaç
     setFont(ctx, F.head(124)); ctx.fillStyle = C.ink;
@@ -167,6 +168,7 @@ export function makeDocRenderer(ep, canvas) {
     setFont(ctx, F.mono(44)); ctx.fillStyle = C.ink;
     ctx.fillText(`${nf.format(2 ** kk)} katman`, SAFE.x0, 770);
     if (!loopIn && tl.folds[1]) lines(ep.text.foldSay, SAFE.x0, 850, 48, enterP(t, tl.folds[1].t1), C.ink);
+    if (!loopIn && ep.text.foldMyth) lines(ep.text.foldMyth, SAFE.x0, 920, 48, enterP(t, tl.folds[tl.folds.length - 1].t1 + 0.1), C.ink);
     ctx.restore();
   }
 
@@ -199,7 +201,7 @@ export function makeDocRenderer(ep, canvas) {
       ctx.fillStyle = C.ink; ctx.fillRect(x, base - Math.max(hp, 2), bw, Math.max(hp, 2));
       setFont(ctx, F.mono(36)); ctx.textAlign = 'center';
       ctx.fillText(String(k), x + bw / 2, base + 44);
-      if (k >= 6 && g > 0.98) { setFont(ctx, F.mono(34)); const v = need[k - 1]; ctx.fillText(v >= 1000 ? `${nf1.format(v / 1000)} m` : `${nf.format(v / 10)} cm`, x + bw / 2, base - hp - 14); }
+      if (k >= 7 && g > 0.98) { setFont(ctx, F.mono(34)); const v = need[k - 1]; ctx.fillText(v >= 1000 ? `${nf1.format(v / 1000)} m` : `${nf.format(v / 10)} cm`, x + bw / 2, base - hp - 14); }
       ctx.textAlign = 'left';
     }
     setFont(ctx, F.mono(34)); ctx.fillStyle = C.graphite; ctx.fillText('katlama sayısı', left - 10, base + 92);
@@ -307,12 +309,15 @@ export function makeDocRenderer(ep, canvas) {
     lines(ep.text.hThickSay, SAFE.x0, 840, 48, enterP(t, s.t0 + 0.9), C.ink);
     // kalınlık: Dünya'dan Ay'a uzanan dikey ölçü (Ay 384.400 km çizgisi; kâğıt 439.805 km)
     { const pg = ease.state(seg(t, s.t0 + 0.6, Math.max(0.5, tl.silence0 - s.t0 - 0.7)));
+      const fade = 1 - ease.exit(seg(t, tl.silence0, 0.3));
+      if (fade > 0) { ctx.save(); ctx.globalAlpha *= fade;
       const yb = 1300, yTop = 930, kpx = (yb - yTop) / 439805, xr = 820;
       ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.setLineDash([6, 6]);
       ctx.beginPath(); ctx.moveTo(SAFE.x0, yb - 384400 * kpx); ctx.lineTo(SAFE.x1, yb - 384400 * kpx); ctx.stroke(); ctx.setLineDash([]);
       setFont(ctx, F.mono(34)); ctx.fillStyle = C.ink; ctx.fillText('Ay · 384.400 km', SAFE.x0, yb - 384400 * kpx - 12);
       ctx.beginPath(); ctx.arc(SAFE.x0 + 40, yb + 4, 22, Math.PI, 0); ctx.stroke(); setFont(ctx, F.mono(30)); ctx.fillText('Dünya', SAFE.x0 + 70, yb);
-      ctx.fillStyle = C.ink; ctx.fillRect(xr, yb - 439805 * kpx * pg, 18, 439805 * kpx * pg); }
+      ctx.fillStyle = C.ink; ctx.fillRect(xr, yb - 439805 * kpx * pg, 18, 439805 * kpx * pg);
+      ctx.restore(); } }
     // sessizlikten sonra kırmızı vuruş
     if (t >= tl.heroLand) {
       const k = lerp(0.9, 1, spring(t - tl.heroLand, 120, 24));
@@ -331,6 +336,8 @@ export function makeDocRenderer(ep, canvas) {
       ctx.lineWidth = 2; ctx.beginPath();
       for (let x = SAFE.x0 + ((t * 60) % 40); x < lerp(SAFE.x0, 940, pr); x += 40) { ctx.moveTo(x, 1332); ctx.lineTo(x, 1348); }
       ctx.stroke();
+      // ışık noktası: kâğıdın üzerinde yol alır (sürekli hareket; yazılar sabit)
+      { const lx = SAFE.x0 + ((t - tl.heroLand) * 140) % (900 - SAFE.x0); ctx.fillStyle = C.red; ctx.beginPath(); ctx.arc(lx, 1340, 9, 0, Math.PI * 2); ctx.fill(); }
     }
     ctx.restore();
   }

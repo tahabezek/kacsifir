@@ -36,7 +36,7 @@
       "tag": "A",
       "name": "Bir günde",
       "value": 100800,
-      "grow": 0.8,
+      "grow": 0.3,
       "hold": 2.5
     },
     {

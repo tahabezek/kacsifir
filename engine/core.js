@@ -122,7 +122,7 @@ function rewindWindow(tl, i) {
   const segs = n - 1 + (shrinkA ? 1 : 0);
   if (i === 0 && !shrinkA) return null;
   const j = i === 0 ? n - 1 : n - 1 - i;
-  const w = (tl.rw1 - tl.rw0) / segs;
+  const w = Math.max(0.2, tl.rw1 - tl.rw0 - 0.4) / segs;  // son 0,4 sn: kare 0 ile birebir aynı durum
   return [tl.rw0 + j * w, tl.rw0 + (j + 1) * w];
 }
 

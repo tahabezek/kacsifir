@@ -3,11 +3,12 @@
 // teknik çizim çizgisiyle çizilir. Haritalar: Natural Earth + OSM, resmî alanlara normalize (engine/geo).
 import { W, H, ease, seg, lerp, spring, mulberry32 } from './core.js';
 import { C, F, setFont, wrap, revealText, inOut, grain } from './tower.js';
-import { ANT_CARD, drawAnt } from './creatures.js';
+import { ANT_CARD, drawAnt, PERSON_CARD, drawPerson } from './creatures.js';
 import { buildSwarmTimeline, countAt, stopAt, cameraScale, carpetGeom, refBox, floodCamera, shapeStop, shapeProgress } from './swarm_core.js';
 import { GEO } from './geo/shapes.js';
 
-const CREATURES = { ant: { card: ANT_CARD, draw: drawAnt } };
+// fill: canlının hücre içindeki boyu (karınca 5 mm / 5 mm hücre = 1; insan omzu 450 mm / 707 mm hücre)
+const CREATURES = { ant: { card: ANT_CARD, draw: drawAnt, fill: 1 }, person: { card: PERSON_CARD, draw: drawPerson, fill: 450 / 707 } };
 const nf = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 0 });
 const nf1 = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 1 });
 
@@ -147,7 +148,7 @@ export function makeSwarmRenderer(ep, canvas) {
     const a = atlas.getContext('2d');
     for (let d = 0; d < 16; d++) for (let f = 0; f < 4; f++) {
       a.save(); a.translate(d * SP + SP / 2, f * SP + SP / 2); a.rotate((d / 16) * Math.PI * 2);
-      cr.draw(a, cr.card, { phase: f / 4 }, SP / BOX); a.restore();
+      cr.draw(a, cr.card, { phase: f / 4 }, (SP / BOX) * cr.fill); a.restore();
     }
   }
   // ——— doku karosu (bireysel yerleşimle birebir aynı) + mipmap zinciri ———
@@ -179,7 +180,7 @@ export function makeSwarmRenderer(ep, canvas) {
   let qSize = 112;
   setFont(ctx, F.head(qSize));
   while (qSize > 64 && ep.question.some(q => ctx.measureText(q).width > safe.x1 - safe.x0)) { qSize -= 2; setFont(ctx, F.head(qSize)); }
-  const qTop = 356, qBottom = qTop + qSize * 0.86 + (ep.question.length - 1) * qSize;
+  const qTop = 374, qBottom = qTop + qSize * 0.86 + (ep.question.length - 1) * qSize;
   const counterY = qBottom + 150, sayY = counterY + 76, SAY = 50;
   setFont(ctx, F.name(SAY));
   const sayLines = tl.stops.map(s => (s.say ? wrap(ctx, s.say, safe.x1 - safe.x0) : []));
@@ -191,7 +192,7 @@ export function makeSwarmRenderer(ep, canvas) {
   function drawText(t, n, landed) {
     setFont(ctx, F.mono(40));
     ctx.fillStyle = C.graphite; ctx.textAlign = 'left';
-    ctx.fillText(ep.serial, safe.x0, 318);
+    ctx.fillText(ep.serial, safe.x0, 336);
     setFont(ctx, F.head(qSize));
     ctx.fillStyle = C.ink;
     ep.question.forEach((q, i) => ctx.fillText(q, safe.x0, qTop + qSize * 0.86 + i * qSize));
@@ -215,7 +216,7 @@ export function makeSwarmRenderer(ep, canvas) {
       let p;
       if (i === 0) {
         p = t < (next ? next.t0 + 0.2 : tl.rw0) ? 1 - ease.exit(seg(t, next ? next.t0 : tl.rw0, 0.18)) : 0;
-        if (t >= tl.rw1 - 0.55) p = ease.enter(seg(t, tl.rw1 - 0.55, 0.5));
+        if (t >= tl.rw1 - 0.42) p = ease.enter(seg(t, tl.rw1 - 0.42, 0.38));
       } else {
         // sayaç durağa varmadan 0,04 sn önce girer; sayım yeniden başlayınca 180 ms'de çıkar
         const tin = (s.hero ? s.tl : s.t1) - 0.04, tout = next ? next.t0 : tl.rw0;
@@ -271,7 +272,7 @@ export function makeSwarmRenderer(ep, canvas) {
         const ph = (phaseT + h.ph) % 1;
         if (cell >= 44) {
           ctx.save(); ctx.translate(x, y); ctx.rotate((h.dir / 16) * Math.PI * 2);
-          cr.draw(ctx, cr.card, { phase: ph }, cell); ctx.restore();
+          cr.draw(ctx, cr.card, { phase: ph }, cell * cr.fill); ctx.restore();
         } else {
           const sz = cell * BOX;
           ctx.drawImage(atlas, h.dir * SP, Math.floor(ph * 4) * SP, SP, SP, x - sz / 2, y - sz / 2, sz, sz);

@@ -107,3 +107,40 @@ export function drawAnt(ctx, card, pose, sizePx, color) {
   }
   ctx.restore();
 }
+
+// İnsan (yukarıdan): omuz genişliği 450 mm, göğüs derinliği 250 mm, baş 200 mm. Kalabalıkta kişi başı 0,5 m².
+// Birim: gövde boyu (omuz genişliği) = sizePx. Kalabalık durur; hareket kameradan gelir (boşta sallanma yok).
+export const PERSON_CARD = Object.freeze({
+  name: 'insan (yukarıdan)',
+  shoulderMM: 450,
+  totalLen: 1,                 // drawPerson için ölçek: sizePx = omuz genişliği
+  chest: 0.5,                  // göğüs derinliği / omuz genişliği
+  head: 0.42,                  // baş çapı / omuz genişliği
+  stroke: 0.05,
+  palette: { body: '#1C1B18', shirt: '#ECE5D5' },
+});
+
+export function drawPerson(ctx, card, pose, sizePx, color) {
+  // Mimari plan dili: omuz oval + baş daire, ikisi de kontur; burun çıkıntısı yönü gösterir.
+  // Küçük boyda (≤ 14 px) koyu leke: kalabalık dokusu.
+  const s = sizePx;
+  const ink = color || card.palette.body;
+  ctx.save();
+  if (s <= 14) {
+    ctx.fillStyle = ink;
+    ctx.beginPath(); ctx.ellipse(0, 0, (card.chest * s) / 2, s / 2, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.restore(); return;
+  }
+  const lw = Math.max(1.2, card.stroke * s);
+  ctx.lineWidth = lw; ctx.strokeStyle = ink; ctx.fillStyle = card.palette.shirt;
+  // omuzlar: yuvarlatılmış kapsül
+  const rx = (card.chest * s) / 2, ry = s / 2;
+  ctx.beginPath(); ctx.roundRect(-rx, -ry, rx * 2, ry * 2, rx * 0.95); ctx.fill(); ctx.stroke();
+  // baş: daire, kontur; ensede saç (yarım dolgu)
+  const hr = (card.head * s) / 2, hx = s * 0.03;
+  ctx.beginPath(); ctx.arc(hx, 0, hr, 0, Math.PI * 2); ctx.fillStyle = card.palette.shirt; ctx.fill(); ctx.stroke();
+  ctx.fillStyle = ink; ctx.beginPath(); ctx.arc(hx, 0, hr, Math.PI * 0.5, Math.PI * 1.5); ctx.closePath(); ctx.fill();
+  // burun
+  ctx.beginPath(); ctx.moveTo(hx + hr * 0.92, -hr * 0.22); ctx.lineTo(hx + hr * 1.35, 0); ctx.lineTo(hx + hr * 0.92, hr * 0.22); ctx.closePath(); ctx.fill();
+  ctx.restore();
+}

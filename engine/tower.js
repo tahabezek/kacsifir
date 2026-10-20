@@ -39,7 +39,13 @@ export function layout(ep, w = W, h = H) {
 function setFont(ctx, f) { ctx.font = f; ctx.fontStretch = 'semi-condensed'; }
 
 function wrap(ctx, text, maxW) {
-  const words = text.split(' ');
+  // sayı ile ardından gelen kelime ayrılmaz ("31 yaşını", "8 dakika", "%0,19'u")
+  const raw = text.split(' ');
+  const words = [];
+  for (let i = 0; i < raw.length; i++) {
+    if (/^[%~]?\d[\d.,]*$/.test(raw[i]) && i + 1 < raw.length) { words.push(raw[i] + ' ' + raw[i + 1]); i++; }
+    else words.push(raw[i]);
+  }
   const lines = []; let cur = '';
   for (const w of words) {
     const t = cur ? cur + ' ' + w : w;

@@ -57,7 +57,7 @@ export function boardCues(ep) {
 const WORDS = [[1e18, 'kentilyon'], [1e15, 'katrilyon'], [1e12, 'trilyon'], [1e9, 'milyar'], [1e6, 'milyon']];
 function fmtBig(n) {
   if (n < 1e7) return { num: nf.format(Math.round(n)), word: '' };
-  for (const [lim, w] of WORDS) if (n >= lim) { const x = n / lim; return { num: x < 100 ? nf1.format(Math.floor(x * 10) / 10) : nf.format(Math.floor(x)), word: w }; }
+  for (const [lim, w] of WORDS) if (n >= lim) { const x = n / lim; return { num: x < 100 ? nf1.format(Math.round(x * 10) / 10) : nf.format(Math.round(x)), word: w }; }
 }
 
 export function makeBoardRenderer(ep, canvas) {
@@ -109,14 +109,17 @@ export function makeBoardRenderer(ep, canvas) {
     // beklemelerde kamera doğrusal olarak %6 yaklaşır (donmuş kare olmaz; yazı sabit kalır)
     const DRIFT = 0.06;
     const drift = (a, b) => 1 + DRIFT * Math.max(0, Math.min(1, (t - a) / (b - a)));
-    s = S0 * drift(tl.coverLand, tl.ladder[0].t0);
+    const fit17 = lerp(1, 0.8, ease.state(seg(t, tl.sqTimes[12].t, tl.coverLand - tl.sqTimes[12].t)));
+    s = S0 * fit17 * drift(tl.coverLand, tl.ladder[0].t0);
     // basamaklar: kamera yığının arkasından %30 gecikmeyle gelir (logaritmik uzayda), sonra bekler ve yaklaşır
-    let prevS = S0 * (1 + DRIFT);
+    let prevS = S0 * 0.8 * (1 + DRIFT);
     for (const [i, L] of tl.ladder.entries()) {
       if (t < L.t0) break;
       const d = L.t1 - L.t0, settle = L.t0 + d * 1.15, next = tl.ladder[i + 1] ? tl.ladder[i + 1].t0 : tl.tiltUp0;
       const u = ease.state(seg(t, L.t0 + d * 0.3, d * 0.85));
       s = Math.exp(lerp(Math.log(prevS), Math.log(ladderS[i]), u)) * drift(settle, next);
+      // yığın kameradan kaçamaz: genişliği kadrajın en fazla 1,3 katı
+      s = Math.min(s, (1.3 * 940) / (2 * PH.cone(ladderN(t).n).r));
       prevS = ladderS[i] * (1 + DRIFT);
     }
     if (t >= tl.tiltUp0) {
@@ -325,6 +328,7 @@ export function makeBoardRenderer(ep, canvas) {
 
   function scene(t, real) {
     const cam = camera(t);
+    ctx.save(); ctx.beginPath(); ctx.rect(0, 905, W, 1440 - 905); ctx.clip();
     const groundA = 1 - cam.tilt / 0.12; // yan kesitte zemin çizgisi
     // zemin çizgisi ve ölçü
     if (cam.tilt < 0.12 && t >= tl.tiltDown[0]) {
@@ -333,7 +337,7 @@ export function makeBoardRenderer(ep, canvas) {
     }
     // harita (tepeden bakışa geçerken)
     const mapA = ease.enter(seg(t, tl.tiltUp0 + (tl.tiltUp1 - tl.tiltUp0) * 0.62, 0.4));
-    const fill = t >= tl.fill0 && t < tl.rw0 + 0.5 ? ease.enter(seg(t, tl.fill0, 0.35)) : 0;
+    const fill = real && t >= tl.fill0 ? ease.enter(seg(t, tl.fill0, 0.35)) : 0;
     drawMap(cam, mapA, fill);
     // tahta: kamera yere inince çizgiye dönüşür
     const boardA = 1 - ease.exit(seg(cam.s, S0 * 0.25, -S0 * 0.2)); // s küçüldükçe kaybolur
@@ -379,11 +383,12 @@ export function makeBoardRenderer(ep, canvas) {
         }
       }
     }
+    ctx.restore();
     // sayaç
     if (t < tl.heroLand - 0.04 || !real) {
       let label, n;
       if (!ladderOn) { const k = tl.sqTimes.filter(s => s.t <= t).length; label = `${k}. KARE`; n = Math.pow(2, k - 1); }
-      else { const L = ladderN(t); label = `${L.k}. KARE`; n = Math.pow(2, L.k - 1) * (L.n / Math.pow(2, L.k - 1)); }
+      else { const L = ladderN(t); label = `${L.k}. KARE`; n = Math.pow(2, L.k - 1); }
       drawCounter(t, label, n, 'tane', false);
     } else drawCounter(t, ep.hero.label, ep.hero.value, ep.hero.unit, true);
   }
@@ -393,19 +398,17 @@ export function makeBoardRenderer(ep, canvas) {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, W, H);
     ctx.drawImage(grain(), 0, 0);
     header();
-    // geri sarma: sahne hızla geriye oynar (kırmızı önce söner), son kare = kare 0
-    const vt = t >= tl.rw0 ? lerp(tl.rw0, 0, ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) - 0.4))) : t;
-    if (t >= tl.rw0) {
-      const fade = ease.exit(seg(t, tl.rw0, 0.3));
-      ctx.save(); ctx.globalAlpha = 1 - fade;
-      drawCounter(t, ep.hero.label, ep.hero.value, ep.hero.unit, true); ctx.restore();
-      ctx.save(); ctx.globalAlpha = fade; scene(vt, false); ctx.restore();
-    } else {
-      scene(vt, true);
-      drawSay(t);
-      drawSection(t);
-    }
-    if (t >= tl.rw0) { /* altyazı yok */ }
+    // geri sarma: önce doruk öğeleri 0,3 sn'de söner (tek kare sıçrama yok), sonra sahne geriye oynar; son kare = kare 0
+    if (t < tl.rw0) { scene(t, true); drawSay(t); drawSection(t); }
+    else if (t < tl.rw0 + 0.3) {
+      // sırayla: önce doruk söner, sonra sayaç geri gelir (iki yazı üst üste binmez)
+      const u = seg(t, tl.rw0, 0.3);
+      ctx.save();
+      if (u < 0.5) { ctx.globalAlpha = 1 - ease.exit(u * 2); scene(tl.rw0 - 0.001, true); drawSay(tl.rw0 - 0.2); drawSection(tl.rw0 - 0.001); }
+      else { ctx.globalAlpha = ease.enter(u * 2 - 1); scene(tl.rw0 - 0.001, false); }
+      ctx.restore();
+    } else scene(lerp(tl.rw0, 0, ease.state(seg(t, tl.rw0 + 0.3, (tl.rw1 - tl.rw0) - 0.7))), false);
+    if (t > tl.rw1 - 0.5) { setFont(ctx, F.name(50)); wrap(ctx, ep.say.hook, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink)); }
     drawActor(ctx, actorScript, t, actorHome, 100, D);
   }
 

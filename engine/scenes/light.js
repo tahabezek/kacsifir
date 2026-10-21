@@ -41,8 +41,9 @@ export function makeLightRenderer(ep, canvas) {
   const D = tl.duration;
   const Y = 1130;                                       // ışık yolu
   const SUN = { x: -90, r: 260 }, EARTH_X = 790;
-  const kx = (EARTH_X - SUN.x) / ep.target.km;           // px/km
-  const X = km => SUN.x + km * kx;
+  // mesafe Güneş'in çizilen kenarından Dünya'nın kenarına ölçekli (gövdeler büyütülmüş)
+  const LIMB = SUN.x + SUN.r, kx = (EARTH_X - 36 - LIMB) / ep.target.km;
+  const X = km => LIMB + km * kx;
   const rnd = mulberry32(8);
   const STARS = Array.from({ length: 70 }, () => ({ x: rnd() * W, y: 800 + rnd() * 620, r: 0.8 + rnd() * 1.6 }));
 
@@ -85,7 +86,7 @@ export function makeLightRenderer(ep, canvas) {
   }
   function orbits(t) {
     for (const m of tl.marks) {
-      const r = X(m.km) - SUN.x;
+      const r = X(m.km) - SUN.x; // yörünge: Güneş'in merkezinden, kenardan ölçekli uzaklıkta
       const passed = photonKm(t) >= m.km;
       ctx.save(); ctx.setLineDash([10, 9]); ctx.lineDashOffset = -(t / D) * 19 * Math.round(D);
       ctx.strokeStyle = passed ? C.ink : C.graphite; ctx.lineWidth = passed ? 3 : 2;
@@ -95,7 +96,7 @@ export function makeLightRenderer(ep, canvas) {
       const pa = Math.sign(m.angle) * Math.min(Math.abs(m.angle), Math.asin(Math.min(1, 215 / r)) * 0.8);
       ctx.beginPath(); ctx.arc(SUN.x + Math.cos(pa) * r, Y + Math.sin(pa) * r, m.dot, 0, Math.PI * 2);
       ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke();
-      setFont(ctx, F.mono(30)); ctx.fillStyle = passed ? C.ink : C.graphite; ctx.textAlign = 'center';
+      setFont(ctx, F.mono(34)); ctx.fillStyle = passed ? C.ink : C.graphite; ctx.textAlign = 'center';
       ctx.fillText(m.name.toLocaleUpperCase('tr-TR'), SUN.x + Math.cos(pa) * r, Y + Math.sin(pa) * r + (pa < 0 ? -m.dot - 16 : m.dot + 40));
       ctx.textAlign = 'left';
     }
@@ -133,10 +134,10 @@ export function makeLightRenderer(ep, canvas) {
     ctx.restore();
     // ölçek cetveli
     const ry = Y + 262;
-    ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(X(0) + SUN.r * 0 + 150, ry); ctx.lineTo(X(150e6), ry); ctx.stroke();
-    setFont(ctx, F.mono(24)); ctx.fillStyle = C.graphite; ctx.textAlign = 'center';
-    for (const v of [50e6, 100e6, 150e6]) { ctx.beginPath(); ctx.moveTo(X(v), ry - 8); ctx.lineTo(X(v), ry + 8); ctx.stroke(); ctx.fillText(`${nf.format(v / 1e6)}`, X(v), ry + 36); }
-    ctx.textAlign = 'left'; ctx.fillText(ep.scaleNote, X(0) + 150, ry - 18);
+    ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(X(0), ry); ctx.lineTo(X(150e6), ry); ctx.stroke();
+    setFont(ctx, F.mono(28)); ctx.fillStyle = C.graphite; ctx.textAlign = 'center';
+    for (const v of [0, 50e6, 100e6, 150e6]) { ctx.beginPath(); ctx.moveTo(X(v), ry - 8); ctx.lineTo(X(v), ry + 8); ctx.stroke(); ctx.fillText(`${nf.format(v / 1e6)}`, X(v), ry + 36); }
+    ctx.textAlign = 'left'; ctx.fillText(ep.scaleNote, X(0) + 60, ry - 18);
   }
   // altyazılar: geçişlerde ve doruğda
   const SAYS = [{ t0: 0, t1: tl.marks[0].t - 0.4, text: ep.say.hook },
@@ -190,6 +191,9 @@ export function makeLightRenderer(ep, canvas) {
     path(t);
     counter(t);
     if (t < tl.rw0) says(t);
+    else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
+      setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
+    }
     drawActor(ctx, actorScript, t, actorHome, 100, D);
   }
   return { render, duration: D, timeline: tl };

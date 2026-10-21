@@ -8,8 +8,8 @@
     "İstanbul'da şu an saatte",
     "kaç km dönüyorsun?"
   ],
-  "gaugeMax": 2000,
-  "turnSec": 7,
+  "gaugeMax": 1500,
+  "turnSec": 10.75,
   "city": {
     "lat": 41.01,
     "lon": 28.98,
@@ -23,10 +23,6 @@
     {
       "v": 1235,
       "label": "SES"
-    },
-    {
-      "v": 1674,
-      "label": "EKVATOR"
     }
   ],
   "stops": [
@@ -62,16 +58,16 @@
         0
       ],
       [
-        2.9,
-        4.3
+        2.6,
+        3.9
       ],
       [
-        7.4,
-        8.6
+        6.6,
+        7.8
       ],
       [
-        11.3,
-        11.85
+        10.2,
+        10.75
       ]
     ],
     "kickDelay": 3.2,

@@ -33,11 +33,11 @@ export function makeSpinRenderer(ep, canvas) {
   const tl = buildSpinTimeline(ep);
   const D = tl.duration;
   const G = { x: 255, y: 1170, r: 200, tilt: rad(18) };    // dünya (solda)
-  const GA = { x: 700, y: 1180, r: 228, max: ep.gaugeMax }; // gösterge (sağda; tabanı Sıfır'ın üstünde kalır)
+  const GA = { x: 672, y: 1180, r: 215, max: ep.gaugeMax }; // gösterge (sağda; tabanı Sıfır'ın üstünde kalır)
   const turns = Math.max(1, Math.round(D / ep.turnSec));
   // döngüye kilitli dönüş (hızlandırılmış); doruk anında şehir tam önde
-  const phase = ep.city.lon - (tl.heroLand / D) * turns * 360;
-  const lon0 = t => (t / D) * turns * 360 + phase;
+  const phase = ep.city.lon + (tl.heroLand / D) * turns * 360;
+  const lon0 = t => phase - (t / D) * turns * 360; // Dünya doğuya döner: yüzey soldan sağa akar
 
   const qSize = (() => { let s = 84; setFont(ctx, F.head(s)); while (s > 62 && ep.question.some(q => ctx.measureText(q).width > SAFE.x1 - SAFE.x0)) { s -= 2; setFont(ctx, F.head(s)); } return s; })();
   const counterY = 374 + qSize * ep.question.length + 190;
@@ -77,7 +77,7 @@ export function makeSpinRenderer(ep, canvas) {
     if (z > 0.05) {
       ctx.beginPath(); ctx.arc(x, y, 13, 0, Math.PI * 2); ctx.fillStyle = red ? C.red : C.ink; ctx.fill();
       ctx.lineWidth = 3; ctx.strokeStyle = C.paper; ctx.stroke();
-      setFont(ctx, F.mono(28)); ctx.fillStyle = red ? C.red : C.ink; ctx.fillText(ep.city.label, x + 22, y - 14);
+      setFont(ctx, F.mono(32)); ctx.fillStyle = red ? C.red : C.ink; ctx.textAlign = 'right'; ctx.fillText(ep.city.label, x - 20, y - 16); ctx.textAlign = 'left';
     }
 
   }
@@ -91,7 +91,7 @@ export function makeSpinRenderer(ep, canvas) {
   function gauge(t, v, red) {
     ctx.save();
     ctx.lineWidth = 5; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.arc(GA.x, GA.y, GA.r, Math.PI, 0); ctx.stroke();
-    setFont(ctx, F.mono(22)); ctx.fillStyle = C.graphite; ctx.textAlign = 'center';
+    setFont(ctx, F.mono(28)); ctx.fillStyle = C.graphite; ctx.textAlign = 'center';
     for (let k = 0; k <= GA.max; k += 100) {
       const a = ang(k), major = k % 500 === 0, r0 = GA.r - (major ? 30 : 16);
       ctx.lineWidth = major ? 4 : 2; ctx.beginPath(); ctx.moveTo(GA.x + Math.cos(a) * r0, GA.y + Math.sin(a) * r0); ctx.lineTo(GA.x + Math.cos(a) * GA.r, GA.y + Math.sin(a) * GA.r); ctx.stroke();
@@ -103,7 +103,7 @@ export function makeSpinRenderer(ep, canvas) {
       const px = GA.x + Math.cos(a) * (GA.r + 14), py = GA.y + Math.sin(a) * (GA.r + 14);
       ctx.save(); ctx.translate(px, py); ctx.rotate(a + Math.PI / 2); ctx.fillStyle = on ? C.ink : C.graphite;
       ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-9, -16); ctx.lineTo(9, -16); ctx.closePath(); ctx.fill(); ctx.restore();
-      setFont(ctx, F.mono(24)); ctx.fillStyle = on ? C.ink : C.graphite;
+      setFont(ctx, F.mono(30)); ctx.fillStyle = on ? C.ink : C.graphite;
       // sağ yandaki işaretlerin adı kadranın içine (kadraj dışına taşmaz)
       const inside = Math.cos(a) > 0.45, rr = inside ? GA.r - 74 : GA.r + 36;
       ctx.textAlign = inside ? 'right' : Math.cos(a) < -0.2 ? 'right' : Math.cos(a) > 0.2 ? 'left' : 'center';
@@ -119,7 +119,7 @@ export function makeSpinRenderer(ep, canvas) {
   }
 
   const S = tl.stops;
-  const SAYS = [...S.map((s, i) => ({ t0: i ? s.t1 - 0.04 : 0, t1: S[i + 1] ? (S[i + 1].hero ? S[i + 1].t0 - 0.2 : S[i + 1].t1 - 0.25) : tl.kickAt - 0.22, text: s.say, red: !!s.hero })),
+  const SAYS = [...S.map((s, i) => ({ t0: i ? s.t1 - 0.04 : 0, t1: S[i + 1] ? S[i + 1].t0 + 0.15 : tl.kickAt - 0.22, text: s.say, red: !!s.hero })),
     { t0: tl.kickAt - 0.04, t1: tl.rw0, text: ep.say.kicker }];
   function says(t) {
     for (const s of SAYS) {
@@ -166,6 +166,9 @@ export function makeSpinRenderer(ep, canvas) {
     gauge(t, v, red);
     counter(t >= tl.rw0 ? vt : t, v, red);
     if (t < tl.rw0) says(t);
+    else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
+      setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
+    }
     drawActor(ctx, actorScript, t, actorHome, 100, D);
   }
   return { render, duration: D, timeline: tl };

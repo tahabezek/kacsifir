@@ -88,7 +88,7 @@ export function makeTilesRenderer(ep, canvas) {
   }
 
   const SAYS = [{ t0: 0, t1: tl.stamp[1].t + 0.6, text: ep.say.hook },
-    ...tl.lands.map((l, i) => ({ t0: l.t - 0.04, t1: i + 1 < tl.lands.length ? tl.lands[i + 1].t - 2.2 : tl.silence0 - 0.3, text: l.say })),
+    ...tl.lands.map((l, i) => ({ t0: l.t - 0.04, t1: (tl.stamp[ep.milestones[i].n]?.t ?? tl.silence0) + 0.35, text: l.say })), // bir sonraki basım başlayınca çekilir
     { t0: tl.heroLand - 0.04, t1: tl.redAt - 0.22, text: ep.say.hero, red: true },
     { t0: tl.redAt - 0.04, t1: tl.rw0, text: ep.say.kicker, red: true }];
   function says(t) {
@@ -125,6 +125,13 @@ export function makeTilesRenderer(ep, canvas) {
       if (k === 1 && t >= tl.redAt && t < tl.rw0) fill = 'red';
       const pop = fill === 'red' ? lerp(1, 1.3, spring(t - tl.redAt, 120, 24)) : 1; // tek kırmızı hücre öne çıkar
       shape(c.x, c.y - (1 - u) * 14, sk * lerp(1.25, 1, u) * pop, fill, u, k === 1 ? 3 : 2);
+    }
+    // beklemede: son grubun hücrelerini tek tek dolaşan mürekkep çerçeve (yeniden sayma, sürekli)
+    for (const [i, l] of tl.lands.entries()) {
+      const end = tl.stamp[ep.milestones[i].n]?.t ?? tl.silence0;
+      if (vt < l.t + 0.3 || vt >= end) continue;
+      const g = groups[i], cnt = g.to - g.from + 1, k = g.from + Math.floor(((vt - l.t - 0.3) / 0.11) % cnt), c = cell(k);
+      ctx.strokeStyle = C.ink; ctx.lineWidth = 4; ctx.strokeRect(c.x - cw / 2 + 2, c.y - ch / 2 + 2, cw - 4, ch - 4);
     }
     ctx.restore();
   }
@@ -166,6 +173,9 @@ export function makeTilesRenderer(ep, canvas) {
     bigShape(vt);
     counter(t, vt);
     if (t < tl.rw0) says(t);
+    else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
+      setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
+    }
     drawActor(ctx, actorScript, t, actorHome, 100, D);
   }
   return { render, duration: D, timeline: tl };

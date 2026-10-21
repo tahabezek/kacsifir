@@ -70,13 +70,13 @@
   "say": {
     "hook": "İlk kareye 1 tane koy, her karede ikiye katla.",
     "cover": "17. karedeki yığın tek başına bütün tahtayı kaplar.",
-    "hero": "Bütün tahta, Türkiye'nin tamamını 1,5 metre buğdayla kaplar."
+    "hero": "Bütün tahta, Türkiye'nin tamamını 1,5 metre kalınlığında buğdayla kaplar."
   },
   "ladder": [
     {
       "k": 30,
       "n": 536870912,
-      "say": "30. karedeki yığın bir insandan uzundur.",
+      "say": "30. karedeki yığın bir insandan yüksektir.",
       "sil": "person",
       "label": "İnsan · 1,75 m",
       "heightLabel": "2 m"

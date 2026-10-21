@@ -35,7 +35,7 @@ export function makeAltitudeRenderer(ep, canvas) {
   const D = tl.duration;
   const E = ep.unitKm;                              // bir Everest (km)
   const X0 = 400, GY = 1372;                        // yığının ekrandaki tabanı
-  const FITPX = 420;                                // tepe yüksekliği bu kadar piksele sığdırılır (tepedeki durak görünür kalır)
+  const FITPX = 360;                                // tepe yüksekliği bu kadar piksele sığdırılır (tepedeki durak görünür kalır)
   const MOON_D = ep.moon.surfaceKm;                 // yüzeyden yüzeye
   const rnd = mulberry32(5);
   const STARS = Array.from({ length: 90 }, () => ({ x: rnd() * W, y: 760 + rnd() * 660, r: 0.8 + rnd() * 1.7 }));
@@ -88,9 +88,9 @@ export function makeAltitudeRenderer(ep, canvas) {
     ctx.save();
     ctx.beginPath(); ctx.arc(X0, cy, r, 0, Math.PI * 2); ctx.fillStyle = '#E2D9C4'; ctx.fill();
     // uzaktan bakınca kıtalar döner (sürekli döngü, döngüye kilitli)
-    if (r < 400) { ctx.save(); ctx.clip(); const rot = ((t / D) * 3) % 1; ctx.fillStyle = 'rgba(28,27,24,0.28)';
-      for (const [ox, oy, w, h] of [[-0.6, -0.55, 0.5, 0.3], [0.1, -0.7, 0.35, 0.22], [0.5, -0.4, 0.4, 0.35], [-0.2, -0.25, 0.3, 0.2]]) for (const sh of [-2, 0, 2]) {
-        ctx.beginPath(); ctx.ellipse(X0 + (((ox + rot * 2 + sh + 3) % 4) - 2) * r, cy + oy * r, w * r * 0.5, h * r * 0.5, 0.3, 0, Math.PI * 2); ctx.fill(); }
+    if (r < 400) { ctx.save(); ctx.clip(); const rot = ((t / D) * 4) % 1; ctx.strokeStyle = 'rgba(28,27,24,0.35)'; ctx.lineWidth = 2;
+      for (let k = 0; k < 6; k++) { const ph = ((k / 6 + rot) % 1) * Math.PI; const rx = Math.abs(Math.cos(ph)) * r; ctx.beginPath(); ctx.ellipse(X0, cy, Math.max(1, rx), r, 0, 0, Math.PI * 2); ctx.stroke(); }
+      for (const la of [-0.5, 0, 0.5]) { ctx.beginPath(); ctx.moveTo(X0 - r * Math.cos(Math.asin(la)), cy + la * r); ctx.lineTo(X0 + r * Math.cos(Math.asin(la)), cy + la * r); ctx.stroke(); }
       ctx.restore(); }
     ctx.lineWidth = 4; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.arc(X0, cy, r, 0, Math.PI * 2); ctx.stroke();
     // atmosfer çizgisi (100 km): yalnızca dünya küçükken
@@ -112,7 +112,7 @@ export function makeAltitudeRenderer(ep, canvas) {
     ctx.restore();
     ctx.lineWidth = 4; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.arc(X0, y, Math.max(r, 2), 0, Math.PI * 2); ctx.stroke();
     setFont(ctx, F.mono(30)); ctx.fillStyle = C.ink; ctx.fillText('AY', X0 + r + 22, y + 10);
-    if (R_MOON * s < 58) { setFont(ctx, F.mono(26)); ctx.fillStyle = C.graphite; ep.scaleNote.split('; ').forEach((ln, i) => ctx.fillText(ln, 560, 1010 + i * 34)); }
+    if (R_MOON * s < 58) { setFont(ctx, F.mono(30)); ctx.fillStyle = C.graphite; ep.scaleNote.split('; ').forEach((ln, i, arr) => ctx.fillText(ln + (i < arr.length - 1 ? ',' : ''), 560, 1010 + i * 38)); }
   }
   // yığın: tek tek dağlar; dağlar 3 px'ten küçülünce ince bir sütun
   function stack(n, s, t, red) {
@@ -123,9 +123,10 @@ export function makeAltitudeRenderer(ep, canvas) {
       const whole = Math.floor(n), frac = n - whole;
       const visible = Math.min(whole, Math.ceil((GY - 560) / e) + 1);
       for (let i = 0; i < visible; i++) mountain(X0, GY - i * e, w, e, 1, col, i === 0);
-      if (frac > 0.02 && whole < visible + 1) mountain(X0, GY - whole * e, w, e, frac, col, false);
+      // sıradaki dağ yukarıdan inerek yerine oturur (yarım dağ çizilmez)
+      if (frac > 0.02 && whole < visible + 1) { ctx.save(); ctx.globalAlpha *= Math.min(1, frac * 2.5); const sc = lerp(0.88, 1, ease.enter(Math.min(1, frac * 2))); mountain(X0, GY - whole * e, w * sc, e * sc, 1, col, false); ctx.restore(); }
     } else {
-      ctx.fillStyle = col; const cw = red ? 8 : Math.max(3, w * 0.6);
+      ctx.fillStyle = col; const cw = red ? 10 : Math.max(6, w * 0.6);
       ctx.fillRect(X0 - cw / 2, Math.max(top, 0), cw, GY - Math.max(top, 0));
       // zikzak dokusu: aşağı doğru kayan küçük çentikler (dağların sürekli dizildiğini hissettirir)
     }
@@ -149,7 +150,7 @@ export function makeAltitudeRenderer(ep, canvas) {
   // duraklar: gerçek yükseklikte simge ve etiket
   function marker(m, s, t, n) {
     const y = Y(m.km, s);
-    if (y < 900 || y > GY - 34) return; // yüzeye yapışan durak gizlenir
+    if (y < 960 || y > GY - 34) return; // yüzeye yapışan durak gizlenir
     const reached = n * E >= m.km;
     const a = ease.enter(seg(t, m.appear ?? 0, 0.4));
     if (a <= 0) return;
@@ -157,7 +158,7 @@ export function makeAltitudeRenderer(ep, canvas) {
     if (m.kind === 'line') {
       ctx.setLineDash([12, 10]); ctx.strokeStyle = C.ink; ctx.lineWidth = 2;
       ctx.beginPath(); ctx.moveTo(SAFE.x0, y); ctx.lineTo(SAFE.x1, y); ctx.stroke(); ctx.setLineDash([]);
-    } else icon(m.kind, X0 + 86, y, t);
+    } else icon(m.kind, X0 + 86 + (m.kind === 'plane' || m.kind === 'iss' ? Math.sin((t / D) * Math.round(D / 2.5) * Math.PI * 2) * 34 : 0), y, t);
     // uydu: Dünya'ya doğru yayın dalgaları (ulaşıldıktan sonra, sürekli)
     if (m.kind === 'sat' && reached) {
       ctx.strokeStyle = C.ink; ctx.lineWidth = 4;
@@ -165,7 +166,7 @@ export function makeAltitudeRenderer(ep, canvas) {
         ctx.beginPath(); ctx.arc(X0 + 86, y + 10, 24 + u * 150, Math.PI * 0.25, Math.PI * 0.75); ctx.stroke(); }
       ctx.globalAlpha = a;
     }
-    setFont(ctx, F.mono(28)); ctx.fillStyle = C.ink; ctx.textAlign = 'left';
+    setFont(ctx, F.mono(32)); ctx.fillStyle = C.ink; ctx.textAlign = 'left';
     const [nm, val] = m.label.split(' · ');
     const lx = m.kind === 'line' ? 560 : X0 + 140;
     ctx.fillText(nm, lx, y - (m.kind === 'line' ? 44 : 6)); ctx.fillStyle = C.graphite; ctx.fillText(val, lx, y + (m.kind === 'line' ? -12 : 26));
@@ -233,8 +234,8 @@ export function makeAltitudeRenderer(ep, canvas) {
     header();
     // geri sarma: yığın hızla iner; son kare = kare 0
     const vt = t >= tl.rw0 ? lerp(tl.rw0, 0, ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) - 0.4))) : t;
-    const s = scale(vt), n = count(vt);
-    ctx.save(); ctx.beginPath(); ctx.rect(0, 905, W, 1440 - 905); ctx.clip();
+    const n = count(vt), s = Math.min(scale(vt), (FITPX + 50) / ((n + Math.min(1, Math.max(0, n - 1) * 4)) * E)); // gelen dağ dahil yığının tepesi kadrajdan çıkamaz
+    ctx.save(); ctx.beginPath(); ctx.rect(0, 892, W, 1440 - 892); ctx.clip();
     sky(s, t);
     earth(s, t);
     for (const m of ep.markers) marker(m, s, vt, n);
@@ -243,6 +244,9 @@ export function makeAltitudeRenderer(ep, canvas) {
     ctx.restore();
     counter(t, n);
     if (t < tl.rw0) says(t);
+    else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
+      setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
+    }
     drawActor(ctx, actorScript, t, actorHome, 100, D);
   }
   return { render, duration: D, timeline: tl };

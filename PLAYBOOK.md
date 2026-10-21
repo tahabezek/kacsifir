@@ -83,6 +83,30 @@ Uygulama (motor, `engine/actor.js`; senaryo şablondan otomatik):
 
 ## 3. Formatlar (seriler)
 
+**Görsel çeşitlilik kuralı (21 Ekim 2026):** Her bölüm kendi görsel metaforuyla anlatılır. Aynı görsel kalıp
+art arda iki gönderide kullanılmaz. Kule kalıbı (solda A/B/C defteri, sağda sütunlar) en fazla ara sıra kullanılır.
+Konunun kendi nesnesi sahnenin kahramanıdır: satranç tahtası, EKG şeridi, fırtına, hız göstergesi, Dünya kesiti…
+
+Sahne kataloğu (`engine/scenes/`, bölüm dosyasında `template`):
+
+| Sahne | Ne gösterir | Örnek |
+|---|---|---|
+| board | eğik bakışta tahta, gerçek yığılma açısıyla yığınlar, yan kesitte yapılarla kıyas, tepeden harita | 015 satranç buğdayı |
+| light | ölçekli yolda foton, yörüngeler, hızlandırılmış kronometre | 004 Güneş ışığı |
+| tiles | bir şeklin kopyaları ızgaraya basılır, gruplar boyanır, tek hücre kırmızı | 006 kaç Türkiye |
+| altitude | üst üste dizilen nesne, logaritmik geri çekilme, gerçek yükseklikte duraklar | 002 Ay'a kaç Everest |
+| pulse | gerçek nabızla EKG; şerit gün → yıl → ömür sıkışır, yaş işareti | 008 kalp atışı |
+| needle | olasılık → saniye; yıl takvimi dolar, gün → saat → dakika → tek saniye dalışı | 016 Sayısal Loto |
+| spin | dönen dünya + analog hız göstergesi | 017 İstanbul'un dönüş hızı |
+| storm | şimşek ve gök gürültüsü gerçek zamanlı; aynı sürede ışığın Ay'a gidişi | 007 ışık ve ses |
+| depth | gerçek ölçekte kuyu, katmanlar, bütün Dünya kesiti | 003 Dünya'nın merkezi |
+| sun | gerçek oranda Güneş, çap boyunca dizilen Dünyalar, hacim dolumu | 009 Güneş'e kaç Dünya |
+| swarm, doc, versus, tower | önceki kalıplar | 011, 013, 012, 014 |
+
+Her sahnede: kare 0 boş değil, hareket ilk 0,5 sn'de başlar, beklemelerde kamera %5–6 yavaşça yaklaşır
+(donmuş kare olmaz), doruk öncesi sessizlik, kanca yazısı döngünün son yarım saniyesinde geri gelir.
+
+
 | Seri | Şablon | Ne zaman |
 |---|---|---|
 | **ÖLÇEK** (kule) | `tower` — sütunlar, log kamera, defter satırları | basit "kaç tane / kaç yıl" |

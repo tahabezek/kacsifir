@@ -1,62 +1,47 @@
 {
   "id": "007",
   "slug": "isik-ses",
+  "template": "storm",
   "serial": "№ 007 · HIZ",
-  "direction": "up",
   "bpm": 96,
-  "silenceBeats": 0.8,
-  "rewindBeats": 3,
-  "startFrac": 1,
   "question": [
     "Işık sesten",
     "kaç kat hızlıdır?"
   ],
-  "format": {
-    "dec": 100,
-    "units": [
-      {
-        "upTo": 277777.77777777775,
-        "div": 0.2777777777777778,
-        "name": "km/sa"
-      },
-      {
-        "upTo": 277777777.7777778,
-        "div": 277777.77777777775,
-        "name": "milyon km/sa"
-      },
-      {
-        "upTo": 1e+30,
-        "div": 277777777.7777778,
-        "name": "milyar km/sa"
-      }
+  "distM": 1000,
+  "soundMS": 343,
+  "lightKmS": 299792.458,
+  "moonKm": 384400,
+  "ratio": 874030,
+  "distLabel": "1 km",
+  "moonNote": "Gövdeler büyütüldü; mesafe ölçekli.",
+  "soundNote": "ses: 1 km",
+  "label": {
+    "stopwatch": "ŞİMŞEKTEN SONRA",
+    "same": "AYNI SÜREDE IŞIK",
+    "hero": "IŞIK SESTEN"
+  },
+  "say": {
+    "hook": "Şimşek 1 km uzağa düştü. Işığı hemen gördün.",
+    "thunder": "Gök gürültüsü 2,9 saniye sonra geldi.",
+    "moonAsk": "Işık bu 2,9 saniyede nereye gider?",
+    "moon": "Işık, Ay'a gidip döner ve yoluna devam eder.",
+    "hero": "Işık, sesten yaklaşık 874.000 kat hızlıdır.",
+    "kicker": "Şimşekten sonra saydığın her 3 saniye, 1 km eder."
+  },
+  "timing": {
+    "strike": 0.35,
+    "scene2": 5.9,
+    "moon": 6.8,
+    "heroLand": 12.6,
+    "silence": 0.5,
+    "kickDelay": 3,
+    "rewind": [
+      19.4,
+      21.3
     ]
   },
-  "items": [
-    {
-      "tag": "A",
-      "name": "Ses",
-      "value": 343,
-      "grow": 0.3,
-      "hold": 2.5
-    },
-    {
-      "tag": "B",
-      "name": "Uzay İstasyonu",
-      "value": 7660,
-      "grow": 3.5,
-      "hold": 3
-    },
-    {
-      "tag": "C",
-      "name": "Işık",
-      "value": 299792458,
-      "grow": 6,
-      "hold": 10.5,
-      "hero": true,
-      "kicker": "Sesten 874.000 kat hızlı: 1 saniyede Dünya'yı 7,5 kez dolaşır."
-    }
-  ],
-  "caption": "Ses saatte 1.235 km gider. Uzay İstasyonu 27.600 km. Işık ise saatte 1,08 milyar km: sesten 874.030 kat hızlı, 1 saniyede Dünya'nın çevresini 7,5 kez dolaşır.\n\nŞimşeği gök gürültüsünden önce görmemizin nedeni de bu.\n\nKaynak: ses hızı 343 m/s (20 °C hava) · ISS ≈7,66 km/s (NASA) · ışık hızı 299.792.458 m/s · Ekvator çevresi 40.075 km.",
+  "caption": "Işık saniyede 299.792 km, ses ise havada saniyede yaklaşık 343 metre yol alır. Yani ışık sesten yaklaşık 874.000 kat hızlıdır. 1 km uzağa düşen şimşeğin ışığı gözüne anında ulaşır, gök gürültüsü ise 2,9 saniye sonra gelir. Işık aynı sürede Ay'a gidip dönmeye yetecek kadar yol alır.\n\nPratik bilgi: Şimşekten sonra saymaya başla; her 3 saniye yaklaşık 1 km eder.\n\nKaynak: ışık hızı 299.792,458 km/s · ses hızı 20 °C havada ≈ 343 m/s · Dünya-Ay ortalama uzaklığı 384.400 km (NASA).",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",
@@ -64,6 +49,7 @@
     "#fizik",
     "#bilgiler"
   ],
+  "actor": true,
   "disabled": true,
-  "disabledWhy": "kule kalıbı tekrar ediyor; kendi görsel sahnesiyle yeniden yapılacak"
+  "disabledWhy": "yeni sahne kontrol ediliyor"
 }

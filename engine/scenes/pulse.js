@@ -208,13 +208,22 @@ export function makePulseRenderer(ep, canvas) {
     // geri sarma: şerit hızla açılır, son kare = kare 0
     const E = t >= tl.rw0 ? Math.exp(lerp(Math.log(ep.lifeYears * YEAR), Math.log(ep.E0), ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) - 0.4)))) : elapsed(t);
     const red = t >= tl.heroLand && t < tl.rw0;
+    // beklemelerde şerit merkezine doğru %5 yavaş yaklaşma (donmuş kare olmaz)
+    const holds = [...Z.slice(0, -1).map((z, i) => [z.t1, Z[i + 1].t0]), [tl.heroLand, tl.rw0]];
+    let zf = 1; for (const [a, b] of holds) zf *= 1 + 0.05 * Math.max(0, Math.min(1, (t - a) / (b - a)));
+    if (t >= tl.rw0) zf = lerp(1.05, 1, ease.state(seg(t, tl.rw0, 0.4)));
+    ctx.save(); ctx.translate(ST.x0 + (ST.x1 - ST.x0) / 2, ST.y); ctx.scale(zf, zf); ctx.translate(-(ST.x0 + (ST.x1 - ST.x0) / 2), -ST.y);
     paper(t);
     trace(t, E, red && t < tl.kickAt);
     ruler(E);
     ageMark(t);
+    ctx.restore();
     heart(t, E, red);
     counter(t, E);
     if (t < tl.rw0) says(t);
+    else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
+      setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
+    }
     drawActor(ctx, actorScript, t, actorHome, 100, D);
   }
   return { render, duration: D, timeline: tl };

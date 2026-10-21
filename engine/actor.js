@@ -127,7 +127,7 @@ function drawActorInner(ctx, script, t, home, H, D) {
     case 'happy': pose = POSES.isaret; expr = 'mutlu'; break;
     case 'sleep': pose = POSES.oturma; expr = 'uykulu';
       fx = () => { ctx.save(); ctx.fillStyle = GRAPH; ctx.font = `800 ${Math.round(H * 0.35)}px Archivo`;
-        for (let i = 0; i < 3; i++) { const k = ((t * 0.6 + i / 3) % 1); ctx.globalAlpha = Math.sin(k * Math.PI); ctx.fillText('z', x + H * (0.5 + k * 0.5), y - H * (1.9 + k * 0.8)); }
+        for (let i = 0; i < 3; i++) { const k = ((t * 0.6 + i / 3) % 1); ctx.globalAlpha = Math.sin(k * Math.PI); ctx.fillText('z', x + H * (0.45 + k * 0.35), y - H * (2.25 + k * 0.7)); }
         ctx.restore(); }; break;
     case 'surprise': {
       // zıpla: yay (120/24) ile tepe ~0,35 H, iniş ezilmesi

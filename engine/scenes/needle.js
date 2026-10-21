@@ -203,13 +203,21 @@ export function makeNeedleRenderer(ep, canvas) {
     const rw = t >= tl.rw0 ? ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) - 0.4)) : 0;
     const vt = t >= tl.rw0 ? lerp(tl.fill[1], 0, rw) : t;
     const ballsA = vt < tl.fill[0] ? 1 : 1 - ease.exit(seg(vt, tl.fill[0], 0.4));
+    const holds = [[tl.balls[1], tl.fill[0]], [tl.fill[1], tl.dive[0][0]], [tl.heroLand, tl.rw0]];
+    let zf = 1; for (const [a, b] of holds) zf *= 1 + 0.05 * Math.max(0, Math.min(1, (t - a) / (b - a)));
+    if (t >= tl.rw0) zf = lerp(zf, 1, ease.state(seg(t, tl.rw0, 0.4)));
+    ctx.save(); ctx.translate(505, 1140); ctx.scale(zf, zf); ctx.translate(-505, -1140);
     balls(vt, ballsA);
     const calA = t >= tl.rw0 ? (vt > tl.fill[0] ? 1 : 0) : ease.enter(seg(t, tl.fill[0], 0.4)) * (1 - ease.exit(seg(t, tl.dive[0][0], 0.5)));
     const zoom = t >= tl.dive[0][0] && t < tl.rw0 ? Math.exp(lerp(0, Math.log(40), ease.state(seg(t, tl.dive[0][0], 0.6)))) : 1;
     calendar(vt, calA, zoom);
     if (t < tl.rw0 + 0.4) dive(t);
+    ctx.restore();
     counter(t >= tl.rw0 ? vt : t);
     if (t < tl.rw0) says(t);
+    else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
+      setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
+    }
     drawActor(ctx, actorScript, t, actorHome, 100, D);
   }
   return { render, duration: D, timeline: tl };

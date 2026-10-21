@@ -44,6 +44,13 @@ hedefimiz **< %60**.
    - Kıyas: "Hangisi daha şaşırtıcı?"
 6. **Başlık okunurken kıpırdamaz**; hareket görselde.
 
+### Tırmanış merdiveni: video kendini izletir
+Dorukta tek sıçrama yapılmaz; izleyicinin tanıdığı **somut eşiklerden** geçen bir merdiven kurulur.
+Her basamak yeni bir "vay" ve bir sonrakine merak doğurur (her 2–4 sn'de yeni bir şey).
+Örnek (0,1 mm kâğıt): 20 kat = 105 m (Galata Kulesi'nin 1,5 katı) → 23 = 839 m (Burj Halife) →
+27 = 13,4 km (uçak irtifasının üstü) → 30 = 107 km (uzayın sınırı) → 42 = Ay'ı geçer.
+Karıncalar: kart → karo → oda → saha → Vatikan → İstanbul → Türkiye. Hep aynı yön, hep büyüyen ölçek.
+
 ## 3. Formatlar (seriler)
 
 | Seri | Şablon | Ne zaman |

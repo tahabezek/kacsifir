@@ -172,7 +172,7 @@ export function fmtLen(m) {
   if (m < 1) return { num: nf(m < 0.1 ? 1 : 0).format(m * 100), unit: 'cm' };
   if (m < 10) return { num: nf(2).format(m), unit: 'm' };
   if (m < 1000) return { num: nf(0).format(m), unit: 'm' };
-  return { num: nf(1).format(m / 1000), unit: 'km' };
+  return { num: nf(m < 100000 ? 1 : 0).format(m / 1000), unit: 'km' };
 }
 
 export function dominoSummary(ep) {
@@ -196,7 +196,7 @@ export function dominoCues(ep) {
 }
 
 // Hesap satırı (aha cümlesinin altında): "n adım · 1,5^n kat", n = 1 → 36. Görüntü ve ses aynı takvimi okur.
-export const CALC = { delay: 2.2, dur: 2.0, n: N - 1 };
+export const CALC = { delay: 2.4, dur: 4.0, n: N - 1 };
 export function calcN(tl, t) {
   const u = ease.state(seg(t, tl.land + CALC.delay, CALC.dur));
   return 1 + Math.round((CALC.n - 1) * u);
@@ -209,4 +209,11 @@ export function calcTicks(tl) {
     if (n !== prev) { out.push({ t, n }); prev = n; }
   }
   return out;
+}
+
+// Hayalet zincir (Ay bölümü): 38 → 63. taş, kurşun kalem çizgisiyle; Ay cümlesiyle başlar, dalıştan önce biter.
+export const GHOST_N = 63;
+export function ghostT(tl, k) {
+  const k0 = tl.says.find(s => s.moon).t0 + 0.2, k1 = tl.dive[0] - 2.2;
+  return k0 + ((k - (N + 1)) / (GHOST_N - (N + 1))) * (k1 - k0);
 }

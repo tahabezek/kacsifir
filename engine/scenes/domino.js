@@ -10,7 +10,7 @@ import { W, H, ease, seg, lerp, clamp01, mulberry32 } from '../core.js';
 import { C, F, setFont, wrap } from '../tower.js';
 import { SIFIR_CARD, POSES, mixPose, drawSifir } from '../sifir.js';
 import {
-  H1, RATIO, THICK, WIDE, GAP, N, N_NEXT, FPS, hOf, xOf, buildDominoTimeline, anglesAt, frontK, monotone, fmtLen, CALC, calcN,
+  H1, RATIO, THICK, WIDE, GAP, N, N_NEXT, FPS, hOf, xOf, buildDominoTimeline, anglesAt, frontK, monotone, fmtLen, CALC, calcN, GHOST_N, ghostT,
 } from './domino_core.js';
 
 const SAFE = { x0: 90, x1: 920 };
@@ -139,6 +139,16 @@ export function makeDominoRenderer(ep, overlay) {
   const P1x = xOf(N) + THICK * hOf(N) + EV_D + EV_R * 1.07 + 900;   // Everest'in eteğinin ötesi
   const next = [];
   for (let k = 1; k <= N_NEXT; k++) next[k] = makeStone(k, false);
+  // hayalet zincir (38 → 63): düşünce deneyinin devamı, yalnızca kurşun kalem çizgisi
+  const ghostGeo = new THREE.EdgesGeometry(new THREE.BoxGeometry(THICK, 1, WIDE).translate(-THICK / 2, 0.5, 0));
+  const ghostMat = new THREE.LineBasicMaterial({ color: col(hex(C.ink)), fog: false });
+  const ghostFill = new THREE.MeshBasicMaterial({ color: col(hex('#E4DAC4')), transparent: true, opacity: 0.6, depthWrite: false, fog: false });
+  const ghostBox = new THREE.BoxGeometry(THICK, 1, WIDE).translate(-THICK / 2, 0.5, 0);
+  const GX = [];
+  GX[N + 1] = xOf(N) + THICK * hOf(N) + EV_D + EV_R * 1.3 + 2500;
+  for (let k = N + 1; k < GHOST_N; k++) GX[k + 1] = GX[k] + (THICK + GAP) * hOf(k);
+  const ghosts = [];
+  for (let k = N + 1; k <= GHOST_N; k++) { const g = new THREE.Group(); g.add(new THREE.Mesh(ghostBox, ghostFill), new THREE.LineSegments(ghostGeo, ghostMat)); ghosts[k] = g; scene.add(g); }
 
   // ——— Sıfır: kâğıttan kesilmiş ayaklı figür (tek çizim fonksiyonu: drawSifir) ———
   const HS = 0.0055;                          // baş çapı: 5,5 mm (toplam boy ~11 mm)
@@ -166,7 +176,7 @@ export function makeDominoRenderer(ep, overlay) {
   function sifirState(tau) {
     if (tau <= 0) return { pose: POSE_A, expr: EXPR_LOOK };
     if (tau < 0.24) return { pose: mixPose(POSE_A, POSE_W, ease.state(tau / 0.24)), expr: EXPR_LOOK };
-    if (tau < 0.42) return { pose: mixPose(POSE_W, POSE_P, ease.enter((tau - 0.24) / 0.18)), expr: EXPR_LOOK };
+    if (tau < 0.42) return { pose: mixPose(POSE_W, POSE_P, ease.state((tau - 0.24) / 0.18)), expr: EXPR_LOOK };
     if (tau < 1.0) return { pose: POSE_P, expr: 'sayiyor' };
     const u = ease.state(seg(tau, 1.0, 0.35));
     return { pose: mixPose(POSE_P, POSES.sasirma, u), expr: u > 0.3 ? 'saskin' : 'sayiyor' };
@@ -291,27 +301,32 @@ export function makeDominoRenderer(ep, overlay) {
   const kKn = [[-1.0, 0.86], [0.4, 0.9]];
   for (let k = 2; k <= N; k++) kKn.push([c[k], k - 0.4]);
   const [d0, d1] = tl.dive, A1 = ep.says.find(x => x.t0 >= tl.land).t1;   // aha cümlesinin sonu: plan görünüşü başlar
-  kKn.push([tl.land, N + 0.55], [tl.land + 3.5, N + 0.75], [A1, N + 1.0], [d0, N + 2.4]);
+  const G0 = ghostT(tl, N + 1), G1 = ghostT(tl, GHOST_N);
+  kKn.push([tl.land, N + 0.55], [tl.land + 3.5, N + 0.75], [A1, N + 1.0]);
+  // hayalet bölümünde kamera ölçeği her hayalet taşın belirişine bağlı: S eğrisi yüzünden öne kaçmasın
+  for (let k = N + 1; k <= GHOST_N; k++) kKn.push([ghostT(tl, k) + 0.15, k + 0.1]);
+  kKn.push([d0, GHOST_N + 0.75]);
   const kCamF = track(kKn);
   const leadF = track([[-1, -0.42], [0.4, -0.38], [1.4, 0.35], [c[N], 0.4]]);
-  const mF = track([[-1, 11.8], [0.4, 11.5], [1.8, 11.2], [c[16], 11.0], [c[25], 10.8], [c[31], 11.0], [c[34], 14.5], [c[36], 13.5], [c[N], 8.0], [tl.land, 6.8], [tl.land + 3, 6.2], [A1, 5.8], [d0, 9.0]]);
-  const lookYF = track([[-1, 1.12], [0.4, 1.08], [1.8, 0.5], [c[N], 0.42], [tl.land, 0.22], [A1, 0.2], [d0, 0.1]]);
-  const azF = track([[-1, 0.52], [0.4, 0.52], [3, 0.5], [c[16], 0.58], [c[25], 0.66], [c[34], 0.56], [c[N], 0.34], [tl.land, 0.33], [A1, 0.64], [d0, 0.82]]);
-  const elF = track([[-1, 0.24], [0.4, 0.24], [3, 0.29], [c[N] - 1.2, 0.27], [c[N], 0.2], [tl.land, 0.18], [A1, 0.28], [d0, 1.12]]);
+  const mF = track([[-1, 11.8], [0.4, 11.5], [1.8, 11.2], [c[16], 11.0], [c[25], 10.8], [c[31], 11.0], [c[34], 14.5], [c[36], 13.5], [c[N], 8.0], [tl.land, 6.8], [tl.land + 3, 6.0], [A1, 5.4], [G0 + 0.6, 7.2], [d0, 7.6]]);
+  const lookYF = track([[-1, 1.12], [0.4, 1.08], [1.8, 0.5], [c[N], 0.42], [tl.land, 0.22], [A1, 0.2], [G0 + 0.6, 0.48], [d0, 0.5]]);
+  const azF = track([[-1, 0.52], [0.4, 0.52], [3, 0.5], [c[16], 0.58], [c[25], 0.66], [c[34], 0.56], [c[N], 0.34], [tl.land, 0.33], [A1, 1.05], [G0 + 1.2, 0.72], [d0, 0.64]]);
+  const elF = track([[-1, 0.24], [0.4, 0.24], [3, 0.29], [c[N] - 1.2, 0.27], [c[N], 0.2], [tl.land, 0.18], [A1, 0.3], [G0 + 1.2, 0.33], [d0, 0.36]]);
   const standF = [PIV + EV_D * 0.42, 0, 0];   // ayaktaki kırmızı taş ile Everest yan yana
   const endF = [PIV + EV_D * 0.5, 0, 0];      // Everest'in zirvesine yaslanan dev
-  const planF = [xOf(N) - 0.1 * hOf(N), 0, -0.2 * hOf(N)];    // plan görünüşü: bütün zincir
   const xAtK = k => {
     if (k <= 1) return xOf(1) - (1 - k) * 0.0045;
-    if (k >= N) return xOf(N) + (k - N) * (THICK + GAP) * hOf(N);
+    if (k >= N + 1) { const i = Math.min(GHOST_N - 1, Math.floor(k)); return lerp(GX[i], GX[i + 1], k - i); }
+    if (k >= N) return lerp(xOf(N), GX[N + 1], k - N);
     const i = Math.floor(k); return lerp(xOf(i), xOf(i + 1), k - i);
   };
   function chainCam(t) {
     const kc = kCamF(t);
     const S = hOf(kc);
     // kırmızı taş ile Everest yan yana (ayakta) → devrilen devin boyu → yukarıdan bütün zincir
-    const ws = ease.state(seg(t, c[N] - 1.8, 1.9)), we = ease.state(seg(t, c[N] + 0.4, 2.8)), wp = ease.state(seg(t, A1, d0 - A1));
-    const f = i => lerp(lerp(lerp(i === 0 ? xAtK(kc + leadF(t)) : 0, standF[i], ws), endF[i], we), planF[i], wp);
+    const ws = ease.state(seg(t, c[N] - 1.8, 1.9)), we = ease.state(seg(t, c[N] + 0.4, 2.8)), wg = ease.state(seg(t, A1 - 0.1, 1.2));
+    const gF = [xAtK(kc + 0.25), 0, 0];           // hayalet zincirin cephesi
+    const f = i => lerp(lerp(lerp(i === 0 ? xAtK(kc + leadF(t)) : 0, standF[i], ws), endF[i], we), gF[i], wg);
     return { F: [f(0), 0, f(2)], S, M: mF(t), az: azF(t), el: elF(t), ly: lookYF(t) };
   }
   function camAt(t) {
@@ -327,7 +342,7 @@ export function makeDominoRenderer(ep, overlay) {
     return { F: [lerp(wide.F[0], mac.F[0], wf), 0, lerp(wide.F[2], mac.F[2], wf)], S, M: L('M'), az: L('az'), el: L('el'), ly: L('ly') };
   }
   window.__dom.camAt = t => camAt(t); window.__dom.chainCam = t => chainCam(t);
-  const kick = t => (t > tl.land ? 1 - 0.03 * Math.exp(-(t - tl.land) * 14) : 1);
+  const kick = t => (t > tl.land ? 1 - 0.05 * Math.exp(-(t - tl.land) * 6) : 1);
 
   // ——— Dünyayı t anına göre kur (kamera-göreli birimler) ———
   let CAM = null;
@@ -383,6 +398,14 @@ export function makeDominoRenderer(ep, overlay) {
       m.position.copy(rel(P1x + xOf(k) + THICK * h, 0, 0));
       m.scale.setScalar(h / CAM.S);
       m.rotation.set(0, 0, 0);
+    }
+    for (let k = N + 1; k <= GHOST_N; k++) {
+      const h = hOf(k), g = ghosts[k];
+      const u = ease.enter(seg(t, ghostT(tl, k), 0.3)) * (1 - ease.exit(seg(t, tl.dive[0] + 1.55, 0.35)));
+      g.visible = u > 0.001 && h > tiny;
+      if (!g.visible) continue;
+      g.position.copy(rel(GX[k] + THICK * h, 0, 0));
+      g.scale.set(h / CAM.S, (h / CAM.S) * u, h / CAM.S);
     }
     // Sıfır (iki figür: başlangıç ve döngünün sonraki basamağı)
     const zS = (WIDE * H1) / 2 + 0.0009;
@@ -447,7 +470,8 @@ export function makeDominoRenderer(ep, overlay) {
     gl.setRenderTarget(rtA); gl.setClearColor(0x000000, 0); gl.clear();
     for (let i = 0; i < NS; i++) {
       // kare içi zaman (0,5 kare deklanşör), mercek diski, alt piksel kayması — tabakalı örnek
-      const ts = t + ((i + r()) / NS - 0.5) * (0.5 / FPS);
+      const shut = t > ghostT(tl, N + 1) - 0.3 && t < tl.dive[0] ? 0.12 : 0.5;
+      const ts = t + ((i + r()) / NS - 0.5) * (shut / FPS);
       const a = 2 * Math.PI * ((i * 0.618034 + r()) % 1), rr = Math.sqrt((i + 0.5) / NS);
       pose(ts, NS > 1 ? [Math.cos(a) * rr, Math.sin(a) * rr] : null, NS > 1 ? [r() - 0.5, r() - 0.5] : null);
       const j = 0.035;
@@ -506,8 +530,8 @@ export function makeDominoRenderer(ep, overlay) {
     if (grow > 0.98) for (const y of [ay, by]) { ctx.beginPath(); ctx.moveTo(mx - 9, y + 9); ctx.lineTo(mx + 9, y - 9); ctx.stroke(); }
     ctx.globalAlpha = 1;
     if (lab > 0) {
-      setFont(ctx, F.mono(40)); ctx.fillStyle = C.ink;
-      const lines = label.split('\n'), lh = 46;
+      setFont(ctx, F.mono(44)); ctx.fillStyle = C.ink;
+      const lines = label.split('\n'), lh = 50;
       const wMax = Math.max(...lines.map(l => ctx.measureText(l).width));
       // sabit çapa: belirdiği andaki çizginin tepesi ('top') ya da ortası ('side')
       const [px, pTop, pMid] = pin;
@@ -543,13 +567,14 @@ export function makeDominoRenderer(ep, overlay) {
     const mid = (tl.dive[0] + tl.dive[1]) / 2;
     let k = 1;
     if (t < mid) for (let j = 1; j <= N; j++) if (t >= c[j]) k = j;
-    const hero = t >= tl.land && t < mid;
+    if (t < mid) for (let j = N + 1; j <= GHOST_N; j++) if (t >= ghostT(tl, j)) k = j;
+    const hero = t >= tl.land && t < ghostT(tl, N + 1);
     setFont(ctx, F.head(112)); ctx.fillStyle = hero ? C.red : C.ink;
     const ks = String(k);
     halo(ks, SAFE.x0, counterY, 18);
     const kw = ctx.measureText(ks).width;
     setFont(ctx, F.name(56)); ctx.fillStyle = hero ? C.red : C.ink;
-    halo(fmt(hOf(k)), SAFE.x0 + Math.max(kw, 130) + 30, counterY, 12);
+    halo(fmt(hOf(k)), SAFE.x0 + kw + 26, counterY, 12);
     // etiket rakamdan sonra ve yukarıda: Ş'nin çengeli rakamın halesinin altında kalmasın
     setFont(ctx, F.mono(34)); ctx.fillStyle = hero ? C.red : C.graphite;
     halo('TAŞ', SAFE.x0, counterY - 100, 9);
@@ -568,7 +593,7 @@ export function makeDominoRenderer(ep, overlay) {
     const active = [];
     for (const mk of marks) {
       const ck = c[mk.k], hk = hOf(mk.k), isE = mk.kind === 'everest';
-      const s0 = ck - (isE ? 1.0 : 1.5), sEnd = ck + 0.15, mEnd = isE ? tl.land + 3.5 : ck + 2.2;
+      const s0 = ck - 0.05, sEnd = ck + 0.9, mEnd = isE ? tl.land + 3.5 : ck + 2.6;
       const us = seg(t, s0, 0.9) * (1 - ease.exit(seg(t, sEnd, 0.3)));
       const um = seg(t, s0 + 0.2, 0.9) * (1 - ease.exit(seg(t, mEnd, 0.3)));
       if (us <= 0 && um <= 0) continue;
@@ -580,7 +605,25 @@ export function makeDominoRenderer(ep, overlay) {
       };
       active.push({ mk, hk, us, um, sP, mP, pinS: at(s0 + 0.75).s, pinM: at(s0 + 0.95).m });
     }
-    if (active.length) pose(t, null, null);
+    // Ay: 63. taşın yanında yerden 384.400 km'ye ölçü çizgisi; tepesinde mürekkep daire
+    const gm = ghostT(tl, GHOST_N), um = seg(t, gm - 0.15, 0.9) * (1 - ease.exit(seg(t, tl.dive[0], 0.3)));
+    let moon = null;
+    if (um > 0) {
+      const hm = hOf(GHOST_N), xm = GX[GHOST_N] + THICK * hm + 0.32 * hm, MOON = 384400e3;
+      pose(gm + 0.6, null, null);
+      const pt = project(xm, MOON, 0);
+      moon = { xm, MOON, u: um, pin: [pt[0], pt[1], pt[1]] };
+    }
+    if (active.length || moon) pose(t, null, null);
+    if (moon) {
+      const a = project(moon.xm, 0, 0), b = project(moon.xm, moon.MOON, 0);
+      dimV(a, b, moon.u, C.graphite, 'Ay · 384.400 km', 1, moon.pin, 'top');
+      const r = 22 * ease.enter(clamp01((moon.u - 0.5) / 0.5));
+      if (r > 0.5) {
+        ctx.save(); ctx.beginPath(); ctx.arc(b[0] + 26 * 0.8, b[1], r, 0, Math.PI * 2);
+        ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke(); ctx.restore();
+      }
+    }
     for (const { mk, hk, us, um, sP, mP, pinS, pinM } of active) {
       if (us > 0) dimV(project(sP[0], 0, sP[1]), project(sP[0], hk, sP[1]), us, C.ink, fmt(hk), -1, pinS, 'top');
       if (um > 0) dimV(project(mP[0], 0, mP[1]), project(mP[0], mk.mh, mP[1]), um, C.graphite,

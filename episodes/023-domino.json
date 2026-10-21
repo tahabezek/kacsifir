@@ -45,10 +45,10 @@
       22.2
     ],
     "dive": [
-      34.9,
-      36.8
+      35.8,
+      38
     ],
-    "duration": 37.4
+    "duration": 38.6
   },
   "stops": [
     {
@@ -102,23 +102,24 @@
       "text": "31. taş Burj Halife'yi geçer."
     },
     {
-      "t0": 20,
-      "t1": 24.6,
+      "t0": 20.45,
+      "t1": 25,
       "text": "37. taş Everest'ten yüksektir: 10,9 kilometre.",
       "red": true
     },
     {
-      "t0": 24.6,
-      "t1": 31.3,
-      "text": "Her taş öncekinden yalnızca 1,5 kat büyüktür; 36 adımda bu 2 milyon kat eder."
+      "t0": 25,
+      "t1": 31.7,
+      "text": "Her taş öncekinden yalnızca 1,5 kat büyüktür; 36 adımda boy 2 milyon katına çıkar."
     },
     {
-      "t0": 31.3,
-      "t1": 34.9,
-      "text": "Ay'a ulaşmak için 63 taş yeter."
+      "t0": 31.7,
+      "t1": 35.8,
+      "text": "Ay'a ulaşmak için 63 taş yeter.",
+      "moon": true
     },
     {
-      "t0": 35.85,
+      "t0": 36.9,
       "t1": 99,
       "text": "Bir domino taşı kendisinden 1,5 kat büyük bir taşı devirebilir."
     }

@@ -2,7 +2,7 @@
 // Her taşın tıkı bir öncekinden tam bir beşli (×1,5 = frekans oranı 3:2) pestir; oktavla katlanır, böylece
 // zincir hiç bitmeyen bir inişe benzer. Büyük taşlara gövde ve gürleme eklenir. Doruktan önce tek riser, gerçek
 // sessizlik, tek impact. Döngü: kuyruklar dosyanın başına sarılır (dikiş duyulmaz).
-import { buildDominoTimeline, dominoCues, calcTicks, CALC, N } from '../engine/scenes/domino_core.js';
+import { buildDominoTimeline, dominoCues, calcTicks, CALC, N, GHOST_N, ghostT } from '../engine/scenes/domino_core.js';
 import { mulberry32, seg, clamp01 } from '../engine/core.js';
 
 const SR = 48000;
@@ -132,7 +132,7 @@ export function synthDomino(ep) {
   // ölçü çizgileri ve maketler (görüntüdeki zamanlamayla aynı)
   for (const s of ep.stops) {
     const ck = tl.c[s.k], isE = s.kind === 'everest';
-    const s0 = ck - (isE ? 1.0 : 1.5);
+    const s0 = ck - 0.05;
     pencil(s0 + 0.18, s0 + 0.66, 0.05);
     pencil(s0 + 0.38, s0 + 0.86, 0.04);
     paper(ck - (isE ? 3.2 : 2.2), 1.0, 0.045);
@@ -143,6 +143,16 @@ export function synthDomino(ep) {
     while (f > 1700) f /= 2;
     tok(t, f, n === CALC.n ? 0.12 : 0.05, n === CALC.n ? 0.09 : 0.025, 0.1);
   }
+  // hayalet zincir (38 → 63): beşli inişi sürer, kalem dokusunda hafif; Ay'a varışta ince bir çan
+  for (let k = N + 1; k <= GHOST_N; k++) {
+    const t = ghostT(tl, k) + 0.015;
+    let f = 2600 / Math.pow(1.5, k);
+    while (f < 360) f *= 2;
+    tok(t, f, 0.05, 0.02, 0.15);
+  }
+  { const gm = ghostT(tl, GHOST_N);
+    tok(gm + 0.02, 1318.5, 0.1, 0.6, 0); tok(gm + 0.02, 1975.5, 0.05, 0.4, 0.1);
+    pencil(gm - 0.15 + 0.18, gm - 0.15 + 0.66, 0.05); }
   riser(cues.riser[0], cues.riser[1], 0.36);
   whoosh(tl.c[N] + 0.1, cues.silence0, 0.12, false);          // kırmızı taşın düşüşü, sessizliğe keskin kesilir
   impact(cues.land - 2 / 30, 1.0);                             // efekt, görsel oturmadan 2 kare önce başlar

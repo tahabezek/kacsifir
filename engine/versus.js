@@ -84,19 +84,7 @@ export function makeVersusRenderer(ep, canvas, actor) {
       setFont(ctx, F.mono(36)); ctx.fillStyle = C.ink; ctx.textAlign = xx === x0 ? 'left' : 'right'; ctx.fillText(lab, xx, y + 64); ctx.textAlign = 'left';
     }
     // gezgin işareti (kuş ya da yürüyen insan; maskot katmanı varsa onun yerine aktör çizer)
-    if (cfg.marker === 'bird') {
-      const flap = Math.sin(t * 18) * 0.5;
-      ctx.save(); ctx.translate(xp, y - 46); ctx.strokeStyle = C.ink; ctx.lineWidth = 5; ctx.lineCap = 'round';
-      ctx.beginPath(); ctx.moveTo(-34, -12 * flap - 6); ctx.quadraticCurveTo(-14, -18, 0, 0); ctx.quadraticCurveTo(14, -18, 34, -12 * flap - 6); ctx.stroke();
-      ctx.fillStyle = C.ink; ctx.beginPath(); ctx.ellipse(0, 2, 10, 6, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore();
-    } else {
-      const st = Math.sin(t * 9);
-      ctx.save(); ctx.translate(xp, y - 8); ctx.strokeStyle = C.ink; ctx.lineWidth = 5; ctx.lineCap = 'round';
-      ctx.beginPath(); ctx.arc(0, -78, 11, 0, Math.PI * 2); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(0, -66); ctx.lineTo(0, -30); ctx.moveTo(0, -30); ctx.lineTo(10 * st, 0); ctx.moveTo(0, -30); ctx.lineTo(-10 * st, 0);
-      ctx.moveTo(0, -58); ctx.lineTo(12 * -st, -38); ctx.moveTo(0, -58); ctx.lineTo(12 * st, -38); ctx.stroke();
-      ctx.fillStyle = C.ink; ctx.fillRect(-16, -62, 12, 20); ctx.restore(); // sırt çantası
-    }
+    if (cfg.marker === 'bird') bird(xp, y - 46, t); else walker(xp, y - 8, t);
     // sayaçlar
     const big = cfg.total * u;
     setFont(ctx, F.head(120)); ctx.fillStyle = C.ink;
@@ -108,6 +96,21 @@ export function makeVersusRenderer(ep, canvas, actor) {
     const tv = cfg.timeTotal * u;
     ctx.fillText(`${tv < 20 ? nf1.format(tv) : nf.format(tv)} ${cfg.timeUnit}`, SAFE.x0, 1380);
     ctx.restore();
+  }
+
+  function bird(x, y, t, sc = 1) {
+    const flap = Math.sin(t * Math.round((18 * D) / (2 * Math.PI)) * 2 * Math.PI / D) * 0.5; // kanat çırpma da döngüye kilitli
+    ctx.save(); ctx.translate(x, y); ctx.scale(sc, sc); ctx.strokeStyle = C.ink; ctx.lineWidth = 5; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(-34, -12 * flap - 6); ctx.quadraticCurveTo(-14, -18, 0, 0); ctx.quadraticCurveTo(14, -18, 34, -12 * flap - 6); ctx.stroke();
+    ctx.fillStyle = C.ink; ctx.beginPath(); ctx.ellipse(0, 2, 10, 6, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+  }
+  function walker(x, y, t, sc = 1) {
+    const st = Math.sin(t * 9);
+    ctx.save(); ctx.translate(x, y); ctx.scale(sc, sc); ctx.strokeStyle = C.ink; ctx.lineWidth = 5; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.arc(0, -78, 11, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, -66); ctx.lineTo(0, -30); ctx.moveTo(0, -30); ctx.lineTo(10 * st, 0); ctx.moveTo(0, -30); ctx.lineTo(-10 * st, 0);
+    ctx.moveTo(0, -58); ctx.lineTo(12 * -st, -38); ctx.moveTo(0, -58); ctx.lineTo(12 * st, -38); ctx.stroke();
+    ctx.fillStyle = C.ink; ctx.fillRect(-16, -62, 12, 20); ctx.restore(); // sırt çantası
   }
 
   function compare(t) {
@@ -123,6 +126,10 @@ export function makeVersusRenderer(ep, canvas, actor) {
       badge(SAFE.x0, y + 20, letter, 1);
       const w = Math.max(3, (v / mx) * wmax * g);
       ctx.fillStyle = C.ink; ctx.fillRect(x0, y - 40, w, 56);
+      ctx.save(); ctx.beginPath(); ctx.rect(x0, y - 40, w, 56); ctx.clip();
+      const off = (t * 220 * (v / mx)) % 36; ctx.strokeStyle = 'rgba(236,229,213,0.32)'; ctx.lineWidth = 8;
+      for (let sx = x0 - 72 + off; sx < x0 + w + 36; sx += 36) { ctx.beginPath(); ctx.moveTo(sx, y + 16); ctx.lineTo(sx + 28, y - 40); ctx.stroke(); }
+      ctx.restore();
       setFont(ctx, F.mono(40)); ctx.fillStyle = C.ink; ctx.fillText(label, x0 + (w > 360 ? 0 : w + 16), y + (w > 360 ? 70 : 2));
     };
     bar(880, 'A', a.value, ga, a.label);
@@ -146,6 +153,9 @@ export function makeVersusRenderer(ep, canvas, actor) {
     lines(ep.ask.say, SAFE.x0, 700, 60, enterP(t, s.t0 + 0.1), C.ink, F.head);
     badge(SAFE.x0, 1000, 'A', enterP(t, s.t0 + 0.4)); lines(ep.ask.a, SAFE.x0 + 110, 980, 44, enterP(t, s.t0 + 0.45), C.ink);
     badge(SAFE.x0, 1160, 'B', enterP(t, s.t0 + 0.55)); lines(ep.ask.b, SAFE.x0 + 110, 1140, 44, enterP(t, s.t0 + 0.6), C.ink);
+    const ua = ((t - s.t0) / 2.2) % 1;
+    ctx.save(); ctx.globalAlpha *= enterP(t, s.t0 + 0.5); bird(lerp(SAFE.x0 + 130, 700, ua), 1060 - Math.sin(ua * Math.PI) * 16, t, 0.8);
+    walker(SAFE.x0 + 130 + ((t - s.t0) * 14) % 300, 1238, t, 0.62); ctx.restore();
     // yorum işareti: yanıp sönmeyen, sürekli dönen kalem ucu (sürekli hareket)
     ctx.restore();
   }
@@ -160,6 +170,8 @@ export function makeVersusRenderer(ep, canvas, actor) {
     badge(SAFE.x0, 760, 'A', 1);
     setFont(ctx, F.head(150)); ctx.fillStyle = C.ink; ctx.fillText(ep.hook.big, SAFE.x0, 960);
     lines(ep.hook.say, SAFE.x0, 1050, 52, 1, C.ink);
+    const per = D / Math.round(D / 2.4); // döngüye kilitli: son kare = kare 0
+    bird(lerp(SAFE.x0 + 40, 840, ((t / per) + 0.12) % 1), 1150 - Math.sin((t / per) * Math.PI * 2) * 14, t, 0.9);
     badge(SAFE.x0, 1290, 'B', 1, C.graphite);
     lines(ep.hook.b, SAFE.x0 + 100, 1270, 48, 1, C.graphite);
     ctx.restore();

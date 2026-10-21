@@ -1,57 +1,76 @@
 {
   "id": "006",
   "slug": "kac-turkiye",
+  "template": "tiles",
   "serial": "№ 006 · NÜFUS",
-  "direction": "up",
   "bpm": 96,
-  "silenceBeats": 0.8,
-  "rewindBeats": 3,
-  "startFrac": 1,
   "question": [
     "Dünya nüfusu",
     "kaç Türkiye eder?"
   ],
-  "format": {
-    "dec": 100,
-    "units": [
-      {
-        "upTo": 1000000000,
-        "div": 1000000,
-        "name": "milyon kişi"
-      },
-      {
-        "upTo": 1e+30,
-        "div": 1000000000,
-        "name": "milyar kişi"
-      }
-    ]
+  "shape": "turkey",
+  "unit": "Türkiye",
+  "grid": {
+    "cols": 8,
+    "rows": 12,
+    "x": 100,
+    "y": 912,
+    "w": 700,
+    "h": 496
   },
-  "items": [
+  "label": {
+    "one": "TÜRKİYE · 85,7 MİLYON KİŞİ",
+    "many": "HER BİRİ 85,7 MİLYON KİŞİ"
+  },
+  "bigLabel": "TÜRKİYE",
+  "milestones": [
     {
-      "tag": "A",
-      "name": "İstanbul",
-      "value": 15700000,
-      "grow": 0.3,
-      "hold": 2.5
+      "n": 17,
+      "fill": "ink",
+      "say": "17 Türkiye, Hindistan'ın nüfusu kadardır."
     },
     {
-      "tag": "B",
-      "name": "Türkiye",
-      "value": 85660000,
-      "grow": 3,
-      "hold": 3
-    },
-    {
-      "tag": "C",
-      "name": "Dünya",
-      "value": 8200000000,
-      "grow": 6,
-      "hold": 7.5,
-      "hero": true,
-      "kicker": "Yani yaklaşık 96 Türkiye eder."
+      "n": 33,
+      "fill": "hatch",
+      "say": "33 Türkiye, Hindistan ile Çin'in toplamı kadardır."
     }
   ],
-  "caption": "Dünya nüfusu 8,2 milyar. Türkiye 85,7 milyon. Yani dünya nüfusu yaklaşık 96 Türkiye eder; her 100 kişiden 1'i Türkiye'de yaşıyor.\n\nTahminin kaçtı? Yorumlara yaz.\n\nKaynak: TÜİK ADNKS 2024 (Türkiye 85.664.944, İstanbul 15.701.602) · BM Dünya Nüfus Beklentileri (2025: 8,2 milyar).",
+  "hero": {
+    "n": 96,
+    "label": "DÜNYA · 8,2 MİLYAR KİŞİ"
+  },
+  "say": {
+    "hook": "Türkiye'nin nüfusu 85,7 milyon kişidir.",
+    "hero": "Dünya nüfusu yaklaşık 96 Türkiye eder.",
+    "kicker": "Her 100 kişiden yalnızca 1'i Türkiye'de yaşar."
+  },
+  "timing": {
+    "shrink": [
+      1.3,
+      2
+    ],
+    "runs": [
+      [
+        2,
+        5.4
+      ],
+      [
+        9.4,
+        11.3
+      ],
+      [
+        15.4,
+        18.4
+      ]
+    ],
+    "heroLand": 19,
+    "redDelay": 1.6,
+    "rewind": [
+      25,
+      26.9
+    ]
+  },
+  "caption": "Türkiye'nin nüfusu 85,7 milyon, dünyanın nüfusu 8,2 milyar. Yani dünya nüfusu yaklaşık 96 Türkiye eder; her 100 kişiden yalnızca 1'i Türkiye'de yaşar. Hindistan tek başına yaklaşık 17 Türkiye, Hindistan ile Çin birlikte 33 Türkiye eder.\n\nTahminin kaçtı? Yorumlara yaz.\n\nKaynak: TÜİK ADNKS 2024 (Türkiye 85.664.944) · BM Dünya Nüfus Beklentileri 2024 (dünya 8,2 milyar; Hindistan 1,45 milyar; Çin 1,41 milyar).",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

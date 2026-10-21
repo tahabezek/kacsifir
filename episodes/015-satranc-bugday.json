@@ -1,85 +1,119 @@
 {
   "id": "015",
   "slug": "satranc-bugday",
+  "template": "board",
   "serial": "№ 015 · İKİYE KATLA",
-  "direction": "up",
   "bpm": 96,
-  "silenceBeats": 0.8,
-  "rewindBeats": 3,
-  "startFrac": 1,
   "question": [
     "Satranç tahtasına kaç ton",
     "buğday sığar?"
   ],
-  "format": {
-    "dec": 100,
-    "units": [
-      {
-        "upTo": 1,
-        "div": 0.001,
-        "name": "mg"
-      },
-      {
-        "upTo": 1000,
-        "div": 1,
-        "name": "gram"
-      },
-      {
-        "upTo": 1000000,
-        "div": 1000,
-        "name": "kg"
-      },
-      {
-        "upTo": 1000000000000,
-        "div": 1000000,
-        "name": "ton"
-      },
-      {
-        "upTo": 1000000000000000,
-        "div": 1000000000000,
-        "name": "milyon ton"
-      },
-      {
-        "upTo": 1e+30,
-        "div": 1000000000000000,
-        "name": "milyar ton"
-      }
-    ],
-    "trim": true
+  "physics": {
+    "grainKg": 0.00005,
+    "bulkKgM3": 780,
+    "reposeDeg": 27,
+    "squareM": 0.05
   },
-  "items": [
+  "timing": {
+    "double": [
+      0.4,
+      1.05,
+      1.65,
+      2.2,
+      2.7,
+      3.15,
+      3.55,
+      3.9,
+      4.2,
+      4.47,
+      4.72
+    ],
+    "cover": [
+      5.2,
+      5.65,
+      6.1,
+      6.55,
+      7
+    ],
+    "tiltDown": [
+      10.4,
+      11.2
+    ],
+    "ladder": [
+      [
+        10.4,
+        11.8
+      ],
+      [
+        15.2,
+        16.6
+      ],
+      [
+        20,
+        21.4
+      ],
+      [
+        24.8,
+        26.2
+      ]
+    ],
+    "tiltUp": [
+      29.6,
+      30.4
+    ],
+    "heroLand": 31.25,
+    "rewind": [
+      36.2,
+      38.1
+    ]
+  },
+  "say": {
+    "hook": "İlk kareye 1 tane koy, her karede ikiye katla.",
+    "cover": "17. karedeki yığın tek başına bütün tahtayı kaplar.",
+    "hero": "Bütün tahta, Türkiye'nin tamamını 1,5 metre buğdayla kaplar."
+  },
+  "ladder": [
     {
-      "tag": "A",
-      "name": "1. kare",
-      "value": 0.05,
-      "grow": 0.3,
-      "hold": 2.5
+      "k": 30,
+      "n": 536870912,
+      "say": "30. karedeki yığın bir insandan uzundur.",
+      "sil": "person",
+      "label": "İnsan · 1,75 m",
+      "heightLabel": "2 m"
     },
     {
-      "tag": "B",
-      "name": "20. kare",
-      "value": 26214.4,
-      "grow": 4,
-      "hold": 3.5
+      "k": 45,
+      "n": 17592186044416,
+      "say": "45. karedeki yığın Galata Kulesi boyundadır.",
+      "sil": "galata",
+      "label": "Galata Kulesi · 67 m",
+      "heightLabel": "65 m"
     },
     {
-      "tag": "C",
-      "name": "32. kare",
-      "value": 107374182.4,
-      "grow": 4,
-      "hold": 4
+      "k": 56,
+      "n": 36028797018963970,
+      "say": "56. karedeki yığın Burj Halife boyundadır.",
+      "sil": "burj",
+      "label": "Burj Halife · 828 m",
+      "heightLabel": "830 m"
     },
     {
-      "tag": "D",
-      "name": "Bütün tahta",
-      "value": 922337203685477600,
-      "grow": 6,
-      "hold": 9,
-      "hero": true,
-      "kicker": "Bu, Türkiye'nin 44.000 yıllık buğday hasadına eşittir."
+      "k": 64,
+      "n": 9223372036854776000,
+      "say": "64. karedeki yığın Ağrı Dağı boyundadır.",
+      "sil": "agri",
+      "label": "Ağrı Dağı · 5.137 m",
+      "heightLabel": "5,3 km"
     }
   ],
-  "caption": "Satranç tahtasının ilk karesine 1 buğday tanesi koy ve her karede ikiye katla. 20. karede 26 kg, 32. karede 107 ton buğday olur. Bütün tahta 2 üzeri 64 eksi 1, yani 18,4 kentilyon tane eder. Bu da yaklaşık 922 milyar ton buğdaydır. Türkiye 2024'te 20,8 milyon ton buğday üretti; tahtayı doldurmak 44.000 yıl sürerdi.\n\nSen kaçıncı karede pes ederdin? Yorumlara yaz.\n\nHesap: 1 buğday tanesi ≈ 50 mg (35–60 mg arası değişir). Üretim: TÜİK 2024.",
+  "hero": {
+    "label": "BÜTÜN TAHTA",
+    "value": 922000000000,
+    "unit": "ton",
+    "layerM": 1.5,
+    "layerLabel": "1,5 m"
+  },
+  "caption": "Satranç tahtasının ilk karesine 1 buğday tanesi koy ve her karede ikiye katla. 17. karedeki tek yığın bütün tahtayı kaplar. 45. karedeki yığın Galata Kulesi boyuna, 56. karedeki Burj Halife boyuna, 64. karedeki ise Ağrı Dağı boyuna ulaşır. Bütün tahta 18,4 kentilyon tane, yaklaşık 922 milyar ton eder. Bu buğday Türkiye'nin tamamını yaklaşık 1,5 metre kaplar; Türkiye'nin 44.000 yıllık hasadına eşittir.\n\nSen kaçıncı karede pes ederdin? Yorumlara yaz.\n\nHesap: 1 tane ≈ 50 mg, yığın yoğunluğu ≈ 780 kg/m³, yığılma açısı ≈ 27°, kare kenarı 5 cm. Bu değerler buğdayın nemine göre değişir; yükseklikler yaklaşıktır. Üretim: TÜİK 2024 (20,8 milyon ton).",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",
@@ -87,6 +121,7 @@
     "#satranç",
     "#biliyormuydunuz"
   ],
+  "actor": true,
   "disabled": true,
-  "disabledWhy": "kule kalıbı tekrar ediyor; kendi görsel sahnesiyle yeniden yapılacak"
+  "disabledWhy": "yeni sahne kontrol ediliyor"
 }

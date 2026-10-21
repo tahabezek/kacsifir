@@ -3,8 +3,14 @@ import { buildTimeline } from './core.js';
 import { buildSwarmTimeline } from './swarm_core.js';
 import { buildDocTimeline } from './doc.js';
 import { buildVersusTimeline } from './versus.js';
+import { boardSummary } from './scenes/board.js';
+import { lightSummary } from './scenes/light.js';
+import { tilesSummary } from './scenes/tiles.js';
 
 export function summary(ep) {
+  if (ep.template === 'board') return boardSummary(ep);
+  if (ep.template === 'light') return lightSummary(ep);
+  if (ep.template === 'tiles') return tilesSummary(ep);
   if (ep.template === 'versus') {
     const tl = buildVersusTimeline(ep), S = tl.S;
     return {

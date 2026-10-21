@@ -1,81 +1,60 @@
 {
   "id": "004",
   "slug": "gunes-isigi",
+  "template": "light",
   "serial": "№ 004 · IŞIK",
-  "direction": "up",
   "bpm": 96,
-  "silenceBeats": 0.8,
-  "rewindBeats": 3,
-  "startFrac": 1,
   "question": [
-    "Güneş'in ışığı bize",
-    "kaç dakikada ulaşır?"
+    "Güneş şu an sönse",
+    "kaç dakika fark etmezsin?"
   ],
-  "format": {
-    "dec": 100,
-    "units": [
-      {
-        "upTo": 60,
-        "div": 1,
-        "name": "saniye"
-      },
-      {
-        "upTo": 3600,
-        "div": 60,
-        "name": "dakika"
-      },
-      {
-        "upTo": 86400,
-        "div": 3600,
-        "name": "saat"
-      },
-      {
-        "upTo": 31557600,
-        "div": 86400,
-        "name": "gün"
-      },
-      {
-        "upTo": 1e+30,
-        "div": 31557600,
-        "name": "yıl"
-      }
-    ]
+  "cKmS": 299792.458,
+  "target": {
+    "name": "Dünya",
+    "km": 149600000
   },
-  "items": [
+  "marks": [
     {
-      "tag": "A",
-      "name": "Ay'dan",
-      "value": 1.2822203819416966,
-      "grow": 0.3,
-      "hold": 2.5
+      "name": "Merkür",
+      "km": 57900000,
+      "angle": -0.4,
+      "dot": 11,
+      "say": "Işık, 3 dakikada Merkür'ün yörüngesini geçer."
     },
     {
-      "tag": "B",
-      "name": "Güneş'ten",
-      "value": 499.0047838361564,
-      "grow": 6,
-      "hold": 9.5,
-      "hero": true,
-      "kicker": "Güneş şu an sönse, 8 dakika boyunca fark etmezdik."
-    },
-    {
-      "tag": "C",
-      "name": "En yakın yıldızdan",
-      "value": 134009348.4,
-      "grow": 3,
-      "hold": 3.5
+      "name": "Venüs",
+      "km": 108200000,
+      "angle": -0.28,
+      "dot": 16,
+      "say": "Işık, 6 dakikada Venüs'ün yörüngesini geçer."
     }
   ],
-  "caption": "Güneş'e baktığında 8 dakika 19 saniye önceki Güneş'i görürsün. Ay'ın ışığı 1,3 saniyede, en yakın yıldız Proxima Centauri'nin ışığı 4,2 yılda gelir.\n\nBunu biliyor muydun? Yorumlara yaz.\n\nKaynak: ışık hızı 299.792,458 km/s · Dünya-Güneş ortalama uzaklığı 149,6 milyon km (IAU) · Dünya-Ay 384.400 km (NASA) · Proxima Centauri 4,25 ışık yılı.",
+  "timing": {
+    "go": [
+      0.3,
+      15.8
+    ],
+    "silence": 0.5,
+    "rewind": [
+      20.6,
+      22.5
+    ]
+  },
+  "say": {
+    "hook": "Işık, saniyede 300.000 km yol alır.",
+    "hero": "8 dakika boyunca hiçbir şey fark etmezdin."
+  },
+  "label": {
+    "travel": "IŞIK YOLDA",
+    "arrived": "IŞIK DÜNYA'DA"
+  },
+  "scaleNote": "milyon km · mesafeler ölçekli",
+  "caption": "Güneş'ten çıkan ışık Dünya'ya 8 dakika 19 saniyede ulaşır. Yani Güneş şu an sönse, 8 dakika boyunca hiçbir şey fark etmezdik. Işık 3 dakikada Merkür'ün, 6 dakikada Venüs'ün yörüngesini geçer. Ay'ın ışığı 1,3 saniyede, en yakın yıldız Proxima Centauri'nin ışığı ise 4,2 yılda gelir.\n\nBunu biliyor muydun? Yorumlara yaz.\n\nVideoda mesafeler ölçeklidir; gök cisimleri görünsün diye büyütülmüştür. Kaynak: ışık hızı 299.792,458 km/s · ortalama uzaklıklar: Merkür 57,9, Venüs 108,2, Dünya 149,6 milyon km (NASA) · Proxima Centauri 4,25 ışık yılı.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",
     "#biliyormuydunuz",
     "#uzay",
     "#fizik"
-  ],
-  "actor": {
-    "count": "seconds",
-    "unit": " sn"
-  }
+  ]
 }

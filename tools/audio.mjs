@@ -7,6 +7,9 @@ import { buildTimeline, mulberry32, ease, seg, tallyPlan } from '../engine/core.
 import { swarmCues } from '../engine/swarm_core.js';
 import { docCues } from '../engine/doc.js';
 import { versusCues } from '../engine/versus.js';
+import { boardCues } from '../engine/scenes/board.js';
+import { lightCues } from '../engine/scenes/light.js';
+import { tilesCues } from '../engine/scenes/tiles.js';
 
 const SR = 48000;
 
@@ -28,7 +31,7 @@ function towerCues(ep) {
 }
 
 export function synth(ep) {
-  const tl = ep.template === 'swarm' ? swarmCues(ep) : ep.template === 'doc' ? docCues(ep) : ep.template === 'versus' ? versusCues(ep) : towerCues(ep);
+  const tl = ep.template === 'swarm' ? swarmCues(ep) : ep.template === 'doc' ? docCues(ep) : ep.template === 'versus' ? versusCues(ep) : ep.template === 'board' ? boardCues(ep) : ep.template === 'light' ? lightCues(ep) : ep.template === 'tiles' ? tilesCues(ep) : towerCues(ep);
   const D = tl.duration;
   const N = Math.ceil(D * SR);
   const Lc = new Float32Array(N), Rc = new Float32Array(N);

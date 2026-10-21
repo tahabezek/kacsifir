@@ -64,6 +64,20 @@ export async function createReel({ channelId, text, videoUrl, dueAtISO, thumbnai
   return d.createPost.post;
 }
 
+export async function createCarousel({ channelId, text, imageUrls, altTexts, dueAtISO }) {
+  const d = await gql(`mutation($in: CreatePostInput!) { createPost(input: $in) {
+      ... on PostActionSuccess { post { id status dueAt } }
+      ... on MutationError { message } } }`,
+    { in: {
+      channelId, text, schedulingType: 'automatic', mode: 'customScheduled', dueAt: dueAtISO,
+      needsApproval: false, source: 'kacsifir-pipeline',
+      assets: imageUrls.map((url, i) => ({ image: { url, metadata: { altText: altTexts?.[i] || 'Kaç Sıfır? kaydırmalı gönderi' } } })),
+      metadata: { instagram: { type: 'post', shouldShareToFeed: true } }, // Instagram'da çok görselli 'post' = carousel
+    } }, { timeoutMs: 120000 });
+  if (d.createPost.message) throw new Error('createPost (carousel): ' + d.createPost.message);
+  return d.createPost.post;
+}
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   console.log(JSON.stringify(await gql(process.argv[2]), null, 2));
 }

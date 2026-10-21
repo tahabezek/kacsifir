@@ -11,7 +11,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { channelHealth, postsBetween, createReel } from './buffer.mjs';
+import { channelHealth, postsBetween, createReel, createCarousel } from './buffer.mjs';
+import { makeCarousel } from './carousel.mjs';
 import { summary as tlSummary } from '../engine/summary.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -35,12 +36,12 @@ function saveLedger(l) {
 }
 
 // ——— yuvalar (TR saati sabit UTC+3) ———
-function upcomingSlots(now) {
+function upcomingSlots(now, list = cfg.slotsTR) {
   const out = [];
   const trNow = new Date(now.getTime() + cfg.trUtcOffsetHours * 3600e3);
   for (let d = -1; d <= Math.ceil(cfg.horizonHours / 24) + 1; d++) {
     const y = trNow.getUTCFullYear(), m = trNow.getUTCMonth(), day = trNow.getUTCDate() + d;
-    for (const s of cfg.slotsTR) {
+    for (const s of list) {
       const [hh, mm] = s.split(':').map(Number);
       const t = new Date(Date.UTC(y, m, day, hh - cfg.trUtcOffsetHours, mm));
       const lead = (t - now) / 60e3;
@@ -61,9 +62,14 @@ function episodes() {
     .filter(e => !e.disabled)
     .sort((a, b) => rank(a.id) - rank(b.id) || a.id.localeCompare(b.id));
 }
-function nextEpisode(ledger, taken) {
-  const used = new Set(Object.values(ledger.slots).filter(s => !NOT_USED.has(s.status)).map(s => s.episode));
-  return episodes().find(e => !used.has(e.id) && !taken.has(e.id));
+const reelSlots = ledger => Object.values(ledger.slots).filter(s => s.kind !== 'carousel');
+function usedReels(ledger) { return new Set(reelSlots(ledger).filter(s => !NOT_USED.has(s.status)).map(s => s.episode)); }
+// publishAt: "2026-11-18T17:30Z" gibi; bölüm yalnızca o yuvada yayınlanır
+function nextEpisode(ledger, taken, t) {
+  const used = usedReels(ledger);
+  const pinned = episodes().find(e => e.publishAt && e.publishAt === slotKey(t) && !used.has(e.id) && !taken.has(e.id));
+  if (pinned) return pinned;
+  return episodes().find(e => !e.publishAt && !used.has(e.id) && !taken.has(e.id));
 }
 
 // ——— render ———
@@ -91,13 +97,13 @@ function publishMedia(ledger, newFiles) {
   let hasBranch = true;
   try { git(['fetch', '--depth=1', 'origin', cfg.mediaBranch]); } catch { hasBranch = false; }
   const keepAfter = Date.now() - cfg.mediaKeepDays * 86400e3;
-  const keep = new Set(Object.entries(ledger.slots).filter(([k]) => new Date(k).getTime() > keepAfter).map(([, s]) => s.media));
+  const keep = new Set(Object.entries(ledger.slots).filter(([k]) => new Date(k).getTime() > keepAfter).flatMap(([, s]) => [].concat(s.media || [])));
   if (hasBranch) {
     for (const f of git(['ls-tree', '-r', '--name-only', 'FETCH_HEAD']).split('\n')) {
-      if (keep.has(f)) fs.writeFileSync(path.join(dir, f), spawnSync('git', ['show', `FETCH_HEAD:${f}`], { cwd: root, maxBuffer: 1 << 30 }).stdout);
+      if (keep.has(f)) { fs.mkdirSync(path.dirname(path.join(dir, f)), { recursive: true }); fs.writeFileSync(path.join(dir, f), spawnSync('git', ['show', `FETCH_HEAD:${f}`], { cwd: root, maxBuffer: 1 << 30 }).stdout); }
     }
   }
-  for (const [rel, src] of newFiles) fs.copyFileSync(src, path.join(dir, rel));
+  for (const [rel, src] of newFiles) { fs.mkdirSync(path.dirname(path.join(dir, rel)), { recursive: true }); fs.copyFileSync(src, path.join(dir, rel)); }
   fs.writeFileSync(path.join(dir, '.nojekyll'), '');
   fs.writeFileSync(path.join(dir, 'index.html'), '<!doctype html><meta charset="utf-8"><title>kacsifir medya</title>');
   const env = { ...process.env, GIT_INDEX_FILE: path.join(root, '.git', 'media-index') };
@@ -116,7 +122,7 @@ async function waitLive(url, size, timeoutMs = 12 * 60e3) {
     try {
       const r = await fetch(url, { method: 'HEAD', redirect: 'manual', signal: AbortSignal.timeout(15000) });
       const len = Number(r.headers.get('content-length'));
-      if (r.status === 200 && len === size && /video\/mp4/.test(r.headers.get('content-type') || '')) return true;
+      if (r.status === 200 && len === size && /video\/mp4|image\/jpeg/.test(r.headers.get('content-type') || '')) return true;
     } catch { /* yeniden dene */ }
     await new Promise(r => setTimeout(r, 15000));
   }
@@ -129,7 +135,7 @@ async function status() {
   const posts = await postsBetween(cfg.organizationId, cfg.channelId,
     new Date(now - 5 * 86400e3).toISOString(), new Date(now.getTime() + 7 * 86400e3).toISOString());
   const ledger = loadLedger();
-  const used = new Set(Object.values(ledger.slots).filter(s => !NOT_USED.has(s.status)).map(s => s.episode));
+  const used = usedReels(ledger);
   const left = episodes().filter(e => !used.has(e.id)).length;
   console.log(JSON.stringify({
     channel: ch,
@@ -160,13 +166,13 @@ async function main() {
   for (const t of slots) {
     if (filled(t)) { log(`dolu  ${slotKey(t)}`); continue; }
     const prev = ledger.slots[slotKey(t)];
-    const ep = prev && prev.status === 'failed' ? episodes().find(e => e.id === prev.episode) : nextEpisode(ledger, taken);
+    const ep = prev && prev.status === 'failed' && prev.kind !== 'carousel' ? episodes().find(e => e.id === prev.episode) : nextEpisode(ledger, taken, t);
     if (!ep) { summary.push(`❌ Bölüm stoğu bitti: ${slotKey(t)} boş kalacak.`); break; }
     taken.add(ep.id);
     plan.push({ t, ep });
     log(`boş   ${slotKey(t)} → ${ep.id} ${ep.slug}`);
   }
-  if (!plan.length) { log('tüm yuvalar dolu'); return finish(ledger); }
+  if (!plan.length) { log('tüm reels yuvaları dolu'); await carousels(ledger, now, existing, tol); return finish(ledger); }
 
   // render
   for (const p of plan) { p.mp4 = render(p.ep); p.rel = mediaName(p.ep); p.url = cfg.mediaBaseUrl + p.rel; }
@@ -202,12 +208,59 @@ async function main() {
     }
     saveLedger(ledger);
   }
+  await carousels(ledger, now, existing, tol);
   return finish(ledger);
+}
+
+// ——— carousel: yayınlanmış bir Reels'in kilit anları, günde bir kez ———
+// kaynak: en az carouselMinAgeHours önce yayınlanmış, henüz carousel'i çıkmamış bölüm; metrik puanı yüksek olan önce
+async function carousels(ledger, now, existing, tol) {
+  if (!cfg.carouselSlotsTR?.length || DRY) return;
+  const done = new Set(Object.values(ledger.slots).filter(s => s.kind === 'carousel' && !NOT_USED.has(s.status)).map(s => s.episode));
+  let scores = {};
+  try { const m = JSON.parse(fs.readFileSync(path.join(root, 'state', 'metrics.json'), 'utf8')); for (const day of Object.values(m.snapshots || {})) for (const r of day) if (r.template !== 'carousel') scores[r.episode] = Math.max(scores[r.episode] ?? 0, r.score ?? 0); } catch { /* metrik yok */ }
+  for (const t of upcomingSlots(now, cfg.carouselSlotsTR)) {
+    if (existing.some(p => p.dueAt && Math.abs(new Date(p.dueAt) - t) <= tol)) { log(`dolu  ${slotKey(t)} (carousel)`); continue; }
+    const cands = Object.values(ledger.slots).filter(s => s.kind !== 'carousel' && s.status === 'scheduled' && s.dueAt && (t - new Date(s.dueAt)) / 3600e3 >= cfg.carouselMinAgeHours && !done.has(s.episode));
+    if (!cands.length) { log(`carousel kaynağı yok: ${slotKey(t)}`); continue; }
+    // eski kule kalıbı carousel'e taşınmaz (görsel çeşitlilik kuralı)
+    const tpl = id => (allEpisodes().find(e => e.id === id) || {}).template || 'tower'; // şablon alanı yoksa kuledir
+    for (let i = cands.length - 1; i >= 0; i--) if (tpl(cands[i].episode) === 'tower') cands.splice(i, 1);
+    if (!cands.length) { log(`carousel kaynağı yok: ${slotKey(t)}`); continue; }
+    cands.sort((a, b) => (scores[b.episode] ?? 0) - (scores[a.episode] ?? 0) || new Date(a.dueAt) - new Date(b.dueAt));
+    const ep = episodes().concat(allEpisodes()).find(e => e.id === cands[0].episode);
+    if (!ep) continue;
+    const k = slotKey(t);
+    const q = (ep.question || ep.title || [ep.slug]).join(' '); // şablona göre soru alanı farklı
+    try {
+      const files = await makeCarousel(ep.file);
+      const rels = files.map((f, i) => `c/${ep.id}-${ep.slug}/${i + 1}.jpg`);
+      ledger.slots[k] = { kind: 'carousel', episode: ep.id, media: rels, status: 'media', at: now.toISOString() };
+      saveLedger(ledger);
+      publishMedia(ledger, rels.map((r, i) => [r, files[i]]));
+      for (const [i, r] of rels.entries()) if (!(await waitLive(cfg.mediaBaseUrl + r, fs.statSync(files[i]).size))) throw new Error('carousel görseli yayına çıkmadı: ' + r);
+      if ((t - Date.now()) / 60e3 < cfg.minLeadMinutes) throw new Error('süre geçti');
+      const text = [ep.carouselCaption || `${q}\n\nKaydır, adım adım gör. Videonun tamamı profilde.\n\n${ep.caption}`, (ep.hashtags || []).join(' ')].filter(Boolean).join('\n\n');
+      const post = await createCarousel({ channelId: cfg.channelId, text, imageUrls: rels.map(r => cfg.mediaBaseUrl + r), altTexts: rels.map((_, i) => `${q} · ${i + 1}/${rels.length}`), dueAtISO: t.toISOString() });
+      Object.assign(ledger.slots[k], { status: 'scheduled', postId: post.id, dueAt: post.dueAt });
+      summary.push(`✅ ${k} carousel → ${ep.id}`);
+      done.add(ep.id);
+    } catch (e) {
+      ledger.slots[k] = { ...(ledger.slots[k] || { kind: 'carousel', episode: ep.id }), status: 'failed', error: String(e.message).slice(0, 300) };
+      summary.push(`⚠️ ${k} carousel: ${e.message}`); // carousel hatası reels akışını kırmaz
+    }
+    saveLedger(ledger);
+  }
+}
+// devre dışı bırakılmış bölümler de carousel kaynağı olabilir (yayınlanmış olanlar)
+function allEpisodes() {
+  return fs.readdirSync(path.join(root, 'episodes')).filter(f => f.endsWith('.json')).sort()
+    .map(f => ({ file: path.join('episodes', f), ...JSON.parse(fs.readFileSync(path.join(root, 'episodes', f), 'utf8')) }));
 }
 
 function finish(ledger) {
   saveLedger(ledger);
-  const used = new Set(Object.values(ledger.slots).filter(s => !NOT_USED.has(s.status)).map(s => s.episode));
+  const used = usedReels(ledger);
   const left = episodes().filter(e => !used.has(e.id)).length;
   const days = left / cfg.slotsTR.length;
   if (days < cfg.lowBacklogWarnDays) summary.push(`⚠️ Bölüm stoğu azaldı: ${left} bölüm (${days.toFixed(1)} gün).`);

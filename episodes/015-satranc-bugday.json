@@ -5,8 +5,8 @@
   "serial": "№ 015 · İKİYE KATLA",
   "bpm": 96,
   "question": [
-    "Satranç tahtasına kaç ton",
-    "buğday sığar?"
+    "Satranç tahtasında buğday",
+    "ikiye katlanırsa ne olur?"
   ],
   "physics": {
     "grainKg": 0.00005,

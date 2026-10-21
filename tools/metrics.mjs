@@ -25,14 +25,15 @@ const rows = posts.map(p => {
   const m = Object.fromEntries((p.metrics || []).map(x => [x.type, x.value]));
   const slot = byPost[p.id];
   const ep = slot ? episodes[slot.episode] : null;
-  const dur = ep ? summary(ep).duration : null;
+  const isCar = slot?.kind === 'carousel';
+  const dur = ep && !isCar ? summary(ep).duration : null;
   const reach = m.reach || m.viewers || 0;
   const per = k => (reach ? (m[k] || 0) / reach : 0);
   const watch = dur && m.averageTimeWatched ? m.averageTimeWatched / dur : null; // >1 = tekrar izleme
   // Puan: izlenme oranı ağırlıklı + paylaşım (en güçlü sinyal) + kaydetme + takip
   const score = (watch ?? 0) * 40 + per('shares') * 4000 + per('saves') * 2000 + per('follows') * 6000 + per('likes') * 300;
   return {
-    postId: p.id, episode: slot?.episode ?? '?', slug: ep?.slug ?? '', template: ep?.template ?? 'tower',
+    postId: p.id, episode: slot?.episode ?? '?', slug: ep?.slug ?? '', template: isCar ? 'carousel' : ep?.template ?? 'tower',
     sentAt: p.sentAt, link: p.externalLink, views: m.views || 0, reach, likes: m.likes || 0, comments: m.comments || 0,
     shares: m.shares || 0, saves: m.saves || 0, follows: m.follows || 0, avgWatchS: m.averageTimeWatched ?? null,
     durationS: dur ? +dur.toFixed(1) : null, watchRatio: watch != null ? +watch.toFixed(2) : null,

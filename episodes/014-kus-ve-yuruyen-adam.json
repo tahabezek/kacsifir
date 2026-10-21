@@ -38,11 +38,11 @@
   ],
   "hook": {
     "big": "13.560 km",
-    "say": "5 aylık bir kuş, hiç inmeden.",
+    "say": "5 aylık bir kuş bu yolu hiç inmeden uçtu.",
     "b": "28 yıldır eve yürüyen adam"
   },
   "a": {
-    "who": "KIVRIK GAGALI ÇAMURÇULLUĞU · 2022",
+    "who": "KIYI ÇAMURÇULLUĞU · 2022",
     "say": "5 aylık bir kuş Alaska'dan Tazmanya'ya hiç inmeden uçtu.",
     "from": "Alaska",
     "to": "Tazmanya",
@@ -53,27 +53,27 @@
     "marker": "bird"
   },
   "b": {
-    "who": "KARL BUSHBY · 1998–2026",
-    "say": "Eski bir asker Şili'den İngiltere'deki evine yürüyerek gidiyor.",
+    "who": "KARL BUSHBY · 1998'DEN BERİ",
+    "say": "Eski bir asker Şili'den İngiltere'deki evine yürüyor. Hull'a 400 km'si kaldı.",
     "from": "Şili",
-    "to": "Hull",
-    "total": 50000,
+    "to": "Dover",
+    "total": 49500,
     "unit": "km",
     "timeTotal": 28,
     "timeUnit": "yıl",
     "marker": "walker"
   },
   "compare": {
-    "say": "Aynı cetvelde: günde kaç km?",
+    "say": "Günde ortalama kaç km yol alıyorlar?",
     "a": {
       "value": 1228,
       "label": "1.228 km/gün"
     },
     "b": {
-      "value": 4.88,
+      "value": 4.85,
       "label": "4,9 km/gün"
     },
-    "ratio": "252",
+    "ratio": "253",
     "ratioUnit": "kat"
   },
   "ask": {
@@ -81,7 +81,7 @@
     "a": "Hiç inmeden 11 gün uçan kuş",
     "b": "28 yıldır eve yürüyen adam"
   },
-  "caption": "2022'de 5 aylık bir kıvrık gagalı çamurçulluğu Alaska'dan Tazmanya'ya hiç inmeden en az 13.560 km uçtu: yaklaşık 11 gün, günde 1.228 km.\n\nKarl Bushby ise 1 Kasım 1998'de Şili'den İngiltere'deki evine yürüyerek yola çıktı; yaklaşık 50.000 km ve neredeyse 28 yıl. Bekleme süreleri dahil ortalaması günde 4,9 km.\n\nAynı cetvelde kuş, adamdan günde 252 kat fazla yol alıyor. Sen hangisine şaşırdın? Yorumlara A ya da B yaz.\n\nKaynaklar: NPR ve CBC, Ekim 2022 (kuşun rekor uçuşu) · Karl Bushby: Wikipedia, The National Desk (31.000 mil), Yorkshire Post.",
+  "caption": "2022'de 5 aylık bir kıyı çamurçulluğu Alaska'dan Tazmanya'ya hiç inmeden en az 13.560 km uçtu. Yolculuk yaklaşık 11 gün sürdü; kuş günde ortalama 1.228 km yol aldı.\n\nKarl Bushby ise 1 Kasım 1998'de Şili'den İngiltere'deki evine yürüyerek yola çıktı. Yaklaşık 28 yılda 49.500 km yürüdü; Ekim 2026'da Manş'ı yüzerek geçip Dover'a ulaştı ve Hull'daki evine 400 km'si kaldı. Bekleme süreleri dâhil ortalaması günde 4,9 km'dir.\n\nGünlük ortalamada kuş adamdan 253 kat fazla yol alıyor. Sen hangisine şaşırdın? Yorumlara A ya da B yaz.\n\nKaynaklar: NPR ve CBC, Ekim 2022 (kuşun rekor uçuşu) · Karl Bushby: The National Desk, IOL (Aralık 2025), Ekim 2026 haberleri.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

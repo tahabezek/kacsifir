@@ -14,20 +14,20 @@
   "moonKm": 384400,
   "ratio": 874030,
   "distLabel": "1 km",
-  "moonNote": "Gövdeler büyütüldü; mesafe ölçekli.",
-  "soundNote": "ses: 1 km",
+  "moonNote": "Gök cisimleri büyütüldü; mesafe ölçekli.",
+  "soundNote": "Ses: 1 km",
   "label": {
     "stopwatch": "ŞİMŞEKTEN SONRA",
     "same": "AYNI SÜREDE IŞIK",
-    "hero": "IŞIK SESTEN"
+    "hero": "HIZ ORANI · IŞIK / SES"
   },
   "say": {
-    "hook": "Şimşek 1 km uzağa düştü. Işığı hemen gördün.",
+    "hook": "Şimşek 1 km ötede çaktı. Işığını hemen gördün.",
     "thunder": "Gök gürültüsü 2,9 saniye sonra geldi.",
     "moonAsk": "Işık bu 2,9 saniyede nereye gider?",
-    "moon": "Işık, Ay'a gidip döner ve yoluna devam eder.",
-    "hero": "Işık, sesten yaklaşık 874.000 kat hızlıdır.",
-    "kicker": "Şimşekten sonra saydığın her 3 saniye, 1 km eder."
+    "moon": "Işık Ay'a gidip döner ve yoluna devam eder.",
+    "hero": "Işık sesten yaklaşık 874.000 kat hızlıdır.",
+    "kicker": "Şimşekten sonra saydığın her 3 saniye 1 km eder."
   },
   "timing": {
     "strike": 0.35,
@@ -41,7 +41,7 @@
       21.3
     ]
   },
-  "caption": "Işık saniyede 299.792 km, ses ise havada saniyede yaklaşık 343 metre yol alır. Yani ışık sesten yaklaşık 874.000 kat hızlıdır. 1 km uzağa düşen şimşeğin ışığı gözüne anında ulaşır, gök gürültüsü ise 2,9 saniye sonra gelir. Işık aynı sürede Ay'a gidip dönmeye yetecek kadar yol alır.\n\nPratik bilgi: Şimşekten sonra saymaya başla; her 3 saniye yaklaşık 1 km eder.\n\nKaynak: ışık hızı 299.792,458 km/s · ses hızı 20 °C havada ≈ 343 m/s · Dünya-Ay ortalama uzaklığı 384.400 km (NASA).",
+  "caption": "Işık saniyede 299.792 km, ses ise havada saniyede yaklaşık 343 metre yol alır. Yani ışık sesten yaklaşık 874.000 kat hızlıdır. 1 km ötede çakan şimşeğin ışığı gözüne anında ulaşır, gök gürültüsü ise 2,9 saniye sonra gelir. Işık aynı sürede Ay'a gidip dönmeye yetecek kadar yol alır.\n\nPratik bilgi: Şimşekten sonra saymaya başla; her 3 saniye yaklaşık 1 km eder.\n\nKaynak: ışık hızı 299.792,458 km/s · ses hızı 20 °C havada ≈ 343 m/s · Dünya-Ay ortalama uzaklığı 384.400 km (NASA).",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

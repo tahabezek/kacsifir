@@ -16,7 +16,7 @@
     "volume": "HACİMCE"
   },
   "say": {
-    "hook": "Bu Dünya. Şimdi yanına Güneş'i aynı ölçekte koyalım.",
+    "hook": "Şimdi Dünya'nın yanına Güneş'i aynı ölçekte koyalım.",
     "reveal": "Güneş'in yanında Dünya bir nokta kadar kalır.",
     "row": "Güneş'in çapı boyunca 109 Dünya dizilir.",
     "hero": "Güneş'in içine hacimce 1,3 milyon Dünya sığar.",
@@ -42,7 +42,7 @@
       23.2
     ]
   },
-  "caption": "Güneş'in çapı Dünya'nınkinin yaklaşık 109 katıdır. Hacimce Güneş'in içine 1,3 milyon Dünya sığar. Küreler arada boşluk bırakacağı için ezilmeden yaklaşık 960.000 tanesi sığardı. Güneş Sistemi'nin kütlesinin %99,86'sı Güneş'tedir.\n\nBunu biliyor muydun? Yorumlara yaz.\n\nKaynak: Güneş yarıçapı 695.700 km, Dünya yarıçapı 6.371 km (NASA).",
+  "caption": "Güneş'in çapı Dünya'nınkinin yaklaşık 109 katıdır. Hacimce Güneş'in içine 1,3 milyon Dünya sığar. Ancak küreler arasında boşluk kalacağından, ezilmeden yaklaşık 960.000 Dünya sığar. Güneş Sistemi'nin kütlesinin %99,86'sı Güneş'tedir.\n\nBunu biliyor muydun? Yorumlara yaz.\n\nKaynak: Güneş yarıçapı 695.700 km, Dünya yarıçapı 6.371 km (NASA).",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

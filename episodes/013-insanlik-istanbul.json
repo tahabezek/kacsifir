@@ -27,19 +27,19 @@
       "ref": {
         "kind": "pitch"
       },
-      "say": "Bir futbol sahasını doldurur."
+      "say": "14.280 kişi bir futbol sahasını doldurur."
     },
     {
       "n": 15700000,
       "grow": 2,
       "hold": 3,
-      "say": "İstanbul'un nüfusu 2,8 km'lik bir kareye sığar."
+      "say": "İstanbul'un nüfusu, kenarı 2,8 km olan bir kareye sığar."
     },
     {
       "n": 85660000,
       "grow": 2,
       "hold": 3,
-      "say": "Türkiye'nin nüfusu 6,5 km'lik bir kareye sığar."
+      "say": "Türkiye'nin nüfusu, kenarı 6,5 km olan bir kareye sığar."
     },
     {
       "n": 8200000000,
@@ -55,7 +55,7 @@
       "say": "Bütün insanlık İstanbul'un %75'ine sığar."
     }
   ],
-  "caption": "Dünyadaki 8,2 milyar insan omuz omuza dursa 4.100 km² yer kaplar. İstanbul'un yüzölçümü 5.461 km². Yani bütün insanlık İstanbul'a sığar, üstelik ilin dörtte biri boş kalır.\n\nİstanbul'un nüfusu 2,8 km'lik, Türkiye'nin nüfusu 6,5 km'lik bir kareye sığar.\n\nBunu İstanbul'da yaşayan birine gönder. Sence en kalabalık hangi ilçe olurdu?\n\nKaynaklar: dünya nüfusu 8,2 milyar (BM, Dünya Nüfus Beklentileri 2025) · İstanbul 15.701.602, Türkiye 85.664.944 kişi ve İstanbul 5.461 km² (TÜİK) · futbol sahası 105 × 68 m (FIFA önerisi) · il sınırı: Natural Earth.\nVarsayım: sıkışık ama ayakta durulabilen kalabalık, metrekareye 2 kişi.",
+  "caption": "Dünyadaki 8,2 milyar insan sıkışık bir kalabalık hâlinde dursa 4.100 km² yer kaplar. İstanbul'un yüzölçümü 5.461 km²'dir. Yani bütün insanlık İstanbul'a sığar, üstelik ilin dörtte biri boş kalır.\n\nİstanbul'un nüfusu kenarı 2,8 km olan, Türkiye'nin nüfusu ise kenarı 6,5 km olan bir kareye sığar.\n\nBunu İstanbul'da yaşayan birine gönder. Sence bu kalabalık hangi ilçelere sığardı?\n\nKaynaklar: dünya nüfusu 8,2 milyar (BM, Dünya Nüfus Beklentileri 2024) · İstanbul 15.701.602, Türkiye 85.664.944 kişi ve İstanbul 5.461 km² (TÜİK) · futbol sahası 105 × 68 m (FIFA önerisi) · il sınırı: Natural Earth.\nVarsayım: sıkışık ama ayakta durulabilen kalabalık, metrekareye 2 kişi.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

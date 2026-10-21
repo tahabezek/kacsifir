@@ -70,7 +70,7 @@
   "say": {
     "hook": "İlk kareye 1 tane koy, her karede ikiye katla.",
     "cover": "17. karedeki yığın tek başına bütün tahtayı kaplar.",
-    "hero": "Bütün tahta, Türkiye'nin tamamını 1,5 metre kalınlığında buğdayla kaplar."
+    "hero": "Tahtadaki bütün buğday Türkiye'nin tamamını 1,5 metre kalınlığında kaplar."
   },
   "ladder": [
     {
@@ -92,9 +92,9 @@
     {
       "k": 56,
       "n": 36028797018963970,
-      "say": "56. karedeki yığın Burj Halife boyundadır.",
+      "say": "56. karedeki yığın Burç Halife boyundadır.",
       "sil": "burj",
-      "label": "Burj Halife · 828 m",
+      "label": "Burç Halife · 828 m",
       "heightLabel": "830 m"
     },
     {
@@ -113,7 +113,7 @@
     "layerM": 1.5,
     "layerLabel": "1,5 m"
   },
-  "caption": "Satranç tahtasının ilk karesine 1 buğday tanesi koy ve her karede ikiye katla. 17. karedeki tek yığın bütün tahtayı kaplar. 45. karedeki yığın Galata Kulesi boyuna, 56. karedeki Burj Halife boyuna, 64. karedeki ise Ağrı Dağı boyuna ulaşır. Bütün tahta 18,4 kentilyon tane, yaklaşık 922 milyar ton eder. Bu buğday Türkiye'nin tamamını yaklaşık 1,5 metre kaplar; Türkiye'nin 44.000 yıllık hasadına eşittir.\n\nSen kaçıncı karede pes ederdin? Yorumlara yaz.\n\nHesap: 1 tane ≈ 50 mg, yığın yoğunluğu ≈ 780 kg/m³, yığılma açısı ≈ 27°, kare kenarı 5 cm. Bu değerler buğdayın nemine göre değişir; yükseklikler yaklaşıktır. Üretim: TÜİK 2024 (20,8 milyon ton).",
+  "caption": "Satranç tahtasının ilk karesine 1 buğday tanesi koy ve her karede ikiye katla. 17. karedeki tek yığın bütün tahtayı kaplar. 45. karedeki yığın Galata Kulesi boyuna, 56. karedeki Burç Halife boyuna, 64. karedeki ise Ağrı Dağı boyuna ulaşır. Tahtadaki bütün buğday 18,4 kentilyon tane, yaklaşık 922 milyar ton eder. Bu buğday Türkiye'nin tamamını yaklaşık 1,5 metre kalınlığında kaplar; Türkiye'nin 44.000 yıllık hasadına eşittir.\n\nSen kaçıncı karede pes ederdin? Yorumlara yaz.\n\nHesap: 1 tane ≈ 50 mg, yığın yoğunluğu ≈ 780 kg/m³, yığılma açısı ≈ 27°, kare kenarı 5 cm. Bu değerler buğdayın nemine göre değişir; yükseklikler yaklaşıktır. Üretim: TÜİK 2024 (20,8 milyon ton).",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

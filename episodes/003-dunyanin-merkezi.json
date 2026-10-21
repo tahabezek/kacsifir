@@ -13,11 +13,11 @@
   "hole": {
     "km": 12.262,
     "label": "Kola Kuyusu · 12,3 km",
-    "heroLabel": "En derin kuyu burada"
+    "heroLabel": "En derin kuyumuz burada"
   },
   "trench": {
     "km": 10.935,
-    "label": "Mariana dibi · 10,9 km"
+    "label": "Mariana Çukuru · 10,9 km"
   },
   "layers": [
     {
@@ -66,17 +66,17 @@
       "fitKm": 12742,
       "km": 6371,
       "hero": true,
-      "say": "En derin kuyumuz, merkeze giden yolun yalnızca %0,19'u."
+      "say": "En derin kuyumuz merkeze giden yolun yalnızca %0,19'u kadardır."
     }
   ],
   "label": {
     "hole": "EN DERİN KUYU",
-    "hero": "MERKEZE 6.371 KM · İNDİĞİMİZ"
+    "hero": "6.371 KM'LİK YOLUN"
   },
   "heroNum": "%0,19",
   "say": {
     "hook": "İnsanlığın kazdığı en derin kuyu Rusya'daki Kola Kuyusu'dur.",
-    "hole": "Kola Kuyusu 12,3 km derinliğe indi."
+    "hole": "Kola Kuyusu 12,3 km derinliğe kadar kazıldı."
   },
   "timing": {
     "drill": [
@@ -103,7 +103,7 @@
       23.5
     ]
   },
-  "caption": "İnsanlığın kazdığı en derin delik Kola Süper Derin Kuyusu'dur: 12.262 m. Kıta kabuğu yaklaşık 35 km kalınlığında; yani kabuğu bile delemedik. Dünya'nın merkezi 6.371 km aşağıda. En derin kuyumuz bu yolun yalnızca %0,19'u.\n\nSence neden daha derine inemedik? Yorumlara yaz.\n\nKaynak: Kola Süper Derin Kuyusu 12.262 m (1989) · Mariana Çukuru, Challenger Derinliği ≈ 10.935 m (deniz seviyesinden) · kıta kabuğu ortalama ≈ 35 km · manto tabanı 2.890 km · Dünya'nın ortalama yarıçapı 6.371 km (USGS).",
+  "caption": "İnsanlığın kazdığı en derin delik Kola Süper Derin Kuyusu'dur: 12.262 m. Kıta kabuğu yaklaşık 35 km kalınlığındadır; yani kabuğu bile delemedik. Dünya'nın merkezi 6.371 km aşağıdadır. En derin kuyumuz bu yolun yalnızca %0,19'u kadardır.\n\nSence neden daha derine inemedik? Yorumlara yaz.\n\nKaynak: Kola Süper Derin Kuyusu 12.262 m (1989) · Mariana Çukuru, Challenger Derinliği ≈ 10.935 m (deniz seviyesinden) · kıta kabuğu ortalama ≈ 35 km · manto tabanı 2.890 km · Dünya'nın ortalama yarıçapı 6.371 km (USGS).",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

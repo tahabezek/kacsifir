@@ -10,7 +10,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const cfg = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
 const ledger = JSON.parse(fs.readFileSync(path.join(root, 'state', 'ledger.json'), 'utf8'));
 const DRY = process.argv.includes('--dry');
-const byPost = Object.fromEntries(Object.values(ledger.slots).filter(s => s.postId).map(s => [s.postId, s]));
+const byPost = Object.fromEntries(Object.values(ledger.slots).filter(s => s.postId && s.kind !== 'carousel').map(s => [s.postId, s])); // carousel metinleri ayrı yönetilir
 const eps = Object.fromEntries(fs.readdirSync(path.join(root, 'episodes')).filter(f => f.endsWith('.json'))
   .map(f => JSON.parse(fs.readFileSync(path.join(root, 'episodes', f), 'utf8'))).map(e => [e.id, e]));
 

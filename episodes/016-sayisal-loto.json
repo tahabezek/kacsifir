@@ -59,13 +59,13 @@
   },
   "say": {
     "hook": "Çılgın Sayısal Loto'da 90 toptan 6'sını bilmen gerekir.",
-    "combos": "Bunun 622.614.630 farklı yolu var.",
-    "old": "Her yolu 1 saniye say: eski 49 toplu oyun 162 günde biterdi.",
+    "combos": "Bunun 622.614.630 farklı kombinasyonu vardır.",
+    "old": "Her kombinasyonu 1 saniyede saysan, eski 49 toplu oyun 162 günde biterdi.",
     "full": "Yeni oyun 19,7 yıl sürer.",
     "dive": "Şimdi bu sürenin içinden tek bir saniye seç.",
     "hero": "6 bilmek, 20 yılın içinden tek bir saniyeyi önceden bilmek gibidir."
   },
-  "caption": "Çılgın Sayısal Loto'da 90 toptan 6'sını bilmenin olasılığı 622.614.630'da 1'dir. Her olasılığı 1 saniyede saysan 19,7 yıl sürer. Eski 49 toplu oyunda bu sayı 13.983.816 idi; yani oyun 44 kat zorlaştı.\n\nBu bir tavsiye değil, bir olasılık hesabıdır. Sen hiç oynadın mı?\n\nHesap: C(90,6) = 622.614.630 ve C(49,6) = 13.983.816. 1 yıl = 365,25 gün.",
+  "caption": "Çılgın Sayısal Loto'da 90 toptan 6'sını bilmenin olasılığı 622.614.630'da 1'dir. Her kombinasyonu 1 saniyede saysan 19,7 yıl sürer. Eski 49 toplu oyunda bu sayı 13.983.816 idi; yani oyun yaklaşık 45 kat zorlaştı.\n\nBu bir tavsiye değil, bir olasılık hesabıdır. Sen hiç oynadın mı?\n\nHesap: C(90,6) = 622.614.630 ve C(49,6) = 13.983.816. 1 yıl = 365,25 gün.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

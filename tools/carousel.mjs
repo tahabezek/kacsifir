@@ -36,7 +36,7 @@ export async function makeCarousel(epPath, max = 6) {
       c.font = '500 34px "IBM Plex Mono"'; c.fillStyle = '#8B8577'; c.textAlign = 'left';
       c.fillText(`${n}/${total}`, 90, y);
       c.textAlign = 'right'; c.font = '800 44px Archivo'; c.fillStyle = last ? '#E0391C' : '#1C1B18';
-      c.fillText(first ? 'Kaydır →' : last ? 'Tamamı videoda · @kacsifir' : '→', 990, y);
+      c.fillText(first ? 'Kaydır →' : last ? 'Videonun tamamı profilde' : '→', 990, y);
       c.restore();
     }, { t, first, last, n: i + 1, total: times.length });
     const png = path.join(dir, `${i + 1}.png`);

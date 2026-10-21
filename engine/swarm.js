@@ -6,6 +6,7 @@ import { C, F, setFont, wrap, revealText, inOut, grain } from './tower.js';
 import { ANT_CARD, drawAnt, PERSON_CARD, drawPerson } from './creatures.js';
 import { buildSwarmTimeline, countAt, stopAt, cameraScale, carpetGeom, refBox, floodCamera, shapeStop, shapeProgress } from './swarm_core.js';
 import { GEO } from './geo/shapes.js';
+import { drawActor } from './actor.js';
 
 // fill: canlının hücre içindeki boyu (karınca 5 mm / 5 mm hücre = 1; insan omzu 450 mm / 707 mm hücre)
 const CREATURES = { ant: { card: ANT_CARD, draw: drawAnt, fill: 1 }, person: { card: PERSON_CARD, draw: drawPerson, fill: 450 / 707 } };
@@ -185,9 +186,11 @@ export function makeSwarmRenderer(ep, canvas) {
   setFont(ctx, F.name(SAY));
   const sayLines = tl.stops.map(s => (s.say ? wrap(ctx, s.say, safe.x1 - safe.x0) : []));
   const maxLines = Math.max(1, ...sayLines.map(l => l.length));
-  const zone = { cx: 505, top: sayY + (maxLines - 1) * SAY * 1.18 + 56, bottom: 1300 };
+  // Sıfır sağ altta durur: grafik alanı sola kayar ve daralır (maskot grafiğin önüne geçmez)
+  const withActor = ep.actor !== false;
+  const zone = { cx: withActor ? 462 : 505, top: sayY + (maxLines - 1) * SAY * 1.18 + 56, bottom: 1300 };
   zone.cy = (zone.top + zone.bottom) / 2;
-  zone.w = 790; zone.h = (zone.bottom - zone.top) * 0.94;
+  zone.w = withActor ? 700 : 790; zone.h = (zone.bottom - zone.top) * 0.94;
 
   function drawText(t, n, landed) {
     setFont(ctx, F.mono(40));
@@ -407,6 +410,33 @@ export function makeSwarmRenderer(ep, canvas) {
     ctx.stroke();
   }
 
+  // ——— Sıfır'ın senaryosu (zaman çizelgesinden otomatik) ———
+  // ilk kare: canlıya bakar · az sayıda: sayar · binleri geçince: terler · harita ölçeğinde: patinajla kaçar ·
+  // döngü sonunda frenle geri gelir (son kare = kare 0)
+  const actorScript = (() => {
+    if (ep.actor === false) return [];
+    const S = tl.stops, sc = [];
+    const firstMap = S.find(s => ['geo', 'flood', 'sweep'].includes(s.shape));
+    // kaçış: sayı haritaya taşmadan önceki son büyük sıçrama (az iken sayar, çok iken kaçar)
+    const fleeStop = firstMap ? S[Math.max(1, S.indexOf(firstMap) - 1)] : S[S.length - 1];
+    const fleeAt = fleeStop.t0;
+    const heroLand = tl.hero ? tl.hero.t1 : fleeAt + 3;
+    const back0 = Math.min(heroLand + 0.5, tl.rw0 - 2.6);
+    const sec = S[1] ? S[1].t0 : fleeAt;
+    sc.push({ type: 'count', t0: 0.25, t1: sec, from: 1, to: S[0].n });
+    if (S[1]) sc.push({ type: 'surprise', t0: S[1].t1 - 0.05, t1: S[1].t1 + 0.85 });
+    const sweat0 = S[1] ? S[1].t1 + 0.85 : sec;
+    if (sweat0 < fleeAt) sc.push({ type: 'sweat', t0: sweat0, t1: fleeAt });
+    sc.push({ type: 'flee', t0: fleeAt, t1: fleeAt + 1.5, dir: -1, dist: 1100 });
+    sc.push({ type: 'gone', t0: fleeAt + 1.5, t1: back0 });
+    sc.push({ type: 'enterSkid', t0: back0, t1: back0 + 1.3, dir: -1, dist: 700 });
+    sc.push({ type: 'lookUp', t0: back0 + 1.3, t1: back0 + 2.1, expr: 'saskin' });
+    sc.push({ type: 'happy', t0: back0 + 2.1, t1: tl.rw0 });
+    sc.push({ type: 'idle', t0: tl.rw0, t1: Infinity, expr: 'notr' });
+    return sc;
+  })();
+  const actorHome = { x: 868, y: 1414, facing: -1 };
+
   function render(t) {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, W, H);
@@ -442,6 +472,7 @@ export function makeSwarmRenderer(ep, canvas) {
     const dimP = t < tl.rw0 ? 1 - ease.exit(seg(t, tl.rw0, 0.2)) : ease.enter(seg(t, tl.rw1 - 0.45, 0.4));
     if (dimP > 0.01) { ctx.save(); ctx.globalAlpha = dimP; drawDimension(box); ctx.restore(); }
     drawText(t, n, landed);
+    if (actorScript.length) drawActor(ctx, actorScript, t, actorHome, 100, D);
   }
 
   return { render, duration: D, timeline: tl };

@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}</style></head><body><canvas id="c" width="1800" height="1100"></canvas>
+<script type="module">
+import { drawActor } from './actor.js';
+await document.fonts.load('800 40px Archivo');
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1100);
+const flee = [{ type: 'flee', t0: 0, t1: 1.6, dir: 1, dist: 260 }];
+const skid = [{ type: 'enterSkid', t0: 0, t1: 1.4, dir: 1, dist: 300 }];
+const misc = [{ type: 'count', t0: 0, t1: 2, from: 1, to: 9 }];
+for (let k = 0; k < 8; k++) { ctx.save(); ctx.beginPath(); ctx.rect(k * 225, 0, 225, 360); ctx.clip(); drawActor(ctx, flee, k * 0.2, { x: k * 225 + 90, y: 330 }, 70, 20); ctx.restore(); ctx.strokeStyle='#ccc'; ctx.strokeRect(k*225,0,225,360); }
+for (let k = 0; k < 8; k++) { ctx.save(); ctx.beginPath(); ctx.rect(k * 225, 370, 225, 360); ctx.clip(); drawActor(ctx, skid, k * 0.18, { x: k * 225 + 130, y: 700 }, 70, 20); ctx.restore(); ctx.strokeStyle='#ccc'; ctx.strokeRect(k*225,370,225,360); }
+const sc = [{ type: 'count', t0: 0, t1: 3, from: 1, to: 1000 }, { type: 'surprise', t0: 3, t1: 4 }, { type: 'sleep', t0: 4, t1: 9 }, { type: 'think', t0: 9, t1: 10 }];
+[0.5, 2.5, 3.1, 3.25, 5, 9.5].forEach((t, k) => { drawActor(ctx, sc, t, { x: 140 + k * 290, y: 1060 }, 70, 20); });
+</script></body></html>

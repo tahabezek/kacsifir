@@ -2,8 +2,17 @@
 import { buildTimeline } from './core.js';
 import { buildSwarmTimeline } from './swarm_core.js';
 import { buildDocTimeline } from './doc.js';
+import { buildVersusTimeline } from './versus.js';
 
 export function summary(ep) {
+  if (ep.template === 'versus') {
+    const tl = buildVersusTimeline(ep), S = tl.S;
+    return {
+      duration: tl.duration, rw0: S.loop.t0, rw1: S.loop.t1, heroTl: tl.heroLand, cover: 0,
+      keys: [0, S.a.t0 + 1, (S.a.t0 + S.a.t1) / 2, S.a.t1 - 1, S.b.t0 + 1, (S.b.t0 + S.b.t1) / 2, S.b.t1 - 1, S.compare.t0 + 1.5, tl.heroLand + 0.3, tl.heroLand + 1.5, S.ask.t0 + 1.2, S.loop.t0 + 0.3],
+      fast: (S.a.t0 + S.a.t1) / 2, lastLand: S.ask.t0 + 1.2, firstLand: S.a.t0 + 1,
+    };
+  }
   if (ep.template === 'doc') {
     const tl = buildDocTimeline(ep), S = tl.S;
     return {

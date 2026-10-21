@@ -63,5 +63,9 @@
     "#biliyormuydunuz",
     "#bilgiler",
     "#sayılar"
-  ]
+  ],
+  "actor": {
+    "rate": 1.1666666666666667,
+    "unit": ". atım"
+  }
 }

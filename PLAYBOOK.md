@@ -51,6 +51,36 @@ Her basamak yeni bir "vay" ve bir sonrakine merak doğurur (her 2–4 sn'de yeni
 27 = 13,4 km (uçak irtifasının üstü) → 30 = 107 km (uzayın sınırı) → 42 = Ay'ı geçer.
 Karıncalar: kart → karo → oda → saha → Vatikan → İstanbul → Türkiye. Hep aynı yön, hep büyüyen ölçek.
 
+## 2b. Maskot: Sıfır (her videoda)
+
+Başı bir "0" olan, tatlı ve şapşik bir karakter (tasarım ölçüleri: `research/maskot.md`, kod: `engine/sifir.js`).
+Her filmde **izleyicinin yerine tepki verir**; tepkiler zaman çizelgesindeki olaylardan otomatik seçilir:
+
+| Olay | Sıfır |
+|---|---|
+| Sayı az, sayım sürüyor | parmaklarıyla sayar, balonda "1, 2, 3…" |
+| Sayı patlıyor | sayamaz → terler → kaçar (kadrajdan koşarak çıkar) |
+| Doruk (sessizlik + vuruş) | sessizlikte donar, vuruşta zıplar, ağzı "o" |
+| Kâğıt belgeseli | köşede kendi kâğıdını katlamaya çalışır, 7. katta zorlanır |
+| Saniyeler / zaman | sayar, uyuklar, takvim yaprakları uçuşur |
+| Karıncalar / kalabalık | yanlarında eğilip bakar, kendi boyunu düşünür |
+
+Kurallar: güvenli alan içinde (x 90–950, sağ alt köşe), başlığa ve sayılara asla değmez; tepkisi doruk
+vuruşuyla eş zamanlı; boşta durmaz (3,6 sn nefes, tohumlu 2,5–5,5 sn göz kırpma) ama sallanmaz; tek kimlik:
+aynı oranlar ve aynı çizgi (baş:boy = 1:2, beyaz göz akı yok, parmak yok).
+
+Uygulama (motor, `engine/actor.js`; senaryo şablondan otomatik):
+- **Sürü:** ilk durakta sayar → ikinci durakta zıplar ("!") → terler → haritadan önceki sıçramada patinajla
+  kaçar → doruktan sonra frenleyerek geri gelir → şaşırır → sevinir → döngüde kare 0'daki duruşuna döner.
+- **Kule:** sütun büyürken yukarı bakar; sessizlikte donar; doruğa zıplar. `"actor": {"count": "seconds"}`
+  ilk büyümede gerçek saniyeleri sayar (ışık 8,3 dakikada gelirken "1 sn, 2 sn, 3 sn"); `"rate"` ile kalp atışı
+  gibi başka bir hız sayılır. Balon sayaçla asla çelişmez.
+- **Hangisi:** kuşu izler, yürüyüşün yıllarını sayar (balon ekrandaki yıl sayacına bağlı), kıyasta düşünür,
+  oranda zıplar, soruda gösterir.
+- Kapatmak için bölüm dosyasına `"actor": false`.
+- **Sakarlık:** filmde en fazla bir kez ve yalnızca sayı doğru anlatıldıktan sonra. "Sıfırsın" türü
+  şakalar yok; mizah sayının büyüklüğünden gelir. OK/"sıfır" el işareti asla.
+
 ## 3. Formatlar (seriler)
 
 | Seri | Şablon | Ne zaman |

@@ -73,5 +73,9 @@
     "#biliyormuydunuz",
     "#zaman",
     "#sayılar"
-  ]
+  ],
+  "actor": {
+    "count": "seconds",
+    "unit": " sn"
+  }
 }

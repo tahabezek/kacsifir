@@ -4,6 +4,7 @@ import {
   W, H, ease, seg, lerp, spring, mulberry32, formatValue,
   buildTimeline, barHeight, cameraHeight, activeIndex, tallyPlan, solidness,
 } from './core.js';
+import { drawActor } from './actor.js';
 
 export const C = {
   paper: '#ECE5D5', ink: '#1C1B18', red: '#E0391C', graphite: '#8B8577',
@@ -19,8 +20,10 @@ export const F = {
 export function layout(ep, w = W, h = H) {
   const safe = { x0: 90, x1: 920, y0: 280, y1: 1420 };
   const n = ep.items.length;
-  const colW = 84, gap = 36;
-  const colsRight = safe.x1 - 40;
+  // Sıfır sütunların sağında, zeminde durur: sütunlar biraz daralır ve sola kayar (defter genişliği aynı kalır)
+  const actor = ep.actor !== false;
+  const colW = actor ? 72 : 84, gap = actor ? 28 : 36;
+  const colsRight = actor ? 810 : safe.x1 - 40;
   const cols = ep.items.map((_, i) => colsRight - (n - i) * colW - (n - 1 - i) * gap);
   const down = ep.direction === 'down';
   const area = down ? { top: 660, bottom: 1330 } : { top: 640, bottom: 1330 };
@@ -33,6 +36,7 @@ export function layout(ep, w = W, h = H) {
     serial: { x: safe.x0, y: 336 },
     question: { x: safe.x0, y: 374, w: safe.x1 - safe.x0 },
     tagY: down ? ground - 22 : ground + 56,
+    actor: actor ? { x: 868, y: down ? 1414 : ground - 2, facing: -1 } : null,
   };
 }
 
@@ -373,6 +377,31 @@ export function makeRenderer(ep, canvas) {
     });
   }
 
+  // Sıfır'ın senaryosu: sütun büyürken yukarı bakar, sessizlikte donar, doruğa zıplar, döngüde başa döner.
+  // ep.actor.count === 'seconds': ilk büyümede gerçek saniyeleri tek tek sayar (1, 2, 3…; sütunlar milyonları gösterirken)
+  const actorScript = (() => {
+    if (!L.actor) return [];
+    const it = tl.items, sc = [], hero = tl.hero;
+    const opt = typeof ep.actor === 'object' ? ep.actor : {};
+    let cur = 0;
+    const push = (o) => { if (o.t1 > o.t0) { sc.push(o); cur = o.t1; } };
+    for (let i = 1; i < it.length; i++) {
+      const g = it[i];
+      push({ type: 'idle', t0: cur, t1: g.t0, expr: i === 1 ? 'notr' : 'mutlu' });
+      // ilk büyümede gerçek zamanlı sayma: saniye (rate 1) ya da kalp atışı gibi bir hız
+      const rate = opt.count === 'seconds' ? 1 : opt.rate;
+      if (i === 1 && rate) push({ type: 'count', t0: g.t0, t1: g.t1, from: 1, valueAt: t => Math.floor((t - g.t0) * rate) + 1, label: n => `${n}${opt.unit ?? ''}`, bubble: 'top' });
+      else push({ type: 'lookUp', t0: g.t0, t1: g.t1, expr: 'saskin' });
+      if (g.hero) {
+        push({ type: 'idle', t0: g.t1, t1: g.tl - 0.05, expr: 'saskin' }); // sessizlik: donar
+        push({ type: 'surprise', t0: g.tl - 0.05, t1: g.tl + 0.85 });
+        push({ type: 'happy', t0: g.tl + 0.85, t1: tl.rw0 });
+      }
+    }
+    push({ type: 'idle', t0: cur, t1: Infinity, expr: 'notr' });
+    return sc;
+  })();
+
   function render(t) {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.fillStyle = C.paper;
@@ -385,6 +414,7 @@ export function makeRenderer(ep, canvas) {
     drawGround();
     drawQuestion();
     drawLedger(t);
+    if (L.actor) drawActor(ctx, actorScript, t, L.actor, 84, D);
   }
 
   return { render, duration: D, timeline: tl, layout: L };

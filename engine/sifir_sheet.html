@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}</style></head><body><canvas id="c" width="1800" height="1500"></canvas>
+<script type="module">
+import { SIFIR_CARD as C, drawSifir, POSES, walkPose } from './sifir.js';
+await document.fonts.load('500 26px "IBM Plex Mono"');
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1500);
+ctx.font = '500 26px "IBM Plex Mono"'; ctx.fillStyle = '#8B8577';
+ctx.fillText('SIFIR · karakter kartı v2 · baş = 1 · boy ≈ 1,8 baş', 30, 40);
+ctx.save(); ctx.translate(250, 560); drawSifir(ctx, C, POSES.ayakta, 'notr', 300); ctx.restore();
+Object.keys(C.expressions).forEach((k, i) => { const x = 560 + (i % 3) * 400, y = 300 + Math.floor(i / 3) * 290; ctx.save(); ctx.translate(x, y); drawSifir(ctx, C, POSES.ayakta, k, 130); ctx.restore(); ctx.fillText(k, x - 60, y + 40); });
+Object.keys(POSES).forEach((k, i) => { const x = 110 + i * 215; ctx.save(); ctx.translate(x, 1000); drawSifir(ctx, C, POSES[k], k === 'sasirma' ? 'saskin' : k === 'kosma' ? 'yorgun' : 'notr', 100); ctx.restore(); ctx.fillText(k, x - 55, 1045); });
+for (let k = 0; k < 8; k++) { const x = 110 + k * 215; ctx.save(); ctx.translate(x, 1380); drawSifir(ctx, C, walkPose(k / 8), 'notr', 90); ctx.restore(); ctx.fillText(k + '/8', x - 20, 1425); }
+ctx.save(); ctx.translate(1720, 1460); drawSifir(ctx, C, POSES.ayakta, 'notr', 24); ctx.restore();
+</script></body></html>

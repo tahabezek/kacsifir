@@ -73,5 +73,9 @@
     "#biliyormuydunuz",
     "#uzay",
     "#fizik"
-  ]
+  ],
+  "actor": {
+    "count": "seconds",
+    "unit": " sn"
+  }
 }

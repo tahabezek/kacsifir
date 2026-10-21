@@ -17,6 +17,7 @@ const canvas = document.getElementById('c');
 const r = ep.template === 'swarm' ? (await import('./swarm.js')).makeSwarmRenderer(ep, canvas)
   : ep.template === 'doc' ? (await import('./doc.js')).makeDocRenderer(ep, canvas)
   : ep.template === 'versus' ? (await import('./versus.js')).makeVersusRenderer(ep, canvas)
+  : ep.template === 'zeros' ? (await import('./scenes/zeros.js')).makeZerosRenderer(ep, canvas)
   : ep.template === 'sun' ? (await import('./scenes/sun.js')).makeSunRenderer(ep, canvas)
   : ep.template === 'depth' ? (await import('./scenes/depth.js')).makeDepthRenderer(ep, canvas)
   : ep.template === 'storm' ? (await import('./scenes/storm.js')).makeStormRenderer(ep, canvas)

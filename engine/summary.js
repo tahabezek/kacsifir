@@ -13,6 +13,7 @@ import { spinSummary } from './scenes/spin.js';
 import { stormSummary } from './scenes/storm.js';
 import { depthSummary } from './scenes/depth.js';
 import { sunSummary } from './scenes/sun.js';
+import { zerosSummary } from './scenes/zeros.js';
 
 export function summary(ep) {
   if (ep.template === 'board') return boardSummary(ep);
@@ -25,6 +26,7 @@ export function summary(ep) {
   if (ep.template === 'storm') return stormSummary(ep);
   if (ep.template === 'depth') return depthSummary(ep);
   if (ep.template === 'sun') return sunSummary(ep);
+  if (ep.template === 'zeros') return zerosSummary(ep);
   if (ep.template === 'versus') {
     const tl = buildVersusTimeline(ep), S = tl.S;
     return {

@@ -2,6 +2,29 @@
   "snapshots": {
     "2026-10-21": [
       {
+        "postId": "6ad85fdf50009d9e95125296",
+        "episode": "001",
+        "slug": "milyar-saniye",
+        "template": "tower",
+        "sentAt": "2026-10-21T10:01:22.559Z",
+        "link": "https://www.instagram.com/reel/DewJQA5j9vW/",
+        "views": 0,
+        "reach": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "avgWatchS": null,
+        "durationS": 17.9,
+        "watchRatio": null,
+        "sharesPer1k": 0,
+        "savesPer1k": 0,
+        "followsPer1k": 0,
+        "score": 0,
+        "metricsUpdatedAt": "2026-10-21T06:46:55.068Z"
+      },
+      {
         "postId": "6ad85d3050009d9e9511a759",
         "episode": "012",
         "slug": "kagit-efsanesi",

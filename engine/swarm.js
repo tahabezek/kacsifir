@@ -417,23 +417,30 @@ export function makeSwarmRenderer(ep, canvas) {
     if (ep.actor === false) return [];
     const S = tl.stops, sc = [];
     const firstMap = S.find(s => ['geo', 'flood', 'sweep'].includes(s.shape));
-    // kaçış: sayı haritaya taşmadan önceki son büyük sıçrama (az iken sayar, çok iken kaçar)
+    // kaçış: sayı haritaya taşmadan önceki son büyük sıçrama (az iken sayar, çok iken kaçar); sağdan çıkar, sağdan döner
     const fleeStop = firstMap ? S[Math.max(1, S.indexOf(firstMap) - 1)] : S[S.length - 1];
     const fleeAt = fleeStop.t0;
     const heroLand = tl.hero ? tl.hero.t1 : fleeAt + 3;
     const back0 = Math.min(heroLand + 0.5, tl.rw0 - 2.6);
-    const sec = S[1] ? S[1].t0 : fleeAt;
-    sc.push({ type: 'count', t0: 0.25, t1: sec, from: 1, to: S[0].n });
-    if (S[1]) sc.push({ type: 'surprise', t0: S[1].t1 - 0.05, t1: S[1].t1 + 0.85 });
-    const sweat0 = S[1] ? S[1].t1 + 0.85 : sec;
-    if (sweat0 < fleeAt) sc.push({ type: 'sweat', t0: sweat0, t1: fleeAt });
-    sc.push({ type: 'flee', t0: fleeAt, t1: fleeAt + 1.5, dir: -1, dist: 1100 });
-    sc.push({ type: 'gone', t0: fleeAt + 1.5, t1: back0 });
-    sc.push({ type: 'enterSkid', t0: back0, t1: back0 + 1.3, dir: -1, dist: 700 });
+    // sayma: balon her an sayaçtaki değeri söyler; sayaç 999'u geçince biter
+    let countEnd = S[1] ? S[1].t0 : fleeAt;
+    for (let t = countEnd; t < fleeAt; t += 1 / 30) { if (countAt(tl, t) > 999) break; countEnd = t; }
+    const big = S.find(s => s.n >= 10000 && s.t1 < fleeAt);
+    const count0 = S[0].n < 50 ? 0.25 : (S[1] ? S[1].t0 : fleeAt);
+    sc.push({ type: 'idle', t0: 0, t1: count0, expr: 'notr' });
+    if (countEnd > count0 + 0.3) sc.push({ type: 'count', t0: count0, t1: countEnd, valueAt: t => Math.round(Math.max(1, countAt(tl, t))), label: n => fmtCount(n).num, bubble: 'top' });
+    sc.push({ type: 'lookUp', t0: Math.max(count0, countEnd), t1: big ? big.t1 - 0.05 : fleeAt, expr: 'saskin' });
+    if (big) {
+      sc.push({ type: 'surprise', t0: big.t1 - 0.05, t1: big.t1 + 0.85 });
+      sc.push({ type: 'sweat', t0: big.t1 + 0.85, t1: fleeAt });
+    }
+    sc.push({ type: 'flee', t0: fleeAt, t1: fleeAt + 1.3, dir: 1, dist: 500 });
+    sc.push({ type: 'gone', t0: fleeAt + 1.3, t1: back0 });
+    sc.push({ type: 'enterSkid', t0: back0, t1: back0 + 1.3, dir: -1, dist: 420 });
     sc.push({ type: 'lookUp', t0: back0 + 1.3, t1: back0 + 2.1, expr: 'saskin' });
     sc.push({ type: 'happy', t0: back0 + 2.1, t1: tl.rw0 });
     sc.push({ type: 'idle', t0: tl.rw0, t1: Infinity, expr: 'notr' });
-    return sc;
+    return sc.filter(o => o.t1 > o.t0);
   })();
   const actorHome = { x: 868, y: 1414, facing: -1 };
 

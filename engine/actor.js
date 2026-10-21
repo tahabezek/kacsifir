@@ -94,7 +94,13 @@ function active(script, t) { let a = { type: 'idle', t0: 0, t1: Infinity }; for 
 
 // Ana çizim: home = {x, y} yer noktası, H = baş çapı (px)
 let CUR_D = 20;
+// Sağdaki Reels düğmeleri (x ≥ 960) üstüne hiçbir şey çizilmez: aktör o çizginin arkasından girip çıkar
 export function drawActor(ctx, script, t, home, H, D) {
+  ctx.save(); ctx.beginPath(); ctx.rect(0, 0, 960, 1920); ctx.clip();
+  drawActorInner(ctx, script, t, home, H, D);
+  ctx.restore();
+}
+function drawActorInner(ctx, script, t, home, H, D) {
   CUR_D = D || 20;
   const s = active(script, t);
   const u = s.t1 && isFinite(s.t1) ? seg(t, s.t0, s.t1 - s.t0) : 0;
@@ -129,7 +135,7 @@ export function drawActor(ctx, script, t, home, H, D) {
       y -= jump;
       pose = { ...POSES.sasirma, sq: tt < 0.06 ? 0.14 : tt > 0.42 && tt < 0.52 ? 0.12 : -0.08 };
       expr = 'saskin';
-      fx = () => { ctx.save(); ctx.fillStyle = '#E0391C'; ctx.font = `800 ${Math.round(H * 0.7)}px Archivo`; ctx.globalAlpha = ease.enter(seg(t, s.t0, 0.15)); ctx.fillText('!', x + H * 0.7 * facing, y - H * 2.0); ctx.restore(); };
+      fx = () => { ctx.save(); ctx.fillStyle = '#E0391C'; ctx.font = `800 ${Math.round(H * 0.7)}px Archivo`; ctx.globalAlpha = ease.enter(seg(t, s.t0, 0.15)); ctx.fillText('!', x - H * 0.78 * facing, y - H * 1.75); ctx.restore(); };
       break;
     }
     case 'flee': {

@@ -19,11 +19,13 @@
     },
     "2026-10-21T17:30Z": {
       "episode": "011",
-      "media": "v/011-butun-karincalar.mp4",
+      "media": "v/011-butun-karincalar-4b4c2cf7.mp4",
       "status": "scheduled",
       "at": "2026-10-21T06:36:47.315Z",
       "postId": "6ad85fdfd894396f66ce01a4",
-      "dueAt": "2026-10-21T17:30:00.000Z"
+      "dueAt": "2026-10-21T17:30:00.000Z",
+      "prevMedia": "v/011-butun-karincalar.mp4",
+      "remediaAt": "2026-10-21T16:21:33.821Z"
     },
     "2026-10-22T05:30Z": {
       "episode": "004",
@@ -43,11 +45,13 @@
     },
     "2026-10-22T17:30Z": {
       "episode": "013",
-      "media": "v/013-insanlik-istanbul.mp4",
+      "media": "v/013-insanlik-istanbul-75c1d077.mp4",
       "status": "scheduled",
       "at": "2026-10-21T06:36:47.315Z",
       "postId": "6ad85fe150009d9e95125301",
-      "dueAt": "2026-10-22T17:30:00.000Z"
+      "dueAt": "2026-10-22T17:30:00.000Z",
+      "prevMedia": "v/013-insanlik-istanbul.mp4",
+      "remediaAt": "2026-10-21T16:21:34.891Z"
     },
     "2026-10-23T05:30Z": {
       "episode": "002",

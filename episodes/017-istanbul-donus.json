@@ -1,59 +1,85 @@
 {
   "id": "017",
   "slug": "istanbul-donus",
+  "template": "spin",
   "serial": "№ 017 · HIZ",
-  "direction": "up",
   "bpm": 96,
-  "silenceBeats": 0.8,
-  "rewindBeats": 3,
-  "startFrac": 1,
   "question": [
     "İstanbul'da şu an saatte",
     "kaç km dönüyorsun?"
   ],
-  "format": {
-    "dec": 100,
-    "units": [
-      {
-        "upTo": 1e+30,
-        "div": 1,
-        "name": "km/sa"
-      }
-    ],
-    "trim": true
+  "gaugeMax": 2000,
+  "turnSec": 7,
+  "city": {
+    "lat": 41.01,
+    "lon": 28.98,
+    "label": "İSTANBUL"
   },
-  "items": [
+  "marks": [
     {
-      "tag": "A",
-      "name": "Yürüyüş",
-      "value": 5,
-      "grow": 0.3,
-      "hold": 2.5
+      "v": 900,
+      "label": "UÇAK"
     },
     {
-      "tag": "B",
-      "name": "Yolcu uçağı",
-      "value": 900,
-      "grow": 4,
-      "hold": 3.5
+      "v": 1235,
+      "label": "SES"
     },
     {
-      "tag": "C",
-      "name": "İstanbul'un dönüş hızı",
-      "value": 1263,
-      "grow": 5,
-      "hold": 8,
-      "hero": true,
-      "kicker": "Bu hız, ses hızından (1.235 km/sa) fazladır."
-    },
-    {
-      "tag": "D",
-      "name": "Güneş çevresinde dönüş",
-      "value": 107000,
-      "grow": 4,
-      "hold": 4
+      "v": 1674,
+      "label": "EKVATOR"
     }
   ],
+  "stops": [
+    {
+      "v": 5,
+      "label": "YÜRÜYÜŞ",
+      "say": "Yürürken saatte 5 km gidersin."
+    },
+    {
+      "v": 900,
+      "label": "YOLCU UÇAĞI",
+      "say": "Yolcu uçağı saatte 900 km gider."
+    },
+    {
+      "v": 1235,
+      "label": "SES",
+      "say": "Ses saatte 1.235 km yol alır."
+    },
+    {
+      "v": 1263,
+      "label": "İSTANBUL · 41° KUZEY",
+      "say": "İstanbul'da Dünya'yla birlikte saatte 1.263 km dönüyorsun.",
+      "hero": true
+    }
+  ],
+  "say": {
+    "kicker": "Hissetmezsin, çünkü hava da seninle birlikte döner."
+  },
+  "timing": {
+    "stops": [
+      [
+        -0.2,
+        0
+      ],
+      [
+        2.9,
+        4.3
+      ],
+      [
+        7.4,
+        8.6
+      ],
+      [
+        11.3,
+        11.85
+      ]
+    ],
+    "kickDelay": 3.2,
+    "rewind": [
+      19.6,
+      21.5
+    ]
+  },
   "caption": "Dünya kendi ekseni etrafında yaklaşık 24 saatte bir döner. Ekvatorda bu hız saatte yaklaşık 1.674 km'dir. İstanbul 41. enlemde olduğu için döndüğü çember daha küçüktür: 1.674 × cos 41° ≈ 1.263 km/sa. Bu hız ses hızından fazladır. Hissetmeyiz, çünkü hız sabittir ve atmosfer de bizimle birlikte döner.\n\nAnkara'da, İzmir'de kaç? Şehrini yorumlara yaz, hesaplayalım.\n\nKaynaklar: BBC Sky at Night Magazine, Universe Today.",
   "hashtags": [
     "#kaçsıfır",
@@ -62,6 +88,7 @@
     "#istanbul",
     "#uzay"
   ],
+  "actor": true,
   "disabled": true,
-  "disabledWhy": "kule kalıbı tekrar ediyor; kendi görsel sahnesiyle yeniden yapılacak"
+  "disabledWhy": "yeni sahne kontrol ediliyor"
 }

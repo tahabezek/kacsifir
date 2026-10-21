@@ -1,57 +1,93 @@
 {
   "id": "002",
   "slug": "ay-everest",
+  "template": "altitude",
   "serial": "№ 002 · MESAFE",
-  "direction": "up",
   "bpm": 96,
-  "silenceBeats": 0.8,
-  "rewindBeats": 3,
-  "startFrac": 1,
   "question": [
     "Ay'a ulaşmak için",
     "kaç Everest gerekir?"
   ],
-  "format": {
-    "dec": 10,
-    "units": [
-      {
-        "upTo": 1e+30,
-        "div": 8848.86,
-        "name": "Everest"
-      }
-    ]
+  "unitKm": 8.849,
+  "unit": "Everest",
+  "moon": {
+    "surfaceKm": 376292
   },
-  "items": [
+  "stops": [
     {
-      "tag": "A",
-      "name": "Everest · 8.849 m",
-      "value": 8848.86,
-      "grow": 0.3,
-      "hold": 2.5
+      "n": 12,
+      "say": "12 Everest üst üste uzaya ulaşır."
     },
     {
-      "tag": "B",
-      "name": "Uzay İstasyonu (~400 km)",
-      "value": 400000,
-      "grow": 4,
-      "hold": 3
+      "n": 46,
+      "say": "46 Everest, Uzay İstasyonu'na ulaşır."
     },
     {
-      "tag": "C",
-      "name": "Ay · 384.400 km",
-      "value": 384400000,
-      "grow": 6,
-      "hold": 9,
-      "hero": true,
-      "kicker": "Uzay İstasyonu'na ise 45 tanesi yetiyor."
+      "n": 4045,
+      "say": "4.045 Everest, TV uydularına ulaşır."
+    },
+    {
+      "n": 42524,
+      "say": "42.524 Everest üst üste Ay'a ulaşır."
     }
   ],
-  "caption": "Ay'a ulaşmak için Everest'i 43.441 kez üst üste koyman gerekir. Uzay İstasyonu'na 45 tanesi yetiyor.\n\nTahminin neydi? Yorumlara yaz.\n\nKaynak: Everest 8.848,86 m (Nepal-Çin ortak ölçümü, 2020) · Dünya-Ay ortalama uzaklığı 384.400 km (NASA) · ISS yörünge yüksekliği ~400 km (NASA).",
+  "markers": [
+    {
+      "kind": "plane",
+      "km": 11,
+      "label": "Yolcu uçağı · 11 km"
+    },
+    {
+      "kind": "line",
+      "km": 100,
+      "label": "Uzay sınırı · 100 km"
+    },
+    {
+      "kind": "iss",
+      "km": 400,
+      "label": "Uzay İstasyonu · 400 km"
+    },
+    {
+      "kind": "sat",
+      "km": 35786,
+      "label": "TV uyduları · 35.786 km"
+    }
+  ],
+  "say": {
+    "hook": "Everest 8.849 metredir."
+  },
+  "timing": {
+    "runs": [
+      [
+        0.45,
+        4.6
+      ],
+      [
+        7.8,
+        9.6
+      ],
+      [
+        12.9,
+        15.2
+      ],
+      [
+        18.5,
+        21.2
+      ]
+    ],
+    "silence": 0.5,
+    "rewind": [
+      25.9,
+      27.8
+    ]
+  },
+  "caption": "Everest 8.849 metredir. 12 Everest üst üste uzay sınırını (100 km) geçer, 46 Everest Uluslararası Uzay İstasyonu'na (≈ 400 km), 4.045 Everest TV uydularının yörüngesine (35.786 km) ulaşır. Ay'a ulaşmak için ise 42.524 Everest gerekir.\n\nTahminin kaçtı? Yorumlara yaz.\n\nHesap: Dünya-Ay ortalama uzaklığı merkezden merkeze 384.400 km'dir; iki yüzey arası 376.292 km'dir (Dünya yarıçapı 6.371 km, Ay yarıçapı 1.737 km). Everest yüksekliği 8.848,86 m (Çin-Nepal ortak ölçümü, 2020). Kaynaklar: NASA, ESA.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",
     "#genelkültür",
     "#uzay",
     "#astronomi"
-  ]
+  ],
+  "scaleNote": "Mesafeler ölçekli; gövdeler büyütüldü."
 }

@@ -1,62 +1,67 @@
 {
   "id": "008",
   "slug": "kalp-atisi",
+  "template": "pulse",
   "serial": "№ 008 · KALP",
-  "direction": "up",
   "bpm": 96,
-  "silenceBeats": 0.8,
-  "rewindBeats": 3,
-  "startFrac": 1,
   "question": [
     "Kalbin bir ömürde",
     "kaç kez atar?"
   ],
-  "format": {
-    "dec": 100,
-    "units": [
-      {
-        "upTo": 1000000,
-        "div": 1,
-        "name": "kez"
-      },
-      {
-        "upTo": 1000000000,
-        "div": 1000000,
-        "name": "milyon kez"
-      },
-      {
-        "upTo": 1e+30,
-        "div": 1000000000,
-        "name": "milyar kez"
-      }
-    ]
-  },
-  "items": [
+  "heartBpm": 70,
+  "E0": 2,
+  "minWindow": 3.5,
+  "unit": "atış",
+  "zooms": [
     {
-      "tag": "A",
-      "name": "Bir günde",
-      "value": 100800,
-      "grow": 0.3,
-      "hold": 2.5
+      "sec": 86400,
+      "say": "Kalbin 1 günde 100.800 kez atar."
     },
     {
-      "tag": "B",
-      "name": "Bir yılda",
-      "value": 36817200,
-      "grow": 3.5,
-      "hold": 3
+      "sec": 31557600,
+      "say": "Kalbin 1 yılda 36,8 milyon kez atar."
     },
     {
-      "tag": "C",
-      "name": "73 yıllık ömürde",
-      "value": 2687655600,
-      "grow": 6,
-      "hold": 8,
-      "hero": true,
-      "kicker": "28 yaşındaysan 1 milyarı geçtin bile."
+      "sec": 2303704800,
+      "say": "Kalbin 73 yıllık bir ömürde 2,7 milyar kez atar."
     }
   ],
-  "caption": "Dakikada 70 atışla kalbin günde 100.800, yılda 36,8 milyon, 73 yıllık bir ömürde yaklaşık 2,7 milyar kez atar. Bunu bir an bile durmadan yapar.\n\nSen kaç yaşındasın? Kendi sayını hesapla: yaş × 36,8 milyon.\n\nVarsayım: dinlenme nabzı 70/dk · ömür 73 yıl (BM dünya ortalaması).",
+  "heroBeats": 2687655600,
+  "lifeYears": 73,
+  "age": 28,
+  "ageLabel": "28 YAŞ · 1 MİLYAR",
+  "label": {
+    "travel": "KALP ATIŞI · DAKİKADA 70",
+    "hero": "73 YILLIK ÖMÜR"
+  },
+  "say": {
+    "hook": "Kalbin şu an dakikada yaklaşık 70 kez atıyor.",
+    "kicker": "28 yaşındaysan kalbin 1 milyar kez attı bile."
+  },
+  "timing": {
+    "hook": 2.4,
+    "zooms": [
+      [
+        2.4,
+        5.6
+      ],
+      [
+        8.8,
+        10.8
+      ],
+      [
+        14,
+        16.6
+      ]
+    ],
+    "silence": 0.5,
+    "kickDelay": 2.4,
+    "rewind": [
+      23.6,
+      25.5
+    ]
+  },
+  "caption": "Dinlenirken kalbin dakikada yaklaşık 70 kez atar. Bu, günde 100.800, yılda 36,8 milyon atış eder. 73 yıllık bir ömürde kalbin yaklaşık 2,7 milyar kez atar. 28 yaşındaysan 1 milyarı çoktan geçtin.\n\nSen kaç yaşındasın? Kalbin kaç kez attı, yorumlara yaz.\n\nHesap: dakikada 70 atış (yetişkinde dinlenme nabzı 60–100). Ortalama ömür 73 yıl (BM 2024 dünya ortalaması).",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",
@@ -64,8 +69,5 @@
     "#bilgiler",
     "#sayılar"
   ],
-  "actor": {
-    "rate": 1.1666666666666667,
-    "unit": ". atım"
-  }
+  "actor": true
 }

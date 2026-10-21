@@ -10,6 +10,10 @@ import { versusCues } from '../engine/versus.js';
 import { boardCues } from '../engine/scenes/board.js';
 import { lightCues } from '../engine/scenes/light.js';
 import { tilesCues } from '../engine/scenes/tiles.js';
+import { altitudeCues } from '../engine/scenes/altitude.js';
+import { pulseCues } from '../engine/scenes/pulse.js';
+import { needleCues } from '../engine/scenes/needle.js';
+import { spinCues } from '../engine/scenes/spin.js';
 
 const SR = 48000;
 
@@ -31,7 +35,7 @@ function towerCues(ep) {
 }
 
 export function synth(ep) {
-  const tl = ep.template === 'swarm' ? swarmCues(ep) : ep.template === 'doc' ? docCues(ep) : ep.template === 'versus' ? versusCues(ep) : ep.template === 'board' ? boardCues(ep) : ep.template === 'light' ? lightCues(ep) : ep.template === 'tiles' ? tilesCues(ep) : towerCues(ep);
+  const tl = ep.template === 'swarm' ? swarmCues(ep) : ep.template === 'doc' ? docCues(ep) : ep.template === 'versus' ? versusCues(ep) : ep.template === 'board' ? boardCues(ep) : ep.template === 'light' ? lightCues(ep) : ep.template === 'tiles' ? tilesCues(ep) : ep.template === 'altitude' ? altitudeCues(ep) : ep.template === 'pulse' ? pulseCues(ep) : ep.template === 'needle' ? needleCues(ep) : ep.template === 'spin' ? spinCues(ep) : towerCues(ep);
   const D = tl.duration;
   const N = Math.ceil(D * SR);
   const Lc = new Float32Array(N), Rc = new Float32Array(N);
@@ -164,6 +168,10 @@ export function synth(ep) {
   }
   rewind(tl.rw0, tl.rw1, 0.5);
 
+  // tepe/RMS oranı 14 dB'i aşarsa yumuşak dizli sıkıştırma: tek vuruş yüzünden loudnorm hedefin altında kalmasın
+  let ss = 0; for (let i = 0; i < N; i++) ss += Lc[i] * Lc[i] + Rc[i] * Rc[i];
+  const rms = Math.sqrt(ss / (2 * N)) || 1e-9, T = rms * Math.pow(10, 14 / 20);
+  for (const ch of [Lc, Rc]) for (let i = 0; i < N; i++) { const v = Math.abs(ch[i]); if (v > T) ch[i] = Math.sign(ch[i]) * (T + (v - T) * 0.25); }
   // tepe −3 dBFS'e çek (son ses seviyesi ffmpeg loudnorm ile)
   let peak = 1e-9;
   for (let i = 0; i < N; i++) peak = Math.max(peak, Math.abs(Lc[i]), Math.abs(Rc[i]));

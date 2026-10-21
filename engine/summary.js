@@ -6,11 +6,19 @@ import { buildVersusTimeline } from './versus.js';
 import { boardSummary } from './scenes/board.js';
 import { lightSummary } from './scenes/light.js';
 import { tilesSummary } from './scenes/tiles.js';
+import { altitudeSummary } from './scenes/altitude.js';
+import { pulseSummary } from './scenes/pulse.js';
+import { needleSummary } from './scenes/needle.js';
+import { spinSummary } from './scenes/spin.js';
 
 export function summary(ep) {
   if (ep.template === 'board') return boardSummary(ep);
   if (ep.template === 'light') return lightSummary(ep);
   if (ep.template === 'tiles') return tilesSummary(ep);
+  if (ep.template === 'altitude') return altitudeSummary(ep);
+  if (ep.template === 'pulse') return pulseSummary(ep);
+  if (ep.template === 'needle') return needleSummary(ep);
+  if (ep.template === 'spin') return spinSummary(ep);
   if (ep.template === 'versus') {
     const tl = buildVersusTimeline(ep), S = tl.S;
     return {

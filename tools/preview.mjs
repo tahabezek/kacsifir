@@ -15,7 +15,7 @@ for (const f of files) {
   const ep = JSON.parse(fs.readFileSync(f, 'utf8'));
   glyphCheck(ep);
   let times;
-  if (['doc', 'versus', 'board', 'light', 'tiles'].includes(ep.template)) {
+  if (['doc', 'versus', 'board', 'light', 'tiles', 'altitude', 'pulse', 'needle', 'spin'].includes(ep.template)) {
     const sm = (await import('../engine/summary.js')).summary(ep);
     times = process.env.ALL ? sm.keys : [0, sm.keys[4], sm.keys[9], sm.keys[13]];
   } else if (ep.template === 'swarm') {

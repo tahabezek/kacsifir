@@ -5,8 +5,8 @@
   "serial": "№ 021 · DÜŞÜNCE DENEYİ",
   "bpm": 96,
   "question": [
-    "Dünya'yı delip atlasan öbür",
-    "taraftan kaç dakikada çıkarsın?"
+    "Dünya'yı delip tünele atlasan",
+    "öbür uçtan kaç dakikada çıkarsın?"
   ],
   "minutes": 42.2,
   "chords": [
@@ -17,7 +17,7 @@
   "label": {
     "one": "TÜNELDE GEÇEN SÜRE",
     "three": "ÜÇ TÜNEL · AYNI ANDA",
-    "hero": "ÜÇÜ DE AYNI ANDA VARDI"
+    "hero": "ÜÇÜ DE AYNI ANDA ULAŞTI"
   },
   "says": [
     {
@@ -34,7 +34,7 @@
     },
     {
       "t": 10.6,
-      "text": "Peki daha kısa bir tünel kazsan ne olur?"
+      "text": "Peki merkezden geçmeyen, daha kısa bir tünel kazsan ne olur?"
     },
     {
       "t": 20.36,
@@ -63,7 +63,7 @@
       29
     ]
   },
-  "caption": "Dünya'yı boydan boya delip tünele atlarsan, yerçekimi seni merkeze doğru hızlandırır. Merkezden saniyede 7,9 km hızla geçer, öbür uca yaklaşırken yavaşlar ve yaklaşık 42 dakika sonra karşı taraftan çıkarsın.\n\nAsıl şaşırtıcı olan şu: Tünel merkezden geçmek zorunda değil. İstanbul'dan Ankara'ya dümdüz bir tünel kazsan da yolculuk yine 42 dakika sürer. Kısa tünelde yerçekiminin seni çeken kısmı daha zayıf olduğu için hız da orantılı olarak düşer; süre değişmez.\n\nBu hesap, Dünya'nın her yerde aynı yoğunlukta olduğunu ve sürtünme olmadığını varsayar. Gerçek yoğunluk dağılımıyla merkezden geçen yolculuk yaklaşık 38 dakika sürer (Klotz, American Journal of Physics, 2015).\n\nSen olsan bu tüneli nereye kazardın? Yorumlara yaz.\n\nHesap: süre = π × √(R ÷ g) = π × √(6.371.000 m ÷ 9,81 m/s²) ≈ 2.532 sn ≈ 42,2 dk.",
+  "caption": "Dünya'yı boydan boya delip tünele atlarsan, yerçekimi seni merkeze doğru hızlandırır. Merkezden saniyede 7,9 km hızla geçer, öbür uca yaklaşırken yavaşlar ve yaklaşık 42 dakika sonra karşı taraftan çıkarsın.\n\nAsıl şaşırtıcı olan şu: Tünel merkezden geçmek zorunda değil. Bu varsayımla İstanbul'dan Ankara'ya dümdüz bir tünel kazsan da yolculuk yine 42 dakika sürer. Kısa tünel daha kısa bir yoldur ama yerçekiminin tünel boyunca çeken kısmı da aynı oranda zayıflar; bu yüzden süre değişmez.\n\nBu hesap, Dünya'nın her yerde aynı yoğunlukta olduğunu ve sürtünme olmadığını varsayar. Gerçek yoğunluk dağılımıyla merkezden geçen yolculuk yaklaşık 38 dakika sürer (Klotz, American Journal of Physics, 2015).\n\nSen olsan bu tüneli nereye kazardın? Yorumlara yaz.\n\nHesap: süre = π × √(R ÷ g) = π × √(6.371.000 m ÷ 9,81 m/s²) ≈ 2.532 sn ≈ 42,2 dk.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

@@ -18,6 +18,7 @@ import { ropeSummary } from './scenes/rope.js';
 import { proofSummary } from './scenes/proof.js';
 import { tunnelSummary } from './scenes/tunnel.js';
 import { doorsSummary } from './scenes/doors.js';
+import { timelineSummary } from './scenes/timeline.js';
 
 export function summary(ep) {
   if (ep.template === 'board') return boardSummary(ep);
@@ -35,6 +36,7 @@ export function summary(ep) {
   if (ep.template === 'proof') return proofSummary(ep);
   if (ep.template === 'tunnel') return tunnelSummary(ep);
   if (ep.template === 'doors') return doorsSummary(ep);
+  if (ep.template === 'timeline') return timelineSummary(ep);
   if (ep.template === 'versus') {
     const tl = buildVersusTimeline(ep), S = tl.S;
     return {

@@ -5,8 +5,8 @@
   "serial": "№ 022 · PARADOKS",
   "bpm": 96,
   "question": [
-    "Kapını değiştirirsen",
-    "kazanma şansın artar mı?"
+    "Sunucu keçili bir kapı açtı.",
+    "Seçtiğin kapıyı değiştirir misin?"
   ],
   "choices": [
     {
@@ -31,11 +31,11 @@
   "says": [
     {
       "t": 0,
-      "text": "Üç kapıdan birinin arkasında araba var. Sen 1. kapıyı seçtin."
+      "text": "Üç kapıdan birinin arkasında araba, ikisinin arkasında keçi var. Sen 1. kapıyı seçtin."
     },
     {
       "t": 3,
-      "text": "Arabanın yerini bilen sunucu 3. kapıyı açtı: keçi."
+      "text": "Arabanın yerini bilen sunucu 3. kapıyı açıp bir keçi gösterdi."
     },
     {
       "t": 6,
@@ -48,7 +48,7 @@
     },
     {
       "t": 13.2,
-      "text": "Bunu 100 kapıyla düşün. Sen 1 kapı seçtin, sunucu 98 keçiyi açtı."
+      "text": "Bir de 100 kapı düşün. Sen 1 kapı seçtin, sunucu keçili 98 kapıyı açtı."
     },
     {
       "t": 17.4,
@@ -76,7 +76,7 @@
       26.4
     ]
   },
-  "caption": "Üç kapıdan birinin arkasında araba, ikisinin arkasında keçi var. Sen bir kapı seçiyorsun. Arabanın yerini bilen sunucu, kalan kapılardan birini açıp keçiyi gösteriyor. Kapını değiştirmeli misin?\n\nÇoğu insan \"fark etmez, şans %50\" der. Oysa değiştirirsen 3 oyundan 2'sini kazanırsın. İlk seçimin 1/3 ihtimalle doğruydu; sunucu bir keçiyi açınca kalan 2/3'lük ihtimal tek bir kapıda toplanır.\n\nHâlâ ikna olmadıysan 100 kapı düşün: Sen 1 kapı seçiyorsun, sunucu 98 keçiyi açıyor. Geriye kalan o tek kapıyı kim bırakır?\n\nBu soru 1990'da Marilyn vos Savant'ın köşesinde yayımlandığında binlerce okur, aralarında matematikçiler de olmak üzere, cevaba itiraz etmişti. Sen ne düşünüyorsun? Yorumlara yaz.\n\nBu bilmece Monty Hall problemi olarak bilinir.",
+  "caption": "Üç kapıdan birinin arkasında araba, ikisinin arkasında keçi var. Sen bir kapı seçiyorsun. Arabanın yerini bilen sunucu her zaman kalan kapılardan birini açıp bir keçi gösteriyor. Kapını değiştirmeli misin?\n\nÇoğu insan \"fark etmez, şans %50\" der. Oysa değiştirirsen 3 oyundan 2'sini kazanırsın. İlk seçimin 1/3 ihtimalle doğruydu; sunucu bir keçiyi gösterince kalan 2/3'lük ihtimal tek bir kapıda toplanır.\n\nHâlâ ikna olmadıysan bir de 100 kapı düşün: Sen 1 kapı seçiyorsun, sunucu keçili 98 kapıyı açıyor. Geriye kalan o tek kapıyı kim bırakır?\n\nBu soru 1990'da Marilyn vos Savant'ın Parade dergisindeki köşesinde yayımlandığında, aralarında matematikçilerin de bulunduğu binlerce okur cevaba itiraz etti. Sen ne düşünüyorsun? Yorumlara yaz.\n\nBu bilmece Monty Hall problemi olarak bilinir.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

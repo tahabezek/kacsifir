@@ -17,6 +17,7 @@ const canvas = document.getElementById('c');
 const r = ep.template === 'swarm' ? (await import('./swarm.js')).makeSwarmRenderer(ep, canvas)
   : ep.template === 'doc' ? (await import('./doc.js')).makeDocRenderer(ep, canvas)
   : ep.template === 'versus' ? (await import('./versus.js')).makeVersusRenderer(ep, canvas)
+  : ep.template === 'timeline' ? (await import('./scenes/timeline.js')).makeTimelineRenderer(ep, canvas)
   : ep.template === 'doors' ? (await import('./scenes/doors.js')).makeDoorsRenderer(ep, canvas)
   : ep.template === 'tunnel' ? (await import('./scenes/tunnel.js')).makeTunnelRenderer(ep, canvas)
   : ep.template === 'proof' ? (await import('./scenes/proof.js')).makeProofRenderer(ep, canvas)

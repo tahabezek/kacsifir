@@ -1,0 +1,135 @@
+{
+  "id": "023",
+  "slug": "cumhuriyet-saniye",
+  "template": "timeline",
+  "serial": "№ 023 · ZAMAN",
+  "bpm": 96,
+  "publishAt": "2026-10-29T17:30Z",
+  "question": [
+    "Cumhuriyet'in 103 yılı",
+    "kaç saniye eder?"
+  ],
+  "axis": {
+    "from": [
+      1923,
+      10,
+      29
+    ],
+    "to": [
+      2026,
+      10,
+      29
+    ],
+    "ticks": [
+      1923,
+      1950,
+      1975,
+      2000,
+      2026
+    ]
+  },
+  "marks": [
+    {
+      "date": [
+        1955,
+        7,
+        7
+      ],
+      "label": "1 milyar",
+      "sub": "7 Temmuz 1955",
+      "t": 5.6,
+      "h": 90
+    },
+    {
+      "date": [
+        1987,
+        3,
+        15
+      ],
+      "label": "2 milyar",
+      "sub": "15 Mart 1987",
+      "t": 8.6,
+      "h": 250
+    },
+    {
+      "date": [
+        2018,
+        11,
+        21
+      ],
+      "label": "3 milyar",
+      "sub": "21 Kasım 2018",
+      "t": 11.6,
+      "h": 170
+    },
+    {
+      "date": [
+        2026,
+        10,
+        29
+      ],
+      "label": "29 Ekim 2026",
+      "sub": "103. yıl",
+      "t": 14.3,
+      "hero": true,
+      "h": 350
+    }
+  ],
+  "counter": {
+    "mode": "seconds",
+    "heroValue": 3250454400,
+    "heroLabel": "29 EKİM 1923'TEN 29 EKİM 2026'YA"
+  },
+  "says": [
+    {
+      "t": 0,
+      "text": "29 Ekim 1923'ten bu yana geçen her saniyeyi sayalım."
+    },
+    {
+      "t": 5.6,
+      "text": "Cumhuriyet'in 1 milyarıncı saniyesi 7 Temmuz 1955'te doldu."
+    },
+    {
+      "t": 8.6,
+      "text": "İkinci milyar 15 Mart 1987'de doldu."
+    },
+    {
+      "t": 11.6,
+      "text": "Üçüncü milyar 21 Kasım 2018'de doldu."
+    },
+    {
+      "t": 14.26,
+      "text": "29 Ekim 2026'da Cumhuriyet'in yaşı 3.250.454.400 saniyeye ulaşır.",
+      "red": true
+    },
+    {
+      "t": 17.6,
+      "text": "Dördüncü milyar 30 Temmuz 2050'de dolacak."
+    },
+    {
+      "t": 20.6,
+      "text": "1 milyar saniye 31,7 yıl eder. 32 yaşındaysan sen de bir milyarı geçtin."
+    }
+  ],
+  "timing": {
+    "run": [
+      0.5
+    ],
+    "hero": 14.3,
+    "silence": 0.5,
+    "kick": 17.6,
+    "rewind": [
+      24.6,
+      26.5
+    ]
+  },
+  "caption": "Cumhuriyet 29 Ekim 2026'da 103 yaşına giriyor. 29 Ekim 1923'ten bu yana tam 37.621 gün, yani 3.250.454.400 saniye geçti.\n\nCumhuriyet'in 1 milyarıncı saniyesi 7 Temmuz 1955'te, 2 milyarıncısı 15 Mart 1987'de, 3 milyarıncısı 21 Kasım 2018'de doldu. Dördüncü milyar 30 Temmuz 2050'de dolacak.\n\n1 milyar saniye 31,7 yıl eder. Sen kaç milyar saniyelik oldun? Yorumlara yaz.\n\nCumhuriyet Bayramımız kutlu olsun.\n\nHesap: 103 yıl × 365 gün + 26 artık gün = 37.621 gün · 37.621 × 86.400 = 3.250.454.400 saniye.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#29ekim",
+    "#cumhuriyetbayramı",
+    "#zaman"
+  ],
+  "actor": true
+}

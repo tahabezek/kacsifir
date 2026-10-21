@@ -20,7 +20,7 @@
     },
     {
       "t": 3.8,
-      "text": "Merdiveni kopyala, ters çevir ve üstüne koy."
+      "text": "Önce 1'den 10'a kadar sayıları merdiven gibi diz, sonra kopyasını ters çevirip üstüne koy."
     },
     {
       "t": 6.4,
@@ -32,7 +32,7 @@
     },
     {
       "t": 12.2,
-      "text": "100 sayı için de aynı merdiven geçerlidir."
+      "text": "100 basamakta da aynı yöntem işler."
     },
     {
       "t": 15.36,
@@ -41,7 +41,7 @@
     },
     {
       "t": 18.4,
-      "text": "Gauss'un hilesi: 1 + 100, 2 + 99, 3 + 98… Her çift 101 eder ve 50 çift vardır."
+      "text": "Gauss'un yöntemi şuydu: 1 + 100, 2 + 99, 3 + 98… Her çift 101 eder ve 50 çift vardır."
     }
   ],
   "timing": {
@@ -67,7 +67,7 @@
       24.5
     ]
   },
-  "caption": "1'den 100'e kadar bütün sayıları toplamanın kısa bir yolu var. Anlatılana göre matematikçi Carl Friedrich Gauss bunu ilkokulda, öğretmeni sınıfı oyalamak için bu toplamı sorduğunda birkaç saniyede buldu.\n\nSayıları kare sütunlarla bir merdiven gibi diz. Merdivenin bir kopyasını ters çevirip üstüne koyarsan 100'e 101'lik bir dikdörtgen elde edersin. Bizim merdiven bunun tam yarısıdır: 100 × 101 ÷ 2 = 5.050.\n\nAynı fikri şöyle de görebilirsin: 1 + 100, 2 + 99, 3 + 98… Her çift 101 eder ve 50 çift vardır: 50 × 101 = 5.050.\n\nSen 1'den 1.000'e kadar olan toplamı bulabilir misin? Cevabını yorumlara yaz.\n\nNot: Gauss hikâyesi bir anekdottur; ayrıntıları kaynaktan kaynağa değişir. Formül: 1 + 2 + … + n = n(n+1) ÷ 2.",
+  "caption": "1'den 100'e kadar bütün sayıları toplamanın kısa bir yolu var. Anlatılana göre öğretmeni sınıfı oyalamak için bu toplamı sorduğunda, ilkokuldaki Carl Friedrich Gauss cevabı birkaç saniyede buldu.\n\nSayıları kare sütunlarla bir merdiven gibi diz. Merdivenin bir kopyasını ters çevirip üstüne koyarsan 100'e 101'lik bir dikdörtgen elde edersin. Bizim merdiven bunun tam yarısıdır: 100 × 101 ÷ 2 = 5.050.\n\nAynı fikri şöyle de görebilirsin: 1 + 100, 2 + 99, 3 + 98… Her çift 101 eder ve 50 çift vardır: 50 × 101 = 5.050.\n\nSen 1'den 1.000'e kadar olan toplamı bulabilir misin? Cevabını yorumlara yaz.\n\nNot: Gauss hikâyesi bir anekdottur; ayrıntıları kaynaktan kaynağa değişir. Formül: 1 + 2 + … + n = n(n+1) ÷ 2.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

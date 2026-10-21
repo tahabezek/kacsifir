@@ -39,23 +39,23 @@
     },
     "2026-10-22T10:00Z": {
       "episode": "006",
-      "media": "v/006-kac-turkiye-e84206af.mp4",
+      "media": "v/006-kac-turkiye-06fdcac5.mp4",
       "status": "scheduled",
       "at": "2026-10-21T06:36:47.315Z",
       "postId": "6ad85fe0db7d8198214cf007",
       "dueAt": "2026-10-22T10:00:00.000Z",
-      "prevMedia": "v/006-kac-turkiye-262b3b0e.mp4",
-      "remediaAt": "2026-10-21T17:28:30.270Z"
+      "prevMedia": "v/006-kac-turkiye-e84206af.mp4",
+      "remediaAt": "2026-10-21T19:33:49.683Z"
     },
     "2026-10-22T17:30Z": {
       "episode": "013",
-      "media": "v/013-insanlik-istanbul-75c1d077.mp4",
+      "media": "v/013-insanlik-istanbul-554d207d.mp4",
       "status": "scheduled",
       "at": "2026-10-21T06:36:47.315Z",
       "postId": "6ad85fe150009d9e95125301",
       "dueAt": "2026-10-22T17:30:00.000Z",
-      "prevMedia": "v/013-insanlik-istanbul.mp4",
-      "remediaAt": "2026-10-21T16:21:34.891Z"
+      "prevMedia": "v/013-insanlik-istanbul-75c1d077.mp4",
+      "remediaAt": "2026-10-21T19:33:50.929Z"
     },
     "2026-10-23T05:30Z": {
       "episode": "002",
@@ -79,11 +79,13 @@
     },
     "2026-10-23T17:30Z": {
       "episode": "014",
-      "media": "v/014-kus-ve-yuruyen-adam.mp4",
+      "media": "v/014-kus-ve-yuruyen-adam-0f91f8cf.mp4",
       "status": "scheduled",
       "at": "2026-10-21T19:14:13.563Z",
       "postId": "6ad90f3b0a00425628eddea5",
-      "dueAt": "2026-10-23T17:30:00.000Z"
+      "dueAt": "2026-10-23T17:30:00.000Z",
+      "prevMedia": "v/014-kus-ve-yuruyen-adam.mp4",
+      "remediaAt": "2026-10-21T19:33:52.331Z"
     },
     "2026-10-22T14:00Z": {
       "kind": "carousel",

@@ -116,7 +116,7 @@ export function synthDomino(ep) {
 
   // — Yerleşim —
   // oda tonu: kâğıt masa, çok alçak, kesintisiz (döngüde dikiş yok)
-  { let lp = 0; for (let n = 0; n < NS; n++) { lp += 0.01 * (noise() - lp); const v = silent(n / SR) ? 0 : lp * 0.05; add(n, v, v * 0.9); } }
+  { let lp = 0; for (let n = 0; n < NS; n++) { lp += 0.01 * (noise() - lp); const v = silent(n / SR) ? 0 : lp * 0.08; add(n, v, v * 0.9); } }
 
   for (const h of cues.hits) {
     const t = h.t + 0.015;                      // ses, görüntünün sonucu gibi okunur
@@ -148,6 +148,14 @@ export function synthDomino(ep) {
   impact(cues.land - 2 / 30, 1.0);                             // efekt, görsel oturmadan 2 kare önce başlar
   pad(tl.c[16] - 0.6, tl.dive[0] + 0.4, 0.028, 2.5, 1.2);
   whoosh(tl.dive[0] - 0.1, tl.dive[1] + 0.2, 0.22, true);      // dalış: ters nefes, döngüye iner
+  // dikiş yatağı: dalışın sonundan döngünün ilk itişine kadar kesintisiz alçak ton (sona yazılan başa sarılır)
+  { const a = tl.dive[1] - 0.6, b = D + tl.push + 0.3; let lp = 0;
+    for (let n = Math.round(a * SR); n < Math.round(b * SR); n++) {
+      const t = n / SR, u = (t - a) / (b - a), env = Math.sin(Math.PI * u) * 0.05;
+      lp += 0.004 * (noise() - lp);
+      const v = (Math.sin(2 * Math.PI * 110 * t) * 0.5 + Math.sin(2 * Math.PI * 164.81 * t) * 0.3 + lp * 6) * env;
+      add(n, v, v * 0.95);
+    } }
 
   { const a = Math.round(cues.silence0 * SR), b = Math.round((cues.land - 2 / 30) * SR), e = Math.round(0.01 * SR);
     for (let n = a - e; n < b; n++) { const g = n < a ? (a - n) / e : 0; L[n] *= g; R[n] *= g; } }

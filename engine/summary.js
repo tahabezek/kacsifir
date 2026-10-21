@@ -19,8 +19,10 @@ import { proofSummary } from './scenes/proof.js';
 import { tunnelSummary } from './scenes/tunnel.js';
 import { doorsSummary } from './scenes/doors.js';
 import { timelineSummary } from './scenes/timeline.js';
+import { dominoSummary } from './scenes/domino_core.js';
 
 export function summary(ep) {
+  if (ep.template === 'domino') return dominoSummary(ep);
   if (ep.template === 'board') return boardSummary(ep);
   if (ep.template === 'light') return lightSummary(ep);
   if (ep.template === 'tiles') return tilesSummary(ep);

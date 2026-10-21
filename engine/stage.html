@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="tr"><head><meta charset="utf-8">
 <link rel="stylesheet" href="fonts/fonts.css">
+<script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.js"}}</script>
 <style>html,body{margin:0;background:#ECE5D5}canvas{display:block;width:1080px;height:1920px}</style>
 </head><body><canvas id="c" width="1080" height="1920"></canvas>
 <script type="module">
@@ -14,7 +15,8 @@ await Promise.all([
 ]);
 await document.fonts.ready;
 const canvas = document.getElementById('c');
-const r = ep.template === 'swarm' ? (await import('./swarm.js')).makeSwarmRenderer(ep, canvas)
+const r = ep.template === 'domino' ? (await import('./scenes/domino.js')).makeDominoRenderer(ep, canvas)
+  : ep.template === 'swarm' ? (await import('./swarm.js')).makeSwarmRenderer(ep, canvas)
   : ep.template === 'doc' ? (await import('./doc.js')).makeDocRenderer(ep, canvas)
   : ep.template === 'versus' ? (await import('./versus.js')).makeVersusRenderer(ep, canvas)
   : ep.template === 'timeline' ? (await import('./scenes/timeline.js')).makeTimelineRenderer(ep, canvas)

@@ -154,7 +154,56 @@ Kimlik "ölçü defteri" olarak kalır; aşağıdakiler belirli seriler için al
 - Kodu toptan kopyalamak: mg15 dosyaları tek parça ve yamalı; lemo demo filmleri CC BY 4.0 (atıf ister),
   kod MIT. Fikir alınır, motorumuzun modül düzeninde yeniden yazılır.
 
-## 5. Kaynak dosyalar
+## 5. Ek: "Chain Reaction" (renproton) ve "Motion Engineering" makalesi (beamnxw)
+
+Kaynak: x.com/renproton/status/2112937140644720681 (15 sn, 16:9, 60 fps, three.js; Drive'da 5 sayfalık
+"Chain Reaction Prompt.pdf") ve alıntıladığı makale x.com/beamnxw/status/2108616740846420354 (Remotion ile
+ürün lansman klibi). Video: voksel maskot bir bilyeyi fiskeler → spiral ray → sarkaç → 70 domino → tahterevalli
+→ huni → zil → büyük domino logoyu yuvasına çakar → yeni bilye bir alt basamağa yuvarlanır (kusursuz döngü).
+
+**Neden bizimkinden "zengin" görünüyor? (dürüst teşhis)** Fikir değil, üretim katmanı:
+1. **Gerçek 3B + stüdyo ışığı:** yumuşak ana ışık + kontur ışığı, temas gölgeleri, tilt-shift alan derinliği,
+   yalnızca parlak noktalarda bloom, %1,5 gren, vinyet. Malzemeler (meşe, pirinç, cam) ışığı gerçek gibi yansıtır.
+2. **Fizik her şeyi sürer:** simülasyon açılışta sabit adımla (1 kHz) bir kez pişirilir, `renderAt(t)` yalnızca
+   tablodan okur. g = 981 cm/s², kaymadan yuvarlanma, gerçek sarkaç periyodu, domino yalnızca temasla devrilir.
+   "Canlandırılmış" ile "inanılır" arasındaki fark budur. Kamera anahtarları simülasyonun olaylarına oturur.
+3. **Döngü bir merdivendir:** son kare, ilk karenin bir basamak aşağısıdır; geri sarma yoktur. (Bizim bölümler
+   sonda geri sarıyor; bu, onların yaklaşımından zayıf.)
+4. **Render:** 2× çözünürlük (3840×2160); her karede float doğrusal ışıkta 20 örnek (0,45 kare deklanşör, mercek
+   üstünde bir nokta, alt piksel kayması) → hareket bulanıklığı, alan derinliği ve kenar yumuşatma tek geçişte;
+   ton eşleme, Lanczos ile küçültme, gren + dither, ham kareler ffmpeg'e, H.264 CRF 14.
+5. **Ses simülasyondan sentezlenir** (OfflineAudioContext, örnek dosya yok): seviye çarpma hızından, perde
+   boyuttan, pan konumdan gelir; her vuruş görüntüden **1 kare (17 ms) sonra** tepe yapar, böylece ses
+   görüntünün sonucu gibi okunur. Gerçek tepe örneği ölçülür (zil 34 ms gecikiyordu, düzeltildi). İki döngü
+   render edilip ikincisi alınır, kuyruklar dikişten taşar. Müzik foley'nin 12 dB altında seyrek kalimba.
+   Limiter en fazla 3 dB; −14,1 LUFS, TP −2,3 dBTP.
+6. **7 tur ölçülü düzeltme:** "pozlama ~%40 fazla", "logo plakanın %82'si", "47 px bulanıklık", "marka rengi 2×
+   karede ölçülür, hex'e 10 birimden yakın olana kadar ışık ayarlanır", "her çarpmanın çevresinde 5 kare; hiçbir
+   şey iç içe geçmez". "Tek prompt" iddiası abartı: 270 kelimelik prompt + 7 görüntü + 3 ses turu.
+
+**Makaleden (beamnxw) alınacaklar:**
+- Referans videoyu ölçerek analiz et: giriş/iniş/bekleme/kesme kare numaraları, nesne kutuları, yön, süre,
+  ölçek/opaklık değişimi, aşma; ölçülen, tahmin edilen ve yaratıcı öneri ayrı etiketlenir → REFERENCE.md.
+- Düzeltme notu dört alanlıdır: **konum (global kare) · gözlenen sorun · değişiklik · sabit kalacaklar.**
+- Düzeltme sırası: eksik bilgi → okunmayan metin → zamanlama → görsel ayrıntı.
+- Önce üç kare (açılış, sonuç, kapanış), sonra hareket. Sahne sınırlarının giriş/çıkış durumları yazılır.
+- En uzun metin varyantıyla yerleşim test edilir; 3 satıra taşarsa hareket işi durur.
+
+**Bize uyarlama (öneri):** "Kaç Sıfır? Masası" adında ayda birkaç kez yapılan bir **amiral gemisi formatı**.
+Çizim masası 3B olur: kâğıt, cetvel, pirinç pergel, ahşap bloklar; Sıfır 3B bir karakterdir. Fizik gerçek bir
+sayı gerçeğini taşır. Örnekler:
+- **Domino büyütmesi** (Whitehead 1983, *Am. J. Phys.*): her taş bir öncekinin yaklaşık 1,5 katıdır; kaçıncı
+  taşın Galata Kulesi'ni, sonra Everest'i devireceği sorulur. Sayılar yayından önce kaynaktan doğrulanır.
+- **Satranç tahtasında buğday:** gerçek tanelerin fizikle yığılması.
+- **Gauss'un toplamı:** ahşap bloklardan merdiven; kopyası ters döner ve oturur.
+
+Palet kâğıt/mürekkep/tek kırmızı olarak kalır; 3B stüdyo ışığı "ölçü defteri"ni nesneye dönüştürür.
+
+Teknik engel: render GitHub Actions'ta (ubuntu, GPU yok) çalışıyor. 3B + 20 örnek orada SwiftShader ile çok
+yavaş olur. Seçenek: amiral gemisi bölümleri yerelde RTX 3050 Ti ile (`--use-angle=d3d11`) render edip hazır
+mp4 olarak kuyruğa koymak (`run.mjs` hazır mp4 kabul edecek şekilde genişletilir).
+
+## 6. Kaynak dosyalar
 
 Klonlar geçici scratchpad'deydi; gerekirse yeniden `git clone --depth 1` yapılır. En değerli dosyalar:
 lemo `DIRECTOR.md`, `TECHNIQUE.md`, `styles/{blueprint,swiss-motion,dataviz,one-line}/STYLE.md` ve `demo/`,

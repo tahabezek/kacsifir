@@ -100,5 +100,6 @@
     "#kağıt",
     "#rekor"
   ],
-  "foldStartBeat": 0.4
+  "foldStartBeat": 0.4,
+  "ytTitle": "Bir kâğıdı en fazla kaç kez katlayabilirsin?"
 }

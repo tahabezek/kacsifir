@@ -62,7 +62,7 @@ function episodes() {
     .filter(e => !e.disabled)
     .sort((a, b) => rank(a.id) - rank(b.id) || a.id.localeCompare(b.id));
 }
-const reelSlots = ledger => Object.values(ledger.slots).filter(s => s.kind !== 'carousel');
+const reelSlots = ledger => Object.values(ledger.slots).filter(s => !s.kind); // carousel ve yalnız-YouTube kayıtları hariç
 function usedReels(ledger) { return new Set(reelSlots(ledger).filter(s => !NOT_USED.has(s.status)).map(s => s.episode)); }
 // publishAt: "2026-11-18T17:30Z" gibi; bölüm yalnızca o yuvada yayınlanır
 function nextEpisode(ledger, taken, t) {
@@ -229,7 +229,7 @@ async function youtube(ledger, now) {
   const tol = cfg.slotToleranceMinutes * 60e3;
   const ytPosts = await postsBetween(cfg.organizationId, cfg.youtube.channelId, new Date(now.getTime() - 3600e3).toISOString(), new Date(now.getTime() + (cfg.horizonHours + 2) * 3600e3).toISOString());
   for (const [k, slot] of Object.entries(ledger.slots)) {
-    if (slot.kind === 'carousel' || slot.status !== 'scheduled' || !slot.dueAt || slot.yt?.postId) continue;
+    if (slot.kind || slot.status !== 'scheduled' || !slot.dueAt || slot.yt?.postId) continue;
     const due = new Date(slot.dueAt);
     if ((due - now) / 60e3 < cfg.minLeadMinutes) continue;
     if (ytPosts.some(p => p.dueAt && Math.abs(new Date(p.dueAt) - due) <= tol)) { log(`dolu  ${k} (youtube)`); continue; }

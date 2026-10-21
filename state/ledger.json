@@ -149,6 +149,33 @@
       "postId": "6ad90fdfbc693610b629e0cc",
       "dueAt": "2026-10-23T14:00:00.000Z",
       "prevEpisode": "001"
+    },
+    "2026-10-22T08:00Z": {
+      "kind": "yt",
+      "episode": "012",
+      "media": "v/012-kagit-efsanesi.mp4",
+      "status": "scheduled",
+      "postId": "6ad9338c9c05f711d3c3096a",
+      "dueAt": "2026-10-22T08:00:00.000Z",
+      "at": "2026-10-21T21:50:05.722Z"
+    },
+    "2026-10-22T13:00Z": {
+      "kind": "yt",
+      "episode": "011",
+      "media": "v/011-butun-karincalar-4b4c2cf7.mp4",
+      "status": "scheduled",
+      "postId": "6ad9338db71cd0e424903c7d",
+      "dueAt": "2026-10-22T13:00:00.000Z",
+      "at": "2026-10-21T21:50:07.061Z"
+    },
+    "2026-10-23T13:00Z": {
+      "kind": "yt",
+      "episode": "001",
+      "media": "v/001-milyar-saniye.mp4",
+      "status": "scheduled",
+      "postId": "6ad933929c05f711d3c30d58",
+      "dueAt": "2026-10-23T13:00:00.000Z",
+      "at": "2026-10-21T21:50:11.748Z"
     }
   }
 }

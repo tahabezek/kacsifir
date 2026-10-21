@@ -32,8 +32,8 @@ export function makeSpinRenderer(ep, canvas) {
   const ctx = canvas.getContext('2d');
   const tl = buildSpinTimeline(ep);
   const D = tl.duration;
-  const G = { x: 255, y: 1170, r: 200, tilt: rad(18) };    // dünya (solda)
-  const GA = { x: 672, y: 1180, r: 215, max: ep.gaugeMax }; // gösterge (sağda; tabanı Sıfır'ın üstünde kalır)
+  const G = { x: 285, y: 1175, r: 190, tilt: rad(18) };    // dünya (solda)
+  const GA = { x: 700, y: 1180, r: 205, max: ep.gaugeMax }; // gösterge (sağda; tabanı Sıfır'ın üstünde kalır)
   const turns = Math.max(1, Math.round(D / ep.turnSec));
   // döngüye kilitli dönüş (hızlandırılmış); doruk anında şehir tam önde
   const phase = ep.city.lon + (tl.heroLand / D) * turns * 360;
@@ -77,7 +77,10 @@ export function makeSpinRenderer(ep, canvas) {
     if (z > 0.05) {
       ctx.beginPath(); ctx.arc(x, y, 13, 0, Math.PI * 2); ctx.fillStyle = red ? C.red : C.ink; ctx.fill();
       ctx.lineWidth = 3; ctx.strokeStyle = C.paper; ctx.stroke();
-      setFont(ctx, F.mono(32)); ctx.fillStyle = red ? C.red : C.ink; ctx.textAlign = 'right'; ctx.fillText(ep.city.label, x - 20, y - 16); ctx.textAlign = 'left';
+      setFont(ctx, F.mono(32)); // etiket noktanın dünya merkezine bakan tarafında, kâğıt zeminli (kenardan taşmaz)
+      const right = x < G.x; ctx.textAlign = right ? 'left' : 'right'; const lw2 = ctx.measureText(ep.city.label).width, lx = right ? x + 20 : x - 20;
+      ctx.fillStyle = 'rgba(244,238,223,0.92)'; ctx.fillRect(right ? lx - 4 : lx - lw2 - 4, y - 46, lw2 + 8, 38);
+      ctx.fillStyle = red ? C.red : C.ink; ctx.fillText(ep.city.label, lx, y - 16); ctx.textAlign = 'left';
     }
 
   }
@@ -119,7 +122,7 @@ export function makeSpinRenderer(ep, canvas) {
   }
 
   const S = tl.stops;
-  const SAYS = [...S.map((s, i) => ({ t0: i ? s.t1 - 0.04 : 0, t1: S[i + 1] ? S[i + 1].t0 + 0.15 : tl.kickAt - 0.22, text: s.say, red: !!s.hero })),
+  const SAYS = [...S.map((s, i) => ({ t0: i ? s.t1 - 0.04 : 0, t1: S[i + 1] ? S[i + 1].t0 - 0.2 : tl.kickAt - 0.22, text: s.say, red: !!s.hero })),
     { t0: tl.kickAt - 0.04, t1: tl.rw0, text: ep.say.kicker }];
   function says(t) {
     for (const s of SAYS) {
@@ -165,7 +168,7 @@ export function makeSpinRenderer(ep, canvas) {
     ctx.restore();
     gauge(t, v, red);
     counter(t >= tl.rw0 ? vt : t, v, red);
-    if (t < tl.rw0) says(t);
+    if (t < tl.rw0 + 0.2) says(t);
     else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
       setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
     }

@@ -33,7 +33,7 @@ export function makeNeedleRenderer(ep, canvas) {
   const D = tl.duration;
   const TOTAL = ep.combos;                                   // saniye
   const YEARS = Math.ceil(TOTAL / (YEARD * DAY));            // satır sayısı
-  const CAL = { x: 130, y: 905, w: 670, h: 460 };            // takvim alanı
+  const CAL = { x: 160, y: 905, w: 640, h: 460 };            // takvim alanı
   const rowH = CAL.h / YEARS, dayW = CAL.w / 366;
   const target = ep.target;                                   // {year, day, hour, minute, second}
 
@@ -49,7 +49,7 @@ export function makeNeedleRenderer(ep, canvas) {
   // ——— 1) toplar: 9 × 10 ızgara, 6'sı sırayla seçilir ———
   function balls(t, a) {
     if (a <= 0) return;
-    const cols = 10, r = 30, gx = 82, gy = 52, x0 = 140, y0 = 940;
+    const cols = 10, r = 30, gx = 74, gy = 52, x0 = 130, y0 = 940;
     ctx.save(); ctx.globalAlpha *= a;
     setFont(ctx, F.mono(22)); ctx.textAlign = 'center';
     for (let n = 1; n <= 90; n++) {
@@ -78,7 +78,7 @@ export function makeNeedleRenderer(ep, canvas) {
     if (a <= 0) return;
     const sec = filled(t), days = sec / DAY;
     ctx.save(); ctx.globalAlpha *= a;
-    ctx.beginPath(); ctx.rect(20, 880, SAFE.x1 - 10, 520); ctx.clip();
+    ctx.beginPath(); ctx.rect(0, 880, SAFE.x1 + 10, 520); ctx.clip();
     // yakınlaşma: hedef günün hücresine doğru (zoom ≥ 1)
     const tx = CAL.x + (target.day + 0.5) * dayW, ty = CAL.y + (target.year + 0.5) * rowH;
     ctx.translate(tx, ty); ctx.scale(zoom, zoom); ctx.translate(-tx, -ty);
@@ -148,10 +148,10 @@ export function makeNeedleRenderer(ep, canvas) {
 
   // ——— yazılar ———
   const SAYS = [{ t0: 0, t1: tl.balls[1] + 0.2, text: ep.say.hook },
-    { t0: tl.balls[1] + 0.2, t1: tl.fill[0] - 0.1, text: ep.say.combos },
+    { t0: tl.balls[1] + 0.45, t1: tl.fill[0] - 0.1, text: ep.say.combos },
     { t0: tl.oldLand - 0.04, t1: tl.fill[1] - 0.35, text: ep.say.old },
-    { t0: tl.fill[1] - 0.04, t1: tl.dive[0][0] + 0.2, text: ep.say.full },
-    { t0: tl.dive[0][0] + 0.3, t1: tl.silence0, text: ep.say.dive },
+    { t0: tl.fill[1] - 0.04, t1: tl.dive[0][0] - 0.1, text: ep.say.full },
+    { t0: tl.dive[0][0] + 0.2, t1: tl.silence0, text: ep.say.dive },
     { t0: tl.heroLand - 0.04, t1: tl.rw0, text: ep.say.hero, red: true }];
   function says(t) {
     for (const s of SAYS) {
@@ -202,7 +202,7 @@ export function makeNeedleRenderer(ep, canvas) {
     // geri sarma: dalış söner, takvim boşalır, toplar geri gelir; son kare = kare 0
     const rw = t >= tl.rw0 ? ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) - 0.4)) : 0;
     const vt = t >= tl.rw0 ? lerp(tl.fill[1], 0, rw) : t;
-    const ballsA = vt < tl.fill[0] ? 1 : 1 - ease.exit(seg(vt, tl.fill[0], 0.4));
+    const ballsA = 1 - ease.exit(seg(vt, tl.fill[0] - 0.4, 0.4)); // önce toplar çekilir, sonra takvim gelir
     const holds = [[tl.balls[1], tl.fill[0]], [tl.fill[1], tl.dive[0][0]], [tl.heroLand, tl.rw0]];
     let zf = 1; for (const [a, b] of holds) zf *= 1 + 0.05 * Math.max(0, Math.min(1, (t - a) / (b - a)));
     if (t >= tl.rw0) zf = lerp(zf, 1, ease.state(seg(t, tl.rw0, 0.4)));
@@ -214,7 +214,7 @@ export function makeNeedleRenderer(ep, canvas) {
     if (t < tl.rw0 + 0.4) dive(t);
     ctx.restore();
     counter(t >= tl.rw0 ? vt : t);
-    if (t < tl.rw0) says(t);
+    if (t < tl.rw0 + 0.2) says(t);
     else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
       setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
     }

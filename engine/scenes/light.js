@@ -190,7 +190,7 @@ export function makeLightRenderer(ep, canvas) {
     earth(t);
     path(t);
     counter(t);
-    if (t < tl.rw0) says(t);
+    if (t < tl.rw0 + 0.2) says(t);
     else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
       setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
     }

@@ -121,7 +121,5 @@
     "#satranç",
     "#biliyormuydunuz"
   ],
-  "actor": true,
-  "disabled": true,
-  "disabledWhy": "yeni sahne kontrol ediliyor"
+  "actor": true
 }

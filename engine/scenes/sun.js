@@ -55,12 +55,12 @@ export function makeSunRenderer(ep, canvas) {
     setFont(ctx, F.head(qSize)); ctx.fillStyle = C.ink;
     ep.question.forEach((q, i) => ctx.fillText(q, SAFE.x0, 374 + qSize * 0.86 + i * qSize));
   }
-  function earth(x, y, r, a = 1) {
+  function earth(x, y, r, a = 1, t = 0) {
     ctx.save(); ctx.globalAlpha *= a;
     ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fillStyle = '#E2D9C4'; ctx.fill();
     if (r > 14) { ctx.save(); ctx.clip(); ctx.strokeStyle = 'rgba(28,27,24,0.4)'; ctx.lineWidth = Math.max(1, r * 0.02); // enlem-boylam ağı (Ay'a benzemesin)
-      for (const k of [0.35, 0.75]) { ctx.beginPath(); ctx.ellipse(x, y, r * k, r, 0, 0, Math.PI * 2); ctx.stroke(); }
-      ctx.beginPath(); ctx.moveTo(x, y - r); ctx.lineTo(x, y + r); ctx.stroke();
+      const rot = ((t / D) * Math.round(D / 4)) % 1; // döner (döngüye kilitli)
+      for (let k = 0; k < 6; k++) { const ph = ((k / 6 + rot) % 1) * Math.PI; ctx.beginPath(); ctx.ellipse(x, y, Math.max(0.5, Math.abs(Math.cos(ph)) * r), r, 0, 0, Math.PI * 2); ctx.stroke(); }
       for (const la of [-0.5, 0, 0.5]) { const hw = r * Math.cos(Math.asin(la)); ctx.beginPath(); ctx.moveTo(x - hw, y + la * r); ctx.lineTo(x + hw, y + la * r); ctx.stroke(); }
       ctx.restore(); }
     ctx.lineWidth = Math.max(1.2, Math.min(4, r * 0.07)); ctx.strokeStyle = C.ink; ctx.stroke(); ctx.restore();
@@ -78,12 +78,13 @@ export function makeSunRenderer(ep, canvas) {
       if (f > 0) {
         const hy = SUN.y + SUN.r - f * 2 * SUN.r;
         ctx.save(); ctx.beginPath(); ctx.arc(SUN.x, SUN.y, SUN.r, 0, Math.PI * 2); ctx.clip();
-        ctx.beginPath(); ctx.rect(SUN.x - SUN.r, hy, SUN.r * 2, SUN.r * 2); ctx.fillStyle = red ? 'rgba(224,57,28,0.85)' : TEX; ctx.fill();
+        ctx.beginPath(); ctx.rect(SUN.x - SUN.r, hy, SUN.r * 2, SUN.r * 2); ctx.fillStyle = TEX; ctx.fill();
+        if (red > 0) { ctx.globalAlpha = sa * red; ctx.fillStyle = 'rgba(224,57,28,0.85)'; ctx.fill(); ctx.globalAlpha = sa; }
         const half = Math.sqrt(Math.max(0, SUN.r * SUN.r - (hy - SUN.y) * (hy - SUN.y)));
         if (f < 1) { ctx.beginPath(); ctx.ellipse(SUN.x, hy, half, half * 0.18, 0, 0, Math.PI * 2); ctx.fillStyle = 'rgba(28,27,24,0.12)'; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke(); }
         ctx.restore();
       }
-      ctx.lineWidth = 5; ctx.strokeStyle = red ? C.red : C.ink; ctx.beginPath(); ctx.arc(SUN.x, SUN.y, SUN.r, 0, Math.PI * 2); ctx.stroke();
+      ctx.lineWidth = 5; ctx.strokeStyle = red > 0.5 ? C.red : C.ink; ctx.beginPath(); ctx.arc(SUN.x, SUN.y, SUN.r, 0, Math.PI * 2); ctx.stroke();
       const rot = (t / D) * Math.PI * 2;
       ctx.lineWidth = 3; ctx.lineCap = 'round';
       for (let i = 0; i < 24; i++) { const a = rot + (i / 24) * Math.PI * 2, r0 = SUN.r + 12, r1 = r0 + (i % 2 ? 12 : 22);
@@ -98,7 +99,7 @@ export function makeSunRenderer(ep, canvas) {
     // tek Dünya: büyükten gerçek orana
     const x0 = 470, y0 = 1150, r0 = 120, xe = SUN.x - SUN.r + er;
     if (u < 0.999) {
-      earth(lerp(x0, xe, u), lerp(y0, SUN.y, u), Math.exp(lerp(Math.log(r0), Math.log(er), u)), 1);
+      earth(lerp(x0, xe, u), lerp(y0, SUN.y, u), Math.exp(lerp(Math.log(r0), Math.log(er), u)), 1, t);
       if (u < 0.3) { setFont(ctx, F.mono(30)); ctx.fillStyle = C.ink; ctx.globalAlpha = 1 - u / 0.3; ctx.textAlign = 'center'; ctx.fillText('DÜNYA', x0, y0 + r0 + 50); ctx.textAlign = 'left'; ctx.globalAlpha = 1; }
     }
     // büyüteç: sıranın sol başındaki Dünyalar tek tek görünür
@@ -117,6 +118,10 @@ export function makeSunRenderer(ep, canvas) {
       ctx.lineWidth = 4; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.arc(L.x, L.y, L.r, 0, Math.PI * 2); ctx.stroke();
       ctx.restore();
     }
+    // Dünya'nın yeri: gerçek oranda 2 px; işaret halkası ve adı (sıra başlayana kadar)
+    const ma = ease.enter(seg(t, tl.reveal[1] - 0.2, 0.4)) * (1 - ease.exit(seg(t, tl.row[0] + 0.6, 0.4)));
+    if (ma > 0) { ctx.save(); ctx.globalAlpha = ma; ctx.strokeStyle = C.ink; ctx.lineWidth = 3; ctx.setLineDash([6, 6]); ctx.beginPath(); ctx.arc(xe, SUN.y, 22, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+      ctx.beginPath(); ctx.moveTo(xe + 16, SUN.y - 16); ctx.lineTo(xe + 70, SUN.y - 70); ctx.stroke(); setFont(ctx, F.mono(30)); ctx.fillStyle = C.ink; ctx.fillText('DÜNYA', xe + 76, SUN.y - 76); ctx.restore(); }
     // çap ölçüsü
     if (t >= tl.row[1] - 0.05 && t < tl.fill[0] + 0.6) {
       const a = ease.enter(seg(t, tl.row[1], 0.3)) * (1 - ease.exit(seg(t, tl.fill[0], 0.6)));
@@ -179,7 +184,7 @@ export function makeSunRenderer(ep, canvas) {
     ctx.drawImage(grain(), 0, 0);
     header();
     const vt = t >= tl.rw0 ? lerp(tl.rw0, 0, ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) - 0.4))) : t;
-    const red = t >= tl.heroLand && t < tl.rw0;
+    const red = t < tl.heroLand ? 0 : t < tl.rw0 ? 1 : 1 - ease.exit(seg(t, tl.rw0, 0.35)); // geri sarmada kırmızı 0,35 sn'de söner
     // beklemelerde %5 yaklaşma
     const holds = [[tl.reveal[1], tl.row[0]], [tl.row[1], tl.fill[0]], [tl.heroLand, tl.rw0]];
     let zf = 1; for (const [a, b] of holds) zf *= 1 + 0.05 * Math.max(0, Math.min(1, (vt - a) / (b - a)));
@@ -187,7 +192,7 @@ export function makeSunRenderer(ep, canvas) {
     scene(vt, red);
     ctx.restore();
     counter(t >= tl.rw0 ? vt : t);
-    if (t < tl.rw0) says(t);
+    if (t < tl.rw0 + 0.2) says(t);
     else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
       setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
     }

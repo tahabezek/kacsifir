@@ -49,7 +49,7 @@
     }
   ],
   "say": {
-    "kicker": "Hissetmezsin, çünkü hava da seninle birlikte döner."
+    "kicker": "Hissetmezsin, çünkü hızın hiç değişmez; hava da seninle birlikte döner."
   },
   "timing": {
     "stops": [
@@ -84,7 +84,5 @@
     "#istanbul",
     "#uzay"
   ],
-  "actor": true,
-  "disabled": true,
-  "disabledWhy": "yeni sahne kontrol ediliyor"
+  "actor": true
 }

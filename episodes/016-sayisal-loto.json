@@ -53,8 +53,8 @@
     ],
     "silence": 0.5,
     "rewind": [
-      23.4,
-      25.3
+      21.8,
+      23.7
     ]
   },
   "say": {
@@ -73,7 +73,5 @@
     "#sayısalloto",
     "#olasılık"
   ],
-  "actor": true,
-  "disabled": true,
-  "disabledWhy": "yeni sahne kontrol ediliyor"
+  "actor": true
 }

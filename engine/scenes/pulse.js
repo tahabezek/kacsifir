@@ -129,6 +129,7 @@ export function makePulseRenderer(ep, canvas) {
     setFont(ctx, F.mono(26)); ctx.fillStyle = C.graphite; ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.textAlign = 'center';
     for (let v = Math.ceil(Math.max(0, t0) / stepS) * stepS; v <= E + 1e-6; v += stepS) {
       const x = ST.x0 + (v - t0) / spp;
+      if (x > ST.x1 - 30) continue; // sağ uç Sıfır'ın altında kalmasın
       ctx.beginPath(); ctx.moveTo(x, y - 18); ctx.lineTo(x, y - 6); ctx.stroke();
       ctx.fillText(`${nf.format(v / div)} ${name}`, x, y + 22);
     }
@@ -190,7 +191,7 @@ export function makePulseRenderer(ep, canvas) {
   // Sıfır: elini kalbine koyup atışları sayar (gerçek zamanlı), şerit sıkışınca terler, ömürde zıplar, yaşında göz kırpar
   const actorScript = [
     { type: 'lookUp', t0: 0, t1: PH0 * PER, expr: 'notr' },
-    { type: 'count', t0: PH0 * PER, t1: Z[0].t0 + 0.4, from: 1, valueAt: t => Math.max(1, beatsIn(ep.E0 + Math.min(t, tl.hook))), label: n => `${n}. atım`, bubble: 'top' },
+    { type: 'count', t0: PH0 * PER, t1: Z[0].t0 + 0.4, from: 1, valueAt: t => Math.max(1, beatsIn(ep.E0 + Math.min(t, tl.hook))), label: n => `${n}. atış`, bubble: 'top' },
     { type: 'lookUp', t0: Z[0].t0 + 0.4, t1: Z[1].t0, expr: 'saskin' },
     { type: 'sweat', t0: Z[1].t0, t1: tl.heroLand - 0.05 },
     { type: 'surprise', t0: tl.heroLand - 0.05, t1: tl.heroLand + 0.85 },
@@ -220,7 +221,7 @@ export function makePulseRenderer(ep, canvas) {
     ctx.restore();
     heart(t, E, red);
     counter(t, E);
-    if (t < tl.rw0) says(t);
+    if (t < tl.rw0 + 0.2) says(t);
     else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
       setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
     }

@@ -110,7 +110,7 @@ export function makeStormRenderer(ep, canvas) {
     ctx.beginPath(); ctx.arc(M2.x, E2.y, M2.r, 0, Math.PI * 2); ctx.fillStyle = '#F4EEDF'; ctx.fill(); ctx.stroke();
     setFont(ctx, F.mono(28)); ctx.fillStyle = C.ink; ctx.textAlign = 'center';
     ctx.fillText('DÜNYA', E2.x, E2.y + E2.r + 44); ctx.fillText('AY', M2.x, E2.y + M2.r + 44);
-    setFont(ctx, F.mono(24)); ctx.fillStyle = C.graphite; ctx.fillText(ep.moonNote, (E2.x + M2.x) / 2, E2.y + 150); ctx.textAlign = 'left';
+    setFont(ctx, F.mono(30)); ctx.fillStyle = C.graphite; ctx.fillText(ep.moonNote, (E2.x + M2.x) / 2, E2.y + 150); ctx.textAlign = 'left';
     // ışık atımı: gerçek zaman (gidiş 1,28 sn, dönüş 1,28 sn), sonra yola devam
     const x0 = E2.x + E2.r, x1 = M2.x - M2.r, L = x1 - x0;
     if (t >= tl.moonGo) {
@@ -128,15 +128,17 @@ export function makeStormRenderer(ep, canvas) {
       // ses aynı sürede: Dünya üstünde ancak 1 km (görünmez kadar küçük) — minik halka
       const su = Math.min(1, tt / tl.dt);
       ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(E2.x, E2.y - E2.r, 3 + su * 6, Math.PI, 0); ctx.stroke();
-      if (tt > 0.6) { setFont(ctx, F.mono(24)); ctx.fillStyle = C.ink; ctx.fillText(ep.soundNote, E2.x - 40, E2.y - E2.r - 26); }
+      if (tt > 0.6) { setFont(ctx, F.mono(30)); ctx.fillStyle = C.ink; ctx.fillText(ep.soundNote, E2.x - 40, E2.y - E2.r - 30); }
+      // sonrasında ışık gidip gelmeye devam eder (soluk, gerçek zaman, sürekli)
+      if (tt > tl.dt + 0.3) { const q = ((tt - tl.dt - 0.3) % tl.moonDt) / tl.moonDt, bx = q < 0.5 ? x0 + L * q * 2 : x1 - L * (q - 0.5) * 2; ctx.globalAlpha = a * 0.55; ctx.beginPath(); ctx.arc(bx, E2.y, 9, 0, Math.PI * 2); ctx.fillStyle = C.ink; ctx.fill(); ctx.globalAlpha = a; }
     }
     ctx.restore();
   }
 
   // ——— yazılar ———
   const SAYS = [{ t0: 0, t1: tl.thunder - 0.25, text: ep.say.hook },
-    { t0: tl.thunder - 0.04, t1: tl.scene2 + 0.2, text: ep.say.thunder },
-    { t0: tl.scene2 + 0.4, t1: tl.moonEnd - 0.25, text: ep.say.moonAsk },
+    { t0: tl.thunder - 0.04, t1: tl.scene2 - 0.2, text: ep.say.thunder },
+    { t0: tl.scene2 + 0.45, t1: tl.moonEnd - 0.25, text: ep.say.moonAsk },
     { t0: tl.moonEnd - 0.04, t1: tl.silence0, text: ep.say.moon },
     { t0: tl.heroLand - 0.04, t1: tl.kickAt - 0.22, text: ep.say.hero, red: true },
     { t0: tl.kickAt - 0.04, t1: tl.rw0, text: ep.say.kicker }];
@@ -164,9 +166,10 @@ export function makeStormRenderer(ep, canvas) {
     }
     if (red) { label = ep.label.hero; num = nf.format(ep.ratio); unit = 'kat'; }
     else {
-      const s0 = t < tl.scene2 ? tl.strike : tl.moonGo, s1 = t < tl.scene2 ? tl.thunder : tl.moonEnd;
+      const sw = tl.scene2 + 0.3; // sayaç sahne geçişinden sonra değişir
+      const s0 = t < sw ? tl.strike : tl.moonGo, s1 = t < sw ? tl.thunder : tl.moonEnd;
       const el = t < s0 ? 0 : Math.min(t, s1) - s0;
-      label = t < tl.scene2 ? ep.label.stopwatch : ep.label.same; num = nf1.format(Math.floor(el * 10) / 10); unit = 'sn';
+      label = t < sw ? ep.label.stopwatch : ep.label.same; num = nf1.format(Math.floor(el * 10) / 10); unit = 'sn';
     }
     setFont(ctx, F.mono(36)); ctx.fillStyle = red ? C.red : C.graphite; ctx.fillText(label, SAFE.x0, counterY - 118);
     const sc = red ? lerp(0.9, 1, spring(t - tl.heroLand, 120, 24)) : 1;
@@ -204,7 +207,7 @@ export function makeStormRenderer(ep, canvas) {
     if (t >= tl.rw0) zf = lerp(1.06 * 1.06, 1, ease.state(seg(t, tl.rw0, 0.4)));
     ctx.save(); ctx.translate((1 - out) * 1080, 0); ctx.translate(490, 1110); ctx.scale(zf, zf); ctx.translate(-490, -1110); moonScene(t, out > 0 ? 1 : 0); ctx.restore();
     counter(t);
-    if (t < tl.rw0) says(t);
+    if (t < tl.rw0 + 0.2) says(t);
     else if (t > tl.rw1 - 0.5) { // döngü: kanca yazısı son yarım saniyede geri gelir (dikişte birden belirmez)
       setFont(ctx, F.name(50)); wrap(ctx, SAYS[0].text, SAFE.x1 - SAFE.x0).forEach((ln, i) => revealText(ctx, ln, SAFE.x0, counterY + 76 + i * 59, 50, ease.enter(seg(t, tl.rw1 - 0.5, 0.42)), C.ink));
     }

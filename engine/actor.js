@@ -96,7 +96,7 @@ function active(script, t) { let a = { type: 'idle', t0: 0, t1: Infinity }; for 
 let CUR_D = 20;
 // Sağdaki Reels düğmeleri (x ≥ 960) üstüne hiçbir şey çizilmez: aktör o çizginin arkasından girip çıkar
 export function drawActor(ctx, script, t, home, H, D) {
-  ctx.save(); ctx.beginPath(); ctx.rect(0, 0, 960, 1920); ctx.clip();
+  ctx.save(); ctx.beginPath(); ctx.rect(0, 0, 1010, 1920); ctx.clip();
   drawActorInner(ctx, script, t, home, H, D);
   ctx.restore();
 }

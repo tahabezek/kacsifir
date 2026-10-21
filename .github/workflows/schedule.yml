@@ -51,10 +51,17 @@ jobs:
           git config user.email "kacsifir-bot@users.noreply.github.com"
           if [ "$INPUT_DRY" = "true" ]; then node tools/run.mjs --dry; else node tools/run.mjs; fi
 
+      - name: Performans analizi
+        if: always()
+        continue-on-error: true
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: node tools/metrics.mjs
+
       - name: Durum defterini kaydet
         if: always()
         run: |
-          git add state/ledger.json 2>/dev/null || true
+          git add state/ledger.json state/metrics.json state/report.md 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "durum: $(date -u +%Y-%m-%dT%H:%MZ)"
             for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done

@@ -170,7 +170,8 @@ export function makeDoorsRenderer(ep, canvas) {
     const vt = t >= tl.rw0 ? 0 : t;
     const to100 = t >= tl.rw0 ? 1 - ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) - 0.4)) : ease.state(seg(t, tl.hundred - 0.1, 0.6));
     const hold = (a, b) => 1 + 0.04 * Math.max(0, Math.min(1, (t - a) / (b - a)));
-    const z = t < tl.rw0 ? hold(tl.heroLand + 1.6, tl.hundred) * hold(tl.car + 0.6, tl.rw0) : 1;
+    const zAll = hold(0.2, tl.host) * hold(tl.host + 0.7, tl.ask) * hold(tl.heroLand + 1.6, tl.hundred) * hold(tl.car + 0.6, tl.rw0);
+    const z = t < tl.rw0 ? zAll : lerp(zAll, 1, ease.state(seg(t, tl.rw0, 0.4))); // sıçramasız geri sarma
     ctx.save(); ctx.beginPath(); ctx.rect(0, 900, W, 540); ctx.clip();
     ctx.translate(505, 1180); ctx.scale(z, z); ctx.translate(-505, -1180);
     ctx.save(); ctx.translate(-to100 * 1080, 0); three(t >= tl.rw0 ? 0 : t, 1, t >= tl.heroLand && t < tl.hundred + 0.6); ctx.restore();

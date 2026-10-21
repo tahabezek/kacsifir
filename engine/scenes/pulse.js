@@ -212,7 +212,7 @@ export function makePulseRenderer(ep, canvas) {
     // beklemelerde şerit merkezine doğru %5 yavaş yaklaşma (donmuş kare olmaz)
     const holds = [...Z.slice(0, -1).map((z, i) => [z.t1, Z[i + 1].t0]), [tl.heroLand, tl.rw0]];
     let zf = 1; for (const [a, b] of holds) zf *= 1 + 0.05 * Math.max(0, Math.min(1, (t - a) / (b - a)));
-    if (t >= tl.rw0) zf = lerp(1.05, 1, ease.state(seg(t, tl.rw0, 0.4)));
+    if (t >= tl.rw0) zf = lerp(zf, 1, ease.state(seg(t, tl.rw0, 0.4))); // geri sarma o anki yakınlıktan yumuşak başlar
     ctx.save(); ctx.translate(ST.x0 + (ST.x1 - ST.x0) / 2, ST.y); ctx.scale(zf, zf); ctx.translate(-(ST.x0 + (ST.x1 - ST.x0) / 2), -ST.y);
     paper(t);
     trace(t, E, red && t < tl.kickAt);

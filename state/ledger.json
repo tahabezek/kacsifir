@@ -69,13 +69,13 @@
     },
     "2026-10-23T10:00Z": {
       "episode": "008",
-      "media": "v/008-kalp-atisi-106e0094.mp4",
+      "media": "v/008-kalp-atisi-099ba40c.mp4",
       "status": "scheduled",
       "at": "2026-10-21T11:33:43.539Z",
       "postId": "6ad8a3870807acdda1258577",
       "dueAt": "2026-10-23T10:00:00.000Z",
-      "prevMedia": "v/008-kalp-atisi-3efed64a.mp4",
-      "remediaAt": "2026-10-21T17:45:44.097Z"
+      "prevMedia": "v/008-kalp-atisi-106e0094.mp4",
+      "remediaAt": "2026-10-21T20:37:27.200Z"
     },
     "2026-10-23T17:30Z": {
       "episode": "014",

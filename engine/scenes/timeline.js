@@ -16,7 +16,7 @@ export function timelineSummary(ep) {
   const tl = buildTimelineTimeline(ep);
   return { duration: tl.duration, rw0: tl.rw0, rw1: tl.rw1, heroTl: tl.heroLand, cover: 0,
     keys: [0, ...ep.marks.map(m => m.t + 0.4), tl.heroLand + 0.4, tl.kick + 0.6, tl.rw0 + 0.3],
-    fast: (tl.run[0] + tl.run[1]) / 2, lastLand: tl.kick, firstLand: ep.marks[0].t };
+    fast: (tl.run[0] + ep.marks[0].t) / 2, lastLand: tl.kick, firstLand: ep.marks[0].t };
 }
 export function timelineCues(ep) {
   const tl = buildTimelineTimeline(ep);

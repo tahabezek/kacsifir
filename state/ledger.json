@@ -29,19 +29,23 @@
     },
     "2026-10-22T05:30Z": {
       "episode": "004",
-      "media": "v/004-gunes-isigi.mp4",
+      "media": "v/004-gunes-isigi-7f1d890a.mp4",
       "status": "scheduled",
       "at": "2026-10-21T06:36:47.315Z",
       "postId": "6ad85fe0d894396f66ce01db",
-      "dueAt": "2026-10-22T05:30:00.000Z"
+      "dueAt": "2026-10-22T05:30:00.000Z",
+      "prevMedia": "v/004-gunes-isigi.mp4",
+      "remediaAt": "2026-10-21T16:28:15.090Z"
     },
     "2026-10-22T10:00Z": {
       "episode": "006",
-      "media": "v/006-kac-turkiye.mp4",
+      "media": "v/006-kac-turkiye-262b3b0e.mp4",
       "status": "scheduled",
       "at": "2026-10-21T06:36:47.315Z",
       "postId": "6ad85fe0db7d8198214cf007",
-      "dueAt": "2026-10-22T10:00:00.000Z"
+      "dueAt": "2026-10-22T10:00:00.000Z",
+      "prevMedia": "v/006-kac-turkiye.mp4",
+      "remediaAt": "2026-10-21T16:28:16.296Z"
     },
     "2026-10-22T17:30Z": {
       "episode": "013",
@@ -55,19 +59,23 @@
     },
     "2026-10-23T05:30Z": {
       "episode": "002",
-      "media": "v/002-ay-everest.mp4",
+      "media": "v/002-ay-everest-8c2b28e1.mp4",
       "status": "scheduled",
       "at": "2026-10-21T06:36:47.315Z",
       "postId": "6ad85fe1aff466fe09074a1b",
-      "dueAt": "2026-10-23T05:30:00.000Z"
+      "dueAt": "2026-10-23T05:30:00.000Z",
+      "prevMedia": "v/002-ay-everest.mp4",
+      "remediaAt": "2026-10-21T16:28:17.232Z"
     },
     "2026-10-23T10:00Z": {
       "episode": "008",
-      "media": "v/008-kalp-atisi.mp4",
+      "media": "v/008-kalp-atisi-d81d7fd1.mp4",
       "status": "scheduled",
       "at": "2026-10-21T11:33:43.539Z",
       "postId": "6ad8a3870807acdda1258577",
-      "dueAt": "2026-10-23T10:00:00.000Z"
+      "dueAt": "2026-10-23T10:00:00.000Z",
+      "prevMedia": "v/008-kalp-atisi.mp4",
+      "remediaAt": "2026-10-21T16:28:18.330Z"
     }
   }
 }

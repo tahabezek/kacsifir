@@ -16,6 +16,9 @@ await Promise.all([
 await document.fonts.ready;
 const canvas = document.getElementById('c');
 const r = ep.template === 'domino' ? (await import('./scenes/domino.js')).makeDominoRenderer(ep, canvas)
+  : ep.template === 'water' ? (await import('./scenes/water.js')).makeWaterRenderer(ep, canvas)
+  : ep.template === 'birthday' ? (await import('./scenes/birthday.js')).makeBirthdayRenderer(ep, canvas)
+  : ep.template === 'fall' ? (await import('./scenes/fall.js')).makeFallRenderer(ep, canvas)
   : ep.template === 'swarm' ? (await import('./swarm.js')).makeSwarmRenderer(ep, canvas)
   : ep.template === 'doc' ? (await import('./doc.js')).makeDocRenderer(ep, canvas)
   : ep.template === 'versus' ? (await import('./versus.js')).makeVersusRenderer(ep, canvas)

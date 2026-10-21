@@ -1,0 +1,90 @@
+{
+  "id": "015",
+  "slug": "satranc-bugday",
+  "serial": "№ 015 · İKİYE KATLA",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 3,
+  "startFrac": 1,
+  "question": [
+    "Satranç tahtasına kaç ton",
+    "buğday sığar?"
+  ],
+  "format": {
+    "dec": 100,
+    "units": [
+      {
+        "upTo": 1,
+        "div": 0.001,
+        "name": "mg"
+      },
+      {
+        "upTo": 1000,
+        "div": 1,
+        "name": "gram"
+      },
+      {
+        "upTo": 1000000,
+        "div": 1000,
+        "name": "kg"
+      },
+      {
+        "upTo": 1000000000000,
+        "div": 1000000,
+        "name": "ton"
+      },
+      {
+        "upTo": 1000000000000000,
+        "div": 1000000000000,
+        "name": "milyon ton"
+      },
+      {
+        "upTo": 1e+30,
+        "div": 1000000000000000,
+        "name": "milyar ton"
+      }
+    ],
+    "trim": true
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "1. kare",
+      "value": 0.05,
+      "grow": 0.3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "20. kare",
+      "value": 26214.4,
+      "grow": 4,
+      "hold": 3.5
+    },
+    {
+      "tag": "C",
+      "name": "32. kare",
+      "value": 107374182.4,
+      "grow": 4,
+      "hold": 4
+    },
+    {
+      "tag": "D",
+      "name": "Bütün tahta",
+      "value": 922337203685477600,
+      "grow": 6,
+      "hold": 9,
+      "hero": true,
+      "kicker": "Bu, Türkiye'nin 44.000 yıllık buğday hasadına eşittir."
+    }
+  ],
+  "caption": "Satranç tahtasının ilk karesine 1 buğday tanesi koy ve her karede ikiye katla. 20. karede 26 kg, 32. karede 107 ton buğday olur. Bütün tahta 2 üzeri 64 eksi 1, yani 18,4 kentilyon tane eder. Bu da yaklaşık 922 milyar ton buğdaydır. Türkiye 2024'te 20,8 milyon ton buğday üretti; tahtayı doldurmak 44.000 yıl sürerdi.\n\nSen kaçıncı karede pes ederdin? Yorumlara yaz.\n\nHesap: 1 buğday tanesi ≈ 50 mg (35–60 mg arası değişir). Üretim: TÜİK 2024.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#matematik",
+    "#satranç",
+    "#biliyormuydunuz"
+  ]
+}

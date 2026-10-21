@@ -71,7 +71,9 @@ const nf1 = new Intl.NumberFormat('tr-TR', { minimumFractionDigits: 1, maximumFr
 export function formatValue(v, fmt) {
   const u = fmt.units.find(u => v < u.upTo) || fmt.units[fmt.units.length - 1];
   const x = v / u.div;
-  return { num: x < fmt.dec ? nf1.format(x) : nf0.format(x), unit: u.name };
+  let num = x < fmt.dec ? nf1.format(x) : nf0.format(x);
+  if (fmt.trim) num = num.replace(/,0$/, ''); // "6,0 saniye" yerine "6 saniye"
+  return { num, unit: u.name };
 }
 
 // Zaman çizelgesi: vuruş ızgarası üzerinde kurulur, saniyeye çevrilir.

@@ -1,0 +1,82 @@
+{
+  "id": "016",
+  "slug": "sayisal-loto",
+  "serial": "№ 016 · OLASILIK",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 3,
+  "startFrac": 1,
+  "question": [
+    "Her kolonu 1 saniye sayarsan",
+    "Loto kaç yıl sürer?"
+  ],
+  "format": {
+    "dec": 100,
+    "units": [
+      {
+        "upTo": 60,
+        "div": 1,
+        "name": "saniye"
+      },
+      {
+        "upTo": 3600,
+        "div": 60,
+        "name": "dakika"
+      },
+      {
+        "upTo": 86400,
+        "div": 3600,
+        "name": "saat"
+      },
+      {
+        "upTo": 31557600,
+        "div": 86400,
+        "name": "gün"
+      },
+      {
+        "upTo": 1e+30,
+        "div": 31557600,
+        "name": "yıl"
+      }
+    ],
+    "trim": true
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "Bir zar",
+      "value": 6,
+      "grow": 0.3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "Eski Loto · 49 top",
+      "value": 13983816,
+      "grow": 4,
+      "hold": 4
+    },
+    {
+      "tag": "C",
+      "name": "Çılgın Sayısal · 90 top",
+      "value": 622614630,
+      "grow": 6,
+      "hold": 9.5,
+      "hero": true,
+      "kicker": "6 bilmek, 20 yılın içinden tek bir saniyeyi önceden bilmek gibidir."
+    }
+  ],
+  "caption": "Çılgın Sayısal Loto'da 90 toptan 6'sını bilmenin olasılığı 622.614.630'da 1'dir. Her olasılığı 1 saniyede saysan 19,7 yıl sürer. Eski 49 toplu oyunda bu sayı 13.983.816 idi; yani oyun 44 kat zorlaştı.\n\nBu bir tavsiye değil, bir olasılık hesabıdır. Sen hiç oynadın mı?\n\nHesap: C(90,6) = 622.614.630 ve C(49,6) = 13.983.816. 1 yıl = 365,25 gün.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#matematik",
+    "#sayısalloto",
+    "#olasılık"
+  ],
+  "actor": {
+    "count": "seconds",
+    "unit": " sn"
+  }
+}

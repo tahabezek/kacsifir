@@ -1,0 +1,65 @@
+{
+  "id": "017",
+  "slug": "istanbul-donus",
+  "serial": "№ 017 · HIZ",
+  "direction": "up",
+  "bpm": 96,
+  "silenceBeats": 0.8,
+  "rewindBeats": 3,
+  "startFrac": 1,
+  "question": [
+    "İstanbul'da şu an saatte",
+    "kaç km dönüyorsun?"
+  ],
+  "format": {
+    "dec": 100,
+    "units": [
+      {
+        "upTo": 1e+30,
+        "div": 1,
+        "name": "km/sa"
+      }
+    ],
+    "trim": true
+  },
+  "items": [
+    {
+      "tag": "A",
+      "name": "Yürüyüş",
+      "value": 5,
+      "grow": 0.3,
+      "hold": 2.5
+    },
+    {
+      "tag": "B",
+      "name": "Yolcu uçağı",
+      "value": 900,
+      "grow": 4,
+      "hold": 3.5
+    },
+    {
+      "tag": "C",
+      "name": "İstanbul'un dönüş hızı",
+      "value": 1263,
+      "grow": 5,
+      "hold": 8,
+      "hero": true,
+      "kicker": "Bu hız, ses hızından (1.235 km/sa) fazladır."
+    },
+    {
+      "tag": "D",
+      "name": "Güneş çevresinde dönüş",
+      "value": 107000,
+      "grow": 4,
+      "hold": 4
+    }
+  ],
+  "caption": "Dünya kendi ekseni etrafında yaklaşık 24 saatte bir döner. Ekvatorda bu hız saatte yaklaşık 1.674 km'dir. İstanbul 41. enlemde olduğu için döndüğü çember daha küçüktür: 1.674 × cos 41° ≈ 1.263 km/sa. Bu hız ses hızından fazladır. Hissetmeyiz, çünkü hız sabittir ve atmosfer de bizimle birlikte döner.\n\nAnkara'da, İzmir'de kaç? Şehrini yorumlara yaz, hesaplayalım.\n\nKaynaklar: BBC Sky at Night Magazine, Universe Today.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#bilim",
+    "#istanbul",
+    "#uzay"
+  ]
+}

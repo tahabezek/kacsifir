@@ -1,1 +1,13 @@
-{ "slots": {} }
+{
+  "slots": {
+    "2026-10-21T06:35Z": {
+      "episode": "012",
+      "media": "v/012-kagit-efsanesi.mp4",
+      "status": "scheduled",
+      "postId": "6ad85d3050009d9e9511a759",
+      "dueAt": "2026-10-21T06:35:28.843Z",
+      "manual": true,
+      "at": "2026-10-21T06:35:39.978Z"
+    }
+  }
+}

@@ -14,6 +14,10 @@ import { stormSummary } from './scenes/storm.js';
 import { depthSummary } from './scenes/depth.js';
 import { sunSummary } from './scenes/sun.js';
 import { zerosSummary } from './scenes/zeros.js';
+import { ropeSummary } from './scenes/rope.js';
+import { proofSummary } from './scenes/proof.js';
+import { tunnelSummary } from './scenes/tunnel.js';
+import { doorsSummary } from './scenes/doors.js';
 
 export function summary(ep) {
   if (ep.template === 'board') return boardSummary(ep);
@@ -27,6 +31,10 @@ export function summary(ep) {
   if (ep.template === 'depth') return depthSummary(ep);
   if (ep.template === 'sun') return sunSummary(ep);
   if (ep.template === 'zeros') return zerosSummary(ep);
+  if (ep.template === 'rope') return ropeSummary(ep);
+  if (ep.template === 'proof') return proofSummary(ep);
+  if (ep.template === 'tunnel') return tunnelSummary(ep);
+  if (ep.template === 'doors') return doorsSummary(ep);
   if (ep.template === 'versus') {
     const tl = buildVersusTimeline(ep), S = tl.S;
     return {

@@ -1,0 +1,82 @@
+{
+  "id": "019",
+  "slug": "ip-paradoksu",
+  "template": "rope",
+  "serial": "№ 019 · PARADOKS",
+  "bpm": 96,
+  "question": [
+    "Dünya'yı saran ipi 1 metre",
+    "uzatsan ip ne kadar yükselir?"
+  ],
+  "earthR": 6378137,
+  "ballR": 0.11140846016432673,
+  "phone": {
+    "h": 0.147,
+    "w": 0.0716,
+    "label": "Telefon · 14,7 cm"
+  },
+  "ballLabel": "Futbol topu · çevresi 70 cm",
+  "answer": "15,9 cm",
+  "answerNum": "15,9",
+  "choices": [
+    {
+      "k": "A",
+      "v": "0,1 mm",
+      "what": "saç teli"
+    },
+    {
+      "k": "B",
+      "v": "5 mm",
+      "what": "karınca"
+    },
+    {
+      "k": "C",
+      "v": "16 cm",
+      "what": "telefon"
+    }
+  ],
+  "formula": [
+    "1 m ÷ 6,28",
+    "= 15,9 cm"
+  ],
+  "label": {
+    "rope": "EKVATOR ÇEVRESİ",
+    "added": "İPE EKLENEN",
+    "lift": "İP İLE YER ARASINDAKİ BOŞLUK",
+    "ball": "TOPU SARAN İPE EKLENEN"
+  },
+  "say": {
+    "hook": "Ekvatoru her yerde yere değerek saran bir ip düşün: 40.075 km.",
+    "add": "İpi 1 metre uzatıp her noktada yerden eşit yüksekliğe kaldırıyoruz.",
+    "ask": "Sence ip ile yer arasında ne kadar boşluk kalır?",
+    "hero": "İp 15,9 cm kalkar; altından ayakta bir telefon geçer.",
+    "ball": "Aynısını bir futbol topuyla deneyelim.",
+    "ballHero": "Cevap yine 15,9 cm. Topun büyüklüğü hiç fark etmez.",
+    "formula": "Çevre 1 metre uzayınca yarıçap 1 m ÷ 6,28 kadar, yani 15,9 cm artar."
+  },
+  "timing": {
+    "add": 3,
+    "ask": 6,
+    "reveal": [
+      10.1,
+      11.7
+    ],
+    "silence": 0.5,
+    "ball": 15.4,
+    "ballLand": 18,
+    "formula": 21.2,
+    "rewind": [
+      25.4,
+      27.2
+    ]
+  },
+  "caption": "Ekvatoru her yerde yere değerek saran 40.075 km'lik bir ip düşün. Bu ipi yalnızca 1 metre uzatıp Dünya'nın her noktasında yerden eşit yüksekliğe kaldırırsan, ip ile yer arasında 15,9 cm boşluk kalır. Altından ayakta bir telefon geçer.\n\nİşin asıl şaşırtıcı yanı şu: Aynı şeyi bir futbol topuyla yapsan da cevap yine 15,9 cm'dir. Çünkü çember çevresi C = 2πr'dir; çevre 1 metre uzayınca yarıçap 1 ÷ 2π metre, yani 15,9 cm artar. Çemberin Dünya kadar büyük ya da top kadar küçük olması hiçbir şeyi değiştirmez.\n\nİzlemeden önce kaç tahmin etmiştin? Yorumlara yaz ve bu soruyu bir arkadaşına sor.\n\nHesap: Ekvator çevresi ≈ 40.075 km · 1 m ÷ (2 × 3,1416) = 0,159 m.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#matematik",
+    "#paradoks",
+    "#bilmece"
+  ],
+  "actor": true
+}

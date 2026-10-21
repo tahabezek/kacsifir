@@ -10,6 +10,23 @@ format araştırması: `research/hangisi_daha_sasirtici.md`.
 
 **Vaat (bio'nun ilk satırı):** *Akıl almaz sayıları gözle görülür hâle getiriyoruz.*
 
+**Konsept: yaratıcılık ve dahilik (22 Ekim 2026).** Her bölümde tek bir "aha!" anı vardır: sezgiye ters bir
+cevap ve onu iki satırda açıklayan zarif bir fikir. İzleyici videodan "bunu nasıl düşünemedim?" diyerek çıkar
+ve bir arkadaşına gönderir. Büyük sayı tek başına yetmez; sayının arkasındaki akıllıca bakış açısı gösterilir.
+
+Seriler:
+- **Paradoks:** sezgiye ters sonuç (ip ve Dünya, üç kapı, doğum günü). Önce tahmin istenir, sonra cevap.
+- **10 saniyede ispat:** görsel, kelimesiz ispat (Gauss'un toplamı, 1/2 + 1/4 + … = 1, Pisagor).
+- **Düşünce deneyi:** "Ya şöyle olsaydı?" (Dünya'yı delen tünel, Ay'a merdiven).
+- **Kafadan hesap:** Fermi tahmini; izleyici önce tahmin eder, sonra 4 adımda hesaplanır.
+- **Ölçek:** mevcut büyük sayı bölümleri; her birine bir "aha" cümlesi eklenir.
+- **Hangisi daha şaşırtıcı?** (haftalık): iki gerçek vaka, aynı cetvelde; yorumda A/B oylaması, ertesi hafta sonuç.
+- **Carousel** (günlük 17:00): yayınlanmış bir Reels'in kilit kareleri.
+
+Haftalık karışım: her gün en az bir dahiyane bölüm (paradoks, ispat, düşünce deneyi ya da kafadan hesap), haftada bir "Hangisi", geri kalanı ölçek bölümleri. Aynı seri art arda gelmez.
+
+Kanca kalıbı: imkânsız görünen bir iddia ya da doğrudan soru + "Sence?" gerilimi + cevaptan önce sessizlik.
+
 **Görsel dil: "ölçü defteri".** Reels akışı karanlık, neon ve yapay zekâ parıltısıyla dolu; biz bir
 mimarın çizim masasıyız.
 

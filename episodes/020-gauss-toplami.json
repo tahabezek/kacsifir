@@ -1,0 +1,79 @@
+{
+  "id": "020",
+  "slug": "gauss-toplami",
+  "template": "proof",
+  "serial": "№ 020 · 10 SANİYEDE İSPAT",
+  "bpm": 96,
+  "question": [
+    "1'den 100'e kadar sayıların",
+    "toplamı kaçtır?"
+  ],
+  "n1": 10,
+  "n2": 100,
+  "label": {
+    "start": "TEK TEK TOPLA"
+  },
+  "says": [
+    {
+      "t": 0,
+      "text": "Anlatılana göre Gauss bunu ilkokulda birkaç saniyede buldu."
+    },
+    {
+      "t": 3.8,
+      "text": "Merdiveni kopyala, ters çevir ve üstüne koy."
+    },
+    {
+      "t": 6.4,
+      "text": "İki merdiven 10'a 11'lik bir dikdörtgen oluşturur: 110 kare."
+    },
+    {
+      "t": 9.4,
+      "text": "Bizim merdiven bunun yarısıdır: 55."
+    },
+    {
+      "t": 12.2,
+      "text": "100 sayı için de aynı merdiven geçerlidir."
+    },
+    {
+      "t": 15.36,
+      "text": "1'den 100'e kadar sayıların toplamı 5.050'dir.",
+      "red": true
+    },
+    {
+      "t": 18.4,
+      "text": "Gauss'un hilesi: 1 + 100, 2 + 99, 3 + 98… Her çift 101 eder ve 50 çift vardır."
+    }
+  ],
+  "timing": {
+    "count": [
+      0.4,
+      3.4
+    ],
+    "copy": [
+      3.8,
+      5.6
+    ],
+    "rect": 6.4,
+    "half": 9.4,
+    "grow": [
+      12.2,
+      14.4
+    ],
+    "hero": 15.4,
+    "silence": 0.5,
+    "kick": 18.4,
+    "rewind": [
+      22.6,
+      24.5
+    ]
+  },
+  "caption": "1'den 100'e kadar bütün sayıları toplamanın kısa bir yolu var. Anlatılana göre matematikçi Carl Friedrich Gauss bunu ilkokulda, öğretmeni sınıfı oyalamak için bu toplamı sorduğunda birkaç saniyede buldu.\n\nSayıları kare sütunlarla bir merdiven gibi diz. Merdivenin bir kopyasını ters çevirip üstüne koyarsan 100'e 101'lik bir dikdörtgen elde edersin. Bizim merdiven bunun tam yarısıdır: 100 × 101 ÷ 2 = 5.050.\n\nAynı fikri şöyle de görebilirsin: 1 + 100, 2 + 99, 3 + 98… Her çift 101 eder ve 50 çift vardır: 50 × 101 = 5.050.\n\nSen 1'den 1.000'e kadar olan toplamı bulabilir misin? Cevabını yorumlara yaz.\n\nNot: Gauss hikâyesi bir anekdottur; ayrıntıları kaynaktan kaynağa değişir. Formül: 1 + 2 + … + n = n(n+1) ÷ 2.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#matematik",
+    "#gauss",
+    "#bilmece"
+  ],
+  "actor": true
+}

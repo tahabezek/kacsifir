@@ -18,6 +18,10 @@ import { stormCues } from '../engine/scenes/storm.js';
 import { depthCues } from '../engine/scenes/depth.js';
 import { sunCues } from '../engine/scenes/sun.js';
 import { zerosCues } from '../engine/scenes/zeros.js';
+import { ropeCues } from '../engine/scenes/rope.js';
+import { proofCues } from '../engine/scenes/proof.js';
+import { tunnelCues } from '../engine/scenes/tunnel.js';
+import { doorsCues } from '../engine/scenes/doors.js';
 
 const SR = 48000;
 
@@ -39,7 +43,7 @@ function towerCues(ep) {
 }
 
 export function synth(ep) {
-  const tl = ep.template === 'swarm' ? swarmCues(ep) : ep.template === 'doc' ? docCues(ep) : ep.template === 'versus' ? versusCues(ep) : ep.template === 'board' ? boardCues(ep) : ep.template === 'light' ? lightCues(ep) : ep.template === 'tiles' ? tilesCues(ep) : ep.template === 'altitude' ? altitudeCues(ep) : ep.template === 'pulse' ? pulseCues(ep) : ep.template === 'needle' ? needleCues(ep) : ep.template === 'spin' ? spinCues(ep) : ep.template === 'storm' ? stormCues(ep) : ep.template === 'depth' ? depthCues(ep) : ep.template === 'sun' ? sunCues(ep) : ep.template === 'zeros' ? zerosCues(ep) : towerCues(ep);
+  const tl = ep.template === 'swarm' ? swarmCues(ep) : ep.template === 'doc' ? docCues(ep) : ep.template === 'versus' ? versusCues(ep) : ep.template === 'board' ? boardCues(ep) : ep.template === 'light' ? lightCues(ep) : ep.template === 'tiles' ? tilesCues(ep) : ep.template === 'altitude' ? altitudeCues(ep) : ep.template === 'pulse' ? pulseCues(ep) : ep.template === 'needle' ? needleCues(ep) : ep.template === 'spin' ? spinCues(ep) : ep.template === 'storm' ? stormCues(ep) : ep.template === 'depth' ? depthCues(ep) : ep.template === 'sun' ? sunCues(ep) : ep.template === 'zeros' ? zerosCues(ep) : ep.template === 'rope' ? ropeCues(ep) : ep.template === 'proof' ? proofCues(ep) : ep.template === 'tunnel' ? tunnelCues(ep) : ep.template === 'doors' ? doorsCues(ep) : towerCues(ep);
   const D = tl.duration;
   const N = Math.ceil(D * SR);
   const Lc = new Float32Array(N), Rc = new Float32Array(N);

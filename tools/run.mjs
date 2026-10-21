@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { channelHealth, postsBetween, createReel, createCarousel } from './buffer.mjs';
+import { channelHealth, postsBetween, createReel, createCarousel, createShort } from './buffer.mjs';
 import { makeCarousel } from './carousel.mjs';
 import { summary as tlSummary } from '../engine/summary.js';
 
@@ -76,6 +76,9 @@ function nextEpisode(ledger, taken, t) {
 function render(ep) {
   const mp4 = path.join(root, 'out', ep.id, 'video.mp4');
   if (fs.existsSync(mp4)) return mp4;
+  // 3B (WebGL) bölümler GPU'lu makinede render edilip hazır dosya olarak gelir: CI'da GPU yok
+  const pre = path.join(root, 'prebuilt', `${ep.id}-${ep.slug}.mp4`);
+  if (fs.existsSync(pre)) { fs.mkdirSync(path.dirname(mp4), { recursive: true }); fs.copyFileSync(pre, mp4); log(`hazır ${ep.id} (${ep.slug})`); return mp4; }
   log(`render ${ep.id} (${ep.slug})`);
   const r = spawnSync(process.execPath, [path.join(root, 'tools', 'render.mjs'), ep.file], { cwd: root, stdio: 'inherit' });
   if (r.status !== 0 || !fs.existsSync(mp4)) throw new Error(`render başarısız: ${ep.id}`);
@@ -172,7 +175,7 @@ async function main() {
     plan.push({ t, ep });
     log(`boş   ${slotKey(t)} → ${ep.id} ${ep.slug}`);
   }
-  if (!plan.length) { log('tüm reels yuvaları dolu'); await carousels(ledger, now, existing, tol); return finish(ledger); }
+  if (!plan.length) { log('tüm reels yuvaları dolu'); await carousels(ledger, now, existing, tol); await youtube(ledger, now); return finish(ledger); }
 
   // render
   for (const p of plan) { p.mp4 = render(p.ep); p.rel = mediaName(p.ep); p.url = cfg.mediaBaseUrl + p.rel; }
@@ -209,7 +212,39 @@ async function main() {
     saveLedger(ledger);
   }
   await carousels(ledger, now, existing, tol);
+  await youtube(ledger, now);
   return finish(ledger);
+}
+
+// ——— YouTube Shorts: Instagram'da planlanmış her Reels aynı dakikada YouTube'a da gider ———
+export function ytTitle(ep) {
+  const q = (ep.question || ep.title || [ep.slug]).join(' ');
+  return ep.ytTitle || q;
+}
+export function ytText(ep) {
+  return [ep.caption, 'Her gün yeni bir sayı videosu: Kaç Sıfır? kanalına abone ol.', (ep.hashtags || []).join(' ')].filter(Boolean).join('\n\n');
+}
+async function youtube(ledger, now) {
+  if (!cfg.youtube?.channelId || DRY) return;
+  const tol = cfg.slotToleranceMinutes * 60e3;
+  const ytPosts = await postsBetween(cfg.organizationId, cfg.youtube.channelId, new Date(now.getTime() - 3600e3).toISOString(), new Date(now.getTime() + (cfg.horizonHours + 2) * 3600e3).toISOString());
+  for (const [k, slot] of Object.entries(ledger.slots)) {
+    if (slot.kind === 'carousel' || slot.status !== 'scheduled' || !slot.dueAt || slot.yt?.postId) continue;
+    const due = new Date(slot.dueAt);
+    if ((due - now) / 60e3 < cfg.minLeadMinutes) continue;
+    if (ytPosts.some(p => p.dueAt && Math.abs(new Date(p.dueAt) - due) <= tol)) { log(`dolu  ${k} (youtube)`); continue; }
+    const ep = episodes().concat(allEpisodes()).find(e => e.id === slot.episode);
+    if (!ep) continue;
+    try {
+      const post = await createShort({ cfgYt: cfg.youtube, title: ytTitle(ep), text: ytText(ep), videoUrl: cfg.mediaBaseUrl + slot.media, dueAtISO: due.toISOString() });
+      slot.yt = { postId: post.id, status: 'scheduled', dueAt: post.dueAt };
+      summary.push(`✅ ${k} youtube → ${ep.id}`);
+    } catch (e) {
+      slot.yt = { status: 'failed', error: String(e.message).slice(0, 300) };
+      summary.push(`⚠️ ${k} youtube: ${e.message}`); // YouTube hatası Instagram akışını kırmaz
+    }
+    saveLedger(ledger);
+  }
 }
 
 // ——— carousel: yayınlanmış bir Reels'in kilit anları, günde bir kez ———

@@ -35,12 +35,19 @@ export function staticServer() {
   return new Promise(r => srv.listen(0, '127.0.0.1', () => r(srv)));
 }
 
+// 3B (WebGL) bölümler GPU ister: Windows'ta ANGLE/D3D11; GPU yoksa (CI) yazılım WebGL'i (SwiftShader)
+function glArgs() {
+  if (process.env.KACSIFIR_GL === 'swiftshader' || process.platform !== 'win32') return ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'];
+  return ['--use-angle=d3d11', '--enable-gpu', '--ignore-gpu-blocklist'];
+}
+
 export async function openStage(epPath) {
   const srv = await staticServer();
   const port = srv.address().port;
+  const ep = JSON.parse(fs.readFileSync(epPath, 'utf8'));
   const browser = await puppeteer.launch({
-    executablePath: findChrome(), headless: true,
-    args: ['--no-sandbox', '--disable-gpu', '--font-render-hinting=none', '--force-color-profile=srgb', '--hide-scrollbars'],
+    executablePath: findChrome(), headless: true, protocolTimeout: 600000,
+    args: ['--no-sandbox', ...(ep.gl ? glArgs() : ['--disable-gpu']), '--font-render-hinting=none', '--force-color-profile=srgb', '--hide-scrollbars'],
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
@@ -50,6 +57,8 @@ export async function openStage(epPath) {
   await page.goto(`http://127.0.0.1:${port}/engine/stage.html?ep=${encodeURIComponent(rel)}`);
   await page.waitForFunction('window.__ready === true', { timeout: 30000 });
   const duration = await page.evaluate('window.DURATION');
+  // 3B bölümlerde kare başına örnek sayısı (taslak için düşür): KACSIFIR_SAMPLES=4
+  if (process.env.KACSIFIR_SAMPLES) await page.evaluate(n => { window.__samples = n; }, Number(process.env.KACSIFIR_SAMPLES));
   const shot = async t => {
     await page.evaluate(t => window.renderFrame(t), t);
     return page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: 1080, height: 1920 }, optimizeForSpeed: true });

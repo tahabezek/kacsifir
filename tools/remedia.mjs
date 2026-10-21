@@ -6,7 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { gql } from './buffer.mjs';
+import { gql, youtubeMeta } from './buffer.mjs';
 import { summary } from '../engine/summary.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -68,6 +68,15 @@ for (const j of jobs) {
       metadata: { instagram: { type: 'reel', shouldShareToFeed: cfg.shareToFeed } },
     } });
   if (d.editPost.message) { console.log(j.id, ': editPost hatası:', d.editPost.message); continue; }
+  // YouTube karşılığı varsa aynı videoya geçir
+  if (j.slot.yt?.postId && cfg.youtube) {
+    const q = (j.ep.question || j.ep.title || [j.ep.slug]).join(' ');
+    const yt = await gql(`mutation($in: EditPostInput!) { editPost(input: $in) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }`, { in: {
+      id: j.slot.yt.postId, text: [j.ep.caption, 'Her gün yeni bir sayı videosu: Kaç Sıfır? kanalına abone ol.', (j.ep.hashtags || []).join(' ')].join('\n\n'),
+      assets: [{ video: { url } }], metadata: youtubeMeta(cfg.youtube, j.ep.ytTitle || q),
+    } });
+    console.log(j.id, ': youtube', yt.editPost.message ? 'hatası: ' + yt.editPost.message : 'güncellendi');
+  }
   ledger.slots[j.key] = { ...j.slot, media: j.rel, prevMedia: j.slot.media, remediaAt: new Date().toISOString() };
   fs.writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2) + '\n');
   console.log(j.id, ': gönderi yeni videoya bağlandı →', url);

@@ -1,0 +1,134 @@
+{
+  "id": "023",
+  "slug": "domino-everest",
+  "template": "domino",
+  "gl": true,
+  "publishAt": "2026-10-24T17:30Z",
+  "serial": "№ 023 · DÜŞÜNCE DENEYİ",
+  "bpm": 100,
+  "question": [
+    "Bir domino taşı Everest'i",
+    "devirebilir mi?"
+  ],
+  "timing": {
+    "push": 0.4,
+    "segments": [
+      [
+        1,
+        16,
+        0.4,
+        6
+      ],
+      [
+        16,
+        25,
+        6,
+        11.4
+      ],
+      [
+        25,
+        31,
+        11.4,
+        16.2
+      ],
+      [
+        31,
+        37,
+        16.2,
+        20.4
+      ]
+    ],
+    "land": 22.8,
+    "silence": 0.6,
+    "riser": [
+      19.2,
+      22.2
+    ],
+    "dive": [
+      34.9,
+      36.8
+    ],
+    "duration": 37.4
+  },
+  "stops": [
+    {
+      "k": 16,
+      "kind": "person",
+      "name": "Ortalama bir insan",
+      "h": 1.75,
+      "label": "1,75 m"
+    },
+    {
+      "k": 25,
+      "kind": "galata",
+      "name": "Galata Kulesi",
+      "h": 66.9,
+      "label": "66,9 m"
+    },
+    {
+      "k": 31,
+      "kind": "burj",
+      "name": "Burj Halife",
+      "h": 828,
+      "label": "828 m"
+    },
+    {
+      "k": 37,
+      "kind": "everest",
+      "name": "Everest",
+      "h": 8848.86,
+      "label": "8.849 m"
+    }
+  ],
+  "says": [
+    {
+      "t0": -1,
+      "t1": 5.9,
+      "text": "Bir domino taşı kendisinden 1,5 kat büyük bir taşı devirebilir."
+    },
+    {
+      "t0": 6,
+      "t1": 9.7,
+      "text": "16. taş ortalama bir insandan uzundur."
+    },
+    {
+      "t0": 11.4,
+      "t1": 15,
+      "text": "25. taş Galata Kulesi'ni geçer."
+    },
+    {
+      "t0": 16.2,
+      "t1": 19.8,
+      "text": "31. taş Burj Halife'yi geçer."
+    },
+    {
+      "t0": 20,
+      "t1": 24.6,
+      "text": "37. taş Everest'ten yüksektir: 10,9 kilometre.",
+      "red": true
+    },
+    {
+      "t0": 24.6,
+      "t1": 31.3,
+      "text": "Her taş öncekinden yalnızca 1,5 kat büyüktür; 36 adımda bu 2 milyon kat eder."
+    },
+    {
+      "t0": 31.3,
+      "t1": 34.9,
+      "text": "Ay'a ulaşmak için 63 taş yeter."
+    },
+    {
+      "t0": 35.85,
+      "t1": 99,
+      "text": "Bir domino taşı kendisinden 1,5 kat büyük bir taşı devirebilir."
+    }
+  ],
+  "caption": "Bir domino taşı Everest'i devirebilir mi? 5 milimetrelik bir taşla başlayan zincirde 37. taş Everest'ten yüksektir ve zirvesine devrilir.\n\nFizikçi Lorne Whitehead 1983'te gösterdi: Bir domino taşı kendisinden yaklaşık 1,5 kat büyük bir taşı devirebilir. Stephen Morris (Toronto Üniversitesi) bunu 13 taşlık bir zincirle sahnede gösterdi.\n\nHesap: n. taşın boyu = 5 mm × 1,5^(n−1)\n16. taş 2,19 m · ortalama bir insan 1,75 m\n25. taş 84 m · Galata Kulesi 66,9 m (külah dahil)\n31. taş 959 m · Burj Halife 828 m\n37. taş 10,9 km · Everest 8.848,86 m\n63. taş 413.000 km · Ay 384.400 km\n1,5^36 ≈ 2,18 milyon\n\nBu bir düşünce deneyidir: Gerçek taşlar bu boyda kendi ağırlığını taşıyamaz.\n\nKaynak: L. A. Whitehead, \"Domino 'chain reaction'\", American Journal of Physics 51(2), 1983 · Everest: Çin–Nepal ortak ölçümü, 2020.\n\nSence 1 metrelik bir taştan başlasaydık kaçıncı taş Ay'a ulaşırdı?",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#bilim",
+    "#fizik",
+    "#domino"
+  ]
+}

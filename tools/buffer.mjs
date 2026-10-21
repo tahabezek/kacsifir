@@ -64,6 +64,24 @@ export async function createReel({ channelId, text, videoUrl, dueAtISO, thumbnai
   return d.createPost.post;
 }
 
+// YouTube Shorts: aynı video, başlık + açıklama; Instagram gönderisiyle aynı dakikaya planlanır
+export function youtubeMeta(cfgYt, title) {
+  return { youtube: { title: title.slice(0, 100), categoryId: cfgYt.categoryId, privacy: cfgYt.privacy, madeForKids: cfgYt.madeForKids, notifySubscribers: cfgYt.notifySubscribers, embeddable: true } };
+}
+export async function createShort({ cfgYt, title, text, videoUrl, dueAtISO }) {
+  const d = await gql(`mutation($in: CreatePostInput!) { createPost(input: $in) {
+      ... on PostActionSuccess { post { id status dueAt } }
+      ... on MutationError { message } } }`,
+    { in: {
+      channelId: cfgYt.channelId, text, schedulingType: 'automatic', mode: 'customScheduled', dueAt: dueAtISO,
+      needsApproval: false, source: 'kacsifir-pipeline',
+      assets: [{ video: { url: videoUrl } }],
+      metadata: youtubeMeta(cfgYt, title),
+    } }, { timeoutMs: 120000 });
+  if (d.createPost.message) throw new Error('createPost (youtube): ' + d.createPost.message);
+  return d.createPost.post;
+}
+
 export async function createCarousel({ channelId, text, imageUrls, altTexts, dueAtISO }) {
   const d = await gql(`mutation($in: CreatePostInput!) { createPost(input: $in) {
       ... on PostActionSuccess { post { id status dueAt } }

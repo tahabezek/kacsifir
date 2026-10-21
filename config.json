@@ -18,5 +18,12 @@
   "carouselSlotsTR": [
     "17:00"
   ],
-  "carouselMinAgeHours": 20
+  "carouselMinAgeHours": 20,
+  "youtube": {
+    "channelId": "6ad932d2778b240e2f81af17",
+    "categoryId": "27",
+    "privacy": "public",
+    "madeForKids": false,
+    "notifySubscribers": true
+  }
 }

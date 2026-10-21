@@ -1,15 +1,17 @@
-# Performans raporu · 2026-10-21 16:05 UTC
+# Performans raporu · 2026-10-21 20:32 UTC
 
-Gönderi: 2 · izlenme: 0 · paylaşım: 0 · takip: 0
+Gönderi: 3 · izlenme: 523 · paylaşım: 8 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | [001 milyar-saniye](https://www.instagram.com/reel/DewJQA5j9vW/) | tower | 0 | 0 | – | 0 | 0 | 0 | 0 |
-| 2 | [012 kagit-efsanesi](https://www.instagram.com/reel/DevxwALiohh/) | doc | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 1 | [012 kagit-efsanesi](https://www.instagram.com/reel/DevxwALiohh/) | doc | 180 | 143 | 0.4 | 49 | 0 | 0 | 211.7 |
+| 2 | [001 milyar-saniye](https://www.instagram.com/reel/DewJQA5j9vW/) | tower | 184 | 143 | 0.48 | 7 | 0 | 0 | 47.3 |
+| 3 | [011 butun-karincalar](https://www.instagram.com/reel/Dew8u1GE1rE/) | swarm | 159 | 120 | 0.42 | 0 | 8.3 | 0 | 33.4 |
 
 ## Şablona göre ortalama puan
-- tower: 0.0 (1 gönderi)
-- doc: 0.0 (1 gönderi)
+- doc: 211.7 (1 gönderi)
+- tower: 47.3 (1 gönderi)
+- swarm: 33.4 (1 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)
 - İzlenme oranı < 0,5: kanca/ilk 3 sn sorunu → başlığı ve kare 0'ı yeniden yaz.

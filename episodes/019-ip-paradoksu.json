@@ -47,8 +47,8 @@
   },
   "say": {
     "hook": "Ekvator boyunca yere serili, 40.075 km'lik bir ip düşün.",
-    "add": "İpi 1 metre uzatıp her noktada yerden eşit yüksekliğe kaldırıyoruz.",
-    "ask": "Sence ip ile yer arasında ne kadar boşluk kalır?",
+    "add": "İpe 1 metre ekleyip her noktada yerden eşit yüksekliğe kaldırıyoruz.",
+    "ask": "İp yerden kaç santimetre yukarıda durur?",
     "hero": "İp 15,9 cm kalkar; altından dik duran bir telefon geçer.",
     "ball": "Aynısını bir futbol topuyla deneyelim.",
     "ballHero": "Cevap yine 15,9 cm. Topun büyüklüğü hiç fark etmez.",
@@ -78,5 +78,6 @@
     "#paradoks",
     "#bilmece"
   ],
-  "actor": true
+  "actor": true,
+  "gapLabel": "boşluk"
 }

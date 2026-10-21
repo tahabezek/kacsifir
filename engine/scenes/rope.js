@@ -73,20 +73,6 @@ export function makeRopeRenderer(ep, canvas) {
       const lift = t >= tl.add ? DR * ease.state(seg(t, tl.add + 0.4, 0.8)) : 0;
       const rr = (R + lift) * s + 6;
       const p = new Path2D(); p.arc(cx, cy, rr, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * wrapU); ropeStroke(p, t);
-      // yakın plan kutusu: ip yerde yatar, 1 m uzatılınca her yerden eşit yükselir (soru işareti)
-      const ia = ease.enter(seg(t, tl.add + 0.5, 0.4)) * (1 - ease.exit(seg(t, tl.reveal[0], 0.3)));
-      if (ia > 0 && zoomU < 0.05) {
-        const bx = 650, by = 930, bw = 262, bh = 176;
-        ctx.save(); ctx.globalAlpha = ia;
-        ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.setLineDash([6, 6]); ctx.beginPath(); ctx.moveTo(cx + 6, cy - rr + 4); ctx.lineTo(bx, by + bh); ctx.stroke(); ctx.setLineDash([]);
-        ctx.fillStyle = C.paper; ctx.fillRect(bx, by, bw, bh); ctx.lineWidth = 3; ctx.strokeRect(bx, by, bw, bh);
-        const gy = by + bh - 34; ctx.fillStyle = '#E6DDC8'; ctx.fillRect(bx + 2, gy, bw - 4, bh - 36); ctx.beginPath(); ctx.moveTo(bx, gy); ctx.lineTo(bx + bw, gy); ctx.stroke();
-        const up = ease.state(seg(t, tl.add + 1.0, 0.8)) * 46;
-        const rp = new Path2D(); rp.moveTo(bx + 4, gy - 4 - up); rp.lineTo(bx + bw - 4, gy - 4 - up); ropeStroke(rp, t, 6);
-        if (up > 10) { ctx.fillStyle = C.ink; ctx.beginPath(); ctx.moveTo(bx + bw / 2, gy - up + 6); ctx.lineTo(bx + bw / 2, gy - 6); ctx.stroke();
-          setFont(ctx, F.head(44)); ctx.textAlign = 'center'; ctx.fillText('?', bx + bw / 2 + 34, gy - up / 2 + 14); ctx.textAlign = 'left'; }
-        ctx.restore();
-      }
     } else {
       // yakın plan: zemin düz bir çizgi, ip 15,9 cm yukarıda
       ctx.fillStyle = '#E6DDC8'; ctx.fillRect(0, top.y, W, 1440 - top.y);
@@ -94,7 +80,8 @@ export function makeRopeRenderer(ep, canvas) {
       for (let x = -40; x < W + 40; x += 26) { ctx.beginPath(); ctx.moveTo(x, top.y + 8); ctx.lineTo(x + 20, top.y + 44); ctx.stroke(); }
       ctx.restore();
       ctx.lineWidth = 4; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.moveTo(0, top.y); ctx.lineTo(W, top.y); ctx.stroke();
-      const ry = top.y - DR * s;
+      const liftU = ease.state(seg(t, tl.add + 1.9, 1.0)); // ip yerden eşit kalkar
+      const ry = top.y - 5 - DR * s * liftU;
       const p = new Path2D(); p.moveTo(-20, ry); p.lineTo(W + 20, ry); ropeStroke(p, t, 9);
       // telefon: 14,7 cm, ipin altında ayakta
       const ph = ep.phone.h * s, pw = ep.phone.w * s, px = top.x - 230;
@@ -109,9 +96,11 @@ export function makeRopeRenderer(ep, canvas) {
       // ölçü oku: kırmızı, 15,9 cm
       const ax = top.x + 160;
       ctx.save(); ctx.strokeStyle = red ? C.red : C.ink; ctx.fillStyle = red ? C.red : C.ink; ctx.lineWidth = 4;
+      if (liftU <= 0.95) { ctx.restore(); return; }
       ctx.beginPath(); ctx.moveTo(ax, ry + 8); ctx.lineTo(ax, top.y - 8); ctx.stroke();
       for (const [y, d] of [[ry + 8, 1], [top.y - 8, -1]]) { ctx.beginPath(); ctx.moveTo(ax, y); ctx.lineTo(ax - 12, y + 18 * d); ctx.lineTo(ax + 12, y + 18 * d); ctx.closePath(); ctx.fill(); }
-      setFont(ctx, F.head(54)); ctx.fillText(ep.answer, ax + 24, (ry + top.y) / 2 + 18);
+      if (liftU > 0.95) { setFont(ctx, F.head(54)); ctx.fillText(red ? ep.answer : '?', ax + 24, (ry + top.y) / 2 + 18);
+        if (!red) { setFont(ctx, F.mono(28)); ctx.fillStyle = C.graphite; ctx.fillText(ep.gapLabel, ax + 72, (ry + top.y) / 2 + 12); } }
       ctx.restore();
     }
   }
@@ -236,7 +225,7 @@ export function makeRopeRenderer(ep, canvas) {
     // sahneler aynı yatay eksende kayarak değişir (Dünya → top → formül); geri sarma tersine kayar
     const toBall = t >= tl.rw0 ? 1 - ease.state(seg(t, tl.rw0, (tl.rw1 - tl.rw0) - 0.4)) : ease.state(seg(t, tl.ball - 0.1, 0.6));
     const toFormula = t >= tl.rw0 ? 1 - ease.state(seg(t, tl.rw0, 0.5)) : ease.state(seg(t, tl.formula - 0.1, 0.6));
-    const zoomU = t >= tl.rw0 ? 0 : ease.state(seg(t, tl.reveal[0], tl.reveal[1] - tl.reveal[0]));
+    const zoomU = t >= tl.rw0 ? 0 : ease.state(seg(t, tl.add + 0.4, 1.4)); // yere iniş: soru resimden okunsun
     // beklemelerde %4 yaklaşma
     const hold = (a, b) => 1 + 0.04 * Math.max(0, Math.min(1, (t - a) / (b - a)));
     ctx.save(); ctx.beginPath(); ctx.rect(0, 900, W, 540); ctx.clip();

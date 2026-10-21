@@ -53,5 +53,7 @@
     "#genelkültür",
     "#coğrafya",
     "#bilgiler"
-  ]
+  ],
+  "disabled": true,
+  "disabledWhy": "kule kalıbı tekrar ediyor; kendi görsel sahnesiyle yeniden yapılacak"
 }

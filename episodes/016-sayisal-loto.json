@@ -78,5 +78,7 @@
   "actor": {
     "count": "seconds",
     "unit": " sn"
-  }
+  },
+  "disabled": true,
+  "disabledWhy": "kule kalıbı tekrar ediyor; kendi görsel sahnesiyle yeniden yapılacak"
 }

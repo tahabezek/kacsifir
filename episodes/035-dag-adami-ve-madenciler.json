@@ -1,0 +1,40 @@
+{
+  "id": "035",
+  "slug": "dag-adami-ve-madenciler",
+  "template": "kaya",
+  "serial": "№ 035 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-14T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": { "l01": 0.25, "l02": 0.4, "l03": 0.4, "l04": 0.4, "l05": 0.6, "l06": 1.0, "l07": 0.15, "l08": 0.4, "l09": 0.7, "l10": 0.6, "l11": 1.0, "l12": 0.35, "l13": 0.8, "l14": 0.6, "l15": 0.7 },
+    "lines": [
+      { "id": "l01", "tts": "Hangisi daha şaşırtıcı?", "text": "Hangisi daha şaşırtıcı?", "rate": "+8%", "pitch": "+3Hz" },
+      { "id": "l02", "tts": "Hindistan'da yoksul bir köylünün karısı, dağı aşarken düşüp ağır yaralanıyor.", "text": "Hindistan'da yoksul bir köylünün karısı, dağı aşarken düşüp ağır yaralanıyor.", "rate": "+4%", "pitch": "-3Hz" },
+      { "id": "l03", "tts": "Karşıdaki kasabaya giden yol, dağı dolanarak elli beş kilometre.", "text": "Karşıdaki kasabaya giden yol, dağı dolanarak 55 km.", "rate": "+6%" },
+      { "id": "l04", "tts": "Dashrath Manjhi bir çekiç ve bir keski alıyor ve dağı tek başına yarmaya başlıyor.", "text": "Dashrath Manjhi bir çekiç ve bir keski alıyor ve dağı tek başına yarmaya başlıyor.", "rate": "+8%" },
+      { "id": "l05", "tts": "Köylüler ona deli diyor. O ise yirmi iki yıl boyunca vurmaya devam ediyor.", "text": "Köylüler ona deli diyor. O ise 22 yıl boyunca vurmaya devam ediyor.", "rate": "+4%", "pitch": "-2Hz" },
+      { "id": "l06", "tts": "Sonunda dağın içinden yüz on metrelik bir yol açıyor ve elli beş kilometre, on beş kilometreye iniyor.", "text": "Sonunda dağın içinden 110 metrelik bir yol açıyor ve 55 km, 15 km'ye iniyor.", "rate": "+6%" },
+      { "id": "l07", "tts": "Yoksa bu otuz üç kişi mi?", "text": "Yoksa bu 33 kişi mi?", "rate": "+10%", "pitch": "+3Hz" },
+      { "id": "l08", "tts": "İki bin onda Şili'de bir maden çöküyor ve otuz üç işçi, yedi yüz metre derinde kalıyor.", "text": "2010'da Şili'de bir maden çöküyor ve 33 işçi, 700 metre derinde kalıyor.", "rate": "+8%" },
+      { "id": "l09", "tts": "On yedi gün boyunca kimse onların yaşayıp yaşamadığını bilmiyor.", "text": "17 gün boyunca kimse onların yaşayıp yaşamadığını bilmiyor.", "rate": "+2%", "pitch": "-4Hz" },
+      { "id": "l10", "tts": "Sonra aşağı inen sondaj ucu, üstüne bağlanmış bir notla geri geliyor: Sığınaktayız, otuz üç kişi iyiyiz.", "text": "Sonra aşağı inen sondaj ucu, üstüne bağlanmış bir notla geri geliyor: \"Sığınaktayız, 33 kişi iyiyiz.\"", "rate": "+8%" },
+      { "id": "l11", "tts": "Altmış dokuzuncu günde, dar bir kuyudan bir kapsülle tek tek yukarı çekiliyorlar.", "text": "69. günde, dar bir kuyudan bir kapsülle tek tek yukarı çekiliyorlar.", "rate": "+6%" },
+      { "id": "l12", "tts": "Peki ikisini aynı kayayla ölçersek?", "text": "Peki ikisini aynı kayayla ölçersek?", "rate": "+6%", "pitch": "+2Hz" },
+      { "id": "l13", "tts": "Kurtarma kuyusu için dev bir matkap, yaklaşık iki yüz elli metreküp kaya deldi. Manjhi ise elleriyle,", "text": "Kurtarma kuyusu için dev bir matkap, yaklaşık 250 m³ kaya deldi. Manjhi ise elleriyle,", "rate": "+6%" },
+      { "id": "l14", "tts": "bunun yaklaşık otuz katını kırdı.", "text": "bunun yaklaşık 30 katını kırdı.", "rate": "-2%", "pitch": "-4Hz" },
+      { "id": "l15", "tts": "Elinde yalnızca bir çekiç ve bir keski vardı.", "text": "Elinde yalnızca bir çekiç ve bir keski vardı.", "rate": "+4%", "pitch": "-2Hz" },
+      { "id": "l16", "tts": "Sen hangisine şaşırdın?", "text": "Sen hangisine şaşırdın?", "rate": "+8%", "pitch": "+3Hz" }
+    ]
+  },
+  "facts": {
+    "manjhi": { "start": 1960, "end": 1982, "years": 22, "lenM": 110, "widthM": 9.1, "depthM": 7.7, "beforeKm": 55, "afterKm": 15, "volumeM3": 7700 },
+    "chile": { "date": "2010-08-05", "depthM": 700, "silentDays": 17, "days": 69, "men": 33, "holeM": 630, "holeDiaM": 0.71, "holeVolumeM3": 250 },
+    "ratio": 30
+  },
+  "caption": "Hangisi daha şaşırtıcı? Hindistan'ın Bihar eyaletindeki Gehlaur köyünden Dashrath Manjhi'nin karısı, dağı aşarken düşüp yaralandı. Karşıdaki kasabaya giden yol dağı dolanarak 55 km'ydi. Manjhi 1960'ta bir çekiç ve bir keskiyle dağı yarmaya başladı; köylüler onunla alay etti. 1982'de, 22 yıl sonra 110 m uzunluğunda, 9,1 m genişliğinde ve 7,7 m derinliğinde bir yol açtı; mesafe 15 km'ye indi.\n\nŞili'deki San José madeni ise 5 Ağustos 2010'da çöktü ve 33 işçi yaklaşık 700 m derinde kaldı. 17 gün sonra aşağı inen sondaj ucu \"Estamos bien en el refugio los 33\" (\"Sığınakta iyiyiz, 33 kişiyiz\") notuyla geri geldi. 13 Ekim 2010'da, 69. günde, 71 cm çapında açılan kuyudan Fénix kapsülüyle tek tek çıkarıldılar.\n\nAynı kayayla: yaklaşık 630 m derinlik ve 71 cm çap, kabaca 250 m³ kaya eder. Manjhi'nin yolu dikdörtgen kesitle 110 × 9,1 × 7,7 m, kabaca 7.700 m³ eder; bu da yaklaşık 30 kat. Gerçek kesit daha dar ise oran daha küçüktür.\n\nSen hangisine şaşırdın? Yorumlara MANJHI ya da MADENCİLER yaz.\n\nKaynaklar: Wikipedia (Dashrath Manjhi; 2010 Copiapó maden kazası), Channel 4 News (13 Ekim 2010), Center Rock, CNN.",
+  "hashtags": ["#kaçsıfır", "#ilginçbilgiler", "#şaşırtıcıbilgiler", "#azim", "#biliyormuydunuz"],
+  "ytTitle": "Hangisi daha şaşırtıcı? Dağı 22 yılda elle yaran adam mı, 700 metre derinde 69 gün bekleyen 33 madenci mi?"
+}

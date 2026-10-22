@@ -111,7 +111,11 @@ export function makeGlobe(ctx, world, stageTop) {
     ctx.save();
     if (dot) { ctx.beginPath(); ctx.arc(q[0], q[1], 6, 0, Math.PI * 2); ctx.fillStyle = color; ctx.fill(); }
     setFont(ctx, F.mono(30));
-    const x = align === 'right' ? q[0] - dx : align === 'center' ? q[0] : q[0] + dx;
+    // ekran kenarına taşmaz: önce öbür yana geçer, yine sığmazsa içeri kaydırılır (40 px pay)
+    { const tw0 = ctx.measureText(text).width; if (align === 'right' && q[0] - dx - tw0 < 40) align = 'left'; else if (align === 'left' && q[0] + dx + tw0 > W - 40) align = 'right'; }
+    let x = align === 'right' ? q[0] - dx : align === 'center' ? q[0] : q[0] + dx;
+    { const tw1 = ctx.measureText(text).width; x = align === 'left' ? Math.max(40, Math.min(x, W - 40 - tw1)) : align === 'right' ? Math.min(W - 40, Math.max(x, 40 + tw1)) : Math.max(40 + tw1 / 2, Math.min(x, W - 40 - tw1 / 2)); }
+    ctx.textAlign = align;
     ctx.lineWidth = 7; ctx.strokeStyle = C.paper; ctx.lineJoin = 'round'; ctx.textAlign = align;
     const k = ease.enter(u), wdt = ctx.measureText(text).width;
     ctx.beginPath();

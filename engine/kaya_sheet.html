@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1600" height="700"></canvas>
+<script type="module">
+// Poz kâğıdı: Manjhi çekiç döngüsü (6 faz), kapsül, not
+import { MANJHI_CARD, drawManjhi, drawCapsule, drawNote } from './kaya_chars.js';
+await document.fonts.load('600 30px Archivo');
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1600, 700);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+for (let i = 0; i < 6; i++) at(130 + i * 230, 360, () => drawManjhi(ctx, MANJHI_CARD, { swing: i / 5 }, 340));
+at(1500, 300, () => drawCapsule(ctx, 300));
+at(400, 560, () => drawNote(ctx, 320, 'SIĞINAKTAYIZ,\n33 KİŞİ İYİYİZ', '600 30px Archivo'));
+window.__ready = true;
+</script></body></html>

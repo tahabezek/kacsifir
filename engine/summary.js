@@ -31,10 +31,14 @@ import { fallSummary } from './scenes/fall_core.js';
 
 import { yolSummary } from './scenes/yolculuk_summary.js';
 import { zamanSummary } from './scenes/zaman_summary.js';
+import { okyanusSummary } from './scenes/okyanus_summary.js';
+import { kayaSummary } from './scenes/kaya_summary.js';
 
 export function summary(ep) {
   if (ep.template === 'yolculuk') return yolSummary(ep);
   if (ep.template === 'zaman') return zamanSummary(ep);
+  if (ep.template === 'okyanus') return okyanusSummary(ep);
+  if (ep.template === 'kaya') return kayaSummary(ep);
   if (ep.template === 'domino') return dominoSummary(ep);
   if (ep.template === 'gezegen') return gezegenSummary(ep);
   if (ep.template === 'terazi') return teraziSummary(ep);

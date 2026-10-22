@@ -1,0 +1,40 @@
+{
+  "id": "034",
+  "slug": "balikci-ve-asci",
+  "template": "okyanus",
+  "serial": "№ 034 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-07T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": { "l01": 0.25, "l02": 0.35, "l03": 0.35, "l04": 0.35, "l05": 0.5, "l06": 1.0, "l07": 0.15, "l08": 0.4, "l09": 0.35, "l10": 0.9, "l11": 0.45, "l12": 1.0, "l13": 0.35, "l14": 0.8, "l15": 0.9, "l16": 0.6 },
+    "lines": [
+      { "id": "l01", "tts": "Hangisi daha şaşırtıcı?", "text": "Hangisi daha şaşırtıcı?", "rate": "+8%", "pitch": "+3Hz" },
+      { "id": "l02", "tts": "Bir balıkçı, iki bin on iki Kasım'ında Meksika kıyısından kısa bir av için denize açılıyor.", "text": "Bir balıkçı, Kasım 2012'de Meksika kıyısından kısa bir av için denize açılıyor." },
+      { "id": "l03", "tts": "Bir fırtına motoru susturuyor ve küçük tekne okyanusa sürükleniyor.", "text": "Bir fırtına motoru susturuyor ve küçük tekne okyanusa sürükleniyor.", "rate": "+6%", "pitch": "-2Hz" },
+      { "id": "l04", "tts": "Yağmur suyu içiyor; çiğ balık, kuş ve kaplumbağa yiyerek hayatta kalıyor.", "text": "Yağmur suyu içiyor; çiğ balık, kuş ve kaplumbağa yiyerek hayatta kalıyor.", "rate": "+10%" },
+      { "id": "l05", "tts": "Yolda arkadaşını kaybediyor ve aylarca tek başına sürükleniyor.", "text": "Yolda arkadaşını kaybediyor ve aylarca tek başına sürükleniyor.", "rate": "+2%", "pitch": "-4Hz" },
+      { "id": "l06", "tts": "Ve dört yüz otuz sekiz gün sonra, on bin kilometreden fazla ötede küçük bir adaya vuruyor.", "text": "Ve 438 gün sonra, 10.000 km'den fazla ötede küçük bir adaya vuruyor.", "rate": "+4%", "pitch": "-2Hz" },
+      { "id": "l07", "tts": "Yoksa bu aşçı mı?", "text": "Yoksa bu aşçı mı?", "rate": "+10%", "pitch": "+3Hz" },
+      { "id": "l08", "tts": "Nijerya açıklarında, iki bin on üçte bir römorkör alabora oluyor ve otuz metre dibe batıyor.", "text": "Nijerya açıklarında, 2013'te bir römorkör alabora oluyor ve 30 metre dibe batıyor.", "rate": "+10%" },
+      { "id": "l09", "tts": "On iki kişiden yalnızca biri, aşçı Harrison Okene, ters dönen geminin içinde küçük bir hava cebi buluyor.", "text": "12 kişiden yalnızca biri, aşçı Harrison Okene, ters dönen geminin içinde küçük bir hava cebi buluyor.", "rate": "+8%" },
+      { "id": "l10", "tts": "Zifiri karanlıkta, boğazına kadar suyun içinde bekliyor.", "text": "Zifiri karanlıkta, boğazına kadar suyun içinde bekliyor.", "rate": "+0%", "pitch": "-4Hz" },
+      { "id": "l11", "tts": "Altmış saat sonra bir dalgıç, enkazda ceset ararken karanlıkta bir el görüyor.", "text": "60 saat sonra bir dalgıç, enkazda ceset ararken karanlıkta bir el görüyor.", "rate": "+6%", "pitch": "-2Hz" },
+      { "id": "l12", "tts": "Uzanıp o eli tuttuğunda, el de onu tutuyor.", "text": "Uzanıp o eli tuttuğunda, el de onu tutuyor.", "rate": "-2%", "pitch": "-3Hz" },
+      { "id": "l13", "tts": "Peki ikisini aynı takvimde gösterirsek?", "text": "Peki ikisini aynı takvimde gösterirsek?", "rate": "+6%", "pitch": "+2Hz" },
+      { "id": "l14", "tts": "Alvarenga dört yüz otuz sekiz gün sürüklendi. Okene'nin karanlıkta geçirdiği süre ise", "text": "Alvarenga 438 gün sürüklendi. Okene'nin karanlıkta geçirdiği süre ise", "rate": "+6%" },
+      { "id": "l15", "tts": "yalnızca iki buçuk gün.", "text": "yalnızca 2,5 gün.", "rate": "-2%", "pitch": "-4Hz" },
+      { "id": "l16", "tts": "Ama o iki buçuk günde, birinin onu bulacağını bilmiyordu.", "text": "Ama o 2,5 günde, birinin onu bulacağını bilmiyordu.", "rate": "+4%", "pitch": "-2Hz" },
+      { "id": "l17", "tts": "Sen hangisine şaşırdın?", "text": "Sen hangisine şaşırdın?", "rate": "+8%", "pitch": "+3Hz" }
+    ]
+  },
+  "facts": {
+    "alvarenga": { "start": "2012-11-17", "land": "2014-01-30", "days": 438, "km": 10800 },
+    "okene": { "date": "2013-05-26", "hours": 60, "depthM": 30, "pocketM": 1.2, "crew": 12 }
+  },
+  "caption": "Hangisi daha şaşırtıcı? Balıkçı José Salvador Alvarenga, 17 Kasım 2012'de Meksika'nın Chiapas kıyısından kısa bir av için denize açıldı. Fırtına motoru durdurdu ve tekne Pasifik'e sürüklendi. Yağmur suyu, çiğ balık, kuş ve kaplumbağayla hayatta kaldı; yol arkadaşı Ezequiel Córdoba yolda öldü. 30 Ocak 2014'te, 438 gün sonra ve yaklaşık 10.800 km ötede Marşal Adaları'ndaki Ebon Atolü'ne vurdu.\n\nAşçı Harrison Okene ise 26 Mayıs 2013'te Nijerya açıklarında alabora olan Jascon-4 römorköründeydi. Gemi yaklaşık 30 metre dibe battı; 12 kişilik mürettebattan yalnızca o kurtuldu. Ters dönmüş gövdede yaklaşık 1,2 metrelik bir hava cebinde, zifiri karanlıkta yaklaşık 60 saat bekledi. Cesetleri arayan bir dalgıç karanlıkta bir el gördü; uzanıp tuttuğunda el de onu tuttu.\n\nAynı takvimde: Alvarenga'nın 438 günü yanında Okene'nin 60 saati 2,5 gün eder. Haritadaki sürüklenme rotası şematiktir.\n\nSen hangisine şaşırdın? Yorumlara BALIKÇI ya da AŞÇI yaz.\n\nKaynaklar: Wikipedia (José Salvador Alvarenga; Jonathan Franklin, 438 Days), ABC News ve Maritime Executive (Aralık ve Haziran 2013), DCN Diving görüntüleri.",
+  "hashtags": ["#kaçsıfır", "#ilginçbilgiler", "#şaşırtıcıbilgiler", "#hayattakalma", "#biliyormuydunuz"],
+  "ytTitle": "Hangisi daha şaşırtıcı? 438 gün okyanusta sürüklenen balıkçı mı, 30 metre dipte 60 saat yaşayan aşçı mı?"
+}

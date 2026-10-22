@@ -22,12 +22,12 @@ const SH = { y0: 790, y1: 1380 }, PXM = (SH.y1 - SH.y0) / 700;
 export function kayaTimes(tl) {
   const { L, W: Wd } = tl;
   const T = {
-    fall: Wd('l02', 'düşüp'), road: Wd('l03', 'dolanarak'), start: Wd('l04', 'çekiç'), years0: L.l05.t0, open: Wd('l06', 'açıyor'), km15: Wd('l06', 'iniyor'),
+    fall: Wd('l02', 'düşüp'), road: Wd('l03', 'dolanıp'), start: Wd('l04', 'çekiç'), years0: L.l05.t0, open: Wd('l06', 'açıyor'), km15: Wd('l06', 'kilometreye') - 0.4,
     whip0: L.l06.end + 0.25, whip1: L.l07.t0 + 0.6, collapse: Wd('l08', 'çöküyor'), deep: Wd('l08', 'derinde'),
     silent0: L.l09.t0, probe: L.l10.t0, note: Wd('l10', 'sığınaktayız'), rescue: Wd('l11', 'kapsülle'), cmp0: L.l12.t0 - 0.1,
     drill: Wd('l13', 'matkap'), hero: L.l14.t0 - 0.04, after: L.l15.t0, ask: L.l16.t0, loop0: tl.loop0,
   };
-  T.plateA = T.fall - 0.6; T.plateB = T.collapse - 0.5; T.rescued = L.l11.end + 0.6; T.stamp0 = L.l13.end + 0.05;
+  T.plateA = T.fall - 0.6; T.plateB = T.collapse - 0.5; T.rescued = L.l11.end + 0.6; T.stamp0 = T.drill + 0.45;
   return T;
 }
 
@@ -54,7 +54,7 @@ export async function makeKayaRenderer(ep, canvas) {
   // dağ: tohumlu gürültüyle bozulmuş iç içe eş yükselti halkaları (dikey uzanan sırt)
   const ridge = Array.from({ length: 7 }, (_, k) => { const n = 64, pts = []; const ph = rnd() * 6; for (let i = 0; i < n; i++) { const a = (i / n) * Math.PI * 2, rr = 1 - k * 0.13; const w = (150 + 18 * Math.sin(a * 3 + ph) + 10 * Math.sin(a * 7 + ph * 2)) * rr, h = (300 + 30 * Math.sin(a * 2 + ph)) * rr; pts.push([540 + Math.cos(a) * w, 1060 + Math.sin(a) * h]); } return pts; });
   const VA = { x: 170, y: 1060 }, VB = { x: 910, y: 1060 }, CUT = { x0: 380, x1: 700, y: 1060 };
-  const loopPath = [[VA.x, VA.y], [230, 1220], [360, 1400], [540, 1430], [720, 1400], [850, 1220], [VB.x, VB.y]];
+  const loopPath = [[VA.x, VA.y], [230, 1200], [360, 1330], [540, 1352], [720, 1330], [850, 1200], [VB.x, VB.y]];
   function polyLen(P, u) { const segL = []; let tot = 0; for (let i = 1; i < P.length; i++) { const l = Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]); segL.push(l); tot += l; } let d = tot * u; ctx.moveTo(P[0][0], P[0][1]); for (let i = 1; i < P.length; i++) { if (d >= segL[i - 1]) { ctx.lineTo(P[i][0], P[i][1]); d -= segL[i - 1]; } else { const f = d / segL[i - 1]; ctx.lineTo(lerp(P[i - 1][0], P[i][0], f), lerp(P[i - 1][1], P[i][1], f)); break; } } }
   function plateMountain(t, k) {
     if (k <= 0) return null;
@@ -78,20 +78,20 @@ export async function makeKayaRenderer(ep, canvas) {
     }
     // eski yol: dağı dolanır (55 km)
     const ru = ease.state(seg(t, T.road, 1.2));
-    if (ru > 0) { ctx.beginPath(); polyLen(loopPath, ru); ctx.setLineDash([12, 9]); ctx.lineWidth = 4; ctx.strokeStyle = C.ink; ctx.stroke(); ctx.setLineDash([]); if (ru > 0.6) { setFont(ctx, F.mono(34)); ctx.fillStyle = C.paper; ctx.fillRect(470, 1440, 140, 44); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.fillText('55 km', 540, 1474); } }
+    if (ru > 0) { ctx.beginPath(); polyLen(loopPath, ru); ctx.setLineDash([12, 9]); ctx.lineWidth = 4; ctx.strokeStyle = t >= T.km15 ? C.graphite : C.ink; ctx.stroke(); ctx.setLineDash([]); if (ru > 0.6) { setFont(ctx, F.mono(34)); ctx.fillStyle = C.paper; ctx.fillRect(470, 1360, 140, 44); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.fillText('55 km', 540, 1394); } }
     // yarık: 22 yılda dağın içinden ilerler
     const cu = cutU(t), cx1 = lerp(CUT.x0, CUT.x1, cu);
     if (cu > 0) { ctx.fillStyle = C.paper; ctx.fillRect(CUT.x0, CUT.y - 16, cx1 - CUT.x0, 32); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.moveTo(CUT.x0, CUT.y - 16); ctx.lineTo(cx1, CUT.y - 16); ctx.moveTo(CUT.x0, CUT.y + 16); ctx.lineTo(cx1, CUT.y + 16); ctx.stroke(); }
     // yeni yol (15 km)
-    if (t >= T.km15 - 0.2) { const u = ease.state(seg(t, T.km15 - 0.2, 0.7)); ctx.beginPath(); ctx.moveTo(VA.x + 30, VA.y); ctx.lineTo(lerp(VA.x + 30, VB.x - 30, u), VB.y); ctx.lineWidth = 6; ctx.strokeStyle = C.ink; ctx.stroke(); if (u > 0.8) { setFont(ctx, F.mono(34)); ctx.fillStyle = C.paper; ctx.fillRect(470, 1090, 140, 44); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.fillText('15 km', 540, 1124); } }
+    if (t >= T.km15 - 0.2) { const u = ease.state(seg(t, T.km15 - 0.2, 0.7)); ctx.beginPath(); ctx.moveTo(VA.x + 30, VA.y); ctx.lineTo(lerp(VA.x + 30, VB.x - 30, u), VB.y); ctx.lineWidth = 6; ctx.strokeStyle = C.ink; ctx.stroke(); if (u > 0.8) { setFont(ctx, F.mono(34)); ctx.textAlign = 'center'; ctx.fillStyle = C.paper; ctx.fillRect(220, 1090, 140, 44); ctx.fillRect(470, 1090, 140, 44); ctx.fillStyle = C.ink; ctx.fillText('15 km', 290, 1124); ctx.fillText('110 m', 540, 1124); } }
     // Manjhi yarığın ucunda vurur
     let at = null;
-    if (t >= T.start && t < T.km15) { ctx.save(); ctx.translate(cx1 - 18, CUT.y + 14); ctx.fillStyle = C.paper; ctx.beginPath(); ctx.ellipse(0, -36, 34, 44, 0, 0, Math.PI * 2); ctx.fill(); drawManjhi(ctx, MANJHI_CARD, { swing: Math.abs(Math.sin(t * Math.PI * 1.6)) }, 90); ctx.restore(); at = [cx1 - 18, CUT.y]; }
+    if (t >= T.start && t < T.km15) { ctx.save(); ctx.translate(cx1 - 30, CUT.y + 14); ctx.fillStyle = C.paper; ctx.beginPath(); ctx.ellipse(0, -36, 34, 44, 0, 0, Math.PI * 2); ctx.fill(); drawManjhi(ctx, MANJHI_CARD, { swing: Math.abs(Math.sin(t * Math.PI * 1.6)) }, 90); ctx.restore(); at = [cx1 - 18, CUT.y]; }
     ctx.restore();
     return at;
   }
   // dikey kesit (Şili)
-  const men = Array.from({ length: 33 }, (_, i) => [440 + (i % 11) * 18 + (Math.floor(i / 11) % 2) * 9, SH.y1 - 10 - Math.floor(i / 11) * 13]);
+  const men = Array.from({ length: 33 }, (_, i) => [430 + (i % 11) * 19 + (Math.floor(i / 11) % 2) * 9, SH.y1 - 10 - Math.floor(i / 11) * 13]);
   const burj = [[0, 0], [0, -1], [0.06, -1], [0.06, -0.86], [0.12, -0.86], [0.12, -0.66], [0.2, -0.66], [0.2, -0.42], [0.3, -0.42], [0.3, -0.2], [0.4, -0.2], [0.4, 0]];
   function plateSection(t, k) {
     if (k <= 0) return null;
@@ -101,28 +101,29 @@ export async function makeKayaRenderer(ep, canvas) {
     // levha boyunca sığınağa doğru yavaş yaklaşma (%10)
     { const z = 1 + 0.16 * seg(t, T.plateB + 0.75, T.drill - T.plateB - 0.75); ctx.translate(520, 1300); ctx.scale(z, z); ctx.translate(-520, -1300); }
     // kaya: çapraz tarama; yüzey çizgisi; çöl
-    ctx.save(); ctx.beginPath(); ctx.rect(0, SH.y0, W, 1920 - SH.y0); ctx.clip(); ctx.strokeStyle = 'rgba(28,27,24,0.3)'; ctx.lineWidth = 1; for (let d = -1400; d < 1400; d += 8) { ctx.beginPath(); ctx.moveTo(d, SH.y0); ctx.lineTo(d + 1200, SH.y0 + 1200); ctx.stroke(); } ctx.restore();
-    ctx.beginPath(); ctx.moveTo(0, SH.y0); ctx.lineTo(W, SH.y0); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke();
+    ctx.save(); ctx.beginPath(); ctx.rect(0, SH.y0, 760, 1920 - SH.y0); ctx.clip(); ctx.strokeStyle = 'rgba(28,27,24,0.3)'; ctx.lineWidth = 1; for (let d = -1400; d < 1400; d += 8) { ctx.beginPath(); ctx.moveTo(d, SH.y0); ctx.lineTo(d + 1200, SH.y0 + 1200); ctx.stroke(); } ctx.restore();
+    ctx.beginPath(); ctx.moveTo(0, SH.y0); ctx.lineTo(760, SH.y0); ctx.lineTo(760, 1920); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke();
     // Burç Halife: sığınak seviyesinden yukarı (828 m) — derinliğin ölçeği
-    ctx.save(); ctx.translate(800, SH.y1); ctx.scale(150, 828 * PXM); ctx.beginPath(); burj.forEach((p, i) => (i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]))); ctx.closePath(); ctx.restore();
+    ctx.save(); ctx.translate(670, SH.y1); ctx.scale(150, 828 * PXM); ctx.beginPath(); burj.forEach((p, i) => (i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]))); ctx.closePath(); ctx.restore();
     ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 2; ctx.setLineDash([6, 5]); ctx.strokeStyle = C.graphite; ctx.stroke(); ctx.setLineDash([]);
     // etiket kesitin içinde (kulenin tepesi yüzeyi 128 m aşar; üst bantta kalmasın)
-    setFont(ctx, F.mono(26)); ctx.textAlign = 'right'; const bl = 'BURÇ HALİFE 828 m', bw = ctx.measureText(bl).width; ctx.fillStyle = C.paper; ctx.fillRect(792 - bw - 10, SH.y0 + 14, bw + 12, 32); ctx.fillStyle = C.graphite; ctx.fillText(bl, 788, SH.y0 + 38);
+    setFont(ctx, F.mono(28)); ctx.textAlign = 'left'; ctx.fillStyle = C.graphite; ctx.fillText('BURÇ HALİFE', 778, SH.y0 + 66); ctx.fillText('828 m', 778, SH.y0 + 98);
     // derinlik cetveli
-    ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(SAFE.x0, SH.y0); ctx.lineTo(SAFE.x0, SH.y1); ctx.stroke();
-    setFont(ctx, F.mono(28)); ctx.textAlign = 'left';
-    for (let m = 0; m <= 700; m += 100) { const y = SH.y0 + m * PXM; ctx.beginPath(); ctx.moveTo(SAFE.x0, y); ctx.lineTo(SAFE.x0 + 16, y); ctx.stroke(); if (m % 200 === 0 || m === 700) { ctx.fillStyle = C.paper; ctx.fillRect(SAFE.x0 + 22, y - 22, 100, 30); ctx.fillStyle = C.ink; ctx.fillText(m + ' m', SAFE.x0 + 26, y + 2); } }
+    const AX = 760; ctx.strokeStyle = C.ink; ctx.lineWidth = 2;
+    setFont(ctx, F.mono(30)); ctx.textAlign = 'left';
+    for (let m = 0; m <= 700; m += 100) { const y = SH.y0 + m * PXM; ctx.beginPath(); ctx.moveTo(AX, y); ctx.lineTo(AX + 16, y); ctx.stroke(); if (m % 200 === 0 && m <= 200) { ctx.fillStyle = C.ink; ctx.fillText(m + ' m', AX + 24, y + 10); } }
     // maden kuyusu (çöken galeri) ve sığınak
-    ctx.fillStyle = C.paper; ctx.fillRect(300, SH.y0, 26, SH.y1 - SH.y0 - 20);
-    ctx.beginPath(); ctx.moveTo(300, SH.y0); ctx.lineTo(300, SH.y1 - 20); ctx.moveTo(326, SH.y0); ctx.lineTo(326, SH.y1 - 20); ctx.lineWidth = 2; ctx.strokeStyle = C.ink; ctx.stroke();
-    if (t >= T.collapse) { const u = ease.enter(seg(t, T.collapse, 0.6)); ctx.fillStyle = C.ink; for (let i = 0; i < 9; i++) { const y = SH.y0 + 240 + i * 22 * u; ctx.beginPath(); ctx.moveTo(296, y); ctx.lineTo(330, y + 10); ctx.lineTo(322, y + 18); ctx.lineTo(298, y + 12); ctx.closePath(); ctx.fill(); } }
-    ctx.beginPath(); ctx.roundRect(410, SH.y1 - 52, 230, 60, 10); ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 2.5; ctx.strokeStyle = C.ink; ctx.stroke();
+    ctx.fillStyle = C.paper; ctx.fillRect(380, SH.y0, 26, SH.y1 - SH.y0 - 20);
+    ctx.beginPath(); ctx.moveTo(380, SH.y0); ctx.lineTo(380, SH.y1 - 20); ctx.moveTo(406, SH.y0); ctx.lineTo(406, SH.y1 - 20); ctx.lineWidth = 2; ctx.strokeStyle = C.ink; ctx.stroke();
+    if (t >= T.collapse) { const u = ease.enter(seg(t, T.collapse, 0.6)); ctx.fillStyle = C.ink; for (let i = 0; i < 9; i++) { const y = SH.y0 + 240 + i * 22 * u; ctx.beginPath(); ctx.moveTo(376, y); ctx.lineTo(410, y + 10); ctx.lineTo(402, y + 18); ctx.lineTo(378, y + 12); ctx.closePath(); ctx.fill(); } }
+    ctx.beginPath(); ctx.roundRect(400, SH.y1 - 52, 250, 60, 10); ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 2.5; ctx.strokeStyle = C.ink; ctx.stroke();
+    setFont(ctx, F.mono(24)); ctx.fillStyle = C.graphite; ctx.textAlign = 'center'; ctx.fillText('SIĞINAK (ölçeksiz)', 525, SH.y1 + 34);
     const saved = t < T.rescue ? 0 : Math.floor(33 * ease.state(seg(t, T.rescue, T.rescued - T.rescue)));
     if (t >= T.deep) men.forEach(([x, y], i) => { if (i < saved) return; ctx.beginPath(); ctx.arc(x, y - 4, 5, 0, Math.PI * 2); ctx.fillStyle = C.ink; ctx.fill(); });
     // başlık çerçevesi (yüzeyde)
-    ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.moveTo(290, SH.y0); ctx.lineTo(313, SH.y0 - 70); ctx.lineTo(336, SH.y0); ctx.moveTo(313, SH.y0 - 70); ctx.lineTo(313, SH.y0); ctx.stroke();
+    ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.moveTo(370, SH.y0); ctx.lineTo(393, SH.y0 - 70); ctx.lineTo(416, SH.y0); ctx.moveTo(393, SH.y0 - 70); ctx.lineTo(393, SH.y0); ctx.stroke();
     // sondaj ucu: yüzeyden sığınağa (17. gün), not yukarı çıkar
-    const px = 520;
+    const px = 560;
     let at = [525, SH.y1 - 22];
     if (t >= T.silent0) {
       const u = ease.state(seg(t, T.silent0, T.probe - T.silent0)), yb = lerp(SH.y0, SH.y1 - 52, u);
@@ -136,7 +137,7 @@ export async function makeKayaRenderer(ep, canvas) {
   }
 
   // ——— izometrik kaya blokları ———
-  const ISO = { x0: 110, y0: 1200, s: 7.0 };   // 1 m = 7 px
+  const ISO = { x0: 150, y0: 1090, s: 10 };   // 1 m = 12,2 px (küp 77 px)
   const iso = (x, y, z) => [ISO.x0 + (x + y * 0.55) * ISO.s, ISO.y0 - (z + y * 0.32) * ISO.s];
   function box(x, y, z, a, b, c, fill, ink = C.ink, lw = 2) {
     const P = (i, j, k) => iso(x + i * a, y + j * b, z + k * c);
@@ -144,31 +145,32 @@ export async function makeKayaRenderer(ep, canvas) {
     faces.forEach((f, i) => { ctx.beginPath(); f.forEach((p, j) => (j ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]))); ctx.closePath(); ctx.fillStyle = fill[i]; ctx.fill(); ctx.lineWidth = lw; ctx.strokeStyle = ink; ctx.stroke(); });
   }
   function blocks(t) {
-    if (t < T.drill - 0.6 || t >= T.ask + 0.6) return;
+    if (t < T.drill - 0.6 || t >= T.loop0 + 0.6) return;
     // soru anında levha çekilir (etiketler bloğa binmesin)
-    const k = ease.state(seg(t, T.drill - 0.6, 0.6)) * (1 - ease.state(seg(t, T.ask, 0.6)));
+    const k = ease.state(seg(t, T.drill - 0.6, 0.6)) * (1 - ease.state(seg(t, T.loop0, 0.6)));
     ctx.fillStyle = C.paper; ctx.fillRect(0, STAGE_TOP, W, (1920 - STAGE_TOP) * k);
     if (k < 0.9) return;
     // kıyas boyunca bloğa doğru yavaş yaklaşma (%10): sahne hiçbir karede donmaz
-    ctx.save(); const z = 1 + 0.16 * seg(t, T.drill, T.ask - T.drill), zc = ISO.x0 + 385;
+    ctx.save(); const z = 1 + 0.14 * seg(t, T.drill, T.loop0 - T.drill), zc = ISO.x0 + 340;
     ctx.translate(zc, ISO.y0); ctx.scale(z, z); ctx.translate(-zc, -ISO.y0);
-    const M = Fx.manjhi, cube = Math.cbrt(Fx.chile.holeVolumeM3);
-    // Manjhi'nin yarığı: 110 × 9,1 × 7,7 m (kesik çizgi taslak; doruğa kadar boş)
-    const hero = t >= T.hero - 0.02;
-    // yarık bloğu soru cümlesinde ölçülerek çizilir: soldan 110 m'ye uzar
-    const len = M.lenM * ease.state(seg(t, T.drill - 0.1, Math.max(1.2, T.stamp0 - T.drill)));
-    box(0, 0, 0, Math.max(0.5, len), M.widthM, M.depthM, hero ? ['rgba(224,57,28,0.85)', 'rgba(224,57,28,0.7)', 'rgba(224,57,28,0.55)'] : ['rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)'], hero ? C.red : C.graphite, 2);
-    setFont(ctx, F.mono(30)); ctx.textAlign = 'left'; ctx.fillStyle = hero ? C.red : C.graphite;
-    const lp = iso(0, 0, M.depthM + 4); ctx.fillText('MANJHI ≈ 7.700 m³', lp[0] + 80, lp[1] - 8);
-    // matkap küpü (250 m³ ≈ 6,3 m kenar): önce yanda tek küp, sonra yarığa basılır
-    if (t >= T.drill - 0.2) {
-      const c0 = ease.enter(seg(t, T.drill - 0.2, 0.5));
-      // matkap küpü bloğun üstünde (büyüteç sol altta onu örtmesin)
-      if (c0 > 0) { const zz = M.depthM + 12 + 6 * (1 - c0), cp = iso(0, 0, zz + cube); box(0, 0, zz, cube, cube, cube, ['#F4EEE1', '#E6DCC6', '#FFFFFF'], C.ink, 2.5); setFont(ctx, F.mono(28)); ctx.fillStyle = C.ink; ctx.textAlign = 'left'; ctx.fillText('MATKAP: 250 m³', cp[0] + cube * ISO.s + 30, cp[1] + 30); }
-      const u = clamp01((t - T.stamp0) / Math.max(0.6, T.hero - T.stamp0)), n = Math.min(31, Math.floor(31 * u * u));
-      const per = Math.floor(M.lenM / cube);   // bir sıraya sığan küp
-      for (let i = 0; i < n; i++) { const row = Math.floor(i / per), col = i % per; box(col * cube, row * (M.widthM - cube), 0, cube, cube, Math.min(cube, M.depthM), hero ? ['rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)'] : ['#F4EEE1', '#E6DCC6', '#FFFFFF'], hero ? C.paper : C.ink, 1.6); }
-      if (n > 0) { const ep2 = iso(M.lenM, 0, M.depthM); setFont(ctx, F.mono(40)); ctx.fillStyle = hero ? C.red : C.ink; ctx.textAlign = 'right'; ctx.fillText('×' + (hero ? 30 : n), SAFE.x1, ep2[1] - 56); }
+    const cube = Math.cbrt(Fx.chile.holeVolumeM3), hero = t >= T.hero - 0.02, red = hero && t < T.ask;
+    // tek matkap küpü solda üstte; Manjhi'nin kayası aynı küplerden bir duvar: 31 küp (8 × 4, son sırada 7)
+    const WALL = { x: 3.0, cols: 8, n: 31 };
+    const c0 = ease.enter(seg(t, T.drill - 0.2, 0.5));
+    if (c0 > 0) {
+      // matkap küpü duvarın sol üstünde, yazısı sağında
+      const cz = 4 * cube + 3 + 4 * (1 - c0); box(WALL.x, 0, cz, cube, cube, cube, ['#F4EEE1', '#E6DCC6', '#FFFFFF'], C.ink, 2.5);
+      const cp = iso(WALL.x + cube, 0, cz + cube * 0.5); setFont(ctx, F.mono(30)); ctx.fillStyle = C.ink; ctx.textAlign = 'left'; ctx.fillText('MATKAP: 1 küp = 250 m³', cp[0] + 34, cp[1] + 10);
+    }
+    // basılan küpler: hızlanarak (u·(0,35 + 0,65u)), doruktan önceki sessizlikte tamamlanır
+    const u = clamp01((t - T.stamp0) / Math.max(0.6, T.hero - T.stamp0)), n = hero ? WALL.n : Math.min(WALL.n, Math.floor(WALL.n * u * (0.35 + 0.65 * u)));
+    for (let i = 0; i < n; i++) {
+      const col = i % WALL.cols, row = Math.floor(i / WALL.cols);
+      box(WALL.x + col * cube, 0, row * cube, cube, cube, cube, red ? ['rgba(224,57,28,0.88)', 'rgba(224,57,28,0.72)', 'rgba(224,57,28,0.58)'] : ['#F4EEE1', '#E6DCC6', '#FFFFFF'], red ? C.paper : C.ink, 1.8);
+    }
+    if (n > 0) {
+      const ep2 = iso(WALL.x + WALL.cols * cube, 0, 4 * cube);
+      const lp = iso(WALL.x, 0, 0); if (t < T.ask) setFont(ctx, F.mono(38)); else ctx.font = '0px a'; ctx.fillStyle = red ? C.red : C.ink; ctx.textAlign = 'left'; ctx.fillText(nf0.format(n) + ' küp' + (hero ? ' ≈ 7.700 m³' : ''), lp[0], lp[1] + 46); void ep2;
     }
     ctx.restore();
   }
@@ -213,7 +215,7 @@ export async function makeKayaRenderer(ep, canvas) {
   const reacts = [[0, 'ayakta', 'notr'], [T.fall, 'sasirma', 'saskin'], [T.fall + 1.4, 'ayakta', 'dusunceli'], [T.years0, 'ayakta', 'sayiyor'], [T.km15, 'sasirma', 'mutlu'],
     [T.collapse, 'sasirma', 'saskin'], [T.collapse + 1.6, 'ayakta', 'dusunceli'], [T.note, 'sasirma', 'mutlu'], [T.note + 1.8, 'ayakta', 'notr'],
     [T.cmp0, 'ayakta', 'dusunceli'], [T.hero, 'sasirma', 'saskin'], [T.hero + 1.8, 'ayakta', 'mutlu'], [T.ask, 'isaret', 'notr'], [T.loop0 + 0.5, 'ayakta', 'notr']];
-  const bubbles = [[L.l05.t0 + 0.3, L.l05.t0 + 1.8, 'Deli mi?!'], [T.note + 0.2, T.note + 1.8, 'Yaşıyorlar!'], [T.hero + 0.1, T.hero + 1.8, '30 kat mı?!']];
+  const bubbles = [[L.l05.t0 + 0.3, L.l05.t0 + 1.8, 'Deli mi?!'], [T.note + 0.2, T.note + 1.8, 'Yaşıyorlar!'], [T.hero + 0.1, T.hero + 1.8, '31 küp mü?!']];
   function sifir(t) {
     let i = 0; for (let k = 0; k < reacts.length; k++) if (t >= reacts[k][0]) i = k;
     const cur = reacts[i], prev = reacts[Math.max(0, i - 1)], u = i === 0 ? 1 : ease.state(seg(t, cur[0], 0.28));
@@ -268,13 +270,13 @@ export async function makeKayaRenderer(ep, canvas) {
       return;
     }
     if (t < T.cmp0) {
-      const day = t < T.silent0 ? 0 : t < T.probe ? Math.floor(17 * seg(t, T.silent0, T.probe - T.silent0)) : t < T.rescue ? 17 : 69;
+      const day = t < T.silent0 ? 0 : t < T.probe ? Math.floor(17 * seg(t, T.silent0, T.probe - T.silent0)) : t < L.l11.t0 - 0.06 ? 17 : 69;
       const saved = t < T.rescue ? 0 : Math.floor(33 * ease.state(seg(t, T.rescue, T.rescued - T.rescue)));
       row({ label: '33 MADENCİ · ŞİLİ', num: String(day), unit: 'gün', right1: '700 m DERİNDE', right2: t >= T.rescue ? 'KURTARILAN: ' + saved : t >= T.note ? 'HEPSİ HAYATTA' : t >= T.silent0 ? 'SES YOK' : 'SAN JOSÉ MADENİ', p: Math.max(0.35, ease.enter(seg(t, L.l07.t0 - 0.06, 0.35))) });
       return;
     }
     if (t < T.hero) { row({ label: 'AYNI KAYAYLA · MATKAP', num: t >= T.drill ? '250' : '0', unit: 'm³', right1: 'MANJHI: ?', right2: '', p: ease.enter(seg(t, T.cmp0, 0.35)) }); return; }
-    if (t < T.ask) { row({ label: 'MANJHI, ELLERİYLE', num: '7.700', unit: 'm³', red: true, right1: 'MATKAP: 250 m³', right2: '≈ 30 KAT' }); return; }
+    if (t < T.ask) { row({ label: 'MANJHI, ELLERİYLE', num: '7.700', unit: 'm³', red: true, right1: 'MATKAP: 250 m³', right2: '30 KATTAN FAZLA' }); return; }
     const p = ease.enter(seg(t, T.ask, 0.35)) * (1 - ease.exit(seg(t, T.loop0 + 0.1, 0.2)));
     setFont(ctx, F.head(68)); revealText(ctx, 'Manjhi mi, madenciler mi?', SAFE.x0, 670, 68, p, C.ink);
   }

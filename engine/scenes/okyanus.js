@@ -31,7 +31,7 @@ export function okyanusTimes(tl) {
     sail: Wd('l02', 'açılıyor'), storm: Wd('l03', 'fırtına'), drift0: Wd('l03', 'sürükleniyor'), eat: L.l04.t0, friend: Wd('l05', 'arkadaşını'),
     land: Wd('l06', 'adaya'), whip0: L.l06.end + 0.25, whip1: L.l07.t0 + 0.6,
     capsize: Wd('l08', 'alabora'), sunk: Wd('l08', 'batıyor', 't1') + 0.5, pocket: Wd('l09', 'hava'), dark: L.l10.t0,
-    diver: L.l11.t0, hand: Wd('l11', 'el'), grip: Wd('l12', 'tutuyor'), cmp0: L.l13.t0 - 0.1, fill0: L.l14.t0, fill1: Wd('l14', 'sürüklendi', 't1'),
+    diver: L.l11.t0, hand: Wd('l11', 'el'), grip: Wd('l12', 'tutuyor'), cmp0: L.l13.t0 - 0.1, fill0: L.l13.t0 + 0.7, fill1: Wd('l14', 'sürüklendi', 't1'),
     hero: L.l15.t0 - 0.04, after: L.l16.t0, ask: L.l17.t0, loop0: tl.loop0,
   };
   T.sect0 = T.capsize - 0.5;
@@ -47,7 +47,9 @@ export async function makeOkyanusRenderer(ep, canvas) {
 
   // ——— takvim: gün sayısı yolculuk boyunca doğrusal; tekne aynı oranla ilerler ———
   // açılıştan fırtınaya kadar ilk gün (kısa av); sürüklenme 'sürükleniyor' kelimesinde başlar, inişte 438
-  const dayU = t => t < T.drift0 ? seg(t, T.sail, T.drift0 - T.sail) / Fx.alvarenga.days : lerp(1 / Fx.alvarenga.days, 1, seg(t, T.drift0, T.land - T.drift0));
+  // takvim anlatıma bağlı: açılış → 1. gün; 'arkadaşını kaybediyor' → ~120. gün (yaklaşık 4. ay); '438 gün sonra' → 438
+  const D438 = Fx.alvarenga.days;
+  const dayU = t => t < T.drift0 ? seg(t, T.sail, T.drift0 - T.sail) / D438 : t < T.friend ? lerp(1, 120, seg(t, T.drift0, T.friend - T.drift0)) / D438 : lerp(120, D438, seg(t, T.friend, L.l06.t0 + 0.15 - T.friend)) / D438;
   const boatS = t => DR.at(-1).km * dayU(t);
   const boatP = t => pointAt(DR, boatS(t));
   const hours = t => Fx.okene.hours * seg(t, T.pocket, L.l11.t0 - T.pocket);   // "60 saat sonra" cümlesinde 60
@@ -59,7 +61,7 @@ export async function makeOkyanusRenderer(ep, canvas) {
     { t0: T.sail - 0.3, t1: T.sail + 0.9, to: t => ({ c: [-95, 14], r: 1350 * (1 + 0.06 * seg(t, T.sail + 0.9, T.drift0 - T.sail)), cy: 1080 }) },
     { t0: T.drift0 - 0.2, t1: T.drift0 + 1.4, to: t => ({ c: geoInterpolate(boatP(t - 0.4), [-150, 10])(0.35), r: 560, cy: 1090 }) },
     { t0: T.land - 0.9, t1: T.land + 0.4, to: t => ({ c: [166, 6], r: 1100 * (1 + 0.06 * seg(t, T.land + 0.4, T.whip0 - T.land)), cy: 1080 }) },
-    { t0: T.whip0, t1: T.whip1, to: t => ({ c: [6, 5], r: 1700 * (1 + 0.15 * seg(t, T.whip1, T.sect0 - T.whip1)), cy: 1080 }) },
+    { t0: T.whip0, t1: T.whip1, to: t => ({ c: [6 - 2.2 * seg(t, T.whip1, T.sect0 - T.whip1), 5 - 0.8 * seg(t, T.whip1, T.sect0 - T.whip1)], r: 1700 * (1 + 0.18 * seg(t, T.whip1, T.sect0 - T.whip1)), cy: 1080 }) },
     { t0: T.loop0, t1: D - 0.08, to: () => S0 },
   ];
   const cam = t => camAt(t, S0, segs);
@@ -105,7 +107,6 @@ export async function makeOkyanusRenderer(ep, canvas) {
       ctx.save(); ctx.beginPath(); ctx.rect(PK.x - 26, PK.y - 16, 52, 30); ctx.fillStyle = C.ink; ctx.fill();
       ctx.fillStyle = C.paper; ctx.fillRect(PK.x - 22, PK.y - 12, 44, 9 * pk); ctx.restore();
       ctx.beginPath(); ctx.arc(PK.x, PK.y, 38 + 6 * (1 - pk), 0, Math.PI * 2); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke();
-      if (t < T.hand - 0.8) { setFont(ctx, F.mono(30)); ctx.fillStyle = C.paper; const lbl = 'HAVA CEBİ · 1,2 m', tw = ctx.measureText(lbl).width; ctx.fillRect(PK.x - 52 - tw, PK.y - 30, tw + 12, 40); ctx.fillStyle = C.ink; ctx.fillText(lbl, PK.x - 46 - tw, PK.y); }
     }
     // dalgıç: yüzeyden iner, lambasının ışığı karanlığı yarar
     if (t >= T.diver - 0.2 && t < T.cmp0) {
@@ -119,6 +120,7 @@ export async function makeOkyanusRenderer(ep, canvas) {
       ctx.save(); ctx.translate(dx, dy); drawDiver(ctx, DIVER_CARD, { phase: t * 1.4 }, 160); ctx.restore();
       ctx.beginPath(); ctx.moveTo(dx - 10, SEA.y0); ctx.lineTo(dx - 4, dy - 8); ctx.setLineDash([6, 6]); ctx.lineWidth = 1.5; ctx.strokeStyle = C.graphite; ctx.stroke(); ctx.setLineDash([]);
     }
+      if (pk > 0 && t >= T.sunk - 0.2 && t < T.hand - 0.8) { setFont(ctx, F.mono(30)); ctx.fillStyle = C.paper; const lbl = 'HAVA CEBİ · 1,2 m', tw = ctx.measureText(lbl).width; ctx.fillRect(PK.x - 102 - tw, PK.y - 70, tw + 12, 40); ctx.fillStyle = C.ink; ctx.fillText(lbl, PK.x - 96 - tw, PK.y - 40); }
     ctx.restore();
     return PK;
   }
@@ -126,8 +128,8 @@ export async function makeOkyanusRenderer(ep, canvas) {
   // ——— takvim ızgarası: 438 hücre (24 × 19), Alvarenga mürekkep, Okene kırmızı 2,5 hücre ———
   const GR = { cols: 22, cell: 28, gap: 4, x0: SAFE.x0, y0: 790 };   // 22 × 20: 438 hücrenin hepsi, x 90–794, y 790–1430
   function calendar(t) {
-    if (t < T.cmp0 || t >= T.loop0 + 0.7) return;
-    const k = ease.state(seg(t, T.cmp0, 0.6)) * (1 - ease.state(seg(t, T.loop0, 0.7)));
+    if (t < T.cmp0 || t >= T.ask + 0.6) return;
+    const k = ease.state(seg(t, T.cmp0, 0.6)) * (1 - ease.state(seg(t, T.ask, 0.6)));
     ctx.save(); ctx.globalAlpha = 1;
     ctx.fillStyle = C.paper; ctx.fillRect(0, STAGE_TOP, W, (1920 - STAGE_TOP) * k);
     // kıyas boyunca kırmızı hücrelere doğru yavaş yaklaşma (%8): takvim hiçbir karede donmaz
@@ -142,7 +144,7 @@ export async function makeOkyanusRenderer(ep, canvas) {
       ctx.lineWidth = 1.5; ctx.strokeStyle = C.graphite; ctx.strokeRect(x + 0.5, y + 0.5, GR.cell, GR.cell);
       if (i < n) { ctx.fillStyle = C.ink; ctx.fillRect(x + 3, y + 3, GR.cell - 5, GR.cell - 5); }
     }
-    if (t >= T.hero - 0.02 && t < T.loop0) {
+    if (t >= T.hero - 0.02 && t < T.ask) {
       // DORUK: Okene'nin 60 saati = 2,5 gün: iki tam hücre ve yarım hücre kırmızı
       const pop = spring(t - T.hero, 120, 24);
       for (let i = 0; i < 3; i++) {
@@ -205,7 +207,7 @@ export async function makeOkyanusRenderer(ep, canvas) {
   const reacts = [[0, 'ayakta', 'notr'], [T.storm, 'sasirma', 'saskin'], [T.storm + 1.4, 'ayakta', 'notr'], [T.friend, 'ayakta', 'dusunceli'], [T.land, 'ayakta', 'mutlu'],
     [T.capsize, 'sasirma', 'saskin'], [T.capsize + 1.6, 'ayakta', 'dusunceli'], [T.grip, 'sasirma', 'saskin'], [T.grip + 1.8, 'ayakta', 'mutlu'],
     [T.cmp0, 'ayakta', 'dusunceli'], [T.hero, 'sasirma', 'saskin'], [T.hero + 1.8, 'ayakta', 'dusunceli'], [T.ask, 'isaret', 'notr'], [T.loop0 + 0.5, 'ayakta', 'notr']];
-  const bubbles = [[T.land + 0.1, Math.min(T.land + 1.6, T.whip0 + 0.3), '438 gün!'], [T.grip + 0.1, T.grip + 1.7, 'Yaşıyor!'], [T.hero + 0.1, T.hero + 1.8, '2,5 gün mü?!']];
+  const bubbles = [[T.land + 0.1, Math.min(T.land + 1.6, T.whip0 + 0.3), '438 gün!'], [T.grip + 0.1, T.grip + 1.7, 'Yaşıyor!'], [T.hero + 0.1, T.hero + 1.8, '2,5 gün?!']];
   function sifir(t) {
     let i = 0; for (let k = 0; k < reacts.length; k++) if (t >= reacts[k][0]) i = k;
     const cur = reacts[i], prev = reacts[Math.max(0, i - 1)], u = i === 0 ? 1 : ease.state(seg(t, cur[0], 0.28));
@@ -217,7 +219,7 @@ export async function makeOkyanusRenderer(ep, canvas) {
     for (const [a, b, text] of bubbles) {
       if (t < a || t > b) continue;
       const k = ease.enter(seg(t, a, 0.25)), fade = 1 - seg(t, b - 0.2, 0.2);
-      setFont(ctx, F.name(34)); const w = ctx.measureText(text).width + 36, x = SIFIR.x - 20 - w, y = SIFIR.y - 310;
+      setFont(ctx, F.name(34)); const w = ctx.measureText(text).width + 36, x = text === '2,5 gün?!' ? 796 : SIFIR.x - 20 - w, y = SIFIR.y - 310;
       ctx.save(); ctx.globalAlpha = fade; ctx.translate(x + w, y + 30); ctx.scale(k, k); ctx.translate(-(x + w), -(y + 30));
       ctx.beginPath(); ctx.roundRect(x, y - 34, w, 58, 29); ctx.moveTo(x + w - 30, y + 24); ctx.lineTo(x + w + 6, y + 50); ctx.lineTo(x + w - 54, y + 24);
       ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke();
@@ -257,7 +259,7 @@ export async function makeOkyanusRenderer(ep, canvas) {
     if (t < L.l02.t0 - 0.05 || t >= T.loop0 + 0.3) return;
     if (t < L.l07.t0 - 0.06) {
       const d = Math.floor(Fx.alvarenga.days * dayU(t)), km = Math.round(Fx.alvarenga.km * dayU(t) / 10) * 10;
-      row({ label: 'ALVARENGA · BALIKÇI', num: nf0.format(t >= T.land ? 438 : d), unit: 'gün', right1: nf0.format(t >= T.land ? Fx.alvarenga.km : km) + ' km', right2: t >= T.land ? 'MARŞAL ADALARI' : t >= T.friend ? 'TEK BAŞINA' : t >= T.drift0 ? 'SÜRÜKLENİYOR' : 'MEKSİKA', p: Math.max(0.35, ease.enter(seg(t, L.l02.t0 - 0.05, 0.35))) });
+      row({ label: 'ALVARENGA · BALIKÇI', num: nf0.format(t >= L.l06.t0 ? 438 : d), unit: 'gün', right1: nf0.format(t >= L.l06.t0 ? Fx.alvarenga.km : km) + ' km', right2: t >= T.land ? 'MARŞAL ADALARI' : t >= T.friend ? 'TEK BAŞINA' : t >= T.drift0 ? 'SÜRÜKLENİYOR' : 'MEKSİKA', p: Math.max(0.35, ease.enter(seg(t, L.l02.t0 - 0.05, 0.35))) });
       return;
     }
     if (t < T.cmp0) {
@@ -284,7 +286,7 @@ export async function makeOkyanusRenderer(ep, canvas) {
     const wipe = 1 - ease.state(seg(t, T.loop0 + 0.1, 0.6));
     const s = boatS(t) * wipe;
     if (s > 0 && t < T.whip1) G.line(slice(DR, 0, s), { w: 4, dash: [10, 7] });
-    if (t >= T.drift0 - 0.4 && t < T.whip0 + 0.3) G.ringAt(EBON, seg(t, T.drift0, 0.6), 30);
+    if (t >= T.drift0 - 0.4 && t < T.whip0 + 0.3) G.ringAt(EBON, seg(t, T.drift0, 0.6), 52);
     // tekne (haritada): dalgada sallanır
     if (t < T.whip0 + 0.2 || t >= T.loop0 + 0.5) {
       const p = t >= T.loop0 ? MEX : boatP(t);
@@ -316,7 +318,12 @@ export async function makeOkyanusRenderer(ep, canvas) {
     if (t >= T.after - 1.2 && t < T.ask) roundel(t, 'dark', ROUND, ease.enter(seg(t, T.after - 1.2, 0.45)) * (1 - ease.exit(seg(t, T.ask - 0.3, 0.3))));
     // kare 0 ve soru: iki balon
     if (t < L.l02.t0) roundel(t, 'pocket', ROUND2, 1 - ease.exit(seg(t, L.l02.t0 - 0.35, 0.35)));
-    if (t < L.l02.t0 || t >= T.ask) roundel(t, 'boat', ROUND, 1, t >= T.loop0 + 0.5 || t < L.l02.t0 ? at : null);
+    if (t < L.l02.t0 || t >= T.ask) roundel(t, 'boat', ROUND, 1, null);
+    if (t < L.l02.t0 || t >= T.loop0 + 0.3) {
+      const kk = t < L.l02.t0 ? 1 - ease.exit(seg(t, L.l02.t0 - 0.35, 0.35)) : ease.enter(seg(t, T.loop0 + 0.3, 0.4));
+      setFont(ctx, F.mono(34)); ctx.fillStyle = C.paper; ctx.globalAlpha = kk; ctx.fillRect(ROUND.x - 82, 1084, 164, 42); ctx.fillRect(482 - 82, 1096, 164, 42); ctx.globalAlpha = 1;
+      revealText(ctx, '438 GÜN', ROUND.x, 1116, 34, kk, C.ink, 'center'); revealText(ctx, '60 SAAT', 482, 1128, 34, kk, C.ink, 'center');
+    }
     if (t >= T.ask) {
       const kin = ease.enter(seg(t, T.ask, 0.45)), kout = t >= T.loop0 ? 1 - ease.state(seg(t, T.loop0, 0.6)) : 1;
       roundel(t, 'pocket', ROUND2, kin);

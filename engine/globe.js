@@ -123,7 +123,9 @@ export function makeGlobe(ctx, world, stageTop) {
     else if (align === 'center') ctx.rect(x - wdt / 2 - 4, q[1] + dy - 34, wdt * k + 8, 46);
     else ctx.rect(x - 4, q[1] + dy - 34, wdt * k + 8, 46);
     ctx.clip();
-    ctx.strokeText(text, x, q[1] + dy); ctx.fillStyle = color; ctx.fillText(text, x, q[1] + dy);
+    // kelime arası boşluk dahil kâğıt zemin (çizgi harflerin ve boşluğun içinden geçmez)
+    { const bx = align === 'right' ? x - wdt : align === 'center' ? x - wdt / 2 : x; ctx.fillStyle = C.paper; ctx.fillRect(bx - 8, q[1] + dy - 30, wdt + 16, 40); }
+    ctx.fillStyle = color; ctx.fillText(text, x, q[1] + dy);
     ctx.restore();
   }
   return { proj, path, setCam, visible, draw, hatch, line, ringAt, placeLabel, get cam() { return CAM; } };

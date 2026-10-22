@@ -17,6 +17,10 @@ await document.fonts.ready;
 const canvas = document.getElementById('c');
 const r = ep.template === 'domino' ? (await import('./scenes/domino.js')).makeDominoRenderer(ep, canvas)
   : ep.template === 'gezegen' ? await (await import('./scenes/gezegen.js')).makeGezegenRenderer(ep, canvas)
+  : ep.template === 'terazi' ? await (await import('./scenes/terazi.js')).makeTeraziRenderer(ep, canvas)
+  : ep.template === 'hacim' ? await (await import('./scenes/hacim.js')).makeHacimRenderer(ep, canvas)
+  : ep.template === 'venus' ? await (await import('./scenes/venus.js')).makeVenusRenderer(ep, canvas)
+  : ep.template === 'uranus' ? await (await import('./scenes/uranus.js')).makeUranusRenderer(ep, canvas)
   : ep.template === 'water' ? (await import('./scenes/water.js')).makeWaterRenderer(ep, canvas)
   : ep.template === 'birthday' ? (await import('./scenes/birthday.js')).makeBirthdayRenderer(ep, canvas)
   : ep.template === 'fall' ? (await import('./scenes/fall.js')).makeFallRenderer(ep, canvas)

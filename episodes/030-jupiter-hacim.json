@@ -1,0 +1,124 @@
+{
+  "id": "030",
+  "slug": "jupiter-hacim",
+  "template": "hacim",
+  "publishAt": "2026-11-01T17:30Z",
+  "serial": "№ 030 · PARADOKS",
+  "bpm": 100,
+  "question": [
+    "Jüpiter'in içine",
+    "kaç Dünya sığar?"
+  ],
+  "ratio": {
+    "radius": 11.209,
+    "volume": 1321,
+    "mass": 318
+  },
+  "geom": {
+    "jx": 390,
+    "jy": 1180,
+    "jr": 240,
+    "ex": 690,
+    "ey": 1360,
+    "handX": 780,
+    "handY": 1290,
+    "arc": 240,
+    "actorX": 840,
+    "sqX": 695,
+    "sqY": 1060
+  },
+  "choices": [
+    {
+      "k": "A",
+      "v": "125",
+      "what": "resimde"
+    },
+    {
+      "k": "B",
+      "v": "318",
+      "what": "kütlece"
+    },
+    {
+      "k": "C",
+      "v": "1.321",
+      "what": "hacimce"
+    }
+  ],
+  "label": {
+    "diam": "JÜPİTER'İN ÇAPI",
+    "unit": "Dünya",
+    "inside": "HACİMCE",
+    "byVolume": "Dünya'ları eritip dökersek",
+    "mass": "JÜPİTER'İN KÜTLESİ",
+    "volSub": "hacmi 1.321 Dünya",
+    "density": "aynı hacimde 4 kat daha hafif",
+    "earth": "Dünya",
+    "gas": "hidrojen + helyum",
+    "diamNum": "Dünya'nın 11,2 katı",
+    "jupiter": "Jüpiter",
+    "allTrue": "ÜÇ CEVAP DA DOĞRU",
+    "allTrueNum": "ama farklı sorular"
+  },
+  "says": [
+    {
+      "t0": 3.9,
+      "t1": 7.6,
+      "text": "Dünya'ları eritip Jüpiter'e dolduralım."
+    },
+    {
+      "t0": 11,
+      "t1": 14.6,
+      "text": "Jüpiter'in içine 1.321 Dünya sığar."
+    },
+    {
+      "t0": 17.8,
+      "t1": 21.8,
+      "text": "Ama Jüpiter yalnızca 318 Dünya ağırlığında."
+    },
+    {
+      "t0": 22,
+      "t1": 24.8,
+      "text": "Çünkü Jüpiter çoğunlukla hidrojen ve helyumdan oluşur."
+    }
+  ],
+  "timing": {
+    "choicesOut": 3.6,
+    "pour": [
+      1.2,
+      11.8
+    ],
+    "singles": [
+      1.2,
+      1.8,
+      2.4
+    ],
+    "flight": 0.5,
+    "ask": 14.8,
+    "silence": [
+      17.2,
+      17.8
+    ],
+    "hero": 17.8,
+    "drain": 1,
+    "coda": 22,
+    "reasons": 25,
+    "ret": [
+      27.4,
+      29.2
+    ],
+    "end": 29.5,
+    "densityRatio": 0.241
+  },
+  "caption": "Jüpiter'in çapı Dünya'nınkinin 11,2 katıdır. Peki içine kaç Dünya sığar: 125 mi, 318 mi, 1.321 mi?\n\nÜçü de doğru bir sayıdır ama farklı soruların cevabıdır. Bir resimde Jüpiter'in diskine 11,2 × 11,2 ≈ 125 Dünya diski sığar. Ama küreler üç boyutludur: Dünya'ları eritip Jüpiter'e doldursaydık 1.321 Dünya gerekirdi. Eritmeden, bütün hâlde doldursaydık aralarında boşluk kalacağı için tahminen 850–950 kadarı sığardı.\n\nİşin ilginç yanı terazide çıkıyor: Jüpiter'in kütlesi yalnızca 318 Dünya. Yani Jüpiter, Dünya'nın 1.321 katı yer kaplıyor ama yalnızca 318 katı ağır. Aynı hacimde Dünya'nın dörtte biri kadar ağırdır, çünkü çoğunlukla hidrojen ve helyumdan oluşur. Dünya ise kaya ve demirden oluşur.\n\nKaynak: NASA NSSDC Jupiter Fact Sheet (hacim oranı 1.321, kütle oranı 317,8, ortalama yoğunluk oranı 0,24).\n\nSen hangisini seçmiştin? Yorumlara yaz.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#uzay",
+    "#jüpiter",
+    "#bilim"
+  ],
+  "question2": [
+    "Peki kaç Dünya",
+    "ağırlığında?"
+  ]
+}

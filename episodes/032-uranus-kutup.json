@@ -1,0 +1,97 @@
+{
+  "id": "032",
+  "slug": "uranus-kutup",
+  "template": "uranus",
+  "publishAt": "2026-11-05T17:30Z",
+  "serial": "№ 032 · DÜŞÜNCE DENEYİ",
+  "bpm": 100,
+  "question": [
+    "Uranüs'ün kutbunda gece",
+    "kaç yıl sürer?"
+  ],
+  "uranus": {
+    "year": 84
+  },
+  "geom": {
+    "sx": 460,
+    "sy": 1175,
+    "a": 260,
+    "b": 150,
+    "sunR": 62,
+    "ur": 88,
+    "axisTilt": 8,
+    "actorX": 850,
+    "actorH": 84,
+    "insetX": 150,
+    "insetY": 1350
+  },
+  "label": {
+    "yearLabel": "URANÜS'ÜN BİR YILI",
+    "years": "Dünya yılı",
+    "yearShort": "yıl",
+    "def": "yörünge şeması · ölçeksiz",
+    "night": "GECE BAŞLAYALI",
+    "sunrise": "GÜNEŞ DOĞANA KADAR",
+    "day": "GÜNDÜZ BAŞLAYALI",
+    "sun": "Güneş",
+    "pole": "kuzey kutbu"
+  },
+  "says": [
+    {
+      "t0": 0,
+      "t1": 3.45,
+      "text": "Uranüs yan yatmış bir gezegendir."
+    },
+    {
+      "t0": 3.6,
+      "t1": 7.4,
+      "text": "Kuzey kutbunda Güneş az önce battı."
+    },
+    {
+      "t0": 7.6,
+      "t1": 14.35,
+      "text": "Bir sonraki gün doğumu ne zaman?"
+    },
+    {
+      "t0": 15,
+      "t1": 18.6,
+      "text": "Güneş ancak 42 yıl sonra doğar."
+    },
+    {
+      "t0": 18.8,
+      "t1": 22.3,
+      "text": "Sonra 42 yıl boyunca hiç batmaz."
+    },
+    {
+      "t0": 22.45,
+      "t1": 26.25,
+      "text": "Çünkü Uranüs'ün ekseni 98 derece eğiktir."
+    }
+  ],
+  "timing": {
+    "nightRun": [
+      0.6,
+      14
+    ],
+    "ask": 10.8,
+    "silence": [
+      14.4,
+      15
+    ],
+    "hero": 15,
+    "dayRun": [
+      15.6,
+      26.4
+    ],
+    "end": 27,
+    "tiltAt": 23.2
+  },
+  "caption": "Uranüs, Güneş'in çevresini 84 Dünya yılında dolanır ve ekseni 98 derece eğiktir; yani neredeyse yan yatmış hâlde döner. Bu yüzden kutuplarından biri yaklaşık 42 yıl boyunca Güneş'e, sonraki 42 yıl boyunca Güneş'i hiç görmez.\n\nUranüs'ün kuzey kutbunda yaşasaydın Güneş bir kez battıktan sonra yaklaşık 42 yıl doğmazdı. Doğduğunda da 42 yıl boyunca hiç batmazdı. Bir insan ömrünün yarısı tek bir gece, öbür yarısı tek bir gündüz olurdu.\n\nDünya'nın ekseni ise 23,4 derece eğiktir. Bizim kutuplarımızda da altı ay gündüz, altı ay gece yaşanır; Uranüs'te aynı şey 42'şer yıl sürer.\n\nNot: Videodaki yörünge bir şemadır, boyutlar ölçeksizdir. Uranüs'ün yörüngesi tam bir çember olmadığı için iki yarı tam olarak eşit değildir; süreler yaklaşık 42 yıldır.\n\nKaynak: NASA NSSDC Planetary Fact Sheet (yörünge 30.589 gün ≈ 83,7 yıl, eksen eğikliği 97,8°).\n\nSen olsan bu 42 yıllık gecede ne yapardın? Yorumlara yaz.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#uzay",
+    "#uranüs",
+    "#astronomi"
+  ]
+}

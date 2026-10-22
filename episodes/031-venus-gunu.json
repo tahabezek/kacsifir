@@ -1,0 +1,105 @@
+{
+  "id": "031",
+  "slug": "venus-gunu",
+  "template": "venus",
+  "publishAt": "2026-11-03T17:30Z",
+  "serial": "№ 031 · PARADOKS",
+  "bpm": 100,
+  "question": [
+    "Venüs'te bir gün mü",
+    "uzun, bir yıl mı?"
+  ],
+  "venus": {
+    "year": 224.7,
+    "day": 243
+  },
+  "geom": {
+    "sx": 400,
+    "sy": 1180,
+    "orbitR": 190,
+    "sunR": 60,
+    "venusR": 46,
+    "actorX": 835
+  },
+  "label": {
+    "elapsed": "GEÇEN SÜRE",
+    "days": "gün",
+    "def": "Dünya günü · ölçeksiz şema",
+    "yearDone": "BİR YIL BİTTİ",
+    "notYet": "Venüs'ün kendi turu:",
+    "dayDone": "BİR GÜN BİTTİ",
+    "longer": "yıldan 18 gün uzun",
+    "sun": "Güneş",
+    "orbitDir": "dolanım",
+    "spinDir": "dönüş"
+  },
+  "says": [
+    {
+      "t0": 0.4,
+      "t1": 3.3,
+      "text": "Bir yıl: Güneş'in çevresinde bir tur."
+    },
+    {
+      "t0": 3.55,
+      "t1": 6.8,
+      "text": "Bir gün: kendi ekseni etrafında bir tur."
+    },
+    {
+      "t0": 7.05,
+      "t1": 11.15,
+      "text": "Bayrak, Venüs'ün kendi ekseni etrafındaki dönüşünü gösterir."
+    },
+    {
+      "t0": 11.4,
+      "t1": 14.35,
+      "text": "Önce hangisi biter?"
+    },
+    {
+      "t0": 15,
+      "t1": 18.9,
+      "text": "Yıl bitti ama Venüs'te gün henüz bitmedi."
+    },
+    {
+      "t0": 19.2,
+      "t1": 22.55,
+      "text": "Venüs'te bir gün 243 Dünya günü sürer."
+    },
+    {
+      "t0": 22.8,
+      "t1": 24.6,
+      "text": "Üstelik ters yönde döner."
+    }
+  ],
+  "timing": {
+    "run": [
+      0.4,
+      12
+    ],
+    "fastDays": 205,
+    "ask": 11.4,
+    "silence": [
+      14.4,
+      15
+    ],
+    "hero": 15,
+    "dayRun": [
+      19.2,
+      21
+    ],
+    "dirs": 22.8,
+    "ret": [
+      24.8,
+      26.6
+    ],
+    "end": 26.9,
+    "zoomOut": 19
+  },
+  "caption": "Venüs, Güneş'in çevresini 224,7 Dünya gününde dolanır; bu, Venüs'ün bir yılıdır. Kendi ekseni etrafındaki bir tam turu ise 243 Dünya günü sürer. Yani Venüs'ün kendi ekseni etrafındaki bir tam dönüşü, bir yılından uzundur.\n\nÜstelik Venüs, Güneş Sistemi'ndeki gezegenlerin çoğunun tersine döner. Venüs'te Güneş batıdan doğar, doğuda batar.\n\nBir ayrıntı: Gün doğumundan bir sonraki gün doğumuna kadar geçen süre (Güneş günü) yaklaşık 117 Dünya günüdür. Venüs ters yönde döndüğü için dönüş ve dolanım hızları toplanır ve Güneş günü, yıldızlara göre ölçülen 243 günlük dönüşten kısa olur. Videoda bayrak, yıldızlara göre olan dönüşü gösteriyor.\n\nKaynak: NASA NSSDC Planetary Fact Sheet (dönüş −5.832,5 saat, yörünge 224,7 gün, Güneş günü 2.802 saat).\n\nVenüs'te yaşasaydın yaşını neye göre sayardın? Yorumlara yaz.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#uzay",
+    "#venüs",
+    "#astronomi"
+  ]
+}

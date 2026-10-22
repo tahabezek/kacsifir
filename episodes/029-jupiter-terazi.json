@@ -1,0 +1,158 @@
+{
+  "id": "029",
+  "slug": "jupiter-terazi",
+  "template": "terazi",
+  "publishAt": "2026-10-30T17:30Z",
+  "serial": "№ 029 · HANGİSİ AĞIR?",
+  "bpm": 100,
+  "question": [
+    "Jüpiter mi ağır, geri kalan",
+    "bütün gezegenler mi?"
+  ],
+  "planets": [
+    {
+      "key": "merkur",
+      "name": "Merkür",
+      "m": 0.33,
+      "d": 4879
+    },
+    {
+      "key": "venus",
+      "name": "Venüs",
+      "m": 4.87,
+      "d": 12104
+    },
+    {
+      "key": "dunya",
+      "name": "Dünya",
+      "m": 5.9722,
+      "d": 12756
+    },
+    {
+      "key": "mars",
+      "name": "Mars",
+      "m": 0.642,
+      "d": 6792
+    },
+    {
+      "key": "jupiter",
+      "name": "Jüpiter",
+      "m": 1898,
+      "d": 142984
+    },
+    {
+      "key": "saturn",
+      "name": "Satürn",
+      "m": 568,
+      "d": 120536
+    },
+    {
+      "key": "uranus",
+      "name": "Uranüs",
+      "m": 86.8,
+      "d": 51118
+    },
+    {
+      "key": "neptun",
+      "name": "Neptün",
+      "m": 102,
+      "d": 49528
+    }
+  ],
+  "geom": {
+    "jupR": 90,
+    "pivotX": 400,
+    "pivotY": 1048,
+    "beam": 440,
+    "hang": 236,
+    "panW": 220,
+    "panDepth": 13,
+    "baseY": 1410,
+    "maxTilt": 12,
+    "gain": 2.5,
+    "jolt": 5,
+    "actorX": 830,
+    "strain": 6,
+    "fall": 420,
+    "settle": 1.5
+  },
+  "answer": "2,5 kat ağır",
+  "coda": "%71'i",
+  "label": {
+    "left": "SOL KEFE · JÜPİTER",
+    "right": "SAĞ KEFE · DİĞER YEDİ GEZEGEN",
+    "unit": "Dünya",
+    "unitNote": "Birim: Dünya'nın kütlesi",
+    "vs": "Jüpiter:",
+    "hero": "JÜPİTER, DİĞERLERİNDEN",
+    "coda": "TOPLAM GEZEGEN KÜTLESİNİN",
+    "codaSub": "Jüpiter'de"
+  },
+  "says": [
+    {
+      "t0": 0,
+      "t1": 2.2,
+      "text": "Sol kefede yalnızca Jüpiter var."
+    },
+    {
+      "t0": 2.45,
+      "t1": 5.9,
+      "text": "Diğer yedi gezegeni sağ kefeye koyalım."
+    },
+    {
+      "t0": 7.2,
+      "t1": 10.55,
+      "text": "Hepsi bir arada bile Jüpiter'i kaldıramıyor."
+    },
+    {
+      "t0": 10.8,
+      "t1": 13.55,
+      "text": "Peki Jüpiter kaç kat ağır?"
+    },
+    {
+      "t0": 13.8,
+      "t1": 17.6,
+      "text": "Dengelemek için desteği Jüpiter'e kaydıralım."
+    },
+    {
+      "t0": 17.85,
+      "t1": 21.35,
+      "text": "Kollar 1'e 2,47 olunca terazi dengede."
+    },
+    {
+      "t0": 21.6,
+      "t1": 25,
+      "text": "Satürn bile Jüpiter'in üçte biri kadar değil."
+    }
+  ],
+  "timing": {
+    "firstDrop": 0.6,
+    "hop": 0.6,
+    "countAt": 2.4,
+    "after": 7.2,
+    "strain": 9,
+    "push1": 11.1,
+    "ask": 10.8,
+    "silence": [
+      13.2,
+      13.8
+    ],
+    "hero": 13.8,
+    "slide": 1.2,
+    "moment": 17.85,
+    "coda": 21.6,
+    "ret": [
+      25.2,
+      26.6
+    ],
+    "end": 27
+  },
+  "caption": "Bir terazinin bir kefesine yalnızca Jüpiter'i, öbür kefesine Güneş Sistemi'nin geri kalan yedi gezegenini koyalım: Merkür, Venüs, Dünya, Mars, Satürn, Uranüs ve Neptün. Hangi kefe ağır basar?\n\nNASA'nın gezegen tablosuna göre Jüpiter'in kütlesi 1898 × 10²⁴ kg, yani Dünya'nın yaklaşık 318 katı. Diğer yedi gezegenin toplamı ise 768,6 × 10²⁴ kg, yani yaklaşık 129 Dünya. Jüpiter tek başına geri kalanların 2,47 katı ağır.\n\nKütleleri değiştirmeden teraziyi dengelemenin yolu desteği Jüpiter'e yaklaştırmaktır. Kol uzunluklarının oranı 1'e 2,47 olduğunda iki kefe dengeye gelir; tahterevallide ağır olanın ortaya yakın oturması gibi.\n\nGüneş Sistemi'ndeki gezegenlerin toplam kütlesinin %71'i yalnızca Jüpiter'dedir. Satürn'ün kütlesi bile Jüpiter'inkinin üçte birinden azdır.\n\nKaynak: NASA NSSDC Planetary Fact Sheet. Gezegenlerin boyutları birbirine göre gerçek oranlarıyla çizildi.\n\nDesteği ortada bıraksak ve öbür kefede yalnızca Satürn olsa, Jüpiter'i dengelemek için kaç Satürn gerekirdi? Yorumlara yaz.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#uzay",
+    "#jüpiter",
+    "#astronomi"
+  ]
+}

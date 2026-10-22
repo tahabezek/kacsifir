@@ -10,10 +10,10 @@ import { fileURLToPath } from 'node:url';
 import ffmpegPath from 'ffmpeg-static';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SRC = path.join(root, 'assets', 'gen', 'gezegenler'), OUT = path.join(root, 'assets', 'planets');
+const SRC = path.join(root, 'assets', 'gen'), OUT = path.join(root, 'assets', 'planets');
 const INK = [28, 27, 24], SIDE = 1024, MARGIN = 1.04;
-// seçilen varyantlar (assets/gen/gezegenler/PROMPTS.md)
-const PICK = { merkur: 'merkur_2', venus: 'venus_1', dunya: 'dunya_3', ay: 'ay_4', mars: 'mars_1', jupiter: 'jupiter_2', saturn: 'saturn_1', uranus: 'uranus_1', neptun: 'neptun_1' };
+// seçilen varyantlar (assets/gen/*/PROMPTS.md)
+const PICK = { merkur: 'gezegenler/merkur_2', venus: 'gezegenler/venus_1', dunya: 'gezegenler/dunya_3', ay: 'gezegenler/ay_4', mars: 'gezegenler/mars_1', jupiter: 'gezegenler/jupiter_2', saturn: 'gezegenler/saturn_1', uranus: 'gezegenler/uranus_1', neptun: 'gezegenler/neptun_1', gunes: 'gunes/gunes_1' };
 
 function read(file) {
   const probe = spawnSync(ffmpegPath, ['-hide_banner', '-i', file], { encoding: 'utf8' }).stderr;

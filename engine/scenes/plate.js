@@ -126,7 +126,14 @@ export function makePlate(ctx, ep, { meta, IMG }) {
   // Güneş: gravür (gunes) varsa o; yoksa tohumlu noktalama ile geçici disk (kenar kararması + iki leke)
   const sunCache = {};
   function sun(x, y, r) {
-    if (has('gunes')) return planet('gunes', x, y, r);
+    if (has('gunes')) {
+      // küçük boyda ince noktalama solar: gravür ikinci kez basılır (mürekkep bir kat koyulaşır)
+      planet('gunes', x, y, r);
+      const m = meta.gunes, k = r / m.r;
+      ctx.save(); ctx.beginPath(); ctx.arc(x, y, r * 0.985, 0, TAU); ctx.clip(); ctx.globalAlpha = 0.85;
+      ctx.drawImage(IMG.gunes, x - m.cx * k, y - m.cy * k, m.w * k, m.h * k); ctx.restore();
+      return;
+    }
     const key = Math.round(r);
     if (!sunCache[key]) {
       const c = document.createElement('canvas'); c.width = c.height = 2 * key + 4; const g = c.getContext('2d'), rnd = mulberry32(240), o = key + 2;

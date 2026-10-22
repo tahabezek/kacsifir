@@ -34,7 +34,8 @@ for line in ep['voice']['lines']:
     for i, sw in enumerate(script):
         for k in range(j, min(j + 8, len(heard))):
             hw = norm(heard[k].word)
-            if hw and norm(sw)[:4] == hw[:4]:
+            # yalnız uzun kelimeler sabit nokta olur: 'bir', 'on' gibi kısa kelimeler başka yerde de geçer (rakamla duyulur)
+            if hw and len(norm(sw)) >= 4 and len(hw) >= 4 and norm(sw)[:4] == hw[:4]:
                 anchors[i] = (heard[k].start, heard[k].end); j = k + 1; break
     a0 = heard[0].start if heard else 0.05
     b0 = heard[-1].end if heard else end - 0.05

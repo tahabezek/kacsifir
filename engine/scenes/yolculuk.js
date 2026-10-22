@@ -151,14 +151,14 @@ export async function makeYolculukRenderer(ep, canvas) {
     ctx.beginPath(); ctx.arc(q[0], q[1], rad, -2.2, -2.2 + Math.PI * 2.15 * ease.enter(u)); ctx.lineWidth = 3; ctx.strokeStyle = color; ctx.stroke();
   }
   function placeLabel(p, text, u, dx = 18, dy = -14, color = C.ink, align = 'left') {
-    if (u <= 0 || !visible(CAM, p)) return; const q = proj(p); if (!q || q[1] + dy < STAGE_TOP + 44) return;
+    if (u <= 0 || !visible(CAM, p)) return; const q = proj(p); if (!q || q[1] + dy < STAGE_TOP + 44 || q[0] < 20 || q[0] > W - 20) return;
     ctx.save(); ctx.beginPath(); ctx.arc(q[0], q[1], 6, 0, Math.PI * 2); ctx.fillStyle = color; ctx.fill();
     setFont(ctx, F.mono(34));
     { const tw0 = ctx.measureText(text).width; if (align === 'right' && q[0] - dx - tw0 < 40) align = 'left'; else if (align === 'left' && q[0] + dx + tw0 > W - 40) align = 'right'; }
     ctx.textAlign = align;
     // iki yana da sığmazsa ekranın içine kaydırılır (40 px pay)
     let x = align === 'right' ? q[0] - dx : q[0] + dx;
-    { const tw1 = ctx.measureText(text).width; if (align === 'left') x = Math.min(x, W - 40 - tw1); else x = Math.max(x, 40 + tw1); }
+    { const tw1 = ctx.measureText(text).width; x = align === 'left' ? Math.max(40, Math.min(x, W - 40 - tw1)) : Math.min(W - 40, Math.max(x, 40 + tw1)); }
     // kâğıt hale: yazı haritanın üstünde okunur (kutu yok)
     ctx.lineWidth = 11; ctx.strokeStyle = C.paper; ctx.lineJoin = 'round'; ctx.textAlign = align;
     const k = ease.enter(u);
@@ -454,7 +454,23 @@ export async function makeYolculukRenderer(ep, canvas) {
     }
     if (t >= T.whip1 - 0.15 && t < T.cmp0) {
       const p = walkP(t), q = proj(p);
-      if (q && visible(k, p)) { ctx.beginPath(); ctx.arc(q[0], q[1], 9, 0, Math.PI * 2); ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 4; ctx.strokeStyle = C.ink; ctx.stroke(); at = q; }
+      if (q && visible(k, p)) {
+        // haritadaki yolcu: yürür, buzda yürür, yüzer, sınırda bekler; gittiği yöne bakar
+        const mode = t < T.walk0 ? 'wait' : modeAt(t), q2 = proj(walkP(t + 0.25)) || q, dir = q2[0] < q[0] - 0.5 ? -1 : 1;
+        ctx.beginPath(); ctx.arc(q[0], q[1], 5, 0, Math.PI * 2); ctx.fillStyle = C.ink; ctx.fill();
+        ctx.save(); ctx.translate(q[0], q[1] - 6);
+        if (mode === 'swim') {
+          // dalga halkaları: yüzücünün çevresinde genişleyip kaybolan iki elips (sürekli, döngüsel)
+          for (let i = 0; i < 2; i++) { const u = ((t * 1.3 + i * 0.5) % 1); ctx.beginPath(); ctx.ellipse(0, 6, 30 + 46 * u, 9 + 12 * u, 0, 0, Math.PI * 2); ctx.lineWidth = 2.5 * (1 - u) + 0.6; ctx.strokeStyle = C.ink; ctx.stroke(); }
+          ctx.fillStyle = C.paper; ctx.beginPath(); ctx.ellipse(0, 0, 62, 20, 0, 0, Math.PI * 2); ctx.fill();
+          ctx.scale(dir, 1); drawWalker(ctx, WALKER_CARD, { mode: 'swim', phase: t * 0.9 }, 118);
+        } else {
+          ctx.fillStyle = C.paper; ctx.beginPath(); ctx.ellipse(0, -50, 32, 60, 0, 0, Math.PI * 2); ctx.fill();
+          ctx.scale(dir, 1); drawWalker(ctx, WALKER_CARD, { mode: mode === 'wait' ? 'stand' : 'walk', phase: (t * 1.8) % 1, cart: false }, 110);
+        }
+        ctx.restore();
+        at = q;
+      }
     }
     // yer adları: yolcu geçerken (en son geçilen ad 3 sn kalır)
     if (t < T.pull + 1.0) placeLabel(BR.D[0].p, 'ALASKA', 1 - seg(t, T.pull + 0.6, 0.3), 18, -16);

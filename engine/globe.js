@@ -107,6 +107,7 @@ export function makeGlobe(ctx, world, stageTop) {
   }
   function placeLabel(p, text, u, dx = 18, dy = -14, color = C.ink, align = 'left', dot = true) {
     if (u <= 0 || !visible(p)) return; const q = proj(p);
+    if (q[0] < 20 || q[0] > W - 20 || q[1] + dy < stageTop + 44) return;   // noktası ekran dışındaysa ad yazılmaz
     ctx.save();
     if (dot) { ctx.beginPath(); ctx.arc(q[0], q[1], 6, 0, Math.PI * 2); ctx.fillStyle = color; ctx.fill(); }
     setFont(ctx, F.mono(30));

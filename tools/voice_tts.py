@@ -14,7 +14,9 @@ words_file = os.path.join(out, 'words.json')
 old = json.load(open(words_file, encoding='utf-8')) if os.path.exists(words_file) else {}
 
 async def say(line):
-    key = hashlib.sha1(f"{line['tts']}|{v['name']}|{v.get('rate', '+0%')}|{v.get('pitch', '+0Hz')}".encode()).hexdigest()[:12]
+    # satır bazında hız ve perde (dramatik satırlar daha yavaş ve pes): yoksa bölümün genel değeri
+    rate, pitch = line.get('rate', v.get('rate', '+0%')), line.get('pitch', v.get('pitch', '+0Hz'))
+    key = hashlib.sha1(f"{line['tts']}|{v['name']}|{rate}|{pitch}".encode()).hexdigest()[:12]
     mp3 = os.path.join(out, line['id'] + '.mp3')
     if old.get(line['id'], {}).get('key') == key and os.path.exists(mp3):
         return line['id'], old[line['id']]
@@ -22,7 +24,7 @@ async def say(line):
     # (tools/voice_words.py). Servis ara sıra boş yanıt veriyor: artan beklemeyle yeniden denenir.
     for k in range(30):
         try:
-            com = edge_tts.Communicate(line['tts'], v['name'], rate=v.get('rate', '+0%'), boundary='SentenceBoundary')
+            com = edge_tts.Communicate(line['tts'], v['name'], rate=rate, pitch=pitch, boundary='SentenceBoundary')
             words, audio = [], bytearray()
             async for ch in com.stream():
                 if ch['type'] == 'audio':

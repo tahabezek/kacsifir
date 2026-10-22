@@ -6,87 +6,111 @@
   "bpm": 100,
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+16%",
+    "rate": "+12%",
     "lines": [
       {
         "id": "l01",
         "tts": "Hangisi daha şaşırtıcı?",
-        "text": "Hangisi daha şaşırtıcı?"
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l02",
-        "tts": "Beş aylık bir kuş Alaska'dan havalanıyor.",
-        "text": "Beş aylık bir kuş Alaska'dan havalanıyor."
+        "tts": "Beş aylık bir kuş, Alaska'dan hayatında ilk kez havalanıyor.",
+        "text": "Beş aylık bir kuş, Alaska'dan hayatında ilk kez havalanıyor."
       },
       {
         "id": "l03",
-        "tts": "On bir gün boyunca hiç inmeden, hiç yemeden uçuyor.",
-        "text": "11 gün boyunca hiç inmeden, hiç yemeden uçuyor."
+        "tts": "Önünde uçsuz bucaksız bir okyanus var. On bir gün boyunca ne inecek, ne de bir lokma yiyecek.",
+        "text": "Önünde uçsuz bucaksız bir okyanus var. 11 gün boyunca ne inecek, ne de bir lokma yiyecek.",
+        "rate": "+6%",
+        "pitch": "-2Hz"
       },
       {
         "id": "l04",
-        "tts": "On üç bin beş yüz altmış kilometre sonra Tazmanya'ya iniyor.",
-        "text": "13.560 km sonra Tazmanya'ya iniyor."
+        "tts": "Ve on üç bin beş yüz altmış kilometre sonra, Tazmanya'ya iniyor. Tek bir mola bile vermeden.",
+        "text": "Ve 13.560 km sonra Tazmanya'ya iniyor. Tek bir mola bile vermeden.",
+        "rate": "+4%",
+        "pitch": "-3Hz"
       },
       {
         "id": "l05",
         "tts": "Yoksa bu adam mı?",
-        "text": "Yoksa bu adam mı?"
+        "text": "Yoksa bu adam mı?",
+        "rate": "+10%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l06",
-        "tts": "Eski bir asker, bin dokuz yüz doksan sekizde Şili'nin en ucundan evine yürümeye başlıyor.",
-        "text": "Eski bir asker, 1998'de Şili'nin en ucundan evine yürümeye başlıyor."
+        "tts": "Eski bir İngiliz askeri, bin dokuz yüz doksan sekizde Şili'nin en ucundan evine yürümeye karar veriyor.",
+        "text": "Eski bir İngiliz askeri, 1998'de Şili'nin en ucundan evine yürümeye karar veriyor."
       },
       {
         "id": "l07",
-        "tts": "Hiçbir araca binmeyecek.",
-        "text": "Hiçbir araca binmeyecek."
+        "tts": "Tek bir kuralı var: hiçbir araca binmeyecek.",
+        "text": "Tek bir kuralı var: hiçbir araca binmeyecek.",
+        "rate": "+2%",
+        "pitch": "-3Hz"
       },
       {
         "id": "l08",
-        "tts": "Amerika'yı boydan boya yürüyor ve donmuş Bering Boğazı'nı geçiyor.",
-        "text": "Amerika'yı boydan boya yürüyor ve donmuş Bering Boğazı'nı geçiyor."
+        "tts": "Amerika'yı boydan boya yürüyor, donmuş Bering Boğazı'nı buzların üstünden geçiyor.",
+        "text": "Amerika'yı boydan boya yürüyor, donmuş Bering Boğazı'nı buzların üstünden geçiyor.",
+        "rate": "+14%"
       },
       {
         "id": "l09",
-        "tts": "Sibirya'yı ve Çin'i aşıyor. Sonra sınırlar kapanıyor ve yaklaşık beş yıl bekliyor.",
-        "text": "Sibirya'yı ve Çin'i aşıyor. Sonra sınırlar kapanıyor ve yaklaşık 5 yıl bekliyor."
+        "tts": "Sibirya'yı ve Çin'i aşıyor. Sonra sınırlar önüne kapanıyor ve yaklaşık beş yıl tek bir adım atamıyor.",
+        "text": "Sibirya'yı ve Çin'i aşıyor. Sonra sınırlar önüne kapanıyor ve yaklaşık 5 yıl tek bir adım atamıyor.",
+        "rate": "+4%",
+        "pitch": "-4Hz"
       },
       {
         "id": "l10",
-        "tts": "Hazar Denizi'ni yüzerek geçiyor ve İstanbul'dan Avrupa'ya yürüyor.",
-        "text": "Hazar Denizi'ni yüzerek geçiyor ve İstanbul'dan Avrupa'ya yürüyor."
+        "tts": "Ama vazgeçmiyor. Hazar Denizi'ni yüzerek geçiyor, İstanbul'dan Avrupa'ya yürüyor.",
+        "text": "Ama vazgeçmiyor. Hazar Denizi'ni yüzerek geçiyor, İstanbul'dan Avrupa'ya yürüyor.",
+        "rate": "+16%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l11",
-        "tts": "Beş Ekim'de Manş'ı yüzerek İngiltere'ye çıktı. Evine dört yüz kilometre kaldı.",
-        "text": "5 Ekim'de Manş'ı yüzerek İngiltere'ye çıktı. Evine 400 km kaldı."
+        "tts": "Beş Ekim'de Manş'ı da yüzerek İngiltere'ye çıktı. Evine sadece dört yüz kilometre kaldı.",
+        "text": "5 Ekim'de Manş'ı da yüzerek İngiltere'ye çıktı. Evine sadece 400 km kaldı.",
+        "rate": "+8%"
       },
       {
         "id": "l12",
         "tts": "Peki ikisini aynı saatle ölçersek?",
-        "text": "Peki ikisini aynı saatle ölçersek?"
+        "text": "Peki ikisini aynı saatle ölçersek?",
+        "rate": "+6%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l13",
         "tts": "Kuş Tazmanya'ya indiğinde, adam ortalama hızıyla ancak",
-        "text": "Kuş Tazmanya'ya indiğinde, adam ortalama hızıyla ancak"
+        "text": "Kuş Tazmanya'ya indiğinde, adam ortalama hızıyla ancak",
+        "rate": "+4%"
       },
       {
         "id": "l14",
         "tts": "elli üç kilometre yürümüş olurdu.",
-        "text": "53 km yürümüş olurdu."
+        "text": "53 km yürümüş olurdu.",
+        "rate": "-2%",
+        "pitch": "-4Hz"
       },
       {
         "id": "l15",
-        "tts": "Ama toplam yolu, Dünya'nın çevresinden daha uzun.",
-        "text": "Ama toplam yolu, Dünya'nın çevresinden daha uzun."
+        "tts": "Ama yirmi sekiz yılda yürüdüğü yol, Dünya'nın çevresinden bile uzun.",
+        "text": "Ama 28 yılda yürüdüğü yol, Dünya'nın çevresinden bile uzun.",
+        "rate": "+6%"
       },
       {
         "id": "l16",
         "tts": "Sen hangisine şaşırdın?",
-        "text": "Sen hangisine şaşırdın?"
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
       }
     ]
   },

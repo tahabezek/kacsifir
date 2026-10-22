@@ -6,42 +6,52 @@
   "bpm": 100,
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+16%",
+    "rate": "+12%",
     "lines": [
       {
         "id": "l01",
         "tts": "Hangisi daha şaşırtıcı?",
-        "text": "Hangisi daha şaşırtıcı?"
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l02",
-        "tts": "Bir kozmonot, bin dokuz yüz doksan bir Mayıs'ında Sovyetler Birliği adına uzaya çıkıyor.",
-        "text": "Bir kozmonot, Mayıs 1991'de Sovyetler Birliği adına uzaya çıkıyor."
+        "tts": "Bin dokuz yüz doksan bir Mayıs'ında bir kozmonot, Sovyetler Birliği adına uzaya çıkıyor.",
+        "text": "Mayıs 1991'de bir kozmonot, Sovyetler Birliği adına uzaya çıkıyor."
       },
       {
         "id": "l03",
-        "tts": "Görevinin beş ay sürmesi planlanıyor.",
-        "text": "Görevinin 5 ay sürmesi planlanıyor."
+        "tts": "Beş ay sonra evine dönecek.",
+        "text": "5 ay sonra evine dönecek.",
+        "rate": "+6%"
       },
       {
         "id": "l04",
-        "tts": "O yörüngedeyken ülkesi dağılıyor. Sovyetler Birliği on beş ülkeye bölünüyor.",
-        "text": "O yörüngedeyken ülkesi dağılıyor. Sovyetler Birliği 15 ülkeye bölünüyor."
+        "tts": "Ama o yörüngedeyken ülkesi dağılıyor. Sovyetler Birliği on beş ülkeye bölünüyor.",
+        "text": "Ama o yörüngedeyken ülkesi dağılıyor. Sovyetler Birliği 15 ülkeye bölünüyor.",
+        "rate": "+2%",
+        "pitch": "-3Hz"
       },
       {
         "id": "l05",
-        "tts": "Dönüşü erteleniyor ve uzayda üç yüz on bir gün kalıyor.",
-        "text": "Dönüşü erteleniyor ve uzayda 311 gün kalıyor."
+        "tts": "Dönüş kapsülü hazır, ama o giderse istasyon kapanacak. Bu yüzden kalıyor ve uzayda tam üç yüz on bir gün geçiriyor.",
+        "text": "Dönüş kapsülü hazır, ama o giderse istasyon kapanacak. Bu yüzden kalıyor ve uzayda tam 311 gün geçiriyor.",
+        "rate": "+8%"
       },
       {
         "id": "l06",
-        "tts": "Kalktığı ülke artık yok. İndiği yer ise bağımsız Kazakistan.",
-        "text": "Kalktığı ülke artık yok. İndiği yer ise bağımsız Kazakistan."
+        "tts": "Sonunda indiğinde, onu gönderen ülke artık yok. İndiği yer ise bağımsız Kazakistan.",
+        "text": "Sonunda indiğinde, onu gönderen ülke artık yok. İndiği yer ise bağımsız Kazakistan.",
+        "rate": "+2%",
+        "pitch": "-3Hz"
       },
       {
         "id": "l07",
         "tts": "Yoksa bu asker mi?",
-        "text": "Yoksa bu asker mi?"
+        "text": "Yoksa bu asker mi?",
+        "rate": "+10%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l08",
@@ -51,47 +61,62 @@
       {
         "id": "l09",
         "tts": "Emri açık: asla teslim olmayacak.",
-        "text": "Emri açık: asla teslim olmayacak."
+        "text": "Emri açık: asla teslim olmayacak.",
+        "rate": "+0%",
+        "pitch": "-4Hz"
       },
       {
         "id": "l10",
-        "tts": "Savaş bitiyor. Atılan bildirilere ve gazetelere hiç inanmıyor.",
-        "text": "Savaş bitiyor. Atılan bildirilere ve gazetelere hiç inanmıyor."
+        "tts": "Savaş bitiyor. Ama o, atılan bildirileri düşman oyunu sanıyor ve ormanda savaşmaya devam ediyor.",
+        "text": "Savaş bitiyor. Ama o, atılan bildirileri düşman oyunu sanıyor ve ormanda savaşmaya devam ediyor.",
+        "rate": "+10%"
       },
       {
         "id": "l11",
-        "tts": "O ormanda saklanırken insanlık Ay'a ayak basıyor.",
-        "text": "O ormanda saklanırken insanlık Ay'a ayak basıyor."
+        "tts": "O ormanda saklanırken, insanlık Ay'a ayak basıyor.",
+        "text": "O ormanda saklanırken, insanlık Ay'a ayak basıyor.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
       },
       {
         "id": "l12",
-        "tts": "Ancak eski komutanı gelip emri bizzat kaldırınca, bin dokuz yüz yetmiş dörtte teslim oluyor.",
-        "text": "Ancak eski komutanı gelip emri bizzat kaldırınca, 1974'te teslim oluyor."
+        "tts": "Ancak eski komutanı adaya gelip emri bizzat kaldırınca, gözyaşları içinde teslim oluyor.",
+        "text": "Ancak eski komutanı adaya gelip emri bizzat kaldırınca, 1974'te gözyaşları içinde teslim oluyor.",
+        "rate": "+4%",
+        "pitch": "-3Hz"
       },
       {
         "id": "l13",
         "tts": "Peki ikisini aynı cetvelle ölçersek?",
-        "text": "Peki ikisini aynı cetvelle ölçersek?"
+        "text": "Peki ikisini aynı cetvelle ölçersek?",
+        "rate": "+6%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l14",
         "tts": "Kozmonot, ülkesi olmadan doksan gün yaşadı. Asker ise savaş bittikten sonra",
-        "text": "Kozmonot, ülkesi olmadan 90 gün yaşadı. Asker ise savaş bittikten sonra"
+        "text": "Kozmonot, ülkesi olmadan 90 gün yaşadı. Asker ise savaş bittikten sonra",
+        "rate": "+6%"
       },
       {
         "id": "l15",
         "tts": "yirmi sekiz buçuk yıl teslim olmadı.",
-        "text": "28,5 yıl teslim olmadı."
+        "text": "28,5 yıl teslim olmadı.",
+        "rate": "-2%",
+        "pitch": "-4Hz"
       },
       {
         "id": "l16",
         "tts": "Bu, yaklaşık yüz on altı kat daha uzun.",
-        "text": "Bu, yaklaşık 116 kat daha uzun."
+        "text": "Bu, yaklaşık 116 kat daha uzun.",
+        "rate": "+4%"
       },
       {
         "id": "l17",
         "tts": "Sen hangisine şaşırdın?",
-        "text": "Sen hangisine şaşırdın?"
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
       }
     ],
     "gaps": {

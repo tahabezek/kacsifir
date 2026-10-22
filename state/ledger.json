@@ -104,13 +104,13 @@
     },
     "2026-10-23T17:30Z": {
       "episode": "014",
-      "media": "v/014-kus-ve-yuruyen-adam-7b8b6d18.mp4",
+      "media": "v/014-kus-ve-yuruyen-adam-3c024b93.mp4",
       "status": "scheduled",
       "at": "2026-10-21T19:14:13.563Z",
       "postId": "6ad90f3b0a00425628eddea5",
       "dueAt": "2026-10-23T17:30:00.000Z",
-      "prevMedia": "v/014-kus-ve-yuruyen-adam-0f91f8cf.mp4",
-      "remediaAt": "2026-10-22T19:32:48.235Z",
+      "prevMedia": "v/014-kus-ve-yuruyen-adam-7b8b6d18.mp4",
+      "remediaAt": "2026-10-22T20:45:12.763Z",
       "yt": {
         "postId": "6ad933279c05f711d3c2f0c4",
         "status": "scheduled",

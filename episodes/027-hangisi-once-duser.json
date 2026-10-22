@@ -1,0 +1,90 @@
+{
+  "id": "027",
+  "slug": "hangisi-once-duser",
+  "template": "fall",
+  "gl": true,
+  "publishAt": "2026-10-28T17:30Z",
+  "serial": "№ 027 · DÜŞÜNCE DENEYİ",
+  "bpm": 100,
+  "question": [
+    "Hangisi önce yere düşer?"
+  ],
+  "rounds": [
+    {
+      "v": 2,
+      "launch": 0.45,
+      "slow": 6,
+      "label": "saniyede 2 metre"
+    },
+    {
+      "v": 30,
+      "launch": 9.7,
+      "slow": 6,
+      "label": "saniyede 30 metre"
+    },
+    {
+      "v": 900,
+      "launch": 16.6,
+      "slow": 7,
+      "label": "saniyede 900 metre"
+    }
+  ],
+  "timing": {
+    "silence": 0.6,
+    "riser": [
+      16.9,
+      19.87
+    ],
+    "dive": [
+      29.9,
+      33.8
+    ],
+    "duration": 34.4
+  },
+  "says": [
+    {
+      "t0": -1,
+      "t1": 3.9,
+      "text": "A topu bırakılıyor, B topu yatay fırlatılıyor."
+    },
+    {
+      "t0": 3.9,
+      "t1": 8.4,
+      "text": "İkisi aynı anda yere değer: 0,553 saniye."
+    },
+    {
+      "t0": 9.7,
+      "t1": 14.7,
+      "text": "Bu kez B topu saniyede 30 metre hızla fırlatılıyor."
+    },
+    {
+      "t0": 15.5,
+      "t1": 20.5,
+      "text": "Peki saniyede 900 metre hızla atılırsa?"
+    },
+    {
+      "t0": 20.5,
+      "t1": 24.1,
+      "text": "İkisi yine aynı anda yere değer.",
+      "red": true
+    },
+    {
+      "t0": 24.1,
+      "t1": 29.9,
+      "text": "Yerçekimi yalnızca aşağı çeker; yatay hız düşüşü değiştirmez."
+    },
+    {
+      "t0": 33.5,
+      "t1": 99,
+      "text": "A topu bırakılıyor, B topu yatay fırlatılıyor."
+    }
+  ],
+  "caption": "Hangisi önce yere düşer: elden bırakılan top mu, aynı yükseklikten yatay fırlatılan top mu? İkisi aynı anda düşer.\n\nYerçekimi yalnızca aşağı doğru çeker. Yatay hız, topun ne kadar uzağa gideceğini değiştirir ama ne kadar sürede düşeceğini değiştirmez.\n\nHesap (1,5 m yükseklik, g = 9,81 m/s²): düşüş süresi = √(2h/g) = 0,553 sn\nsaniyede 2 metre → 1,11 m\nsaniyede 30 metre → 16,6 m\nsaniyede 900 metre (mermi hızı) → 498 m\n\nHava direnci yok sayıldı. 500 metrede Dünya'nın eğriliğinden gelen fark yaklaşık 2 cm'dir.\n\nGerçek deneme: MythBusters'ın \"Knock Your Socks Off\" bölümünde yatay ateşlenen mermi ile elden bırakılan mermi 39,6 milisaniye arayla yere düştü; aradaki küçük farkı hava direnci yaratır.\n\nSen hangisinin önce düşeceğini düşünmüştün: A mı, B mi?",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#bilim",
+    "#fizik",
+    "#yerçekimi"
+  ]
+}

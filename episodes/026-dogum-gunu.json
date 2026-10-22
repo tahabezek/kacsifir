@@ -1,0 +1,88 @@
+{
+  "id": "026",
+  "slug": "dogum-gunu",
+  "template": "birthday",
+  "gl": true,
+  "publishAt": "2026-10-27T17:30Z",
+  "serial": "№ 026 · PARADOKS",
+  "bpm": 100,
+  "question": [
+    "23 kişide ortak",
+    "doğum günü",
+    "olasılığı kaçtır?"
+  ],
+  "timing": {
+    "first": 0.2,
+    "second": 0.65,
+    "last": 10,
+    "vay": [
+      10.3,
+      14.2
+    ],
+    "hero": 14.7,
+    "silence": 0.5,
+    "riser": [
+      11.8,
+      14.2
+    ],
+    "glow": [
+      21.2,
+      26
+    ],
+    "ext": [
+      27,
+      29.6
+    ],
+    "reset": [
+      34.3,
+      36.2
+    ],
+    "duration": 37
+  },
+  "says": [
+    {
+      "t0": -1,
+      "t1": 4.6,
+      "text": "Sence %5 mi, %20 mi, yoksa %50 mi?"
+    },
+    {
+      "t0": 4.7,
+      "t1": 10.2,
+      "text": "Her yeni kişi önceki herkesle bir çift kurar."
+    },
+    {
+      "t0": 10.3,
+      "t1": 14.6,
+      "text": "Biz bu soruyu hep kendi doğum günümüzle düşünürüz."
+    },
+    {
+      "t0": 14.75,
+      "t1": 20.85,
+      "text": "23 kişide aynı gün doğan iki kişi çıkma olasılığı neredeyse yazı tura kadardır.",
+      "red": true
+    },
+    {
+      "t0": 20.95,
+      "t1": 26.95,
+      "text": "Önemli olan kişi sayısı değil, çift sayısıdır: 23 kişi 253 çift eder."
+    },
+    {
+      "t0": 29.7,
+      "t1": 34.2,
+      "text": "70 kişide ortalama 6,6 çift aynı gün doğar."
+    },
+    {
+      "t0": 35.6,
+      "t1": 99,
+      "text": "Sence %5 mi, %20 mi, yoksa %50 mi?"
+    }
+  ],
+  "caption": "23 kişide ortak doğum günü olasılığı kaçtır? Cevap %50,7'dir; bu, neredeyse yazı tura atışında yazı gelme şansı kadardır. Buna doğum günü paradoksu denir.\n\nÇoğumuz soruyu kendi doğum günümüzle düşünürüz: 22 kişi arasında seninle aynı gün doğan birinin çıkma olasılığı yalnızca %5,9'dur. Ama asıl mesele, 23 kişinin içinde aynı gün doğan herhangi iki kişinin olup olmadığıdır ve 23 kişi 253 farklı çift eder. Belirli tek bir çiftin aynı gün doğma olasılığı yalnızca 1/365'tir; 253 çiftin en az birinde eşleşme çıkma olasılığı ise %50,7'dir.\n\nHesap: Hiç eşleşme olmama olasılığı = 365/365 × 364/365 × … × 343/365 ≈ %49,3. Demek ki en az bir eşleşme ≈ %50,7.\n10 kişi %11,7 · 20 kişi %41,1 · 23 kişi %50,7 · 30 kişi %70,6 · 50 kişi %97,0 · 70 kişi %99,9\n\nVarsayımlar: 29 Şubat yok sayıldı, doğum günleri yıla eşit dağılmış kabul edildi. Videodaki doğum günleri bir örnektir; yüzdeler hesaptır. 70 kişide aynı gün doğan çift sayısı ortalama 2.415 / 365 ≈ 6,6'dır (bu örnekte 7).\n\nKaynak: Klasik olasılık problemi (R. von Mises, 1939); W. Feller, An Introduction to Probability Theory and Its Applications.\n\nSınıfında, ofisinde ya da ailende aynı gün doğan iki kişi var mı?",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#matematik",
+    "#olasılık",
+    "#paradoks"
+  ]
+}

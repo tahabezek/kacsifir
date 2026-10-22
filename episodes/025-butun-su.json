@@ -1,0 +1,91 @@
+{
+  "id": "025",
+  "slug": "butun-su",
+  "template": "water",
+  "gl": true,
+  "publishAt": "2026-10-26T17:30Z",
+  "serial": "№ 025 · ÖLÇEK",
+  "bpm": 100,
+  "question": [
+    "Bütün su bir top olsa",
+    "ne kadar büyük olurdu?"
+  ],
+  "timing": {
+    "pull": [
+      0.25,
+      1.45
+    ],
+    "drain": [
+      2.9,
+      7
+    ],
+    "roll": [
+      7.6,
+      10.8
+    ],
+    "land": 10.8,
+    "silence": 0.75,
+    "riser": [
+      8.7,
+      10.05
+    ],
+    "fresh": [
+      16.4,
+      17.4
+    ],
+    "lake": [
+      22.7,
+      23.5
+    ],
+    "dive": [
+      28.2,
+      29.4
+    ],
+    "duration": 30
+  },
+  "says": [
+    {
+      "t0": -1,
+      "t1": 2.8,
+      "text": "Dünya yüzeyinin %71'i suyla kaplıdır."
+    },
+    {
+      "t0": 3,
+      "t1": 6.9,
+      "text": "Bütün suyu tek bir topta toplayalım."
+    },
+    {
+      "t0": 7,
+      "t1": 10.7,
+      "text": "Şimdi bu topu Türkiye boyunca yuvarlayalım."
+    },
+    {
+      "t0": 10.9,
+      "t1": 16.3,
+      "text": "Topun çapı Türkiye'nin doğu-batı uzunluğundan 215 km kısadır."
+    },
+    {
+      "t0": 17.5,
+      "t1": 22.6,
+      "text": "Buzullar hariç bütün tatlı su, çapı 273 km olan bir topa sığar."
+    },
+    {
+      "t0": 23.6,
+      "t1": 28.2,
+      "text": "Tatlı su göllerinin ve nehirlerinin suyu 56 km'lik bir topa sığar."
+    },
+    {
+      "t0": 28.8,
+      "t1": 99,
+      "text": "Dünya yüzeyinin %71'i suyla kaplıdır."
+    }
+  ],
+  "caption": "Bütün su bir top olsa ne kadar büyük olurdu? Okyanuslar, buzullar, göller, nehirler ve yeraltı suyu dahil Dünya'daki bütün su, çapı yaklaşık 1.385 km olan bir topa sığar. Bu çap, Türkiye'nin doğu–batı uzunluğundan (≈1.600 km) 215 km kısadır. Topun kesit alanı ise Türkiye'nin yaklaşık 1,9 katıdır.\n\nHesap: Dünya'daki bütün su ≈ 1,386 milyar km³. Küre çapı = 2 × ∛(3V / 4π) ≈ 1.385 km.\nBuzullar hariç sıvı tatlı su (yeraltı suyu, göller, bataklıklar, nehirler) ≈ 10,6 milyon km³ → ≈ 273 km; bütün suyun %0,77'si.\nTatlı su göllerinin ve nehirlerinin suyu ≈ 93.100 km³ → ≈ 56 km (Hazar gibi tuzlu göller hariç); bütün suyun %0,007'si.\nDünya'nın çapı 12.742 km; yüzeyinin ≈ %71'i suyla kaplıdır.\n\nSu, Dünya'nın yüzeyinde çok ince bir tabakadır: Okyanusların ortalama derinliği yaklaşık 3,7 km'dir.\n\nKaynak: USGS Water Science School, \"How much water is there on Earth?\" · Scientific American, \"It's a Water-Full World\" (2012) · Türkiye'nin genişliği: Ankara Üniversitesi açık ders notları.\n\nBu topun çapının Türkiye'nin doğu–batı uzunluğundan kısa olduğunu tahmin eder miydin?",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#bilim",
+    "#coğrafya",
+    "#su"
+  ]
+}

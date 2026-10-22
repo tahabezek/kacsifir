@@ -68,7 +68,7 @@ export async function makeVenusRenderer(ep, canvas) {
     if (sp > 0.01) { ctx.save(); ctx.strokeStyle = C.graphite; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(v.x, v.y, r + 66, Math.PI, Math.PI + sp); ctx.stroke(); ctx.restore(); }
     // doruk: bayrağın daha gitmesi gereken yol (kesik kırmızı) — yıl bitti, gün bitmedi
     const mu = win(t, tl.hero + 0.1, tl.dayRun[0] + 0.2, 0.4);
-    if (mu > 0 && sp < TAU) { ctx.save(); ctx.setLineDash([8, 7]); ctx.strokeStyle = C.red; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(v.x, v.y, r + 66, Math.PI + sp, Math.PI + sp + (TAU - sp) * mu); ctx.stroke(); ctx.restore(); }
+    if (mu > 0 && sp < TAU) { ctx.save(); ctx.setLineDash([8, 7]); ctx.lineDashOffset = -((t / D) * Math.round(D / 1.2) * 15) % 15; ctx.strokeStyle = C.red; ctx.lineWidth = 8; ctx.beginPath(); ctx.arc(v.x, v.y, r + 66, Math.PI + sp, Math.PI + sp + (TAU - sp) * mu); ctx.stroke(); ctx.restore(); }
     return v;
   }
 
@@ -87,9 +87,9 @@ export async function makeVenusRenderer(ep, canvas) {
     const d = daysAt(tl, t);
     P.stage(() => {
       const zk = (tt, dz) => dz * spring(t - tt, 170, 26);
-      const zz = zk(tl.hero, 0.3) - zk(tl.zoomOut, 0.3);
+      const zz = zk(tl.hero, 0.2) - zk(tl.zoomOut, 0.2);
       const z = 1 + 0.04 * seg(t, 0, tl.ret[0]) * (1 - ease.state(seg(t, tl.ret[0], tl.ret[1] - tl.ret[0])));
-      const vf = venusAt(tl.year), fx = lerp(S.x, vf.x, Math.min(1, zz / 0.3)), fy = lerp(S.y, vf.y, Math.min(1, zz / 0.3));
+      const vf = venusAt(tl.year), fx = lerp(S.x, vf.x, Math.min(1, zz / 0.2)), fy = lerp(S.y, vf.y, Math.min(1, zz / 0.2));
       ctx.save(); ctx.translate(fx, fy); ctx.scale(z + zz, z + zz); ctx.translate(-fx, -fy);
       // yörünge: kesik çizgi; geçen kısım mürekkeple (yıl ilerlemesi)
       ctx.save(); ctx.setLineDash([9, 9]); ctx.strokeStyle = C.graphite; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(S.x, S.y, G.orbitR, 0, TAU); ctx.stroke(); ctx.restore();
@@ -109,14 +109,16 @@ export async function makeVenusRenderer(ep, canvas) {
       ctx.restore();
       // adlar
       const tu = win(t, 0, tl.run[0] + 3.0);
-      P.tag({ x: S.x, y: S.y + G.sunR }, ep.label.sun, 0, 40, tu);
+      P.tag({ x: S.x, y: S.y + G.sunR }, ep.label.sun, 0, 40, Math.max(tu, t >= tl.end - 0.6 ? ease.enter(seg(t, tl.end - 0.6, 0.5)) : 0));
     });
     P.header();
     const L = ep.label;
     const dn = d >= 200 ? nf1.format(Math.floor(d * 10) / 10) : nf0.format(Math.floor(d));
     if (t < tl.hero) P.counter({ label: L.elapsed, num: dn + ' ' + L.days, sub: L.def, pin: 1 });
-    else if (t < tl.dayRun[1]) P.counter({ label: L.yearDone, num: nf1.format(tl.year) + ' ' + L.days, sub: L.notYet + ' %' + Math.floor(100 * Math.min(d, tl.day) / tl.day), subInk: true, red: true, pin: ease.enter(seg(t, tl.hero, 0.4)), pop: t - tl.hero });
-    else if (t < tl.ret[1] - 0.6) P.counter({ label: L.dayDone, num: nf0.format(tl.day) + ' ' + L.days, sub: L.longer, subInk: true, pin: ease.enter(seg(t, tl.dayRun[1], 0.4)) });
+    // doruk: yıl bitti (mürekkep); kırmızı yalnızca eksik yol. Sonra gün sayacı 224,7 → 243; cevap 243 kırmızı
+    else if (t < tl.dayRun[0]) P.counter({ label: L.yearDone, num: nf1.format(tl.year) + ' ' + L.days, sub: L.notYet + ' %' + Math.floor(100 * tl.year / tl.day), subInk: true, pin: ease.enter(seg(t, tl.hero, 0.4)), pop: t - tl.hero });
+    else if (t < tl.dayRun[1]) P.counter({ label: L.elapsed, num: dn + ' ' + L.days, sub: L.yearMark, pin: ease.enter(seg(t, tl.dayRun[0], 0.4)) });
+    else if (t < tl.ret[0]) P.counter({ label: L.dayDone, num: nf0.format(tl.day) + ' ' + L.days, sub: L.longer, red: true, subRed: true, pin: ease.enter(seg(t, tl.dayRun[1], 0.4)), pop: t - tl.dayRun[1] });
     else P.counter({ label: L.elapsed, num: dn + ' ' + L.days, sub: L.def, pin: ease.enter(seg(t, tl.ret[1] - 0.6, 0.4)) });
     P.says(ep.says, t, tl, null);
     drawActor(ctx, actorScript, t, actorHome, 100, D);

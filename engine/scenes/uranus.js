@@ -55,9 +55,14 @@ export async function makeUranusRenderer(ep, canvas) {
   function uranus(t, yrs) {
     const u = posAt(yrs), r = G.ur;
     P.planet('uranus', u.x, u.y, r);
-    // gece yarısı: Güneş'e bakmayan yarım
-    const toSun = Math.atan2(S.y - u.y, S.x - u.x);
-    ctx.save(); ctx.beginPath(); ctx.arc(u.x, u.y, r * 0.985, toSun + Math.PI / 2, toSun + 3 * Math.PI / 2); ctx.closePath(); ctx.clip();
+    // gece tarafı, evreyle: eğik bakış (sin e = b/a). Aydınlık oran (1 + cos φ) / 2, φ = Güneş ile izleyici arası açı.
+    // Önden geçerken ince hilal, arkadan geçerken neredeyse dolunay.
+    const th0 = u.a, se = G.b / G.a, ce = Math.sqrt(1 - se * se), cphi = -Math.sin(th0) * ce;
+    const toSun = Math.atan2(-Math.sin(th0) * se, -Math.cos(th0)), rr = r * 0.985;
+    ctx.save(); ctx.translate(u.x, u.y); ctx.rotate(toSun); ctx.beginPath();
+    ctx.arc(0, 0, rr, Math.PI / 2, 3 * Math.PI / 2);
+    ctx.ellipse(0, 0, Math.max(0.01, rr * Math.abs(cphi)), rr, 0, -Math.PI / 2, Math.PI / 2, cphi > 0);
+    ctx.closePath(); ctx.rotate(-toSun); ctx.translate(-u.x, -u.y); ctx.clip();
     ctx.strokeStyle = 'rgba(28,27,24,0.6)'; ctx.lineWidth = 2; ctx.beginPath();
     for (let k = -2 * r; k < 2 * r; k += 6) { ctx.moveTo(u.x + k, u.y - r); ctx.lineTo(u.x + k + 2 * r, u.y + r); } ctx.stroke(); ctx.restore();
     // eksen: iki kutuptan dışarı taşan çizgi; kuzey ucunda bayrak (gündüzse dolu, geceyse çizgi)
@@ -77,7 +82,7 @@ export async function makeUranusRenderer(ep, canvas) {
     let pos;
     P.stage(() => {
       const zk = (tt, dz) => dz * spring(t - tt, 170, 26);
-      const zz = zk(tl.silence[0], 0.15) - zk(tl.hero + 1.0, 0.15);
+      const zz = zk(tl.silence[0], 0.15) - zk(tl.hero + 1.0, 0.15) + zk(tl.push1, 0.06) - zk(tl.hero + 1.0, 0.06);
       const z = 1 + 0.04 * seg(t, 0, tl.dayRun[0]) - 0.04 * ease.state(seg(t, tl.dayRun[1] - 2, 2));
       const uh = posAt(tl.half), k = Math.min(1, Math.max(0, zz / 0.15)), fx = lerp(S.x, uh.x, k), fy = lerp(S.y, uh.y, k);
       ctx.save(); ctx.translate(fx, fy); ctx.scale(z + zz, z + zz); ctx.translate(-fx, -fy);
@@ -94,23 +99,23 @@ export async function makeUranusRenderer(ep, canvas) {
       const nu = win(t, 3.6, 9.5, 0.5);
       if (nu > 0) { const n = { x: S.x + (pos.n.x - S.x) * z, y: S.y + (pos.n.y - S.y) * z }; P.tag(n, ep.label.pole, -70, 40, nu); }
     });
-    const iu = win(t, tl.tiltAt, tl.dayRun[1] - 0.4, 0.6);
+    const iu = win(t, tl.tiltAt, tl.end - 0.5, 0.6);
     if (iu > 0) {
-      const cx = G.insetX, cy = G.insetY, R0 = 54;
+      const cx = G.insetX, cy = G.insetY, R0 = 84;
       ctx.save(); ctx.strokeStyle = C.ink; ctx.lineWidth = 3;
-      ctx.beginPath(); ctx.arc(cx, cy, 26, 0, TAU); ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx, cy, 40, 0, TAU); ctx.stroke();
       ctx.setLineDash([6, 6]); ctx.strokeStyle = C.graphite; ctx.beginPath(); ctx.moveTo(cx, cy + R0); ctx.lineTo(cx, cy - R0); ctx.stroke(); ctx.setLineDash([]);
       const ang = -Math.PI / 2 + 98 * Math.PI / 180 * ease.state(seg(t, tl.tiltAt + 0.1, 0.6));
       ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.moveTo(cx - Math.cos(ang) * R0, cy - Math.sin(ang) * R0); ctx.lineTo(cx + Math.cos(ang) * R0, cy + Math.sin(ang) * R0); ctx.stroke();
-      ctx.strokeStyle = C.red; ctx.lineWidth = 3.5; ctx.beginPath(); ctx.arc(cx, cy, 40, -Math.PI / 2, ang); ctx.stroke(); ctx.restore();
-      setFont(ctx, F.head(44)); revealText(ctx, '98°', cx + 70, cy + 14, 44, ease.enter(seg(t, tl.tiltAt + 0.5, 0.35)) * iu, C.red, 'left');
+      ctx.strokeStyle = C.red; ctx.lineWidth = 3.5; ctx.beginPath(); ctx.arc(cx, cy, 62, -Math.PI / 2, ang); ctx.stroke(); ctx.restore();
+      setFont(ctx, F.head(52)); revealText(ctx, '98°', cx + 100, cy + 18, 52, ease.enter(seg(t, tl.tiltAt + 0.5, 0.35)) * iu, C.red, 'left');
     }
     P.header();
     const L = ep.label;
-    if (t < tl.nightRun[0] + 0.2 || t >= tl.end - 0.5) P.counter({ label: L.yearLabel, num: nf0.format(tl.year) + ' ' + L.years, sub: L.def, pin: t < 1 ? 1 : ease.enter(seg(t, tl.end - 0.5, 0.4)) });
-    else if (t < tl.hero) P.counter({ label: L.night, num: nf0.format(Math.min(41, Math.floor(yrs))) + ' ' + L.yearShort, sub: L.def, pin: ease.enter(seg(t, tl.nightRun[0] + 0.2, 0.4)) });
-    else if (t < tl.dayRun[0] + 0.3) P.counter({ label: L.sunrise, num: nf0.format(tl.half) + ' ' + L.yearShort, sub: L.def, red: true, pin: ease.enter(seg(t, tl.hero, 0.4)), pop: t - tl.hero });
-    else P.counter({ label: L.day, num: nf0.format(Math.min(tl.half, Math.round(yrs - tl.half))) + ' ' + L.yearShort, sub: L.def, pin: ease.enter(seg(t, tl.dayRun[0] + 0.3, 0.4)) });
+    if (t >= tl.end - 0.5) P.counter({ label: L.night, num: '0 ' + L.yearShort, sub: L.yearSub, pin: ease.enter(seg(t, tl.end - 0.5, 0.4)) });
+    else if (t < tl.hero) P.counter({ label: L.night, num: nf0.format(Math.min(41, Math.floor(yrs))) + ' ' + L.yearShort, sub: L.yearSub, pin: 1 });
+    else if (t < tl.redUntil) P.counter({ label: L.sunrise, num: nf0.format(tl.half) + ' ' + L.yearShort, sub: L.def, red: true, pin: ease.enter(seg(t, tl.hero, 0.4)), pop: t - tl.hero });
+    else P.counter({ label: L.day, num: nf0.format(Math.min(tl.half, Math.round(yrs - tl.half))) + ' ' + L.yearShort, sub: L.def, pin: ease.enter(seg(t, tl.redUntil, 0.4)) });
     P.says(ep.says, t, tl, tl.end - 0.5);
     drawActor(ctx, actorScript, t, actorHome, AH, D);
   }

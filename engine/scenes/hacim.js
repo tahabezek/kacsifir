@@ -123,7 +123,7 @@ export async function makeHacimRenderer(ep, canvas) {
       setFont(ctx, F.mono(40)); revealText(ctx, c.k, x + 18, y + 66, 40, a, C.graphite);
       setFont(ctx, F.head(56)); revealText(ctx, c.v, x + 64, y + 72, 56, u * a, C.ink);
       const wk = back ? ease.enter(seg(t, tl.reasons + 0.6 * (i + 1), 0.35)) * why : 0;
-      if (wk > 0) { setFont(ctx, F.name(34)); revealText(ctx, c.what, x + w / 2, y + h + 44, 34, wk, C.ink, 'center'); }
+      if (wk > 0) { setFont(ctx, F.name(46)); revealText(ctx, c.what, x + w / 2, y + h + 56, 46, wk, C.ink, 'center'); }
       ctx.restore();
     });
   }
@@ -133,12 +133,13 @@ export async function makeHacimRenderer(ep, canvas) {
     P.stage(() => {
       // kamera: kare 0'dan dönüşe dek %6 doğrusal itme (Jüpiter'in merkezine), dönüşte geri
       const zk = (tt, dz) => dz * spring(t - tt, 170, 26);
-      const z = 1 + 0.03 * seg(t, 0, tl.pour[1]) + 0.06 * seg(t, tl.pour[1], tl.ret[0] - tl.pour[1]) - 0.06 * ease.state(seg(t, tl.ret[0], tl.ret[1] - tl.ret[0])) + zk(tl.pour[1] + 0.2, 0.06) + zk(tl.ask, 0.06) - zk(tl.hero + tl.drain + 0.4, 0.04) + zk(tl.coda, 0.06) - zk(tl.ret[0], 0.17);
+      const z = 1 + 0.03 * seg(t, 0, tl.pour[1]) + 0.06 * seg(t, tl.pour[1], tl.ret[0] - tl.pour[1]) - 0.06 * ease.state(seg(t, tl.reasons, 1.0)) + zk(tl.pour[1] + 0.2, 0.06) + zk(tl.ask, 0.06) - zk(tl.hero + tl.drain + 0.4, 0.04) - zk(tl.reasons, 0.11);
       ctx.save(); ctx.translate(J.x, J.y); ctx.scale(z, z); ctx.translate(-J.x, -J.y);
       vessel(t);
       // çap ölçüsü: kare 0'dan ilk atışa dek diskin üstünde
       // Dünya (kare 0'da Jüpiter'in yanında, gerçek oranda); dolum boyunca yerinde durur
-      P.planet('dunya', E0.x, E0.y, rE);
+      const hop = t < tl.pour[0] ? Math.sin(Math.PI * seg(t, 0.3, 0.36)) * 18 + Math.sin(Math.PI * seg(t, 0.9, 0.3)) * 8 : 0;
+      P.planet('dunya', E0.x, E0.y - hop, rE);
       const tu = Math.max(win(t, 0, tl.pour[0] + 0.4), t >= tl.ret[1] - 0.6 ? ease.state(seg(t, tl.ret[1] - 0.6, 0.6)) : 0);
       P.tag(E0, ep.label.earth, 0, -60, tu);
       for (const i of flying(t)) { const p = earthPos(i, t); P.planet('dunya', p.x, p.y, rE); }
@@ -158,16 +159,16 @@ export async function makeHacimRenderer(ep, canvas) {
       const su = win(t, tl.hero + tl.drain, tl.reasons + 0.2, 0.5);
       if (su > 0) {
         const sq = (x, y, gap, name, k) => {
-          const w = 110, u = Math.min(1, su * 1.3 - k * 0.25); if (u <= 0) return;
+          const w = 112, u = Math.min(1, su * 1.3 - k * 0.25); if (u <= 0) return;
           ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, w * u); ctx.clip();
           ctx.fillStyle = C.paper; ctx.fillRect(x, y, w, w);
           ctx.strokeStyle = C.ink; ctx.lineWidth = 2.6; ctx.beginPath();
           for (let q = -w; q < w; q += gap) { ctx.moveTo(x + q, y + w); ctx.lineTo(x + q + w, y); } ctx.stroke(); ctx.restore();
           ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.strokeRect(x, y, w, w * u);
-          setFont(ctx, F.mono(32)); revealText(ctx, name, x + w / 2, y - 14, 32, ease.enter(seg(u, 0.6, 0.4)), C.ink, 'center');
+          setFont(ctx, F.name(36)); revealText(ctx, name, x + w / 2, y - 14, 36, ease.enter(seg(u, 0.6, 0.4)), C.ink, 'center');
         };
         sq(Gm.sqX, Gm.sqY, 14, ep.label.earth, 0);
-        sq(Gm.sqX + 125, Gm.sqY, 14 / tl.densityRatio, ep.label.jupiter, 1);
+        sq(Gm.sqX + 122, Gm.sqY, 14 / tl.densityRatio, ep.label.jupiter, 1);
       }
       P.fadeTop();
     });

@@ -154,8 +154,9 @@ export async function makeTeraziRenderer(ep, canvas) {
     P.stage(() => {
             // kamera: olaylarda yay (170/26) ile yaklaşma ve geri çekilme; en çok %7
       const zk = (tt, dz) => dz * spring(t - tt, 170, 26);
-      const z = 1 + zk(tl.push1, 0.06) - zk(tl.hero, 0.06) + zk(tl.moment, 0.07) - zk(tl.coda, 0.07);
-      const zc = { x: G.pivotX, y: PIV.y + 160 };
+      // doruk: destek kayarken terazi katmanına 1,12x yaklaşma, 'kollar' cümlesinde geri
+      const z = 1 + zk(tl.push1, 0.06) - zk(tl.hero, 0.06) + zk(tl.hero, 0.06) - zk(tl.moment, 0.06) + zk(tl.moment, 0.05) - zk(tl.coda, 0.05);
+      const zc = { x: G.pivotX + 80, y: PIV.y + 160 };
       ctx.save(); ctx.translate(zc.x, zc.y); ctx.scale(z, z); ctx.translate(-zc.x, -zc.y);
       column();
       // sol kefe: Jüpiter

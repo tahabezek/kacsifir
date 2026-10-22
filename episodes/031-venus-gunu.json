@@ -31,18 +31,19 @@
     "longer": "yıldan 18 gün uzun",
     "sun": "Güneş",
     "orbitDir": "dolanım",
-    "spinDir": "dönüş"
+    "spinDir": "dönüş",
+    "yearMark": "bir yıl: 224,7 gün"
   },
   "says": [
     {
       "t0": 0.4,
       "t1": 3.3,
-      "text": "Bir yıl: Güneş'in çevresinde bir tur."
+      "text": "Bir yıl, Güneş'in çevresinde bir turdur."
     },
     {
       "t0": 3.55,
       "t1": 6.8,
-      "text": "Bir gün: kendi ekseni etrafında bir tur."
+      "text": "Bir gün, kendi ekseni etrafında bir turdur."
     },
     {
       "t0": 7.05,
@@ -61,11 +62,11 @@
     },
     {
       "t0": 19.2,
-      "t1": 22.55,
+      "t1": 21.65,
       "text": "Venüs'te bir gün 243 Dünya günü sürer."
     },
     {
-      "t0": 22.8,
+      "t0": 21.9,
       "t1": 24.6,
       "text": "Üstelik ters yönde döner."
     }
@@ -86,7 +87,7 @@
       19.2,
       21
     ],
-    "dirs": 22.8,
+    "dirs": 21.9,
     "ret": [
       24.8,
       26.6
@@ -94,7 +95,7 @@
     "end": 26.9,
     "zoomOut": 19
   },
-  "caption": "Venüs, Güneş'in çevresini 224,7 Dünya gününde dolanır; bu, Venüs'ün bir yılıdır. Kendi ekseni etrafındaki bir tam turu ise 243 Dünya günü sürer. Yani Venüs'ün kendi ekseni etrafındaki bir tam dönüşü, bir yılından uzundur.\n\nÜstelik Venüs, Güneş Sistemi'ndeki gezegenlerin çoğunun tersine döner. Venüs'te Güneş batıdan doğar, doğuda batar.\n\nBir ayrıntı: Gün doğumundan bir sonraki gün doğumuna kadar geçen süre (Güneş günü) yaklaşık 117 Dünya günüdür. Venüs ters yönde döndüğü için dönüş ve dolanım hızları toplanır ve Güneş günü, yıldızlara göre ölçülen 243 günlük dönüşten kısa olur. Videoda bayrak, yıldızlara göre olan dönüşü gösteriyor.\n\nKaynak: NASA NSSDC Planetary Fact Sheet (dönüş −5.832,5 saat, yörünge 224,7 gün, Güneş günü 2.802 saat).\n\nVenüs'te yaşasaydın yaşını neye göre sayardın? Yorumlara yaz.",
+  "caption": "Venüs'te bir gün, bir yıldan uzundur.\n\nVenüs, Güneş'in çevresini 224,7 Dünya gününde dolanır; bu, Venüs'ün bir yılıdır. Kendi ekseni etrafındaki bir tam turu ise 243 Dünya günü sürer. Yani Venüs'ün kendi ekseni etrafındaki bir tam dönüşü, bir yılından uzundur.\n\nÜstelik Venüs, Güneş Sistemi'ndeki gezegenlerin çoğunun tersine döner. Venüs'te Güneş batıdan doğar, doğuda batar.\n\nBir ayrıntı: Gün doğumundan bir sonraki gün doğumuna kadar geçen süre (Güneş günü) yaklaşık 117 Dünya günüdür. Venüs ters yönde döndüğü için dönüş ve dolanım hızları toplanır ve Güneş günü, yıldızlara göre ölçülen 243 günlük dönüşten kısa olur. Videoda bayrak, yıldızlara göre ölçülen dönüşü gösteriyor.\n\nKaynak: NASA NSSDC Planetary Fact Sheet (dönüş −5.832,5 saat, yörünge 224,7 gün, Güneş günü 2.802 saat).\n\nVenüs'te yaşasaydın yaşını neye göre sayardın? Yorumlara yaz.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

@@ -61,17 +61,17 @@
   ],
   "geom": {
     "jupR": 90,
-    "pivotX": 400,
+    "pivotX": 440,
     "pivotY": 1048,
     "beam": 440,
     "hang": 236,
-    "panW": 220,
+    "panW": 190,
     "panDepth": 13,
     "baseY": 1410,
     "maxTilt": 12,
     "gain": 2.5,
     "jolt": 5,
-    "actorX": 830,
+    "actorX": 875,
     "strain": 6,
     "fall": 420,
     "settle": 1.5
@@ -84,7 +84,7 @@
     "unit": "Dünya",
     "unitNote": "Birim: Dünya'nın kütlesi",
     "vs": "Jüpiter:",
-    "hero": "JÜPİTER, DİĞERLERİNDEN",
+    "hero": "JÜPİTER, YEDİSİNİN TOPLAMINDAN",
     "coda": "TOPLAM GEZEGEN KÜTLESİNİN",
     "codaSub": "Jüpiter'de"
   },
@@ -147,7 +147,7 @@
     ],
     "end": 27
   },
-  "caption": "Bir terazinin bir kefesine yalnızca Jüpiter'i, öbür kefesine Güneş Sistemi'nin geri kalan yedi gezegenini koyalım: Merkür, Venüs, Dünya, Mars, Satürn, Uranüs ve Neptün. Hangi kefe ağır basar?\n\nNASA'nın gezegen tablosuna göre Jüpiter'in kütlesi 1898 × 10²⁴ kg, yani Dünya'nın yaklaşık 318 katı. Diğer yedi gezegenin toplamı ise 768,6 × 10²⁴ kg, yani yaklaşık 129 Dünya. Jüpiter tek başına geri kalanların 2,47 katı ağır.\n\nKütleleri değiştirmeden teraziyi dengelemenin yolu desteği Jüpiter'e yaklaştırmaktır. Kol uzunluklarının oranı 1'e 2,47 olduğunda iki kefe dengeye gelir; tahterevallide ağır olanın ortaya yakın oturması gibi.\n\nGüneş Sistemi'ndeki gezegenlerin toplam kütlesinin %71'i yalnızca Jüpiter'dedir. Satürn'ün kütlesi bile Jüpiter'inkinin üçte birinden azdır.\n\nKaynak: NASA NSSDC Planetary Fact Sheet. Gezegenlerin boyutları birbirine göre gerçek oranlarıyla çizildi.\n\nDesteği ortada bıraksak ve öbür kefede yalnızca Satürn olsa, Jüpiter'i dengelemek için kaç Satürn gerekirdi? Yorumlara yaz.",
+  "caption": "Bir terazinin bir kefesine yalnızca Jüpiter'i, öbür kefesine Güneş Sistemi'nin geri kalan yedi gezegenini koyalım: Merkür, Venüs, Dünya, Mars, Satürn, Uranüs ve Neptün. Hangi kefe ağır basar?\n\nNASA'nın gezegen tablosuna göre Jüpiter'in kütlesi 1898 × 10²⁴ kg, yani Dünya'nın yaklaşık 318 katı. Diğer yedi gezegenin toplamı ise 768,6 × 10²⁴ kg, yani yaklaşık 129 Dünya. Jüpiter tek başına, geri kalanların toplamından 2,47 kat ağırdır.\n\nKütleleri değiştirmeden teraziyi dengelemenin yolu desteği Jüpiter'e yaklaştırmaktır. Kol uzunluklarının oranı 1'e 2,47 olduğunda iki kefe dengeye gelir; tahterevallide ağır olanın ortaya yakın oturması gibi.\n\nGüneş Sistemi'ndeki gezegenlerin toplam kütlesinin %71'i yalnızca Jüpiter'dedir. Satürn'ün kütlesi bile Jüpiter'inkinin üçte birinden azdır.\n\nKaynak: NASA NSSDC Planetary Fact Sheet. Gezegenlerin boyutları birbirine göre gerçek oranlarıyla çizildi.\n\nDesteği ortada bıraksak ve öbür kefede yalnızca Satürn olsa, Jüpiter'i dengelemek için kaç Satürn gerekirdi? Yorumlara yaz.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",

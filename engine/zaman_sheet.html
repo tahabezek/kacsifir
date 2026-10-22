@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1600" height="900"></canvas>
+<script type="module">
+// Poz kâğıdı: asker (durma, 8 yürüme karesi, çömelme, teslim) ve kozmonot (4 dönüş)
+import { SOLDIER_CARD, drawSoldier, COSMONAUT_CARD, drawCosmonaut } from './zaman_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1600, 900);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+at(110, 400, () => drawSoldier(ctx, SOLDIER_CARD, { mode: 'stand' }, 300));
+for (let i = 0; i < 8; i++) at(300 + i * 150, 400, () => drawSoldier(ctx, SOLDIER_CARD, { mode: 'walk', phase: i / 8 }, 300));
+at(200, 820, () => drawSoldier(ctx, SOLDIER_CARD, { mode: 'crouch' }, 300));
+at(450, 820, () => drawSoldier(ctx, SOLDIER_CARD, { mode: 'present' }, 300));
+for (let i = 0; i < 4; i++) at(800 + i * 200, 650, () => drawCosmonaut(ctx, COSMONAUT_CARD, { spin: i * 0.5, reach: i / 3 }, 260));
+window.__ready = true;
+</script></body></html>

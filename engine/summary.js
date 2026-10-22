@@ -29,7 +29,12 @@ import { waterSummary } from './scenes/water_core.js';
 import { birthdaySummary } from './scenes/birthday_core.js';
 import { fallSummary } from './scenes/fall_core.js';
 
+import { yolSummary } from './scenes/yolculuk_summary.js';
+import { zamanSummary } from './scenes/zaman_summary.js';
+
 export function summary(ep) {
+  if (ep.template === 'yolculuk') return yolSummary(ep);
+  if (ep.template === 'zaman') return zamanSummary(ep);
   if (ep.template === 'domino') return dominoSummary(ep);
   if (ep.template === 'gezegen') return gezegenSummary(ep);
   if (ep.template === 'terazi') return teraziSummary(ep);

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1600" height="1200"></canvas>
+<script type="module">
+// Poz kâğıdı: kuşun 8 kanat fazı, adamın 8 yürüme karesi, yüzme ve bekleme, küre işaretleri
+import { GODWIT_CARD, drawGodwit, drawGodwitGlyph, WALKER_CARD, drawWalker } from './yol_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1600, 1200);
+for (let i = 0; i < 8; i++) {
+  ctx.save(); ctx.translate(110 + i * 190, 150); drawGodwit(ctx, GODWIT_CARD, { flap: Math.sin((i / 8) * Math.PI * 2) }, 220); ctx.restore();
+}
+ctx.save(); ctx.translate(800, 380); drawGodwit(ctx, GODWIT_CARD, { flap: 0.3 }, 600); ctx.restore();
+for (let i = 0; i < 8; i++) {
+  ctx.save(); ctx.translate(140 + i * 190, 900); drawWalker(ctx, WALKER_CARD, { mode: 'walk', phase: i / 8, cart: true }, 260); ctx.restore();
+}
+ctx.save(); ctx.translate(300, 1120); drawWalker(ctx, WALKER_CARD, { mode: 'swim', phase: 0.1 }, 260); ctx.restore();
+ctx.save(); ctx.translate(650, 1120); drawWalker(ctx, WALKER_CARD, { mode: 'swim', phase: 0.6 }, 260); ctx.restore();
+ctx.save(); ctx.translate(950, 1170); drawWalker(ctx, WALKER_CARD, { mode: 'stand', phase: 0, cart: true }, 260); ctx.restore();
+for (let i = 0; i < 4; i++) { ctx.save(); ctx.translate(1200 + i * 90, 1100); ctx.rotate(-0.6); drawGodwitGlyph(ctx, 60, Math.sin(i)); ctx.restore(); }
+window.__ready = true;
+</script></body></html>

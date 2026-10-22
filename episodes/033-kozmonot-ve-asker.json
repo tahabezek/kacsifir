@@ -1,0 +1,145 @@
+{
+  "id": "033",
+  "slug": "kozmonot-ve-asker",
+  "template": "zaman",
+  "serial": "№ 033 · HANGİSİ?",
+  "bpm": 100,
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+16%",
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?"
+      },
+      {
+        "id": "l02",
+        "tts": "Bir kozmonot, bin dokuz yüz doksan bir Mayıs'ında Sovyetler Birliği adına uzaya çıkıyor.",
+        "text": "Bir kozmonot, Mayıs 1991'de Sovyetler Birliği adına uzaya çıkıyor."
+      },
+      {
+        "id": "l03",
+        "tts": "Görevinin beş ay sürmesi planlanıyor.",
+        "text": "Görevinin 5 ay sürmesi planlanıyor."
+      },
+      {
+        "id": "l04",
+        "tts": "O yörüngedeyken ülkesi dağılıyor. Sovyetler Birliği on beş ülkeye bölünüyor.",
+        "text": "O yörüngedeyken ülkesi dağılıyor. Sovyetler Birliği 15 ülkeye bölünüyor."
+      },
+      {
+        "id": "l05",
+        "tts": "Dönüşü erteleniyor ve uzayda üç yüz on bir gün kalıyor.",
+        "text": "Dönüşü erteleniyor ve uzayda 311 gün kalıyor."
+      },
+      {
+        "id": "l06",
+        "tts": "Kalktığı ülke artık yok. İndiği yer ise bağımsız Kazakistan.",
+        "text": "Kalktığı ülke artık yok. İndiği yer ise bağımsız Kazakistan."
+      },
+      {
+        "id": "l07",
+        "tts": "Yoksa bu asker mi?",
+        "text": "Yoksa bu asker mi?"
+      },
+      {
+        "id": "l08",
+        "tts": "Japon teğmen Onoda, bin dokuz yüz kırk dörtte Filipinler'deki küçük bir adaya gönderiliyor.",
+        "text": "Japon teğmen Onoda, 1944'te Filipinler'deki küçük bir adaya gönderiliyor."
+      },
+      {
+        "id": "l09",
+        "tts": "Emri açık: asla teslim olmayacak.",
+        "text": "Emri açık: asla teslim olmayacak."
+      },
+      {
+        "id": "l10",
+        "tts": "Savaş bitiyor. Atılan bildirilere ve gazetelere hiç inanmıyor.",
+        "text": "Savaş bitiyor. Atılan bildirilere ve gazetelere hiç inanmıyor."
+      },
+      {
+        "id": "l11",
+        "tts": "O ormanda saklanırken insanlık Ay'a ayak basıyor.",
+        "text": "O ormanda saklanırken insanlık Ay'a ayak basıyor."
+      },
+      {
+        "id": "l12",
+        "tts": "Ancak eski komutanı gelip emri bizzat kaldırınca, bin dokuz yüz yetmiş dörtte teslim oluyor.",
+        "text": "Ancak eski komutanı gelip emri bizzat kaldırınca, 1974'te teslim oluyor."
+      },
+      {
+        "id": "l13",
+        "tts": "Peki ikisini aynı cetvelle ölçersek?",
+        "text": "Peki ikisini aynı cetvelle ölçersek?"
+      },
+      {
+        "id": "l14",
+        "tts": "Kozmonot, ülkesi olmadan doksan gün yaşadı. Asker ise savaş bittikten sonra",
+        "text": "Kozmonot, ülkesi olmadan 90 gün yaşadı. Asker ise savaş bittikten sonra"
+      },
+      {
+        "id": "l15",
+        "tts": "yirmi sekiz buçuk yıl teslim olmadı.",
+        "text": "28,5 yıl teslim olmadı."
+      },
+      {
+        "id": "l16",
+        "tts": "Bu, yaklaşık yüz on altı kat daha uzun.",
+        "text": "Bu, yaklaşık 116 kat daha uzun."
+      },
+      {
+        "id": "l17",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?"
+      }
+    ],
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.3,
+      "l03": 0.3,
+      "l04": 0.35,
+      "l05": 0.3,
+      "l06": 0.95,
+      "l07": 0.15,
+      "l08": 0.25,
+      "l09": 0.3,
+      "l10": 0.3,
+      "l11": 0.45,
+      "l12": 0.6,
+      "l13": 0.2,
+      "l14": 0.6,
+      "l15": 0.6,
+      "l16": 1
+    }
+  },
+  "facts": {
+    "krikalev": {
+      "launch": "1991-05-18",
+      "ussrEnd": "1991-12-26",
+      "land": "1992-03-25",
+      "days": 311,
+      "plannedMonths": 5,
+      "afterUssrDays": 90
+    },
+    "onoda": {
+      "arrive": "1944-12-26",
+      "warEnd": "1945-08-15",
+      "surrender": "1974-03-09",
+      "afterWarDays": 10433,
+      "afterWarYears": 28.6
+    },
+    "ratio": 116
+  },
+  "caption": "Hangisi daha şaşırtıcı? Sergey Krikalev 18 Mayıs 1991'de Baykonur'dan Sovyetler Birliği adına uzaya çıktı; görevinin yaklaşık 5 ay sürmesi planlanıyordu. O Mir istasyonundayken, 26 Aralık 1991'de Sovyetler Birliği dağıldı. Dönüşü ertelendi ve 25 Mart 1992'de, 311 gün sonra, artık bağımsız olan Kazakistan'ın Arkalık yakınlarına indi. Ülkesi olmadan geçirdiği süre 90 gün.\n\nHiroo Onoda ise Aralık 1944'te Filipinler'deki Lubang adasına gönderildi ve teslim olmaması emredildi. Savaş 15 Ağustos 1945'te bitti; atılan bildirileri ve aile mektuplarını düşman hilesi saydı. Eski komutanı Binbaşı Taniguchi adaya gelip emri kaldırana kadar, 9 Mart 1974'e kadar teslim olmadı. Savaş bittikten sonra geçen süre 10.433 gün, yani yaklaşık 28,5 yıl. Bu, kozmonotun 90 gününden 116 kat uzun.\n\nSen hangisine şaşırdın? Yorumlara KOZMONOT ya da ASKER yaz.\n\nKaynaklar: Wikipedia (Sergei Krikalev, Soyuz TM-12/TM-13; Hiroo Onoda), History Hit, Smithsonian. Haritadaki rotalar şematiktir.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#tarih",
+    "#biliyormuydunuz"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? Uzaydayken ülkesi yok olan kozmonot mu, 29 yıl teslim olmayan asker mi?",
+  "coverAt": 0,
+  "publishAt": "2026-10-31T17:30Z"
+}

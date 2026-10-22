@@ -1,87 +1,115 @@
 {
   "id": "014",
   "slug": "kus-ve-yuruyen-adam",
-  "template": "versus",
+  "template": "yolculuk",
   "serial": "№ 014 · HANGİSİ?",
-  "bpm": 96,
-  "silenceBeats": 0.8,
-  "compareLandBeat": 4,
-  "title": [
-    "Hangisi daha",
-    "şaşırtıcı?"
-  ],
-  "scenes": [
-    {
-      "id": "hook",
-      "beats": 3
-    },
-    {
-      "id": "a",
-      "beats": 12
-    },
-    {
-      "id": "b",
-      "beats": 12
-    },
-    {
-      "id": "compare",
-      "beats": 10
-    },
-    {
-      "id": "ask",
-      "beats": 7
-    },
-    {
-      "id": "loop",
-      "beats": 2.5
-    }
-  ],
-  "hook": {
-    "big": "13.560 km",
-    "say": "5 aylık bir kuş bu yolu hiç inmeden uçtu.",
-    "b": "28 yıldır eve yürüyen adam"
+  "bpm": 100,
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+16%",
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?"
+      },
+      {
+        "id": "l02",
+        "tts": "Beş aylık bir kuş Alaska'dan havalanıyor.",
+        "text": "Beş aylık bir kuş Alaska'dan havalanıyor."
+      },
+      {
+        "id": "l03",
+        "tts": "On bir gün boyunca hiç inmeden, hiç yemeden uçuyor.",
+        "text": "11 gün boyunca hiç inmeden, hiç yemeden uçuyor."
+      },
+      {
+        "id": "l04",
+        "tts": "On üç bin beş yüz altmış kilometre sonra Tazmanya'ya iniyor.",
+        "text": "13.560 km sonra Tazmanya'ya iniyor."
+      },
+      {
+        "id": "l05",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?"
+      },
+      {
+        "id": "l06",
+        "tts": "Eski bir asker, bin dokuz yüz doksan sekizde Şili'nin en ucundan evine yürümeye başlıyor.",
+        "text": "Eski bir asker, 1998'de Şili'nin en ucundan evine yürümeye başlıyor."
+      },
+      {
+        "id": "l07",
+        "tts": "Hiçbir araca binmeyecek.",
+        "text": "Hiçbir araca binmeyecek."
+      },
+      {
+        "id": "l08",
+        "tts": "Amerika'yı boydan boya yürüyor ve donmuş Bering Boğazı'nı geçiyor.",
+        "text": "Amerika'yı boydan boya yürüyor ve donmuş Bering Boğazı'nı geçiyor."
+      },
+      {
+        "id": "l09",
+        "tts": "Sibirya'yı ve Çin'i aşıyor. Sonra sınırlar kapanıyor ve yaklaşık beş yıl bekliyor.",
+        "text": "Sibirya'yı ve Çin'i aşıyor. Sonra sınırlar kapanıyor ve yaklaşık 5 yıl bekliyor."
+      },
+      {
+        "id": "l10",
+        "tts": "Hazar Denizi'ni yüzerek geçiyor ve İstanbul'dan Avrupa'ya yürüyor.",
+        "text": "Hazar Denizi'ni yüzerek geçiyor ve İstanbul'dan Avrupa'ya yürüyor."
+      },
+      {
+        "id": "l11",
+        "tts": "Beş Ekim'de Manş'ı yüzerek İngiltere'ye çıktı. Evine dört yüz kilometre kaldı.",
+        "text": "5 Ekim'de Manş'ı yüzerek İngiltere'ye çıktı. Evine 400 km kaldı."
+      },
+      {
+        "id": "l12",
+        "tts": "Peki ikisini aynı saatle ölçersek?",
+        "text": "Peki ikisini aynı saatle ölçersek?"
+      },
+      {
+        "id": "l13",
+        "tts": "Kuş Tazmanya'ya indiğinde, adam ortalama hızıyla ancak",
+        "text": "Kuş Tazmanya'ya indiğinde, adam ortalama hızıyla ancak"
+      },
+      {
+        "id": "l14",
+        "tts": "elli üç kilometre yürümüş olurdu.",
+        "text": "53 km yürümüş olurdu."
+      },
+      {
+        "id": "l15",
+        "tts": "Ama toplam yolu, Dünya'nın çevresinden daha uzun.",
+        "text": "Ama toplam yolu, Dünya'nın çevresinden daha uzun."
+      },
+      {
+        "id": "l16",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?"
+      }
+    ]
   },
-  "a": {
-    "who": "KIYI ÇAMURÇULLUĞU · 2022",
-    "say": "5 aylık bir kuş Alaska'dan Tazmanya'ya hiç inmeden uçtu.",
-    "from": "Alaska",
-    "to": "Tazmanya",
-    "total": 13560,
-    "unit": "km",
-    "timeTotal": 11,
-    "timeUnit": "gün",
-    "marker": "bird"
-  },
-  "b": {
-    "who": "KARL BUSHBY · 1998'DEN BERİ",
-    "say": "Eski bir asker Şili'den İngiltere'deki evine yürüyor. Hull'a 400 km'si kaldı.",
-    "from": "Şili",
-    "to": "Dover",
-    "total": 49500,
-    "unit": "km",
-    "timeTotal": 28,
-    "timeUnit": "yıl",
-    "marker": "walker"
-  },
-  "compare": {
-    "say": "Günde ortalama kaç km yol alıyorlar?",
-    "a": {
-      "value": 1228,
-      "label": "1.228 km/gün"
+  "facts": {
+    "bird": {
+      "km": 13560,
+      "days": 11.04,
+      "start": "2022-10-13",
+      "end": "2022-10-24",
+      "ageMonths": 5
     },
-    "b": {
-      "value": 4.85,
-      "label": "4,9 km/gün"
+    "walk": {
+      "kmDover": 49500,
+      "kmBering": 27000,
+      "start": "1998-11-01",
+      "dover": "2026-10-05",
+      "leftKm": 400,
+      "kmPerDay": 4.85
     },
-    "ratio": "253",
-    "ratioUnit": "kat"
+    "earthKm": 40075,
+    "sameClockKm": 53
   },
-  "ask": {
-    "say": "Sen hangisine şaşırdın?",
-    "a": "Hiç inmeden 11 gün uçan kuş",
-    "b": "28 yıldır eve yürüyen adam"
-  },
-  "caption": "2022'de 5 aylık bir kıyı çamurçulluğu Alaska'dan Tazmanya'ya hiç inmeden en az 13.560 km uçtu. Yolculuk yaklaşık 11 gün sürdü; kuş günde ortalama 1.228 km yol aldı.\n\nKarl Bushby ise 1 Kasım 1998'de Şili'den İngiltere'deki evine yürüyerek yola çıktı. Yaklaşık 28 yılda 49.500 km yürüdü; Ekim 2026'da Manş'ı yüzerek geçip Dover'a ulaştı ve Hull'daki evine 400 km'si kaldı. Bekleme süreleri dâhil ortalaması günde 4,9 km'dir.\n\nGünlük ortalamada kuş adamdan 253 kat fazla yol alıyor. Sen hangisine şaşırdın? Yorumlara A ya da B yaz.\n\nKaynaklar: NPR ve CBC, Ekim 2022 (kuşun rekor uçuşu) · Karl Bushby: The National Desk, IOL (Aralık 2025), Ekim 2026 haberleri.",
+  "caption": "Hangisi daha şaşırtıcı? 5 aylık bir kıyı çamurçulluğu 2022'de Alaska'dan Tazmanya'ya hiç inmeden en az 13.560 km uçtu. Yolculuk 11 gün 1 saat sürdü.\n\nKarl Bushby ise 1 Kasım 1998'de Şili'nin güneyindeki Punta Arenas'tan İngiltere'deki evine yürüyerek yola çıktı ve hiçbir araca binmedi. Amerika kıtasını yürüdü, 2006'da donmuş Bering Boğazı'nı geçti; Sibirya, Moğolistan, Çin ve Orta Asya'yı geçti; 2019'da Türkmenistan–İran sınırında yol kapandı ve yaklaşık 5 yıl bekledi. 2024'te Hazar Denizi'ni yüzerek geçti, 2025'te Türkiye'yi yürüyerek boydan boya geçti ve İstanbul'dan Avrupa'ya ulaştı. 5 Ekim 2026'da Manş'ı yüzerek Dover'a çıktı; Hull'daki evine yaklaşık 400 km'si kaldı. Toplam yolu yaklaşık 49.500 km, yani Dünya'nın çevresinden (40.075 km) uzun.\n\nAynı saatle ölçersek: Bushby'nin bekleme süreleri dâhil ortalaması günde 4,85 km. Kuşun uçtuğu 11 günde bu ortalamayla yaklaşık 53 km yol alınır; kuş aynı sürede 256 kat fazla yol aldı. Haritadaki rotalar şematiktir.\n\nSen hangisine şaşırdın? Yorumlara KUŞ ya da ADAM yaz.\n\nKaynaklar: NPR, CBC ve Guinness Rekorlar Kitabı (kuşun 2022 uçuşu) · Karl Bushby: Wikipedia, The National Desk, Daily Sabah (İstanbul, 2025), IOL (Aralık 2025), Ekim 2026 haberleri.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",
@@ -89,5 +117,6 @@
     "#rekor",
     "#biliyormuydunuz"
   ],
-  "ytTitle": "Hangisi daha şaşırtıcı? 11 gün hiç inmeden uçan kuş mu, 28 yıldır yürüyen adam mı?"
+  "ytTitle": "Hangisi daha şaşırtıcı? 11 gün hiç inmeden uçan kuş mu, 28 yıldır eve yürüyen adam mı?",
+  "coverAt": 0
 }

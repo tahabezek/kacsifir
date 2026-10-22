@@ -65,7 +65,7 @@ const fz = ff(['-i', video, '-vf', 'freezedetect=n=0.0008:d=1', '-map', '0:v', '
 gates.freeze = [...fz.matchAll(/freeze_start: ([\d.]+)[\s\S]*?freeze_duration: ([\d.]+)/g)].map(m => [Number(m[1]), Number(m[2])]);
 // döngü dikişi: son kare ile ilk kare arasındaki fark (SSIM)
 const first = path.join(cdir, 'seam_first.png'), last = path.join(cdir, 'seam_last.png');
-grab(0, first); grab(tl.duration - 1 / FPS, last);
+grab(0, first); grab(tl.duration - 2 / FPS, last);  // son tam kare (sondan bir önceki zaman damgası)
 const ss = ff(['-i', first, '-i', last, '-lavfi', 'ssim', '-f', 'null', '-']);
 gates.seamSSIM = Number(ss.match(/All:([\d.]+)/)[1]);
 // ses

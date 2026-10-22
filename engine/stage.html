@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="tr"><head><meta charset="utf-8">
 <link rel="stylesheet" href="fonts/fonts.css">
-<script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.js"}}</script>
+<script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.js","d3-geo":"../node_modules/d3-geo/src/index.js","d3-array":"../node_modules/d3-array/src/index.js","internmap":"../node_modules/internmap/src/index.js","topojson-client":"../node_modules/topojson-client/src/index.js"}}</script>
 <style>html,body{margin:0;background:#ECE5D5}canvas{display:block;width:1080px;height:1920px}</style>
 </head><body><canvas id="c" width="1080" height="1920"></canvas>
 <script type="module">
@@ -15,7 +15,9 @@ await Promise.all([
 ]);
 await document.fonts.ready;
 const canvas = document.getElementById('c');
-const r = ep.template === 'domino' ? (await import('./scenes/domino.js')).makeDominoRenderer(ep, canvas)
+const r = ep.template === 'zaman' ? await (await import('./scenes/zaman.js')).makeZamanRenderer(ep, canvas)
+  : ep.template === 'yolculuk' ? await (await import('./scenes/yolculuk.js')).makeYolculukRenderer(ep, canvas)
+  : ep.template === 'domino' ? (await import('./scenes/domino.js')).makeDominoRenderer(ep, canvas)
   : ep.template === 'gezegen' ? await (await import('./scenes/gezegen.js')).makeGezegenRenderer(ep, canvas)
   : ep.template === 'terazi' ? await (await import('./scenes/terazi.js')).makeTeraziRenderer(ep, canvas)
   : ep.template === 'hacim' ? await (await import('./scenes/hacim.js')).makeHacimRenderer(ep, canvas)

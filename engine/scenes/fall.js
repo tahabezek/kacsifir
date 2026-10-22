@@ -20,12 +20,19 @@ export function makeFallRenderer(ep, overlay) {
   // ——— Kâğıt blok (1,5 m), raflar, hazneler, mandal ———
   const BLOCK = { x0: -0.75, x1: 0.05, z0: -0.4, z1: 0.4 };
   const paperW = M.paper('#E6DCC6'), paperD = M.paper('#D6C8AC');
-  const blockGeo = new THREE.BoxGeometry(BLOCK.x1 - BLOCK.x0, H0, BLOCK.z1 - BLOCK.z0).translate((BLOCK.x0 + BLOCK.x1) / 2, H0 / 2, 0);
+  // Deney düzeneği: masanın (blok) üstünde yatan 3 cm'lik raf, kıskaçla tutturulmuş. Rafın üstü = top altı = 1,5 m.
+  // B'nin rayı rafın masa kenarından taşan devamıdır (sabit); A, rafın ucundaki menteşeli kapağın üstündedir ve
+  // kapak tetikte aşağı açılır. Böylece iki top da aynı yükseklikten, aynı anda serbest kalır.
+  const BT = 0.03, LANE = 0.18, RAIL0 = -0.30;
+  const blockGeo = new THREE.BoxGeometry(BLOCK.x1 - BLOCK.x0, H0 - BT, BLOCK.z1 - BLOCK.z0).translate((BLOCK.x0 + BLOCK.x1) / 2, (H0 - BT) / 2, 0);
   const block = M.withEdges(blockGeo, paperW, 20); scene.add(block);
-  // raf: blok kenarından taşan ince kâğıt dil; menteşe kenarda, tetikte aşağı katlanır
-  const tabGeo = new THREE.BoxGeometry(0.2, 0.012, 0.18).translate(0.1, -0.006, 0);
-  const tabGeoB = new THREE.BoxGeometry(0.44, 0.012, 0.18).translate(0.22, -0.006, 0);
-  const tabs = [ZA, ZB].map(z => { const g = new THREE.Group(); g.add(M.withEdges(z === ZB ? tabGeoB : tabGeo, paperD, 20)); g.userData.z = z; scene.add(g); return g; });
+  const boardGeo = (x0, x1) => new THREE.BoxGeometry(x1 - x0, BT, LANE).translate((x0 + x1) / 2, -BT / 2, 0);
+  const boardA = M.withEdges(boardGeo(RAIL0, BLOCK.x1), paperD, 20); scene.add(boardA);   // A şeridi: masa üstünde
+  const boardB = M.withEdges(boardGeo(RAIL0, XB + 0.02), paperD, 20); scene.add(boardB);  // B şeridi: kenardan taşan ray
+  const clampGeo = new THREE.BoxGeometry(0.07, 0.05, ZB - ZA + LANE + 0.04).translate(0, 0.025, 0);
+  const clamp = M.withEdges(clampGeo, M.paper('#8B8577'), 20); scene.add(clamp);            // kıskaç: rafı masaya bastırır
+  const tabGeo = new THREE.BoxGeometry(0.2, BT, LANE).translate(0.1, -BT / 2, 0);          // A'nın menteşeli kapağı
+  const tabs = [ZA].map(z => { const g = new THREE.Group(); g.add(M.withEdges(tabGeo, paperD, 20)); g.userData.z = z; scene.add(g); return g; });
   // menzil cetveli: yerde 520 m'lik kâğıt şerit (her 0,1 / 1 / 5 m'de çentik) — 3. turda hızı gösterir
   const rulerTex = (() => {
     const cv = document.createElement('canvas'); cv.width = 2048; cv.height = 64;
@@ -82,7 +89,7 @@ export function makeFallRenderer(ep, overlay) {
   const ghosts = tl.rounds.map(() => Array.from({ length: GHOSTS }, () => ({ A: mkGhost(), B: mkGhost() })));
 
   // ——— Sıfır: blok üstünde, mandalın yanında ———
-  const HS = 0.13, SIF = { x: -0.42, z: -0.02 };
+  const HS = 0.13, SIF = { x: -0.12, z: 0.32 };   // masanın üstünde, rafın önünde, mandalın yanında
   const sif = M.makeStandee();
   const POSE_W = { lean: -6, tilt: -4, la: -24, ra: 40, ll: -6, rl: 6, sq: 0 };
   const POSE_P = { lean: 12, tilt: 6, la: -10, ra: 95, ll: -2, rl: 12, sq: -0.02 };
@@ -102,7 +109,7 @@ export function makeFallRenderer(ep, overlay) {
   }
 
   // ——— Kamera: dist (m) ve hedef F; S = dist / 8 ———
-  const K0 = { F: [-0.02, 1.5, 0], dist: 7.5, az: 0.0, el: 0.05, ly: 0, fy: 1230, fov: 16 };
+  const K0 = { F: [-0.02, 1.5, 0], dist: 7.5, az: 0.0, el: 0.17, ly: 0, fy: 1230, fov: 16 };   // biraz yukarıdan: masa yüzeyi ve rafın masadan çıkışı görünür
   const K1 = { F: [0.78, 0.78, 0], dist: 13.4, az: 0.0, el: 0.02, ly: 0, fy: 1345, fov: 16 };   // tam yandan, dar açı
   const K2a = { F: [3.2, 0.95, 0], dist: 7.5, az: -1.34, el: 0.06, ly: 0, fy: 1180, fov: 30 };   // 2. tur kalkışı: blok yakın
   const K2 = { F: [12.1, 0.6, 0], dist: 16, az: -1.34, el: 0.06, ly: 0, fy: 1180, fov: 30 };   // sayısal çözüm: blok x≈150, iniş x≈890, top ≥48 px   // inişin ötesinden: B kameraya doğru gelir
@@ -172,6 +179,7 @@ export function makeFallRenderer(ep, overlay) {
     M.setCam(toState(k), lens, jit);
     // blok, raflar, haznelar, mandal
     M.place(block, 0, 0, 0, 1);
+    M.place(boardA, 0, H0, ZA, 1); M.place(boardB, 0, H0, ZB, 1); M.place(clamp, -0.2, H0, (ZA + ZB) / 2, 1);
     const curR = tl.rounds.reduce((a, r) => (t >= r.launch - 1.1 ? r : a), r1);
     const tauR = tauOf(curR, t) ?? -1;
     const tabDrop = tauR < 0 ? 0 : ease.enter(clamp01(tauR / 0.04));          // raf toptan hızlı katlanır
@@ -208,7 +216,7 @@ export function makeFallRenderer(ep, overlay) {
     // Sıfır
     const st = sifirState(t);
     M.paintStandee(sif, st.pose, st.expr, 1);
-    M.place(sif.g, SIF.x, H0, SIF.z, HS);
+    M.place(sif.g, SIF.x, H0 - BT, SIF.z, HS);
   }
 
   // ——— Örnek döngüsü: ana görünüm + (3. turda) detay balonu ———

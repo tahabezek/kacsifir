@@ -20,12 +20,14 @@ import { tunnelSummary } from './scenes/tunnel.js';
 import { doorsSummary } from './scenes/doors.js';
 import { timelineSummary } from './scenes/timeline.js';
 import { dominoSummary } from './scenes/domino_core.js';
+import { gezegenSummary } from './scenes/gezegen.js';
 import { waterSummary } from './scenes/water_core.js';
 import { birthdaySummary } from './scenes/birthday_core.js';
 import { fallSummary } from './scenes/fall_core.js';
 
 export function summary(ep) {
   if (ep.template === 'domino') return dominoSummary(ep);
+  if (ep.template === 'gezegen') return gezegenSummary(ep);
   if (ep.template === 'water') return waterSummary(ep);
   if (ep.template === 'birthday') return birthdaySummary(ep);
   if (ep.template === 'fall') return fallSummary(ep);

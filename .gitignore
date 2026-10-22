@@ -11,3 +11,5 @@ logs/
 brand/*.html
 brand/avatar_sheet.png
 brand/profile_preview.png
+# üretilmiş ham görseller (işlenmiş hâlleri assets/planets altında)
+assets/gen/**/*.png

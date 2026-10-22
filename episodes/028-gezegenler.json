@@ -1,0 +1,172 @@
+{
+  "id": "028",
+  "slug": "gezegenler-ay",
+  "template": "gezegen",
+  "publishAt": "2026-10-25T17:30Z",
+  "serial": "№ 028 · PARADOKS",
+  "bpm": 100,
+  "question": [
+    "Bütün gezegenler Dünya ile",
+    "Ay arasına sığar mı?"
+  ],
+  "planets": [
+    {
+      "key": "merkur",
+      "name": "Merkür",
+      "d": 4879
+    },
+    {
+      "key": "venus",
+      "name": "Venüs",
+      "d": 12104
+    },
+    {
+      "key": "mars",
+      "name": "Mars",
+      "d": 6792
+    },
+    {
+      "key": "jupiter",
+      "name": "Jüpiter",
+      "d": 142984
+    },
+    {
+      "key": "saturn",
+      "name": "Satürn",
+      "d": 120536,
+      "note": "(halkalar hariç)"
+    },
+    {
+      "key": "uranus",
+      "name": "Uranüs",
+      "d": 51118
+    },
+    {
+      "key": "neptun",
+      "name": "Neptün",
+      "d": 49528
+    }
+  ],
+  "earthR": 6378,
+  "moonR": 1738,
+  "orbit": {
+    "a": 384400,
+    "apogee": 405500,
+    "lap": 27.55
+  },
+  "flight": {
+    "earthScale": 0.04,
+    "earthLead": 2000,
+    "frame": 330,
+    "near": 260,
+    "nearX": 395000,
+    "nearY": -13000
+  },
+  "answer": "9 gün",
+  "label": {
+    "dist": "DÜNYA–AY UZAKLIĞI",
+    "mean": "ortalama uzaklık",
+    "farShort": "Ay en uzaktayken",
+    "meanShort": "ortalama",
+    "total": "GEZEGENLER YAN YANA",
+    "over": "TAŞAN KISIM",
+    "gap": "boşluk",
+    "fits": "GEZEGENLER SIĞAR",
+    "lap": "her 27,5 günlük turda",
+    "yes": "sığar",
+    "no": "sığmaz",
+    "limit": "sığma sınırı",
+    "dayLabel": "AY'IN TURU",
+    "fitsNow": "Neptün sığıyor",
+    "noFit": "Neptün sığmıyor",
+    "earth": "Dünya",
+    "moon": "Ay",
+    "gapCalc": "Boşluk:"
+  },
+  "says": [
+    {
+      "t0": 0,
+      "t1": 1.7,
+      "text": "Ay en uzaktayken hepsi sığar."
+    },
+    {
+      "t0": 1.9,
+      "t1": 3.4,
+      "text": "Ama Ay yerinde durmaz."
+    },
+    {
+      "t0": 3.6,
+      "t1": 7,
+      "text": "Gezegenleri yan yana dizip ölçelim."
+    },
+    {
+      "t0": 11.2,
+      "t1": 13.4,
+      "text": "Dünya'nın ve Ay'ın yarıçaplarını çıkarıyoruz."
+    },
+    {
+      "t0": 15,
+      "t1": 18.35,
+      "text": "Peki ne zaman sığarlar?"
+    },
+    {
+      "t0": 18.6,
+      "t1": 22.4,
+      "text": "Ay'ın her turunda yalnızca 9 gün sığarlar."
+    },
+    {
+      "at": "landAt",
+      "dt": -0.3,
+      "dur": 3.4,
+      "text": "Ay uzaklaşınca Neptün yeniden sığar."
+    }
+  ],
+  "timing": {
+    "squeeze": [
+      0.3,
+      3.3
+    ],
+    "flight": 3.6,
+    "firstKey": 4.5,
+    "hop": 0.9,
+    "back": 10.5,
+    "gap": 10.8,
+    "shrink": 11.4,
+    "over": 13.2,
+    "push": 13.5,
+    "ask": 15,
+    "top": 15.6,
+    "orbitDraw": [
+      16.2,
+      17.4
+    ],
+    "limitDraw": [
+      16.8,
+      17.7
+    ],
+    "silence": [
+      18,
+      18.6
+    ],
+    "hero": 18.6,
+    "zoomIn": 20.4,
+    "travel": [
+      20.7,
+      26.7
+    ],
+    "apHold": 0.6,
+    "ret": [
+      26.7,
+      28.43
+    ],
+    "end": 28.5
+  },
+  "caption": "Bu resmi mutlaka görmüşsündür: Güneş Sistemi'ndeki bütün gezegenler Dünya ile Ay arasına yan yana sığıyor. Peki bu doğru mu?\n\nNASA'nın gezegen tablosundaki ekvator çaplarını topladığımızda Merkür'den Neptün'e 387.941 km buluyoruz. Ay ortalama 384.400 km uzakta, ama bu uzaklık merkezden merkeze ölçülür. Dünya'nın ve Ay'ın yarıçapları çıkarılınca arada 376.284 km boşluk kalıyor. Yani ortalama uzaklıkta gezegenler 11.657 km taşar.\n\nİşin sırrı şu: Ay'ın yörüngesi tam bir çember değil. Ay her turda Dünya'ya yaklaşıp uzaklaşır ve en uzak noktasında ortalama 405.500 km'ye çıkar. O zaman arada 9.443 km boşluk bile kalır. Ay'ın 27,5 günlük her turunda gezegenler yaklaşık 9 gün sığar, 18 gün sığmaz.\n\nNot: Satürn'ün halkalarını hesaba katmadık; halkalarıyla hiçbir zaman sığmaz. Ortalama çaplarla hesaplayan kaynaklar toplamı 380.016 km bulur; o hesapla bile gezegenler her turun yalnızca yaklaşık 13 gününde sığar. Plüton'u da eklersen Ay en uzaktayken yine 7.067 km boşluk kalır.\n\nKaynak: NASA NSSDC Planetary Fact Sheet ve Moon Fact Sheet. Ay'ın gerçek uzaklığını Meeus'un yöntemiyle 10 yıl boyunca hesapladık.\n\nSence bu ünlü resim doğru mu, yanlış mı? Yorumlara yaz.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#uzay",
+    "#astronomi",
+    "#gezegenler"
+  ]
+}

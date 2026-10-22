@@ -113,8 +113,8 @@ export async function makeGezegenRenderer(ep, canvas) {
   // kamera: ekrandaki ölçek s (px/km) ve çapaya düşen dünya noktası (wx, wy). Her hedef değişimi bir yay, eğri ya da kesme.
   // geniş plan: Dünya x = 50, Ay x = 900 (sağdaki Reels düğme sütununun solunda)
   const sWide = 850 / tl.apogee, wxWide = (A.x - 50) / sWide;
-  // tepe planı: Dünya (440, 1270), apoje 240 px (solda etikete, sağda Sıfır'a, üstte yazılara yer)
-  const sTop = 240 / tl.apogee, wxTop = (A.x - 440) / sTop, wyTop = (A.y - 1270) / sTop;
+  // tepe planı: Dünya (440, 1240), apoje 210 px (yörüngenin altı güvenli alanda, solda etikete, sağda Sıfır'a yer)
+  const sTop = 210 / tl.apogee, wxTop = (A.x - 440) / sTop, wyTop = (A.y - 1240) / sTop;
   // değme noktası yakın planı: Neptün ~260 px; Ay perijede de apojede de kadrajda
   const sNear = ep.flight.near / N.d;
   const K = [{ t: 0, ls: Math.log(sWide), x: wxWide, y: 0 }];
@@ -137,8 +137,9 @@ export async function makeGezegenRenderer(ep, canvas) {
   key(tl.push + 0.9, sNear * 1.07, pushX, pushY, 'lin', tl.top - tl.push - 0.9);   // beklemede yavaş itme (donmuş kare yok)
   key(tl.top, sTop, wxTop, wyTop, 'ease', tl.silence[0] - tl.top);
   key(tl.hero, sTop * 1.04, wxTop, wyTop, 'lin', tl.zoomIn - tl.hero);
-  key(tl.zoomIn, sNear, ep.flight.nearX, ep.flight.nearY, 'ease', 0.9);
-  key(tl.landAt, sNear * 1.1, ep.flight.nearX, ep.flight.nearY, 'lin', tl.ret[0] - tl.landAt);
+  // değme noktası: taşmadaki yakın plandan 1,35 kat daha yakın (Ay ~25 px, en büyük boşluk ~70 px)
+  key(tl.zoomIn, sNear * 1.35, ep.flight.nearX, ep.flight.nearY, 'ease', 0.9);
+  key(tl.landAt, sNear * 1.35 * 1.1, ep.flight.nearX, ep.flight.nearY, 'lin', tl.ret[0] - tl.landAt);
   key(tl.ret[0], sWide, wxWide, 0, 'ease', tl.ret[1] - tl.ret[0]);
   const wgt = (k, t) => k.mode === 'cam' ? spring(t - k.t, 170, 26) : k.mode === 'big' ? spring(t - k.t, 120, 24)
     : k.mode === 'cut' ? (t >= k.t ? 1 : 0) : k.mode === 'lin' ? seg(t, k.t, k.dur) : ease.state(seg(t, k.t, k.dur));
@@ -352,16 +353,16 @@ export async function makeGezegenRenderer(ep, canvas) {
     // 4) değme noktası: Ay sığma sınırının ötesindeyken Neptün ile Ay arasında kırmızı boşluk ölçüsü
     const nearU = win(t, tl.zoomIn + 0.6, tl.ret[0] + 0.3);
     if (nearU > 0) {
-      tag(pos.m, ep.label.moon, 0, 96, nearU);
+      tag(pos.m, ep.label.moon, -40, 44, nearU);            // sola-aşağı: Sıfır'a değmez
       if (ms.d > G.need) {
         // ölçü tam eksende, Neptün ile Ay'ın arasında; sayı Ay'ın sağındaki boş kâğıtta (alt açıklama bloğunun üstünde)
         const x0 = p(G.end, 0).x, x1 = p(ms.d - G.RM, 0).x, y = p(0, 0).y, xt = x1 + 2 * G.RM * cam.s + 26;
         const lp = ease.enter(seg(t, tl.landAt + 0.25, 0.35)) * nearU;
         dimLine(x0, x1, y, C.red, null, null, Math.min(1, (x1 - x0) / 6) * nearU);
-        setFont(ctx, F.head(56)); revealText(ctx, '+ ' + km(ms.d - G.need), xt, y - 22, 56, lp, C.red, 'left');
+        setFont(ctx, F.head(56)); revealText(ctx, '+ ' + km(ms.d - G.need), xt, y - 78, 56, lp, C.red, 'left');
         // apojede bekleme: 'Ay en uzaktayken'
         const ap = win(t, tl.apAt - 0.15, tl.apEnd + 0.35, 0.3, 0.25);
-        if (ap > 0) { setFont(ctx, F.name(42)); revealText(ctx, ep.label.farShort, xt, y - 92, 42, ap, C.graphite, 'left'); }
+        if (ap > 0) { setFont(ctx, F.name(42)); revealText(ctx, ep.label.farShort, xt, y - 148, 42, ap, C.graphite, 'left'); }
       }
     }
   }
@@ -392,8 +393,12 @@ export async function makeGezegenRenderer(ep, canvas) {
     const cam = camera(t), ms = moonState(tl, t);
     // sahne alanı: üst bloğun altından ekranın altına
     ctx.save(); ctx.beginPath(); ctx.rect(0, Y.clip, W, 1920 - Y.clip); ctx.clip();
-    orbit(t, cam);
     const pos = scene(cam, ms);
+    // yakın planda büyük diskler üst kenarda düz bir çizgiyle kesilmesin: 110 px'te kâğıda karışır
+    const fade = ctx.createLinearGradient(0, Y.clip, 0, Y.clip + 110);
+    fade.addColorStop(0, C.paper); fade.addColorStop(1, 'rgba(236,229,213,0)');
+    ctx.fillStyle = fade; ctx.fillRect(0, Y.clip, W, 110);
+    orbit(t, cam);
     sideOverlays(t, cam, ms, pos);
     // geniş planlarda adlar (Dünya ve Ay çok küçük)
     const tagU = Math.max(wideU(t), win(t, tl.back + 0.3, tl.push + 0.1));
@@ -403,7 +408,7 @@ export async function makeGezegenRenderer(ep, canvas) {
     const ringU = win(t, tl.top + 0.6, tl.zoomIn + 0.3);
     if (ringU > 0) {
       ctx.save(); ctx.strokeStyle = C.ink; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(pos.m.x, pos.m.y, 13, -Math.PI / 2, -Math.PI / 2 + TAU * ringU); ctx.stroke(); ctx.restore();
-      tag(pos.m, ep.label.moon, 0, -34, ringU);
+      tag(pos.m, ep.label.moon, -24, 40, ringU);            // Sıfır'ın düşünce balonundan ve yörünge çizgisinden uzakta
       tag(pos.e, ep.label.earth, -30, 0, ringU);
     }
     ctx.restore();

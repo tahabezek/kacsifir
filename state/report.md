@@ -1,6 +1,6 @@
-# Performans raporu · 2026-10-23 04:35 UTC
+# Performans raporu · 2026-10-23 11:29 UTC
 
-Gönderi: 7 · izlenme: 2873 · paylaşım: 8 · takip: 0
+Gönderi: 9 · izlenme: 2873 · paylaşım: 8 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -11,6 +11,8 @@ Gönderi: 7 · izlenme: 2873 · paylaşım: 8 · takip: 0
 | 5 | [013 insanlik-istanbul](https://www.instagram.com/reel/DezhmTZidBl/) | swarm | 1921 | 1418 | 0.45 | 0 | 1.4 | 0 | 20.7 |
 | 6 | [004 gunes-isigi](https://www.instagram.com/reel/DeyPLMhj68A/) | light | 163 | 127 | 0.41 | 0 | 0 | 0 | 16.6 |
 | 7 | [012 kagit-efsanesi](https://www.instagram.com/p/DezJ2f7lWmF/) | carousel | 4 | 2 | – | 0 | 0 | 0 | 0 |
+| 8 | [008 kalp-atisi](https://www.instagram.com/reel/De1S8l9iYzm/) | pulse | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 9 | [002 ay-everest](https://www.instagram.com/reel/De0z3XiiUP1/) | altitude | 0 | 0 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
 - doc: 209.1 (1 gönderi)
@@ -19,6 +21,8 @@ Gönderi: 7 · izlenme: 2873 · paylaşım: 8 · takip: 0
 - tiles: 24.4 (1 gönderi)
 - light: 16.6 (1 gönderi)
 - carousel: 0.0 (1 gönderi)
+- pulse: 0.0 (1 gönderi)
+- altitude: 0.0 (1 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)
 - İzlenme oranı < 0,5: kanca/ilk 3 sn sorunu → başlığı ve kare 0'ı yeniden yaz.

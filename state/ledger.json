@@ -273,6 +273,19 @@
       "at": "2026-10-23T15:54:25.599Z",
       "postId": "6adb836ca3eb069e7be5073e",
       "dueAt": "2026-10-25T14:00:00.000Z"
+    },
+    "2026-10-25T17:30Z": {
+      "episode": "028",
+      "media": "v/028-gezegenler-ay.mp4",
+      "status": "scheduled",
+      "at": "2026-10-23T20:19:24.687Z",
+      "postId": "6adbc2349acae620d818207d",
+      "dueAt": "2026-10-25T17:30:00.000Z",
+      "yt": {
+        "postId": "6adbc234bd33ce99c3ec22c8",
+        "status": "scheduled",
+        "dueAt": "2026-10-25T17:30:00.000Z"
+      }
     }
   }
 }

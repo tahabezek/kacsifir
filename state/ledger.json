@@ -257,6 +257,22 @@
         "status": "scheduled",
         "dueAt": "2026-10-25T10:00:00.000Z"
       }
+    },
+    "2026-10-25T14:00Z": {
+      "kind": "carousel",
+      "episode": "006",
+      "media": [
+        "c/006-kac-turkiye/1.jpg",
+        "c/006-kac-turkiye/2.jpg",
+        "c/006-kac-turkiye/3.jpg",
+        "c/006-kac-turkiye/4.jpg",
+        "c/006-kac-turkiye/5.jpg",
+        "c/006-kac-turkiye/6.jpg"
+      ],
+      "status": "scheduled",
+      "at": "2026-10-23T15:54:25.599Z",
+      "postId": "6adb836ca3eb069e7be5073e",
+      "dueAt": "2026-10-25T14:00:00.000Z"
     }
   }
 }

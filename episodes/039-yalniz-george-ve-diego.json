@@ -1,0 +1,173 @@
+{
+  "id": "039",
+  "slug": "yalniz-george-ve-diego",
+  "template": "kaplumbaga",
+  "serial": "№ 039 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-12-12T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.45,
+      "l03": 0.45,
+      "l04": 0.5,
+      "l05": 0.45,
+      "l06": 0.45,
+      "l07": 1.5,
+      "l08": 0.15,
+      "l09": 0.45,
+      "l10": 0.45,
+      "l11": 0.45,
+      "l12": 0.8,
+      "l13": 0.35,
+      "l14": 0.8,
+      "l15": 0.6,
+      "l16": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Galapagos'taki Pinta Adası'na getirilen keçiler bütün bitkileri yiyor ve dev kaplumbağalar yok oluyor.",
+        "text": "Galapagos'taki Pinta Adası'na getirilen keçiler bütün bitkileri yiyor ve dev kaplumbağalar yok oluyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l03",
+        "tts": "Bin dokuz yüz yetmiş birde adada tek bir kaplumbağa bulunuyor.",
+        "text": "1971'de adada tek bir kaplumbağa bulunuyor.",
+        "rate": "+6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l04",
+        "tts": "Ona Yalnız George adı veriliyor, çünkü türünün bilinen son üyesi o.",
+        "text": "Ona Yalnız George adı veriliyor, çünkü türünün bilinen son üyesi o.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l05",
+        "tts": "Bilim insanları ona eş bulana on bin dolar ödül koyuyor, ama kimse bulamıyor.",
+        "text": "Bilim insanları ona eş bulana 10.000 dolar ödül koyuyor, ama kimse bulamıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l06",
+        "tts": "Başka türden dişilerle bıraktığı yumurtaların hiçbiri açılmıyor.",
+        "text": "Başka türden dişilerle bıraktığı yumurtaların hiçbiri açılmıyor.",
+        "rate": "+6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "İki bin on ikide George ölüyor ve türünün bilinen son üyesi de gidiyor.",
+        "text": "2012'de George ölüyor ve türünün bilinen son üyesi de gidiyor.",
+        "rate": "+2%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu kaplumbağa mı?",
+        "text": "Yoksa bu kaplumbağa mı?",
+        "rate": "+10%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Komşu Espanyola Adası'nda da keçiler yüzünden yalnızca on beş kaplumbağa kalıyor.",
+        "text": "Komşu Española Adası'nda da keçiler yüzünden yalnızca 15 kaplumbağa kalıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l10",
+        "tts": "Onlara, Amerika'daki bir hayvanat bahçesinde yaşayan Diego katılıyor.",
+        "text": "Onlara, Amerika'daki bir hayvanat bahçesinde yaşayan Diego katılıyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l11",
+        "tts": "Bir yetiştirme programında Diego, tek başına yaklaşık dokuz yüz yavrunun babası oluyor.",
+        "text": "Bir yetiştirme programında Diego, tek başına yaklaşık 900 yavrunun babası oluyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l12",
+        "tts": "İki bin yirmide, yüz yaşını geçmiş hâlde adasına geri dönüyor.",
+        "text": "2020'de, 100 yaşını geçmiş hâlde adasına geri dönüyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l13",
+        "tts": "Peki ikisini aynı soy ağacına koyarsak?",
+        "text": "Peki ikisini aynı soy ağacına koyarsak?",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l14",
+        "tts": "George'un ardında bıraktığı yavru sayısı sıfır. Diego'nunki ise",
+        "text": "George'un ardında bıraktığı yavru sayısı sıfır. Diego'nunki ise",
+        "rate": "+6%"
+      },
+      {
+        "id": "l15",
+        "tts": "yaklaşık dokuz yüz.",
+        "text": "yaklaşık 900.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l16",
+        "tts": "Programdan çıkan yavruların yaklaşık yüzde kırkının babası o.",
+        "text": "Programdan çıkan yavruların yaklaşık %40'ının babası o.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "george": {
+      "island": "Pinta",
+      "found": 1971,
+      "died": 2012,
+      "reward": 10000,
+      "offspring": 0,
+      "ageAtDeath": 101
+    },
+    "diego": {
+      "island": "Española",
+      "left": 15,
+      "females": 12,
+      "males": 3,
+      "joined": 1977,
+      "offspring": 900,
+      "share": 40,
+      "returned": 2020
+    }
+  },
+  "caption": "Hangisi daha şaşırtıcı? Galapagos'taki Pinta Adası'na getirilen keçiler bitki örtüsünü yok etti ve Pinta dev kaplumbağaları neredeyse tamamen kayboldu. 1 Kasım 1971'de adada tek bir erkek kaplumbağa bulundu: Yalnız George, türünün bilinen son üyesi. Charles Darwin Araştırma İstasyonu ona uygun bir eş bulana 10.000 dolar ödül koydu. Başka türden dişilerle bıraktığı yumurtaların hiçbiri açılmadı. George 24 Haziran 2012'de, 100 yaşını geçmiş hâlde öldü.\n\nKomşu Española Adası'nda da keçiler yüzünden 1976'da yalnızca 12 dişi ve 3 erkek kaplumbağa kalmıştı. Onlara 1977'de ABD'deki San Diego Hayvanat Bahçesi'nde yaşayan Diego katıldı. Santa Cruz'daki üretim programında Diego yaklaşık 900 yavrunun babası oldu; bu, programdan çıkan yavruların yaklaşık %40'ı. 15 Haziran 2020'de, 100 yaşını geçmiş hâlde Española'ya geri bırakıldı.\n\nSen hangisine şaşırdın? Yorumlara GEORGE ya da DIEGO yaz.\n\nKaynaklar: Wikipedia (Lonesome George; Diego (tortoise)), Galapagos Milli Parkı.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#galapagos",
+    "#hayvanlar"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? Türünün son üyesi Yalnız George mu, 900 yavrunun babası Diego mu?"
+}

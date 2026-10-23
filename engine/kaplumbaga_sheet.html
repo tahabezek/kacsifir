@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1000"></canvas>
+<script type="module">
+// Poz kâğıdı: George ve Diego (yürüyüş 4 faz, baş eğik, gözler kapalı), yavru, keçi (yürür/otlar), yumurta, ilan
+import { GEORGE_CARD, DIEGO_CARD, drawTortoise, drawGoat, drawEgg, drawPoster } from './kaplumbaga_chars.js';
+await document.fonts.load('800 40px Archivo'); await document.fonts.load('500 30px "IBM Plex Mono"');
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1000);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); ctx.beginPath(); ctx.moveTo(x - 140, y + 0.5); ctx.lineTo(x + 140, y + 0.5); ctx.strokeStyle = 'rgba(0,0,0,0.2)'; ctx.stroke(); };
+[0, 0.4, 0.8, 1.2].forEach((p, i) => at(170 + i * 300, 300, () => drawTortoise(ctx, GEORGE_CARD, { walk: p }, 240)));
+at(1370, 300, () => drawTortoise(ctx, GEORGE_CARD, { head: 1, eyes: 'closed' }, 240));
+at(1640, 300, () => drawTortoise(ctx, DIEGO_CARD, {}, 260));
+at(170, 600, () => drawTortoise(ctx, DIEGO_CARD, { baby: true, walk: 0.3 }, 90));
+at(330, 600, () => drawTortoise(ctx, DIEGO_CARD, { baby: true }, 90));
+at(560, 620, () => drawGoat(ctx, { walk: 0.2 }, 180));
+at(820, 620, () => drawGoat(ctx, { graze: 1 }, 180));
+at(1020, 620, () => drawEgg(ctx, 70)); at(1100, 620, () => drawEgg(ctx, 60, 0.3));
+at(1400, 700, () => drawPoster(ctx, 220, ['ARANIYOR', 'EŞ', '10.000 $ ÖDÜL'], '800 40px Archivo', '500 30px "IBM Plex Mono"'));
+window.__ready = true;
+</script></body></html>

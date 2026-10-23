@@ -34,6 +34,8 @@ import { zamanSummary } from './scenes/zaman_summary.js';
 import { okyanusSummary } from './scenes/okyanus_summary.js';
 import { kayaSummary } from './scenes/kaya_summary.js';
 import { gemiSummary } from './scenes/gemi_summary.js';
+import { saatSummary } from './scenes/saat_summary.js';
+import { kaplumbagaSummary } from './scenes/kaplumbaga_summary.js';
 import { yildirimSummary } from './scenes/yildirim_summary.js';
 
 export function summary(ep) {
@@ -42,6 +44,8 @@ export function summary(ep) {
   if (ep.template === 'okyanus') return okyanusSummary(ep);
   if (ep.template === 'kaya') return kayaSummary(ep);
   if (ep.template === 'gemi') return gemiSummary(ep);
+  if (ep.template === 'saat') return saatSummary(ep);
+  if (ep.template === 'kaplumbaga') return kaplumbagaSummary(ep);
   if (ep.template === 'yildirim') return yildirimSummary(ep);
   if (ep.template === 'domino') return dominoSummary(ep);
   if (ep.template === 'gezegen') return gezegenSummary(ep);

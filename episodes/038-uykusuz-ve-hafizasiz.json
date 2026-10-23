@@ -1,0 +1,178 @@
+{
+  "id": "038",
+  "slug": "uykusuz-ve-hafizasiz",
+  "template": "saat",
+  "serial": "№ 038 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-12-05T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.45,
+      "l05": 0.5,
+      "l06": 1.5,
+      "l07": 0.15,
+      "l08": 0.35,
+      "l09": 0.6,
+      "l10": 0.5,
+      "l11": 0.45,
+      "l12": 0.45,
+      "l13": 0.8,
+      "l14": 0.35,
+      "l15": 0.8,
+      "l16": 0.6,
+      "l17": 1.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bin dokuz yüz altmış üçün sonunda on yedi yaşındaki Randy Gardner, bir bilim fuarı için hiç uyumamaya karar veriyor.",
+        "text": "1963'ün sonunda 17 yaşındaki Randy Gardner, bir bilim fuarı için hiç uyumamaya karar veriyor.",
+        "rate": "+12%"
+      },
+      {
+        "id": "l03",
+        "tts": "İki arkadaşı onu gece gündüz izliyor ve gözlerini kapatmasına izin vermiyor.",
+        "text": "İki arkadaşı onu gece gündüz izliyor ve gözlerini kapatmasına izin vermiyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l04",
+        "tts": "Günler geçtikçe huysuzlaşıyor, unutkanlaşıyor ve hayal görmeye başlıyor.",
+        "text": "Günler geçtikçe huysuzlaşıyor, unutkanlaşıyor ve hayal görmeye başlıyor.",
+        "rate": "+6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l05",
+        "tts": "On birinci gün yüzden geriye yedişer yedişer saymaya başlıyor ve altmış beşte ne yaptığını unutuyor.",
+        "text": "11. gün 100'den geriye yedişer yedişer saymaya başlıyor ve 65'te ne yaptığını unutuyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l06",
+        "tts": "Sonunda tam on bir gün ve yirmi beş dakika uyumadan kalıyor.",
+        "text": "Sonunda tam 11 gün ve 25 dakika uyumadan kalıyor.",
+        "rate": "+2%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+10%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "Klayv Viring, İngiltere'de tanınan bir müzisyen ve orkestra şefi olarak çalışıyor.",
+        "text": "Clive Wearing, İngiltere'de tanınan bir müzisyen ve orkestra şefi olarak çalışıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l09",
+        "tts": "Bin dokuz yüz seksen beşte bir virüs, beynindeki hafıza merkezini yok ediyor.",
+        "text": "1985'te bir virüs, beynindeki hafıza merkezini yok ediyor.",
+        "rate": "+6%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l10",
+        "tts": "O günden beri hafızası en fazla otuz saniye sürüyor.",
+        "text": "O günden beri hafızası en fazla 30 saniye sürüyor.",
+        "rate": "+2%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l11",
+        "tts": "Günlüğüne tekrar tekrar aynı cümleyi yazıyor: Şimdi gerçekten, tamamen uyanığım.",
+        "text": "Günlüğüne tekrar tekrar aynı cümleyi yazıyor: \"Şimdi gerçekten, tamamen uyanığım.\"",
+        "rate": "+8%"
+      },
+      {
+        "id": "l12",
+        "tts": "Karısı odadan kısa bir süre çıkıp dönünce, onu yıllardır görmemiş gibi sevinçle karşılıyor.",
+        "text": "Karısı odadan kısa bir süre çıkıp dönünce, onu yıllardır görmemiş gibi sevinçle karşılıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l13",
+        "tts": "Ama piyanonun başına oturunca hâlâ zor parçaları çalabiliyor.",
+        "text": "Ama piyanonun başına oturunca hâlâ zor parçaları çalabiliyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l14",
+        "tts": "Peki ikisini aynı saatle ölçersek?",
+        "text": "Peki ikisini aynı saatle ölçersek?",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l15",
+        "tts": "Randy on bir gün boyunca hiç uyumadı. Klayv'ın hafızası ise",
+        "text": "Randy 11 gün boyunca hiç uyumadı. Clive'ın hafızası ise",
+        "rate": "+6%"
+      },
+      {
+        "id": "l16",
+        "tts": "her otuz saniyede bir sıfırlanıyor.",
+        "text": "her 30 saniyede bir sıfırlanıyor.",
+        "rate": "-2%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "Randy uyanık kalırken Klayv'ın hafızası, otuz iki bin kez sıfırlanırdı.",
+        "text": "Randy uyanık kalırken Clive'ın hafızası 32 bin kez sıfırlanırdı.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l18",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "gardner": {
+      "year": 1963,
+      "age": 17,
+      "hours": 264.4,
+      "days": 11,
+      "minutes": 25,
+      "countFrom": 100,
+      "stoppedAt": 65
+    },
+    "wearing": {
+      "illness": 1985,
+      "memoryMaxS": 30,
+      "memoryMinS": 7
+    },
+    "resets": 31728
+  },
+  "caption": "Hangisi daha şaşırtıcı? 1963'ün sonunda San Diego'da 17 yaşındaki Randy Gardner, bir bilim fuarı projesi için uyumamaya karar verdi. İki arkadaşı onu gece gündüz izledi, uyku araştırmacısı William Dement de deneye katıldı. Günler geçtikçe huysuzlaştı, kısa süreli hafızası bozuldu ve hayal görmeye başladı. 11. gün kendisinden 100'den geriye yedişer saymasını istediler; 65'te durdu ve ne yaptığını unuttu. Sonunda 11 gün 25 dakika (264,4 saat) uyumadan kaldı.\n\nİngiliz müzisyen ve orkestra şefi Clive Wearing, 27 Mart 1985'te herpes ensefaliti geçirdi ve beynindeki hafıza bölgesi ağır hasar gördü. O günden beri olaylara dair hafızası 7 ile 30 saniye arasında sürüyor. Günlüğüne tekrar tekrar \"Şimdi gerçekten, tamamen uyanığım\" yazıyor. Karısı Deborah odadan kısa süre çıkıp dönse onu yıllardır görmemiş gibi karşılıyor. Yine de zor piyano parçalarını çalabiliyor ve koro yönetebiliyor.\n\nAynı saatle: 264,4 saat, 30 saniyelik pencerenin yaklaşık 31.700 katı.\n\nSen hangisine şaşırdın? Yorumlara RANDY ya da CLIVE yaz.\n\nNot: Uykusuzluk tehlikelidir; Guinness 1997'den beri bu rekor denemelerini kabul etmiyor.\n\nKaynaklar: Wikipedia (Randy Gardner; Clive Wearing), Stanford (William C. Dement).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#beyin",
+    "#hafıza"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? 11 gün hiç uyumayan genç mi, hafızası 30 saniye süren adam mı?"
+}

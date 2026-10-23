@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1100"></canvas>
+<script type="module">
+// Poz kâğıdı: Randy (göz hâlleri), iki arkadaş, Clive (şef, piyano, sevinç, yazı), Deborah, piyano, kadranlar
+import { RANDY_CARD, FRIEND_CARD, FRIEND2_CARD, CLIVE_CARD, DEBORAH_CARD, drawPerson, drawPiano, drawDial } from './saat_chars.js';
+await document.fonts.load('500 28px "IBM Plex Mono"');
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1100);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+const R = [{ eyes: 'open' }, { eyes: 'wide' }, { eyes: 'heavy' }, { eyes: 'closed' }, { walk: 0.3, eyes: 'wide' }, { sit: true, eyes: 'heavy' }];
+R.forEach((p, i) => at(100 + i * 140, 420, () => drawPerson(ctx, RANDY_CARD, p, 320)));
+at(980, 420, () => drawPerson(ctx, FRIEND_CARD, { arms: 'notebook' }, 310));
+at(1110, 420, () => drawPerson(ctx, FRIEND2_CARD, { arms: 'down' }, 300));
+const C2 = [{ arms: 'conduct', phase: 0.2 }, { arms: 'conduct', phase: 0.6 }, { arms: 'up', mouth: 'open', phase: 0.3 }, { arms: 'write', sit: true, phase: 0.2 }, { arms: 'piano', sit: true, phase: 0.4, eyes: 'closed' }];
+C2.forEach((p, i) => at(100 + i * 160, 960, () => drawPerson(ctx, CLIVE_CARD, p, 330)));
+at(940, 960, () => drawPerson(ctx, DEBORAH_CARD, { walk: 0.4, mouth: 'smile' }, 310));
+at(1200, 960, () => drawPiano(ctx, 300));
+at(1500, 300, () => drawDial(ctx, 140, 0, 7.5, '500 28px "IBM Plex Mono"'));
+at(1500, 750, () => drawDial(ctx, 140, 1, 12, '500 28px "IBM Plex Mono"'));
+window.__ready = true;
+</script></body></html>

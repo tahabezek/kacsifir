@@ -15,7 +15,9 @@ await Promise.all([
 ]);
 await document.fonts.ready;
 const canvas = document.getElementById('c');
-const r = ep.template === 'yildirim' ? await (await import('./scenes/yildirim.js')).makeYildirimRenderer(ep, canvas)
+const r = ep.template === 'saat' ? await (await import('./scenes/saat.js')).makeSaatRenderer(ep, canvas)
+  : ep.template === 'kaplumbaga' ? await (await import('./scenes/kaplumbaga.js')).makeKaplumbagaRenderer(ep, canvas)
+  : ep.template === 'yildirim' ? await (await import('./scenes/yildirim.js')).makeYildirimRenderer(ep, canvas)
   : ep.template === 'gemi' ? await (await import('./scenes/gemi.js')).makeGemiRenderer(ep, canvas)
   : ep.template === 'kaya' ? await (await import('./scenes/kaya.js')).makeKayaRenderer(ep, canvas)
   : ep.template === 'okyanus' ? await (await import('./scenes/okyanus.js')).makeOkyanusRenderer(ep, canvas)

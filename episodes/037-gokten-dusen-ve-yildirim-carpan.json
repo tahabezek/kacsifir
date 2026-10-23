@@ -1,0 +1,188 @@
+{
+  "id": "037",
+  "slug": "gokten-dusen-ve-yildirim-carpan",
+  "template": "yildirim",
+  "serial": "№ 037 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-28T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.45,
+      "l04": 0.45,
+      "l05": 0.3,
+      "l06": 0.35,
+      "l07": 0.4,
+      "l08": 1.4,
+      "l09": 0.15,
+      "l10": 0.3,
+      "l11": 0.4,
+      "l12": 1.2,
+      "l13": 0.4,
+      "l14": 0.7,
+      "l15": 0.35,
+      "l16": 0.35,
+      "l17": 0.8,
+      "l18": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bin dokuz yüz yetmiş birin Noel arifesinde on yedi yaşındaki Juliane Koepcke, annesiyle Peru'da bir uçağa biniyor.",
+        "text": "1971'in Noel arifesinde 17 yaşındaki Juliane Koepcke, annesiyle Peru'da bir uçağa biniyor.",
+        "rate": "+16%"
+      },
+      {
+        "id": "l03",
+        "tts": "Uçak bir fırtınaya giriyor, kanadına yıldırım düşüyor ve uçak havada parçalanıyor.",
+        "text": "Uçak bir fırtınaya giriyor, kanadına yıldırım düşüyor ve uçak havada parçalanıyor.",
+        "rate": "+12%"
+      },
+      {
+        "id": "l04",
+        "tts": "Juliane koltuğuna bağlı hâlde, üç kilometre yükseklikten yağmur ormanına düşüyor.",
+        "text": "Juliane koltuğuna bağlı hâlde, 3 km yükseklikten yağmur ormanına düşüyor.",
+        "rate": "+2%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l05",
+        "tts": "Gözlerini açtığında köprücük kemiği kırık ve annesi yanında yok.",
+        "text": "Gözlerini açtığında köprücük kemiği kırık ve annesi yanında yok.",
+        "rate": "+8%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l06",
+        "tts": "Babasının öğüdünü hatırlıyor: Suyu bul ve akıntı yönünde yürü.",
+        "text": "Babasının öğüdünü hatırlıyor: \"Suyu bul ve akıntı yönünde yürü.\"",
+        "rate": "+10%"
+      },
+      {
+        "id": "l07",
+        "tts": "Bir dere buluyor ve günlerce suyun içinde yürüyor.",
+        "text": "Bir dere buluyor ve günlerce suyun içinde yürüyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l08",
+        "tts": "Dokuz gün sonra ormancılar onu bir kulübede buluyor; uçaktaki doksan iki kişiden yalnızca o hayatta kalıyor.",
+        "text": "9 gün sonra ormancılar onu bir kulübede buluyor; uçaktaki 92 kişiden yalnızca o hayatta kalıyor.",
+        "rate": "+14%"
+      },
+      {
+        "id": "l09",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+10%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l10",
+        "tts": "Roy Sullivan, Amerika'daki bir milli parkta korucu olarak çalışıyor.",
+        "text": "Roy Sullivan, Amerika'daki bir milli parkta korucu olarak çalışıyor.",
+        "rate": "+14%"
+      },
+      {
+        "id": "l11",
+        "tts": "Bin dokuz yüz kırk ikide ona yıldırım çarpıyor ve ayakkabısını delip geçiyor.",
+        "text": "1942'de ona yıldırım çarpıyor ve ayakkabısını delip geçiyor.",
+        "rate": "+12%"
+      },
+      {
+        "id": "l12",
+        "tts": "Sonra yine çarpıyor: kamyonunda kaşları, bahçesinde omzu yanıyor, kulübesinde saçı tutuşuyor.",
+        "text": "Sonra yine çarpıyor: kamyonunda kaşları, bahçesinde omzu yanıyor, kulübesinde saçı tutuşuyor.",
+        "rate": "+14%"
+      },
+      {
+        "id": "l13",
+        "tts": "Bin dokuz yüz yetmiş yedide, balık tutarken yedinci kez çarpıyor.",
+        "text": "1977'de balık tutarken yedinci kez çarpıyor.",
+        "rate": "+4%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l14",
+        "tts": "Roy yedisinden de sağ çıkıyor ve Guinness rekorlar kitabına giriyor.",
+        "text": "Roy yedisinden de sağ çıkıyor ve Guinness Rekorlar Kitabı'na giriyor.",
+        "rate": "+14%"
+      },
+      {
+        "id": "l15",
+        "tts": "Peki ikisini aynı gökyüzünde ölçersek?",
+        "text": "Peki ikisini aynı gökyüzünde ölçersek?",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l16",
+        "tts": "Bir insana ömrü boyunca yıldırım çarpma ihtimali, yaklaşık on beş bin üç yüzde bir.",
+        "text": "Bir insana ömrü boyunca yıldırım çarpma ihtimali yaklaşık 15.300'de 1.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l17",
+        "tts": "Juliane'nin uçağına tek bir yıldırım düştü. Roy'a ise",
+        "text": "Juliane'nin uçağına tek bir yıldırım düştü. Roy'a ise",
+        "rate": "+6%"
+      },
+      {
+        "id": "l18",
+        "tts": "yedi kez çarptı ve yedisinde de yaşadı.",
+        "text": "yedi kez çarptı ve yedisinde de yaşadı.",
+        "rate": "-2%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l19",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "koepcke": {
+      "date": "1971-12-24",
+      "flight": "LANSA 508",
+      "aboard": 92,
+      "fallKm": 3,
+      "age": 17,
+      "daysToHut": 9
+    },
+    "sullivan": {
+      "strikes": [
+        1942,
+        1969,
+        1970,
+        1972,
+        1973,
+        1976,
+        1977
+      ]
+    },
+    "oddsLifetime": 15300
+  },
+  "caption": "Hangisi daha şaşırtıcı? 24 Aralık 1971'de 17 yaşındaki Juliane Koepcke, annesiyle birlikte Lima'dan Pucallpa'ya giden LANSA 508 uçağındaydı. Uçak fırtınada sağ kanadından yıldırım çarpınca havada parçalandı. Juliane koltuğuna bağlı hâlde yaklaşık 3 km yükseklikten Peru yağmur ormanına düştü; köprücük kemiği kırılmıştı. Babası ona kaybolursa suyu bulup akıntı yönünde yürümesini öğretmişti. Bir dereyi izledi; 9 gün sonra ormancıların kulübesine ulaştı ve orada bulundu. Uçaktaki 92 kişiden yalnızca o hayatta kaldı.\n\nRoy Sullivan, ABD'deki Shenandoah Milli Parkı'nda korucuydu. 1942'de gözetleme kulesinden kaçarken yıldırım çarptı ve ayakkabısını deldi. 1969'da kamyonunda kaşları yandı, 1970'te bahçesinde omzu yandı, 1972'de korucu kulübesinde saçı tutuştu. 1973 ve 1976'da yine çarptı; 1977'de balık tutarken yedinci kez çarptı. Yedisinden de sağ çıktı. Guinness onu en çok yıldırım çarpan insan olarak kaydetti.\n\nABD Ulusal Hava Durumu Servisi'ne göre bir insana 80 yıllık ömrü boyunca yıldırım çarpma ihtimali yaklaşık 15.300'de 1.\n\nSen hangisine şaşırdın? Yorumlara JULIANE ya da ROY yaz.\n\nKaynaklar: Wikipedia (Juliane Koepcke; LANSA Flight 508; Roy Sullivan), Guinness World Records, NWS (weather.gov/safety/lightning-odds).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#yıldırım",
+    "#hayattakalma"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? 3 km yükseklikten düşüp yaşayan kız mı, 7 kez yıldırım çarpan adam mı?"
+}

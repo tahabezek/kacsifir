@@ -33,12 +33,16 @@ import { yolSummary } from './scenes/yolculuk_summary.js';
 import { zamanSummary } from './scenes/zaman_summary.js';
 import { okyanusSummary } from './scenes/okyanus_summary.js';
 import { kayaSummary } from './scenes/kaya_summary.js';
+import { gemiSummary } from './scenes/gemi_summary.js';
+import { yildirimSummary } from './scenes/yildirim_summary.js';
 
 export function summary(ep) {
   if (ep.template === 'yolculuk') return yolSummary(ep);
   if (ep.template === 'zaman') return zamanSummary(ep);
   if (ep.template === 'okyanus') return okyanusSummary(ep);
   if (ep.template === 'kaya') return kayaSummary(ep);
+  if (ep.template === 'gemi') return gemiSummary(ep);
+  if (ep.template === 'yildirim') return yildirimSummary(ep);
   if (ep.template === 'domino') return dominoSummary(ep);
   if (ep.template === 'gezegen') return gezegenSummary(ep);
   if (ep.template === 'terazi') return teraziSummary(ep);

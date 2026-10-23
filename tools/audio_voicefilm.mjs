@@ -28,7 +28,8 @@ export function mixVoiceFilm(ep, tl, cues, seed = 7) {
     for (let i = 0; i < x.length; i++) if (i0 + i < N) VO[i0 + i] += x[i] * g;
   }
   const [s0, s1] = cues.silence || [-1, -1];
-  const silent = t => t >= s0 && t < s1;
+  // hush: müziğin kısa süre sustuğu aralıklar (patlama, gök gürültüsü sonrası)
+  const silent = t => (t >= s0 && t < s1) || (cues.hush || []).some(([a, b]) => t >= a && t < b);
   const loopEnd = cues.loopEnd ?? D;
 
   // müzik
@@ -66,6 +67,11 @@ export function mixVoiceFilm(ep, tl, cues, seed = 7) {
     for (let n = n0; n < n1; n++) { const u = (n - n0) / (n1 - n0), fc = 400 + 3000 * Math.sin(Math.PI * u); lp += (1 - Math.exp(-2 * Math.PI * fc / SR)) * (noise() - lp); const e = Math.pow(Math.sin(Math.PI * u), 2) * 0.32; addF(n, lp * e * (1.2 - u), lp * e * (0.2 + u)); }
   }
   for (const t0 of cues.tick || []) for (let n = 0; n < 0.06 * SR; n++) { const tt = n / SR, v = (noise() * Math.exp(-tt * 300) + Math.sin(2 * Math.PI * 2100 * tt) * Math.exp(-tt * 90) * 0.5) * 0.12; addF(Math.round(t0 * SR) + n, v); }
+  // rumble: boğuk, uzak gümbürtü (patlama, gök gürültüsü); [t0, genlik]. Büyük vuruş (impact) değildir.
+  for (const [t0, amp = 0.35] of cues.rumble || []) {
+    let lp = 0, lp2 = 0; const n0 = Math.round((t0 - 2 / 30) * SR);
+    for (let n = 0; n < 2.4 * SR; n++) { const t = n / SR; lp += 0.012 * (noise() - lp); lp2 += 0.05 * (lp - lp2); const env = Math.min(1, t / 0.04) * Math.exp(-t * 1.6) * (1 + 0.35 * Math.sin(t * 9)); addF(n0 + n, lp2 * 9 * env * amp, lp2 * 8.4 * env * amp); }
+  }
   if (cues.riser) {
     const [a, b] = cues.riser; let lp = 0, ph = 0; const n0 = Math.round(a * SR), n1 = Math.round(b * SR);
     for (let n = n0; n < n1; n++) { const u = (n - n0) / (n1 - n0), fc = 300 * Math.pow(18, u); lp += (1 - Math.exp(-2 * Math.PI * fc / SR)) * (noise() - lp); ph += 2 * Math.PI * 220 * Math.pow(3, u) / SR; const e = Math.pow(u, 2.2) * 0.22; addF(n, (lp + Math.sin(ph) * 0.15) * e); }

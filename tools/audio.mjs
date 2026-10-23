@@ -35,6 +35,8 @@ import { synthYolculuk } from './audio_yolculuk.mjs';
 import { synthZaman } from './audio_zaman.mjs';
 import { synthOkyanus } from './audio_okyanus.mjs';
 import { synthKaya } from './audio_kaya.mjs';
+import { synthGemi } from './audio_gemi.mjs';
+import { synthYildirim } from './audio_yildirim.mjs';
 import { timelineCues } from '../engine/scenes/timeline.js';
 
 const SR = 48000;
@@ -65,6 +67,8 @@ export function synth(ep) {
   if (ep.template === 'zaman') return synthZaman(ep);
   if (ep.template === 'okyanus') return synthOkyanus(ep);
   if (ep.template === 'kaya') return synthKaya(ep);
+  if (ep.template === 'gemi') return synthGemi(ep);
+  if (ep.template === 'yildirim') return synthYildirim(ep);
   const tl = ep.template === 'uranus' ? uranusCues(ep) : ep.template === 'venus' ? venusCues(ep) : ep.template === 'hacim' ? hacimCues(ep) : ep.template === 'terazi' ? teraziCues(ep) : ep.template === 'gezegen' ? gezegenCues(ep) : ep.template === 'swarm' ? swarmCues(ep) : ep.template === 'doc' ? docCues(ep) : ep.template === 'versus' ? versusCues(ep) : ep.template === 'board' ? boardCues(ep) : ep.template === 'light' ? lightCues(ep) : ep.template === 'tiles' ? tilesCues(ep) : ep.template === 'altitude' ? altitudeCues(ep) : ep.template === 'pulse' ? pulseCues(ep) : ep.template === 'needle' ? needleCues(ep) : ep.template === 'spin' ? spinCues(ep) : ep.template === 'storm' ? stormCues(ep) : ep.template === 'depth' ? depthCues(ep) : ep.template === 'sun' ? sunCues(ep) : ep.template === 'zeros' ? zerosCues(ep) : ep.template === 'rope' ? ropeCues(ep) : ep.template === 'proof' ? proofCues(ep) : ep.template === 'tunnel' ? tunnelCues(ep) : ep.template === 'doors' ? doorsCues(ep) : ep.template === 'timeline' ? timelineCues(ep) : towerCues(ep);
   const D = tl.duration;
   const N = Math.ceil(D * SR);

@@ -2,7 +2,7 @@
 # kelimeler metindeki kelimelere SIRAYLA eşlenir (metin değil konum: whisper sayıları rakamla yazabilir).
 #   py -3.13 tools/voice_words.py episodes/014-....json   → assets/voice/<id>/words.json içine "words"
 # Tanınan kelime sayısı metinle tutmazsa aradaki kelimeler hece sayısına göre dağıtılır ve uyarı basılır.
-import json, os, re, subprocess, sys
+import difflib, json, os, re, subprocess, sys
 import numpy as np
 from faster_whisper import WhisperModel
 
@@ -28,14 +28,15 @@ for line in ep['voice']['lines']:
                                   vad_filter=False, beam_size=5, condition_on_previous_text=False)
     heard = [w for s in segs for w in s.words if w.word.strip()]
     end = info.duration
-    # hizalama: baş harfleri (ilk 4) tutan kelimeler sabit nokta; aradakiler hece sayısıyla paylaştırılır
+    # hizalama: metindekine yeterince benzeyen kelimeler sabit nokta; aradakiler hece sayısıyla paylaştırılır
     norm = lambda w: re.sub(r"[^a-zçğıöşüâî0-9]", '', w.replace('İ', 'i').replace('I', 'ı').lower().split("'")[0])
     anchors, j = {}, 0
     for i, sw in enumerate(script):
         for k in range(j, min(j + 8, len(heard))):
             hw = norm(heard[k].word)
             # yalnız uzun kelimeler sabit nokta olur: 'bir', 'on' gibi kısa kelimeler başka yerde de geçer (rakamla duyulur)
-            if hw and len(norm(sw)) >= 4 and len(hw) >= 4 and norm(sw)[:4] == hw[:4]:
+            # benzerlik oranıyla (yanlış duyulan harflere dayanıklı; 'gemi' ≠ 'gemisiyle' gibi önek tuzaklarını eler)
+            if hw and len(norm(sw)) >= 4 and len(hw) >= 4 and difflib.SequenceMatcher(None, norm(sw), hw).ratio() >= 0.72:
                 anchors[i] = (heard[k].start, heard[k].end); j = k + 1; break
     a0 = heard[0].start if heard else 0.05
     b0 = heard[-1].end if heard else end - 0.05

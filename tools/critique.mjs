@@ -21,7 +21,10 @@ const ff = args => {
   if (r.status !== 0) throw new Error(r.stderr.slice(-600));
   return r.stderr;
 };
-const NF = Math.round(tl.duration * FPS);
+// gerçek kare sayısı (ses birleştirmede son kareler kırpılabilir): paket sayımı, çözme yok
+// (bazı çıktılarda kopya modunda 'frame=' satırı gelmez: o zaman kareler çözülerek sayılır)
+const countF = args => Number([...ff(args).matchAll(/frame= *(\d+)/g)].at(-1)?.[1] ?? NaN);
+const NF = Math.min(Math.round(tl.duration * FPS), countF(['-i', video, '-map', '0:v', '-c', 'copy', '-f', 'null', '-']) || countF(['-i', video, '-map', '0:v', '-f', 'null', '-']) || 1e9);
 // Kare numarasıyla birebir yakalama (arama kayması yok)
 const grab = (t, file, w = 1080) => {
   const n = Math.max(0, Math.min(NF - 1, Math.round(t * FPS)));

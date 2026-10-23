@@ -1,0 +1,185 @@
+{
+  "id": "036",
+  "slug": "hostes-ve-gemi-tasarimcisi",
+  "template": "gemi",
+  "serial": "№ 036 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-21T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.5,
+      "l03": 0.25,
+      "l04": 0.6,
+      "l05": 0.35,
+      "l06": 0.5,
+      "l07": 0.4,
+      "l08": 1.6,
+      "l09": 0.15,
+      "l10": 0.4,
+      "l11": 0.7,
+      "l12": 0.35,
+      "l13": 0.6,
+      "l14": 0.35,
+      "l15": 0.35,
+      "l16": 0.8,
+      "l17": 0.5,
+      "l18": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bin dokuz yüz on birde Violet Jessop'un hostes olduğu dev gemi Olympic, bir savaş gemisiyle çarpışıyor.",
+        "text": "1911'de Violet Jessop'un hostes olduğu dev gemi Olympic, bir savaş gemisiyle çarpışıyor.",
+        "rate": "+12%"
+      },
+      {
+        "id": "l03",
+        "tts": "Yedi ay sonra Violet, Olympic'in ikiz kardeşine geçiyor.",
+        "text": "7 ay sonra Violet, Olympic'in ikiz kardeşine geçiyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l04",
+        "tts": "Bu geminin adı Titanik.",
+        "text": "Bu geminin adı Titanik.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l05",
+        "tts": "Titanik bir buzdağına çarpıp batıyor ve bin beş yüzden fazla kişi ölüyor.",
+        "text": "Titanik bir buzdağına çarpıp batıyor ve 1.500'den fazla kişi ölüyor.",
+        "rate": "+4%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l06",
+        "tts": "Violet, on altı numaralı filikayla kurtuluyor.",
+        "text": "Violet, 16 numaralı filikayla kurtuluyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l07",
+        "tts": "Bin dokuz yüz on altıda hastane gemisi Britannic, Ege'de bir mayına çarpıp elli beş dakikada batıyor.",
+        "text": "1916'da hastane gemisi Britannic, Ege'de bir mayına çarpıp 55 dakikada batıyor.",
+        "rate": "+12%"
+      },
+      {
+        "id": "l08",
+        "tts": "Violet'in filikası pervanelere çekiliyor, ama Violet suya atlayıp yine kurtuluyor.",
+        "text": "Violet'in filikası pervanelere çekiliyor, ama Violet suya atlayıp yine kurtuluyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l09",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+10%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l10",
+        "tts": "Bin dokuz yüz kırk beşte gemi tasarımcısı Tsutomu Yamaguchi, iş için Hiroşima'ya gidiyor.",
+        "text": "1945'te gemi tasarımcısı Tsutomu Yamaguchi, iş için Hiroşima'ya gidiyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l11",
+        "tts": "Altı Ağustos sabahı atom bombası, ondan yalnızca üç kilometre ötede patlıyor.",
+        "text": "6 Ağustos sabahı atom bombası, ondan yalnızca 3 km ötede patlıyor.",
+        "rate": "+2%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l12",
+        "tts": "Yanıklar içinde bir trene binip evine, Nagazaki'ye dönüyor.",
+        "text": "Yanıklar içinde bir trene binip evine, Nagazaki'ye dönüyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l13",
+        "tts": "Dokuz Ağustos'ta patronuna Hiroşima'yı anlatırken ikinci bomba, yine üç kilometre ötede patlıyor.",
+        "text": "9 Ağustos'ta patronuna Hiroşima'yı anlatırken ikinci bomba, yine 3 km ötede patlıyor.",
+        "rate": "+6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l14",
+        "tts": "Yamaguchi ikisinden de sağ çıkıyor.",
+        "text": "Yamaguchi ikisinden de sağ çıkıyor.",
+        "rate": "+4%"
+      },
+      {
+        "id": "l15",
+        "tts": "Peki ikisini aynı takvime koyarsak?",
+        "text": "Peki ikisini aynı takvime koyarsak?",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l16",
+        "tts": "Violet'in üç kazası beş yıla yayıldı. Yamaguchi ise",
+        "text": "Violet'in 3 kazası 5 yıla yayıldı. Yamaguchi ise",
+        "rate": "+6%"
+      },
+      {
+        "id": "l17",
+        "tts": "iki atom bombasını üç gün içinde yaşadı.",
+        "text": "iki atom bombasını 3 gün içinde yaşadı.",
+        "rate": "-2%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l18",
+        "tts": "Japonya'nın iki bombadan da sağ çıktığını resmen tanıdığı tek kişi o.",
+        "text": "Japonya'nın iki bombadan da sağ çıktığını resmen tanıdığı tek kişi o.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l19",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "jessop": {
+      "olympic": "1911-09-20",
+      "titanic": "1912-04-15",
+      "britannic": "1916-11-21",
+      "titanicDead": 1500,
+      "lifeboat": 16,
+      "britannicMin": 55,
+      "spanDays": 1889
+    },
+    "yamaguchi": {
+      "hiroshima": "1945-08-06",
+      "nagasaki": "1945-08-09",
+      "km": 3,
+      "days": 3
+    }
+  },
+  "caption": "Hangisi daha şaşırtıcı? Violet Jessop, 20 Eylül 1911'de hostes olarak çalıştığı Olympic, İngiliz savaş gemisi HMS Hawke ile çarpıştığında gemideydi; ölen olmadı. 7 ay sonra Olympic'in ikizi Titanik'te çalışmaya başladı. Titanik 15 Nisan 1912'de buzdağına çarpıp battı ve 1.500'den fazla kişi öldü; Violet 16 numaralı filikayla kurtuldu. 21 Kasım 1916'da hemşire olarak çalıştığı hastane gemisi Britannic Ege'de bir mayına çarptı ve 55 dakikada battı. Filikası pervanelere çekilince suya atladı ve başından yaralandı, ama yine kurtuldu.\n\nTsutomu Yamaguchi, Mitsubishi'de petrol tankeri tasarlayan bir mühendisti. 6 Ağustos 1945'te iş için bulunduğu Hiroşima'da, patlama noktasından 3 km ötedeydi. Yanıklar içinde Nagazaki'ye döndü. 9 Ağustos'ta patronuna Hiroşima'yı anlatırken Nagazaki'ye düşen bomba yine 3 km ötede patladı. Japonya 2009'da onu iki bombadan da sağ çıkan kişi olarak resmen tanıdı. 2010'da 93 yaşında öldü.\n\nAynı takvimde: Violet'in ilk kazasından sonuncusuna 1.889 gün (5 yıl 2 ay); Yamaguchi'nin iki bombası arasında 3 gün.\n\nSen hangisine şaşırdın? Yorumlara VIOLET ya da YAMAGUCHI yaz.\n\nKaynaklar: Wikipedia (Violet Jessop; Tsutomu Yamaguchi; HMHS Britannic), History.com.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#titanik",
+    "#tarih"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? Üç gemi kazasından sağ çıkan kadın mı, iki atom bombasından sağ çıkan adam mı?"
+}

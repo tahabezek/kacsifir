@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1300"></canvas>
+<script type="module">
+// Poz kâğıdı: yolcu gemisi (3 kılık, batış), kruvazör, buzdağı, filika, mayın, pervane, tren, Violet ve Yamaguchi
+import { LINER_CARD, drawLiner, CRUISER_CARD, drawCruiser, drawIceberg, drawLifeboat, drawMine, drawPropeller, drawTrain, VIOLET_CARD, drawViolet, YAMA_CARD, drawYamaguchi } from './gemi_chars.js';
+await document.fonts.load('600 30px Archivo');
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1300);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); ctx.beginPath(); ctx.moveTo(x - 300, y + 0.5); ctx.lineTo(x + 300, y + 0.5); ctx.strokeStyle = 'rgba(0,0,0,0.2)'; ctx.stroke(); };
+at(320, 200, () => drawLiner(ctx, LINER_CARD, { livery: 'star', smoke: 0.3, water: false }, 560));
+at(920, 200, () => drawLiner(ctx, LINER_CARD, { livery: 'hospital', smoke: 0.6 }, 560));
+at(1500, 200, () => drawLiner(ctx, LINER_CARD, { livery: 'star', tilt: 0.25, sink: 0.4, dent: 1 }, 560));
+at(320, 420, () => drawCruiser(ctx, CRUISER_CARD, {}, 360));
+at(800, 420, () => drawIceberg(ctx, 220));
+at(1200, 420, () => drawLifeboat(ctx, { oar: 0.3, n: 16 }, 240));
+at(1550, 380, () => drawMine(ctx, 90));
+at(1700, 400, () => drawPropeller(ctx, 0.4, 150));
+at(320, 620, () => drawTrain(ctx, 0.3, 520));
+const VP = [{}, { walk: 0.2 }, { walk: 0.5 }, { arms: 'up', lean: -0.4 }, { arms: 'boat' }, { bandage: 1 }];
+VP.forEach((p, i) => at(120 + i * 150, 1000, () => drawViolet(ctx, VIOLET_CARD, p, 300)));
+const YP = [{}, { walk: 0.2, arms: 'case' }, { walk: 0.6, arms: 'case' }, { arms: 'shield' }, { arms: 'gesture', bandage: 1 }, { bandage: 1 }, { sit: true, bandage: 1 }];
+YP.forEach((p, i) => at(1000 + i * 115, 1000, () => drawYamaguchi(ctx, YAMA_CARD, p, 300)));
+window.__ready = true;
+</script></body></html>

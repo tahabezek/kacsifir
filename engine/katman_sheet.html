@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="900"></canvas>
+<script type="module">
+// Poz kâğıdı: T-sütunu (kabartmalı/kabartmasız), piramit, mamut yürüyüşü (4 faz), tablet, tekerlek, sikke, ayak izi, başak
+import { drawTPillar, drawPyramid, drawMammoth, drawTablet, drawWheel, drawCoin, drawBootprint, drawWheat } from './katman_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 900);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+at(150, 600, () => drawTPillar(ctx, 520));
+at(380, 600, () => drawTPillar(ctx, 300, { relief: 0.2 }));
+at(650, 600, () => drawPyramid(ctx, 380));
+for (let i = 0; i < 4; i++) at(980 + i * 210, 600, () => drawMammoth(ctx, 200, i * 0.275));
+at(150, 780, () => drawTablet(ctx, 160));
+at(380, 780, () => drawWheel(ctx, 140));
+at(600, 780, () => drawCoin(ctx, 160));
+at(800, 780, () => drawBootprint(ctx, 150));
+at(980, 780, () => drawWheat(ctx, 160));
+window.__ready = true;
+</script></body></html>

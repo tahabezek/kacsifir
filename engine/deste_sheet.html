@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1600" height="900"></canvas>
+<script type="module">
+// Poz kâğıdı: kart yüzleri (dört takım, resimli kartlar), kart arkası, takım işaretleri, el
+import { drawCard, drawSuit, drawHand } from './deste_chars.js';
+await document.fonts.load('800 40px Archivo');
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1600, 900);
+const F = s => `800 ${s}px Archivo`;
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+[0, 9, 12, 13, 23, 26, 37, 39, 51].forEach((i, k) => at(110 + k * 160, 200, () => drawCard(ctx, i, true, 220, F)));
+at(110, 520, () => drawCard(ctx, 0, false, 220, F));
+[0, 1, 2, 3].forEach((s, k) => at(300 + k * 120, 520, () => drawSuit(ctx, s, 90, 1.6)));
+
+at(1250, 640, () => { for (let k = 0; k < 9; k++) { ctx.save(); ctx.rotate(-0.6 + k * 0.15); ctx.translate(0, -170); drawCard(ctx, k * 6, true, 200, F); ctx.restore(); } });
+window.__ready = true;
+</script></body></html>

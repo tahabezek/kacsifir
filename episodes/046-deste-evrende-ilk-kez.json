@@ -1,0 +1,94 @@
+{
+  "id": "046",
+  "slug": "deste-evrende-ilk-kez",
+  "template": "deste",
+  "serial": "№ 046 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-10T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.6,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.6,
+      "l05": 0.5,
+      "l06": 0.8,
+      "l07": 1.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Bu desteyi her karıştırdığında, büyük ihtimalle evrende ilk kez görülen bir sıra yaratıyorsun.",
+        "text": "Bu desteyi her karıştırdığında, büyük ihtimalle evrende ilk kez görülen bir sıra yaratıyorsun.",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Elli iki kart kaç farklı sırada dizilebilir?",
+        "text": "52 kart kaç farklı sırada dizilebilir?",
+        "rate": "+8%"
+      },
+      {
+        "id": "l03",
+        "tts": "İlk kart için elli iki seçenek var, ikincisi için elli bir, sonra elli...",
+        "text": "İlk kart için 52 seçenek var, ikincisi için 51, sonra 50…",
+        "rate": "+10%"
+      },
+      {
+        "id": "l04",
+        "tts": "Hepsini çarpınca altmış sekiz basamaklı bir sayı çıkıyor.",
+        "text": "Hepsini çarpınca 68 basamaklı bir sayı çıkıyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l05",
+        "tts": "Şimdi Dünya'daki herkes, Büyük Patlama'dan beri her saniye bir deste karıştırsın.",
+        "text": "Şimdi Dünya'daki herkes, Büyük Patlama'dan beri her saniye bir deste karıştırsın.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l06",
+        "tts": "Bütün bu karıştırmaların olası sıralara oranı:",
+        "text": "Bütün bu karıştırmaların olası sıralara oranı:",
+        "rate": "+6%"
+      },
+      {
+        "id": "l07",
+        "tts": "sıfır virgül, ardından kırk sıfır daha.",
+        "text": "sıfır virgül, ardından kırk sıfır daha.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "Yani elindeki sıra, büyük ihtimalle daha önce hiç var olmadı.",
+        "text": "Yani elindeki sıra, büyük ihtimalle daha önce hiç var olmadı.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "cards": 52,
+    "orderings": "80658175170943878571660636856403766975289505440883277824000000000000",
+    "digits": 68,
+    "people": 8300000000,
+    "universeYears": 13800000000,
+    "shuffles": 3.61e+27,
+    "fraction": 4.48e-41,
+    "zerosAfterComma": 40
+  },
+  "caption": "Bu desteyi her karıştırdığında büyük ihtimalle evrende ilk kez görülen bir sıra yaratıyorsun. 52 kart 52! = 52 × 51 × … × 1 farklı sırada dizilebilir: 80.658.175.170.943.878.571.660.636.856.403.766.975.289.505.440.883.277.824.000.000.000.000, yani 68 basamaklı bir sayı (yaklaşık 8 × 10⁶⁷).\n\nDünya'daki 8,3 milyar kişinin her biri Büyük Patlama'dan beri (13,8 milyar yıl) her saniye bir deste karıştırsaydı yaklaşık 3,6 × 10²⁷ karıştırma ederdi: olası sıraların yaklaşık 4,5 × 10⁻⁴¹'i, yani virgülden sonra 40 sıfırlı bir kesir.\n\nNot: Hesap, desteyi iyice (rastgele) karıştırdığını varsayar; yeni bir deste ya da birkaç kez kesip karıştırmak böyle değildir.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: 52! (ör. czep.net, thatsmaths.com), Planck (evrenin yaşı), BM (dünya nüfusu).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#matematik",
+    "#ilginçbilgiler",
+    "#bilim",
+    "#iskambil"
+  ],
+  "ytTitle": "Bu desteyi karıştırdığında evrende ilk kez görülen bir sıra yaratıyorsun"
+}

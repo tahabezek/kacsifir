@@ -1,0 +1,96 @@
+{
+  "id": "049",
+  "slug": "voyager-bir-isik-gunu",
+  "template": "voyager",
+  "serial": "№ 049 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-18T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.5,
+      "l04": 0.5,
+      "l05": 0.6,
+      "l06": 0.8,
+      "l07": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "İnsanlığın en uzağa giden aracı, kırk dokuz yılda nereye vardı?",
+        "text": "İnsanlığın en uzağa giden aracı, 49 yılda nereye vardı?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Voyager bir, bin dokuz yüz yetmiş yedide fırlatıldı.",
+        "text": "Voyager 1, 1977'de fırlatıldı.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l03",
+        "tts": "Jüpiter'in, sonra Satürn'ün yanından geçti ve Güneş'in etki alanından çıktı.",
+        "text": "Jüpiter'in, sonra Satürn'ün yanından geçti ve Güneş'in etki alanından çıktı.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l04",
+        "tts": "Bugün, on sekiz Kasım iki bin yirmi altıda, Dünya'dan bir ışık günü uzaklığa ulaşıyor.",
+        "text": "Bugün, 18 Kasım 2026'da, Dünya'dan bir ışık günü uzaklığa ulaşıyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l05",
+        "tts": "Yani oradan gönderilen bir sinyal bize tam bir günde geliyor.",
+        "text": "Yani oradan gönderilen bir sinyal bize tam bir günde geliyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l06",
+        "tts": "Işık o yolu bir günde alıyor. Voyager ise",
+        "text": "Işık o yolu bir günde alıyor. Voyager ise",
+        "rate": "+6%"
+      },
+      {
+        "id": "l07",
+        "tts": "kırk dokuz yılda aldı.",
+        "text": "49 yılda aldı.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "Bu hızla en yakın yıldıza varması, yetmiş beş bin yıl sürerdi.",
+        "text": "Bu hızla en yakın yıldıza varması, 75.000 yıl sürerdi.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "launch": "1977-09-05",
+    "jupiter": 1979,
+    "saturn": 1980,
+    "heliopause": 2012,
+    "lightDay": "2026-11-18T06:16Z",
+    "lightDayKm": 25900000000,
+    "years": 49,
+    "speedKms": 17,
+    "proximaLy": 4.24,
+    "proximaYears": 75000
+  },
+  "caption": "Voyager 1, 5 Eylül 1977'de fırlatıldı; 1979'da Jüpiter'in, 1980'de Satürn'ün yanından geçti ve 2012'de Güneş'in etki alanından (helyosferden) çıkıp yıldızlararası uzaya girdi. NASA'ya göre 18 Kasım 2026'da Dünya'dan bir ışık günü (yaklaşık 25,9 milyar km) uzaklığa ulaşıyor: oradan gönderilen bir sinyal bize yaklaşık 24 saatte geliyor. Işığın bir günde aldığı yolu Voyager 49 yılda aldı.\n\nVoyager 1 saniyede yaklaşık 17 km hızla gidiyor. Bu hızla en yakın yıldız Proxima Centauri'ye (4,24 ışık yılı) varması yaklaşık 75.000 yıl sürerdi (Voyager oraya gitmiyor; yalnız hız kıyası).\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: NASA/JPL Voyager, EarthSky (18 Kasım 2026), Wikipedia (Voyager 1; Proxima Centauri).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#voyager",
+    "#uzay",
+    "#nasa",
+    "#ilginçbilgiler"
+  ],
+  "ytTitle": "Voyager 1 bugün Dünya'dan bir ışık günü uzakta: 49 yılda"
+}

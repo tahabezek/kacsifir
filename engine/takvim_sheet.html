@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="800"></canvas>
+<script type="module">
+// Poz kâğıdı: Büyük Patlama (3 açılış), Güneş–Dünya, dinozor (yürüyüş, düşüş), göktaşı, ilk insan, piramit, sen
+import { drawBang, drawSunEarth, drawDino, drawAsteroid, drawHuman, drawPyramid, drawYou } from './takvim_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 800);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+[0.2, 0.6, 1].forEach((u, i) => at(130 + i * 230, 180, () => drawBang(ctx, u, 1.2, 240)));
+at(860, 180, () => drawSunEarth(ctx, 0.4, 300));
+at(1260, 180, () => drawSunEarth(ctx, 2.4, 300));
+[0, 0.35, 0.7].forEach((w, i) => at(150 + i * 330, 650, () => drawDino(ctx, { walk: w }, 300)));
+at(1150, 650, () => drawDino(ctx, { walk: 0, fall: 1 }, 300));
+at(1150, 650, () => drawAsteroid(ctx, 0.5, 300));
+at(1400, 650, () => drawHuman(ctx, { walk: 0.2 }, 260));
+at(1560, 650, () => drawPyramid(ctx, 180));
+at(1720, 650, () => drawYou(ctx, { wave: true, phase: 0.3 }, 240));
+window.__ready = true;
+</script></body></html>

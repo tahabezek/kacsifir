@@ -1,0 +1,94 @@
+{
+  "id": "048",
+  "slug": "evrenin-takvimi",
+  "template": "takvim",
+  "serial": "№ 048 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-16T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.5,
+      "l04": 0.5,
+      "l05": 0.6,
+      "l06": 0.8,
+      "l07": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Evrenin tarihi tek bir yıl olsaydı, sen ne zaman doğardın?",
+        "text": "Evrenin tarihi tek bir yıl olsaydı, sen ne zaman doğardın?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Büyük Patlama: bir Ocak, gece yarısı.",
+        "text": "Büyük Patlama: 1 Ocak, gece yarısı.",
+        "rate": "+4%"
+      },
+      {
+        "id": "l03",
+        "tts": "Güneş ve Dünya ancak Eylül başında doğuyor.",
+        "text": "Güneş ve Dünya ancak Eylül başında doğuyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l04",
+        "tts": "Dinozorlar yirmi beş Aralık'ta ortaya çıkıyor ve otuz Aralık'ta yok oluyor.",
+        "text": "Dinozorlar 25 Aralık'ta ortaya çıkıyor ve 30 Aralık'ta yok oluyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l05",
+        "tts": "İnsan türü otuz bir Aralık'ta, gece yarısına on bir dakika kala geliyor.",
+        "text": "İnsan türü 31 Aralık'ta, gece yarısına 11 dakika kala geliyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l06",
+        "tts": "Piramitler, gece yarısından yaklaşık on saniye önce yapılıyor.",
+        "text": "Piramitler, gece yarısından yaklaşık 10 saniye önce yapılıyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l07",
+        "tts": "Senin bütün hayatın ise",
+        "text": "Senin bütün hayatın ise",
+        "rate": "+4%"
+      },
+      {
+        "id": "l08",
+        "tts": "saniyenin beşte birinden kısa.",
+        "text": "saniyenin beşte birinden kısa.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      }
+    ]
+  },
+  "facts": {
+    "universeYears": 13800000000,
+    "yearsPerCalSecond": 437.6,
+    "sunEarthDate": "1 Eylül",
+    "dinoStart": "25 Aralık",
+    "dinoEnd": "30 Aralık 06:06",
+    "humans": "31 Aralık 23:48:34",
+    "pyramidsSecondsBefore": 10.5,
+    "lifeYears": 80,
+    "lifeSeconds": 0.18
+  },
+  "caption": "Evrenin 13,8 milyar yıllık tarihini tek bir yıla sıkıştırırsak her takvim saniyesi yaklaşık 438 yıl eder. Büyük Patlama 1 Ocak gece yarısı. Güneş ve Dünya (yaklaşık 4,6 milyar yıl önce) 1 Eylül civarı. İlk dinozorlar (yaklaşık 230 milyon yıl önce) 25 Aralık, dinozorların sonu (66 milyon yıl önce) 30 Aralık sabahı. Homo sapiens (en az 300.000 yıl önce) 31 Aralık 23.48'de, gece yarısına yaklaşık 11 dakika kala. Keops Piramidi (yaklaşık 4.600 yıl önce) gece yarısından yaklaşık 10,5 saniye önce. 80 yıllık bir ömür yaklaşık 0,18 saniye: saniyenin beşte birinden kısa.\n\nFikir Carl Sagan'ın Kozmik Takvim'inden; hesaplar güncel tarihlerle yeniden yapıldı.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: Planck 2018 (evrenin yaşı), NASA (Güneş Sistemi'nin yaşı), Hublin ve ark. 2017 (Jebel Irhoud), Wikipedia (Dinozorlar; Keops Piramidi).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#evren",
+    "#uzay",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "ytTitle": "Evrenin tarihi tek bir yıl olsaydı, sen ne zaman doğardın?"
+}

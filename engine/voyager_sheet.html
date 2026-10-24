@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1600" height="900"></canvas>
+<script type="module">
+// Poz kâğıdı: Voyager 1 (büyük, orta, küçük ayrıntı), DSN çanağı, Jüpiter, Satürn, sinyal dalgası
+import { VOYAGER_CARD, drawVoyager, drawDSN, drawJupiter, drawSaturn, drawWaves } from './voyager_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1600, 900);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+at(380, 360, () => drawVoyager(ctx, VOYAGER_CARD, { tilt: -0.08 }, 300));
+at(820, 300, () => drawVoyager(ctx, VOYAGER_CARD, { tilt: 0.1, detail: 0.5 }, 110));
+at(1000, 300, () => drawVoyager(ctx, VOYAGER_CARD, { detail: 0 }, 50));
+at(1300, 420, () => drawDSN(ctx, 300));
+at(300, 760, () => drawJupiter(ctx, 110, 0.5));
+at(700, 760, () => drawSaturn(ctx, 70, 0.5));
+at(1050, 760, () => drawWaves(ctx, Math.PI, 0.3, 1.5));
+window.__ready = true;
+</script></body></html>

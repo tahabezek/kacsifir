@@ -1,0 +1,105 @@
+{
+  "id": "045",
+  "slug": "gobeklitepe-ve-piramitler",
+  "template": "katman",
+  "serial": "№ 045 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-08T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.6,
+      "l04": 0.5,
+      "l05": 0.8,
+      "l06": 0.5,
+      "l07": 0.8,
+      "l08": 0.5
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor.",
+        "text": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor.",
+        "rate": "+4%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Göbeklitepe yaklaşık on bir bin beş yüz yıl önce, Şanlıurfa'da dikildi.",
+        "text": "Göbeklitepe yaklaşık 11.500 yıl önce, Şanlıurfa'da dikildi.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l03",
+        "tts": "O sırada yazı yoktu, tekerlek yoktu; insanlar hâlâ avcı toplayıcıydı.",
+        "text": "O sırada yazı yoktu, tekerlek yoktu; insanlar hâlâ avcı toplayıcıydı.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l04",
+        "tts": "Keops Piramidi ise yaklaşık dört bin altı yüz yıl önce yapıldı.",
+        "text": "Keops Piramidi ise yaklaşık 4.600 yıl önce yapıldı.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l05",
+        "tts": "Yani Göbeklitepe'den piramitlere geçen süre, yaklaşık",
+        "text": "Yani Göbeklitepe'den piramitlere geçen süre, yaklaşık",
+        "rate": "+6%"
+      },
+      {
+        "id": "l06",
+        "tts": "yedi bin yıl.",
+        "text": "7.000 yıl.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Piramitlerden bugüne ise yalnızca dört bin altı yüz yıl geçti.",
+        "text": "Piramitlerden bugüne ise yalnızca 4.600 yıl geçti.",
+        "rate": "+4%"
+      },
+      {
+        "id": "l08",
+        "tts": "Dahası, piramitler yapılırken mamutlar hâlâ yaşıyordu.",
+        "text": "Dahası, piramitler yapılırken mamutlar hâlâ yaşıyordu.",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Kleopatra ise piramitlerden çok, Ay'a inişe yakın yaşadı.",
+        "text": "Kleopatra ise piramitlerden çok, Ay'a inişe yakın yaşadı.",
+        "rate": "+6%"
+      }
+    ]
+  },
+  "facts": {
+    "gobeklitepe": {
+      "bce": 9500,
+      "yearsAgo": 11500
+    },
+    "pyramid": {
+      "bce": 2560,
+      "yearsAgo": 4600
+    },
+    "gapYears": 6940,
+    "mammothExtinctYearsAgo": 4000,
+    "cleopatraDied": -30,
+    "moonLanding": 1969
+  },
+  "caption": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor. Şanlıurfa'daki Göbeklitepe yaklaşık MÖ 9500'de, yani yaklaşık 11.500 yıl önce dikildi; o sırada yazı ve tekerlek yoktu, insanlar avcı toplayıcıydı. Keops Piramidi yaklaşık MÖ 2560'ta yapıldı: Göbeklitepe'den piramide yaklaşık 7.000 yıl, piramitten bugüne yaklaşık 4.600 yıl var.\n\nWrangel Adası'ndaki son yünlü mamutlar yaklaşık 4.000 yıl önceye kadar yaşadı: piramitler yapılırken hâlâ hayattaydılar. Kleopatra MÖ 30'da öldü: piramitten yaklaşık 2.530 yıl, Ay'a inişten (1969) yaklaşık 2.000 yıl uzaktaydı.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: Wikipedia (Göbekli Tepe; Great Pyramid of Giza; Woolly mammoth; Cleopatra), UNESCO, Quaternary Research (Wrangel radyokarbon tarihleri).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#göbeklitepe",
+    "#tarih",
+    "#şanlıurfa",
+    "#ilginçbilgiler"
+  ],
+  "ytTitle": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor"
+}

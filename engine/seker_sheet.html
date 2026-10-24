@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1000"></canvas>
+<script type="module">
+// Poz kâğıdı: çay bardağı + tabak + şeker küpü (kâğıt / kırmızı / çatlak), küçük insanlar, el, hücre, DNA, atom, stadyum, bezelye
+import { GLASS_CARD, drawTeaGlass, drawSaucer, drawSugarCube, drawTinyPerson, drawHand, drawCells, drawDNA, drawAtom, drawStadium, drawPea } from './seker_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1000);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+at(200, 420, () => drawSaucer(ctx, 320));
+at(180, 410, () => drawTeaGlass(ctx, GLASS_CARD, { tea: 0.82, steam: 0.4 }, 300));
+at(300, 418, () => drawSugarCube(ctx, 50));
+at(520, 420, () => drawSaucer(ctx, 320, 1));
+at(520, 418, () => drawSugarCube(ctx, 90, 'red'));
+for (let i = 0; i < 12; i++) at(720 + i * 24, 420, () => drawTinyPerson(ctx, 40, i));
+at(1150, 230, () => drawHand(ctx, 360));
+at(1550, 230, () => drawCells(ctx, 360));
+at(220, 780, () => drawDNA(ctx, 360, 0.3));
+at(620, 780, () => drawAtom(ctx, 360, 0.3));
+at(1050, 780, () => drawStadium(ctx, 1.2));
+at(1450, 780, () => drawPea(ctx, 120));
+window.__ready = true;
+</script></body></html>

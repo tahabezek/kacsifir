@@ -1,0 +1,88 @@
+{
+  "id": "047",
+  "slug": "insanlik-bir-seker-kupu",
+  "template": "seker",
+  "serial": "№ 047 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-12T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.6,
+      "l04": 0.8,
+      "l05": 0.6,
+      "l06": 0.5
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Bütün insanlık bir çay şekerine sığar mı?",
+        "text": "Bütün insanlık bir çay şekerine sığar mı?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Vücudun atomlardan oluşuyor ve bir atomun neredeyse tamamı boşluk.",
+        "text": "Vücudun atomlardan oluşuyor ve bir atomun neredeyse tamamı boşluk.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l03",
+        "tts": "Çekirdek bir bezelye kadar olsaydı, atom bir stadyumdan büyük olurdu.",
+        "text": "Çekirdek bir bezelye kadar olsaydı, atom bir stadyumdan büyük olurdu.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l04",
+        "tts": "Şimdi sekiz milyar insanın bütün atomlarındaki boşluğu çıkaralım.",
+        "text": "Şimdi sekiz milyar insanın bütün atomlarındaki boşluğu çıkaralım.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l05",
+        "tts": "Geriye kalan, bir çay şekerinden küçük.",
+        "text": "Geriye kalan, bir çay şekerinden küçük.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l06",
+        "tts": "Ama o şeker küpü yaklaşık beş yüz milyon ton gelir.",
+        "text": "Ama o şeker küpü yaklaşık 500 milyon ton gelir.",
+        "rate": "+4%"
+      },
+      {
+        "id": "l07",
+        "tts": "Bütün insanlık, dünyanın en ağır şeker küpü olurdu.",
+        "text": "Bütün insanlık, dünyanın en ağır şeker küpü olurdu.",
+        "rate": "+4%",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "people": 8300000000,
+    "avgKg": 62,
+    "massKg": 515000000000,
+    "nuclearDensity": 230000000000000000,
+    "volumeCm3": 2.2,
+    "sugarCubeCm3": 4,
+    "atomNucleusRatio": 100000,
+    "peaMm": 7,
+    "atomAtPeaM": 700
+  },
+  "caption": "Bütün insanlık bir çay şekerine sığar mı? Atomun çekirdeği atomun yaklaşık 100.000'de biri büyüklüğündedir: çekirdek 7 mm'lik bir bezelye olsaydı atom yaklaşık 700 m çapında olurdu, bir stadyumdan büyük. Kütlenin neredeyse tamamı çekirdektedir.\n\n8,3 milyar insanı ortalama 62 kg sayarsak toplam yaklaşık 515 milyon ton eder. Atomlardaki boşluğu çıkarıp yalnız çekirdek yoğunluğunda (yaklaşık 2,3 × 10¹⁷ kg/m³) sıkıştırırsak hacim yaklaşık 2,2 cm³ olur: tipik bir çay şekerinden (yaklaşık 4 cm³) küçük. Ağırlığı yine 500 milyon tonu aşar.\n\nNot: Bir düşünce deneyi; böyle bir sıkışma yalnızca nötron yıldızlarında olur.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: Astronomy Magazine (The cubic centimeter), çekirdek yoğunluğu (fizik ders kitapları), Walpole ve ark. 2012 (yetişkin ortalama kütlesi), BM (dünya nüfusu).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#fizik",
+    "#atom",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "ytTitle": "Bütün insanlık bir çay şekerine sığar mı?"
+}

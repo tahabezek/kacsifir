@@ -166,15 +166,18 @@ async function main() {
 
   const plan = [];
   const taken = new Set();
+  const skippedEmpty = [];
   for (const t of slots) {
     if (filled(t)) { log(`dolu  ${slotKey(t)}`); continue; }
     const prev = ledger.slots[slotKey(t)];
     const ep = prev && prev.status === 'failed' && prev.kind !== 'carousel' ? episodes().find(e => e.id === prev.episode) : nextEpisode(ledger, taken, t);
-    if (!ep) { summary.push(`❌ Bölüm stoğu bitti: ${slotKey(t)} boş kalacak.`); break; }
+    // sabitsiz stok bitince boş yuva atlanır (durulmaz): sonraki yuvalarda sabit tarihli (publishAt) bölümler olabilir
+    if (!ep) { skippedEmpty.push(slotKey(t)); continue; }
     taken.add(ep.id);
     plan.push({ t, ep });
     log(`boş   ${slotKey(t)} → ${ep.id} ${ep.slug}`);
   }
+  if (skippedEmpty.length) summary.push(`ℹ️ Sabitsiz bölüm kalmadı; ${skippedEmpty.length} yuva boş geçildi (${skippedEmpty.join(', ')}).`);
   if (!plan.length) { log('tüm reels yuvaları dolu'); await carousels(ledger, now, existing, tol); await youtube(ledger, now); return finish(ledger); }
 
   // render

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1000"></canvas>
+<script type="module">
+// Poz kâğıdı: tırmanıcı (adım döngüsü 8 faz, yaş 0 / 0,5 / 1), Everest, ISS, GPS, Ay, roket, evler
+import { CLIMBER_CARD, drawClimber, drawMountain, drawISS, drawSat, drawMoon, drawRocket, drawHouses } from './merdiven_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1000);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+const st = { run: 0.267, rise: 0.267 };
+const stairs = (x, y, s) => { ctx.beginPath(); for (let j = -1; j <= 3; j++) { const sx = x + j * st.run * s, sy = y - j * st.rise * s; j === -1 ? ctx.moveTo(sx, sy) : 0; ctx.lineTo(sx, sy - st.rise * s); ctx.lineTo(sx + st.run * s, sy - st.rise * s); } ctx.lineWidth = 2; ctx.strokeStyle = '#1C1B18'; ctx.stroke(); };
+for (let i = 0; i < 8; i++) { const x = 90 + i * 150, y = 380; stairs(x, y, 220); at(x, y, () => drawClimber(ctx, CLIMBER_CARD, { phase: i / 8, age: 0 }, 220, st)); }
+for (const [i, a] of [[0, 0.3], [1, 0.6], [2, 1]]) { const x = 1300 + i * 160, y = 380; stairs(x, y, 220); at(x, y, () => drawClimber(ctx, CLIMBER_CARD, { phase: 0.3, age: a }, 220, st)); }
+at(200, 620, () => drawMountain(ctx, 300, 220));
+at(520, 760, () => drawISS(ctx, 200));
+at(800, 760, () => drawSat(ctx, 140));
+at(1050, 760, () => drawMoon(ctx, 100));
+at(1300, 600, () => drawRocket(ctx, 260, 1));
+at(1450, 900, () => drawHouses(ctx, 300));
+window.__ready = true;
+</script></body></html>

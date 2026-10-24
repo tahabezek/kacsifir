@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1200" height="400"></canvas>
+<script type="module">
+// Poz kâğıdı: sedan (jant fazları, tarama tonu), tampon tampona dizi
+import { CAR_CARD, drawCar } from './otomobil_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1200, 400);
+for (let i = 0; i < 4; i++) { ctx.save(); ctx.translate(150 + i * 300, 170); drawCar(ctx, CAR_CARD, { wheel: i * 0.8, tone: i % 2 ? 1 : 0 }, 260); ctx.restore(); }
+for (let i = 0; i < 9; i++) { ctx.save(); ctx.translate(70 + i * 126, 340); drawCar(ctx, CAR_CARD, { wheel: i, tone: (i % 3) / 2 }, 126); ctx.restore(); }
+window.__ready = true;
+</script></body></html>

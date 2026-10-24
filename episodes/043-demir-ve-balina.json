@@ -1,0 +1,171 @@
+{
+  "id": "043",
+  "slug": "demir-ve-balina",
+  "template": "demir",
+  "serial": "№ 043 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-18T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.4,
+      "l05": 0.4,
+      "l06": 1.5,
+      "l07": 0.15,
+      "l08": 0.4,
+      "l09": 0.4,
+      "l10": 0.4,
+      "l11": 0.4,
+      "l12": 0.8,
+      "l13": 0.35,
+      "l14": 0.8,
+      "l15": 0.6,
+      "l16": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bin sekiz yüz kırk sekizde Amerika'da demiryolu ustabaşı Fineas Geyc, kayayı patlatmak için barutu bir demir çubukla sıkıştırıyor.",
+        "text": "1848'de Amerika'da demiryolu ustabaşı Phineas Gage, kayayı patlatmak için barutu bir demir çubukla sıkıştırıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l03",
+        "tts": "Barut patlıyor ve bir metre on santimlik, altı kiloluk demir kafasının içinden geçiyor.",
+        "text": "Barut patlıyor ve 1,1 metrelik, 6 kiloluk demir kafasının içinden geçiyor.",
+        "rate": "+4%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l04",
+        "tts": "Sol yanağından girip kafatasının tepesinden çıkıyor ve yirmi beş metre öteye düşüyor.",
+        "text": "Sol yanağından girip kafatasının tepesinden çıkıyor ve 25 metre öteye düşüyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l05",
+        "tts": "Geyc birkaç dakika içinde konuşuyor ve neredeyse yardımsız yürüyor.",
+        "text": "Gage birkaç dakika içinde konuşuyor ve neredeyse yardımsız yürüyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l06",
+        "tts": "Bu kazadan sonra on iki yıl daha yaşıyor.",
+        "text": "Bu kazadan sonra 12 yıl daha yaşıyor.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+10%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "İki bin yirmi birde ıstakoz dalgıcı Michael Pekırd, on dört metre derinde çalışıyor.",
+        "text": "2021'de ıstakoz dalgıcı Michael Packard, 14 metre derinde çalışıyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l09",
+        "tts": "Birden her yer kararıyor: bir kambur balina onu ağzına alıyor.",
+        "text": "Birden her yer kararıyor: bir kambur balina onu ağzına alıyor.",
+        "rate": "+4%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l10",
+        "tts": "Pekırd, ağzındaki regülatörle balinanın içinde otuz ila kırk saniye bekliyor.",
+        "text": "Packard, ağzındaki regülatörle balinanın içinde 30 ila 40 saniye bekliyor.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l11",
+        "tts": "Sonra balina yüzeye çıkıyor, başını sallıyor ve onu dışarı tükürüyor.",
+        "text": "Sonra balina yüzeye çıkıyor, başını sallıyor ve onu dışarı tükürüyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l12",
+        "tts": "Pekırd hafif yaralarla kurtuluyor.",
+        "text": "Packard hafif yaralarla kurtuluyor.",
+        "rate": "+4%"
+      },
+      {
+        "id": "l13",
+        "tts": "Peki ikisini aynı teraziye koyarsak?",
+        "text": "Peki ikisini aynı teraziye koyarsak?",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l14",
+        "tts": "Geyc'in kafasından geçen demir altı kiloydu. Pekırd'ı ağzına alan balina ise",
+        "text": "Gage'in kafasından geçen demir 6 kiloydu. Packard'ı ağzına alan balina ise",
+        "rate": "+6%"
+      },
+      {
+        "id": "l15",
+        "tts": "yaklaşık otuz ton.",
+        "text": "yaklaşık 30 ton.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l16",
+        "tts": "Yani o demirin beş bin katı.",
+        "text": "Yani o demirin 5.000 katı.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "gage": {
+      "year": 1848,
+      "rodM": 1.1,
+      "rodKg": 6,
+      "rodCm": 3.2,
+      "flewM": 25,
+      "yearsAfter": 12
+    },
+    "packard": {
+      "year": 2021,
+      "depthM": 14,
+      "inMouthS": "30–40",
+      "whaleT": 30,
+      "whaleM": 14
+    },
+    "ratio": 5000
+  },
+  "caption": "Hangisi daha şaşırtıcı? 13 Eylül 1848'de ABD'nin Vermont eyaletinde demiryolu ustabaşı Phineas Gage, kayayı patlatmak için barutu demir bir çubukla sıkıştırırken barut patladı. 1,1 m uzunluğunda, 3,2 cm çapında, 6 kg'lık demir sol yanağından girip kafatasının tepesinden çıktı ve yaklaşık 25 m öteye düştü. Gage birkaç dakika içinde konuştu, neredeyse yardımsız yürüdü ve kazadan sonra 12 yıl daha yaşadı; tanıdıkları kişiliğinin değiştiğini anlattı.\n\nHaziran 2021'de Massachusetts açıklarında ıstakoz dalgıcı Michael Packard yaklaşık 14 m derinde çalışırken bir kambur balina onu ağzına aldı. Kendi tahminine göre ağzındaki regülatörle 30–40 saniye ağzın içinde kaldı; balina yüzeye çıkıp başını salladı ve onu tükürdü. Hafif yaralarla kurtuldu.\n\nAynı terazide: yetişkin bir kambur balina yaklaşık 25–30 ton gelir; 30 ton, 6 kg'lık demirin 5.000 katıdır.\n\nSen hangisine şaşırdın? Yorumlara GAGE ya da PACKARD yaz.\n\nKaynaklar: Wikipedia (Phineas Gage; Humpback whale), Cape Cod Times, AP, NPR (2021).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#balina",
+    "#bilim"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? Kafasından demir çubuk geçen adam mı, balinanın ağzından çıkan dalgıç mı?"
+}

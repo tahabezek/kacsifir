@@ -1,0 +1,88 @@
+{
+  "id": "044",
+  "slug": "otomobiller-dunyayi-sarar-mi",
+  "template": "otomobil",
+  "serial": "№ 044 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-06T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.4,
+      "l02": 0.4,
+      "l03": 0.6,
+      "l04": 0.4,
+      "l05": 0.8,
+      "l06": 0.6,
+      "l07": 0.5
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?",
+        "text": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Türkiye'de trafiğe kayıtlı yaklaşık on yedi milyon dört yüz bin otomobil var.",
+        "text": "Türkiye'de trafiğe kayıtlı yaklaşık 17,4 milyon otomobil var.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l03",
+        "tts": "Her birini ortalama dört buçuk metre sayalım ve hepsini tampon tampona dizelim.",
+        "text": "Her birini ortalama 4,5 metre sayalım ve hepsini tampon tampona dizelim.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l04",
+        "tts": "Kuyruk İstanbul'dan çıkıyor ve Dünya'nın çevresini dolanmaya başlıyor.",
+        "text": "Kuyruk İstanbul'dan çıkıyor ve Dünya'nın çevresini dolanmaya başlıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l05",
+        "tts": "Dünya'nın çevresi kırk bin kilometre. Kuyruk ise yetmiş sekiz bin kilometre.",
+        "text": "Dünya'nın çevresi 40.000 km. Kuyruk ise 78.000 km.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l06",
+        "tts": "Yani Dünya'yı neredeyse iki kez sarıyor.",
+        "text": "Yani Dünya'yı neredeyse iki kez sarıyor.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Bu kuyruğun yanından saatte yüz kilometreyle geçmek otuz üç gün sürerdi.",
+        "text": "Bu kuyruğun yanından saatte 100 km hızla geçmek 33 gün sürerdi.",
+        "rate": "+4%"
+      }
+    ]
+  },
+  "facts": {
+    "cars": 17400000,
+    "totalVehicles": 33612650,
+    "carShare": 51.7,
+    "carLenM": 4.5,
+    "queueKm": 78300,
+    "earthKm": 40075,
+    "laps": 1.95,
+    "speedKmh": 100,
+    "days": 32.6
+  },
+  "caption": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı? TÜİK'e göre Aralık 2025 sonunda trafiğe kayıtlı 33.612.650 taşıtın %51,7'si otomobil: yaklaşık 17,4 milyon otomobil. Her birini ortalama 4,5 m sayarsak tampon tampona kuyruk yaklaşık 78.300 km eder. Dünya'nın ekvator çevresi 40.075 km: kuyruk Dünya'yı neredeyse iki kez (1,95 kez) sarar. Saatte 100 km hızla bu kuyruğun yanından geçmek yaklaşık 783 saat, yani 33 gün sürer.\n\nNot: 4,5 m bir ortalama varsayımıdır; küçük otomobiller daha kısa, SUV'lar daha uzundur.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: TÜİK Motorlu Kara Taşıtları (Aralık 2025), NASA (Dünya'nın ekvator çevresi).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#otomobil",
+    "#türkiye",
+    "#ilginçbilgiler",
+    "#trafik"
+  ],
+  "ytTitle": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?"
+}

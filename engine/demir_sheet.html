@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1100"></canvas>
+<script type="module">
+// Poz kâğıdı: Gage (yürüyüş, sıkıştırma, konuşma, düşmüş), demir, kafatası kesiti (çubuk ilerlemesi), dalgıç, balina (ağız), terazi
+import { GAGE_CARD, drawGage, drawRod, drawSkull, drawDiver, drawWhale, drawScale } from './demir_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1100);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+[{}, { walk: 0.25 }, { arms: 'tamp', phase: 0.1 }, { arms: 'tamp', phase: 0.4 }, { arms: 'talk', phase: 0.2 }, { fallen: 1 }].forEach((p, i) => at(100 + i * 150, 420, () => drawGage(ctx, GAGE_CARD, p, 320)));
+at(1100, 200, () => drawRod(ctx, 300));
+[0, 0.45, 0.8, 1].forEach((r, i) => at(1000 + i * 200, 420, () => drawSkull(ctx, 190, r)));
+at(250, 700, () => drawDiver(ctx, 300, 0.3));
+[0, 0.5, 1].forEach((o, i) => at(700 + i * 380, 700, () => drawWhale(ctx, 360, o, 0.4)));
+at(400, 1060, () => drawScale(ctx, 400, 0.3));
+window.__ready = true;
+</script></body></html>

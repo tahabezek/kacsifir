@@ -1,0 +1,94 @@
+{
+  "id": "040",
+  "slug": "turkiye-kadikoye-sigar-mi",
+  "template": "kalabalik",
+  "serial": "№ 040 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-02T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.4,
+      "l02": 0.35,
+      "l03": 0.5,
+      "l04": 0.4,
+      "l05": 0.8,
+      "l06": 0.6,
+      "l07": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Türkiye'deki herkes Kadıköy'e sığar mı?",
+        "text": "Türkiye'deki herkes Kadıköy'e sığar mı?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Türkiye'nin nüfusu yaklaşık seksen altı milyon.",
+        "text": "Türkiye'nin nüfusu yaklaşık 86 milyon.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l03",
+        "tts": "Kadıköy ise yalnızca yirmi beş kilometrekare.",
+        "text": "Kadıköy ise yalnızca 25 km².",
+        "rate": "+4%"
+      },
+      {
+        "id": "l04",
+        "tts": "Herkesi omuz omuza, metrekareye dört kişi dizelim.",
+        "text": "Herkesi omuz omuza, metrekareye 4 kişi dizelim.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l05",
+        "tts": "Edirne'den Hakkari'ye bütün şehirler Kadıköy'e doğru yola çıkıyor.",
+        "text": "Edirne'den Hakkari'ye bütün şehirler Kadıköy'e doğru yola çıkıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l06",
+        "tts": "Seksen altı milyon kişi, yirmi bir kilometrekareye sığıyor.",
+        "text": "86 milyon kişi, 21 km²'ye sığıyor.",
+        "rate": "-2%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Kadıköy'de dört kilometrekare de boş yer kalıyor.",
+        "text": "Kadıköy'de 4 km² de boş yer kalıyor.",
+        "rate": "+4%"
+      },
+      {
+        "id": "l08",
+        "tts": "Dünyadaki herkes ise İstanbul'un yarısına bile sığıyor.",
+        "text": "Dünyadaki herkes ise İstanbul'un yarısına bile sığıyor.",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "population": 85664944,
+    "perM2": 4,
+    "needKm2": 21.4,
+    "kadikoyKm2": 25.2,
+    "freeKm2": 3.8,
+    "world": 8300000000,
+    "worldKm2": 2075,
+    "istanbulKm2": 5461
+  },
+  "caption": "Türkiye'deki herkes Kadıköy'e sığar mı? TÜİK'e göre Türkiye'nin nüfusu 31 Aralık 2024'te 85.664.944 kişi. Kadıköy'ün yüzölçümü 25,2 km². Herkesi omuz omuza, metrekareye 4 kişi dizersek 85,7 milyon kişi yaklaşık 21,4 km² yer kaplar: Kadıköy'e sığar ve yaklaşık 3,8 km² boş yer kalır.\n\nDünya nüfusu 8 milyarı aşıyor; aynı sıklıkla yaklaşık 2.100 km² eder. İstanbul ilinin yüzölçümü 5.461 km²: bütün insanlık İstanbul'un yarısına bile sığar.\n\nNot: Metrekareye 4 kişi, ayakta duran çok sıkışık bir kalabalıktır; hesap yalnız alan kıyasıdır.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: TÜİK ADNKS 2024, Kadıköy Belediyesi, İBB, BM Dünya Nüfus Beklentileri.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#kadıköy",
+    "#istanbul",
+    "#ilginçbilgiler",
+    "#türkiye"
+  ],
+  "ytTitle": "Türkiye'deki herkes Kadıköy'e sığar mı? 86 milyon kişiyi omuz omuza dizdik"
+}

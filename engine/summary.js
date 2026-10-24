@@ -35,6 +35,11 @@ import { okyanusSummary } from './scenes/okyanus_summary.js';
 import { kayaSummary } from './scenes/kaya_summary.js';
 import { gemiSummary } from './scenes/gemi_summary.js';
 import { saatSummary } from './scenes/saat_summary.js';
+import { kalabalikSummary } from './scenes/kalabalik_summary.js';
+import { futbolSummary } from './scenes/futbol_summary.js';
+import { merdivenSummary } from './scenes/merdiven_summary.js';
+import { demirSummary } from './scenes/demir_summary.js';
+import { otomobilSummary } from './scenes/otomobil_summary.js';
 import { kaplumbagaSummary } from './scenes/kaplumbaga_summary.js';
 import { yildirimSummary } from './scenes/yildirim_summary.js';
 
@@ -45,6 +50,11 @@ export function summary(ep) {
   if (ep.template === 'kaya') return kayaSummary(ep);
   if (ep.template === 'gemi') return gemiSummary(ep);
   if (ep.template === 'saat') return saatSummary(ep);
+  if (ep.template === 'kalabalik') return kalabalikSummary(ep);
+  if (ep.template === 'futbol') return futbolSummary(ep);
+  if (ep.template === 'merdiven') return merdivenSummary(ep);
+  if (ep.template === 'demir') return demirSummary(ep);
+  if (ep.template === 'otomobil') return otomobilSummary(ep);
   if (ep.template === 'kaplumbaga') return kaplumbagaSummary(ep);
   if (ep.template === 'yildirim') return yildirimSummary(ep);
   if (ep.template === 'domino') return dominoSummary(ep);

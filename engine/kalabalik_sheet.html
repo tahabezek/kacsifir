@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1200" height="400"></canvas>
+<script type="module">
+// Poz kâğıdı: üstten insan (8 yön), yürüyen küçük kişi (6 faz)
+import { TOP_CARD, drawPersonTop, drawWalker } from './kalabalik_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1200, 400);
+for (let i = 0; i < 8; i++) { ctx.save(); ctx.translate(80 + i * 130, 120); drawPersonTop(ctx, TOP_CARD, { ang: i * Math.PI / 4, hair: i % 2 }, 100); ctx.restore(); }
+for (let i = 0; i < 6; i++) { ctx.save(); ctx.translate(100 + i * 160, 360); drawWalker(ctx, i / 6, 140); ctx.restore(); }
+window.__ready = true;
+</script></body></html>

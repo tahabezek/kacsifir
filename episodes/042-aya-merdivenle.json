@@ -1,0 +1,114 @@
+{
+  "id": "042",
+  "slug": "aya-merdivenle",
+  "template": "merdiven",
+  "serial": "№ 042 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-04T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.4,
+      "l02": 0.6,
+      "l03": 0.4,
+      "l04": 0.4,
+      "l05": 0.4,
+      "l06": 0.4,
+      "l07": 0.9,
+      "l08": 0.6,
+      "l09": 0.5
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Ay'a merdivenle çıksan kaç yıl sürer?",
+        "text": "Ay'a merdivenle çıksan kaç yıl sürer?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Her basamak on yedi santim olsun. Saniyede bir basamak çıkıyorsun ve hiç durmuyorsun.",
+        "text": "Her basamak 17 cm olsun. Saniyede bir basamak çıkıyorsun ve hiç durmuyorsun.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l03",
+        "tts": "On dört buçuk saat sonra Everest'in zirvesini geçiyorsun.",
+        "text": "14,5 saat sonra Everest'in zirvesini geçiyorsun.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l04",
+        "tts": "Bir hafta sonra uzayın sınırındasın.",
+        "text": "Bir hafta sonra uzayın sınırındasın.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l05",
+        "tts": "Uluslararası Uzay İstasyonu'na yaklaşık bir ayda varıyorsun.",
+        "text": "Uluslararası Uzay İstasyonu'na yaklaşık bir ayda varıyorsun.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l06",
+        "tts": "GPS uydularının yörüngesine dört yıla yakın bir sürede ulaşıyorsun.",
+        "text": "GPS uydularının yörüngesine dört yıla yakın bir sürede ulaşıyorsun.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l07",
+        "tts": "Ay'a ise iki milyar iki yüz milyondan fazla basamaktan sonra varıyorsun.",
+        "text": "Ay'a ise 2,2 milyardan fazla basamaktan sonra varıyorsun.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l08",
+        "tts": "Tam yetmiş iki yıl sonra.",
+        "text": "Tam 72 yıl sonra.",
+        "rate": "-6%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Neredeyse bir insan ömrü.",
+        "text": "Neredeyse bir insan ömrü.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l10",
+        "tts": "Apollo on bir ise bu yolu üç günde almıştı.",
+        "text": "Apollo 11 ise bu yolu 3 günde almıştı.",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "moonKm": 384400,
+    "stepM": 0.17,
+    "steps": 2261176471,
+    "years": 71.7,
+    "everestM": 8849,
+    "everestH": 14.5,
+    "karmanKm": 100,
+    "karmanDays": 6.8,
+    "issKm": 408,
+    "issDays": 27.8,
+    "gpsKm": 20200,
+    "gpsYears": 3.77,
+    "apolloDays": 3
+  },
+  "caption": "Ay'a merdivenle çıksan kaç yıl sürer? Ay'ın Dünya'ya ortalama uzaklığı 384.400 km. Basamak yüksekliği 17 cm ise yaklaşık 2,26 milyar basamak eder. Saniyede bir basamak çıkıp hiç durmazsan: Everest'in zirvesi (8.849 m) 14,5 saat, uzayın sınırı Kármán hattı (100 km) yaklaşık 7 gün, Uluslararası Uzay İstasyonu (yaklaşık 408 km) yaklaşık 28 gün, GPS uyduları (20.200 km) yaklaşık 3,8 yıl, Ay yaklaşık 71,7 yıl. Apollo 11 ise 16 Temmuz 1969'da kalkıp 19 Temmuz'da Ay yörüngesine girdi: yaklaşık 3 gün.\n\nNot: Hiç uyumadan, yemeden ve dinlenmeden yapılan bir düşünce deneyi.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: NASA (Ay uzaklığı, Apollo 11), FAI (Kármán hattı), ISS ve GPS yörünge verileri.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#uzay",
+    "#ay",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "ytTitle": "Ay'a merdivenle çıksan kaç yıl sürer? 2,26 milyar basamak"
+}

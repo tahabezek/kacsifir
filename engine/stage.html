@@ -15,7 +15,12 @@ await Promise.all([
 ]);
 await document.fonts.ready;
 const canvas = document.getElementById('c');
-const r = ep.template === 'saat' ? await (await import('./scenes/saat.js')).makeSaatRenderer(ep, canvas)
+const r = ep.template === 'kalabalik' ? await (await import('./scenes/kalabalik.js')).makeKalabalikRenderer(ep, canvas)
+  : ep.template === 'futbol' ? await (await import('./scenes/futbol.js')).makeFutbolRenderer(ep, canvas)
+  : ep.template === 'merdiven' ? await (await import('./scenes/merdiven.js')).makeMerdivenRenderer(ep, canvas)
+  : ep.template === 'demir' ? await (await import('./scenes/demir.js')).makeDemirRenderer(ep, canvas)
+  : ep.template === 'otomobil' ? await (await import('./scenes/otomobil.js')).makeOtomobilRenderer(ep, canvas)
+  : ep.template === 'saat' ? await (await import('./scenes/saat.js')).makeSaatRenderer(ep, canvas)
   : ep.template === 'kaplumbaga' ? await (await import('./scenes/kaplumbaga.js')).makeKaplumbagaRenderer(ep, canvas)
   : ep.template === 'yildirim' ? await (await import('./scenes/yildirim.js')).makeYildirimRenderer(ep, canvas)
   : ep.template === 'gemi' ? await (await import('./scenes/gemi.js')).makeGemiRenderer(ep, canvas)

@@ -1,0 +1,176 @@
+{
+  "id": "041",
+  "slug": "kaiser-ve-kazu",
+  "template": "futbol",
+  "serial": "№ 041 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-11T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.35,
+      "l03": 0.5,
+      "l04": 0.4,
+      "l05": 0.4,
+      "l06": 0.35,
+      "l07": 1.5,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.4,
+      "l11": 0.4,
+      "l12": 0.8,
+      "l13": 0.35,
+      "l14": 0.8,
+      "l15": 0.6,
+      "l16": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Brezilyalı Carlos Kaiser, on üç yıl boyunca dev kulüplere imza atıyor.",
+        "text": "Brezilyalı Carlos Kaiser, 13 yıl boyunca dev kulüplere imza atıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l03",
+        "tts": "Ama resmî tek bir maçta bile oynamıyor.",
+        "text": "Ama resmî tek bir maçta bile oynamıyor.",
+        "rate": "+2%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l04",
+        "tts": "Her kulüpte antrenmanda sakatlık numarası yapıyor.",
+        "text": "Her kulüpte antrenmanda sakatlık numarası yapıyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l05",
+        "tts": "Oyuncak bir telefonla sahte transfer görüşmeleri yapıyor.",
+        "text": "Oyuncak bir telefonla sahte transfer görüşmeleri yapıyor.",
+        "rate": "+12%"
+      },
+      {
+        "id": "l06",
+        "tts": "Bangu'da tam oyuna girecekken taraftarlarla kavga ediyor ve oyuna girmeden atılıyor.",
+        "text": "Bangu'da tam oyuna girecekken taraftarlarla kavga ediyor ve oyuna girmeden atılıyor.",
+        "rate": "+12%"
+      },
+      {
+        "id": "l07",
+        "tts": "Patrona, taraftarlar size hırsız dedi, ben de sizi savundum diyor ve sözleşmesi altı ay uzatılıyor.",
+        "text": "Patrona \"Taraftarlar size hırsız dedi, ben de sizi savundum\" diyor ve sözleşmesi 6 ay uzatılıyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+10%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Japon Kazuyoşi Miura, on beş yaşında tek başına Brezilya'ya gidiyor ve orada profesyonel oluyor.",
+        "text": "Japon Kazuyoshi Miura, 15 yaşında tek başına Brezilya'ya gidiyor ve orada profesyonel oluyor.",
+        "rate": "+10%"
+      },
+      {
+        "id": "l10",
+        "tts": "Japonya'ya dönüp milli takımda elli beş gol atıyor.",
+        "text": "Japonya'ya dönüp milli takımda 55 gol atıyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l11",
+        "tts": "Elli yaşında gol atıp ligin en yaşlı golcüsü oluyor.",
+        "text": "50 yaşında gol atıp ligin en yaşlı golcüsü oluyor.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l12",
+        "tts": "Bugün elli dokuz yaşında ve hâlâ profesyonel futbolcu.",
+        "text": "Bugün 59 yaşında ve hâlâ profesyonel futbolcu.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l13",
+        "tts": "Peki ikisini aynı sahaya koyarsak?",
+        "text": "Peki ikisini aynı sahaya koyarsak?",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l14",
+        "tts": "Kaiser'in resmî maç sayısı sıfır. Kazu'nunki ise",
+        "text": "Kaiser'in resmî maç sayısı sıfır. Kazu'nunki ise",
+        "rate": "+6%"
+      },
+      {
+        "id": "l15",
+        "tts": "dokuz yüzü aşkın.",
+        "text": "900'ü aşkın.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l16",
+        "tts": "Üstelik ikisi de seksenli yıllarda Brezilya'da futbolcuydu.",
+        "text": "Üstelik ikisi de 1980'lerde Brezilya'da futbolcuydu.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "kaiser": {
+      "years": "1979–1992",
+      "clubs": [
+        "Flamengo",
+        "Botafogo",
+        "Fluminense",
+        "Vasco da Gama",
+        "Bangu"
+      ],
+      "officialMatches": 0,
+      "extensionMonths": 6
+    },
+    "kazu": {
+      "born": "1967-02-26",
+      "brazilAge": 15,
+      "proDebut": 1986,
+      "natGoals": 55,
+      "natCaps": 89,
+      "clubMatches": 911,
+      "age": 59,
+      "oldestScorerAge": 50
+    }
+  },
+  "caption": "Hangisi daha şaşırtıcı? Brezilyalı Carlos Kaiser (Carlos Henrique Raposo), 1979–1992 arasında Flamengo, Botafogo, Fluminense, Vasco da Gama ve Bangu gibi kulüplere imza attı ama resmî tek bir maçta oynamadı. Kısa sözleşmeler imzaladı, antrenmanlarda sakatlık numarası yaptı, oyuncak telefonla sahte transfer görüşmeleri yaptı; gazeteci arkadaşları onun hakkında uydurma haberler yazdı. Bangu'da oyuna girmesi istendiğinde ısınırken taraftarlarla kavga etti ve oyuna girmeden kırmızı kart gördü; kulübün patronuna taraftarların ona hırsız dediğini söyledi ve sözleşmesi 6 ay uzatıldı.\n\nJapon Kazuyoshi Miura (Kral Kazu), 1982'de 15 yaşında tek başına Brezilya'ya gitti, 1986'da Santos'ta profesyonel oldu. Japonya milli takımında 89 maçta 55 gol attı, 50 yaşında J.League'in en yaşlı golcüsü oldu. 2026'da 59 yaşında hâlâ profesyonel; kulüplerinde 900'ü aşkın resmî maçı var.\n\nSen hangisine şaşırdın? Yorumlara KAISER ya da KAZU yaz.\n\nKaynaklar: Wikipedia (Carlos Kaiser; Kazuyoshi Miura), Kaiser! The Greatest Footballer Never to Play Football (2018).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#futbol",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#brezilya"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? 13 yıl tek maç oynamadan futbolcu kalan Kaiser mi, 59 yaşında hâlâ oynayan Kazu mu?"
+}

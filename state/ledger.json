@@ -383,6 +383,19 @@
       "at": "2026-10-25T15:03:19.198Z",
       "postId": "6ade1a8abd33ce99c378c205",
       "dueAt": "2026-10-27T14:00:00.000Z"
+    },
+    "2026-10-27T17:30Z": {
+      "episode": "026",
+      "media": "v/026-dogum-gunu.mp4",
+      "status": "scheduled",
+      "at": "2026-10-25T19:32:16.972Z",
+      "postId": "6ade59ab0b5343d070eb1060",
+      "dueAt": "2026-10-27T17:30:00.000Z",
+      "yt": {
+        "postId": "6ade59ac6887a2efc11fcd62",
+        "status": "scheduled",
+        "dueAt": "2026-10-27T17:30:00.000Z"
+      }
     }
   }
 }

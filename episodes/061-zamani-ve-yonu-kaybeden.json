@@ -1,0 +1,190 @@
+{
+  "id": "061",
+  "slug": "zamani-ve-yonu-kaybeden",
+  "template": "kayip",
+  "serial": "№ 061 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-23T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.4,
+      "l05": 0.4,
+      "l06": 0.4,
+      "l07": 1.2,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.4,
+      "l11": 0.4,
+      "l12": 0.4,
+      "l13": 0.8,
+      "l14": 0.35,
+      "l15": 0.5,
+      "l16": 0.8,
+      "l17": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bin dokuz yüz altmış ikide Mişel Sifr, yerin yüz otuz metre altındaki bir buzul mağarasına iniyor.",
+        "text": "1962'de Michel Siffre, yerin 130 metre altındaki bir buzul mağarasına iniyor."
+      },
+      {
+        "id": "l03",
+        "tts": "Yanında saat de takvim de yok; gün ışığını hiç görmüyor.",
+        "text": "Yanında saat de takvim de yok; gün ışığını hiç görmüyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Uyanınca, yemekte ve uyumadan önce yukarıdaki ekibi arıyor.",
+        "text": "Uyanınca, yemekte ve uyumadan önce yukarıdaki ekibi arıyor."
+      },
+      {
+        "id": "l05",
+        "tts": "İki ay sonra ekip, deneyin bittiğini söylüyor.",
+        "text": "İki ay sonra ekip, deneyin bittiğini söylüyor."
+      },
+      {
+        "id": "l06",
+        "tts": "Sifr ise daha yirmi Ağustos olduğunu sanıyor; oysa günlerden on dört Eylül.",
+        "text": "Siffre ise daha 20 Ağustos olduğunu sanıyor; oysa günlerden 14 Eylül.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Tam yirmi beş gün hesabından sessizce düşmüş.",
+        "text": "Tam 25 gün hesabından sessizce düşmüş.",
+        "rate": "+0%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Bin dokuz yüz doksan dörtte İtalyan polis memuru Mauro Prosperi, Fas'ta Sahra'yı geçen bir ultramaratona katılıyor.",
+        "text": "1994'te İtalyan polis memuru Mauro Prosperi, Fas'ta Sahra'yı geçen bir ultramaratona katılıyor."
+      },
+      {
+        "id": "l10",
+        "tts": "Dördüncü etapta bir kum fırtınası çıkıyor ve Prosperi yolunu kaybediyor.",
+        "text": "Dördüncü etapta bir kum fırtınası çıkıyor ve Prosperi yolunu kaybediyor."
+      },
+      {
+        "id": "l11",
+        "tts": "Terk edilmiş bir türbeye sığınıyor ve yarasaların kanını içerek hayatta kalıyor.",
+        "text": "Terk edilmiş bir türbeye sığınıyor ve yarasaların kanını içerek hayatta kalıyor."
+      },
+      {
+        "id": "l12",
+        "tts": "Dokuz gün sonra onu göçebe bir kız buluyor; Prosperi farkında olmadan Cezayir'e geçmiş.",
+        "text": "Dokuz gün sonra onu göçebe bir kız buluyor; Prosperi farkında olmadan Cezayir'e geçmiş."
+      },
+      {
+        "id": "l13",
+        "tts": "Bu sürede yaklaşık on beş kilo veriyor.",
+        "text": "Bu sürede yaklaşık 15 kilo veriyor."
+      },
+      {
+        "id": "l14",
+        "tts": "Peki ikisini aynı haritaya koyarsak?",
+        "text": "Peki ikisini aynı haritaya koyarsak?"
+      },
+      {
+        "id": "l15",
+        "tts": "Sifr yerinden hiç ayrılmadan yirmi beş gün kaybetti.",
+        "text": "Siffre yerinden hiç ayrılmadan 25 gün kaybetti."
+      },
+      {
+        "id": "l16",
+        "tts": "Prosperi ise dokuz günde yolundan",
+        "text": "Prosperi ise 9 günde yolundan",
+        "rate": "+0%"
+      },
+      {
+        "id": "l17",
+        "tts": "İki yüz doksan bir kilometre saptı.",
+        "text": "291 kilometre saptı.",
+        "rate": "-6%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l18",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "siffre": {
+      "start": "1962-07-16",
+      "plannedEnd": "1962-09-14",
+      "days": 63,
+      "thought": "1962-08-20",
+      "lostDays": 25,
+      "depthM": 130,
+      "place": "Scarasson mağarası, Marguareis (Fransa–İtalya sınırı), Nice'e ~70 km",
+      "lonlat": [
+        7.68,
+        44.13
+      ],
+      "calls": "uyandığında, yemek yediğinde ve uyumadan önce yüzey ekibini arıyordu",
+      "cues": "saat, takvim, gün ışığı yok"
+    },
+    "prosperi": {
+      "year": 1994,
+      "race": "Marathon des Sables (Fas), başlangıç Foum Zguid, 10 Nisan 1994",
+      "stage": 4,
+      "stormDate": "1994-04-14",
+      "stormKmIntoStage": 32,
+      "raceArea": [
+        -6.87,
+        30.08
+      ],
+      "routeNote": "parkur şematik: Foum Zguid çıkışlı; fırtına noktası ve bulunma yeri haritada yaklaşık (bulunma yeri parkurun en yakın noktasına 291 km, Tindouf yönü)",
+      "days": 9,
+      "offCourseKm": 291,
+      "offCourseMi": 181,
+      "weightLostKg": 15,
+      "foundBy": "Tuareg bir kız (ve büyükannesi)",
+      "country": "Cezayir (Tindouf'taki hastaneye götürüldü)",
+      "shelter": "terk edilmiş bir marabout (türbe)",
+      "ate": "yarasa kanı (BBC 2014)",
+      "dispute": "Yarışın kurucusu Patrick Bauer anlatının bazı ayrıntılarını sorguladı"
+    },
+    "sources": [
+      "https://www.cabinetmagazine.org/issues/30/foer.php",
+      "https://en.wikipedia.org/wiki/Michel_Siffre",
+      "https://en.wikipedia.org/wiki/Mauro_Prosperi",
+      "https://www.24horas.cl/noticiasbbc/bebi-orina-y-sangre-de-murcielago-para-sobrevivir-1512543"
+    ]
+  },
+  "caption": "Hangisi daha şaşırtıcı?\n\n16 Temmuz 1962'de Fransız Michel Siffre, Fransa–İtalya sınırındaki Marguareis dağında, Scarasson mağarasında yerin yaklaşık 130 metre altındaki bir buzula indi. Yanında saat ve takvim yoktu, gün ışığı görmüyordu; uyandığında, yemek yediğinde ve uyumadan önce yüzeydeki ekibi arıyordu. Deneyin 14 Eylül'de bitmesi planlanmıştı. Ekip haberi verdiğinde Siffre daha 20 Ağustos olduğunu sanıyordu: yaklaşık iki aylık deneyin 25 günü hesabından düşmüştü.\n\n1994'te İtalyan polis memuru Mauro Prosperi, Fas'taki Marathon des Sables'ın dördüncü etabında kum fırtınasına yakalanıp yolunu kaybetti. Terk edilmiş bir türbeye sığındı; yarasa kanı içerek hayatta kaldı. Yaklaşık dokuz gün sonra Tuareg bir kız onu buldu. Farkında olmadan Cezayir'e geçmişti ve yarış rotasından 291 km uzaktaydı. Doktorlara göre yaklaşık 15 kg vermişti.\n\nBiri yerinden hiç ayrılmadan 25 gün kaybetti, öbürü 9 günde yolundan 291 km saptı.\n\nNot: Yarışın kurucusu Patrick Bauer, Prosperi'nin anlatısının bazı ayrıntılarını sorguladı; olay 2014'te BBC'de Prosperi'nin kendi anlatımıyla yer aldı.\n\nSen hangisine şaşırdın? Yorumlara SIFFRE ya da PROSPERI yaz.\n\nKaç Sıfır? her hafta yeni bir Hangisi? getiriyor; takip et.\n\nKaynaklar: Joshua Foer, \"Caveman: An Interview with Michel Siffre\", Cabinet 30 (2008); BBC, Mauro Prosperi röportajı (Aralık 2014); Wikipedia (Michel Siffre; Mauro Prosperi).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#hangisi",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#hayattakalma"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? Zamanını kaybeden adam mı, yönünü kaybeden adam mı?"
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1100"></canvas>
+<script type="module">
+// Poz kâğıdı: Bugorski (duruş, yürüyüş, pano, eğilme, elleri yüzde, yazı), Samuel (bağlı eller, diz çökmüş, kollar
+// yukarı), görevli; nesneler: boru ve mıknatıs, U-70 halkası, lamba, yüz şeması, baş profili, darağacı, araba, ip
+// halleri, karar kâğıdı, diploma, kalabalık.
+import { BUGORSKI_CARD, SAMUEL_CARD, OFFICER_CARD, drawPerson, drawPipe, drawMagnet, drawRing, drawLamp, drawFaceDiagram, headProfile, drawGallows, drawCart, drawRope, drawDecree, drawDiploma, drawCrowd } from './doz_chars.js';
+await document.fonts.load('800 40px Archivo');
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1100);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+const B = [{}, { walk: 0.2 }, { arms: 'clip' }, { lean: 25, neck: 20, arms: 'clip' }, { arms: 'face', mouth: 'open' }, { sit: true, arms: 'write', phase: 0.3 }, { arms: 'up', mouth: 'open' }];
+B.forEach((p, i) => at(80 + i * 140, 420, () => drawPerson(ctx, BUGORSKI_CARD, p, 320)));
+const S = [{ arms: 'bound' }, { kneel: true, arms: 'bound' }, { kneel: true, arms: 'bound', neck: 15 }, { arms: 'up', mouth: 'open' }, { walk: 0.3 }];
+S.forEach((p, i) => at(80 + i * 140, 900, () => drawPerson(ctx, SAMUEL_CARD, p, 320)));
+at(800, 900, () => drawPerson(ctx, OFFICER_CARD, { arms: 'down' }, 330));
+at(0, 0, () => { drawPipe(ctx, 1050, 1750, 120, 18, [1350, 1450]); drawMagnet(ctx, 1150, 120, 120, 120); drawMagnet(ctx, 1650, 120, 120, 120); });
+at(1180, 340, () => drawRing(ctx, 110, 0.2));
+at(1400, 420, () => drawLamp(ctx, 160, false));
+at(1480, 420, () => drawLamp(ctx, 160, true));
+at(1640, 320, () => drawFaceDiagram(ctx, 200, { half: 1 }));
+at(1050, 640, () => headProfile(ctx, 240));
+at(1200, 900, () => drawGallows(ctx, 330));
+at(1180, 900, () => drawCart(ctx, 200, 0.2));
+at(1380, 570, () => drawRope(ctx, 0, 0, 120, 'noose'));
+at(1440, 570, () => drawRope(ctx, 0, 0, 120, 'snapped'));
+at(1500, 570, () => drawRope(ctx, 0, 0, 120, 'slipped', 0.15));
+at(1650, 700, () => drawDecree(ctx, 160, 8));
+at(1650, 900, () => drawDiploma(ctx, 220));
+drawCrowd(ctx, 960, 1780, 1060, 60, Array.from({ length: 16 }, (_, i) => [i * 52, i]), 0, false);
+window.__ready = true;
+</script></body></html>

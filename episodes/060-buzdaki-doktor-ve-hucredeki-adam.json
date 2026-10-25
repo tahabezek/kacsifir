@@ -1,0 +1,179 @@
+{
+  "id": "060",
+  "slug": "buzdaki-doktor-ve-hucredeki-adam",
+  "template": "termometre",
+  "serial": "№ 060 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-20T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.5,
+      "l05": 0.4,
+      "l06": 1.1,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.4,
+      "l11": 0.6,
+      "l12": 0.4,
+      "l13": 0.8,
+      "l14": 0.35,
+      "l15": 0.9,
+      "l16": 0.8,
+      "l16b": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bin dokuz yüz doksan dokuzda Norveç'te genç doktor Anna Bogenholm, kayak yaparken buzu kırıp bir nehre düşüyor.",
+        "text": "1999'da Norveç'te genç doktor Anna Bågenholm, kayak yaparken buzu kırıp bir nehre düşüyor."
+      },
+      {
+        "id": "l03",
+        "tts": "Buzun altında bir hava cebi buluyor ve kırk dakika dayanıyor.",
+        "text": "Buzun altında bir hava cebi buluyor ve 40 dakika dayanıyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Sonra kalbi duruyor; hastaneye vardığında vücut sıcaklığı on üç virgül yedi dereceye inmiş.",
+        "text": "Sonra kalbi duruyor; hastaneye vardığında vücut sıcaklığı 13,7 dereceye inmiş.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l05",
+        "tts": "Kalbi iki buçuk saatten uzun süre atmıyor ama doktorlar pes etmiyor.",
+        "text": "Kalbi iki buçuk saatten uzun süre atmıyor ama doktorlar pes etmiyor."
+      },
+      {
+        "id": "l06",
+        "tts": "Kanını makineyle ısıtıyorlar; on gün sonra uyanıyor ve yıllar sonra aynı hastanede radyolog olarak çalışıyor.",
+        "text": "Kanını makineyle ısıtıyorlar; 10 gün sonra uyanıyor ve yıllar sonra aynı hastanede radyolog olarak çalışıyor."
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Bin dokuz yüz ikide Martinik'teki Sen Piyer kentinde Lüdjer Silbaris, penceresiz ve taş duvarlı bir hücrede tutuluyor.",
+        "text": "1902'de Martinik'teki Saint-Pierre kentinde Ludger Sylbaris, penceresiz ve taş duvarlı bir hücrede tutuluyor."
+      },
+      {
+        "id": "l10",
+        "tts": "Pele Yanardağı patlıyor ve kızgın bir kül bulutu kenti birkaç dakikada yok ediyor.",
+        "text": "Pelée Yanardağı patlıyor ve kızgın bir kül bulutu kenti birkaç dakikada yok ediyor."
+      },
+      {
+        "id": "l11",
+        "tts": "Yaklaşık yirmi sekiz bin kişi hayatını kaybediyor.",
+        "text": "Yaklaşık 28 bin kişi hayatını kaybediyor.",
+        "rate": "-4%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l12",
+        "tts": "Silbaris ağır yanıklarla, günler sonra hücresinden çıkarılıyor.",
+        "text": "Sylbaris ağır yanıklarla, günler sonra hücresinden çıkarılıyor."
+      },
+      {
+        "id": "l13",
+        "tts": "Sonra ünlü bir sirkte, kıyamet gününü atlatan adam olarak gösterilere çıkıyor.",
+        "text": "Sonra ünlü bir sirkte, \"Kıyamet Gününü Atlatan Adam\" olarak gösterilere çıkıyor."
+      },
+      {
+        "id": "l14",
+        "tts": "Peki ikisini aynı termometreye koyarsak?",
+        "text": "Peki ikisini aynı termometreye koyarsak?"
+      },
+      {
+        "id": "l15",
+        "tts": "Annanın vücudu otuz yedi dereceden on üç virgül yedi dereceye indi.",
+        "text": "Anna'nın vücudu 37 dereceden 13,7 dereceye indi."
+      },
+      {
+        "id": "l16",
+        "tts": "Silbarisin hücresinin dışındaki bulut ise tahminen",
+        "text": "Sylbaris'in hücresinin dışındaki bulut ise tahminen",
+        "rate": "-2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l16b",
+        "tts": "üç yüz elli ile dört yüz derece arasındaydı.",
+        "text": "350 ile 400 derece arasındaydı.",
+        "rate": "-2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "anna": {
+      "date": "1999-05-20",
+      "place": "Narvik yakınları, Norveç",
+      "age": 29,
+      "airPocketMin": "yaklaşık 40 (kaynaklar bilincin ne kadar açık kaldığında çelişiyor)",
+      "inWaterMin": 80,
+      "coreC": 13.7,
+      "measuredAt": "hastaneye varış 21.10",
+      "noHeartbeat": "2 sa 35 dk (19.40–22.15)",
+      "bypassAt": "21.40",
+      "wokeDay": 10,
+      "laterJob": "Tromsø Üniversite Hastanesi radyolog (2009)"
+    },
+    "sylbaris": {
+      "date": "1902-05-08",
+      "cell": "penceresiz, taş duvarlı, kısmen yeraltında; havalandırma yalnız kapıdaki dar ızgaradan, yanardağa ters yönde",
+      "deaths": 28000,
+      "deathsNote": "kent nüfusu ~28.000; patlamanın toplamı ~29.000–30.000",
+      "rescue": "günler sonra (kaynaklar 3–4 gün)",
+      "circus": "Barnum & Bailey, \"the man who lived through Doomsday\"",
+      "cloudAtTownC": [
+        350,
+        400
+      ],
+      "cloudNote": "TAHMİN: kentte kömürleşmiş tahta analizi 350–400 °C (EARTH Magazine); Wikipedia 1.075 °C üstü yazar. Tanguy 1994 değeri doğrulanamadı, kullanılmadı.",
+      "speed": "EARTH: \"a few short minutes\"; Wikipedia: patlama ~08.00, kente 08.02 (aynı sayfada \"under a minute\" da geçer); videoda \"birkaç dakikada\""
+    },
+    "normalBodyC": 37,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Anna_B%C3%A5genholm",
+      "https://partner.sciencenorway.no/forskningno-heart-medical-practice/surviving-hypothermia/1412465",
+      "https://edition.cnn.com/2009/HEALTH/10/12/cheating.death.bagenholm/index.html",
+      "https://en.wikipedia.org/wiki/Ludger_Sylbaris",
+      "https://en.wikipedia.org/wiki/1902_eruption_of_Mount_Pel%C3%A9e",
+      "https://www.earthmagazine.org/article/benchmarks-may-8-1902-deadly-eruption-mount-pelee/"
+    ]
+  },
+  "caption": "Hangisi daha şaşırtıcı?\n\n20 Mayıs 1999'da Norveç'in Narvik yakınlarında 29 yaşındaki doktor Anna Bågenholm kayak yaparken buzu kırıp bir nehre düştü. Buzun altındaki bir hava cebinde yaklaşık 40 dakika dayandı, sonra kalbi durdu; 80 dakika sonra sudan çıkarıldı. Tromsø'daki hastaneye vardığında vücut sıcaklığı 13,7 °C ölçüldü. Kalbi 2 saat 35 dakika atmadı; kanı bir kalp-akciğer makinesiyle ısıtıldı ve kalbi yeniden çalıştı. 10 gün sonra uyandı ve sonraki yıllarda kendisini kurtaran hastanede radyolog olarak çalıştı.\n\n8 Mayıs 1902'de Martinik'te Pelée Yanardağı'nın kızgın kül ve gaz bulutu Saint-Pierre kentini birkaç dakika içinde yok etti; yaklaşık 28 bin kişi hayatını kaybetti. Ludger Sylbaris penceresiz, taş duvarlı ve kısmen yeraltındaki bir hücrede tutuluyordu; hücre yalnızca kapıdaki dar bir ızgaradan hava alıyordu. Ağır yanıklarla günler sonra kurtarıldı ve daha sonra Barnum & Bailey sirkinde \"Kıyamet Gününü Atlatan Adam\" olarak gösterilere çıktı. Kentten sağ çıkan birkaç kişiden biriydi.\n\nKente ulaşan bulutun sıcaklığı yalnızca tahmin edilebiliyor: kentte kömürleşmiş tahtaların analizi 350–400 °C gösteriyor; bazı kaynaklar 1.000 °C'nin üstünü yazıyor. Videoda kentteki yanık izlerine dayanan tahmin kullanıldı.\n\nSen hangisine şaşırdın? Yorumlara yaz.\n\nKaç Sıfır? her hafta yeni bir \"Hangisi?\" getiriyor; takip et.\n\nKaynaklar: Anna Bågenholm (Wikipedia; Science Norway / UiT; CNN 2009), Ludger Sylbaris ve 1902 Pelée patlaması (Wikipedia), EARTH Magazine \"Benchmarks: May 8, 1902\".",
+  "hashtags": [
+    "#hangisi",
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#hayattakalma",
+    "#tarih"
+  ],
+  "ytTitle": "Vücudu 13,7 dereceye düşen doktor mu, yanardağ bulutundan hücresi sayesinde kurtulan adam mı?"
+}

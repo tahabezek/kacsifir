@@ -1,0 +1,211 @@
+{
+  "id": "058",
+  "slug": "ucak-yiyen-ve-hickiran",
+  "template": "metal",
+  "serial": "№ 058 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-15T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.4,
+      "l05": 0.4,
+      "l06": 0.4,
+      "l07": 1.2,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.4,
+      "l11": 0.4,
+      "l12": 0.4,
+      "l13": 0.8,
+      "l14": 0.35,
+      "l15": 0.45,
+      "l16": 0.75,
+      "l17": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Fransız Mişel Lotito, on altı yaşında metal ve cam yiyebildiğini keşfediyor.",
+        "text": "Fransız Michel Lotito, 16 yaşında metal ve cam yiyebildiğini keşfediyor."
+      },
+      {
+        "id": "l03",
+        "tts": "Bisikletleri, alışveriş arabalarını ve televizyonları küçük parçalara kesip yutuyor.",
+        "text": "Bisikletleri, alışveriş arabalarını ve televizyonları küçük parçalara kesip yutuyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Bin dokuz yüz yetmiş sekizde iki kişilik bir uçağı parça parça yemeye başlıyor.",
+        "text": "1978'de iki kişilik bir uçağı parça parça yemeye başlıyor."
+      },
+      {
+        "id": "l05",
+        "tts": "Ve iki yılda o uçağın tamamını bitiriyor.",
+        "text": "Ve iki yılda o uçağın tamamını bitiriyor.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l06",
+        "tts": "Ginnes ona pirinç bir plaket veriyor ve o plaketi de yiyor.",
+        "text": "Guinness ona pirinç bir plaket veriyor ve o plaketi de yiyor."
+      },
+      {
+        "id": "l07",
+        "tts": "Hayatı boyunca yaklaşık dokuz ton metal yutuyor.",
+        "text": "Hayatı boyunca yaklaşık 9 ton metal yutuyor."
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Amerikalı çiftçi Çarls Ozborn, bin dokuz yüz yirmi ikide bir domuzu tartmak için kaldırırken düşüyor.",
+        "text": "Amerikalı çiftçi Charles Osborne, 1922'de bir domuzu tartmak için kaldırırken düşüyor."
+      },
+      {
+        "id": "l10",
+        "tts": "Ve o gün hıçkırmaya başlıyor.",
+        "text": "Ve o gün hıçkırmaya başlıyor."
+      },
+      {
+        "id": "l11",
+        "tts": "Altmış sekiz yıl boyunca, dakikada yirmi ile kırk kez hıçkırıyor.",
+        "text": "68 yıl boyunca, dakikada 20 ile 40 kez hıçkırıyor."
+      },
+      {
+        "id": "l12",
+        "tts": "Bu sürede iki kez evleniyor ve sekiz çocuk sahibi oluyor.",
+        "text": "Bu sürede iki kez evleniyor ve 8 çocuk sahibi oluyor."
+      },
+      {
+        "id": "l13",
+        "tts": "Hıçkırıkları, ölümünden bir yıl önce kendiliğinden duruyor.",
+        "text": "Hıçkırıkları, ölümünden bir yıl önce kendiliğinden duruyor."
+      },
+      {
+        "id": "l14",
+        "tts": "Peki ikisini aynı takvime koyarsak?",
+        "text": "Peki ikisini aynı takvime koyarsak?"
+      },
+      {
+        "id": "l15",
+        "tts": "Lotitonun uçağı yemesi iki yıl sürdü.",
+        "text": "Lotito'nun uçağı yemesi 2 yıl sürdü.",
+        "rate": "+2%"
+      },
+      {
+        "id": "l16",
+        "tts": "Ozborn ise o iki yılda bile yaklaşık",
+        "text": "Osborne ise o 2 yılda bile yaklaşık",
+        "rate": "-2%",
+        "pitch": "-1Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "on üç milyon kez hıçkırdı.",
+        "text": "13 milyon kez hıçkırdı.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l18",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "lotito": {
+      "startAge": 16,
+      "planeModel": "Cessna 150 (iki kişilik)",
+      "planeYears": [
+        1978,
+        1980
+      ],
+      "perDayG": 900,
+      "born": "1950-06-16",
+      "died": "2007-06-25",
+      "ateGuinnessPlaque": true,
+      "items": {
+        "bicycles": 18,
+        "shoppingTrolleys": 15,
+        "tvSets": 7,
+        "chandeliers": 6,
+        "beds": 2,
+        "skis": 1,
+        "computer": 1,
+        "coffin": 1
+      },
+      "totalTonsApprox": 9
+    },
+    "osborne": {
+      "start": 1922,
+      "stop": "1990-02",
+      "years": 68,
+      "perMinute": [
+        20,
+        40
+      ],
+      "total": 430000000,
+      "totalNote": "Guinness: 420 milyonun üstü; yaygın tahmin 430 milyon",
+      "marriages": 2,
+      "children": 8,
+      "lifespan": [
+        1894,
+        1991
+      ],
+      "place": "Union, Nebraska yakınında bir çiftlik (Wikipedia)",
+      "stopNote": "Guinness: Şubat 1990; Wikipedia: 1989 -> Guinness kullanıldı"
+    },
+    "compare": {
+      "planeYears": 2,
+      "hiccupsPerYear": 6323529.411764706,
+      "hiccupsIn2Years": 12647059,
+      "ratioYears": 34
+    },
+    "sources": [
+      "https://www.guinnessworldrecords.com/news/2022/10/the-man-who-ate-metal-monsieur-mangetouts-strange-diet-722640",
+      "https://en.wikipedia.org/wiki/Michel_Lotito",
+      "https://www.snopes.com/news/2022/03/07/michel-lotito-ate-entire-airplane/",
+      "https://www.guinnessworldrecords.com/news/2023/7/extreme-measures-person-with-68-year-attack-of-hiccups-took-to-try-and-stop-them-754877",
+      "https://en.wikipedia.org/wiki/Charles_Osborne_(farmer)",
+      "https://www.smithsonianmag.com/history/the-curious-case-of-charles-osborne-who-hiccuped-for-68-years-straight-180980232/"
+    ],
+    "notes": [
+      "Lotito başlama yaşı: Guinness 16 (bazı yazılar 9 diyor; 16 kullanıldı)",
+      "Uçak: Guinness kaydı; Snopes çağdaş belge bulamadı ama mümkün dedi -> caption'da belirt",
+      "\"Bağırsak duvarı iki kat kalın\" doğrulanmadı (Guinness: \"supposedly\", biyopsiler normal) -> kullanılmadı",
+      "13 milyon = 430 milyon / 68 yıl × 2 yıl yaklaşık 12,6 milyon (uyku dahil ortalama)",
+      "Toplam metal: Guinness \"over nine tons\", Wikipedia \"nearly nine tons\" -> \"yaklaşık 9 ton\" ve caption'da \"tahminen\""
+    ]
+  },
+  "caption": "Hangisi daha şaşırtıcı?\n\nFransız Michel Lotito (\"Monsieur Mangetout\") 16 yaşında metal ve cam yiyebildiğini keşfetti. Guinness'e göre 1978–1980 arasında iki kişilik bir Cessna 150 uçağını parça parça yedi; hayatı boyunca 18 bisiklet, 15 alışveriş arabası, 7 televizyon ve tahminen dokuz ton metal yuttu. Guinness'in ona verdiği pirinç plaketi de yedi. (Snopes uçak için o yıllara ait belge bulamadığını, ama bunun mümkün olduğunu yazıyor.)\n\nAmerikalı çiftçi Charles Osborne 1922'de Nebraska'da bir çiftlikte, kesmek için bir domuzu tartarken düştü ve hıçkırmaya başladı. Guinness'e göre hıçkırıkları Şubat 1990'a kadar, 68 yıla yakın sürdü; dakikada 20 ile 40 kez, toplamda yaklaşık 430 milyon kez hıçkırdı. Bu sürede iki kez evlendi ve 8 çocuk sahibi oldu. Guinness'te \"en uzun hıçkırık nöbeti\" rekoru hâlâ onda.\n\nAynı takvime koyunca: Lotito'nun uçağı 2 yıl sürdü. Osborne'un 68 yılda 430 milyon hıçkırığı ortalama yılda 6,3 milyon eder; yani o 2 yılda bile yaklaşık 13 milyon. Osborne'un hıçkırığı uçaktan 34 kat uzun sürdü.\n\nSen hangisine şaşırdın? Yorumlara LOTITO ya da OSBORNE yaz.\n\nHer hafta yeni bir \"Hangisi?\" için Kaç Sıfır?'ı takip et.\n\nKaynaklar: Guinness World Records (2022, 2023), Snopes (2022), Smithsonian Magazine, Wikipedia.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#hangisi",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#guinness"
+  ],
+  "ytTitle": "Uçağı yiyen adam mı, 68 yıl hıçkıran adam mı?"
+}

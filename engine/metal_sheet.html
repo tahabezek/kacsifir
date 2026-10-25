@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1300"></canvas>
+<script type="module">
+// Poz kâğıdı: Lotito ve Osborne (önden yok: yandan ana poz, yürüme 8 kare, ifadeler, hıçkırık, yaş, düşme),
+// Cessna 150 (yenme evreleri), bisiklet, alışveriş arabası, TV, plaket (ısırık), domuz, kantar, metal blok, alyans, çocuk, ahır
+import { LOTITO_CARD, OSBORNE_CARD, drawMan, drawCessna, drawBike, drawCart, drawTV, drawPlaque, drawHog, drawScale, drawBlock, drawRing, drawChild, drawBarn } from './metal_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1300);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+const lab = (s, x, y) => { ctx.font = '500 20px "IBM Plex Mono"'; ctx.fillStyle = '#1C1B18'; ctx.fillText(s, x, y); };
+lab('LOTITO: AYAKTA · YİYOR · TESTERE · TUTMA · YÜRÜME 8', 30, 30);
+const LP = [{}, { arms: 'eat', mouth: 'open' }, { arms: 'saw', phase: 0.3 }, { arms: 'hold' }, { arms: 'up', mouth: 'smile' }];
+LP.forEach((p, i) => at(80 + i * 120, 290, () => drawMan(ctx, LOTITO_CARD, p, 240)));
+for (let i = 0; i < 8; i++) at(700 + i * 70, 290, () => drawMan(ctx, LOTITO_CARD, { walk: i / 8 }, 200));
+lab('OSBORNE: AYAKTA · KALDIRMA · DÜŞME 0,5/1 · HIÇKIRIK · YAŞ 0/0,5/1', 30, 340);
+const OP = [{}, { arms: 'lift' }, { arms: 'lift', fall: 0.5 }, { fall: 1 }, { hic: 1 }, { age: 0.5 }, { age: 1, hic: 0.6 }];
+OP.forEach((p, i) => at(80 + i * 140, 610, () => drawMan(ctx, OSBORNE_CARD, p, 240)));
+lab('CESSNA 150: YENME 0 · 0,25 · 0,5 · 0,8 · 1', 30, 660);
+[0, 0.25, 0.5, 0.8, 1].forEach((e, i) => at(170 + i * 330, 800, () => drawCessna(ctx, 300, e)));
+lab('NESNELER', 30, 950);
+at(100, 1150, () => drawBike(ctx, 150)); at(300, 1150, () => drawCart(ctx, 150)); at(470, 1150, () => drawTV(ctx, 140));
+at(650, 1080, () => drawPlaque(ctx, 160, 0)); at(840, 1080, () => drawPlaque(ctx, 160, 0.6));
+at(1020, 1160, () => drawHog(ctx, 200)); at(1210, 1160, () => drawScale(ctx, 200, 0.7)); at(1330, 1160, () => drawBlock(ctx, 110, '1 TON'));
+at(1450, 1160, () => drawRing(ctx, 70)); at(1520, 1160, () => drawChild(ctx, 90)); at(1680, 1160, () => drawBarn(ctx, 200));
+window.__ready = true;
+</script></body></html>

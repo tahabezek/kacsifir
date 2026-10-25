@@ -1,0 +1,183 @@
+{
+  "id": "059",
+  "slug": "isindan-gecen-ve-asilamayan",
+  "template": "doz",
+  "serial": "№ 059 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-17T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.4,
+      "l05": 0.5,
+      "l06": 0.4,
+      "l07": 1.2,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.45,
+      "l11": 0.45,
+      "l12": 0.5,
+      "l13": 0.8,
+      "l14": 0.35,
+      "l15": 0.6,
+      "l16": 1,
+      "l17": 0.7
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bin dokuz yüz yetmiş sekizde Sovyet fizikçi Anatoli Bugorski, bir parçacık hızlandırıcısındaki arızayı kontrol ediyor.",
+        "text": "1978'de Sovyet fizikçi Anatoli Bugorski, bir parçacık hızlandırıcısındaki arızayı kontrol ediyor."
+      },
+      {
+        "id": "l03",
+        "tts": "Güvenlik sistemleri arızalı ama makine hâlâ çalışıyor.",
+        "text": "Güvenlik sistemleri arızalı ama makine hâlâ çalışıyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Başını eğiyor ve bir proton ışını kafasının içinden geçiyor.",
+        "text": "Başını eğiyor ve bir proton ışını kafasının içinden geçiyor.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l05",
+        "tts": "Bin güneşten parlak bir ışık görüyor ama hiç acı duymuyor.",
+        "text": "Bin güneşten parlak bir ışık görüyor ama hiç acı duymuyor."
+      },
+      {
+        "id": "l06",
+        "tts": "Doktorlar ölmesini bekliyor. Yüzünün sol yarısı felç oluyor.",
+        "text": "Doktorlar ölmesini bekliyor. Yüzünün sol yarısı felç oluyor."
+      },
+      {
+        "id": "l07",
+        "tts": "O ise yaşıyor, doktorasını tamamlıyor ve fizikçi olarak çalışmaya devam ediyor.",
+        "text": "O ise yaşıyor, doktorasını tamamlıyor ve fizikçi olarak çalışmaya devam ediyor."
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu adam mı?",
+        "text": "Yoksa bu adam mı?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Bin sekiz yüz üçte Avustralya'da Cozef Samuel idama mahkûm ediliyor.",
+        "text": "1803'te Avustralya'da Joseph Samuel idama mahkûm ediliyor."
+      },
+      {
+        "id": "l10",
+        "tts": "İlk denemede ip kopuyor.",
+        "text": "İlk denemede ip kopuyor."
+      },
+      {
+        "id": "l11",
+        "tts": "İkinci denemede ilmik boynundan kayıyor ve Samuel yere düşüyor.",
+        "text": "İkinci denemede ilmik boynundan kayıyor ve Samuel yere düşüyor."
+      },
+      {
+        "id": "l12",
+        "tts": "Üçüncü denemede ip yine kopuyor.",
+        "text": "Üçüncü denemede ip yine kopuyor.",
+        "rate": "+0%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l13",
+        "tts": "Vali bunu Tanrı'dan bir işaret sayıyor ve Samuel'in idam cezasını kaldırıyor.",
+        "text": "Vali bunu Tanrı'dan bir işaret sayıyor ve Samuel'in idam cezasını kaldırıyor."
+      },
+      {
+        "id": "l14",
+        "tts": "Peki ikisini yan yana koyarsak?",
+        "text": "Peki ikisini yan yana koyarsak?"
+      },
+      {
+        "id": "l15",
+        "tts": "Samuel üç kez asıldı ama ölmedi.",
+        "text": "Samuel üç kez asıldı ama ölmedi.",
+        "rate": "-4%"
+      },
+      {
+        "id": "l16",
+        "tts": "Bugorski'nin kafasına çarpan doz ise, tüm vücut için öldürücü sayılan dozun kaç katıydı?",
+        "text": "Bugorski'nin kafasına çarpan doz ise, tüm vücut için öldürücü sayılan dozun kaç katıydı?",
+        "rate": "+4%",
+        "pitch": "+1Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "Yaklaşık dört yüz katıydı.",
+        "text": "Yaklaşık 400 katıydı.",
+        "rate": "-6%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l18",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "bugorski": {
+      "year": 1978,
+      "place": "Protvino, Yüksek Enerji Fiziği Enstitüsü, U-70 sinkrotronu",
+      "doseLocalSv": [
+        2000,
+        3000
+      ],
+      "ratio": 400,
+      "face": "sol yarı felç",
+      "ear": "sol kulakta işitme kaybı",
+      "phd": true,
+      "born": 1942
+    },
+    "samuel": {
+      "date": "1803-09-26",
+      "place": "Yeni Güney Galler; kaynaklar Parramatta (Wikipedia) ya da Sidney Brickfield Hill (Parramatta belediyesi) diyor",
+      "crime": "soygun (Constable Joseph Luker cinayetini reddetti)",
+      "attempts": [
+        "ip koptu",
+        "ilmik boynundan kaydı",
+        "ip yine koptu"
+      ],
+      "outcome": "idam cezası kaldırıldı (Sydney Gazette: reprieve; Wikipedia: ömür boyu hapis)",
+      "death": "c. 1806, tekneyle kaçarken kayboldu"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Anatoli_Bugorski",
+      "https://www.amusingplanet.com/2020/02/anatoli-bugorski-man-who-stuck-his-head.html",
+      "https://en.wikipedia.org/wiki/Joseph_Samuel",
+      "https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2013/10/12/the-man-they-couldnt-hang-joseph-samuel",
+      "https://web2.ph.utexas.edu/~coker2/index.files/radiation2.htm"
+    ],
+    "lethalWholeBodyGy": "yaklaşık 4–5 Gy (LD50, tıbbi destek olmadan)"
+  },
+  "caption": "Hangisi daha şaşırtıcı? 1978'de Sovyet fizikçi Anatoli Bugorski, Protvino'daki U-70 parçacık hızlandırıcısında arızalı bir parçayı kontrol ederken güvenlik sistemleri devre dışı kaldı ve bir proton ışını kafasının içinden geçti. Bin güneşten parlak bir ışık gördüğünü ama hiç acı duymadığını anlattı. Doktorlar ölmesini bekledi; yüzünün sol yarısı felç oldu ve sol kulağı işitmez oldu. Bugorski yaşadı, doktorasını tamamladı ve fizikçi olarak çalışmayı sürdürdü.\n\n26 Eylül 1803'te Yeni Güney Galler'de (bugünkü Sidney bölgesi) Joseph Samuel idam edilmek istendi. İlk denemede ip koptu, ikincide ilmik boynundan kaydı ve yere düştü, üçüncüde ip yine koptu. Vali bunu Tanrı'dan bir işaret saydı ve idam cezası kaldırıldı; Wikipedia'ya göre ceza ömür boyu hapse çevrildi. Not: İnfazın yeri kaynaklarda farklı geçiyor (Parramatta ya da Sidney'deki Brickfield Hill).\n\nKıyas: Tüm vücuda alındığında öldürücü sayılan radyasyon dozu yaklaşık 4–5 gray'dir. Bugorski'nin başına çarpan yerel doz ise 2.000–3.000 gray olarak tahmin ediliyor; bu, öldürücü dozun en az yaklaşık 400 katı. Not: Yerel doz ile tüm vücut dozu aynı şey değildir; ışın yalnızca başının küçük bir bölgesinden geçti.\n\nSen hangisine şaşırdın? Yorumlara BUGORSKI ya da SAMUEL yaz.\n\nKaynaklar: Wikipedia (Anatoli Bugorski; Joseph Samuel), Amusing Planet (Anatoli Bugorski: The Man Who Stuck His Head Inside a Particle Accelerator, 2020), Parramatta Belediyesi Tarih ve Miras (The man they couldn't hang), Texas Üniversitesi fizik ders notları (insanda LD50 yaklaşık 5 Gy).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#tarih",
+    "#bilim"
+  ],
+  "ytTitle": "Işın kafasından geçen adam mı, üç kez asılamayan adam mı?"
+}

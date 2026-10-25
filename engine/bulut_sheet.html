@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1200"></canvas>
+<script type="module">
+// Poz kâğıdı: fil (yürüme 8 kare, hortum/kulak varyantları, iskelet), kümülüs (3 faz), İstanbul silueti, Galata, martı, damla, küp
+import { ELEPHANT_CARD, drawElephant, cloudPuffs, drawCloud, drawSkyline, drawGalata, drawGull, drawDroplet, drawCubeWire } from './bulut_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1200);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+ctx.font = '500 22px "IBM Plex Mono"'; ctx.fillStyle = '#1C1B18';
+// yürüme 8 kare
+for (let i = 0; i < 8; i++) at(110 + i * 210, 260, () => drawElephant(ctx, ELEPHANT_CARD, { walk: i / 8, trunk: 0, ear: 0.3 }, 150));
+ctx.fillText('YÜRÜME 8 KARE', 40, 40);
+// varyantlar: hortum −1, 0, 1; kulak 0, 1; ters yön
+const V = [{ trunk: -1, ear: 0.3 }, { trunk: 0.6, ear: 0.3 }, { trunk: 1, ear: 1 }, { trunk: 0, ear: 0 }, { trunk: 0, ear: 1 }];
+V.forEach((p, i) => at(130 + i * 230, 560, () => drawElephant(ctx, ELEPHANT_CARD, p, 170)));
+at(1320, 560, () => drawElephant(ctx, ELEPHANT_CARD, {}, 170, { facing: -1 }));
+// küçük boy (sahnede 10x10 dizilim ölçeği)
+for (let i = 0; i < 10; i++) at(1520 + (i % 5) * 52, 470 + Math.floor(i / 5) * 60, () => drawElephant(ctx, ELEPHANT_CARD, { walk: i / 10 }, 40));
+// iskelet
+at(1560, 760, () => { const J = ELEPHANT_CARD.joints, s = 150; ctx.strokeStyle = '#E0391C'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(J.hip[0] * s, J.hip[1] * s); ctx.lineTo(J.shoulder[0] * s, J.shoulder[1] * s); ctx.lineTo(J.head[0] * s, J.head[1] * s); ctx.stroke(); drawElephant(ctx, ELEPHANT_CARD, {}, s); });
+// bulutlar
+const P = cloudPuffs(7);
+for (let i = 0; i < 3; i++) at(220 + i * 420, 1020, () => drawCloud(ctx, P, 360, i / 3));
+at(1440, 1080, () => drawSkyline(ctx, 320, 110));
+at(1720, 1080, () => drawGalata(ctx, 120));
+for (let i = 0; i < 4; i++) at(1380 + i * 60, 880, () => drawGull(ctx, 44, i / 4));
+at(1420, 940, () => drawDroplet(ctx, 30)); at(1500, 940, () => drawDroplet(ctx, 6));
+at(1580, 990, () => drawCubeWire(ctx, 90, 1));
+window.__ready = true;
+</script></body></html>

@@ -1,0 +1,109 @@
+{
+  "id": "052",
+  "slug": "tam-bu-dakikada",
+  "template": "ilan",
+  "serial": "№ 052 · 29 EKİM 1923 · 20.30",
+  "bpm": 92,
+  "coverAt": 0,
+  "publishAt": "2026-10-29T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+6%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.45,
+      "l03": 0.5,
+      "l04": 1.2,
+      "l05": 2.4,
+      "l06": 0.6,
+      "l07": 1,
+      "l08": 0.8
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Tam yüz üç yıl önce, şu dakikada Ankara'da bir oylama bitiyordu.",
+        "text": "Tam 103 yıl önce, şu dakikada Ankara'da bir oylama bitiyordu.",
+        "rate": "+4%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Küçük, taş bir binada yüz elli sekiz milletvekili oturuyordu.",
+        "text": "Küçük, taş bir binada 158 milletvekili oturuyordu."
+      },
+      {
+        "id": "l03",
+        "tts": "Akşam altıda başlayan oturumda, saat yirmi otuzda Cumhuriyet kabul edildi.",
+        "text": "Akşam 18.00'de başlayan oturumda, saat 20.30'da Cumhuriyet kabul edildi."
+      },
+      {
+        "id": "l04",
+        "tts": "Salonda hep bir ağızdan aynı ses yükseldi: Yaşasın Cumhuriyet!",
+        "text": "Salonda hep bir ağızdan aynı ses yükseldi: Yaşasın Cumhuriyet!",
+        "rate": "+2%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l05",
+        "tts": "Ardından ilk cumhurbaşkanı seçildi ve yüz elli sekiz oyun yüz elli sekizi Mustafa Kemal'e çıktı.",
+        "text": "Ardından ilk cumhurbaşkanı seçildi ve 158 oyun 158'i Mustafa Kemal'e çıktı."
+      },
+      {
+        "id": "l06",
+        "tts": "Karar o gece bütün memlekete bildirildi.",
+        "text": "Karar o gece bütün memlekete bildirildi."
+      },
+      {
+        "id": "l07",
+        "tts": "Dört yıl sonraki ilk sayımda, bu topraklarda on üç milyon altı yüz bin kişi yaşıyordu.",
+        "text": "Dört yıl sonraki ilk sayımda, bu topraklarda 13,6 milyon kişi yaşıyordu.",
+        "rate": "+0%"
+      },
+      {
+        "id": "l08",
+        "tts": "Bugün seksen altı milyon kişi yaşıyor.",
+        "text": "Bugün 86 milyon kişi yaşıyor.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Sen bu videoyu hangi şehirden izliyorsun? Yorumlara yaz, haritayı birlikte dolduralım.",
+        "text": "Sen bu videoyu hangi şehirden izliyorsun? Yorumlara yaz, haritayı birlikte dolduralım.",
+        "rate": "+4%",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "proclaimed": "1923-10-29 20.30, Ankara, TBMM birinci binası (Ulus)",
+    "sessionStart": "18.00",
+    "presidentElection": "Gizli oylamada 158 üyenin oybirliği (saat kaynaklarda çelişkili: 20.45 ve sonrası); ekranda saat verilmez",
+    "presidentVotes": 158,
+    "cheers": "Zabıt: (Sürekli alkışlar) (Yaşasın Cumhuriyet sesleri); (Yaşasın Cumhuriyet! diye üç defa bağırıldı.)",
+    "telegraph": "Nutuk: karar aynı gece bütün memlekete bildirildi; telgrafla bildirildiği ikincil kaynaklarda (Milliyet). Görselde dönemin iletişimi olarak telgraf hatları.",
+    "population1927Census": 13648270,
+    "population2025": 86092168,
+    "population2025Note": "TÜİK ADNKS 31.12.2025, ikamet eden nüfus (yabancılar dahil); bu yüzden \"vatandaş\" değil \"kişi\"",
+    "notUsed": "1923 için resmi nüfus yok (13 milyon popüler tahmin); 101 pare top kararnamesi 1924, o geceye bağlanmadı",
+    "sources": [
+      "https://www.milliyet.com.tr/gundem/29-ekim-1923-o-gunun-hikayesi-7026771",
+      "https://www.hurriyet.com.tr/galeri-cumhuriyet-ne-zaman-ve-nerede-ilan-edildi-iste-en-anlamli-29-ekim-cumhuriyet-bayrami-mesajlari-41913607/3",
+      "https://serbestiyet.com/haberler/meclis-zabitlarindan-100-yil-once-cumhuriyetin-ilan-edildigi-anlar-yasasin-cumhuriyet-diye-uc-defa-bagirildi-146754",
+      "https://www.haberturk.com/cumhuriyetin-ilan-edildigi-birlesimde-mebuslarin-konusmalari-tbmm-tutanaklarinda-3632530",
+      "https://ataturkansiklopedisi.gov.tr/bilgi/1927-nufus-sayimi/",
+      "https://www.bloomberght.com/turkiye-nin-nufusu-yuzde-0-5-artisla-86-1-milyon-oldu-3768634",
+      "https://www.hurriyet.com.tr/dunya/ataturkun-agzindan-cumhuriyetin-ilani-40625479"
+    ]
+  },
+  "caption": "29 Ekim 1923 akşamı saat 20.30'da, Ankara'daki ilk Meclis binasında 18.00'de başlayan oturumda Teşkilât-ı Esasiye Kanunu'ndaki değişiklik kabul edildi ve Cumhuriyet ilan edildi. Tutanağa göre salonda \"Yaşasın Cumhuriyet!\" sesleri yükseldi. Ardından yapılan gizli oylamada 158 üyenin tamamı Gazi Mustafa Kemal Paşa'yı ilk cumhurbaşkanı seçti. Karar aynı gece bütün memlekete bildirildi.\n\nDört yıl sonraki ilk nüfus sayımında (1927) Türkiye'de 13,6 milyon kişi yaşıyordu. TÜİK'e göre 2025 sonunda nüfus 86,1 milyondu.\n\nBu video, Cumhuriyet'in ilan edildiği dakikada, 103 yıl sonra yayınlandı.\n\nSen bu videoyu hangi şehirden izliyorsun? Yorumlara yaz.\n\nCumhuriyet Bayramımız kutlu olsun.\n\nKaynaklar: TBMM Zabıt Ceridesi (29 Ekim 1923), Nutuk, 1927 Umumi Nüfus Tahriri, TÜİK ADNKS 2025 (il nüfusları). Haritada 1 nokta yaklaşık 28.700 kişiyi gösteriyor.\nFotoğraf: Gazi Mustafa Kemal Paşa (Resimli Gazete kapağı, 3 Kasım 1923; kamu malı; Wikimedia Commons).",
+  "hashtags": [
+    "#29Ekim",
+    "#CumhuriyetBayramı",
+    "#Cumhuriyet103Yaşında",
+    "#kaçsıfır",
+    "#Atatürk"
+  ],
+  "ytTitle": "Cumhuriyet, 103 yıl önce tam bu dakikada ilan edildi"
+}

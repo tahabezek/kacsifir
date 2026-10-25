@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1100"></canvas>
+<script type="module">
+// Öğe kâğıdı (052): Birinci Meclis binası (gece/gündüz), telgraf direği, milletvekilleri (kalpak/fes/başı açık; oturan/ayakta),
+// sıra, oy sandığı ve pusula, saat (20.28, 18.00, 20.30, 20.45), yorum balonu, çatı bayrağı
+import { drawBuilding, drawRoofFlag, drawPole, drawDeputy, drawBench, drawUrn, drawBallot, drawClock, drawBubble, BUILDING_CARD, NIGHT } from './ilan_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1100);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+ctx.fillStyle = NIGHT; ctx.fillRect(0, 0, 900, 520);
+const roofTop = w => -(BUILDING_CARD.base + BUILDING_CARD.floor + BUILDING_CARD.cornice + BUILDING_CARD.bayRoof) * w;
+at(450, 470, () => { drawBuilding(ctx, 780, 1, 0.3); at(0, roofTop(780) + 4, () => drawRoofFlag(ctx, 90, 0.8)); });
+at(1350, 470, () => { drawBuilding(ctx, 780, 0, 0); at(0, roofTop(780) + 4, () => drawRoofFlag(ctx, 90, 2.1)); });
+at(80, 1040, () => drawPole(ctx, 420));
+[0, 1, 2].forEach((k, i) => { at(240 + i * 110, 760, () => drawDeputy(ctx, 110, k, 0)); at(240 + i * 110, 960, () => drawDeputy(ctx, 110, k, 1)); });
+at(640, 800, () => drawBench(ctx, 260, 40));
+for (let i = 0; i < 6; i++) at(560 + i * 50, 900, () => drawDeputy(ctx, 46, i % 3, 0, i % 2));
+at(700, 1040, () => drawUrn(ctx, 160));
+at(880, 1000, () => drawBallot(ctx, 60, 0.3));
+[20 * 60 + 28, 18 * 60, 20 * 60 + 30, 20 * 60 + 45].forEach((m, i) => at(1040 + i * 190, 680, () => drawClock(ctx, 80, m)));
+at(1100, 960, () => drawBubble(ctx, 70)); at(1260, 960, () => drawBubble(ctx, 40));
+window.__ready = true;
+</script></body></html>

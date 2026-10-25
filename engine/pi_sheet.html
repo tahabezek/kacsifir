@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1000"></canvas>
+<script type="module">
+// Öğe kâğıdı: pi işareti, güneş, parmak ucu (1 cm tırnak), hidrojen atomu, sarmal galaksi, uzak galaksiler, Jüpiter, Dünya, Voyager
+import { piString, drawPiMark, drawSun, drawFingertip, drawHydrogen, drawSpiral, drawGalaxyMark, drawJupiterSmall, drawEarthSmall } from './pi_chars.js';
+import { drawVoyager, VOYAGER_CARD } from './voyager_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1000);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+at(200, 250, () => drawPiMark(ctx, 300));
+at(480, 250, () => drawSun(ctx, 40, 0.2));
+at(700, 330, () => drawFingertip(ctx, 60));
+at(900, 250, () => drawHydrogen(ctx, 200, 0.3));
+at(1250, 250, () => drawSpiral(ctx, 180, 0.4, 5));
+for (let i = 0; i < 6; i++) at(1500 + (i % 3) * 80, 160 + Math.floor(i / 3) * 100, () => drawGalaxyMark(ctx, 4 + i * 2, i));
+at(200, 700, () => drawJupiterSmall(ctx, 60));
+at(400, 700, () => drawEarthSmall(ctx, 40));
+at(650, 700, () => drawVoyager(ctx, VOYAGER_CARD, { tilt: -0.3, detail: 0.4 }, 120));
+ctx.font = '500 30px "IBM Plex Mono"'; ctx.fillStyle = '#1C1B18'; ctx.fillText(piString(60), 850, 700);
+window.__ready = true;
+</script></body></html>

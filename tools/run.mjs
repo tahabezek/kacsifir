@@ -51,6 +51,19 @@ function upcomingSlots(now, list = cfg.slotsTR) {
   return out.sort((a, b) => a - b);
 }
 const slotKey = t => t.toISOString().slice(0, 16) + 'Z';
+// anma günleri (TR tarihi): yalnızca sabit tarihli bölüm çıkar; sabitsiz Reels ve carousel yok
+const trDay = t => new Date(t.getTime() + cfg.trUtcOffsetHours * 3600e3).toISOString().slice(0, 10);
+const quietDay = t => (cfg.quietDaysTR || []).includes(trDay(t));
+// standart saat dışındaki publishAt (ör. 10 Kasım 09.05) kendi yuvasını açar
+function withPinnedSlots(slots, now) {
+  const keys = new Set(slots.map(slotKey));
+  for (const e of episodes()) {
+    if (!e.publishAt || keys.has(e.publishAt)) continue;
+    const t = new Date(e.publishAt), lead = (t - now) / 60e3;
+    if (lead >= cfg.minLeadMinutes && lead <= cfg.horizonHours * 60) { slots.push(t); keys.add(e.publishAt); }
+  }
+  return slots.sort((a, b) => a - b);
+}
 
 // ——— bölüm stoğu ———
 function episodes() {
@@ -68,7 +81,7 @@ function usedReels(ledger) { return new Set(reelSlots(ledger).filter(s => !NOT_U
 function nextEpisode(ledger, taken, t) {
   const used = usedReels(ledger);
   const pinned = episodes().find(e => e.publishAt && e.publishAt === slotKey(t) && !used.has(e.id) && !taken.has(e.id));
-  if (pinned) return pinned;
+  if (pinned || quietDay(t)) return pinned;
   return episodes().find(e => !e.publishAt && !used.has(e.id) && !taken.has(e.id));
 }
 
@@ -158,7 +171,7 @@ async function main() {
     if (ch.isDisconnected || ch.isLocked) throw new Error(`Buffer kanalı kullanılamıyor: ${JSON.stringify(ch)}`);
     if (ch.isQueuePaused) summary.push('⚠️ Buffer kuyruğu duraklatılmış; planlanan gönderiler çıkmaz.');
   }
-  const slots = upcomingSlots(now);
+  const slots = withPinnedSlots(upcomingSlots(now), now);
   const tol = cfg.slotToleranceMinutes * 60e3;
   const existing = DRY ? [] : await postsBetween(cfg.organizationId, cfg.channelId,
     new Date(now.getTime() - 3600e3).toISOString(), new Date(now.getTime() + (cfg.horizonHours + 2) * 3600e3).toISOString());
@@ -225,7 +238,8 @@ export function ytTitle(ep) {
   return ep.ytTitle || q;
 }
 export function ytText(ep) {
-  return [ep.caption, 'Her gün yeni bir sayı videosu: Kaç Sıfır? kanalına abone ol.', (ep.hashtags || []).join(' ')].filter(Boolean).join('\n\n');
+  // anma videosunda abone çağrısı yok
+  return [ep.caption, ep.commemoration ? '' : 'Her gün yeni bir sayı videosu: Kaç Sıfır? kanalına abone ol.', (ep.hashtags || []).join(' ')].filter(Boolean).join('\n\n');
 }
 async function youtube(ledger, now) {
   if (!cfg.youtube?.channelId || DRY) return;
@@ -258,6 +272,7 @@ async function carousels(ledger, now, existing, tol) {
   let scores = {};
   try { const m = JSON.parse(fs.readFileSync(path.join(root, 'state', 'metrics.json'), 'utf8')); for (const day of Object.values(m.snapshots || {})) for (const r of day) if (r.template !== 'carousel') scores[r.episode] = Math.max(scores[r.episode] ?? 0, r.score ?? 0); } catch { /* metrik yok */ }
   for (const t of upcomingSlots(now, cfg.carouselSlotsTR)) {
+    if (quietDay(t)) { log(`anma günü ${slotKey(t)}: carousel yok`); continue; }
     if (existing.some(p => p.dueAt && Math.abs(new Date(p.dueAt) - t) <= tol)) { log(`dolu  ${slotKey(t)} (carousel)`); continue; }
     const cands = Object.values(ledger.slots).filter(s => s.kind !== 'carousel' && s.status === 'scheduled' && s.dueAt && (t - new Date(s.dueAt)) / 3600e3 >= cfg.carouselMinAgeHours && !done.has(s.episode));
     if (!cands.length) { log(`carousel kaynağı yok: ${slotKey(t)}`); continue; }

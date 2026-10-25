@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1000"></canvas>
+<script type="module">
+// Öğe kâğıdı (050): öğrenci (erkek/kız, okuyor), sıra, kitap kapalı/açık, lamba sönük/yanık, kara tahta, bayrak, sınıf simgesi
+import { STUDENT_CARD, drawStudent, drawDesk, drawBook, drawLamp, drawBoard, drawFlag, drawClassTile } from './sinif_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1000);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+const seat = (x, y, u, girl, lit) => at(x, y, () => {
+  if (lit) { ctx.beginPath(); ctx.ellipse(u * 0.12, -u * 0.14, u * 0.56, u * 0.42, 0, 0, Math.PI * 2); ctx.fillStyle = '#FAF6EC'; ctx.fill(); }
+  at(0, -u * 0.2, () => drawDesk(ctx, u * 0.8, u * 0.24));
+  at(-u * 0.08, -u * 0.2, () => drawBook(ctx, u * 0.3, lit ? 1 : 0));
+  at(u * 0.27, -u * 0.2, () => drawLamp(ctx, u * 0.065, lit ? 1 : 0, 0.4));
+  at(0, u * 0.08, () => drawStudent(ctx, STUDENT_CARD, { girl, read: lit ? 1 : 0 }, u));
+});
+seat(150, 260, 260, 0, 0); seat(450, 260, 260, 1, 0); seat(750, 260, 260, 0, 1); seat(1050, 260, 260, 1, 1);
+for (let i = 0; i < 10; i++) seat(120 + i * 70, 560, 70, i % 2, i < 4);
+at(1250, 60, () => drawBoard(ctx, 480, 160));
+at(1300, 300, () => drawFlag(ctx, 120, 0.6, 0.03));
+at(1300, 470, () => drawFlag(ctx, 120, 0, 0));
+for (let i = 0; i < 6; i++) at(150 + i * 60, 800, () => drawClassTile(ctx, 50, 40, i * 0.2, i, 1));
+at(600, 820, () => drawClassTile(ctx, 200, 160, 0.98, 3, 2.5));
+at(900, 820, () => drawLamp(ctx, 40, 1, 0.2)); at(1020, 820, () => drawLamp(ctx, 40, 0));
+at(1200, 820, () => drawBook(ctx, 160, 0)); at(1450, 820, () => drawBook(ctx, 160, 1));
+window.__ready = true;
+</script></body></html>

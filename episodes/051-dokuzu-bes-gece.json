@@ -1,0 +1,85 @@
+{
+  "id": "051",
+  "slug": "dokuzu-bes-gece",
+  "template": "dokuzbes",
+  "serial": "10 KASIM 1938 · 09.05",
+  "bpm": 60,
+  "coverAt": 0,
+  "publishAt": "2026-11-10T06:05Z",
+  "commemoration": true,
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "-4%",
+    "gaps": {
+      "l01": 0.6,
+      "l02": 2.6,
+      "l03": 0.8,
+      "l04": 1,
+      "l05": 0.9,
+      "l06": 0.8
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Her yıl on Kasım'da, saat dokuzu beş geçe, bir ülke aynı anda durur.",
+        "text": "Her yıl 10 Kasım'da, saat dokuzu beş geçe, bir ülke aynı anda durur.",
+        "rate": "-2%"
+      },
+      {
+        "id": "l02",
+        "tts": "Arabalar durur, vapurlar düdük çalar, insanlar olduğu yerde susar.",
+        "text": "Arabalar durur, vapurlar düdük çalar, insanlar olduğu yerde susar.",
+        "rate": "-4%"
+      },
+      {
+        "id": "l03",
+        "tts": "Bin dokuz yüz otuz sekizde bu saatte, Mustafa Kemal Atatürk, Dolmabahçe Sarayı'nda hayata gözlerini yumdu.",
+        "text": "1938'de bu saatte, Mustafa Kemal Atatürk, Dolmabahçe Sarayı'nda hayata gözlerini yumdu.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l04",
+        "tts": "Elli yedi yaşındaydı.",
+        "text": "57 yaşındaydı.",
+        "rate": "-8%",
+        "pitch": "-3Hz"
+      },
+      {
+        "id": "l05",
+        "tts": "O dakika, bu ülkenin hafızasında hiç ilerlemedi.",
+        "text": "O dakika, bu ülkenin hafızasında hiç ilerlemedi.",
+        "rate": "-6%"
+      },
+      {
+        "id": "l06",
+        "tts": "Onu kaybedeli seksen sekiz yıl oldu.",
+        "text": "Onu kaybedeli 88 yıl oldu.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Ve bu ülke, her yıl aynı dakikada onu anıyor.",
+        "text": "Ve bu ülke, her yıl aynı dakikada onu anıyor.",
+        "rate": "-6%"
+      }
+    ]
+  },
+  "facts": {
+    "death": "1938-11-10T09:05+02:00",
+    "place": "Dolmabahçe Sarayı, İstanbul",
+    "born": 1881,
+    "ageAtDeath": 57,
+    "yearsSince2026": 88,
+    "silence": "09.05'te sirenler eşliğinde saygı duruşu; vapurlar ve araçlar korna/düdük çalar",
+    "room": "Dolmabahçe Sarayı Harem bölümü, 71 numaralı oda (DHA, NTV)"
+  },
+  "caption": "10 Kasım 1938'de saat 09.05'te Mustafa Kemal Atatürk, 57 yaşında Dolmabahçe Sarayı'nda hayata gözlerini yumdu. Vefat ettiği oda, sarayın Harem bölümündeki 71 numaralı odadır.\n\nHer 10 Kasım'da saat 09.05'te sirenler çalar ve bütün ülke saygı duruşunda bulunur.\n\nSaygı, minnet ve özlemle.\n\nFotoğraf: Mustafa Kemal Atatürk, 1923 (kamu malı; Wikimedia Commons).",
+  "hashtags": [
+    "#10Kasım",
+    "#Atatürk",
+    "#MustafaKemalAtatürk"
+  ],
+  "ytTitle": "10 Kasım, saat 09.05: bir ülke aynı anda durur"
+}

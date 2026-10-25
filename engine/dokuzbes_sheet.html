@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1800" height="1100"></canvas>
+<script type="module">
+// Öğe kâğıdı (051): saray cephesi + saat kulesi, tepeler, vapur (iki boy), arabalar (3 gövde), yürüyen insan
+// (yürüyüş fazları + saygı duruşu), martı fazları, büyük düz bayrak (oran denetimi), dalgalanan bayrak + gönder,
+// kadran (sade / süslü), masa saati, silüet (kaynak fotoğraftan), imza.
+import { drawHills, drawPalace, drawClockTower, drawFerry, drawSmoke, drawCar, drawWalker, drawGull, drawFlatFlag, drawWavingFlag, drawPole, drawClockFace, drawMantelCase, flagGeometry } from './dokuzbes_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1800, 1100);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+at(0, 0, () => drawHills(ctx, 20, 300, 860));
+at(560, 300, () => drawPalace(ctx, 640));
+at(160, 292, () => drawClockTower(ctx, 140, 9, 5));
+at(180, 440, () => drawFerry(ctx, 260, 1)); at(180 - 2, 440 - 96, () => drawSmoke(ctx, 260, 0.3, 1));
+at(480, 420, () => drawFerry(ctx, 130, -1));
+[0, 1, 2].forEach(k => at(660 + k * 140, 470, () => drawCar(ctx, 120, k, k, k === 1 ? -1 : 1)));
+for (let i = 0; i < 6; i++) at(60 + i * 46, 640, () => drawWalker(ctx, 80, i, 1, 0, 1, i / 6));
+for (let i = 0; i < 3; i++) at(360 + i * 46, 640, () => drawWalker(ctx, 80, 0, 0, 1, i ? -1 : 1, 0.5));
+for (let i = 0; i < 5; i++) at(560 + i * 70, 600, () => drawGull(ctx, 60, (i / 5) * Math.PI * 2));
+at(1000, 40, () => drawFlatFlag(ctx, 300));
+const g = flagGeometry(300); ctx.font = '500 20px "IBM Plex Mono"'; ctx.fillStyle = '#1C1B18';
+ctx.fillText(`G=300 M=${g.M} L=${g.L.toFixed(1)} dış ay x=${g.outer[0].toFixed(1)} r=${g.outer[2]} iç ay x=${g.inner[0].toFixed(1)} r=${g.inner[2]} yıldız x=${g.star[0].toFixed(1)} r=${g.star[2]}`, 1000 - 400, 370);
+at(1060, 760, () => drawPole(ctx, 320)); at(1062, 520, () => drawWavingFlag(ctx, 60, 0.8));
+at(1300, 520, () => drawClockFace(ctx, 80, 9, 4.95, 57, 1, 0));
+at(1560, 600, () => { drawMantelCase(ctx, 110); drawClockFace(ctx, 110, 9, 5, 0, 0, 1); });
+const sil = new Image(); sil.src = '../assets/051/silhouette.png'; await sil.decode();
+ctx.drawImage(sil, 80, 700, 380 * sil.width / sil.height, 380);
+const svg = await (await fetch('../assets/051/imza.svg')).text(); const d = svg.match(/\sd="([^"]+)"/)[1];
+at(560, 800, () => { ctx.scale(0.9, 0.9); ctx.fillStyle = '#1C1B18'; ctx.fill(new Path2D(d)); });
+window.__ready = true;
+</script></body></html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1600" height="900"></canvas>
+<script type="module">
+// Öğe kâğıdı (053 yol): oturan kişi (büyük, küçük, baş eğimleri), Güneş, Samanyolu, hız oku
+import { SITTER_CARD, drawSitter, drawSun, drawGalaxy, drawArrow, SUN_IN_GALAXY } from './uzayyol_chars.js';
+const ctx = document.getElementById('c').getContext('2d');
+ctx.fillStyle = '#ECE5D5'; ctx.fillRect(0, 0, 1600, 900);
+const at = (x, y, f) => { ctx.save(); ctx.translate(x, y); f(); ctx.restore(); };
+at(200, 420, () => drawSitter(ctx, SITTER_CARD, { look: 0.35, phone: 1 }, 260));
+at(520, 420, () => drawSitter(ctx, SITTER_CARD, { look: 0.1, phone: 0.5 }, 160));
+at(720, 420, () => drawSitter(ctx, SITTER_CARD, { look: 0.5, phone: 1 }, 80));
+at(1000, 260, () => drawSun(ctx, 60, 0));
+at(1180, 260, () => drawSun(ctx, 16, 1));
+drawGalaxy(ctx, 1300, 620, 240, 0.3);
+{ const a = SUN_IN_GALAXY.th + 0.3, x = 1300 + Math.cos(a) * SUN_IN_GALAXY.r * 240, y = 620 + Math.sin(a) * SUN_IN_GALAXY.r * 240; ctx.beginPath(); ctx.arc(x, y, 8, 0, Math.PI * 2); ctx.fillStyle = '#ECE5D5'; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = '#1C1B18'; ctx.stroke(); }
+drawArrow(ctx, 900, 700, 1040, 640, 4);
+window.__ready = true;
+</script></body></html>

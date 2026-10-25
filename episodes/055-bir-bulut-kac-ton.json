@@ -1,0 +1,94 @@
+{
+  "id": "055",
+  "slug": "bir-bulut-kac-ton",
+  "template": "bulut",
+  "serial": "№ 055 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-02T10:00Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+10%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.3,
+      "l05a": 0.6,
+      "l05b": 0.6,
+      "l06": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Başının üstündeki o pamuk gibi bulut kaç ton?",
+        "text": "Başının üstündeki o pamuk gibi bulut kaç ton?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Sıradan bir kümülüs bulutu yaklaşık bir kilometreküp yer kaplar.",
+        "text": "Sıradan bir kümülüs bulutu yaklaşık bir kilometreküp yer kaplar."
+      },
+      {
+        "id": "l03",
+        "tts": "Her metreküpünde yaklaşık yarım gram su vardır.",
+        "text": "Her metreküpünde yaklaşık yarım gram su vardır."
+      },
+      {
+        "id": "l04",
+        "tts": "Bir kilometreküpte ise tam bir milyar metreküp vardır.",
+        "text": "Bir kilometreküpte ise tam bir milyar metreküp vardır."
+      },
+      {
+        "id": "l05a",
+        "tts": "O bulut yaklaşık",
+        "text": "O bulut yaklaşık",
+        "rate": "-4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l05b",
+        "tts": "beş yüz ton su taşır; bu da yüz fil kadar eder.",
+        "text": "500 ton su taşır; bu da 100 fil kadar eder.",
+        "rate": "-4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l06",
+        "tts": "Peki neden düşmüyor? Çünkü o su sayısız minicik damlaya bölünmüş ve yükselen hava onları taşıyor.",
+        "text": "Peki neden düşmüyor? Çünkü o su sayısız minicik damlaya bölünmüş ve yükselen hava onları taşıyor."
+      },
+      {
+        "id": "l07",
+        "tts": "Bir dahaki sefere gökyüzüne baktığında, yüz fili düşün.",
+        "text": "Bir dahaki sefere gökyüzüne baktığında, yüz fili düşün.",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "cloudKm3": 1,
+    "waterGPerM3": 0.5,
+    "tons": 500,
+    "elephantT": 5,
+    "dropletMm": 0.02,
+    "hairMm": 0.07,
+    "sources": {
+      "usgs": "https://www.usgs.gov/water-science-school/science/how-much-does-a-cloud-weigh (1 km³ = 1 milyar m³; 0,5 g/m³; 500.000 kg yaklaşık 1,1 milyon pound; nemli bulut havası kuru havadan az yoğun)",
+      "lemone": "https://www.mentalfloss.com/article/49786/how-much-does-cloud-weigh (NCAR, Peggy LeMone: tipik kümülüs ~1 km, ~1,1 milyon pound yaklaşık 100 fil)",
+      "droplet": "Wallace & Hobbs, Atmospheric Science (tipik bulut damlası yarıçapı ~10 µm, çap ~0,02 mm)"
+    },
+    "checked": "2026-10-25: 1e9 m³ × 0,5 g = 5e8 g = 500 t; 500 t / 5 t = 100 fil; 0,5 cm³ küre çapı 0,985 cm"
+  },
+  "caption": "Başının üstündeki o pamuk gibi bulut kaç ton? Sıradan bir kümülüs bulutu kabaca 1 km genişliğinde ve neredeyse küp biçimindedir: yaklaşık 1 km³, yani 1 milyar m³.\n\nBulutun her metreküpünde yaklaşık 0,5 gram su damlacığı bulunur. 1 milyar × 0,5 g = 500 milyon gram, yani yaklaşık 500 ton. Bir fil ortalama 5 ton gelirse bu, 100 fil kadar eder.\n\nPeki neden düşmüyor? Su, çapı yaklaşık 0,02 mm olan sayısız damlacığa bölünmüştür. Bu kadar küçük damlalar çok yavaş düşer ve yükselen hava onları taşır. Ayrıca bulutun içindeki nemli hava, aynı hacimdeki kuru havadan hafiftir.\n\nNot: Hesap ortalama bir kümülüs için kaba bir tahmindir; bulutların boyutu ve su miktarı çok değişir.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: USGS Water Science School (How much does a cloud weigh?), Peggy LeMone, NCAR.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#bulut",
+    "#hava",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "ytTitle": "Bir bulut kaç ton?"
+}

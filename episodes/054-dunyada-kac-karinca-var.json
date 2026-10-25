@@ -1,0 +1,92 @@
+{
+  "id": "054",
+  "slug": "dunyada-kac-karinca-var",
+  "template": "karinca",
+  "serial": "№ 054 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-10-31T10:00Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+10%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.5,
+      "l03": 1,
+      "l04": 1,
+      "l05": 0.6,
+      "l06": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Dünyada kaç karınca var?",
+        "text": "Dünyada kaç karınca var?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bilim insanları dünyanın dört bir yanından yüzlerce araştırmayı birleştirerek karınca sayısını hesapladı.",
+        "text": "Bilim insanları dünyanın dört bir yanından yüzlerce araştırmayı birleştirerek karınca sayısını hesapladı."
+      },
+      {
+        "id": "l03",
+        "tts": "Sonuçta yaklaşık yirmi katrilyon karınca çıktı.",
+        "text": "Sonuçta yaklaşık 20 katrilyon karınca çıktı.",
+        "rate": "+0%"
+      },
+      {
+        "id": "l04",
+        "tts": "Yirminin arkasına tam on beş sıfır gelir.",
+        "text": "20'nin arkasına tam 15 sıfır gelir.",
+        "rate": "-4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l05",
+        "tts": "Yani dünyadaki her insana yaklaşık iki virgül dört milyon karınca düşüyor.",
+        "text": "Yani dünyadaki her insana yaklaşık 2,4 milyon karınca düşüyor."
+      },
+      {
+        "id": "l06",
+        "tts": "Hepsini tartsak, bütün yabani kuşlarla yabani memelilerin toplamından daha ağır gelirler.",
+        "text": "Hepsini tartsak, bütün yabani kuşlarla yabani memelilerin toplamından daha ağır gelirler."
+      },
+      {
+        "id": "l07",
+        "tts": "Bu gezegende aslında biz karıncaların arasında yaşıyoruz.",
+        "text": "Bu gezegende aslında biz karıncaların arasında yaşıyoruz.",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "ants": 20000000000000000,
+    "antsText": "20.000.000.000.000.000 (20 katrilyon; yazarlara göre temkinli tahmin)",
+    "studies": "489 çalışma (yaklaşık 500)",
+    "antBiomassMtC": 12,
+    "wildBirdsMtC": 2,
+    "wildMammalsMtC": 7,
+    "worldPop2026": 8300000000,
+    "perPerson": 2400000,
+    "sources": [
+      "https://www.pnas.org/doi/10.1073/pnas.2201550119",
+      "https://www.uni-wuerzburg.de/en/news-and-events/news/detail/news/wie-viele-ameisen-gibt-es-eigentlich/",
+      "https://www.pnas.org/doi/10.1073/pnas.1711842115"
+    ],
+    "notes": [
+      "ağırlık kıyası kuru karbon biyokütlesiyle: karınca 12 milyon ton karbon; yabani kuş 2 ve yabani memeli 7 milyon ton karbon (Bar-On ve ark. 2018)",
+      "insan başına: 20 katrilyon / 8,3 milyar = yaklaşık 2,4 milyon"
+    ]
+  },
+  "caption": "Dünyada kaç karınca var? 2022'de bilim insanları dünyanın dört bir yanında yapılmış 489 araştırmayı birleştirdi ve yaklaşık 20 katrilyon karınca hesapladı: 20.000.000.000.000.000. Yani 20'nin arkasına tam 15 sıfır gelir. Yazarlara göre bu temkinli bir tahmin; gerçek sayı daha da büyük olabilir.\n\n8,3 milyar insana bölersek kişi başına yaklaşık 2,4 milyon karınca düşüyor. Karıncaların toplam biyokütlesi yaklaşık 12 milyon ton karbon ediyor; bu, bütün yabani kuşların (yaklaşık 2 milyon ton) ve yabani memelilerin (yaklaşık 7 milyon ton) toplamından fazla.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: Schultheiss ve ark. 2022, PNAS (The abundance, biomass, and distribution of ants on Earth); Bar-On ve ark. 2018, PNAS (The biomass distribution on Earth).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#karınca",
+    "#doğa",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "ytTitle": "Dünyada kaç karınca var?"
+}

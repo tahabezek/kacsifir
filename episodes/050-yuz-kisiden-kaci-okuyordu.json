@@ -1,0 +1,89 @@
+{
+  "id": "050",
+  "slug": "yuz-kisiden-kaci-okuyordu",
+  "template": "sinif",
+  "serial": "№ 050 · HARF DEVRİMİ 98 YAŞINDA",
+  "bpm": 96,
+  "coverAt": 0,
+  "publishAt": "2026-11-01T10:00Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+10%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.6,
+      "l04": 0.7,
+      "l05": 2,
+      "l06": 0.7
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Bin dokuz yüz yirmi yedide, yüz kişiden kaçı okuma yazma biliyordu?",
+        "text": "1927'de 100 kişiden kaçı okuma yazma biliyordu?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Cumhuriyet'in ilk nüfus sayımına göre, Türkiye'de on üç milyon altı yüz bin kişi yaşıyordu.",
+        "text": "Cumhuriyet'in ilk nüfus sayımına göre, Türkiye'de 13,6 milyon kişi yaşıyordu.",
+        "rate": "+8%"
+      },
+      {
+        "id": "l03",
+        "tts": "Yüz kişiden yalnızca on biri okuyabiliyordu.",
+        "text": "100 kişiden yalnızca 11'i okuyabiliyordu.",
+        "rate": "+2%"
+      },
+      {
+        "id": "l04",
+        "tts": "Kadınlarda yüz kişiden yalnızca beşi okuyabiliyordu.",
+        "text": "Kadınlarda 100 kişiden yalnızca 5'i okuyabiliyordu.",
+        "rate": "+2%"
+      },
+      {
+        "id": "l05",
+        "tts": "Bir yıl sonra yeni harfler geldi ve bütün ülke bir sınıfa dönüştü.",
+        "text": "Bir yıl sonra yeni harfler geldi ve bütün ülke bir sınıfa dönüştü.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l06",
+        "tts": "Bugün yüz kişiden doksan sekizi okuyabiliyor.",
+        "text": "Bugün 100 kişiden 98'i okuyabiliyor.",
+        "rate": "-4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Bu yazıyı okuyabiliyorsan, sen de o doksan sekiz kişiden birisin.",
+        "text": "Bu yazıyı okuyabiliyorsan, sen de o 98 kişiden birisin.",
+        "rate": "+2%",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "census1927Date": "1927-10-28",
+    "population1927": 13648270,
+    "literacy1927Pct": 10.6,
+    "literacy1927MenPct": 17.4,
+    "literacy1927WomenPct": 4.6,
+    "literacy1927Base": "7 yaş ve üzeri",
+    "alphabetLaw": "1928-11-01",
+    "literacy2024Pct": 97.8,
+    "literacy2024WomenPct": 96.2,
+    "literacy2024Base": "6 yaş ve üzeri (TÜİK Ulusal Eğitim İstatistikleri 2024)"
+  },
+  "caption": "Cumhuriyet'in ilk nüfus sayımı 28 Ekim 1927'de yapıldı: Türkiye'de 13,6 milyon kişi yaşıyordu. 7 yaş ve üzerindekilerin yalnızca yüzde 10,6'sı okuma yazma biliyordu; kadınlarda bu oran yüzde 4,6'ydı.\n\n1 Kasım 1928'de yeni Türk harfleri kabul edildi; 1 Ocak 1929'da Millet Mektepleri açıldı. TÜİK'e göre 2024'te 6 yaş ve üzerindekilerin yüzde 97,8'i okuma yazma biliyor; kadınlarda bu oran yüzde 96,2'dir.\n\nHarf Devrimi bugün 98 yaşında; artık 100 kişiden 98'i okuyabiliyor.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: 1927 Umumi Nüfus Tahriri, TÜİK Ulusal Eğitim İstatistikleri 2024.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#1Kasım",
+    "#Cumhuriyet",
+    "#HarfDevrimi",
+    "#ilginçbilgiler"
+  ],
+  "ytTitle": "1927'de 100 kişiden kaçı okuma yazma biliyordu?"
+}

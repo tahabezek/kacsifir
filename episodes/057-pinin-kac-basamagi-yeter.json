@@ -1,0 +1,99 @@
+{
+  "id": "057",
+  "slug": "pinin-kac-basamagi-yeter",
+  "template": "pi",
+  "serial": "№ 057 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-04T10:00Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+10%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.5,
+      "l03": 0.5,
+      "l04": 0.6,
+      "l05": 0.6,
+      "l06": 0.6,
+      "l06b": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Bütün evreni ölçmek için pi sayısının kaç basamağı yeter?",
+        "text": "Bütün evreni ölçmek için pi sayısının kaç basamağı yeter?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Pi'nin basamakları sonsuza kadar sürer ve bilgisayarlar bugüne kadar üç yüz on dört trilyon basamağını hesapladı.",
+        "text": "Pi'nin basamakları sonsuza kadar sürer ve bilgisayarlar bugüne kadar 314 trilyon basamağını hesapladı."
+      },
+      {
+        "id": "l03",
+        "tts": "Ama NASA uzay araçlarını yönlendirirken yalnızca on beş ondalık basamak kullanıyor.",
+        "text": "Ama NASA uzay araçlarını yönlendirirken yalnızca 15 ondalık basamak kullanıyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Bu, Voyager bir'in uzaklığı kadar yarıçaplı bir çemberin çevresini yaklaşık bir santimetre hatayla hesaplamaya yeter.",
+        "text": "Bu, Voyager 1'in uzaklığı kadar yarıçaplı bir çemberin çevresini yaklaşık 1 santimetre hatayla hesaplamaya yeter."
+      },
+      {
+        "id": "l05",
+        "tts": "Peki bütün evren için kaç basamak gerekir?",
+        "text": "Peki bütün evren için kaç basamak gerekir?"
+      },
+      {
+        "id": "l06",
+        "tts": "Gözlemlenebilir evrenin çevresini, bir hidrojen atomundan küçük hatayla hesaplamak için",
+        "text": "Gözlemlenebilir evrenin çevresini, bir hidrojen atomundan küçük hatayla hesaplamak için"
+      },
+      {
+        "id": "l06b",
+        "tts": "otuz yedi ondalık basamak yeter.",
+        "text": "37 ondalık basamak yeter.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l07",
+        "tts": "Geri kalan trilyonlarca basamak ise çoğunlukla rekor ve merak için hesaplanıyor.",
+        "text": "Geri kalan trilyonlarca basamak ise çoğunlukla rekor ve merak için hesaplanıyor.",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "piRecordDigits": 314000000000000,
+    "piRecordNote": "314 trilyon basamak: StorageReview, y-cruncher, Kasım/Aralık 2025 (numberworld.org/y-cruncher listesi). Guinness 2025 onaylı rekor: 300 trilyon (KIOXIA ve Linus Media Group).",
+    "jplDecimals": 15,
+    "jplPi": "3.141592653589793",
+    "voyagerKm": 25770000000,
+    "voyagerNote": "JPL Horizons, 4 Kasım 2026: Güneş'e 172,24 AU (yaklaşık 25,77 milyar km, 16,88 km/sn), Dünya'ya 172,90 AU (yaklaşık 25,87 milyar km)",
+    "voyagerErrorCm": 1.2,
+    "voyagerErrorCalc": "(pi - 3,141592653589793) yaklaşık 2,38e-16; çevre hatası = 2,38e-16 x 2 x 2,577e13 m = 1,23 cm. JPL makalesi 32 milyar km yarıçapla yaklaşık 1,5 cm veriyor.",
+    "universeRadiusLy": 46000000000,
+    "universeDecimals": 37,
+    "universeErrorM": 8.5e-11,
+    "universeErrorCalc": "37 ondalıkta kesme hatası yaklaşık 9,7e-38; çevre hatası = 9,7e-38 × 8,7e26 m yaklaşık 8,5e-11 m (0,085 nm); hidrojen atomu çapı yaklaşık 0,1 nm",
+    "sources": [
+      "https://www.jpl.nasa.gov/edu/news/how-many-decimals-of-pi-do-we-really-need/",
+      "https://www.storagereview.com/review/storagereview-sets-new-pi-record-314-trillion-digits-on-a-dell-poweredge-r7725",
+      "http://www.numberworld.org/y-cruncher/",
+      "https://www.businesswire.com/news/home/20250518801709/en/KIOXIA-and-Linus-Media-Group-Set-World-Record-for-Pi-Calculation",
+      "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"
+    ]
+  },
+  "caption": "Bütün evreni ölçmek için pi sayısının kaç basamağı yeter? NASA'nın Jet İtki Laboratuvarı (JPL), gezegenler arası yolculuklardaki en hassas hesaplarında pi'yi yalnızca 15 ondalık basamakla kullanıyor: 3,141592653589793.\n\nBu, yarıçapı Voyager 1'in uzaklığı kadar (Dünya'dan yaklaşık 25,9 milyar km) olan bir çemberin çevresini yaklaşık 1 santimetre hatayla hesaplamaya yeter. Yarıçapı 46 milyar ışık yılı olan gözlemlenebilir evrenin çevresini bir hidrojen atomunun çapından küçük hatayla hesaplamak için de 37 ondalık basamak yeterli.\n\nBugüne kadar hesaplanan en fazla basamak 314 trilyon (StorageReview, Aralık 2025); Guinness'in 2025'te onayladığı rekor 300 trilyondu.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: NASA JPL Edu (How Many Decimals of Pi Do We Really Need?), NASA Voyager, StorageReview (314 trilyon), numberworld.org/y-cruncher, Guinness Dünya Rekorları / KIOXIA (2025).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#matematik",
+    "#pi",
+    "#nasa",
+    "#ilginçbilgiler"
+  ],
+  "ytTitle": "Evreni ölçmek için pi'nin kaç basamağı yeter?"
+}

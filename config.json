@@ -19,6 +19,9 @@
     "17:00"
   ],
   "carouselMinAgeHours": 20,
+  "quietDaysTR": [
+    "2026-11-10"
+  ],
   "youtube": {
     "channelId": "6ad932d2778b240e2f81af17",
     "categoryId": "27",

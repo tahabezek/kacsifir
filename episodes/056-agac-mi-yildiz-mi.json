@@ -1,0 +1,90 @@
+{
+  "id": "056",
+  "slug": "agac-mi-yildiz-mi",
+  "template": "agac",
+  "serial": "№ 056 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-03T10:00Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+10%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.5,
+      "l03": 0.5,
+      "l04": 1,
+      "l05": 0.6,
+      "l06": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Dünyada mı daha çok ağaç var, Samanyolu'nda mı daha çok yıldız?",
+        "text": "Dünya'da mı daha çok ağaç var, Samanyolu'nda mı daha çok yıldız?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Samanyolu'nda yüz milyar ile dört yüz milyar arasında yıldız olduğu tahmin ediliyor.",
+        "text": "Samanyolu'nda 100 milyar ile 400 milyar arasında yıldız olduğu tahmin ediliyor."
+      },
+      {
+        "id": "l03",
+        "tts": "İki bin on beşte bilim insanları ağaç sayısını uydu görüntüleri ve yer sayımlarıyla hesapladı.",
+        "text": "2015'te bilim insanları ağaç sayısını uydu görüntüleri ve yer sayımlarıyla hesapladı."
+      },
+      {
+        "id": "l04",
+        "tts": "Sonuçta yaklaşık üç trilyon ağaç çıktı.",
+        "text": "Sonuçta yaklaşık 3 trilyon ağaç çıktı.",
+        "rate": "+0%"
+      },
+      {
+        "id": "l05",
+        "tts": "Yani dünyadaki ağaçlar, galaksimizdeki yıldızlardan en az yedi kat fazladır.",
+        "text": "Yani dünyadaki ağaçlar, galaksimizdeki yıldızlardan en az 7 kat fazladır.",
+        "rate": "-4%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l06",
+        "tts": "Her insana yaklaşık üç yüz yetmiş ağaç düşüyor.",
+        "text": "Her insana yaklaşık 370 ağaç düşüyor."
+      },
+      {
+        "id": "l07",
+        "tts": "Ama insan uygarlığı başladığından beri ağaçların neredeyse yarısı yok oldu.",
+        "text": "Ama insan uygarlığı başladığından beri ağaçların neredeyse yarısı yok oldu.",
+        "rate": "-2%"
+      }
+    ]
+  },
+  "facts": {
+    "trees": 3040000000000,
+    "treesSource": "Crowther ve ark. 2015, Mapping tree density at a global scale, Nature 525:201–205 (https://www.nature.com/articles/nature14967); Yale News 2015-09-02 (https://news.yale.edu/2015/09/02/seeing-forest-and-trees-all-3-trillion-them)",
+    "plots": "400.000+ orman parseli + uydu görüntüleri",
+    "declinePct": 46,
+    "declineNote": "insan uygarlığının başlangıcından beri (~5,6 trilyondan 3,04 trilyona)",
+    "grossLossPerYear": 15000000000,
+    "stars": [
+      100000000000,
+      400000000000
+    ],
+    "starsSource": "NASA Goddard Blueshift: How many stars are in the Milky Way? (https://asd.gsfc.nasa.gov/blueshift/?p=7791)",
+    "ratioMin": 7.6,
+    "population": 8300000000,
+    "perPerson": 366,
+    "dotUnit": 1000000000
+  },
+  "caption": "Dünya'da mı daha çok ağaç var, Samanyolu'nda mı daha çok yıldız? Cevap ağaçlar; hem de açık farkla.\n\nNASA'ya göre Samanyolu'nda 100 ile 400 milyar arasında yıldız olduğu tahmin ediliyor. 2015'te Nature dergisinde yayımlanan çalışmada bilim insanları 400.000'den fazla orman parselindeki sayımları uydu görüntüleriyle birleştirdi ve Dünya'da yaklaşık 3,04 trilyon ağaç olduğunu hesapladı. Yıldızların üst tahminini alsak bile ağaçlar en az 7 kat fazla. Ağaç sayısını Dünya nüfusuna bölünce her insana yaklaşık 370 ağaç düşüyor.\n\nAynı çalışmaya göre insan uygarlığı başladığından beri ağaç sayısı yaklaşık yüzde 46 azaldı; 2015 verisine göre her yıl 15 milyardan fazla ağaç kayboluyor.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: Crowther ve ark. 2015 (Nature), NASA Goddard.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#uzay",
+    "#ağaç",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "ytTitle": "Dünya'da mı daha çok ağaç var, Samanyolu'nda mı yıldız?"
+}

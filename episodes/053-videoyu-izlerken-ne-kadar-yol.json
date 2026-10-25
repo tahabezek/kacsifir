@@ -1,0 +1,105 @@
+{
+  "id": "053",
+  "slug": "videoyu-izlerken-ne-kadar-yol",
+  "template": "yol",
+  "serial": "№ 053 · KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-10-30T10:00Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+10%",
+    "gaps": {
+      "l01": 0.5,
+      "l02": 0.5,
+      "l03": 0.7,
+      "l04": 0.8,
+      "l05": 1,
+      "l06": 0.8,
+      "l07": 0.9,
+      "l08": 1.5
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Bu videoyu izlerken uzayda ne kadar yol alacaksın?",
+        "text": "Bu videoyu izlerken uzayda ne kadar yol alacaksın?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Şu an hiç kıpırdamadan oturuyorsun.",
+        "text": "Şu an hiç kıpırdamadan oturuyorsun."
+      },
+      {
+        "id": "l03",
+        "tts": "Ama Dünya, Güneş'in etrafında saniyede otuz kilometre hızla dönüyor.",
+        "text": "Ama Dünya, Güneş'in etrafında saniyede 30 kilometre hızla dönüyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Video başladığından beri, İstanbul ile Ankara arası kadar yol aldın bile.",
+        "text": "Video başladığından beri, İstanbul ile Ankara arası kadar yol aldın bile."
+      },
+      {
+        "id": "l05",
+        "tts": "Video bittiğinde bin yüz kilometreden fazla yol almış olacaksın.",
+        "text": "Video bittiğinde 1.100 kilometreden fazla yol almış olacaksın."
+      },
+      {
+        "id": "l06",
+        "tts": "Üstelik Güneş de seni galaksinin merkezi etrafında saniyede iki yüz otuz kilometre hızla taşıyor.",
+        "text": "Üstelik Güneş de seni galaksinin merkezi etrafında saniyede 230 kilometre hızla taşıyor."
+      },
+      {
+        "id": "l07",
+        "tts": "Peki bu hızla, video bitene kadar ne kadar yol alıyorsun?",
+        "text": "Peki bu hızla, video bitene kadar ne kadar yol alıyorsun?",
+        "rate": "+2%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "Neredeyse İstanbul ile Tokyo arası kadar yol alıyorsun.",
+        "text": "Neredeyse İstanbul ile Tokyo arası kadar yol alıyorsun.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Ve bunların hiçbirini hissetmiyorsun.",
+        "text": "Ve bunların hiçbirini hissetmiyorsun.",
+        "pitch": "+2Hz"
+      }
+    ]
+  },
+  "facts": {
+    "earthOrbitKmS": 29.78,
+    "sunGalacticKmS": 230,
+    "sunToGalCenterLy": 26000,
+    "galacticYearMyr": 230,
+    "earthOrbitKm": 940000000,
+    "istAnkKm": 350,
+    "istTokKm": 8944,
+    "filmSec": 38.83,
+    "kmSunFrame": 1156,
+    "kmGalFrame": 8930,
+    "sources": [
+      "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html (mean orbital velocity 29.78 km/s)",
+      "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question18.html (828,000 km/h = 230 km/s; ~230 million years per orbit)",
+      "https://public.nrao.edu/ask/orbital-period-of-the-sun-in-the-milky-way-galaxy/ (~230 km/s)",
+      "https://science.nasa.gov/resource/the-milky-way-galaxy/ (Sun ~26,000 light-years from the center)"
+    ],
+    "note": "Mesafeler d3-geo büyük daire (R = 6371 km): İstanbul–Ankara 350 km, İstanbul–Tokyo 8.944 km. Sayaçlar km = hız × film süresi (sn); iki hareket toplanmadı."
+  },
+  "caption": "Bu videoyu izlerken uzayda ne kadar yol alırsın? Dünya, Güneş'in etrafında saniyede ortalama 29,78 km hızla döner. Bu 38,8 saniyelik video boyunca Güneş'e göre yaklaşık 1.160 km yol alırsın; İstanbul ile Ankara arasındaki 350 km'lik kuş uçuşu mesafeyi daha 12. saniyede geçersin.\n\nGüneş de bütün Güneş Sistemi'ni Samanyolu'nun merkezi etrafında saniyede yaklaşık 230 km hızla taşır; bir turu yaklaşık 230 milyon yıl sürer. Bu hızla video boyunca galaksinin merkezine göre yaklaşık 8.930 km yol alırsın; bu, neredeyse İstanbul ile Tokyo arasındaki 8.944 km'lik kuş uçuşu mesafe kadardır.\n\nNot: İki hareket ayrı ayrı hesaplandı, hızlar birbirine eklenmedi. Dünya'nın kendi ekseni etrafındaki dönüşü (Türkiye'nin enleminde saatte yaklaşık 1.300 km) hesaba katılmadı.\n\nKaç Sıfır? her gün bir sayıyı gözünün önüne getiriyor; takip et.\n\nKaynaklar: NASA Earth Fact Sheet (yörünge hızı), NASA StarChild ve NRAO (Güneş'in galaktik hızı), NASA (Samanyolu).",
+  "hashtags": [
+    "#kaçsıfır",
+    "#uzay",
+    "#dünya",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "ytTitle": "Bu videoyu izlerken uzayda ne kadar yol alacaksın?"
+}

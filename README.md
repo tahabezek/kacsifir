@@ -47,6 +47,7 @@ tools/run.mjs (GitHub Actions, günde 4 kez) ───────────�
 | Elle çalıştırma | Actions → "kacsifir planlayıcı" → Run workflow (`dry` = sadece render) |
 | Yeni bölüm | `episodes/NNN-slug.json` ekle → `npm run render -- episodes/...` → `npm run critique -- ...` → commit |
 | Bir bölümü çıkar | JSON'a `"disabled": true` |
+| Takvim paneli (taşı, yer değiştir, kaldır, not) | `npm run takvim` → http://127.0.0.1:4173 · değişiklikler "Gönder" ile commit + push edilir; notlar `state/notes.json` |
 
 Stok 3 günün altına inince çalıştırma özetinde uyarı çıkar; stok biterse iş kırmızıya düşer
 (GitHub başarısız zamanlanmış işleri e-postayla bildirir).

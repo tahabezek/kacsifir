@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaç Sıfır? Takvim</title>
+<style>
+  :root {
+    --bg: #0d0d0e; --panel: #161618; --panel2: #1d1d20; --line: #2a2a2e; --text: #f2f1ee; --muted: #9b9a96; --dim: #6c6b68;
+    --paper: #efe8da; --accent: #f2f1ee;
+    --c-ozel: #e5484d; --c-hangisi: #f5c518; --c-anlatimli: #3ecfb2; --c-klasik: #9d7bff;
+    --s-hazir: #8b7cf6; --s-render: #8a8984; --s-planlandi: #4c8dff; --s-yayinlandi: #46c37b; --s-basarisiz: #e5484d;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Inter, sans-serif; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto 0; height: 420px; pointer-events: none;
+    background: radial-gradient(1200px 400px at 85% -10%, rgba(120, 60, 20, .22), transparent 70%); }
+  .wrap { max-width: 1680px; margin: 0 auto; padding: 28px 48px 80px; position: relative; }
+  .range { font: 13px/1 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .14em; color: var(--dim); }
+  h1 { margin: 6px 0 22px; font-size: 56px; letter-spacing: -.03em; line-height: 1; }
+  .stats { display: flex; gap: 44px; flex-wrap: wrap; margin-bottom: 26px; }
+  .stat b { font-size: 40px; letter-spacing: -.02em; margin-right: 8px; }
+  .stat span { color: var(--muted); font-size: 18px; }
+  .bar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
+  .tabs { display: flex; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 5px; }
+  .tab { border: 0; background: none; color: var(--muted); font: 600 17px system-ui; padding: 10px 22px; border-radius: 12px; cursor: pointer; }
+  .tab small { color: var(--dim); font-weight: 500; margin-left: 6px; }
+  .tab.on { background: var(--text); color: #111; }
+  .tab.on small { color: #555; }
+  .spacer { flex: 1; }
+  .chip { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 999px; padding: 8px 16px; font: 600 15px system-ui; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+  .chip.on { background: var(--panel2); border-color: #55545a; }
+  .chip.off { opacity: .45; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+  .toggle { color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+  .gitbar { display: none; align-items: center; gap: 14px; background: #2a2316; border: 1px solid #5a4620; color: #f3d9a4; border-radius: 14px; padding: 12px 16px; margin-bottom: 22px; }
+  .gitbar.show { display: flex; }
+  .gitbar code { color: #fff; }
+  .movebar { position: sticky; top: 0; z-index: 5; display: none; align-items: center; gap: 14px; background: #10233f; border: 1px solid #2c5aa0; color: #cfe0ff; border-radius: 14px; padding: 12px 16px; margin-bottom: 18px; }
+  .movebar.show { display: flex; }
+  .btn { border: 1px solid #45444a; background: #232326; color: var(--text); font: 600 14px system-ui; border-radius: 10px; padding: 7px 12px; cursor: pointer; }
+  .btn:hover { background: #2c2c30; }
+  .btn.primary { background: var(--text); color: #111; border-color: var(--text); }
+  .btn.danger { color: #ffb3b5; border-color: #5a2a2c; }
+  .btn:disabled { opacity: .4; cursor: default; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
+  .dayhead { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 12px; margin: 14px 0 -6px; color: var(--muted); }
+  .dayhead b { color: var(--text); font-size: 22px; }
+  .dayhead .today { background: var(--text); color: #111; border-radius: 999px; padding: 3px 12px; font: 700 13px system-ui; }
+  .dayhead .quiet { color: #ffb3b5; font-size: 13px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 26px; padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 10px; position: relative; }
+  .card.now { border-color: #8d8c90; box-shadow: 0 0 0 1px #8d8c90 inset; }
+  .card.past { opacity: .62; }
+  .card.empty { border-style: dashed; background: transparent; min-height: 120px; justify-content: center; align-items: center; color: var(--dim); }
+  .card.target { outline: 2px solid #4c8dff; outline-offset: 3px; cursor: pointer; }
+  .card.target:hover { background: #142238; }
+  .card.moving { outline: 2px dashed #f5c518; outline-offset: 3px; }
+  .chead { display: flex; align-items: baseline; gap: 8px; }
+  .chead b { font-size: 26px; letter-spacing: -.02em; }
+  .chead span { color: var(--muted); font-size: 16px; }
+  .chead .tag { margin-left: auto; font: 600 12px system-ui; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px; }
+  .thumb { aspect-ratio: 9 / 16; border-radius: 18px; background: var(--paper); overflow: hidden; position: relative; cursor: pointer; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .thumb .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; color: #3b372f; font-weight: 700; }
+  .thumb .play { position: absolute; right: 10px; bottom: 10px; background: rgba(0,0,0,.55); color: #fff; border-radius: 999px; padding: 4px 10px; font: 600 12px system-ui; opacity: 0; transition: opacity .15s; }
+  .thumb:hover .play { opacity: 1; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 15px; }
+  .meta span { display: inline-flex; align-items: center; gap: 7px; }
+  .meta .muted { color: var(--muted); }
+  .title { font-size: 19px; font-weight: 600; line-height: 1.3; }
+  .err { color: #ffb3b5; font-size: 13px; }
+  .notes { display: flex; flex-direction: column; gap: 6px; }
+  .note { font-size: 13px; background: #24221c; border: 1px solid #3d3826; color: #eadfbf; border-radius: 10px; padding: 7px 9px; display: flex; gap: 8px; align-items: flex-start; }
+  .note.done { opacity: .45; text-decoration: line-through; }
+  .note input { margin-top: 2px; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+  .locked { color: var(--dim); font-size: 13px; }
+  .list { display: flex; flex-direction: column; gap: 10px; }
+  .row { display: flex; gap: 14px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 12px 16px; }
+  .row img { width: 54px; aspect-ratio: 9/16; border-radius: 8px; object-fit: cover; background: var(--paper); }
+  .row .t { flex: 1; }
+  .row .t small { color: var(--muted); display: block; }
+  dialog { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 20px; padding: 22px; width: min(560px, 92vw); }
+  dialog::backdrop { background: rgba(0,0,0,.6); }
+  dialog textarea { width: 100%; min-height: 120px; background: #0f0f10; color: var(--text); border: 1px solid var(--line); border-radius: 12px; padding: 10px; font: 15px system-ui; }
+  dialog video { width: 100%; max-height: 78vh; border-radius: 14px; background: #000; }
+  .toast { position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%); background: var(--text); color: #111; padding: 10px 16px; border-radius: 12px; font-weight: 600; display: none; z-index: 20; }
+  .toast.err { background: #ffb3b5; }
+  @media (max-width: 700px) { .wrap { padding: 20px 16px 60px; } h1 { font-size: 42px; } .stats { gap: 22px; } .stat b { font-size: 30px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="range" id="range"></div>
+  <h1>Takvim</h1>
+  <div class="stats" id="stats"></div>
+  <div class="gitbar" id="gitbar"><span id="gittext"></span><span class="spacer"></span><button class="btn primary" id="publish">Gönder (commit + push)</button></div>
+  <div class="movebar" id="movebar"><span id="movetext"></span><span class="spacer"></span><button class="btn" id="unpinBtn">Kuyruğa döndür</button><button class="btn" id="cancelMove">Vazgeç</button></div>
+  <div class="bar">
+    <div class="tabs" id="tabs"></div>
+    <label class="toggle"><input type="checkbox" id="showEmpty"> Boş yuvaları göster</label>
+    <label class="toggle"><input type="checkbox" id="showPast"> Geçmiş günler</label>
+    <span class="spacer"></span>
+    <div id="filters" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+  </div>
+  <div id="view"></div>
+</div>
+
+<dialog id="noteDlg">
+  <h3 style="margin:0 0 6px" id="noteTitle"></h3>
+  <div class="locked" style="margin-bottom:12px">Notlar <code>state/notes.json</code> dosyasına yazılır; Claude bir sonraki oturumda açık notları okuyup bölümü günceller.</div>
+  <div class="notes" id="noteList" style="margin-bottom:12px"></div>
+  <textarea id="noteText" placeholder="Ne değişsin? Örn: 12. saniyedeki yazı çok küçük; sesi daha yavaş okusun."></textarea>
+  <div class="actions" style="justify-content:flex-end;margin-top:12px"><button class="btn" data-close>Kapat</button><button class="btn primary" id="noteSave">Notu kaydet</button></div>
+</dialog>
+<dialog id="videoDlg"><video id="video" controls playsinline></video><div class="actions" style="justify-content:flex-end;margin-top:10px"><button class="btn" data-close>Kapat</button></div></dialog>
+<div class="toast" id="toast"></div>
+
+<script>
+const MONTHS = ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
+const DAYS = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];
+const CATS = { ozel: ['Özel gün', 'var(--c-ozel)'], hangisi: ['Hangisi?', 'var(--c-hangisi)'], anlatimli: ['Kaç Sıfır? anlatımlı', 'var(--c-anlatimli)'], klasik: ['Klasik', 'var(--c-klasik)'] };
+const STATES = {
+  hazir: ['Video hazır', 'var(--s-hazir)'], render: ['Render bekliyor', 'var(--s-render)'], planlandi: ["Buffer'da planlandı", 'var(--s-planlandi)'],
+  yayinlandi: ['Yayınlandı', 'var(--s-yayinlandi)'], basarisiz: ['Başarısız', 'var(--s-basarisiz)'], gecti: ['Zamanı geçti', 'var(--s-render)'],
+  bos: ['Boş yuva', 'var(--s-render)'], anma: ['Anma günü', 'var(--c-ozel)'], otomatik: ['Otomatik seçilecek', 'var(--s-render)'],
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const store = { get: (k, d) => { try { return JSON.parse(localStorage.getItem('takvim.' + k)) ?? d; } catch { return d; } }, set: (k, v) => { try { localStorage.setItem('takvim.' + k, JSON.stringify(v)); } catch {} } };
+let plan = null, tab = store.get('tab', 'reels'), cats = new Set(store.get('cats', Object.keys(CATS))), moving = null, noteFor = null;
+$('#showEmpty').checked = store.get('empty', false);
+$('#showPast').checked = store.get('past', false);
+
+const dayLabel = day => { const d = new Date(day + 'T12:00:00Z'); return { n: d.getUTCDate(), m: MONTHS[d.getUTCMonth()], w: DAYS[d.getUTCDay()] }; };
+const todayTR = () => new Date(Date.now() + 3 * 3600e3).toISOString().slice(0, 10);
+function toast(msg, err) { const t = $('#toast'); t.textContent = msg; t.className = 'toast' + (err ? ' err' : ''); t.style.display = 'block'; clearTimeout(t._h); t._h = setTimeout(() => (t.style.display = 'none'), 3200); }
+async function api(name, body) {
+  const r = await fetch('/api/' + name, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body || {}) });
+  const j = await r.json();
+  if (!j.ok) { toast(j.error, true); throw new Error(j.error); }
+  toast(j.message); await load(); return j;
+}
+async function load() { plan = await (await fetch('/api/plan')).json(); render(); }
+
+function render() {
+  const today = todayTR();
+  const future = plan.reels.filter(r => r.day >= today);
+  const first = plan.reels[0]?.day, last = plan.reels.at(-1)?.day;
+  const fl = dayLabel(first), ll = dayLabel(last);
+  $('#range').textContent = `${fl.n} ${fl.m.toLocaleUpperCase('tr')} — ${ll.n} ${ll.m.toLocaleUpperCase('tr')}`;
+  const openNotes = Object.values(plan.notes).flat().filter(n => !n.done).length;
+  const cnt = s => future.filter(r => r.state === s).length;
+  $('#stats').innerHTML = [[future.filter(r => r.episode).length, 'reels'], [cnt('hazir'), 'video hazır'], [cnt('planlandi'), "Buffer'da"], [cnt('render'), 'render bekliyor'], [cnt('bos'), 'boş yuva'], [openNotes, 'açık not']]
+    .map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
+  const g = plan.git;
+  $('#gitbar').classList.toggle('show', g.pending > 0);
+  $('#gittext').innerHTML = `${g.pending} değişiklik henüz gönderilmedi; zamanlayıcı yalnız depodaki hâli görür. <code>${esc(g.files.slice(0, 4).join(', '))}${g.files.length > 4 ? '…' : ''}</code>`;
+  $('#movebar').classList.toggle('show', !!moving);
+  if (moving) $('#movetext').innerHTML = `<b>${moving.id}</b> taşınıyor: boş bir yuvaya tıkla ya da yer değiştirmek istediğin bölüme tıkla.`;
+  $('#unpinBtn').style.display = moving?.publishAt ? '' : 'none';
+
+  $('#tabs').innerHTML = [['reels', 'Reels', future.filter(r => r.episode).length], ['carousel', 'Carousel', plan.carousels.filter(c => c.day >= today).length], ['stock', 'Stok', plan.stock.length]]
+    .map(([k, l, n]) => `<button class="tab ${tab === k ? 'on' : ''}" data-tab="${k}">${l}<small>${n}</small></button>`).join('');
+  $('#filters').innerHTML = `<button class="chip ${cats.size === 4 ? 'on' : ''}" data-cat="all">Tümü</button>` +
+    Object.entries(CATS).map(([k, [l, c]]) => `<button class="chip ${cats.has(k) ? '' : 'off'}" data-cat="${k}"><span class="dot" style="background:${c}"></span>${l}</button>`).join('');
+
+  const view = $('#view');
+  if (tab === 'reels') view.innerHTML = renderReels(today);
+  else if (tab === 'carousel') view.innerHTML = renderCarousels(today);
+  else view.innerHTML = renderStock();
+}
+
+function renderReels(today) {
+  const showEmpty = $('#showEmpty').checked || !!moving, showPast = $('#showPast').checked;
+  const rows = plan.reels.filter(r => (showPast || r.day >= today) && (r.ep ? cats.has(r.ep.category) : showEmpty) && (r.episode || showEmpty || r.state === 'anma' || r.state === 'basarisiz'));
+  let html = '', cur = '';
+  for (const r of rows) {
+    if (r.day !== cur) {
+      cur = r.day; const d = dayLabel(r.day);
+      html += `<div class="dayhead"><b>${d.n} ${d.m}</b><span>${d.w}</span>${r.day === today ? '<span class="today">Bugün</span>' : ''}${r.quiet ? '<span class="quiet">● Anma günü: yalnız sabit bölüm, carousel yok</span>' : ''}</div>`;
+    }
+    html += card(r, today);
+  }
+  return `<div class="grid">${html || '<div class="locked">Gösterilecek bölüm yok.</div>'}</div>`;
+}
+
+function card(r, today) {
+  const d = dayLabel(r.day);
+  const isNow = r.day === today;
+  const canTarget = moving && !r.locked && !['gecti', 'basarisiz', 'yayinlandi', 'planlandi'].includes(r.state) && r.episode !== moving.id;
+  const cls = ['card', isNow ? 'now' : '', r.day < today ? 'past' : '', !r.episode ? 'empty' : '', canTarget ? 'target' : '', moving && r.episode === moving.id ? 'moving' : ''].join(' ');
+  const attrs = canTarget ? `data-target="${r.key}"` : '';
+  if (!r.episode) {
+    const [l] = STATES[r.state] || [r.state];
+    return `<div class="${cls}" ${attrs}><div>${r.time} · ${l}</div>${canTarget ? '<div style="color:#9cc0ff;font-weight:600">Buraya taşı</div>' : ''}</div>`;
+  }
+  const ep = r.ep || { id: r.episode, title: r.episode, category: 'klasik' };
+  const [cl, cc] = CATS[ep.category] || CATS.klasik;
+  const [sl, sc] = STATES[r.state] || [r.state, 'var(--s-render)'];
+  const notes = plan.notes[ep.id] || [];
+  const open = notes.filter(n => !n.done);
+  const tag = r.offGrid ? 'özel saat' : r.how === 'sabit' ? 'sabit tarih' : r.how === 'kuyruk' ? 'kuyruktan' : '';
+  return `<div class="${cls}" ${attrs}>
+    <div class="chead"><b>${d.n}</b><span>${d.m} ${d.w} · ${r.time}</span>${tag ? `<span class="tag">${tag}</span>` : ''}</div>
+    <div class="thumb" data-video="${ep.video ? ep.id : ''}">${ep.video ? `<img loading="lazy" src="/thumb/${ep.id}.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">` : ''}<div class="ph" ${ep.video ? 'style="display:none"' : ''}>${esc(ep.title)}</div>${ep.video ? '<span class="play">▶ İzle</span>' : ''}</div>
+    <div class="meta"><span><span class="dot" style="background:${cc}"></span>${r.time} · ${cl}</span><span class="muted"><span class="dot" style="background:${sc}"></span>${sl}${r.yt ? ' · YouTube ' + (r.yt === 'scheduled' ? 'planlandı' : r.yt) : ''}</span></div>
+    <div class="title">№ ${ep.id} · ${esc(ep.title)}</div>
+    ${r.error ? `<div class="err">${esc(r.error)}</div>` : ''}
+    ${open.length ? `<div class="notes">${open.map(n => `<div class="note">✎ ${esc(n.text)}</div>`).join('')}</div>` : ''}
+    ${moving && r.episode !== moving.id && canTarget ? '<div style="color:#9cc0ff;font-weight:600">Bununla yer değiştir</div>' : ''}
+    <div class="actions">${r.locked
+      ? `<span class="locked">${r.state === 'yayinlandi' ? 'Yayınlandı' : "Buffer'a gönderildi; değiştirmek için önce Buffer'dan silinmeli"}</span><button class="btn" data-note="${ep.id}">Not${notes.length ? ' (' + notes.length + ')' : ''}</button>`
+      : `<button class="btn" data-move="${ep.id}" data-from="${r.key}" data-pub="${ep.publishAt || ''}">Taşı</button><button class="btn" data-note="${ep.id}">Not${notes.length ? ' (' + notes.length + ')' : ''}</button><button class="btn danger" data-remove="${ep.id}">Kaldır</button>`}</div>
+  </div>`;
+}
+
+function renderCarousels(today) {
+  const rows = plan.carousels.filter(c => c.day >= today);
+  return `<div class="grid">${rows.map(c => {
+    const d = dayLabel(c.day); const [sl, sc] = STATES[c.state] || [c.state];
+    return `<div class="card ${c.episode ? '' : 'empty'}"><div class="chead"><b>${d.n}</b><span>${d.m} ${d.w} · ${c.time}</span></div>
+      ${c.ep ? `<div class="title">№ ${c.ep.id} · ${esc(c.ep.title)}</div>` : ''}
+      <div class="meta"><span class="muted"><span class="dot" style="background:${sc}"></span>${sl}</span></div>
+      ${!c.episode && c.state === 'otomatik' ? '<div class="locked">En az 20 saat önce yayınlanmış, puanı en yüksek Reels\'ten otomatik üretilir.</div>' : ''}</div>`;
+  }).join('')}</div>`;
+}
+
+function renderStock() {
+  const R = { kaldirildi: 'Takvimden kaldırıldı', gecmis: 'Sabit tarihi geçti', ileride: 'Takvim aralığının ötesinde', kuyruk: 'Kuyrukta bekliyor' };
+  return `<div class="list">${plan.stock.map(s => `<div class="row">
+    ${s.video ? `<img src="/thumb/${s.id}.jpg" alt="">` : '<img alt="">'}
+    <div class="t"><b>№ ${s.id} · ${esc(s.title)}</b><small>${R[s.reason]}${s.publishAt ? ' · ' + s.publishAt : ''}</small></div>
+    ${s.reason === 'kaldirildi' ? `<button class="btn" data-restore="${s.id}">Geri al</button>` : ''}
+    <button class="btn" data-move="${s.id}" data-from="" data-pub="${s.publishAt || ''}">Takvime ekle</button>
+    <button class="btn" data-note="${s.id}">Not</button></div>`).join('') || '<div class="locked">Stokta bekleyen bölüm yok.</div>'}</div>`;
+}
+
+function openNotes(id) {
+  noteFor = id;
+  const ep = plan.reels.find(r => r.episode === id)?.ep || plan.stock.find(s => s.id === id) || { id, title: '' };
+  $('#noteTitle').textContent = `№ ${id} · ${ep.title}`;
+  $('#noteList').innerHTML = (plan.notes[id] || []).map((n, i) => `<label class="note ${n.done ? 'done' : ''}"><input type="checkbox" data-toggle="${i}" ${n.done ? 'checked' : ''}><span>${esc(n.text)}<br><small style="opacity:.7">${n.at.slice(0, 16).replace('T', ' ')}</small></span></label>`).join('');
+  $('#noteText').value = '';
+  $('#noteDlg').showModal();
+}
+
+document.addEventListener('click', async e => {
+  const t = e.target.closest('[data-tab],[data-cat],[data-move],[data-remove],[data-restore],[data-note],[data-target],[data-video],[data-close],[data-toggle]');
+  if (!t) return;
+  if (t.dataset.tab) { tab = t.dataset.tab; store.set('tab', tab); return render(); }
+  if (t.dataset.cat) {
+    if (t.dataset.cat === 'all') cats = new Set(Object.keys(CATS));
+    else if (cats.size === 4) cats = new Set([t.dataset.cat]);
+    else { cats.has(t.dataset.cat) ? cats.delete(t.dataset.cat) : cats.add(t.dataset.cat); if (!cats.size) cats = new Set(Object.keys(CATS)); }
+    store.set('cats', [...cats]); return render();
+  }
+  if (t.dataset.close !== undefined) return t.closest('dialog').close();
+  if (t.dataset.toggle !== undefined) return api('toggleNote', { id: noteFor, index: Number(t.dataset.toggle) }).then(() => openNotes(noteFor)).catch(() => {});
+  if (t.dataset.move) { moving = { id: t.dataset.move, fromKey: t.dataset.from || null, publishAt: t.dataset.pub || null }; tab = 'reels'; render(); return scrollTo({ top: 0, behavior: 'smooth' }); }
+  if (t.dataset.target) {
+    const target = plan.reels.find(r => r.key === t.dataset.target);
+    const what = target.episode ? `№ ${moving.id} ile № ${target.episode} yer değiştirsin mi?` : `№ ${moving.id}, ${target.day} ${target.time} yuvasına taşınsın mı?`;
+    if (!confirm(what)) return;
+    const m = moving; moving = null;
+    return api('move', { id: m.id, key: target.key, fromKey: m.fromKey }).catch(() => {});
+  }
+  if (t.dataset.remove) { if (confirm(`№ ${t.dataset.remove} takvimden kaldırılsın mı? (Dosya silinmez; Stok sekmesinden geri alınabilir.)`)) api('remove', { id: t.dataset.remove }).catch(() => {}); return; }
+  if (t.dataset.restore) return api('restore', { id: t.dataset.restore }).catch(() => {});
+  if (t.dataset.note) return openNotes(t.dataset.note);
+  if (t.dataset.video) { $('#video').src = `/video/${t.dataset.video}.mp4`; $('#videoDlg').showModal(); $('#video').play().catch(() => {}); }
+});
+$('#videoDlg').addEventListener('close', () => { $('#video').pause(); $('#video').removeAttribute('src'); $('#video').load(); });
+$('#noteSave').onclick = () => api('note', { id: noteFor, text: $('#noteText').value }).then(() => openNotes(noteFor)).catch(() => {});
+$('#cancelMove').onclick = () => { moving = null; render(); };
+$('#unpinBtn').onclick = () => { const m = moving; moving = null; api('unpin', { id: m.id }).catch(() => {}); };
+$('#publish').onclick = () => { if (confirm('Değişiklikler commit edilip GitHub\'a gönderilsin mi? Zamanlayıcı bir sonraki çalışmasında yeni planı uygular.')) api('publish', {}).catch(() => {}); };
+for (const id of ['showEmpty', 'showPast']) $('#' + id).onchange = () => { store.set(id === 'showEmpty' ? 'empty' : 'past', $('#' + id).checked); render(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && moving) { moving = null; render(); } });
+load();
+setInterval(() => { if (!moving && !document.querySelector('dialog[open]')) load(); }, 60000);
+</script>
+</body>
+</html>

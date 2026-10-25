@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "takvim",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["tools/takvim/server.mjs"],
+      "port": 4173
+    }
+  ]
+}

@@ -288,7 +288,8 @@ export function masterAndMux(wav, silentMp4, outMp4) {
   let gainDb = 0;
   for (let k = 0; k < 3; k++) {
     ff(['-y', '-loglevel', 'error', '-i', silentMp4, '-i', wav, '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
-      '-af', af + `,volume=${gainDb}dB,aresample=48000`, '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', outMp4]);
+      // apad: ses videodan kısaysa sonu sessizlikle uzar; -shortest böylece videonun boyunda keser, son kareler kaybolmaz
+      '-af', af + `,volume=${gainDb}dB,aresample=48000,apad`, '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', outMp4]);
     const { TP } = measure(outMp4);
     if (TP == null || TP <= -1.1) break;
     gainDb -= TP + 1.3;

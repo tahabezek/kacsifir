@@ -20,7 +20,7 @@ const U = 34;                       // karınca birimi (dünya px; baş boyu)
 const PERIOD = 1600;                // zemin dokusu periyodu (döngü dikişi)
 const STEP = PERIOD / Math.round(PERIOD / (U * ANT_CARD.stride * 2.2));   // bir yürüme döngüsünde alınan yol; periyodu tam böler (dikişte aynı faz)
 const DH = 90, PLINTH = 165, PLANK = 16;   // sayı rakamı yüksekliği; masa üstü (dünya): karıncalar masanın altından yürür
-const Z0 = 2.8, ZN = 1.25;          // kare 0 yakınlığı ve sayı sahnesi yakınlığı
+const Z0 = 3.3, ZN = 1.25;          // kare 0 yakınlığı ve sayı sahnesi yakınlığı
 const SIF = { x: 872, H: 92 };
 
 export function karincaTimes(tl) {
@@ -32,7 +32,7 @@ export function karincaTimes(tl) {
   };
   // 15 sıfır sessizlikte başlar, 15.'si "on beş"te oturur (~175 ms/sıfır); tam kadraj ve vuruş "gelir"den sonraki boşlukta
   T.z0 = L.l03.end + 0.25; T.z14 = T.on - 0.03; T.z11 = T.z0 + (T.z14 - T.z0) * 11 / 14;
-  T.l04end = L.l04.end; T.hit = L.l04.end + 0.45;
+  T.l04end = L.l04.end; T.hit = L.l04.end + 0.75;   // [l04end, hit): gerçek sessizlik (≥ 0,5 sn)
   T.follow = T.l07end + 0.3;
   return T;
 }
@@ -74,7 +74,8 @@ export async function makeKarincaRenderer(ep, canvas) {
   const zFollow = t => lz(Z0, ZN, ease.state(seg(t, T.l02 - 0.2, heroArrive - T.l02 + 0.2)));
   function camera(t) {
     // 1) karıncayı izle (kare 0 → "yirmi")
-    let z = zFollow(t), x = camFollow(t), g = 1330;
+    const intro = 1 + 0.07 * (1 - spring(t, 170, 26));   // ilk 0,5 sn: hafif geri açılma (dikişte aynı değer)
+    let z = zFollow(t) * intro, x = camFollow(t), g = 1330;
     if (t < heroArrive) return { z, x, g };
     // 2) "20" ve gelen taşıyıcılar
     const xa = camFollow(heroArrive), x2 = CX[1] + 210, u2 = ease.state(seg(t, heroArrive, 1.2));
@@ -85,11 +86,11 @@ export async function makeKarincaRenderer(ep, canvas) {
     const u3 = ease.state(seg(t, T.z0, T.z11 - T.z0));
     z = lz(zb, zMid, u3); x = lerp(xb, xMid, u3); g = lerp(1330, 1290, u3);
     if (t < T.z11) return { z, x, g };
-    const xPush = CX[zeroIdx[13]], u4 = ease.state(seg(t, T.z11, 0.6));
-    z = lz(zMid, zMid * 1.4, u4) * (1 + 0.03 * seg(t, T.z11 + 0.6, T.l04end - T.z11 - 0.6)); x = lerp(xMid, xPush, u4); g = lerp(1290, 1270, u4);
-    if (t < T.l04end) return { z, x, g };
-    const u5 = ease.state(seg(t, T.l04end, T.hit - T.l04end));
-    z = lz(zMid * 1.4 * 1.03, fitZ, u5) * (1 + 0.04 * seg(t, T.hit, T.l05 - 0.35 - T.hit)); x = lerp(xPush, xFit, u5); g = lerp(1270, 1250, u5);
+    const xPush = CX[zeroIdx[13]], tB = T.z14 + 0.15, u4 = ease.state(seg(t, T.z11, tB - T.z11));
+    z = lz(zMid, zMid * 1.4, u4); x = lerp(xMid, xPush, u4); g = lerp(1290, 1270, u4);
+    if (t < tB) return { z, x, g };
+    const u5 = ease.state(seg(t, tB, 0.75)), punch = t >= T.hit ? 0.035 * Math.exp(-(t - T.hit) * 5) : 0;
+    z = lz(zMid * 1.4, fitZ, u5) * (1 + 0.04 * seg(t, tB + 0.75, T.l05 - 0.35 - tB - 0.75) + punch); x = lerp(xPush, xFit, u5); g = lerp(1270, 1250, u5);
     if (t < T.l05 - 0.35) return { z, x, g };
     // 4) insan ve nokta ızgarası (sağa): insan ekranda solda (x ≈ 230), ızgara ortada
     const zP = ZP, k4 = ease.state(seg(t, T.l05 - 0.35, 1.0)), xP = XP;
@@ -97,14 +98,14 @@ export async function makeKarincaRenderer(ep, canvas) {
     if (t < T.l06 - 0.4) return { z, x, g };
     // 5) tahterevalli (merkezi ekranda x 450)
     const zS = 0.85, k5 = ease.state(seg(t, T.l06 - 0.4, 1.0));
-    z = lz(zP * 1.04, zS, k5) * (1 + 0.05 * seg(t, T.l06 + 0.6, T.l07 - T.l06 - 0.9)); x = lerp(xP, SEESAW.x + 90 / zS, k5); g = lerp(1380, 1330, k5);
+    z = lz(zP * 1.04, zS, k5) * (1 + 0.05 * seg(t, T.l06 + 0.6, T.l07 - T.l06 - 0.9)); x = lerp(xP, SEESAW.x + 130 / zS, k5); g = lerp(1380, 1330, k5);
     if (t < T.l07 - 0.3) return { z, x, g };
     // 6) ayakkabının yanından geçen karınca yolu → döngü kadrajı (kare 0 ile aynı: Z0, karınca + 55, zemin 1330)
     const k6 = ease.state(seg(t, T.l07 - 0.3, 1.2)), xs = SHOE.x + 300;
-    z = lz(zS * 1.05, 0.9, k6); x = lerp(SEESAW.x + 90 / zS, xs, k6);
+    z = lz(zS * 1.05, 0.9, k6); x = lerp(SEESAW.x + 130 / zS, xs, k6);
     const k7 = ease.state(seg(t, T.l07 + 1.9, T.loop0 - T.l07 - 1.9));
     if (k7 > 0) { z = lz(0.9, Z0, k7); x = lerp(xs + 60 * seg(t, T.l07 + 0.9, 1.0), loopAntX(t) + 55, k7); }
-    if (t >= T.loop0) { z = Z0; x = loopAntX(t) + 55; }
+    if (t >= T.loop0) { z = Z0 * (1 + 0.07 * ease.state(seg(t, T.loop0 + 0.2, D - T.loop0 - 0.2))); x = loopAntX(t) + 55; }
     return { z, x, g: 1330 };
   }
   const toS = (cam, wx, wy) => [540 + (wx - cam.x) * cam.z, cam.g + wy * cam.z];
@@ -148,7 +149,7 @@ export async function makeKarincaRenderer(ep, canvas) {
   function carriedZero(cam, mouth, col = C.ink, sc = 1) {
     if (!mouth) return;
     const h = DH * cam.z * sc;
-    ctx.save(); ctx.translate(mouth[0] + ADV * cam.z * 0.42 * sc, mouth[1] + h * 0.32); drawZeroGlyph(ctx, h, col); ctx.restore();
+    ctx.save(); ctx.translate(mouth[0] + ADV * cam.z * 0.42 * sc, mouth[1] + h * 0.32); drawZeroGlyph(ctx, h, col, col); ctx.restore();
   }
 
   // ——— araştırma yığını (489 kâğıt) ———
@@ -167,12 +168,6 @@ export async function makeKarincaRenderer(ep, canvas) {
     }
     // yığının kenar çizgileri
     const n = sheetsLanded(t);
-    // yığının tepesinde sayaç etiketi (yığınla birlikte yükselir)
-    if (n > 0 && t < T.l03 + 0.5) {
-      const [tx, ty] = toS(cam, PILE.x, -n * th); const k = ease.enter(seg(t, T.yuz, 0.3)) * (1 - ease.exit(seg(t, T.l03, 0.3)));
-      setFont(ctx, F.name(44)); const s = `${n} ÇALIŞMA`, tw = ctx.measureText(s).width, lx = Math.max(SAFE.x0, Math.min(SAFE.x1 - tw, tx - tw / 2)), ly = Math.max(STAGE_TOP + 70, ty - 26);
-      ctx.save(); ctx.globalAlpha = k; ctx.fillStyle = C.paper; ctx.fillRect(lx - 8, ly - 42, tw + 16, 56); ctx.lineWidth = 2; ctx.strokeStyle = C.ink; ctx.strokeRect(lx - 8, ly - 42, tw + 16, 56); ctx.fillStyle = C.ink; ctx.textAlign = 'left'; ctx.fillText(s, lx, ly); ctx.restore();
-    }
     if (n > 2) { const [lx, ty] = toS(cam, PILE.x - PILE.w / 2 - 7, -n * th), [rx, by] = toS(cam, PILE.x + PILE.w / 2 + 7, 0); ctx.beginPath(); ctx.moveTo(lx, by); ctx.lineTo(lx, ty); ctx.moveTo(rx, by); ctx.lineTo(rx, ty); ctx.lineWidth = 2; ctx.strokeStyle = C.ink; ctx.stroke(); }
   }
 
@@ -294,8 +289,9 @@ export async function makeKarincaRenderer(ep, canvas) {
       ctx.beginPath(); ctx.arc(tx, ty, 4, 0, Math.PI * 2); ctx.fillStyle = C.ink; ctx.fill();
       ctx.fillStyle = C.paper; ctx.fillRect(lx - 6, y - 40, tw + 12, 54); ctx.fillStyle = C.ink; ctx.fillText(s, lx, y); ctx.restore();
     };
-    const kK = ease.enter(seg(t, T.kus - 0.05, 0.4)), kM = ease.enter(seg(t, T.memeli - 0.05, 0.4));
-    lab('KARINCALAR · 12', 800, kA, ax, ay - 90 * z);
+    const lOut = 1 - ease.exit(seg(t, T.l07 - 0.3, 0.3));   // kamera ayrılırken etiketler çıkar
+    const kK = ease.enter(seg(t, T.kus - 0.05, 0.4)) * lOut, kM = ease.enter(seg(t, T.memeli - 0.05, 0.4)) * lOut;
+    lab('KARINCALAR · 12', 800, kA * lOut, ax, ay - 90 * z);
     lab('YABANİ KUŞLAR · 2', 866, kK, bx - 70 * z, by - 100 * z);
     lab('YABANİ MEMELİLER · 7', 932, kM, bx + 62 * z, by - 145 * z);
   }
@@ -311,17 +307,21 @@ export async function makeKarincaRenderer(ep, canvas) {
 
   // ——— Sıfır (zeminde, sağda) ———
   const blinkR = mulberry32(61); const blinks = []; for (let b = 1.4; b < D - 1; b += 2.5 + blinkR() * 3) blinks.push(b);
-  // Sıfır: sayı, insan ve tahterevalli sahnelerinde kadrajdan çıkar (sayı 820 px'e yayılır, nesnelere binmez)
-  const reacts = [[0, 'ayakta', 'notr'], [T.yuz, 'ayakta', 'dusunceli'], [T.l03 - 0.1, 'kosma', 'notr'], [T.l07, 'kosma', 'notr'], [T.l07 + 0.75, 'ayakta', 'saskin'], [T.l07 + 2.2, 'ayakta', 'mutlu'], [T.loop0 + 0.4, 'ayakta', 'notr']];
-  const sifX = t => t < T.l03 ? SIF.x : t < T.l07 ? lerp(SIF.x, 1200, ease.exit(seg(t, T.l03, 0.75))) : lerp(1200, SIF.x, ease.enter(seg(t, T.l07, 0.75)));
+  // Sıfır: hep o anki zemin çizgisinde durur (kaide/hale yok). Sayı sahnesinde (rakamlar 820 px'e yayılır) kadrajdan
+  // koşarak çıkar; kamera insan sahnesine yerleşince sağdan koşarak döner (x 872: ızgaranın altı, kasaların sağı)
+  const TIN = T.l05 + 0.7;
+  const reacts = [[0, 'ayakta', 'notr'], [T.yuz, 'ayakta', 'dusunceli'], [T.l03 - 0.1, 'kosma', 'notr'], [TIN, 'kosma', 'notr'], [TIN + 0.55, 'ayakta', 'sayiyor'],
+    [T.l06, 'ayakta', 'dusunceli'], [T.agir, 'sasirma', 'saskin'], [T.agir + 1.2, 'ayakta', 'mutlu'],
+    [T.l07 + 0.7, 'ayakta', 'saskin'], [T.l07 + 2.2, 'ayakta', 'mutlu'], [T.loop0 + 0.4, 'ayakta', 'notr']];
+  const sifX = t => t < T.l03 ? SIF.x : t < TIN ? lerp(SIF.x, 1200, ease.exit(seg(t, T.l03, 0.75))) : lerp(1200, SIF.x, ease.enter(seg(t, TIN, 0.55)));
   function sifir(t, cam) {
     let i = 0; for (let k = 0; k < reacts.length; k++) if (t >= reacts[k][0]) i = k;
     const cur = reacts[i], prev = reacts[Math.max(0, i - 1)], u = i === 0 ? 1 : ease.state(seg(t, cur[0], 0.28));
     const expr = { ...SIFIR_CARD.expressions[u < 0.5 ? prev[2] : cur[2]] };
     if (blinks.some(b => t >= b && t < b + 0.12)) expr.eye = 'closed';
     const x = sifX(t); if (x > W + 80) return;
-    const y = Math.min(1412, cam.g), exiting = t >= T.l03 && t < T.l07;
-    ctx.save(); ctx.translate(x, y); drawSifir(ctx, SIFIR_CARD, mixPose(POSES[prev[1]], POSES[cur[1]], u), expr, SIF.H, { facing: exiting ? 1 : -1 }); ctx.restore();
+    const facing = t >= T.l03 && t < TIN ? 1 : -1;
+    ctx.save(); ctx.translate(x, cam.g); drawSifir(ctx, SIFIR_CARD, mixPose(POSES[prev[1]], POSES[cur[1]], u), expr, SIF.H, { facing }); ctx.restore();
   }
 
   // ——— üst blok ———
@@ -363,8 +363,8 @@ export async function makeKarincaRenderer(ep, canvas) {
     const pin = t < T.loop0 ? 1 : ease.enter(seg(t, T.loop0 + 0.3, 0.45));
     const pout = t < T.loop0 ? 1 - ease.exit(seg(t, L.l02.t0 - 0.3, 0.25)) : 1;
     const k = Math.min(pin, pout); if (k <= 0) return;
-    // maske alt payı +12 px: kuyruklu harfler (ç, y) geçişte kesilmez
-    const rev = (s, y) => { const lh = 112 * 1.26 + 12; ctx.save(); ctx.beginPath(); ctx.rect(SAFE.x0 - 4, y - 112 * 0.98, 1000, lh + 2); ctx.clip(); ctx.fillStyle = C.ink; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.fillText(s, SAFE.x0, y + (1 - k) * lh); ctx.restore(); };
+    // maske yok: opaklık + 24 px kayma (kuyruklu harfler hiç kesilmez)
+    const rev = (s, y) => { ctx.save(); ctx.globalAlpha = k; ctx.fillStyle = C.ink; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.fillText(s, SAFE.x0, y + (1 - k) * 24); ctx.restore(); };
     setFont(ctx, F.head(112)); rev('Dünyada kaç', 500); rev('karınca var?', 620);
   }
   function row({ label, num, unit, right1, red = false, p = 1 }) {

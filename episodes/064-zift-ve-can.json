@@ -1,0 +1,200 @@
+{
+  "id": "064",
+  "slug": "zift-ve-can",
+  "template": "zift",
+  "serial": "№ 064 · HANGİSİ?",
+  "bpm": 92,
+  "coverAt": 0,
+  "publishAt": "2026-11-14T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.4,
+      "l05": 0.45,
+      "l06": 0.4,
+      "l06b": 0.4,
+      "l07": 1.2,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.4,
+      "l11": 0.4,
+      "l11b": 0.4,
+      "l12": 0.4,
+      "l13": 0.8,
+      "l14": 0.35,
+      "l15": 0.45,
+      "l16": 0.75,
+      "l17": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Bin dokuz yüz yirmi yedide Avustralya'da bir fizik profesörü, ısıttığı zifti bir huniye döküyor.",
+        "text": "1927'de Avustralya'da bir fizik profesörü, ısıttığı zifti bir huniye döküyor."
+      },
+      {
+        "id": "l03",
+        "tts": "Bu zift o kadar sert ki çekiçle vurunca kırılıyor.",
+        "text": "Bu zift o kadar sert ki çekiçle vurunca kırılıyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Profesör üç yıl bekliyor, sonra huninin ucunu kesiyor.",
+        "text": "Profesör 3 yıl bekliyor, sonra huninin ucunu kesiyor."
+      },
+      {
+        "id": "l05",
+        "tts": "İlk damla ancak sekiz yıl sonra düşüyor.",
+        "text": "İlk damla ancak 8 yıl sonra düşüyor.",
+        "rate": "+4%",
+        "pitch": "-1Hz"
+      },
+      {
+        "id": "l06",
+        "tts": "Bugüne kadar bir damlanın koptuğu anı kimse görmedi.",
+        "text": "Bugüne kadar bir damlanın koptuğu anı kimse görmedi."
+      },
+      {
+        "id": "l06b",
+        "tts": "İki binde damlayı çekmesi gereken kamera tam o sırada arızalandı.",
+        "text": "2000'de damlayı çekmesi gereken kamera tam o sırada arızalandı."
+      },
+      {
+        "id": "l07",
+        "tts": "Neredeyse yüz yılda düşen damla sayısı yalnızca dokuz.",
+        "text": "Neredeyse 100 yılda düşen damla sayısı yalnızca 9."
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu çan mı?",
+        "text": "Yoksa bu çan mı?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Oksford Üniversitesinde, cam bir fanusun altında iki küçük çan duruyor.",
+        "text": "Oxford Üniversitesi'nde, cam bir fanusun altında iki küçük çan duruyor."
+      },
+      {
+        "id": "l10",
+        "tts": "Yanındaki notta, bin sekiz yüz kırkta kuruldu, yazıyor.",
+        "text": "Yanındaki notta \"1840'ta kuruldu\" yazıyor."
+      },
+      {
+        "id": "l11",
+        "tts": "Aradaki minik bilye, o günden beri aynı pille neredeyse hiç durmadan sallanıyor.",
+        "text": "Aradaki minik bilye, o günden beri aynı pille neredeyse hiç durmadan sallanıyor."
+      },
+      {
+        "id": "l11b",
+        "tts": "Çıkardığı ses o kadar zayıf ki camın ardından neredeyse duyulmuyor.",
+        "text": "Çıkardığı ses o kadar zayıf ki camın ardından neredeyse duyulmuyor."
+      },
+      {
+        "id": "l12",
+        "tts": "Pilin içinde tam olarak ne olduğunu kimse bilmiyor, çünkü onu açmak deneyi bitirebilir.",
+        "text": "Pilin içinde tam olarak ne olduğunu kimse bilmiyor, çünkü onu açmak deneyi bitirebilir."
+      },
+      {
+        "id": "l13",
+        "tts": "Bu çan şimdiye kadar on milyardan fazla kez çaldı.",
+        "text": "Bu çan şimdiye kadar 10 milyardan fazla kez çaldı."
+      },
+      {
+        "id": "l14",
+        "tts": "Peki ikisini aynı saatle ölçersek?",
+        "text": "Peki ikisini aynı saatle ölçersek?"
+      },
+      {
+        "id": "l15",
+        "tts": "Zift ortalama dokuz yılda bir damlıyor.",
+        "text": "Zift ortalama 9 yılda bir damlıyor.",
+        "rate": "+2%"
+      },
+      {
+        "id": "l16",
+        "tts": "O tek damla düşene kadar çan yaklaşık",
+        "text": "O tek damla düşene kadar çan yaklaşık",
+        "rate": "-2%",
+        "pitch": "-1Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "yarım milyar kez çalıyor.",
+        "text": "yarım milyar kez çalıyor.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l18",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "zift": {
+      "place": "University of Queensland, Brisbane",
+      "start": 1927,
+      "stemCut": 1930,
+      "by": "Prof. Thomas Parnell",
+      "drops": [
+        1938.92,
+        1947.12,
+        1954.29,
+        1962.37,
+        1970.62,
+        1979.29,
+        1988.54,
+        2000.91,
+        2014.31
+      ],
+      "dropsNote": "Ara 1938, Şub 1947, Nis 1954, May 1962, Ağu 1970, Nis 1979, Tem 1988, 28 Kas 2000, Nis 2014 (UQ, Wikipedia)",
+      "tenthDrop": "Ekim 2026 itibarıyla düşmedi; UQ '2020'lerde' bekliyor",
+      "witnessed": "UQ: 'Various glitches have prevented anyone from seeing a drop fall'",
+      "hammer": "UQ: oda sıcaklığında 'can easily be shattered with a hammer'",
+      "perDropYears": 9.33,
+      "guinness": "longest-running laboratory experiment"
+    },
+    "can": {
+      "place": "Clarendon Laboratory, University of Oxford",
+      "note": "Robert Walker'ın el yazısı notu: 'Set up in 1840'",
+      "rings": "Smithsonian (Oxford Fizik'e bağlantı): 'over 10 billion times'; Wikipedia: 'approximately 10 billion rings since 1840'",
+      "hz": 2,
+      "pileUnknown": "Wikipedia: 'The exact composition of the dry piles is unknown'",
+      "notOpened": "Smithsonian: açmak 'ruin an experiment to see how long it will last'",
+      "guinness": "world's most durable battery"
+    },
+    "compare": {
+      "perDropYears": "84 yıl / 9 damla = 9,33 yıl",
+      "ringsPerDrop": "2 Hz ile 9,33 yılda yaklaşık 589 milyon; 10 milyar / 186 yıl ile yaklaşık 502 milyon -> 'yaklaşık yarım milyar'"
+    },
+    "verify": [
+      "10. damla düştü mü? (yayın günü UQ The Tenth Watch)",
+      "Çanın sayımı ve 2 Hz (Oxford Physics sayfası)"
+    ]
+  },
+  "caption": "Hangisi daha şaşırtıcı?\n\nQueensland Üniversitesi'nde fizik profesörü Thomas Parnell 1927'de ısıttığı zifti bir huniye döktü, üç yıl bekledi ve 1930'da huninin ucunu kesti. Zift oda sıcaklığında çekiçle kırılacak kadar sert. İlk damla 1938'de düştü; o günden bu yana yalnızca 9 damla düştü, sonuncusu Nisan 2014'te. Aksilikler yüzünden bir damlanın koptuğu anı bugüne kadar kimse görmedi. Guinness'e göre dünyanın en uzun süre çalışan laboratuvar deneyi.\n\nOxford Üniversitesi'nin Clarendon Laboratuvarı'nda, cam altında duran Oxford Elektrikli Çanı'nın yanındaki el yazısı notta \"Set up in 1840\" (1840'ta kuruldu) yazıyor. İki kuru pil, iki küçük çanın arasındaki bilyeyi o günden beri neredeyse hiç durmadan sallıyor (yalnızca çok nemli havalarda zaman zaman susuyor). Pillerin içinde tam olarak ne olduğu bilinmiyor; onları açmak deneyi bitirebilir. Çanın 10 milyardan fazla kez çaldığı söyleniyor. Guinness onu \"dünyanın en dayanıklı pili\" olarak listeliyor.\n\nAynı saatle: 1930'dan 2014'e 84 yılda 9 damla, yani ortalama 9,3 yılda bir damla. Bilye saniyede yaklaşık 2 kez çana vuruyor; 9,3 yılda çan yaklaşık 500–590 milyon kez çalar. Yani tek bir zift damlası düşene kadar çan yaklaşık yarım milyar kez çalıyor.\n\nSen hangisine şaşırdın? Yorumlara ZİFT ya da ÇAN yaz.\n\nHer hafta yeni bir \"Hangisi?\" için Kaç Sıfır?'ı takip et.\n\nKaynaklar: University of Queensland (Pitch Drop Experiment), Smithsonian Magazine (2015), Wikipedia (Pitch drop experiment, Oxford Electric Bell), Guinness World Records.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#hangisi",
+    "#ilginçbilgiler",
+    "#bilim",
+    "#fizik"
+  ],
+  "ytTitle": "100 yılda 9 damla mı, 186 yıldır çalan çan mı?"
+}

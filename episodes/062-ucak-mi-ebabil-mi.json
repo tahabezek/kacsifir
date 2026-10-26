@@ -1,0 +1,93 @@
+{
+  "id": "062",
+  "slug": "ucak-mi-ebabil-mi",
+  "template": "ucus",
+  "serial": "№ 062 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-12T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.4,
+      "l05": 0.4,
+      "l06": 0.45,
+      "l07": 1.2,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.4,
+      "l11": 0.4,
+      "l12": 0.4,
+      "l13": 0.8,
+      "l14": 0.35,
+      "l15": 0.5,
+      "l16": 0.8,
+      "l17": 0.6
+    },
+    "lines": [
+      { "id": "l01", "tts": "Hangisi daha şaşırtıcı?", "text": "Hangisi daha şaşırtıcı?", "rate": "+8%", "pitch": "+3Hz" },
+      { "id": "l02", "tts": "Bin dokuz yüz elli sekiz Aralık'ında iki adam, Las Vegas'tan küçük bir Sesna ile havalanıyor.", "text": "Aralık 1958'de iki adam, Las Vegas'tan küçük bir Cessna ile havalanıyor." },
+      { "id": "l03", "tts": "Amaçları, yere hiç inmeden olabildiğince uzun süre uçmak.", "text": "Amaçları, yere hiç inmeden olabildiğince uzun süre uçmak." },
+      { "id": "l04", "tts": "Yakıtı, alçaktan geçerken yoldaki bir kamyondan hortum ile alıyorlar.", "text": "Yakıtı, alçaktan geçerken yoldaki bir kamyondan hortum ile alıyorlar." },
+      { "id": "l05", "tts": "Yemek ve banyo suyu bile aynı yoldan yukarı çıkıyor.", "text": "Yemek ve banyo suyu bile aynı yoldan yukarı çıkıyor." },
+      { "id": "l06", "tts": "Otuz altıncı gün pilotlardan biri uyuyakalıyor; uçağı bir saatten uzun süre otomatik pilot uçuruyor.", "text": "36. gün pilotlardan biri uyuyakalıyor; uçağı bir saatten uzun süre otomatik pilot uçuruyor." },
+      { "id": "l07", "tts": "Ve tam altmış dört gün yirmi iki saat sonra yere iniyorlar.", "text": "Ve tam 64 gün 22 saat sonra yere iniyorlar.", "rate": "+2%", "pitch": "-2Hz" },
+      { "id": "l08", "tts": "Yoksa bu kuş mu?", "text": "Yoksa bu kuş mu?", "rate": "+4%", "pitch": "+3Hz" },
+      { "id": "l09", "rate": "+8%", "tts": "Ebabil; yalnızca kırk gram gelen küçük bir kuş.", "text": "Ebabil, yalnızca 40 gram gelen küçük bir kuş." },
+      { "id": "l10", "tts": "İsveçli bilim insanları, ebabillerin sırtına minik kayıt cihazları takıyor.", "text": "İsveçli bilim insanları, ebabillerin sırtına minik kayıt cihazları takıyor." },
+      { "id": "l11", "tts": "Kuşlar Afrika'ya göç ediyor ve bütün kışı gökyüzünde geçiriyor.", "text": "Kuşlar Afrika'ya göç ediyor ve bütün kışı gökyüzünde geçiriyor." },
+      { "id": "l12", "tts": "Havada avlanıyorlar; nasıl uyu dukları bile tam bilinmiyor.", "text": "Havada avlanıyorlar; nasıl uyudukları bile tam bilinmiyor." },
+      { "id": "l13", "tts": "Cihazlara göre bazıları yaklaşık on ay boyunca bir kez bile yere inmiyor.", "text": "Cihazlara göre bazıları yaklaşık 10 ay boyunca bir kez bile yere inmiyor.", "rate": "+6%", "pitch": "-1Hz" },
+      { "id": "l14", "tts": "Peki ikisini aynı takvime koyarsak?", "text": "Peki ikisini aynı takvime koyarsak?" },
+      { "id": "l15", "tts": "İnsanın rekoru yaklaşık altmış beş gün; ebabilin havadaki on ayı ise yaklaşık üç yüz gün.", "text": "İnsanın rekoru yaklaşık 65 gün; ebabilin havadaki 10 ayı ise yaklaşık 300 gün." },
+      { "id": "l16", "tts": "Yani kırk gramlık bir kuş, bu rekorun", "text": "Yani 40 gramlık bir kuş, bu rekorun", "rate": "+0%" },
+      { "id": "l17", "tts": "neredeyse beş katı havada kalıyor.", "text": "neredeyse 5 katı havada kalıyor.", "rate": "-6%", "pitch": "-2Hz" },
+      { "id": "l18", "tts": "Sen hangisine şaşırdın?", "text": "Sen hangisine şaşırdın?", "rate": "+4%", "pitch": "+3Hz" }
+    ]
+  },
+  "facts": {
+    "hacienda": {
+      "takeoff": "1958-12-04, McCarran Havalimanı, Las Vegas",
+      "landing": "1959-02-07, McCarran",
+      "duration": "64 gün 22 saat 19 dakika 5 saniye",
+      "pilots": "Robert Timm (eski II. Dünya Savaşı pilotu, Hacienda otelinde slot makinesi tamircisi) ve John Cook (uçak teknisyeni, yardımcı pilot)",
+      "aircraft": "değiştirilmiş Cessna 172 (N9217B)",
+      "refuel": "California–Arizona sınırında düz bir yol üstünde; uçak tutunma kaybı hızının hemen üstünde alçaktan geçerken kamyon vinçle hortumu uzatıyor, pompayla yakıt aktarılıyor; bazen gece",
+      "supplies": "yemekler termosla; iki günde bir yaklaşık bir litre banyo suyu",
+      "day36": "36. gün Timm uyuyakaldı, uçağı bir saatten uzun süre otopilot uçurdu",
+      "distanceKm": 241000,
+      "record": "kayıtlara göre hâlâ kırılmadı; 2022'de insansız Zephyr yaklaşık 4 saat eksik kaldı"
+    },
+    "swift": {
+      "species": "ebabil (Apus apus)",
+      "massG": 40,
+      "study": "Hedenström ve ark., Current Biology 26 (2016), Lund Üniversitesi",
+      "tracked": 13,
+      "neverLanded": 3,
+      "airborne": "üreme dışındaki ~10 ayda zamanın %99'undan fazlası havada",
+      "winter": "Sahra altı Afrika",
+      "previousRecord": "Alp ebabili, yaklaşık 200 gün",
+      "sleep": "kesin bilinmiyor; şafak ve alacakaranlık yükselişlerinde kısa uykular olabilir"
+    },
+    "compare": "10 ay yaklaşık 300 gün (304); 300 / 64,9 = 4,6; anlatımda neredeyse 5 katı",
+    "sources": [
+      "https://doi.org/10.1016/j.cub.2016.09.014",
+      "https://www.audubon.org/magazine/common-swift-new-record-holder-longest-uninterrupted-flight",
+      "https://abc17news.com/entertainment/cnn-style/2023/01/24/the-worlds-longest-flight-spent-more-than-two-months-in-the-air/",
+      "https://planeandpilotmag.com/hacienda-a-legendary-modified-cessna-172/"
+    ]
+  },
+  "caption": "Hangisi daha şaşırtıcı?\n\n4 Aralık 1958'de Robert Timm ve John Cook, değiştirilmiş bir Cessna 172 ile Las Vegas'tan havalandı. Yakıtı, California–Arizona sınırındaki düz bir yolun üstünden alçaktan geçerken yerdeki bir kamyondan hortumla aldılar; yemekler termoslarla, banyo suyu iki günde bir aynı yoldan geldi. 36. gün Timm uyuyakaldı ve uçağı bir saatten uzun süre otomatik pilot uçurdu. 7 Şubat 1959'da, 64 gün 22 saat 19 dakika sonra indiler. Bu, insanlı bir uçağın yere inmeden en uzun süre havada kaldığı uçuş; kayıtlara göre rekor hâlâ kırılmadı.\n\nEbabil yaklaşık 40 gram ağırlığında. Lund Üniversitesi'nin 2016'da Current Biology'de yayımlanan çalışmasında 13 ebabile minik kayıt cihazı takıldı. Kuşlar, kışı Sahra altı Afrika'da geçirdikleri yaklaşık 10 aylık dönemde zamanlarının %99'undan fazlasını havada geçirdi; izlenen kuşlardan 3'ü bu sürede bir kez bile yere inmedi. Nasıl uyudukları hâlâ kesin bilinmiyor.\n\nHesap: 10 ay ≈ 300 gün. 300 ÷ 65 ≈ 4,6. Yani 40 gramlık bir kuş, insan rekorunun neredeyse 5 katı süre havada kalıyor.\n\nSen hangisine şaşırdın? Yorumlara UÇAK ya da EBABİL yaz.\n\nKaç Sıfır? her hafta yeni bir Hangisi? getiriyor; takip et.\n\nKaynaklar: Hedenström ve ark., \"Annual 10-Month Aerial Life Phase in the Common Swift Apus apus\", Current Biology 26 (2016), doi:10.1016/j.cub.2016.09.014; Audubon (Kasım 2016); CNN Style, \"The world's longest flight\" (Ocak 2023); Plane & Pilot, \"Hacienda: A Legendary Modified Cessna 172\".",
+  "hashtags": [
+    "#kaçsıfır",
+    "#hangisi",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#havacılık"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? 65 gün inmeyen uçak mı, 10 ay inmeyen kuş mu?"
+}

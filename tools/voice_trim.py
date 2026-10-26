@@ -7,6 +7,8 @@ import json, os, subprocess, sys
 import numpy as np
 
 MAX_GAP, KEEP, EDGE, SR, WIN = 0.40, 0.30, 0.05, 44100, 441
+# baştaki/sondaki bırakılan sessizlik ortamdan değiştirilebilir (yumuşak başlayan ünlüler kırpılmasın): TRIM_EDGE=0.12
+EDGE = float(os.environ.get('TRIM_EDGE', EDGE))
 FF = os.path.join('node_modules', 'ffmpeg-static', 'ffmpeg.exe' if os.name == 'nt' else 'ffmpeg')
 ep = json.load(open(sys.argv[1], encoding='utf-8'))
 out = os.path.join('assets', 'voice', ep['id']); wf = os.path.join(out, 'words.json')

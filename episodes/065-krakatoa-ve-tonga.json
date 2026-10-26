@@ -1,0 +1,180 @@
+{
+  "id": "065",
+  "slug": "krakatoa-ve-tonga",
+  "template": "dalga",
+  "serial": "№ 065 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-15T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.6,
+      "l05": 0.4,
+      "l06": 0.6,
+      "l07": 1.2,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.4,
+      "l11": 0.4,
+      "l12": 0.4,
+      "l13": 1,
+      "l14": 0.35,
+      "l15": 0.5,
+      "l16": 1,
+      "l17": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Yirmi yedi Ağustos bin sekiz yüz seksen üç sabahı, Endonezya'daki Kra-ka-toa yanardağı patlıyor.",
+        "text": "27 Ağustos 1883 sabahı, Endonezya'daki Krakatoa yanardağı patlıyor."
+      },
+      {
+        "id": "l03",
+        "tts": "Bu patlamanın basınç dalgası günlerce Dünya'nın çevresinde dolaşıyor.",
+        "text": "Bu patlamanın basınç dalgası günlerce Dünya'nın çevresinde dolaşıyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Dünyanın dört bir yanında elliyi aşkın istasyon bu dalgayı kaydediyor.",
+        "text": "Dünyanın dört bir yanında 50'yi aşkın istasyon bu dalgayı kaydediyor."
+      },
+      {
+        "id": "l05",
+        "tts": "Saatler sonra, Hint Okyanusu'ndaki Rodrigez Adası'nda insanlar uzaktan top sesi geldiğini sanıyor.",
+        "text": "Saatler sonra, Hint Okyanusu'ndaki Rodrigues Adası'nda insanlar uzaktan top sesi geldiğini sanıyor."
+      },
+      {
+        "id": "l06",
+        "tts": "Oysa duydukları ses, okyanusun öbür ucundaki yanardağdan geliyor.",
+        "text": "Oysa duydukları ses, okyanusun öbür ucundaki yanardağdan geliyor."
+      },
+      {
+        "id": "l07",
+        "tts": "Rodrigez ile yanardağ arasında yaklaşık dört bin sekiz yüz kilometre var.",
+        "text": "Rodrigues ile yanardağ arasında yaklaşık 4.800 kilometre var."
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu yanardağ mı?",
+        "text": "Yoksa bu yanardağ mı?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "On beş Ocak iki bin yirmi ikide, Tonga açıklarında denizin altındaki bir yanardağ patlıyor.",
+        "text": "15 Ocak 2022'de, Tonga açıklarında denizin altındaki bir yanardağ patlıyor."
+      },
+      {
+        "id": "l10",
+        "tts": "Bilim insanları, basınç dalgasını Krakatoa'nınkiyle aynı büyüklükte ölçüyor.",
+        "text": "Bilim insanları, basınç dalgasını Krakatoa'nınkiyle aynı büyüklükte ölçüyor."
+      },
+      {
+        "id": "l11",
+        "tts": "Bu dalga altı günde Dünya'nın çevresini dört kez dolaşıyor.",
+        "text": "Bu dalga 6 günde Dünya'nın çevresini 4 kez dolaşıyor."
+      },
+      {
+        "id": "l12",
+        "tts": "Gümbürtüler ise, ta Alaska'da insanların kulağına ulaşıyor.",
+        "text": "Gümbürtüler ise, ta Alaska'da insanların kulağına ulaşıyor."
+      },
+      {
+        "id": "l13",
+        "tts": "Tonga ile Alaska arasında yaklaşık on bin kilometre var.",
+        "text": "Tonga ile Alaska arasında yaklaşık 10.000 kilometre var."
+      },
+      {
+        "id": "l14",
+        "tts": "Peki iki sesi yan yana koyarsak?",
+        "text": "Peki iki sesi yan yana koyarsak?"
+      },
+      {
+        "id": "l15",
+        "tts": "Krakatoa'nın sesi dört bin sekiz yüz kilometre öteden duyuldu.",
+        "text": "Krakatoa'nın sesi 4.800 kilometre öteden duyuldu.",
+        "rate": "+2%"
+      },
+      {
+        "id": "l16",
+        "tts": "Tonga'nın sesi ise bunun yaklaşık",
+        "text": "Tonga'nın sesi ise bunun yaklaşık",
+        "rate": "-2%",
+        "pitch": "-1Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "iki katı uzağa ulaştı.",
+        "text": "2 katı uzağa ulaştı.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l18",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "krakatoa": {
+      "date": "1883-08-27, en büyük patlama yerel saatle 10.02",
+      "lonlat": [
+        105.423,
+        -6.102
+      ],
+      "heardAt": "Rodrigues Adası (Mauritius), 'uzaktan gelen ağır top sesi' gibi; polis şefi James Wallis'in raporu",
+      "rodrigues": [
+        63.42,
+        -19.72
+      ],
+      "distanceKm": 4781,
+      "pressureWave": "her yönde 3–4 tur, 5 güne kadar; 50'yi aşkın istasyonun barografı (Nautilus: 50 kent; Gabrielson/Royal Society 1888)",
+      "note": "ölü sayısı anlatımda yok; caption'da tek saygılı cümle"
+    },
+    "tonga": {
+      "date": "2022-01-15 (14 Ocak patlaması bacayı deniz altına indirdi)",
+      "lonlat": [
+        -175.39,
+        -20.55
+      ],
+      "heardAt": "Alaska, eyaletin dört bir yanında; yaklaşık 10.000 km (6.200 mil, NSF/UAF); işaret Fairbanks, Tonga'ya 9.786 km",
+      "alaskaCheck": "Tonga–Fairbanks 9.786 km, Tonga–Utqiağvik 10.312 km (büyük daire)",
+      "lambWave": "6 günde bir yönde 4, karşı yönde 3 geçiş (Matoza ve ark., Science 2022)",
+      "size": "1883 Krakatoa'dan beri bir yanardağdan kaydedilen en güçlü atmosfer dalgaları; büyüklükte Krakatoa ile aynı sınıf"
+    },
+    "ratio": "10.000 / 4.800 = yaklaşık 2,1 (Fairbanks ile 9.786 / 4.781 = 2,05): yaklaşık 2 katı",
+    "sources": [
+      "https://doi.org/10.1126/science.abo7063",
+      "https://www.nsf.gov/news/tonga-volcano-eruptions-echoes-heard-6200-miles-away",
+      "https://nautil.us/the-sound-so-loud-that-it-circled-the-earth-four-times-235101/",
+      "https://www.montana.edu/rmaher/eele217_sp12/krakatoa_sound_2010.pdf",
+      "https://enn.com/articles/70327-hunga-volcano-eruption-provides-an-explosion-of-data"
+    ]
+  },
+  "caption": "Hangisi daha şaşırtıcı?\n\n27 Ağustos 1883 sabahı Endonezya'daki Krakatoa yanardağı patladı. Basınç dalgası günlerce Dünya'nın çevresini dolaştı ve dünyanın dört bir yanında 50'yi aşkın istasyonun barometresine kaydedildi. Patlamanın sesi yaklaşık 4.800 km ötede, Hint Okyanusu'ndaki Rodrigues Adası'nda uzaktan gelen top sesi gibi duyuldu. Patlama ve ardından gelen dev dalgalar on binlerce insanın hayatına mal oldu.\n\n15 Ocak 2022'de Tonga açıklarındaki Hunga Tonga–Hunga Haʻapai yanardağı denizin altından patladı. Science dergisinde yayımlanan araştırmaya göre basınç dalgası 6 günde Dünya'nın çevresini 4 kez dolaştı ve büyüklüğü Krakatoa'nınkiyle aynı sınıftaydı. Gümbürtüler yaklaşık 10.000 km ötede, Alaska'nın dört bir yanında duyuldu.\n\nHesap: 10.000 ÷ 4.800 = yaklaşık 2,1. Tonga'nın sesi, Krakatoa'nınkinin yaklaşık 2 katı uzağa ulaştı.\n\nSen hangisine şaşırdın? Yorumlara KRAKATOA ya da TONGA yaz.\n\nKaç Sıfır? her hafta yeni bir Hangisi? getiriyor; takip et.\n\nKaynaklar: Matoza ve ark., \"Atmospheric waves and global seismoacoustic observations of the January 2022 Hunga eruption, Tonga\", Science 377 (2022); NSF, \"Tonga volcano eruption's echoes heard 6,200 miles away\" (2022); Gabrielson, \"Krakatoa and the Royal Society\", Acoustics Today (2010); Nautilus, \"The Sound So Loud That It Circled the Earth Four Times\".",
+  "hashtags": [
+    "#kaçsıfır",
+    "#hangisi",
+    "#ilginçbilgiler",
+    "#yanardağ",
+    "#krakatoa"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? 4.800 km'den duyulan Krakatoa mı, 10.000 km'den duyulan Tonga mı?"
+}

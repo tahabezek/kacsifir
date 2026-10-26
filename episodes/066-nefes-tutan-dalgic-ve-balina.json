@@ -1,0 +1,182 @@
+{
+  "id": "066",
+  "slug": "nefes-tutan-dalgic-ve-balina",
+  "template": "nefes",
+  "serial": "№ 066 · HANGİSİ?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-16T17:30Z",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+12%",
+    "gaps": {
+      "l01": 0.25,
+      "l02": 0.4,
+      "l03": 0.4,
+      "l04": 0.5,
+      "l05": 0.4,
+      "l06": 0.4,
+      "l07": 1.1,
+      "l08": 0.15,
+      "l09": 0.4,
+      "l10": 0.5,
+      "l11": 0.4,
+      "l12": 0.5,
+      "l13": 0.4,
+      "l13b": 0.8,
+      "l14": 0.35,
+      "l15": 0.6,
+      "l16": 0.8,
+      "l16b": 0.6
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "tts": "Hangisi daha şaşırtıcı?",
+        "text": "Hangisi daha şaşırtıcı?",
+        "rate": "+8%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "İki bin yirmi beş Haziran'ında Hırvat dalgıç Vitomir Mariçiç, Opatiya'da bir otel havuzunun başında hazırlanıyor.",
+        "text": "Haziran 2025'te Hırvat dalgıç Vitomir Maričić, Opatija'da bir otel havuzunun başında hazırlanıyor."
+      },
+      {
+        "id": "l03",
+        "tts": "Önce dakikalarca saf oksijen soluyor.",
+        "text": "Önce dakikalarca saf oksijen soluyor."
+      },
+      {
+        "id": "l04",
+        "tts": "Sonra üç metre derindeki havuzun dibine sırtüstü uzanıyor.",
+        "text": "Sonra 3 metre derindeki havuzun dibine sırtüstü uzanıyor."
+      },
+      {
+        "id": "l05",
+        "tts": "On dakika geçiyor, yirmi dakika geçiyor ve o hâlâ nefes almıyor.",
+        "text": "10 dakika geçiyor, 20 dakika geçiyor ve o hâlâ nefes almıyor."
+      },
+      {
+        "id": "l06",
+        "tts": "Beş hakemin önünde eski dünya rekorunu dört dakikadan fazla geçiyor.",
+        "text": "5 hakemin önünde eski dünya rekorunu 4 dakikadan fazla geçiyor."
+      },
+      {
+        "id": "l07",
+        "tts": "Kronometre tam yirmi dokuz dakika üç saniyede duruyor.",
+        "text": "Kronometre tam 29 dakika 3 saniyede duruyor.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "Yoksa bu balina mı?",
+        "text": "Yoksa bu balina mı?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Küviye gagalı balinası, en derine dalan memeli.",
+        "text": "Cuvier gagalı balinası, en derine dalan memeli."
+      },
+      {
+        "id": "l10",
+        "tts": "Yaklaşık üç bin metre derine, zifiri karanlığa kadar inebiliyor.",
+        "text": "Yaklaşık 3.000 metre derine, zifiri karanlığa kadar inebiliyor."
+      },
+      {
+        "id": "l11",
+        "tts": "Tipik bir dalışı yaklaşık bir saat sürüyor.",
+        "text": "Tipik bir dalışı yaklaşık 1 saat sürüyor."
+      },
+      {
+        "id": "l12",
+        "tts": "Oysa hesaplara göre oksijeni yarım saat kadar yetmeliydi.",
+        "text": "Oysa hesaplara göre oksijeni yarım saat kadar yetmeliydi."
+      },
+      {
+        "id": "l13",
+        "tts": "Bilim insanlarının izlediği bir balina ise, yüzeye bir türlü çıkmıyor.",
+        "text": "Bilim insanlarının izlediği bir balina ise yüzeye bir türlü çıkmıyor."
+      },
+      {
+        "id": "l13b",
+        "tts": "Bu dalış tam üç saat kırk iki dakika sürüyor.",
+        "text": "Bu dalış tam 3 saat 42 dakika sürüyor.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l14",
+        "tts": "Peki ikisini aynı kronometreye koyarsak?",
+        "text": "Peki ikisini aynı kronometreye koyarsak?"
+      },
+      {
+        "id": "l15",
+        "tts": "İnsanın rekoru, oksijen desteğiyle bile yirmi dokuz dakika.",
+        "text": "İnsanın rekoru, oksijen desteğiyle bile 29 dakika."
+      },
+      {
+        "id": "l16",
+        "tts": "Balinanın tek bir dalışı ise bunun",
+        "text": "Balinanın tek bir dalışı ise bunun",
+        "rate": "-2%",
+        "pitch": "-1Hz"
+      },
+      {
+        "id": "l16b",
+        "tts": "yedi katından da uzun.",
+        "text": "7 katından da uzun.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l17",
+        "tts": "Sen hangisine şaşırdın?",
+        "text": "Sen hangisine şaşırdın?",
+        "rate": "+4%",
+        "pitch": "+3Hz"
+      }
+    ]
+  },
+  "facts": {
+    "maricic": {
+      "date": "2025-06-14",
+      "place": "Opatija (Hırvatistan), Bristol Hotel lobisindeki 3 m derin havuz",
+      "time": "29:03 (Guinness: 29:03.07), su altında, oksijen destekli gönüllü nefes tutma (erkek)",
+      "oxygen": "önce saf oksijen soludu; süre kaynaklarda ~10 dk ya da belirtilmemiş; videoda 'dakikalarca'",
+      "position": "havuzun dibinde sırtüstü, eller başın arkasında (Divernet)",
+      "judges": "5 hakem (AIDA), ~100 seyirci",
+      "previous": "Budimir Šobat 2021: 24:37 (bazı kaynaklar 24:34); fark 4:26–4:29; 'dört dakikadan fazla'",
+      "noOxygenRecord": "Stéphane Mifsud 11:35 (2009)"
+    },
+    "whale": {
+      "species": "Cuvier gagalı balinası (Ziphius cavirostris)",
+      "record": "222 dk = 3 sa 42 dk; Quick ve ark., Journal of Experimental Biology, 23 Eylül 2020; Cape Hatteras açıkları, uydu etiketli 23 balina",
+      "year": "dalışın yılı doğrulanamadı; videoda yıl yok",
+      "median": "ortanca beslenme dalışı 59 dk; %5'i 77,7 dk üstü",
+      "oxygenEstimate": "Science News: 'should run out of oxygen after only about half an hour' (fok verilerine dayalı hesap)",
+      "deepest": "2.992 m (Schorr ve ark. 2014); 'yaklaşık 3.000 metre'"
+    },
+    "ratio": "222 / 29,05 = 7,64",
+    "sources": [
+      "https://www.guinnessworldrecords.com/world-records/longest-time-breath-held-voluntarily-male",
+      "https://divernet.com/scuba-news/freediving/how-croatian-freediver-held-breath-for-29-minutes/",
+      "https://www.guinnessworldrecords.com/world-records/341455-longest-dive-by-a-mammal",
+      "https://www.snexplores.org/?p=177065",
+      "https://dukespace.lib.duke.edu/items/d7166c5e-69f8-423f-af52-970214d970ad/full",
+      "https://en.wikipedia.org/wiki/Cuvier%27s_beaked_whale"
+    ]
+  },
+  "caption": "Hangisi daha şaşırtıcı?\n\nHırvat serbest dalıcı Vitomir Maričić, 14 Haziran 2025'te Opatija'da bir otel lobisindeki 3 metre derin havuzda, 5 hakemin önünde nefesini su altında 29 dakika 3 saniye tuttu. Öncesinde dakikalarca saf oksijen soludu: Bu, Guinness'in \"oksijen destekli\" nefes tutma kategorisi. Önceki rekor 24 dakika 37 saniyeydi. Oksijen desteği olmadan rekor ise 11 dakika 35 saniye.\n\nCuvier gagalı balinası, en derine dalan memeli; yaklaşık 3.000 metreye kadar inebiliyor. 2020'de Journal of Experimental Biology'de yayımlanan ve Kuzey Carolina açıklarında uydu etiketli 23 balinayı izleyen çalışmada, tipik bir beslenme dalışı yaklaşık 1 saat sürdü. Fok verilerine dayanan hesaplar bu balinaların oksijeninin yarım saat kadar yeteceğini öngörüyordu; oysa bir balinanın tek dalışı 222 dakika, yani 3 saat 42 dakika sürdü.\n\nHesap: 222 ÷ 29 ≈ 7,6. Balinanın tek dalışı, oksijen destekli insan rekorunun 7 katından da uzun.\n\n⚠️ Nefes tutma çalışmaları yalnızca eğitimli ekiplerin ve güvenlik dalgıçlarının gözetiminde yapılır. Suda tek başına nefes tutmayı denemeyin.\n\nSen hangisine şaşırdın? Yorumlara yaz.\n\nKaç Sıfır? her hafta yeni bir \"Hangisi?\" getiriyor; takip et.\n\nKaynaklar: Guinness World Records (en uzun gönüllü nefes tutma, erkek; memelilerde en uzun dalış), Divernet \"How Croatian freediver held breath for 29 minutes\", Quick ve ark. 2020 (Journal of Experimental Biology), Science News Explores \"A whale's nearly four-hour-long dive sets a new record\".",
+  "hashtags": [
+    "#hangisi",
+    "#kaçsıfır",
+    "#ilginçbilgiler",
+    "#balina",
+    "#dünyarekoru"
+  ],
+  "ytTitle": "29 dakika nefes tutan dalgıç mı, 3 saat 42 dakika dalan balina mı?"
+}

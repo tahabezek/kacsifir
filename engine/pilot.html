@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block;width:1080px;height:1920px}</style>
+</head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script type="module">
+// Pilot sahneler için sade sahne: stage.html'e kayıt eklemeden tek bir sahneyi çizer (ses yok)
+import { makeSonsuzZoomRenderer } from './scenes/sonsuz_zoom.js';
+await Promise.all([
+  document.fonts.load('800 100px Archivo', 'ıİşŞğĞçÇöÖüÜ'), document.fonts.load('500 40px "IBM Plex Mono"', '№ıİ'),
+]);
+await document.fonts.ready;
+const r = await makeSonsuzZoomRenderer({}, document.getElementById('c'));
+window.DURATION = r.duration;
+window.renderFrame = t => { r.render(t); return true; };
+r.render(Number(new URLSearchParams(location.search).get('t') ?? 0));
+window.__ready = true;
+</script></body></html>

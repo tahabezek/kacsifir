@@ -17,7 +17,9 @@
       "l05": 2.4,
       "l06": 0.6,
       "l07": 1,
-      "l08": 0.8
+      "l08": 0.8,
+      "l09": 1,
+      "l10": 0.7
     },
     "lines": [
       {
@@ -34,7 +36,7 @@
       },
       {
         "id": "l03",
-        "tts": "Akşam altıda başlayan oturumda, saat yirmi otuzda Cumhuriyet kabul edildi.",
+        "tts": "Akşam altıda başlayan oturumda, saat sekiz buçukta Cumhuriyet kabul edildi.",
         "text": "Akşam 18.00'de başlayan oturumda, saat 20.30'da Cumhuriyet kabul edildi."
       },
       {
@@ -69,8 +71,22 @@
       },
       {
         "id": "l09",
-        "tts": "Sen bu videoyu hangi şehirden izliyorsun? Yorumlara yaz, haritayı birlikte dolduralım.",
-        "text": "Sen bu videoyu hangi şehirden izliyorsun? Yorumlara yaz, haritayı birlikte dolduralım.",
+        "tts": "Yüz üç yıl sonra, aynı dakikada, o iki kelimeyi bir de sen söyle.",
+        "text": "103 yıl sonra, aynı dakikada, o iki kelimeyi bir de sen söyle.",
+        "rate": "+0%",
+        "pitch": "+0Hz"
+      },
+      {
+        "id": "l10",
+        "tts": "Yaşasın Cumhuriyet!",
+        "text": "Yaşasın Cumhuriyet!",
+        "rate": "-8%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l11",
+        "tts": "Sen de yorumlara yaz ve hangi şehirden söylediğini ekle.",
+        "text": "Sen de yorumlara yaz ve hangi şehirden söylediğini ekle.",
         "rate": "+4%",
         "pitch": "+2Hz"
       }
@@ -97,7 +113,7 @@
       "https://www.hurriyet.com.tr/dunya/ataturkun-agzindan-cumhuriyetin-ilani-40625479"
     ]
   },
-  "caption": "29 Ekim 1923 akşamı saat 20.30'da, Ankara'daki ilk Meclis binasında 18.00'de başlayan oturumda Teşkilât-ı Esasiye Kanunu'ndaki değişiklik kabul edildi ve Cumhuriyet ilan edildi. Tutanağa göre salonda \"Yaşasın Cumhuriyet!\" sesleri yükseldi. Ardından yapılan gizli oylamada 158 üyenin tamamı Gazi Mustafa Kemal Paşa'yı ilk cumhurbaşkanı seçti. Karar aynı gece bütün memlekete bildirildi.\n\nDört yıl sonraki ilk nüfus sayımında (1927) Türkiye'de 13,6 milyon kişi yaşıyordu. TÜİK'e göre 2025 sonunda nüfus 86,1 milyondu.\n\nBu video, Cumhuriyet'in ilan edildiği dakikada, 103 yıl sonra yayınlandı.\n\nSen bu videoyu hangi şehirden izliyorsun? Yorumlara yaz.\n\nCumhuriyet Bayramımız kutlu olsun.\n\nKaynaklar: TBMM Zabıt Ceridesi (29 Ekim 1923), Nutuk, 1927 Umumi Nüfus Tahriri, TÜİK ADNKS 2025 (il nüfusları). Haritada 1 nokta yaklaşık 28.700 kişiyi gösteriyor.\nFotoğraf: Gazi Mustafa Kemal Paşa (Resimli Gazete kapağı, 3 Kasım 1923; kamu malı; Wikimedia Commons).",
+  "caption": "29 Ekim 1923 akşamı saat 20.30'da, Ankara'daki ilk Meclis binasında 18.00'de başlayan oturumda Teşkilât-ı Esasiye Kanunu'ndaki değişiklik kabul edildi ve Cumhuriyet ilan edildi. Tutanağa göre salonda \"Yaşasın Cumhuriyet!\" sesleri yükseldi. Ardından yapılan gizli oylamada 158 üyenin tamamı Gazi Mustafa Kemal Paşa'yı ilk cumhurbaşkanı seçti. Karar aynı gece bütün memlekete bildirildi.\n\nDört yıl sonraki ilk nüfus sayımında (1927) Türkiye'de 13,6 milyon kişi yaşıyordu. TÜİK'e göre 2025 sonunda nüfus 86,1 milyondu.\n\nBu video, Cumhuriyet'in ilan edildiği dakikada, 103 yıl sonra yayınlandı.\n\n103 yıl sonra, aynı dakikada o iki kelimeyi bir de sen söyle: Yaşasın Cumhuriyet! Yorumlara sen de yaz ve hangi şehirden söylediğini ekle.\n\nCumhuriyet Bayramımız kutlu olsun.\n\nKaynaklar: TBMM Zabıt Ceridesi (29 Ekim 1923), Nutuk, 1927 Umumi Nüfus Tahriri, TÜİK ADNKS 2025 (il nüfusları). Haritada 1 nokta yaklaşık 28.700 kişiyi gösteriyor.\nFotoğraf: Gazi Mustafa Kemal Paşa (Resimli Gazete kapağı, 3 Kasım 1923; kamu malı; Wikimedia Commons).",
   "hashtags": [
     "#29Ekim",
     "#CumhuriyetBayramı",

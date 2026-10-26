@@ -124,26 +124,56 @@ function drawTruck(ctx, L, t, spin) {
 }
 const REEL = [-0.05, -0.44];
 
-// ebabil, üstten (baş +x); S = kanat açıklığı. flap: kanat ucunun ileri-geri salınımı (−1..1)
+// ebabil (Apus apus), üstten (baş +x); S = kanat açıklığı. Uçak ve kamyonla aynı çizgi dili: mürekkep kontur,
+// kâğıt dolgu, orak kanatlarda tüy çizgileri, taramalı koyu gövde, kısa çatal kuyruk, göz noktası.
+// flap: kanat ucunun ileri-geri salınımı (−1..1). logger: sırttaki kayıt cihazı (üstten görünür).
+const bz = (p0, p1, p2, p3, u) => { const v = 1 - u; return [v * v * v * p0[0] + 3 * v * v * u * p1[0] + 3 * v * u * u * p2[0] + u * u * u * p3[0], v * v * v * p0[1] + 3 * v * v * u * p1[1] + 3 * v * u * u * p2[1] + u * u * u * p3[1]]; };
 function drawSwift(ctx, S, flap = 0, { logger = 0 } = {}) {
-  ctx.save(); ctx.scale(S, S); const lw = 1 / S; ctx.lineJoin = 'round';
+  ctx.save(); ctx.scale(S, S); const lw = 1 / S, W3 = (S >= 300 ? 3 : S >= 140 ? 2.4 : 2) * lw;
+  ctx.lineJoin = 'round'; ctx.lineCap = 'round';
   const k = 0.82 + 0.18 * Math.cos(flap * Math.PI), sw = 0.06 * Math.sin(flap * Math.PI);
   for (const s of [-1, 1]) {
-    ctx.beginPath(); ctx.moveTo(0.05, 0.02 * s);
-    ctx.bezierCurveTo(0.06, 0.20 * s * k, -0.04 + sw, 0.42 * s * k, -0.20 + sw, 0.50 * s * k);
-    ctx.bezierCurveTo(-0.13 + sw, 0.40 * s * k, -0.06, 0.18 * s * k, -0.05, 0.03 * s);
-    ctx.closePath(); ctx.fillStyle = C.ink; ctx.fill();
-    // kanat üstünde ince açık tarama (gravür ışığı)
-    ctx.save(); ctx.clip(); ctx.strokeStyle = 'rgba(236,229,213,0.35)'; ctx.lineWidth = 1.4 * lw;
-    for (let i = 0; i < 9; i++) { const u = i / 9; ctx.beginPath(); ctx.moveTo(0.02 - u * 0.05, (0.06 + u * 0.4) * s * k); ctx.lineTo(-0.06 - u * 0.12 + sw * u, (0.08 + u * 0.42) * s * k); ctx.stroke(); }
+    const L0 = [0.05, 0.02 * s], L1 = [0.06, 0.20 * s * k], L2 = [-0.04 + sw, 0.42 * s * k], TIP = [-0.20 + sw, 0.50 * s * k];
+    const T1 = [-0.13 + sw, 0.40 * s * k], T2 = [-0.06, 0.18 * s * k], T3 = [-0.05, 0.03 * s];
+    const wing = () => { ctx.beginPath(); ctx.moveTo(L0[0], L0[1]); ctx.bezierCurveTo(L1[0], L1[1], L2[0], L2[1], TIP[0], TIP[1]); ctx.bezierCurveTo(T1[0], T1[1], T2[0], T2[1], T3[0], T3[1]); ctx.closePath(); };
+    wing(); ctx.fillStyle = C.paper; ctx.fill();
+    ctx.save(); ctx.clip();
+    // örtü tüyleri: kök tarafında ince gölge taraması
+    ctx.strokeStyle = 'rgba(28,27,24,0.38)'; ctx.lineWidth = 1.1 * lw;
+    for (let i = 0; i < 10; i++) { const u = i / 10 * 0.5, a = bz(L0, L1, L2, TIP, u), b = bz(TIP, T1, T2, T3, 1 - u); ctx.beginPath(); ctx.moveTo(lerp(a[0], b[0], 0.35), lerp(a[1], b[1], 0.35)); ctx.lineTo(lerp(a[0], b[0], 0.9), lerp(a[1], b[1], 0.9)); ctx.stroke(); }
+    // birincil uçuş tüyleri: ön kenardan arkaya çapraz çizgiler (kanadın dış yarısı)
+    ctx.strokeStyle = C.ink; ctx.lineWidth = 1.5 * lw;
+    for (const u of [0.5, 0.6, 0.69, 0.77, 0.84, 0.9, 0.95]) { const a = bz(L0, L1, L2, TIP, u), b = bz(TIP, T1, T2, T3, Math.max(0.02, 1 - u - 0.08)); ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(lerp(a[0], b[0], 0.85), lerp(a[1], b[1], 0.85)); ctx.stroke(); }
+    // örtü sınırı: kanat boyunca ince çizgi
+    ctx.beginPath(); for (let i = 0; i <= 12; i++) { const u = i / 12 * 0.92, a = bz(L0, L1, L2, TIP, u), b = bz(TIP, T1, T2, T3, 1 - u), p = [lerp(a[0], b[0], 0.42), lerp(a[1], b[1], 0.42)]; i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); }
+    ctx.lineWidth = 1.2 * lw; ctx.stroke();
+    ctx.restore();
+    wing(); ctx.lineWidth = W3; ctx.strokeStyle = C.ink; ctx.stroke();
+  }
+  // çatal kuyruk
+  const tail = () => { ctx.beginPath(); ctx.moveTo(-0.12, -0.026); ctx.lineTo(-0.27, -0.062); ctx.lineTo(-0.195, 0); ctx.lineTo(-0.27, 0.062); ctx.lineTo(-0.12, 0.026); ctx.closePath(); };
+  tail(); ctx.fillStyle = C.paper; ctx.fill(); ctx.save(); ctx.clip(); ctx.strokeStyle = 'rgba(28,27,24,0.4)'; ctx.lineWidth = 1.1 * lw; for (let x = -0.28; x < -0.1; x += 0.014) { ctx.beginPath(); ctx.moveTo(x, -0.07); ctx.lineTo(x + 0.03, 0.07); ctx.stroke(); } ctx.restore();
+  tail(); ctx.lineWidth = W3; ctx.strokeStyle = C.ink; ctx.stroke();
+  // gövde ve baş: kâğıt üstüne sık tarama (kanatlardan koyu), mürekkep kontur
+  ctx.beginPath(); ctx.ellipse(0.0, 0, 0.17, 0.055, 0, 0, Math.PI * 2); ctx.moveTo(0.2, 0); ctx.arc(0.16, 0, 0.045, 0, Math.PI * 2);
+  ctx.fillStyle = C.paper; ctx.fill();
+  ctx.save(); ctx.clip(); ctx.strokeStyle = 'rgba(28,27,24,0.62)'; ctx.lineWidth = 1.2 * lw;
+  for (let x = -0.2; x < 0.24; x += 0.011) { ctx.beginPath(); ctx.moveTo(x, -0.07); ctx.lineTo(x + 0.035, 0.07); ctx.stroke(); }
+  ctx.strokeStyle = 'rgba(236,229,213,0.8)'; ctx.lineWidth = 1.6 * lw; ctx.beginPath(); ctx.moveTo(-0.13, -0.018); ctx.quadraticCurveTo(0.02, -0.04, 0.15, -0.026); ctx.stroke();   // sırtta ışık
+  ctx.restore();
+  ctx.beginPath(); ctx.ellipse(0.0, 0, 0.17, 0.055, 0, 0, Math.PI * 2); ctx.lineWidth = W3; ctx.strokeStyle = C.ink; ctx.stroke();
+  ctx.beginPath(); ctx.arc(0.16, 0, 0.045, -1.2, 1.2); ctx.stroke();
+  // küçük gaga ve gözler
+  ctx.beginPath(); ctx.moveTo(0.203, -0.012); ctx.lineTo(0.228, 0); ctx.lineTo(0.203, 0.012); ctx.closePath(); ctx.fillStyle = C.ink; ctx.fill();
+  for (const s of [-1, 1]) { ctx.beginPath(); ctx.arc(0.172, 0.026 * s, Math.max(0.006, 2.2 * lw), 0, Math.PI * 2); ctx.fill(); }
+  // sırt: kayıt cihazı (taramalı küçük gravür kutu, iki kayış)
+  if (logger > 0) {
+    ctx.save(); ctx.globalAlpha = logger; ctx.beginPath(); ctx.roundRect(-0.05, -0.022, 0.06, 0.044, 0.008); ctx.fillStyle = C.paper; ctx.fill();
+    ctx.save(); ctx.clip(); ctx.strokeStyle = 'rgba(28,27,24,0.32)'; ctx.lineWidth = 1 * lw; for (let x = -0.06; x < 0.03; x += 0.015) { ctx.beginPath(); ctx.moveTo(x, 0.02); ctx.lineTo(x + 0.02, -0.02); ctx.stroke(); } ctx.restore();
+    ctx.lineWidth = 1.8 * lw; ctx.strokeStyle = C.ink; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(-0.035, -0.02); ctx.lineTo(-0.03, -0.048); ctx.moveTo(-0.01, -0.02); ctx.lineTo(-0.005, -0.048); ctx.moveTo(-0.035, 0.02); ctx.lineTo(-0.03, 0.048); ctx.moveTo(-0.01, 0.02); ctx.lineTo(-0.005, 0.048); ctx.lineWidth = 1.2 * lw; ctx.stroke();
     ctx.restore();
   }
-  // gövde, baş, çatal kuyruk
-  ctx.beginPath(); ctx.ellipse(0.0, 0, 0.17, 0.055, 0, 0, Math.PI * 2); ctx.fillStyle = C.ink; ctx.fill();
-  ctx.beginPath(); ctx.arc(0.16, 0, 0.045, 0, Math.PI * 2); ctx.fill();
-  ctx.beginPath(); ctx.moveTo(-0.12, -0.025); ctx.lineTo(-0.27, -0.06); ctx.lineTo(-0.19, 0); ctx.lineTo(-0.27, 0.06); ctx.lineTo(-0.12, 0.025); ctx.closePath(); ctx.fill();
-  // sırt: kayıt cihazı (açık renk küçük kutu)
-  if (logger > 0) { ctx.save(); ctx.globalAlpha = logger; ctx.beginPath(); ctx.roundRect(-0.045, -0.018, 0.05, 0.036, 0.008); ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 1.5 * lw; ctx.strokeStyle = C.ink; ctx.stroke(); ctx.restore(); }
   ctx.restore();
 }
 function drawThermos(ctx, s) {
@@ -302,7 +332,7 @@ export async function makeUcusRenderer(ep, canvas) {
     if (lg > 0) {
       const lx = xIn + dx - 0.02 * S, ly = y;
       ctx.save(); ctx.globalAlpha = lg; ctx.beginPath(); ctx.moveTo(lx + 0.02 * S, ly + 0.02 * S); ctx.lineTo(lx + 0.12 * S, ly + 0.15 * S); ctx.lineTo(lx + 0.24 * S, ly + 0.15 * S); ctx.lineWidth = 2.5; ctx.strokeStyle = C.ink; ctx.stroke(); ctx.restore();
-      chipRaw('KAYIT CİHAZI', lx + 0.25 * S, ly + 0.15 * S + 14, lg * chipK, 'left', C.ink, 44);
+      chipRaw('KAYIT CİHAZI', lx + 0.24 * S, ly + 0.15 * S + 14, lg * chipK, 'right', C.ink, 44);
     }
   }
 
@@ -358,7 +388,7 @@ export async function makeUcusRenderer(ep, canvas) {
   };
   const onRing = (g, r, d) => [g.x + Math.cos(ang(d)) * r, g.y + Math.sin(ang(d)) * r];
   // kare 0 ve döngü: uçak dış izde 4 Aralık'tan, ebabil iç izde Ağustos'tan yavaşça döner (dikişte konum ve hız tutar)
-  const ORBIT = 2.2;   // gün/sn
+  const ORBIT = 41;    // gün/sn (≈ 40°/sn: kare 0'dan itibaren hareket)
   function ring(t) {
     const g = ringGeom(t), big = clamp01((g.R - 140) / (RING_BIG.R - 140));
     const rP = g.R * 0.82, rS = g.R * 0.6, w = g.R * 0.085;
@@ -432,7 +462,7 @@ export async function makeUcusRenderer(ep, canvas) {
     if (iconIn > 0) {
       const tt = t >= T.loop0 ? t - D : t;
       const dp = PLANE_D0 - 6 + ORBIT * tt, ds = SWIFT_D0 - 6 + ORBIT * tt;
-      for (const [r, d, kind] of [[rP, dp, 'plane'], [rS, ds, 'swift']]) {
+      for (const [r, d, kind] of [[rP, dp, 'plane'], [rS + 50, ds, 'swift']]) {
         const q = onRing(g, r, d), a = ang(d) + Math.PI / 2;
         ctx.save(); ctx.translate(q[0], q[1]); ctx.rotate(a); ctx.scale(iconIn, iconIn);
         if (kind === 'plane') { ctx.translate(0, 8); drawPlane(ctx, 175, t); } else drawSwift(ctx, 160, (t * rq(2.6)) % 1 * 2 - 1);

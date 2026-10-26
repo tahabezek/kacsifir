@@ -8,7 +8,10 @@
 // l06: kart kalkar (sert kesme), kamera kapıdan dışarı, bina tek başına Ankara noktasına küçülür; gece haritası,
 // Ankara'dan 1927 vilayetlerine haber atımları. l07: 1927 sayımı il nüfuslarına göre ışık noktaları (1 nokta ≈ 28.700
 // kişi, il alanına göre yayılım). Sessizlik. l08 (doruk): noktalar 2025 il nüfuslarına çoğalır, "86 milyon" kırmızı.
-// l09: şehirlerin üstünde boş yorum balonları; bayram satırı ve bayrak, 1 sn sonra takip çağrısı.
+// l09 "o iki kelimeyi bir de sen söyle" → gerçek sessizlik → l10 "Yaşasın Cumhuriyet!" (doruk; impact sessizliğin sonunda):
+// l04'te salonda sayaç satırına küçük yazılan "YAŞASIN CUMHURİYET!" aynı dizgiyle aynı yerde büyük; noktalar Ankara'dan dışarı
+// doğru (çıkış eğrisiyle yavaşlayan dalga) kırmızıya yanar. l11: şehirlerin üstünde boş yorum balonları; bayram satırı ve
+// bayrak, 1 sn sonra takip çağrısı.
 // Döngü: harita söner, bina Ankara'dan büyüyerek geri gelir, saat 20.28, pencereler söner (kare 0).
 // Her şey t'nin saf fonksiyonudur; sürekli döngüler film süresine tam tur sayar (dikiş).
 import { geoMercator, geoPath } from 'd3-geo';
@@ -37,26 +40,28 @@ const BUBBLES = ['İstanbul', 'İzmir', 'Trabzon', 'Diyarbakır', 'Antalya', 'Er
 // salon: 9 sıra, toplam 158 sandalye (öndeki sıra kısa ve küçük, arkadaki uzun ve büyük)
 const ROWN = [12, 14, 16, 17, 18, 19, 20, 21, 21];
 // anlatım öbekleri: [metindeki başlangıç, öbeğin ilk anlatım kelimesi (önek)]; öbek kendi kelimesinden 0,05 sn önce açılır
-const CHUNKS = { l02: [['158', 'yüz']], l03: [['saat', 'saat']], l04: [['Yaşasın', 'yaşasın']], l05: [['ve 158', 've']], l07: [['bu topraklarda', 'bu']], l08: [['86', 'seksen']], l09: [['Yorumlara', 'yorumlara']] };
+const CHUNKS = { l02: [['158', 'yüz']], l03: [['saat', 'saat']], l05: [['ve 158', 've']], l07: [['bu topraklarda', 'bu']], l08: [['86', 'seksen']], l09: [['o iki', 'o']], l11: [['hangi', 'hangi']] };
 
 export function ilanTimes(tl) {
   const { L, W: Wd } = tl;
   const nth = (id, key, n) => { const ws = L[id].words.filter(w => w.w.toLocaleLowerCase('tr').startsWith(key)); return ws[Math.min(n, ws.length - 1)].t0; };
   const T = {
-    l02: L.l02.t0, l03: L.l03.t0, l04: L.l04.t0, l05: L.l05.t0, l06: L.l06.t0, l07: L.l07.t0, l08: L.l08.t0, l09: L.l09.t0,
+    l02: L.l02.t0, l03: L.l03.t0, l04: L.l04.t0, l05: L.l05.t0, l06: L.l06.t0, l07: L.l07.t0, l08: L.l08.t0, l09: L.l09.t0, l10: L.l10.t0, l11: L.l11.t0,
     dakika: Wd('l01', 'dakikada'), ankara: Wd('l01', 'ankara'),
-    yuz: Wd('l02', 'yüz'), aksam: Wd('l03', 'akşam'), altida: Wd('l03', 'altıda'), yirmi: Wd('l03', 'yirmi'), otuz: Wd('l03', 'otuzda'), kabul: Wd('l03', 'kabul'),
+    yuz: Wd('l02', 'yüz'), aksam: Wd('l03', 'akşam'), altida: Wd('l03', 'altıda'), yirmi: Wd('l03', 'sekiz'), otuz: Wd('l03', 'buçukta'), kabul: Wd('l03', 'kabul'),
     yasasin: Wd('l04', 'yaşasın'), secildi: Wd('l05', 'seçildi'), yuz2: nth('l05', 'yüz', 1), mustafa: Wd('l05', 'mustafa'),
     haber: Wd('l06', 'bütün'), memleket: Wd('l06', 'memlekete'), sayim: Wd('l07', 'sayım'), on: Wd('l07', 'on'), bugun: Wd('l08', 'bugün'), seksen: Wd('l08', 'seksen'), milyon: Wd('l08', 'milyon'),
-    sehir: Wd('l09', 'şehirden'), yorum: Wd('l09', 'yorumlara'), loop0: tl.loop0,
+    yas2: Wd('l10', 'yaşasın'), cum2: Wd('l10', 'cumhuriyet'), sehir: Wd('l11', 'şehirden'), yorum: Wd('l11', 'yorumlara'), loop0: tl.loop0,
   };
   T.s = id => L[id].words[0].t0;
   T.in0 = T.l02 - 0.35; T.in1 = T.in0 + 1.0;            // dış → salon (kapıdan)
   T.dim0 = T.mustafa - 0.4; T.ph0 = T.mustafa - 0.05; T.phOut = T.l06 - 0.25;   // kart: salon önce %35'e iner
   T.zo0 = T.phOut + 0.32; T.zo1 = T.zo0 + 1.9;            // salon → dış → harita
   T.wire0 = T.zo0 + 1.0; T.wire1 = L.l06.end + 0.45;
-  T.hero = T.seksen; T.sil0 = L.l07.end + 0.12; T.impact = T.s('l08') - 0.03; T.inkHero = T.seksen + 2.2;
-  T.bayram = L.l09.end + 0.15; T.follow = T.bayram + 1.0;
+  T.hero = T.seksen; T.inkHero = T.seksen + 2.2;
+  T.sil0 = L.l09.end + 0.12; T.impact = T.s('l10') - 0.03;   // tek doruk: sessizlik l09'dan sonra, vuruş "Yaşasın"da
+  T.wave = T.yas2 - 0.02; T.wave1 = T.wave + 1.6;             // Ankara'dan dışarı kırmızı dalga
+  T.bayram = L.l11.end + 0.15; T.follow = T.bayram + 1.0;
   T.ring = id => L[id].end;
   return T;
 }
@@ -96,6 +101,10 @@ export async function makeIlanRenderer(ep, canvas) {
   const have = {}; for (const d of DOTS) have[d.home] = (have[d.home] || 0) + 1;
   prov.forEach((p, i) => { const add = n25[i] - (have[p.name] || 0); for (let k = 0; k < add; k++) DOTS.push({ q: scatter(p), era: 25, home: p.name }); });
   DOTS.forEach(d => { d.r = rnd(); d.tw = rnd() * 40; d.a = d.era === 27 ? lerp(T.sayim - 0.1, T.on + 0.35, d.r) : lerp(T.bugun - 0.05, T.milyon + 0.3, d.r); });
+  const ANK0 = proj([32.854, 39.92]), dist = d => Math.hypot(d.q[0] - ANK0[0], d.q[1] - ANK0[1]);
+  const MAXD = Math.max(...DOTS.map(dist));
+  const invEnter = v => { let a = 0, b = 1; for (let i = 0; i < 30; i++) { const m = (a + b) / 2; if (ease.enter(m) < v) a = m; else b = m; } return (a + b) / 2; };
+  DOTS.forEach(d => { d.pass = T.wave + (T.wave1 - T.wave) * invEnter(dist(d) / MAXD); });
 
   // ——— haber atımları: Ankara'dan 1927 vilayet merkezlerine; sabit hız, yakından uzağa ———
   const ANK = proj([32.854, 39.92]);
@@ -156,7 +165,7 @@ export async function makeIlanRenderer(ep, canvas) {
     if (t < T.altida + 0.25) return lerp(base + 1, 18 * 60, ease.state(seg(t, T.aksam - 0.15, 0.55)));
     return lerp(18 * 60, 20 * 60 + 30, ease.state(seg(t, T.altida + 0.25, T.otuz - T.altida - 0.25)));
   }
-  const clockK = t => t >= tl.loop0 ? (t >= D - 0.5 ? 1 : 0) : 1 - ease.exit(seg(t, T.dim0, 0.3));   // döngüde opak, kesmeyle
+  const clockK = t => t >= tl.loop0 ? (t >= D - 0.5 ? 1 : 0) : 1 - ease.exit(seg(t, T.l05 - 0.15, 0.3));   // l05'te kalkar (seçim saati kesin değil); döngüde opak, kesmeyle
   function clock(t) {
     const k = clockK(t); if (k <= 0) return;
     const m = clockMin(t), hh = Math.floor(m / 60), mm = Math.floor(m % 60);
@@ -289,7 +298,12 @@ export async function makeIlanRenderer(ep, canvas) {
       const u = ease.enter(seg(t, d.a, 0.3)); if (u <= 0) continue;
       const tw = 0.7 + 0.3 * Math.sin(d.tw + PH(t, 1.6));
       ctx.globalAlpha = k * u * out * tw; ctx.fillStyle = LIGHT; ctx.fillRect(d.q[0] - 2.1 * inv, d.q[1] - 2.1 * inv, 4.2 * inv, 4.2 * inv);
+      const lit = seg(t, d.pass, 0.25); if (lit <= 0) continue;
+      const fl = 1 + 1.1 * Math.sin(Math.PI * seg(t, d.pass, 0.4)), h = 2.6 * fl * inv;
+      ctx.globalAlpha = k * out * lit * (0.92 + 0.08 * Math.sin(d.tw + PH(t, 1.3))); ctx.fillStyle = C.red; ctx.fillRect(d.q[0] - h, d.q[1] - h, 2 * h, 2 * h);
     }
+    // dalganın cephesi: Ankara'dan çıkan tek halka
+    { const u = seg(t, T.wave, T.wave1 - T.wave); if (u > 0 && u < 1) { ctx.globalAlpha = k * out * 0.8 * (1 - u); ctx.lineWidth = 3 * inv; ctx.strokeStyle = C.red; ctx.beginPath(); ctx.arc(ANK[0], ANK[1], MAXD * ease.enter(u), 0, Math.PI * 2); ctx.stroke(); } }
     // Ankara'dan yayılan halkalar (sürekli döngü; sayım ve doruk öncesi sessizlikte de sahne durmaz)
     { const on = seg(t, T.sayim, 0.4) * (1 - seg(t, T.loop0, 0.4)); if (on > 0) for (let q = 0; q < 2; q++) { const v = (cyc(t, 1.6) + q / 2) % 1; ctx.globalAlpha = k * on * 0.6 * (1 - v); ctx.lineWidth = 2 * inv; ctx.strokeStyle = LIGHT; ctx.beginPath(); ctx.arc(ANK[0], ANK[1], (10 + 60 * v) * inv, 0, Math.PI * 2); ctx.stroke(); } }
     ctx.globalAlpha = k * out; ctx.fillStyle = LIGHT; ctx.beginPath(); ctx.arc(ANK[0], ANK[1], 7 * inv, 0, Math.PI * 2); ctx.fill(); ctx.lineWidth = 2.5 * inv; ctx.strokeStyle = C.ink; ctx.stroke();
@@ -300,13 +314,14 @@ export async function makeIlanRenderer(ep, canvas) {
   // ——— üst blok ———
   function narration(t) {
     if (t < T.s('l02') - 0.05 || t >= T.bayram) return;
+    if (t >= T.yas2 - 0.26 && t < T.s('l11') - 0.05) return;   // büyük tezahürat girmeden üst blok boşalır (sert kesme)
     let ln = null; for (const l of ep.voice.lines) if (t >= T.s(l.id) - 0.05) ln = L[l.id];
-    if (!ln || ln.id === 'l01') return;
-    const out = ln.id === 'l09' ? 1 - ease.exit(seg(t, T.bayram - 0.3, 0.3)) : 1;
+    if (!ln || ln.id === 'l01' || ln.id === 'l10') return;
+    const out = ln.id === 'l11' ? 1 - ease.exit(seg(t, T.bayram - 0.3, 0.3)) : 1;
     const text = ln.text;
     const words = ln.words, wt = key => (words.find(w => w.w.toLocaleLowerCase('tr').startsWith(key)) || words[0]).t0;
     const parts = [[0, T.s(ln.id) - 0.05], ...(CHUNKS[ln.id] || []).map(([s, key]) => [text.indexOf(s), wt(key) - 0.05])];
-    let fs0 = 50, ls; for (const f of [50, 46, 42]) { fs0 = f; setFont(ctx, F.name(f)); ls = wrap(ctx, text, SAFE.x1 - SAFE.x0); if (ls.length <= 3) break; }
+    let fs0 = 50, ls; for (const f of [56, 52, 48, 44]) { fs0 = f; setFont(ctx, F.name(f)); ls = wrap(ctx, text, SAFE.x1 - SAFE.x0); if (ls.length <= 3) break; }
     const lh = fs0 * 1.2, y0 = ls.length > 2 ? 400 : 430;
     let off = 0;
     ls.slice(0, 3).forEach((s, i) => {
@@ -334,11 +349,12 @@ export async function makeIlanRenderer(ep, canvas) {
   }
   const fmt1 = v => v.toLocaleString('tr-TR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   function counters(t) {
-    if (t < T.yuz - 0.04 || t >= tl.loop0 + 0.3) return;
+    if (t < T.yuz - 0.04 || t >= tl.loop0 + 0.3 || t >= T.yas2 - 0.26) return;
     const fade = t >= tl.loop0 ? 1 - ease.exit(seg(t, tl.loop0, 0.25)) : 1;
     const inn = a => ease.enter(seg(t, a, 0.3)) * fade;
-    if (t < T.l03 - 0.06) return row({ label: 'BİRİNCİ MECLİS · ANKARA', num: '158', unit: 'milletvekili', p: inn(T.yuz - 0.04) });
+    if (t < T.l03 - 0.06) return row({ label: 'BİRİNCİ MECLİS BİNASI · ANKARA', num: '158', unit: 'milletvekili salonda', p: inn(T.yuz - 0.04) });
     if (t < T.l05 - 0.06) {
+      if (t >= T.yasasin - 0.04) return;
       if (t < T.altida - 0.35) return row({ label: '29 EKİM 1923 · OTURUM', p: inn(T.s('l03') - 0.04) });
       const n = t < T.yirmi - 0.04 ? '18.00' : '20.30';
       return row({ label: '29 EKİM 1923 · OTURUM', num: n, unit: n === '20.30' ? 'Cumhuriyet ilan edildi' : 'oturum başladı', p: n === '20.30' ? inn(T.yirmi - 0.04) : inn(T.altida - 0.35) });
@@ -350,6 +366,25 @@ export async function makeIlanRenderer(ep, canvas) {
     const red = t < T.inkHero;
     const v = lerp(13.6, 86, ease.enter(seg(t, T.seksen - 0.04, 0.42)));
     row({ label: 'BUGÜN · TÜİK 2025', num: v >= 85.95 ? '86 milyon' : `${fmt1(v)} milyon`, unit: 'kişi', red, p: fade });
+  }
+  const CHEER = ['YAŞASIN', 'CUMHURİYET!'];
+  function cheerType(k, size, y, color, oneLine = false) {
+    if (k <= 0) return; setFont(ctx, F.head(size));
+    const lines = oneLine ? [CHEER.join(' ')] : CHEER;
+    lines.forEach((s, i) => { const w = ctx.measureText(s).width; revealText(ctx, s, oneLine ? SAFE.x0 : 540 - w / 2, y + i * size * 1.02, size, k, color); });
+  }
+  function cheers(t) {
+    // 1923, salon: sayaç satırının yerinde, tek satır
+    if (t >= T.yasasin - 0.04 && t < T.l05 + 0.2) {
+      const k = ease.enter(seg(t, T.yasasin - 0.04, 0.3)) * (1 - ease.exit(seg(t, T.l05 - 0.1, 0.25)));
+      setFont(ctx, F.mono(32)); revealText(ctx, '29 EKİM 1923 · SALON', SAFE.x0, 590, 32, k, C.ink);
+      cheerType(k, 72, 680, C.ink, true);
+    }
+  }
+  function bigCheer(t) {
+    if (t < T.yas2 - 0.22 || t >= T.bayram) return;
+    const k = ease.enter(seg(t, T.yas2 - 0.22, 0.2)) * (1 - ease.exit(seg(t, T.l11 - 0.25, 0.3)));   // kelimede oturmuş
+    cheerType(k, 112, 545, C.red);   // l04'teki satırın yerinde, büyük; harita altta kırmızıya yanar
   }
   function tag(s, x, y, k, align = 'left', size = 40) {
     if (k <= 0) return; setFont(ctx, F.mono(size)); const tw = ctx.measureText(s).width, x0 = align === 'center' ? x - tw / 2 : x;
@@ -363,7 +398,7 @@ export async function makeIlanRenderer(ep, canvas) {
     tag('ANKARA', sx(ANK) + 22, sy(ANK) - 20, mk * out * ease.enter(seg(t, T.zo1 - 0.5, 0.3)));
     tag('1 NOKTA ≈ 28.700 KİŞİ', SAFE.x0 + 10, 1400, mk * out * ease.enter(seg(t, T.sayim, 0.3)) * (1 - ease.exit(seg(t, T.follow - 0.3, 0.3))));
     BUBBLES.forEach((n, i) => {
-      const p = byName[n]; const a = T.sehir + i * 0.16, k = ease.enter(seg(t, a, 0.3)) * out; if (k <= 0) return;
+      const p = byName[n]; const a = T.sehir + i * 0.25, k = ease.enter(seg(t, a, 0.3)) * out; if (k <= 0) return;
       ctx.save(); ctx.globalAlpha = k; ctx.translate(Math.min(sx(p.xy), 940 - 26), sy(p.xy) - 8 - 10 * (1 - k)); drawBubble(ctx, 34); ctx.restore();
     });
   }
@@ -427,7 +462,7 @@ export async function makeIlanRenderer(ep, canvas) {
     ctx.restore();
     ctx.beginPath(); ctx.moveTo(0, STAGE_TOP + 0.5); ctx.lineTo(W, STAGE_TOP + 0.5); ctx.lineWidth = 1.5; ctx.strokeStyle = C.graphite; ctx.stroke();
     setFont(ctx, F.mono(36)); ctx.fillStyle = C.graphite; ctx.textAlign = 'left'; ctx.fillText(ep.serial, SAFE.x0, 336);
-    title(t); narration(t); counters(t); bayram(t);
+    title(t); narration(t); counters(t); cheers(t); bigCheer(t); bayram(t);
     ctx.drawImage(grain(), 0, 0);
     // kâğıt dokusu fotoğrafın üstüne binmez: kart ve harita etiketleri dokudan sonra
     ctx.save(); ctx.beginPath(); ctx.rect(0, STAGE_TOP, W, 1920 - STAGE_TOP); ctx.clip(); photoCard(t); mapTags(t, cam, mk); follow(t); ctx.restore();

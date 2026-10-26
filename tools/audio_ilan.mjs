@@ -1,6 +1,6 @@
 // "İlan" sesi: ortak anlatımlı film miksi (audio_voicefilm) + bu filmin ipuçları; üstüne alkış katmanı ("Cumhuriyet!"
 // kelimesinin bitişinden: düşük geçiren, rastgele aralıklı el çırpma kümeleri, kısa kuyruk) ve l06'da haber
-// tıkırtısı (mors benzeri). Tek riser, doruktan önce gerçek sessizlik, impact sessizliğin sonunda (konuşmanın altında değil).
+// tıkırtısı (mors benzeri). Tek riser (l09), "Yaşasın Cumhuriyet!" (l10) öncesi, doruktan önce gerçek sessizlik, impact sessizliğin sonunda (konuşmanın altında değil).
 import { mixVoiceFilm, readVoice } from './audio_voicefilm.mjs';
 import { buildYolTimeline } from '../engine/scenes/yolculuk_core.js';
 import { ilanTimes } from '../engine/scenes/ilan.js';
@@ -15,9 +15,9 @@ export function synthIlan(ep) {
   for (let t = T.wire0; t < T.wire1; ) { const g = 2 + Math.floor(r() * 4); for (let k = 0; k < g; k++) { tick.push(t); t += r() < 0.5 ? 0.07 : 0.2; } t += 0.16 + r() * 0.12; }
   const mix = mixVoiceFilm(ep, tl, {
     whip: [[T.in0 + 0.2, T.in1], [T.zo0, T.zo0 + 0.6], [T.zo0 + 0.6, T.zo1], [tl.loop0, tl.loop0 + 1.0]],
-    thock: [T.yuz, T.altida - 0.35, T.yirmi, T.yuz2, T.on],
+    thock: [T.yuz, T.altida - 0.35, T.yirmi, T.yuz2, T.on, T.seksen],
     tick,
-    riser: [L.l07.t0 + 1.2, T.sil0],
+    riser: [L.l09.t0 + 0.4, T.sil0],   // tek riser l09 boyunca; doruk "Yaşasın"da
     silence: [T.sil0, T.impact],
     impact: T.impact,
     loopEnd: tl.loop0 + 0.9,

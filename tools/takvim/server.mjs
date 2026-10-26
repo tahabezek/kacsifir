@@ -78,7 +78,10 @@ function buildPlan({ back = 3, days = 35 } = {}) {
     const quiet = quietDays.has(day);
     const extra = live.filter(e => e.publishAt && trDay(new Date(e.publishAt), c) === day)
       .map(e => new Date(new Date(e.publishAt).getTime() + c.trUtcOffsetHours * 3600e3).toISOString().slice(11, 16));
-    const times = [...new Set([...c.slotsTR, ...extra])].sort();
+    // saat düzeni değişse de defterde (Buffer'da) duran eski yuvalar görünür kalır
+    const booked = Object.entries(ledger.slots).filter(([k, s]) => !s.kind && !NOT_USED.has(s.status) && trDay(new Date(k), c) === day)
+      .map(([k]) => new Date(new Date(k).getTime() + c.trUtcOffsetHours * 3600e3).toISOString().slice(11, 16));
+    const times = [...new Set([...c.slotsTR, ...extra, ...booked])].sort();
     for (const hhmm of times) {
       const t = atTR(ds, hhmm), k = key(t);
       const led = ledger.slots[k];

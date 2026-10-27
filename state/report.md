@@ -1,30 +1,29 @@
-# Performans raporu · 2026-10-27 12:46 UTC
+# Performans raporu · 2026-10-27 17:40 UTC
 
-Gönderi: 10 · izlenme: 9181 · paylaşım: 8 · takip: 0
+Gönderi: 10 · izlenme: 9448 · paylaşım: 5 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | [015 satranc-bugday](https://www.instagram.com/reel/De59cjvjvJv/) | board | 240 | 181 | 0.4 | 11 | 0 | 0 | 60.3 |
-| 2 | [016 sayisal-loto](https://www.instagram.com/reel/De8iRhwD1w7/) | needle | 1711 | 1328 | 0.43 | 2.3 | 0.8 | 0 | 27.6 |
-| 3 | [021 dunya-tuneli](https://www.instagram.com/reel/De9BanLAFIz/) | tunnel | 2091 | 1599 | 0.5 | 1.3 | 0.6 | 0 | 26.2 |
-| 4 | [020 gauss-toplami](https://www.instagram.com/reel/De6cdDIk6NA/) | proof | 1740 | 1364 | 0.35 | 0.7 | 1.5 | 0 | 19.7 |
-| 5 | [025 butun-su](https://www.instagram.com/reel/De90uP0APOh/) | water | 1776 | 1331 | 0.43 | 0 | 0 | 0 | 17.3 |
-| 6 | [028 gezegenler-ay](https://www.instagram.com/reel/De7P5fnD3wl/) | gezegen | 1599 | 1293 | 0.38 | 0 | 0 | 0 | 15.3 |
-| 7 | [022 uc-kapi](https://www.instagram.com/reel/De_mNC6FHUX/) | doors | 0 | 0 | – | 0 | 0 | 0 | 0 |
-| 8 | [017 istanbul-donus](https://www.instagram.com/reel/De_HCm1j9U2/) | spin | 0 | 0 | – | 0 | 0 | 0 | 0 |
-| 9 | [008 kalp-atisi](https://www.instagram.com/p/De9dDKoINUO/) | carousel | 8 | 3 | – | 0 | 0 | 0 | 0 |
-| 10 | [006 kac-turkiye](https://www.instagram.com/p/De64GnLFFrk/) | carousel | 16 | 7 | – | 0 | 0 | 0 | 0 |
+| 1 | [016 sayisal-loto](https://www.instagram.com/reel/De8iRhwD1w7/) | needle | 1715 | 1333 | 0.43 | 2.3 | 0.8 | 0 | 27.5 |
+| 2 | [021 dunya-tuneli](https://www.instagram.com/reel/De9BanLAFIz/) | tunnel | 2110 | 1621 | 0.5 | 1.2 | 0.6 | 0 | 26 |
+| 3 | [025 butun-su](https://www.instagram.com/reel/De90uP0APOh/) | water | 1972 | 1531 | 0.43 | 0 | 0 | 0 | 17.3 |
+| 4 | [028 gezegenler-ay](https://www.instagram.com/reel/De7P5fnD3wl/) | gezegen | 1600 | 1294 | 0.38 | 0 | 0 | 0 | 15.3 |
+| 5 | [017 istanbul-donus](https://www.instagram.com/reel/De_HCm1j9U2/) | spin | 1774 | 1491 | 0.35 | 0 | 0 | 0 | 14 |
+| 6 | [022 uc-kapi](https://www.instagram.com/reel/De_mNC6FHUX/) | doors | 245 | 203 | 0.21 | 0 | 0 | 0 | 8.5 |
+| 7 | [026 dogum-gunu](https://www.instagram.com/reel/DfAZpM0iTwg/) | birthday | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 8 | [013 insanlik-istanbul](https://www.instagram.com/p/DfAB_zmEe4r/) | carousel | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 9 | [008 kalp-atisi](https://www.instagram.com/p/De9dDKoINUO/) | carousel | 15 | 5 | – | 0 | 0 | 0 | 0 |
+| 10 | [006 kac-turkiye](https://www.instagram.com/p/De64GnLFFrk/) | carousel | 17 | 7 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
-- board: 60.3 (1 gönderi)
-- needle: 27.6 (1 gönderi)
-- tunnel: 26.2 (1 gönderi)
-- proof: 19.7 (1 gönderi)
+- needle: 27.5 (1 gönderi)
+- tunnel: 26.0 (1 gönderi)
 - water: 17.3 (1 gönderi)
 - gezegen: 15.3 (1 gönderi)
-- doors: 0.0 (1 gönderi)
-- spin: 0.0 (1 gönderi)
-- carousel: 0.0 (2 gönderi)
+- spin: 14.0 (1 gönderi)
+- doors: 8.5 (1 gönderi)
+- birthday: 0.0 (1 gönderi)
+- carousel: 0.0 (3 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)
 - İzlenme oranı < 0,5: kanca/ilk 3 sn sorunu → başlığı ve kare 0'ı yeniden yaz.

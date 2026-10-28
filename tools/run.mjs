@@ -78,11 +78,16 @@ function episodes() {
 const reelSlots = ledger => Object.values(ledger.slots).filter(s => !s.kind); // carousel ve yalnız-YouTube kayıtları hariç
 function usedReels(ledger) { return new Set(reelSlots(ledger).filter(s => !NOT_USED.has(s.status)).map(s => s.episode)); }
 // publishAt: "2026-11-18T17:30Z" gibi; bölüm yalnızca o yuvada yayınlanır
+// CI'da render yok (GPU'suz makinede 3B bölümler 50 dakikalık sınırı aşıp bütün çalıştırmayı iptal ettiriyordu):
+// yalnızca hazır videosu olan bölüm seçilir; sabit tarihli bölümün videosu yoksa yuva hazır bir stok bölümüyle dolar.
+const CI = !!process.env.GITHUB_ACTIONS;
+const hasVideo = e => fs.existsSync(path.join(root, 'prebuilt', `${e.id}-${e.slug}.mp4`)) || fs.existsSync(path.join(root, 'out', e.id, 'video.mp4'));
 function nextEpisode(ledger, taken, t) {
   const used = usedReels(ledger);
   const pinned = episodes().find(e => e.publishAt && e.publishAt === slotKey(t) && !used.has(e.id) && !taken.has(e.id));
-  if (pinned || quietDay(t)) return pinned;
-  return episodes().find(e => !e.publishAt && !used.has(e.id) && !taken.has(e.id));
+  if (pinned && CI && !hasVideo(pinned)) summary.push(`⚠️ ${slotKey(t)}: ${pinned.id} için hazır video yok (prebuilt/); yuva stoktan dolduruldu.`);
+  else if (pinned || quietDay(t)) return pinned;
+  return episodes().find(e => !e.publishAt && !used.has(e.id) && !taken.has(e.id) && (!CI || hasVideo(e)));
 }
 
 // ——— render ———
@@ -92,6 +97,7 @@ function render(ep) {
   // 3B (WebGL) bölümler GPU'lu makinede render edilip hazır dosya olarak gelir: CI'da GPU yok
   const pre = path.join(root, 'prebuilt', `${ep.id}-${ep.slug}.mp4`);
   if (fs.existsSync(pre)) { fs.mkdirSync(path.dirname(mp4), { recursive: true }); fs.copyFileSync(pre, mp4); log(`hazır ${ep.id} (${ep.slug})`); return mp4; }
+  if (CI) throw new Error(`hazır video yok: ${ep.id} (${ep.slug}); yerelde render edip prebuilt/ klasörüne koy`);
   log(`render ${ep.id} (${ep.slug})`);
   const r = spawnSync(process.execPath, [path.join(root, 'tools', 'render.mjs'), ep.file], { cwd: root, stdio: 'inherit' });
   if (r.status !== 0 || !fs.existsSync(mp4)) throw new Error(`render başarısız: ${ep.id}`);
@@ -190,7 +196,11 @@ async function main() {
     plan.push({ t, ep });
     log(`boş   ${slotKey(t)} → ${ep.id} ${ep.slug}`);
   }
-  if (skippedEmpty.length) summary.push(`ℹ️ Sabitsiz bölüm kalmadı; ${skippedEmpty.length} yuva boş geçildi (${skippedEmpty.join(', ')}).`);
+  if (skippedEmpty.length) {
+    // 24 saat içinde boş kalan yuva uyarıdır (çalıştırma başarısız sayılır, e-posta gelir)
+    const soon = skippedEmpty.some(k => new Date(k) - now < 24 * 3600e3) && !skippedEmpty.every(k => quietDay(new Date(k)));
+    summary.push(`${soon ? '⚠️' : 'ℹ️'} Uygun bölüm yok; ${skippedEmpty.length} yuva boş geçildi (${skippedEmpty.join(', ')}).`);
+  }
   if (!plan.length) { log('tüm reels yuvaları dolu'); await carousels(ledger, now, existing, tol); await youtube(ledger, now); return finish(ledger); }
 
   // render
@@ -320,7 +330,8 @@ function finish(ledger) {
   const text = summary.join('\n') || 'değişiklik yok';
   log(text);
   if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `### kacsifir\n${text}\n`);
-  if (summary.some(s => s.startsWith('❌'))) process.exitCode = 1;
+  // uyarı da hata sayılır: başarısız çalıştırma GitHub'dan e-posta olarak gelir, sessiz kalmaz
+  if (summary.some(s => s.startsWith('❌') || s.startsWith('⚠️'))) process.exitCode = 1;
 }
 
 main().catch(e => { console.error(e); process.exitCode = 1; });

@@ -1,0 +1,138 @@
+{
+  "id": "U01",
+  "slug": "hangisi-cilt-1",
+  "kind": "uzun",
+  "title": "Hangisi daha şaşırtıcı? 14 gerçek hikâye, 7 düello",
+  "serial": "KAÇ SIFIR? · HANGİSİ DAHA ŞAŞIRTICI? · CİLT 1",
+  "bpm": 100,
+  "hookFrom": {
+    "ep": "062",
+    "line": "l09"
+  },
+  "duels": [
+    {
+      "ep": "062",
+      "a": "65 gün yere inmeyen uçak",
+      "b": "10 ay yere inmeyen kuş"
+    },
+    {
+      "ep": "036",
+      "a": "Üç gemi kazasından sağ çıkan kadın",
+      "b": "İki atom bombasından sağ çıkan adam"
+    },
+    {
+      "ep": "034",
+      "a": "438 gün okyanusta sürüklenen balıkçı",
+      "b": "30 metre dipte 60 saat bekleyen aşçı"
+    },
+    {
+      "ep": "063",
+      "a": "122 yıl yaşayan kadın",
+      "b": "Yaşı yüzyıllarla ölçülen köpekbalığı"
+    },
+    {
+      "ep": "066",
+      "a": "29 dakika nefes tutan dalgıç",
+      "b": "3 saat 42 dakika dalan balina"
+    },
+    {
+      "ep": "065",
+      "a": "4.800 km öteden duyulan Krakatoa",
+      "b": "10.000 km öteden duyulan Tonga"
+    },
+    {
+      "ep": "037",
+      "a": "3 km yükseklikten düşüp yaşayan kız",
+      "b": "7 kez yıldırım çarpan adam"
+    }
+  ],
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+8%",
+    "lines": [
+      {
+        "id": "h1",
+        "tts": "Kırk gramlık bir kuş, yaklaşık on ay boyunca bir kez bile yere inmeden yaşayabiliyor.",
+        "text": "40 gramlık bir kuş, yaklaşık 10 ay boyunca bir kez bile yere inmeden yaşayabiliyor.",
+        "rate": "+4%"
+      },
+      {
+        "id": "h2",
+        "tts": "Üstelik bu, videodaki en şaşırtıcı hikâye bile değil.",
+        "text": "Üstelik bu, videodaki en şaşırtıcı hikâye bile değil.",
+        "rate": "+0%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "h3",
+        "tts": "Yedi düello, on dört gerçek hikâye.",
+        "text": "7 düello, 14 gerçek hikâye."
+      },
+      {
+        "id": "h4",
+        "tts": "Her düelloda hangisinin daha şaşırtıcı olduğuna sen karar vereceksin.",
+        "text": "Her düelloda hangisinin daha şaşırtıcı olduğuna sen karar vereceksin."
+      },
+      {
+        "id": "i1",
+        "tts": "Birinci düello. Altmış beş gün yere inmeyen bir uçak, on ay yere inmeyen bir kuşa karşı.",
+        "text": "1. düello: 65 gün yere inmeyen bir uçak, 10 ay yere inmeyen bir kuşa karşı."
+      },
+      {
+        "id": "v1",
+        "tts": "Kararını aklında tut; en sonda soracağım.",
+        "text": "Kararını aklında tut; en sonda soracağım."
+      },
+      {
+        "id": "i2",
+        "tts": "İkinci düello. Üç gemi kazasından sağ çıkan bir kadın, iki atom bombasından sağ çıkan bir adama karşı.",
+        "text": "2. düello: Üç gemi kazasından sağ çıkan bir kadın, iki atom bombasından sağ çıkan bir adama karşı."
+      },
+      {
+        "id": "i3",
+        "tts": "Üçüncü düello. Okyanusta dört yüz otuz sekiz gün sürüklenen bir balıkçı, denizin dibinde altmış saat bekleyen bir aşçıya karşı.",
+        "text": "3. düello: Okyanusta 438 gün sürüklenen bir balıkçı, denizin dibinde 60 saat bekleyen bir aşçıya karşı."
+      },
+      {
+        "id": "i4",
+        "tts": "Dördüncü düello. Yüz yirmi iki yıl yaşayan bir kadın, yaşı yüzyıllarla ölçülen bir köpekbalığına karşı.",
+        "text": "4. düello: 122 yıl yaşayan bir kadın, yaşı yüzyıllarla ölçülen bir köpekbalığına karşı."
+      },
+      {
+        "id": "v4",
+        "tts": "Yarıyı geçtik.",
+        "text": "Yarıyı geçtik."
+      },
+      {
+        "id": "i5",
+        "tts": "Beşinci düello. Nefesini yirmi dokuz dakika tutan bir dalgıç, suyun altında saatlerce kalan bir balinaya karşı.",
+        "text": "5. düello: Nefesini 29 dakika tutan bir dalgıç, suyun altında saatlerce kalan bir balinaya karşı."
+      },
+      {
+        "id": "i6",
+        "tts": "Altıncı düello. Dört bin sekiz yüz kilometre öteden duyulan bir patlama, on bin kilometre öteden duyulan bir patlamaya karşı.",
+        "text": "6. düello: 4.800 km öteden duyulan bir patlama, 10.000 km öteden duyulan bir patlamaya karşı."
+      },
+      {
+        "id": "i7",
+        "tts": "Ve son düello. Üç kilometre yükseklikten düşüp hayatta kalan bir kız, yedi kez yıldırım çarpan bir adama karşı.",
+        "text": "Ve son düello: 3 km yükseklikten düşüp hayatta kalan bir kız, 7 kez yıldırım çarpan bir adama karşı."
+      },
+      {
+        "id": "o1",
+        "tts": "Yedi düellonun hepsini gördün.",
+        "text": "7 düellonun hepsini gördün."
+      },
+      {
+        "id": "o2",
+        "tts": "Sence en şaşırtıcısı hangisiydi? Yorumlara düellonun numarasını ve seçtiğin tarafı yaz; örneğin, yedi B.",
+        "text": "Sence en şaşırtıcısı hangisiydi? Yorumlara düellonun numarasını ve seçtiğin tarafı yaz; örneğin 7B."
+      },
+      {
+        "id": "o3",
+        "tts": "Her hafta yeni bir cilt geliyor; abone olursan kaçırmazsın.",
+        "text": "Her hafta yeni bir cilt geliyor; abone olursan kaçırmazsın."
+      }
+    ]
+  }
+}

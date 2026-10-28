@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.js","d3-geo":"../node_modules/d3-geo/src/index.js","d3-array":"../node_modules/d3-array/src/index.js","internmap":"../node_modules/internmap/src/index.js","topojson-client":"../node_modules/topojson-client/src/index.js"}}</script>
+<style>html,body{margin:0;background:#ECE5D5}canvas{display:block}</style>
+</head><body><canvas id="c" width="1920" height="1080"></canvas>
+<script type="module">
+// Uzun video sahnesi (16:9): Hangisi filmleri ortada dikey sayfa olarak oynar, yanlarda A/B etiketleri;
+// aralarda "düello defteri" listesi. Her kare t'nin saf fonksiyonudur; zamanlar plan.json'dan gelir.
+import { makeUzunRenderer } from './uzun.js';
+const q = new URLSearchParams(location.search);
+const plan = await (await fetch('../' + q.get('plan'))).json();
+await Promise.all([
+  document.fonts.load('800 100px Archivo'), document.fonts.load('600 44px Archivo'),
+  document.fonts.load('500 44px "IBM Plex Mono"'), document.fonts.load('500 40px "IBM Plex Mono"', '№ı'),
+  document.fonts.load('800 100px Archivo', 'ıİşŞğĞçÇöÖüÜâ'), document.fonts.load('600 44px Archivo', 'ıİşŞğĞçÇöÖüÜ'),
+]);
+await document.fonts.ready;
+const canvas = document.getElementById('c');
+if (q.get('thumb')) { canvas.width = 1280; canvas.height = 720; }
+const r = await makeUzunRenderer(plan, canvas, { thumb: !!q.get('thumb') });
+window.DURATION = plan.duration;
+window.renderFrame = t => { r.render(t); return true; };
+r.render(0);
+window.__ready = true;
+</script></body></html>

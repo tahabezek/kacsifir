@@ -396,6 +396,90 @@
         "status": "scheduled",
         "dueAt": "2026-10-27T17:30:00.000Z"
       }
+    },
+    "2026-10-28T05:30Z": {
+      "episode": "007",
+      "media": "v/007-isik-ses.mp4",
+      "status": "scheduled",
+      "at": "2026-10-28T00:27:22.394Z",
+      "postId": "6ae141a1f6d6782c599e0762",
+      "dueAt": "2026-10-28T05:30:00.000Z",
+      "yt": {
+        "postId": "6ae1422ded0a3f2cb4136f0b",
+        "status": "scheduled",
+        "dueAt": "2026-10-28T05:30:00.000Z"
+      }
+    },
+    "2026-10-28T17:30Z": {
+      "episode": "027",
+      "media": "v/027-hangisi-once-duser.mp4",
+      "status": "scheduled",
+      "at": "2026-10-28T00:27:22.394Z",
+      "postId": "6ae141a3b24fed5fb491a48a",
+      "dueAt": "2026-10-28T17:30:00.000Z",
+      "yt": {
+        "postId": "6ae1422eb24fed5fb491c846",
+        "status": "scheduled",
+        "dueAt": "2026-10-28T17:30:00.000Z"
+      }
+    },
+    "2026-10-29T05:30Z": {
+      "episode": "023",
+      "media": "v/023-cumhuriyet-saniye.mp4",
+      "status": "scheduled",
+      "at": "2026-10-28T00:27:22.394Z",
+      "postId": "6ae141a421e984edd699130c",
+      "dueAt": "2026-10-29T05:30:00.000Z",
+      "yt": {
+        "postId": "6ae1422ef6d6782c599e38fa",
+        "status": "scheduled",
+        "dueAt": "2026-10-29T05:30:00.000Z"
+      }
+    },
+    "2026-10-29T17:30Z": {
+      "episode": "052",
+      "media": "v/052-tam-bu-dakikada.mp4",
+      "status": "scheduled",
+      "at": "2026-10-28T00:27:22.394Z",
+      "postId": "6ae141a6b24fed5fb491a66d",
+      "dueAt": "2026-10-29T17:30:00.000Z",
+      "yt": {
+        "postId": "6ae1422ff6d6782c599e3978",
+        "status": "scheduled",
+        "dueAt": "2026-10-29T17:30:00.000Z"
+      }
+    },
+    "2026-10-28T14:00Z": {
+      "kind": "carousel",
+      "episode": "015",
+      "media": [
+        "c/015-satranc-bugday/1.jpg",
+        "c/015-satranc-bugday/2.jpg",
+        "c/015-satranc-bugday/3.jpg",
+        "c/015-satranc-bugday/4.jpg",
+        "c/015-satranc-bugday/5.jpg",
+        "c/015-satranc-bugday/6.jpg"
+      ],
+      "status": "scheduled",
+      "at": "2026-10-28T00:27:22.394Z",
+      "postId": "6ae141f121e984edd6991e2c",
+      "dueAt": "2026-10-28T14:00:00.000Z"
+    },
+    "2026-10-29T14:00Z": {
+      "kind": "carousel",
+      "episode": "016",
+      "media": [
+        "c/016-sayisal-loto/1.jpg",
+        "c/016-sayisal-loto/2.jpg",
+        "c/016-sayisal-loto/3.jpg",
+        "c/016-sayisal-loto/4.jpg",
+        "c/016-sayisal-loto/5.jpg",
+        "c/016-sayisal-loto/6.jpg"
+      ],
+      "status": "scheduled",
+      "at": "2026-10-28T00:27:22.394Z",
+      "postId": "6ae1422cf6d6782c599e3829",
+      "dueAt": "2026-10-29T14:00:00.000Z"
     }
   }
 }

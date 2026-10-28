@@ -509,6 +509,19 @@
       "at": "2026-10-28T17:22:31.962Z",
       "postId": "6ae22fd1992232523c32b60e",
       "dueAt": "2026-10-30T14:00:00.000Z"
+    },
+    "2026-10-30T17:30Z": {
+      "episode": "058",
+      "media": "v/058-ucak-yiyen-ve-hickiran.mp4",
+      "status": "scheduled",
+      "at": "2026-10-28T21:39:25.038Z",
+      "postId": "6ae26bc298678c04af5b328f",
+      "dueAt": "2026-10-30T17:30:00.000Z",
+      "yt": {
+        "postId": "6ae26bc2ceaf0c51f3f7d983",
+        "status": "scheduled",
+        "dueAt": "2026-10-30T17:30:00.000Z"
+      }
     }
   }
 }

@@ -198,7 +198,10 @@ async function main() {
   }
   if (skippedEmpty.length) {
     // 24 saat içinde boş kalan yuva uyarıdır (çalıştırma başarısız sayılır, e-posta gelir)
-    const soon = skippedEmpty.some(k => new Date(k) - now < 24 * 3600e3) && !skippedEmpty.every(k => quietDay(new Date(k)));
+    // gün başına en az 2 Reels hedefi: o gün zaten 2 gönderi varsa boş yuva planlıdır (ör. 13:00 + 20:30 günleri)
+    const dayOf = k => new Date(new Date(k).getTime() + cfg.trUtcOffsetHours * 3600e3).toISOString().slice(0, 10);
+    const perDay = d => Object.entries(ledger.slots).filter(([k, x]) => !x.kind && !NOT_USED.has(x.status) && dayOf(k) === d).length + plan.filter(p => dayOf(slotKey(p.t)) === d).length;
+    const soon = skippedEmpty.some(k => new Date(k) - now < 24 * 3600e3 && !quietDay(new Date(k)) && perDay(dayOf(k)) < 2);
     summary.push(`${soon ? '⚠️' : 'ℹ️'} Uygun bölüm yok; ${skippedEmpty.length} yuva boş geçildi (${skippedEmpty.join(', ')}).`);
   }
   if (!plan.length) { log('tüm reels yuvaları dolu'); await carousels(ledger, now, existing, tol); await youtube(ledger, now); return finish(ledger); }

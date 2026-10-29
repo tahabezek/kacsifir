@@ -3,6 +3,112 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-10-29 turu
+
+**Tur notu:** Web araması bu turda da yalnızca özet düzeyinde çalıştı; Reddit, X, Ekşi Sözlük ve Google Trends'ten güvenilir, tarihli bir "en çok oy alan" listesi çekilemedi (r/theydidthemath sorgusu hiçbir sonuç getirmedi). Bu yüzden öneriler iki ölçütle seçildi: (1) önümüzdeki 2–4 haftada gerçek bir takvim olayı olanlar (Kasım 2026 gökyüzü takvimi, BM nüfus dönüm noktası yıldönümü), (2) kalıcı merak sorusu + tek satırda doğrulanabilir hesap. Aritmetik bu turda yeniden hesaplandı. "Doğrulanmalı" yazan değerler yalnızca ikincil özette görüldü; yayından önce birincil kaynaktan teyit edilmeli.
+
+**Güncel notlar:**
+- **Hera:** ESA hâlâ "Kasım 2026" diyor; kesin gün yok (yalnızca topluluk sitesi Celestia 4 Kasım diyor, ESA teyidi yok). 26 Ekim turundaki notla aynı: "bu hafta" denmemeli.
+- **Voyager 1 bir ışık günü:** Bu turdaki arama özeti yine 15 Kasım dedi (PLAYBOOK 18 Kasım). NASA JPL sayfasından teyit şart.
+- **Kasım gökyüzü takvimi (Star Walk):** Güney Taurid'ler 4–5, Kuzey Taurid'ler 11–12, Leonid'ler 17–18 Kasım; 14 Kasım'da dört gezegen dizilimi; Uranüs karşıtlığı 25 Kasım; 24 Kasım süper dolunay. Tarihler gökbilimsel olduğu için sabittir; görev tarihleri kayabilir.
+- **TÜİK:** 1 Temmuz 2026 itibarıyla Türkiye nüfusu 86.320.602 (erkek 43.170.975; kadın 43.149.627). Yılbaşı referansı 86.092.168 (ADNKS 2025). Sonraki dönemsel veri tarihi TÜİK takviminden doğrulanmalı.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Türkiye'nin her vatandaşını Excel'e yazsan kaç sayfa gerekir?
+- Kanca: Türkiye'nin bütün nüfusunu tek bir Excel dosyasına yazmak için kaç sayfa gerekir?
+- Sayılar: Excel bir sayfada en fazla 1.048.576 satır (2²⁰) taşır. TÜİK'e göre 1 Temmuz 2026 nüfusu 86.320.602. Hesap: 86.320.602 ÷ 1.048.576 = **82,3** → **83 sayfa** (82 tam sayfa = 85.983.232 satır; kalan 337.370 kişi 83. sayfada).
+  Sayfayı kaydırma: ekranda ≈ 40 satır varsa 1.048.576 ÷ 40 ≈ 26.214 ekran; saniyede 1 ekran kaydırsan sayfa başına ≈ 7,3 saat.
+- Kaynaklar: https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3 ·
+  https://www.evrensel.net/haber/5997066/turkiye-nin-yeni-nufusu-belli-oldu-yilin-ilk-alti-ayinda-kac-kisi-artti (TÜİK verisinin haberi; birincil kaynak olarak data.tuik.gov.tr'deki bülten kullanılmalı, doğrulanmalı).
+- Görsel metafor: **Sekme çubuğu ve kaydırma çubuğu**: ekranın altında sayfa sekmeleri (Sayfa1, Sayfa2…) soldan sağa dizilir ve bir şeride sığmayıp taşar; sağdaki kaydırma çubuğunun sürgüsü her sayfada bir nokta kadar küçülür. Doruk: 83. sekme ve içinde yalnızca 337.370 satırlık kısmen dolu son sayfa (kırmızı kalemle işaretlenen tek nesne). Satır numaraları 1.048.576'ya yaklaşırken hızlanıp durur.
+- Türkiye bağlantısı: İstanbul'un nüfusu (15 milyon civarı; güncel TÜİK değeri doğrulanmalı) ≈ 14 sayfa; tek başına bir ilin kaç sayfa tuttuğu karşılaştırılabilir.
+- Neden şimdi / tarih: Kalıcı konu; TÜİK'in yeni nüfus verisi açıklandığında ya da yıllık ADNKS sonuçlarında (Şubat 2027) güncellenebilir.
+- Puan (8/10): Herkesin bildiği bir arayüz, kanca tek cümle, "sınır" kavramı sezgiye ters (milyonlar sığar, milyarlar sığmaz); görsel kolay üretilir. Viral potansiyel orta-yüksek: ofis çalışanları paylaşır.
+- Tuzaklar: Sınır Excel'in güncel sürümleri için 1.048.576'dır (2007 öncesi .xls dosyalarında 65.536). Sonuç nüfus verisine bağlıdır; "86 milyon" yuvarlaması yerine tam değer ve tarih belirtilmeli. Kişisel veri çağrışımı yapmamak için "gerçek kişi listesi" değil yalnızca sayı kullanılmalı.
+
+### Süper Ay'ı gözle fark edebilir misin? 24 Kasım'da Ay %6 daha büyük (tarihli: 24 Kasım)
+- Kanca: Süper Ay normal dolunaydan yalnızca yüzde altı büyük görünür; fark edebilir misin?
+- Sayılar: 24 Kasım 2026 dolunayı yaklaşık 360.768 km'de (Space.com ve EarthSky; 14.53 GMT = Türkiye saatiyle 17.53). Ortalama Dünya–Ay uzaklığı 384.400 km. Fark: 384.400 − 360.768 = **23.632 km daha yakın** (≈ %6,1).
+  Görünen çap oranı: 384.400 ÷ 360.768 = **1,066** → **≈ %6,6 daha geniş**. Alan oranı 1,066² ≈ 1,14 (yaklaşık %14 daha geniş disk alanı).
+  Işık gecikmesi: 360.768 ÷ 299.792 = 1,203 sn; ortalama 384.400 ÷ 299.792 = 1,282 sn → fark ≈ 0,08 sn.
+- Kaynaklar: https://www.space.com/supermoon-what-is-it-2026 · https://earthsky.org/human-world/what-is-a-supermoon · https://starwalk.space/en/news/astronomy-calendar-2026 (24 Kasım süper dolunay). Uzaklık için sterngucker.de tablosu da ≈ 360.800 km veriyor; SpaceInformer'ın ≈ 356.900 km değeri diğerleriyle uyuşmadığı için kullanılmadı.
+- Görsel metafor: **Bozuk para ve cetvel**: kolu uzatılmış bir el, parmak ucunda iki bozuk para; biri ortalama Ay, öteki süper Ay. Çap farkı çizgiyle gösterilir (≈ 1 mm'lik bir şerit), sonra "Gözle fark edilir mi?" balonu. Doruk: iki parayı üst üste koyduğumuzda kırmızı kalemle çizilen ince halka.
+- Türkiye bağlantısı: Kadıköy iskelesinden ya da Çamlıca'dan çekilen Ay fotoğrafı; "ufukta büyük görünen Ay" yanılsaması (Ay yanılsaması) bu konuyla birlikte anlatılabilir.
+- Neden şimdi / tarih: **Tarihli:** 24 Kasım 2026 (Salı). İdeal yayın 22–24 Kasım. Aynı gün 25 Kasım'daki Uranüs karşıtlığı önerisiyle seri yapılabilir.
+- Puan (8/10): Tarihli fırsat, "efsane kırıcı" kancası güçlü (herkes süper Ay'ı duyar, kimse oranı bilmez), sayı doğrulanabilir.
+- Tuzaklar: "Süper Ay" resmî bir astronomi terimi değil (Richard Nolle'un 1979 tanımı); bu yüzden "en büyük" tanımı kaynaktan kaynağa değişir. Perigee uzaklığı dakikasına göre farklıdır; 360.768 km dolunay anındaki değerdir. En yakın Ay (perigee) ile en uzak Ay (apogee) kıyaslanırsa fark ≈ %14 çaptır; "süper Ay" ile "ortalama Ay" kıyası %6'dır. İkisini karıştırma.
+
+### İnsanlık 7'den 8 milyara 11 yılda çıktı; ilk milyara ise 200.000 yıl gerekti (tarihli: 15 Kasım)
+- Kanca: İnsanlığın ilk bir milyarı 200.000 yılda doldu; son bir milyarı yalnızca on bir yılda.
+- Sayılar: BM'ye göre dünya nüfusu 31 Ekim 2011'de 7 milyara, 15 Kasım 2022'de 8 milyara ulaştı → **≈ 11 yıl 2 hafta**. 1 milyar eşiği ≈ 1804. Bu yaklaşık eşikler: 2 milyar 1927 (123 yıl), 3 milyar 1960 (33 yıl), 4 milyar 1974 (14 yıl), 5 milyar 1987 (13 yıl), 6 milyar 1999 (12 yıl), 7 milyar 2011 (12 yıl), 8 milyar 2022 (11 yıl).
+  Türkiye payı: 86.320.602 ÷ 8.000.000.000 ≈ %1,08 → ≈ her 93 kişiden biri (nüfus 8,2 milyar ise ≈ 95; güncel BM tahmini doğrulanmalı).
+- Kaynaklar: https://www.un.org/en/dayof8billion · https://ourworldindata.org/world-population-growth · https://population.un.org/wpp/ (güncel tahminler için).
+- Görsel metafor: **Milyar tuğlası duvarı**: ekranda soldan sağa uzayan bir duvar; her tuğla 1 milyar insan. İlk tuğla çizilirken uzun, sessiz bir bekleme (cetvel çentikleri 200.000 yıl), sonraki tuğlalar giderek hızlı yerleşir; son tuğla 11 yılda gelir ve duvar kırmızı kalemle tamamlanır. Maskot Sıfır son tuğlada nefes nefese kalır.
+- Türkiye bağlantısı: Türkiye'nin 1927 sayımındaki nüfusu (≈ 13,6 milyon; doğrulanmalı) ile bugünkü 86,3 milyon: dünya 2 milyarken Türkiye'nin dünyadaki payı ≈ %0,7.
+- Neden şimdi / tarih: **Tarihli:** 15 Kasım 2026, "8 milyar günü"nün 4. yıldönümü.
+- Puan (7/10): Sürpriz basamaklı ve görselleştirmesi kolay; "kaç sıfır" kimliğine oturur. Orta viral; yıldönümü hatırlatması işe yarar.
+- Tuzaklar: 8 milyar tarihi BM'nin modelleme tahminidir; gerçek günü kimse bilmez (BM ve ABD Nüfus Bürosu farklı tarih verdi). "İlk milyar 200.000 yıl" yaklaşık bir ifadedir (Homo sapiens'in yaşı için ≈ 300.000 yıl da kullanılır); videoda "yaklaşık" denmeli. Nüfus artış hızı artık düşüyor; "patlıyor" vurgusu yanıltır.
+
+### Everest'i Mariana Çukuru'na batırsan başı kaç kilometre su altında kalır?
+- Kanca: Everest'i dünyanın en derin çukuruna atsan zirvesi hâlâ iki kilometre su altında kalır.
+- Sayılar: Everest 8.849 m (Nepal–Çin 2020 ortak ölçümü). Challenger Çukuru ≈ 10.935 m (kaynağa göre ±10 m; doğrulanmalı). Fark: 10.935 − 8.849 = **2.086 m**.
+  Türkiye kıyası: Ağrı Dağı 5.137 m → 10.935 ÷ 5.137 ≈ 2,13 (iki Ağrı Dağı üst üste hâlâ çukurdan 661 m sığ); Erciyes 3.917 m.
+  Basınç: ≈ 1.090 bar (10.935 m'de; her 10 m yaklaşık 1 bar + 1 atmosfer).
+- Kaynaklar: https://oceanservice.noaa.gov/facts/oceandepth.html · https://www.nationalgeographic.com/science/article/everest-height-resized (Everest 8.849 m) · https://en.wikipedia.org/wiki/Challenger_Deep (ölçüm farkları için).
+- Görsel metafor: **Kesit çizim ve su çizgisi**: büyük bir dikey kesitte deniz seviyesi çizgisi; Everest silüeti tepeden aşağı batırılır, yan tarafta Ağrı, Erciyes ve Burj Halife ölçek çubukları. Zirve "−2.086 m" çizgisinde durur ve kırmızı kalemle çerçevelenir. (Önceki "kule" sahnelerinden farklı: nesne dağdır, yön aşağıdır.)
+- Türkiye bağlantısı: Karadeniz'in en derin noktası ≈ 2.200 m (doğrulanmalı): "Mariana'da Everest'in üstünde kalan su kolonu, Karadeniz'in en derin yeri kadar".
+- Neden şimdi / tarih: Yok, kalıcı konu. Daha çok bilinen ama sayısıyla görülmeyen karşılaştırma.
+- Puan (6/10): Çok bilinen bir "efsane" kıyası; viral potansiyeli orta, ama görseli güçlü ve doğruluk güveni yüksek.
+- Tuzaklar: Challenger Çukuru'nun derinliği ölçüme göre 10.900–10.984 m arasında değişir; tek bir sayı yerine aralık verilmeli. Everest "deniz seviyesinden" yüksekliktir; Mauna Kea tabandan ölçüldüğünde daha uzundur (≈ 10.210 m) ve ayrı bir tuzaktır.
+
+### İnsanlığın açtığı en derin delik Dünya'nın merkezine yolun yüzde kaçı? (Kola Kuyusu)
+- Kanca: İnsanlığın açtığı en derin delik Dünya'nın merkezine giden yolun binde ikisi bile değil.
+- Sayılar: Kola Süper Derin Kuyusu 12.262 m (1989). Dünya'nın yarıçapı ≈ 6.371 km. Oran: 12,262 ÷ 6.371 = 0,001925 → **≈ %0,19** (yaklaşık binde iki). Kalan yol: 6.371 − 12,262 ≈ 6.358,7 km.
+  Hız: sondaj 1970–1989 arasında sürdü (≈ 19–20 yıl) → yılda ≈ 613–645 m.
+  Dünya'yı bir elma kabul edersen (yarıçap 4 cm) kuyu **≈ 0,08 mm**: elma kabuğunun bile altında.
+- Kaynaklar: https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole · https://www.britannica.com/place/Kola-Superdeep-Borehole · https://www.usgs.gov/faqs/how-deep-hole-ground-deepest-hole-earth (USGS'nin sayfası; adres doğrulanmalı).
+- Görsel metafor: **Elma dilimi ve iğne**: büyük bir elma kesiti; kuyu, kabuğa saplanan görünmez ince bir kıl çizgisidir, sonra yakınlaştırdıkça kabuk kalınlığına eşitlenir. Merkeze kadar uzanan ölçü çizgisinde "6.371 km" tek yönde ilerlerken Kola'nın payı kırmızı bir çentik olarak kalır.
+- Türkiye bağlantısı: Türkiye'nin en derin kuyusu (petrol/jeotermal; ≈ 6.000–7.000 m civarı iddia edilir) doğrulanamadı; kullanılacaksa TPAO/MTA kaynağı gerekir.
+- Neden şimdi / tarih: Yok. 003 "Dünya'nın merkezi" bölümünün devamı ("Dünya serisi 2") olarak kurulabilir; çakışma riski: konu aynı gezegen ama farklı soru, bu nedenle puan düşük.
+- Puan (6/10): Görsel güçlü, kanca merak uyandırıyor; 003 ile benzerlik nedeniyle yeniliği orta.
+- Tuzaklar: 12.262 m "en derin insan yapımı delik" (ölçüm derinliği); Sahalin'deki Z-44 Chayvo kuyusu ≈ 12.376 m "ölçülen toplam derinlik" ile daha uzundur (yataya yakın sondaj); "en derin dikey kuyu" ve "en uzun kuyu" ayrı rekorlardır, doğrulanmalı. Kola kuyusunda sıcaklık ≈ 180 °C bulundu (beklenenden yüksek); videoda yalnızca derinlik kullanılmalı.
+
+### Büyük Piramit'in 2,3 milyon bloğunu 20 yılda dizmek için kaç dakikada bir blok koymak gerekir?
+- Kanca: Büyük Piramit 20 yılda yapıldıysa, her iki dakikada bir blok yerleşmiş demektir.
+- Sayılar: Yaklaşık 2,3 milyon blok (Britannica). Yapım süresi tahminen 20 yıl. Çalışma: günde 10 saat, yılda 365 gün: 20 × 365 × 10 × 60 = 4.380.000 dk. 4.380.000 ÷ 2.300.000 = **≈ 1,9 dk/blok**.
+  Günde 12 saat ve yılda 300 çalışma günü ile: 20 × 300 × 12 × 60 = 4.320.000 dk → 1,88 dk. İki varsayımın sonucu yakın.
+  Toplam kütle ≈ 5,9 milyon ton (yaklaşık; doğrulanmalı). Ortalama blok ≈ 2,5 ton.
+- Kaynaklar: https://www.britannica.com/topic/Pyramids-of-Giza · https://www.nationalgeographic.com/history/article/great-pyramid-giza (yapım süresi ve blok sayısı; tahmin).
+- Görsel metafor: **Metronom ve piramit**: ekranda yalnızca bir metronom tiki (her 2 dk ≈ 2 sn'ye sıkıştırılmış) ve her tikte kare bir blok yerine oturur; piramit kesiti satır satır yükselir. Yan tarafta gün/yıl ölçeği: 20 yıl = 7.300 gün.
+- Türkiye bağlantısı: Göbeklitepe'nin dikili taşları (045 bölümü) ile bağ kurulabilir; Ayasofya'nın kubbesinin yapım süresi ≈ 5 yıl (532–537) kıyas olarak verilebilir (doğrulanmalı).
+- Neden şimdi / tarih: Yok. 045 "Göbeklitepe ve piramitler" ile yakın; zaman karşılaştırması farklı soru olarak sunulursa tekrar sayılmaz.
+- Puan (6/10): Sezgiye ters sonuç net ("bir blok her iki dakikada"), ama kesin olmayan tahminlere dayanıyor; bu yüzden doğruluk güveni düşük.
+- Tuzaklar: Blok sayısı (2,3 milyon), yapım süresi (20 yıl) ve çalışma düzeni tamamen tahmindir; videoda "tahmine göre" vurgusu zorunlu. "Köleler yaptı" efsanesi arkeolojik kanıtla çelişir (ücretli işçi mezarları bulundu); bu iddiaya girilmemeli.
+
+### Işık hızında 1,2 saniye, uçakla 19 yıl: Güneş'e uçakla gidersen
+- Kanca: Güneş'e yolcu uçağıyla gitseydin, vardığında yaklaşık yirmi yıl geçmiş olurdu.
+- Sayılar: Dünya–Güneş ortalama mesafesi 149,6 milyon km (1 AU). Yolcu uçağı seyir hızı ≈ 900 km/sa. Süre: 149.600.000 ÷ 900 = 166.222 sa ÷ 8.766 sa/yıl = **≈ 18,96 yıl**. Işık: 499 sn ≈ 8 dk 19 sn.
+  Karşılaştırma: Voyager 1 hızı ≈ 17 km/sn = 61.200 km/sa → 149.600.000 ÷ 61.200 ≈ 2.444 sa ≈ 102 gün; ses hızı (1.235 km/sa): 121.134 sa ≈ 13,8 yıl.
+- Kaynaklar: https://solarsystem.nasa.gov/solar-system/sun/by-the-numbers/ · https://www.boeing.com/commercial/787/ (787 seyir hızı Mach 0,85 ≈ 903 km/sa; doğrulanmalı, sayfa adresi değişebilir).
+- Görsel metafor: **Koltuk ekranındaki uçuş haritası**: yolcu uçağı koltuk arkası ekranı (İstanbul–Güneş); "kalan süre" sayacı yıllarla düşer, doğum günü pastaları ve takvim yaprakları pencereden akar. Güneş ışığı bir kez göz kırptığında (8 dk) sayaç sıfırlanır.
+- Türkiye bağlantısı: İstanbul–Ankara uçak seferi ≈ 1 saat; "166.222 sefer" ≈ 19 yıl. THY ile bağ kurulacaksa marka kullanımı gerekçelendirilmeli.
+- Neden şimdi / tarih: Yok. Mevcut 004 ve 009 Güneş bölümleriyle çakışma riski: ışık/mesafe vurgusu aynı. Yeni açı "uçak" olduğu için ayrı tutuldu.
+- Puan (5/10): Görsel kolay, kanca sıradan; ışık hızı bölümlerine çok yakın olduğundan yeni bir "aha" taşımıyor.
+- Tuzaklar: Uçaklar yakıt/oksijen nedeniyle Güneş'e uçamaz; "düşünce deneyi" olarak anlatılmalı. Hız 900 km/sa sabit varsayım; irtifa ve rüzgâr ihmal edildi.
+
+### Uranüs'e mesaj göndersen cevap 5 saat sonra gelir (tarihli: 25 Kasım Uranüs karşıtlığı)
+- Kanca: Bu hafta Uranüs'e bir mesaj göndersen, cevabın ancak beş saat sonra gelir.
+- Sayılar: Uranüs'ün Dünya'ya en yakın olduğu karşıtlık anında uzaklığı yaklaşık 18,7 AU (JPL Horizons'tan doğrulanmalı). 1 AU = 8,317 ışık dk. Tek yön: 18,7 × 8,317 ≈ 155,5 dk ≈ **2 sa 36 dk**; gidiş-dönüş ≈ **5 sa 11 dk**.
+  Mars ile kıyas: Mars'a tek yön 3 ile 22 dk (NASA); Uranüs bunun ≈ 7–50 katı. Voyager 2, Uranüs'ü 24 Ocak 1986'da geçti (≈ 39 yıl önce).
+  Uranüs'ün parlaklığı ≈ 5,7 kadir: karanlık gökte çıplak gözle sınırda.
+- Kaynaklar: https://starwalk.space/en/news/astronomy-calendar-2026 (25 Kasım Uranüs karşıtlığı) · https://science.nasa.gov/uranus/facts/ · https://ssd.jpl.nasa.gov/horizons/ (mesafe için).
+- Görsel metafor: **Mors telgrafı ve zarf**: ekranda bir zarf sol alttan sağ üste doğru ilerler, yanında "1 AU = 8 dk 19 sn" durak işaretleri; her durak bir kahve molası kadar süreyi sayar. Doruk: zarf Uranüs'e varıp geri dönerken kırmızı kalemle işaretlenen tek nesne "yanıt" olur.
+- Türkiye bağlantısı: "İstanbul'dan Ankara'ya WhatsApp 1 sn; Uranüs'e 2,6 saat" gibi yerel kıyas; Kandilli Rasathanesi ile gözlem çağrısı.
+- Neden şimdi / tarih: **Tarihli:** Uranüs karşıtlığı 25 Kasım 2026 (Star Walk). İdeal yayın 23–25 Kasım.
+- Puan (5/10): Tarihli fırsat var, ama Uranüs bu kitle için sönük; kanca orta. Mars ile birleşik "Hangisi daha şaşırtıcı?" formatına çevrilirse puan artar.
+- Tuzaklar: Karşıtlık günü Dünya–Uranüs mesafesi gün be gün değişir; kesin değer için JPL kullanılmalı. Işık gecikmesi ancak uzaklıkla hesaplanır; "radyo sinyalleri ışık hızında gider" varsayımı. Uranüs'ün uydu sayısı gibi eklenen ayrıntılar kaynakla teyit edilmeli.
+
 ## 2026-10-26 turu
 
 **Tur notu:** Web araması çalıştı ama yalnızca arama özetleri okunabildi; Reddit (üçüncü taraf yansıları), X, Ekşi Sözlük ve Google

@@ -550,6 +550,19 @@
       "postId": "6ae37b503361c982e45cd952",
       "dueAt": "2026-10-31T14:00:00.000Z",
       "note": "defter elle onarıldı"
+    },
+    "2026-10-31T17:30Z": {
+      "episode": "033",
+      "media": "v/033-kozmonot-ve-asker.mp4",
+      "status": "scheduled",
+      "at": "2026-10-29T17:33:11.782Z",
+      "postId": "6ae383aad0477c3f9f6ee751",
+      "dueAt": "2026-10-31T17:30:00.000Z",
+      "yt": {
+        "postId": "6ae383aaa23f0986fe08655d",
+        "status": "scheduled",
+        "dueAt": "2026-10-31T17:30:00.000Z"
+      }
     }
   }
 }

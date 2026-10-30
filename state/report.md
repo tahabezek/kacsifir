@@ -1,6 +1,6 @@
-# Performans raporu · 2026-10-30 12:37 UTC
+# Performans raporu · 2026-10-30 17:11 UTC
 
-Gönderi: 10 · izlenme: 9899 · paylaşım: 12 · takip: 0
+Gönderi: 10 · izlenme: 9515 · paylaşım: 12 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -9,7 +9,7 @@ Gönderi: 10 · izlenme: 9899 · paylaşım: 12 · takip: 0
 | 3 | [027 hangisi-once-duser](https://www.instagram.com/reel/DfC-bmogsW3/) | fall | 1984 | 1610 | 0.4 | 0.6 | 0.6 | 0 | 19.9 |
 | 4 | [026 dogum-gunu](https://www.instagram.com/reel/DfAZpM0iTwg/) | birthday | 1718 | 1428 | 0.29 | 0 | 4.2 | 0 | 19.9 |
 | 5 | [052 tam-bu-dakikada](https://www.instagram.com/reel/DfFjP75ksdV/) | ilan | 1469 | 1311 | 0.25 | 0.8 | 1.5 | 0 | 16.1 |
-| 6 | [022 uc-kapi](https://www.instagram.com/reel/De_mNC6FHUX/) | doors | 384 | 336 | 0.23 | 0 | 0 | 0 | 9.2 |
+| 6 | [014 kus-ve-yuruyen-adam](https://www.instagram.com/p/DfHwMSkkVBG/) | carousel | 0 | 0 | – | 0 | 0 | 0 | 0 |
 | 7 | [053 videoyu-izlerken-ne-kadar-yol](https://www.instagram.com/reel/DfHUeNkFXLZ/) | yol | 77 | 0 | – | 0 | 0 | 0 | 0 |
 | 8 | [016 sayisal-loto](https://www.instagram.com/p/DfFLYxyoNRF/) | carousel | 5 | 3 | – | 0 | 0 | 0 | 0 |
 | 9 | [015 satranc-bugday](https://www.instagram.com/p/DfCmghfEevT/) | carousel | 7 | 3 | – | 0 | 0 | 0 | 0 |
@@ -21,9 +21,8 @@ Gönderi: 10 · izlenme: 9899 · paylaşım: 12 · takip: 0
 - fall: 19.9 (1 gönderi)
 - birthday: 19.9 (1 gönderi)
 - ilan: 16.1 (1 gönderi)
-- doors: 9.2 (1 gönderi)
+- carousel: 0.0 (4 gönderi)
 - yol: 0.0 (1 gönderi)
-- carousel: 0.0 (3 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)
 - İzlenme oranı < 0,5: kanca/ilk 3 sn sorunu → başlığı ve kare 0'ı yeniden yaz.

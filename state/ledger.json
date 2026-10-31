@@ -633,6 +633,19 @@
       "at": "2026-10-31T16:19:03.661Z",
       "postId": "6ae615491ee172cd6dafd044",
       "dueAt": "2026-11-02T14:00:00.000Z"
+    },
+    "2026-11-02T17:30Z": {
+      "episode": "059",
+      "media": "v/059-isindan-gecen-ve-asilamayan.mp4",
+      "status": "scheduled",
+      "at": "2026-10-31T20:27:33.633Z",
+      "postId": "6ae64f69cf3a3112f3c0f161",
+      "dueAt": "2026-11-02T17:30:00.000Z",
+      "yt": {
+        "postId": "6ae64f69ab019b908722807f",
+        "status": "scheduled",
+        "dueAt": "2026-11-02T17:30:00.000Z"
+      }
     }
   }
 }

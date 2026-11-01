@@ -14,9 +14,7 @@
   "mediaKeepDays": 4,
   "shareToFeed": true,
   "lowBacklogWarnDays": 3,
-  "carouselSlotsTR": [
-    "17:00"
-  ],
+  "carouselSlotsTR": [],
   "carouselMinAgeHours": 20,
   "quietDaysTR": [
     "2026-11-10"

@@ -48,7 +48,31 @@ Saf ölçek videoları (karınca, domino, su) izleniyor ama kimse yorum yapmıyo
 
 **e) Saat fark yaratmıyor.** 08:30, 13:00 ve 20:30 reelleri aynı aralıkta. Sonucu konu ve ilk 3 saniye belirliyor.
 
-**f) Profil dönüşümü fena değil, trafik az.** 354 ziyaretçiden 59'u takip etti (%17). Bio hâlâ "Her gün 3 ölçek" diyor, oysa günde 2 gönderi var.
+**f) Profil dönüşümü fena değil, trafik az.** 354 ziyaretçiden 59'u takip etti (%17). Bio hâlâ "Her gün 3 ölçek" diyor, oysa günde 2 gönderi var. (1 Kasım'da düzeltildi.)
+
+**g) Asıl sorun görsel dil (kare denetimi, 1 Kasım).** 058, 054, 033, 050, 052 ve 023'ün 0., 0,5., 1,5., 3., 6. ve 12. saniye kareleri yan yana kondu:
+- İlk 3 saniyede ekranda neredeyse hiçbir şey değişmiyor. Kaydırma kararı bu sürede veriliyor.
+- Karakterler ve nesneler kadrajın altıda biri kadar; telefonda küçük çizgi figür olarak kalıyor. Alt üçte bir boş.
+- Bej kâğıt, siyah çizgi, tek bir küçük kırmızı. Akışta ders kitabı sayfası gibi duruyor.
+- Üstte yazı bloğu ve sol üstte "№ 058 · HANGİSİ?" köşe etiketi var (kendi yasak listemizde).
+- Rakip tarafta Türkiye'de patlayan işler (ör. "Diyarbakır 2026, zamanı geri sarıyoruz": 11,7 bin beğeni, 270 paylaşım) sinematik: derinlik, ışık, renk, tek güçlü imge ve ilk kareden hareket eden kamera.
+
+## 2b. Yeni görsel dil: "Sinema" (№ 067'den itibaren)
+
+Motor: `engine/sinema.js` (three.js). Kare başına 16 örnek; hareket bulanıklığı, alan derinliği, parlama, ACES film eğrisi, vinyet ve gren.
+
+| Kural | Değer |
+|---|---|
+| Sahne | gerçek 3D mekân (gece sokağı, meydan, şehir); ışıklı, malzemeli |
+| Kahraman nesne | kadrajın en az %40'ı; gerçek malzeme (metal, cam, su) |
+| Kamera | hiç durmaz; kare 0'da hareket hâlinde; sokaktan meydana tek baskın yön |
+| Kare 0 | soru büyük başlık (100 px), arkada kahraman nesne zaten görünür |
+| Altyazı | kelimeye kilitli parçalar, 70 px, beyaz, yumuşak gölge, en az 1,25 sn |
+| Büyük sayı | 150 px beyaz, birimi altın rengi; sayarak gelir |
+| Ölçü | 3D'den izdüşen altın çizgi ve 104 px etiket |
+| Renk | koyu sıcak gece, altın (#FFC845) vurgu, sıcak lamba ışığı; mor-mavi yok |
+| Köşe etiketi, üst yazı bloğu | yok |
+| Süre | 30–37 sn |
 
 ## 3. Hedefler
 
@@ -64,12 +88,13 @@ Saf ölçek videoları (karınca, domino, su) izleniyor ama kimse yorum yapmıyo
 
 ## 4. Yol haritası
 
-### Faz 1 · Hızlı düzeltmeler (1–4 Kasım)
-1. **Karuselleri durdur:** `config.json` içindeki `carouselSlotsTR` boşaltılacak.
-2. **Hangisi filmlerini kısalt:** sıradaki 16 film 45 saniyenin altına indirilecek. İlk olarak 059 (2 Kasım), 062 (3 Kasım) ve 041 (4 Kasım) yeniden kurgulanacak. Buffer'daki gönderinin videosu `tools/remedia.mjs` ile değiştirilecek; gönderi silinip yeniden yüklenmeyecek. Kesilecek kısımlar: uzun kurulum, ikinci karakterin girişi öncesindeki bekleme, sondaki tekrar.
-3. **Bio (senin onayınla):** "Türkiye'nin ve evrenin akıl almaz sayıları, gözünün önünde. Her gün 08:30 ve 20:30'da yeni bir sayı. Kaynaklar açıklamada ↓"
-4. **Profile 3 reel sabitle (senin onayınla):** 023 Cumhuriyet, 058 Uçak yiyen adam, 050 Harf Devrimi.
-5. **Ölçüm körlüğünü kapat:** her pazartesi Profesyonel Pano'dan reel başına görüntülenme, etkileşim ve takip okunacak ve `state/ig-insights.json` dosyasına yazılacak. Puanlama bu veriyle yapılacak.
+### Faz 1 · Hızlı düzeltmeler ve pilot (1–4 Kasım)
+1. ✅ **Karuseller durduruldu:** `carouselSlotsTR` boş; 1 ve 2 Kasım karuselleri Buffer'dan kaldırıldı.
+2. ✅ **Bio güncellendi:** "Türkiye'nin ve evrenin akıl almaz sayıları, gözünün önünde. Her gün 08:30 ve 20:30'da yeni bir sayı. Kaynaklar açıklamada ↓"
+3. ⏳ **Profile 3 reel sabitle:** 023 Cumhuriyet, 058 Uçak yiyen adam, 050 Harf Devrimi. Web sürümünde sabitleme yok; telefondan yapılacak.
+4. ✅ **Pilot № 067 "Dünyadaki bütün altın tek bir küp olsa?":** yeni Sinema dilinde ilk film. 3 Kasım 20:30.
+5. **Hangisi filmleri:** sıradaki 16 film 63–85 saniye ve eski dilde. Her yeni Sinema filmi bir akşam yuvasını alır; yerinden çıkan Hangisi takvim sonuna kayar. Pilot tutarsa Hangisi formatı da Sinema diline taşınır.
+6. **Ölçüm körlüğünü kapat:** her pazartesi Profesyonel Pano'dan reel başına görüntülenme, etkileşim ve takip okunacak ve `state/ig-insights.json` dosyasına yazılacak.
 
 ### Faz 2 · Kanca deneyi ve 10 Kasım (5–14 Kasım)
 1. **051 Atatürk anma filmi:** açık notun gereği yapılacak; film daha duygu yüklü hâle getirilecek. Gerçek kamu malı fotoğraflar ve kaynaklı bilgiler kullanılacak. Sesi önce sen dinleyeceksin.
@@ -87,7 +112,13 @@ Takvim 19 Kasım'dan sonra boş. Yeni parti günde 2 gönderi olacak ve şöyle 
 - **%30 kısa Hangisi:** en fazla 45 saniye;
 - **%20 uzay ve ölçek:** yalnızca güçlü bir "aha!" anı olanlar.
 
-Bunlara ek olarak her hafta bir **amiral gemisi film** yapılacak. Bu filmin tek amacı ikinci kapıyı geçmek; adayı backlog'daki "Masa" fikri. Bir film 2.400'ü geçerse aynı kalıptan hemen 2 film daha üretilecek.
+Bütün yeni filmler Sinema dilinde yapılır. Pilot 067'nin ilk 48 saatteki görüntülenme, izlenme oranı ve paylaşım sayısı eski filmlerin ortalamasıyla (1.327 görüntülenme, 0,39, binde 1,1) karşılaştırılır. Bir film 2.400'ü geçerse aynı kalıptan hemen 2 film daha üretilir.
+
+Sinema dili için sıradaki aday konular (Türkiye + tek güçlü imge):
+- İstanbul'un bir günde ürettiği çöp tek bir yığın olsa (meydanda dağ)
+- Türkiye'de bir yılda içilen çay tek bir bardakta (Boğaz'da dev bardak)
+- Türkiye'nin bütün nüfusu omuz omuza dursa ne kadar yer kaplar (şehir üstünden uçuş)
+- Bir yılda yenen simit üst üste dizilse (Ay'a mı ulaşır?)
 
 ## 5. Karar kuralları (her pazartesi)
 - İzlenme oranı 0,30'un altında kalan şablon bir daha kullanılmaz.

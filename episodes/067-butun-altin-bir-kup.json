@@ -1,0 +1,55 @@
+{
+  "id": "067",
+  "slug": "butun-altin-bir-kup",
+  "template": "altin",
+  "gl": true,
+  "serial": "KAÇ SIFIR?",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-03T17:30Z",
+  "samples": 16,
+  "question": ["Dünyadaki bütün altın", "tek bir küp olsa?"],
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+10%",
+    "gaps": { "l01": 0.35, "l02": 0.25, "l03": 0.05, "l04": 0.3, "l05": 0.9, "l06": 0.25, "l07": 0.3, "l08": 0.3, "l09": 0.6, "l10": 0.3 },
+    "lines": [
+      { "id": "l01", "tts": "Dünyadaki bütün altın tek bir küp olsa, ne kadar büyük olurdu?", "text": "Dünyadaki bütün altın tek bir küp olsa, ne kadar büyük olurdu?", "rate": "+12%", "pitch": "+3Hz" },
+      { "id": "l02", "tts": "İnsanlık bugüne kadar yaklaşık iki yüz yirmi üç bin ton altın çıkardı.", "text": "İnsanlık bugüne kadar yaklaşık 223 bin ton altın çıkardı." },
+      { "id": "l03", "tts": "Hepsini eritip tek bir küpe döksek,", "text": "Hepsini eritip tek bir küpe döksek," },
+      { "id": "l04", "tts": "küpün kenarı sadece yirmi üç metre kadar olurdu.", "text": "küpün kenarı sadece 23 metre kadar olurdu.", "rate": "+4%" },
+      { "id": "l05", "tts": "Aşağı yukarı yedi katlı bir apartman boyu.", "text": "Aşağı yukarı 7 katlı bir apartman boyu.", "rate": "+6%" },
+      { "id": "l06", "tts": "Peki bunun ne kadarı Türkiye'de?", "text": "Peki bunun ne kadarı Türkiye'de?", "pitch": "+2Hz" },
+      { "id": "l07", "tts": "Tahminlere göre dört bin iki yüz on ton.", "text": "Tahminlere göre 4.210 ton." },
+      { "id": "l08", "tts": "Kenarı altı metre olan bir küp. İki katlı bir ev kadar.", "text": "Kenarı 6 metre olan bir küp. İki katlı bir ev kadar." },
+      { "id": "l09", "tts": "Dünyadaki bütün altının elli üçte biri.", "text": "Dünyadaki bütün altının 53'te biri.", "rate": "+2%" },
+      { "id": "l10", "tts": "Annenin bilezikleri de bu küpün içinde.", "text": "Annenin bilezikleri de bu küpün içinde.", "rate": "-2%", "pitch": "-1Hz" }
+    ]
+  },
+  "facts": {
+    "worldTonnes": 222600,
+    "worldNote": "Dünya Altın Konseyi, yer üstündeki toplam altın stoku, 2026 2. çeyrek sonu: 222.600 ton",
+    "densityGcm3": 19.32,
+    "worldCubeSideM": 22.59,
+    "turkeyTonnes": 4210,
+    "turkeyNote": "QNB-Finansbank araştırması (Eylül 2025): Türkiye'deki toplam altın stoku tahminen 4.210 ton",
+    "turkeyCubeSideM": 6.02,
+    "ratio": 52.9,
+    "floorHeightM": 3.1,
+    "sources": [
+      "https://www.gold.org/goldhub/data/how-much-gold",
+      "https://www.dunya.com/ekonomi/arastirma-sonuclari-ortaya-koydu-turkiyede-ne-kadar-yastik-alti-altin-bulunuyor-haberi-793537",
+      "https://www.cnbce.com/altin/turkiyede-yastik-alti-altin-ne-kadar-yastik-alti-altin-miktari-kac-milyar-dolar-h17043"
+    ],
+    "notes": [
+      "küp kenarı: (222.600 t / 19,32 t/m³)^(1/3) = 11.522 m³ -> 22,59 m; anlatımda '23 metre kadar', ekranda '22,6 m'",
+      "Türkiye: 4.210 t / 19,32 = 217,9 m³ -> 6,02 m; anlatımda ve ekranda 4.210 ton",
+      "oran: 222.600 / 4.210 = 52,9 -> '53'te biri'",
+      "7 kat: kat yüksekliği yaklaşık 3,1 m -> 7 kat + çatı korkuluğu yaklaşık 22,6 m",
+      "'yastık altı' denmez: QNB rakamı toplam stok; yastık altı tahminleri kaynağa göre 3–5 bin ton arası değişiyor"
+    ]
+  },
+  "caption": "Dünyadaki bütün altın tek bir küp olsa, ne kadar büyük olurdu? 🟨\n\nİnsanlığın bugüne kadar çıkardığı bütün altın yaklaşık 222.600 ton. Altının yoğunluğu 19,32 g/cm³ olduğu için hepsi kenarı yalnızca 22,6 metre olan bir küpe sığıyor. Bu, aşağı yukarı 7 katlı bir apartman boyu.\n\nTürkiye'deki altın stoku ise tahminen 4.210 ton. Bu da kenarı 6 metre olan bir küp ediyor; dünyadaki bütün altının 53'te biri.\n\nSence evinizdeki altın bu küpün ne kadarı? Yoruma yaz 👇\n\nKaynaklar: Dünya Altın Konseyi (yer üstündeki altın stoku, 2026 2. çeyrek), QNB-Finansbank araştırması (Eylül 2025).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": ["#altın", "#bilgi", "#ilginçbilgiler", "#türkiye", "#ekonomi", "#bilim", "#kaçsıfır"],
+  "ytTitle": "Dünyadaki bütün altın tek bir küp olsa ne kadar büyük olurdu?"
+}

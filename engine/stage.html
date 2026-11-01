@@ -15,7 +15,8 @@ await Promise.all([
 ]);
 await document.fonts.ready;
 const canvas = document.getElementById('c');
-const r = ep.template === 'katman' ? await (await import('./scenes/katman.js')).makeKatmanRenderer(ep, canvas)
+const r = ep.template === 'altin' ? await (await import('./scenes/altin.js')).makeAltinRenderer(ep, canvas)
+  : ep.template === 'katman' ? await (await import('./scenes/katman.js')).makeKatmanRenderer(ep, canvas)
   : ep.template === 'deste' ? await (await import('./scenes/deste.js')).makeDesteRenderer(ep, canvas)
   : ep.template === 'seker' ? await (await import('./scenes/seker.js')).makeSekerRenderer(ep, canvas)
   : ep.template === 'takvim' ? await (await import('./scenes/takvim.js')).makeTakvimRenderer(ep, canvas)

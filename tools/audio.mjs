@@ -47,6 +47,7 @@ import { synthDokuzbes } from './audio_dokuzbes.mjs';
 import { synthIlan } from './audio_ilan.mjs';
 import { synthYol } from './audio_yol.mjs';
 import { synthKarinca } from './audio_karinca.mjs';
+import { synthAltin } from './audio_altin.mjs';
 import { synthBulut } from './audio_bulut.mjs';
 import { synthAgac } from './audio_agac.mjs';
 import { synthPi } from './audio_pi.mjs';
@@ -108,6 +109,7 @@ export function synth(ep) {
   if (ep.template === 'ilan') return synthIlan(ep);
   if (ep.template === 'yol') return synthYol(ep);
   if (ep.template === 'karinca') return synthKarinca(ep);
+  if (ep.template === 'altin') return synthAltin(ep);
   if (ep.template === 'bulut') return synthBulut(ep);
   if (ep.template === 'agac') return synthAgac(ep);
   if (ep.template === 'pi') return synthPi(ep);

@@ -45,6 +45,7 @@ import { dokuzbesSummary } from './scenes/dokuzbes_summary.js';
 import { ilanSummary } from './scenes/ilan_summary.js';
 import { yolSummary as yolKmSummary } from './scenes/yol_summary.js';
 import { karincaSummary } from './scenes/karinca_summary.js';
+import { altinSummary } from './scenes/altin_summary.js';
 import { bulutSummary } from './scenes/bulut_summary.js';
 import { agacSummary } from './scenes/agac_summary.js';
 import { piSummary } from './scenes/pi_summary.js';
@@ -82,6 +83,7 @@ export function summary(ep) {
   if (ep.template === 'ilan') return ilanSummary(ep);
   if (ep.template === 'yol') return yolKmSummary(ep);
   if (ep.template === 'karinca') return karincaSummary(ep);
+  if (ep.template === 'altin') return altinSummary(ep);
   if (ep.template === 'bulut') return bulutSummary(ep);
   if (ep.template === 'agac') return agacSummary(ep);
   if (ep.template === 'pi') return piSummary(ep);

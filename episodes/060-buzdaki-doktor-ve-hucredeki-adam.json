@@ -1,7 +1,7 @@
 {
   "id": "060",
   "slug": "buzdaki-doktor-ve-hucredeki-adam",
-  "template": "termometre",
+  "template": "buzates",
   "serial": "№ 060 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
@@ -10,122 +10,90 @@
     "name": "tr-TR-AhmetNeural",
     "rate": "+12%",
     "gaps": {
-      "l01": 0.25,
-      "l02": 0.4,
-      "l03": 0.4,
-      "l04": 0.5,
-      "l05": 0.4,
-      "l06": 1.1,
-      "l08": 0.15,
-      "l09": 0.4,
-      "l10": 0.4,
-      "l11": 0.6,
-      "l12": 0.4,
-      "l13": 0.8,
-      "l14": 0.35,
-      "l15": 0.9,
-      "l16": 0.8,
-      "l16b": 0.6
+      "l01": 0.3,
+      "l02": 0.2,
+      "l03": 0.25,
+      "l04": 0.3,
+      "l05": 0.45,
+      "l06": 0.2,
+      "l07": 0.25,
+      "l08": 0.35,
+      "l09": 0.9,
+      "l10": 0.5,
+      "l11": 0.7,
+      "l12": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Hangisi daha şaşırtıcı?",
-        "text": "Hangisi daha şaşırtıcı?",
-        "rate": "+8%",
+        "tts": "Donan doktor mu, yanan kentten kurtulan mahkûm mu?",
+        "text": "Donan doktor mu, yanan kentten kurtulan mahkûm mu?",
+        "rate": "+12%",
         "pitch": "+3Hz"
       },
       {
         "id": "l02",
-        "tts": "Bin dokuz yüz doksan dokuzda Norveç'te genç doktor Anna Bogenholm, kayak yaparken buzu kırıp bir nehre düşüyor.",
-        "text": "1999'da Norveç'te genç doktor Anna Bågenholm, kayak yaparken buzu kırıp bir nehre düşüyor."
+        "tts": "Anna Bogenholm, Norveç'te buzu kırıp donmuş bir nehre düştü.",
+        "text": "Anna Bågenholm, Norveç'te buzu kırıp donmuş bir nehre düştü."
       },
       {
         "id": "l03",
-        "tts": "Buzun altında bir hava cebi buluyor ve kırk dakika dayanıyor.",
-        "text": "Buzun altında bir hava cebi buluyor ve 40 dakika dayanıyor."
+        "tts": "Buzun altındaki bir hava cebinde yaklaşık kırk dakika dayandı.",
+        "text": "Buzun altındaki bir hava cebinde yaklaşık 40 dakika dayandı."
       },
       {
         "id": "l04",
-        "tts": "Sonra kalbi duruyor; hastaneye vardığında vücut sıcaklığı on üç virgül yedi dereceye inmiş.",
-        "text": "Sonra kalbi duruyor; hastaneye vardığında vücut sıcaklığı 13,7 dereceye inmiş.",
+        "tts": "Sonra kalbi durdu ve vücudu on üç virgül yedi dereceye indi.",
+        "text": "Sonra kalbi durdu ve vücudu 13,7 dereceye indi.",
+        "rate": "+6%"
+      },
+      {
+        "id": "l05",
+        "tts": "Kalbi iki buçuk saatten uzun süre atmadı ama doktorlar onu geri getirdi.",
+        "text": "Kalbi iki buçuk saatten uzun süre atmadı ama doktorlar onu geri getirdi."
+      },
+      {
+        "id": "l06",
+        "tts": "Lüdjer Silbaris ise Martinik'te taş bir hücrede tutuluyordu.",
+        "text": "Ludger Sylbaris ise Martinik'te taş bir hücrede tutuluyordu."
+      },
+      {
+        "id": "l07",
+        "tts": "Yanardağ patladı ve kızgın bir bulut bütün kenti dakikalar içinde yok etti.",
+        "text": "Yanardağ patladı ve kızgın bir bulut bütün kenti dakikalar içinde yok etti.",
+        "rate": "+14%"
+      },
+      {
+        "id": "l08",
+        "tts": "Yaklaşık yirmi sekiz bin kişi öldü ama o kurtuldu.",
+        "text": "Yaklaşık 28 bin kişi öldü ama o kurtuldu."
+      },
+      {
+        "id": "l09",
+        "tts": "Peki ikisini aynı termometreye koyarsak?",
+        "text": "Peki ikisini aynı termometreye koyarsak?",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l10",
+        "tts": "Anna'nın vücudu on üç virgül yedi dereceye indi.",
+        "text": "Anna'nın vücudu 13,7 dereceye indi.",
         "rate": "+2%",
         "pitch": "-2Hz"
       },
       {
-        "id": "l05",
-        "tts": "Kalbi iki buçuk saatten uzun süre atmıyor ama doktorlar pes etmiyor.",
-        "text": "Kalbi iki buçuk saatten uzun süre atmıyor ama doktorlar pes etmiyor."
-      },
-      {
-        "id": "l06",
-        "tts": "Kanını makineyle ısıtıyorlar; on gün sonra uyanıyor ve yıllar sonra aynı hastanede radyolog olarak çalışıyor.",
-        "text": "Kanını makineyle ısıtıyorlar; 10 gün sonra uyanıyor ve yıllar sonra aynı hastanede radyolog olarak çalışıyor."
-      },
-      {
-        "id": "l08",
-        "tts": "Yoksa bu adam mı?",
-        "text": "Yoksa bu adam mı?",
-        "rate": "+4%",
-        "pitch": "+3Hz"
-      },
-      {
-        "id": "l09",
-        "tts": "Bin dokuz yüz ikide Martinik'teki Sen Piyer kentinde Lüdjer Silbaris, penceresiz ve taş duvarlı bir hücrede tutuluyor.",
-        "text": "1902'de Martinik'teki Saint-Pierre kentinde Ludger Sylbaris, penceresiz ve taş duvarlı bir hücrede tutuluyor."
-      },
-      {
-        "id": "l10",
-        "tts": "Pele Yanardağı patlıyor ve kızgın bir kül bulutu kenti birkaç dakikada yok ediyor.",
-        "text": "Pelée Yanardağı patlıyor ve kızgın bir kül bulutu kenti birkaç dakikada yok ediyor."
-      },
-      {
         "id": "l11",
-        "tts": "Yaklaşık yirmi sekiz bin kişi hayatını kaybediyor.",
-        "text": "Yaklaşık 28 bin kişi hayatını kaybediyor.",
-        "rate": "-4%",
-        "pitch": "-3Hz"
+        "tts": "Hücrenin dışındaki bulut ise tahminen dört yüz dereceye yakındı.",
+        "text": "Hücrenin dışındaki bulut ise tahminen 400 dereceye yakındı.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
       },
       {
         "id": "l12",
-        "tts": "Silbaris ağır yanıklarla, günler sonra hücresinden çıkarılıyor.",
-        "text": "Sylbaris ağır yanıklarla, günler sonra hücresinden çıkarılıyor."
-      },
-      {
-        "id": "l13",
-        "tts": "Sonra ünlü bir sirkte, kıyamet gününü atlatan adam olarak gösterilere çıkıyor.",
-        "text": "Sonra ünlü bir sirkte, \"Kıyamet Gününü Atlatan Adam\" olarak gösterilere çıkıyor."
-      },
-      {
-        "id": "l14",
-        "tts": "Peki ikisini aynı termometreye koyarsak?",
-        "text": "Peki ikisini aynı termometreye koyarsak?"
-      },
-      {
-        "id": "l15",
-        "tts": "Annanın vücudu otuz yedi dereceden on üç virgül yedi dereceye indi.",
-        "text": "Anna'nın vücudu 37 dereceden 13,7 dereceye indi."
-      },
-      {
-        "id": "l16",
-        "tts": "Silbarisin hücresinin dışındaki bulut ise tahminen",
-        "text": "Sylbaris'in hücresinin dışındaki bulut ise tahminen",
-        "rate": "-2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l16b",
-        "tts": "üç yüz elli ile dört yüz derece arasındaydı.",
-        "text": "350 ile 400 derece arasındaydı.",
-        "rate": "-2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l17",
-        "tts": "Sen hangisine şaşırdın?",
-        "text": "Sen hangisine şaşırdın?",
-        "rate": "+4%",
-        "pitch": "+3Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "text": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "rate": "+6%",
+        "pitch": "+2Hz"
       }
     ]
   },
@@ -167,7 +135,7 @@
       "https://www.earthmagazine.org/article/benchmarks-may-8-1902-deadly-eruption-mount-pelee/"
     ]
   },
-  "caption": "Hangisi daha şaşırtıcı?\n\n20 Mayıs 1999'da Norveç'in Narvik yakınlarında 29 yaşındaki doktor Anna Bågenholm kayak yaparken buzu kırıp bir nehre düştü. Buzun altındaki bir hava cebinde yaklaşık 40 dakika dayandı, sonra kalbi durdu; 80 dakika sonra sudan çıkarıldı. Tromsø'daki hastaneye vardığında vücut sıcaklığı 13,7 °C ölçüldü. Kalbi 2 saat 35 dakika atmadı; kanı bir kalp-akciğer makinesiyle ısıtıldı ve kalbi yeniden çalıştı. 10 gün sonra uyandı ve sonraki yıllarda kendisini kurtaran hastanede radyolog olarak çalıştı.\n\n8 Mayıs 1902'de Martinik'te Pelée Yanardağı'nın kızgın kül ve gaz bulutu Saint-Pierre kentini birkaç dakika içinde yok etti; yaklaşık 28 bin kişi hayatını kaybetti. Ludger Sylbaris penceresiz, taş duvarlı ve kısmen yeraltındaki bir hücrede tutuluyordu; hücre yalnızca kapıdaki dar bir ızgaradan hava alıyordu. Ağır yanıklarla günler sonra kurtarıldı ve daha sonra Barnum & Bailey sirkinde \"Kıyamet Gününü Atlatan Adam\" olarak gösterilere çıktı. Kentten sağ çıkan birkaç kişiden biriydi.\n\nKente ulaşan bulutun sıcaklığı yalnızca tahmin edilebiliyor: kentte kömürleşmiş tahtaların analizi 350–400 °C gösteriyor; bazı kaynaklar 1.000 °C'nin üstünü yazıyor. Videoda kentteki yanık izlerine dayanan tahmin kullanıldı.\n\nSen hangisine şaşırdın? Yorumlara yaz.\n\nKaç Sıfır? her hafta yeni bir \"Hangisi?\" getiriyor; takip et.\n\nKaynaklar: Anna Bågenholm (Wikipedia; Science Norway / UiT; CNN 2009), Ludger Sylbaris ve 1902 Pelée patlaması (Wikipedia), EARTH Magazine \"Benchmarks: May 8, 1902\".",
+  "caption": "Hangisi daha şaşırtıcı?\n\n20 Mayıs 1999'da Norveç'in Narvik yakınlarında 29 yaşındaki doktor Anna Bågenholm kayak yaparken buzu kırıp bir nehre düştü. Buzun altındaki bir hava cebinde yaklaşık 40 dakika dayandı, sonra kalbi durdu; 80 dakika sonra sudan çıkarıldı. Tromsø'daki hastaneye vardığında vücut sıcaklığı 13,7 °C ölçüldü. Kalbi 2 saat 35 dakika atmadı; kanı bir kalp-akciğer makinesiyle ısıtıldı ve kalbi yeniden çalıştı. 10 gün sonra uyandı ve sonraki yıllarda kendisini kurtaran hastanede radyolog olarak çalıştı.\n\n8 Mayıs 1902'de Martinik'te Pelée Yanardağı'nın kızgın kül ve gaz bulutu Saint-Pierre kentini birkaç dakika içinde yok etti; yaklaşık 28 bin kişi hayatını kaybetti. Ludger Sylbaris penceresiz, taş duvarlı ve kısmen yeraltındaki bir hücrede tutuluyordu; hücre yalnızca kapıdaki dar bir ızgaradan hava alıyordu. Ağır yanıklarla günler sonra kurtarıldı ve daha sonra Barnum & Bailey sirkinde \"Kıyamet Gününü Atlatan Adam\" olarak gösterilere çıktı. Kentten sağ çıkan birkaç kişiden biriydi.\n\nKente ulaşan bulutun sıcaklığı yalnızca tahmin edilebiliyor: kentte kömürleşmiş tahtaların analizi 350–400 °C gösteriyor; bazı kaynaklar 1.000 °C'nin üstünü yazıyor. Videoda kentteki yanık izlerine dayanan tahmin kullanıldı.\n\nSen hangisine şaşırdın? Yorumlara yaz.\n\nTakip et: her gün yeni bir sayı.\n\nKaynaklar: Anna Bågenholm (Wikipedia; Science Norway / UiT; CNN 2009), Ludger Sylbaris ve 1902 Pelée patlaması (Wikipedia), EARTH Magazine \"Benchmarks: May 8, 1902\".",
   "hashtags": [
     "#hangisi",
     "#kaçsıfır",
@@ -175,5 +143,11 @@
     "#hayattakalma",
     "#tarih"
   ],
-  "ytTitle": "Vücudu 13,7 dereceye düşen doktor mu, yanardağ bulutundan hücresi sayesinde kurtulan adam mı?"
+  "ytTitle": "Vücudu 13,7 dereceye düşen doktor mu, yanardağ bulutundan hücresi sayesinde kurtulan adam mı?",
+  "gl": true,
+  "samples": 16,
+  "question": [
+    "Hangisi daha",
+    "şaşırtıcı?"
+  ]
 }

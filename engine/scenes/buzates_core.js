@@ -41,7 +41,8 @@ export function world(T, t) {
 }
 
 // termometredeki sıvının gösterdiği sıcaklık (°C)
-export function thermoA(T, t) {                 // buzda: 37 → 13,7 ("on üç virgül yedi" boyunca)
+export function thermoA(T, t) {                 // buzda: 37 → 13,7 ("on üç virgül yedi" boyunca); döngü dönüşünde yine 37 (kare 0)
+  if (t >= T.cutA3) return 37;
   return 37 - 23.3 * ease.state(seg(t, T.on2 - 0.1, T.l10end - T.on2 - 0.2));
 }
 export function thermoB(T, t) {                 // dışarıda: 31 °C; "tahminen"de tırmanır, "dört"te 400'e varır (sütun 110'da tavana dayanır)

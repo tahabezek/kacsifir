@@ -320,7 +320,7 @@ export async function makeBuzatesRenderer(ep, canvas) {
       lightUnder.intensity = under ? 60 * (1 - 0.7 * dark) : 0;
       // termometre (buz): 37'den 13,7'ye; kırağı tutar
       thA.col.scale.y = yOfC(thermoA(T, t));
-      thA.frost.material.opacity = 0.5 * seg(t, T.on2 - 0.2, 1.6);
+      thA.frost.material.opacity = t >= T.cutA3 ? 0 : 0.5 * seg(t, T.on2 - 0.2, 1.6);
       placeParticles(t);
     } else {
       const town = c.pos[2] > 200;

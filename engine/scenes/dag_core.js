@@ -82,7 +82,7 @@ export function camKeys(T) {
     [T.sondaj, B(2.6, -696, 9.5), B(0, -699.5, -3), 44],
     [T.geldi + 0.2, B(2.2, -696.5, 8.5), B(0, -698.5, -2), 42],    // matkap ucu tavanı deler
     [T.note1, B(2.4, -420, 6), B(0, -300, 0), 46],                 // not yukarı çıkar
-    [T.cap0, B(7.5, 1.6, 12), B(0, 2.2, 0), 36],                     // yüzeyde kapsül
+    ...cut(T.cap0 - 0.3, [B(2.3, -400, 6), B(0, -280, 0), 46], [B(7.6, 1.6, 12.2), B(0, 2.2, 0), 36]),   // sert kesme: yüzeyde kapsül (toprağın içinden geçmez)
     [T.cap1, B(8.2, 1.8, 13), B(0, 3.2, 0), 36],
     [T.l09 + 0.2, B(30, 22, 64), B(0, 2, 0), 40],
     [T.silence[1], B(28, 20, 58), B(0, 2, 0), 40],

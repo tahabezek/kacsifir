@@ -154,13 +154,13 @@ export async function makeDagRenderer(ep, canvas) {
   function placeCubes(t) {
     cubes.forEach((m, k) => {
       const tl0 = T.cube(k), fall = 0.55, u = clamp01((t - (tl0 - fall)) / fall);
-      m.visible = t >= tl0 - fall && t >= T.cutA2;
+      m.visible = t >= tl0 - fall && t >= T.cutA2 && t < T.loop0;   // döngü başında yok (kare 0 ile aynı)
       const y = CUT.floor + CUBE / 2 + 40 * (1 - u) * (1 - u);       // serbest düşmeye benzer: sona doğru hızlanır
       m.position.set(m.userData.x, y, 0); m.rotation.set(0, (1 - u) * 0.4, 0);
     });
     dust.d.forEach((p, i) => {
       const k = i % NCUBE, u = t - T.cube(k);
-      if (u < 0 || u > 2.2 || t < T.cutA2) { _m.makeScale(0, 0, 0); dust.im.setMatrixAt(i, _m); return; }
+      if (u < 0 || u > 2.2 || t < T.cutA2 || t >= T.loop0) { _m.makeScale(0, 0, 0); dust.im.setMatrixAt(i, _m); return; }
       const a = p[0] * 6.28, sp = 3 + p[1] * 6, x = cubes[k].userData.x + Math.cos(a) * (CUBE * 0.5 + sp * (1 - Math.exp(-2 * u))), z = Math.sin(a) * (CUBE * 0.5 + sp * (1 - Math.exp(-2 * u))) * 0.6;
       const s = (0.4 + p[4] * 8) * (1 + u) * (1 - u / 2.2);
       _m.makeScale(s, s * 0.6, s); _m.setPosition(x, CUT.floor + 0.4 + p[2] * 2 * u, z); dust.im.setMatrixAt(i, _m);
@@ -314,7 +314,7 @@ export async function makeDagRenderer(ep, canvas) {
     ctx.restore(); ctx.textAlign = 'left';
   }
   function render(t) {
-    const nearCut = [T.cutB1, T.cutA2].some(c => Math.abs(t - c) < 1.2 / 30);
+    const nearCut = [T.cutB1, T.cutA2, T.cap0 - 0.3].some(c => Math.abs(t - c) < 1.2 / 30);
     S.render(t, pose, tt => (nearCut ? 0 : tt > T.cut0 && tt < T.cut1 ? 0.25 : 0.5));
     ctx.clearRect(0, 0, W, H);
     O.title(t, ['Hangisi daha', 'şaşırtıcı?'], T.l01end + 0.15, 470, D - 0.45);

@@ -27,7 +27,7 @@ export async function film(A) {
   const updates = [];
   const _m = new THREE.Matrix4();
   const snowM = std('#E6ECF2', { roughness: 0.85 }), iceM = new THREE.MeshPhysicalMaterial({ color: lin('#9CC4DC'), roughness: 0.12, clearcoat: 1, transparent: true, opacity: 0.85 });
-  const pines = (g, n, R0, R1, seed) => { const r = mulberry32(seed), cone = new THREE.ConeGeometry(1, 1, 7), m = std('#1E3226', { roughness: 0.9 }), im = new THREE.InstancedMesh(cone, m, n); for (let i = 0; i < n; i++) { const a = r() * 6.28, d = R0 + r() * (R1 - R0), h = 4 + r() * 5; _m.makeScale(h * 0.28, h, h * 0.28); _m.setPosition(Math.cos(a) * d, h / 2, Math.sin(a) * d - 4); im.setMatrixAt(i, _m); } g.add(im); };
+  const pines = (g, n, R0, R1, seed, avoid) => { const r = mulberry32(seed), cone = new THREE.ConeGeometry(1, 1, 7), m = std('#1E3226', { roughness: 0.9 }), im = new THREE.InstancedMesh(cone, m, n); for (let i = 0; i < n; i++) { const a = r() * 6.28, d = R0 + r() * (R1 - R0), h = 4 + r() * 5; const px = Math.cos(a) * d, pz = Math.sin(a) * d - 4, k = avoid && Math.hypot(px - avoid[0], pz - avoid[1]) < avoid[2] ? 0 : 1; _m.makeScale(h * 0.28 * k, h * k, h * 0.28 * k); _m.setPosition(px, h / 2, pz); im.setMatrixAt(i, _m); } g.add(im); };
   const skis = f => { const sm = std('#3A4250', { roughness: 0.35 }); for (const s of ['l', 'r']) { const k = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.02, 1.7), sm); k.position.set(0, -0.2 * f.u, 0.25); f.J[s + 'Ankle'].add(k); } };
 
   // ═══ 0 · buzun altı ═══
@@ -50,7 +50,7 @@ export async function film(A) {
 
   // ═══ 2 · dere (düşüş ve kayaklar) ═══
   const t2 = tableau('dere', { x: X(2), floorMat: snowM, floorR: 30, spots: [{ x: -3, h: 7, z: 4, tx: 0, I: 110, angle: 0.7, color: '#FFE2C4' }], fog: ['#6E7E92', 0.035], bg: '#5E7088', hemi: ['#B4C6DA', '#6E7E90', 0.9], env: 0.7 });
-  pines(t2.g, 80, 8, 25, 12);
+  pines(t2.g, 80, 8, 25, 12, [0, 5, 5.5]);   // kamera yolundaki çamlar çıkarılır
   { const ice = new THREE.Mesh(new THREE.PlaneGeometry(14, 3.2), iceM); ice.rotation.x = -Math.PI / 2; ice.position.set(0, 0.01, 0); t2.g.add(ice); const hole = new THREE.Mesh(new THREE.CircleGeometry(0.55, 24), std('#06121A', { roughness: 0.2 })); hole.rotation.x = -Math.PI / 2; hole.position.set(0, 0.02, 0); t2.g.add(hole); }
   const skiL = box(0.08, 0.02, 1.7, '#3A4250', 0, 0, 0, t2.g), skiR = box(0.08, 0.02, 1.7, '#3A4250', 0, 0, 0, t2.g);
   const anna2 = character('anna', t2, null); skis(anna2);
@@ -77,7 +77,7 @@ export async function film(A) {
   const stoneTex = canvasTex(512, 512, (g, W, H) => { const r = mulberry32(6); g.fillStyle = '#3A342E'; g.fillRect(0, 0, W, H); for (let y = 0, row = 0; y < H; row++) { const bh = 40 + r() * 20; for (let x = -(row % 2) * 30; x < W;) { const bw = 60 + r() * 50, v = 110 + r() * 50; g.fillStyle = `rgb(${v},${v * 0.92},${v * 0.8})`; g.fillRect(x + 3, y + 3, bw - 6, bh - 6); x += bw; } y += bh; } });
   stoneTex.wrapS = stoneTex.wrapT = THREE.RepeatWrapping; stoneTex.repeat.set(2, 1);
   const stoneM = new THREE.MeshStandardMaterial({ map: stoneTex, roughness: 0.92 });
-  const t4 = tableau('hucre', { x: X(4), floorMat: stoneM, floorR: 6, spots: [{ x: 0.6, h: 2.2, z: 2.8, tx: -0.4, tz: -0.4, I: 18, angle: 0.25, color: '#FFF2DC' }], fog: ['#120E0C', 0.08], hemi: ['#3A3430', '#100C0A', 0.4] });
+  const t4 = tableau('hucre', { x: X(4), floorMat: stoneM, floorR: 6, spots: [{ x: 0.6, h: 2.2, z: 2.8, tx: -0.4, tz: -0.4, I: 18, angle: 0.25, color: '#FFF2DC' }, { x: 0.8, h: 1.6, z: 1.6, tx: -0.6, tz: -0.7, I: 6, angle: 0.5, color: '#FFE6C8', shadow: false }], fog: ['#120E0C', 0.08], hemi: ['#5A5048', '#100C0A', 0.6] });
   box(4, 3, 0.4, stoneM, 0, 1.5, -1.2, t4.g); box(0.4, 3, 4, stoneM, -2, 1.5, 0.6, t4.g); box(0.4, 3, 4, stoneM, 2, 1.5, 0.6, t4.g);
   const cellSpot = t4.lights[0];
   const ludger4 = character('ludger', t4, () => ({ pos: [-0.6, 0.02, -0.75], rot: 0.3, pose: POSE.sitHunched(), face: FACE.sad }));

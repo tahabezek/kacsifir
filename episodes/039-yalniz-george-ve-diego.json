@@ -1,143 +1,91 @@
 {
   "id": "039",
   "slug": "yalniz-george-ve-diego",
-  "template": "kaplumbaga",
+  "template": "hikaye",
   "serial": "№ 039 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-17T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+10%",
     "gaps": {
-      "l01": 0.25,
-      "l02": 0.45,
-      "l03": 0.45,
-      "l04": 0.5,
-      "l05": 0.45,
-      "l06": 0.45,
-      "l07": 1.5,
-      "l08": 0.15,
-      "l09": 0.45,
-      "l10": 0.45,
-      "l11": 0.45,
-      "l12": 0.8,
-      "l13": 0.35,
-      "l14": 0.8,
-      "l15": 0.6,
-      "l16": 0.6
+      "l01": 0.9,
+      "l02": 0.9,
+      "l03": 1,
+      "l04": 0.9,
+      "l05": 1,
+      "l06": 0.9,
+      "l07": 1,
+      "l08": 1,
+      "l09": 1.1,
+      "l10": 0.9,
+      "l11": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Hangisi daha şaşırtıcı?",
-        "text": "Hangisi daha şaşırtıcı?",
-        "rate": "+8%",
-        "pitch": "+3Hz"
+        "tts": "Bir sabah bakıcısı onu, boynu su birikintisine doğru uzanmış halde buldu.",
+        "text": "Bir sabah bakıcısı onu, boynu su birikintisine doğru uzanmış halde buldu.",
+        "rate": "+2%",
+        "pitch": "-1Hz"
       },
       {
         "id": "l02",
-        "tts": "Galapagos'taki Pinta Adası'na getirilen keçiler bütün bitkileri yiyor ve dev kaplumbağalar yok oluyor.",
-        "text": "Galapagos'taki Pinta Adası'na getirilen keçiler bütün bitkileri yiyor ve dev kaplumbağalar yok oluyor.",
-        "rate": "+10%"
+        "tts": "Galapagos'taki Pinta Adası'na bin dokuz yüz elli dokuzda balıkçılar üç keçi bıraktı. Keçiler on binlerce oldu ve adanın bütün yeşilini yedi.",
+        "text": "Galapagos'taki Pinta Adası'na 1959'da balıkçılar üç keçi bıraktı. Keçiler on binlerce oldu ve adanın bütün yeşilini yedi."
       },
       {
         "id": "l03",
-        "tts": "Bin dokuz yüz yetmiş birde adada tek bir kaplumbağa bulunuyor.",
-        "text": "1971'de adada tek bir kaplumbağa bulunuyor.",
-        "rate": "+6%",
-        "pitch": "-2Hz"
+        "tts": "Bin dokuz yüz yetmiş birde bir bilim insanı adada tek bir kaplumbağa gördü. Türünün bilinen son üyesiydi. Adı Yalnız Corc oldu.",
+        "text": "1971'de bir bilim insanı adada tek bir kaplumbağa gördü. Türünün bilinen son üyesiydi. Adı Yalnız George oldu.",
+        "rate": "+4%"
       },
       {
         "id": "l04",
-        "tts": "Ona Yalnız George adı veriliyor, çünkü türünün bilinen son üyesi o.",
-        "text": "Ona Yalnız George adı veriliyor, çünkü türünün bilinen son üyesi o.",
-        "rate": "+6%"
+        "tts": "Ona eş bulana on bin dolar ödül kondu. Kimse bulamadı. Yanına konan dişilerin yumurtalarının hiçbiri açılmadı.",
+        "text": "Ona eş bulana 10 bin dolar ödül kondu. Kimse bulamadı. Yanına konan dişilerin yumurtalarının hiçbiri açılmadı."
       },
       {
         "id": "l05",
-        "tts": "Bilim insanları ona eş bulana on bin dolar ödül koyuyor, ama kimse bulamıyor.",
-        "text": "Bilim insanları ona eş bulana 10.000 dolar ödül koyuyor, ama kimse bulamıyor.",
-        "rate": "+10%"
+        "tts": "Kırk yıl ona aynı bakıcı baktı. Yirmi dört Haziran iki bin on iki sabahı Fausto onu ağılında buldu. Türünün bilinen son üyesi de gitmişti.",
+        "text": "40 yıl ona aynı bakıcı baktı. 24 Haziran 2012 sabahı Fausto onu ağılında buldu. Türünün bilinen son üyesi de gitmişti.",
+        "rate": "+4%"
       },
       {
         "id": "l06",
-        "tts": "Başka türden dişilerle bıraktığı yumurtaların hiçbiri açılmıyor.",
-        "text": "Başka türden dişilerle bıraktığı yumurtaların hiçbiri açılmıyor.",
-        "rate": "+6%",
-        "pitch": "-2Hz"
+        "tts": "Komşu Espanyola Adası'nda ise bin dokuz yüz altmışlarda yalnızca on iki dişi ve iki erkek kalmıştı.",
+        "text": "Komşu Española Adası'nda ise 1960'larda yalnızca 12 dişi ve 2 erkek kalmıştı."
       },
       {
         "id": "l07",
-        "tts": "İki bin on ikide George ölüyor ve türünün bilinen son üyesi de gidiyor.",
-        "text": "2012'de George ölüyor ve türünün bilinen son üyesi de gidiyor.",
-        "rate": "+2%",
-        "pitch": "-4Hz"
+        "tts": "Sonra Amerika'daki bir hayvanat bahçesinde, adadan yıllar önce götürülmüş bir erkek bulundu: Diego. Sekiz yüzü aşkın yavrunun babası oldu.",
+        "text": "Sonra Amerika'daki bir hayvanat bahçesinde, adadan yıllar önce götürülmüş bir erkek bulundu: Diego. 800'ü aşkın yavrunun babası oldu."
       },
       {
         "id": "l08",
-        "tts": "Yoksa bu kaplumbağa mı?",
-        "text": "Yoksa bu kaplumbağa mı?",
-        "rate": "+10%",
-        "pitch": "+3Hz"
+        "tts": "İki bin yirmide, yüz yaşını geçmişken adasına geri döndü. Bugün adada iki binden fazla kaplumbağa yaşıyor.",
+        "text": "2020'de, 100 yaşını geçmişken adasına geri döndü. Bugün adada 2.000'den fazla kaplumbağa yaşıyor."
       },
       {
         "id": "l09",
-        "tts": "Komşu Espanyola Adası'nda da keçiler yüzünden yalnızca on beş kaplumbağa kalıyor.",
-        "text": "Komşu Española Adası'nda da keçiler yüzünden yalnızca 15 kaplumbağa kalıyor.",
-        "rate": "+10%"
-      },
-      {
-        "id": "l10",
-        "tts": "Onlara, Amerika'daki bir hayvanat bahçesinde yaşayan Diego katılıyor.",
-        "text": "Onlara, Amerika'daki bir hayvanat bahçesinde yaşayan Diego katılıyor.",
-        "rate": "+8%"
-      },
-      {
-        "id": "l11",
-        "tts": "Bir yetiştirme programında Diego, tek başına yaklaşık dokuz yüz yavrunun babası oluyor.",
-        "text": "Bir yetiştirme programında Diego, tek başına yaklaşık 900 yavrunun babası oluyor.",
-        "rate": "+8%"
-      },
-      {
-        "id": "l12",
-        "tts": "İki bin yirmide, yüz yaşını geçmiş hâlde adasına geri dönüyor.",
-        "text": "2020'de, 100 yaşını geçmiş hâlde adasına geri dönüyor.",
-        "rate": "+6%"
-      },
-      {
-        "id": "l13",
         "tts": "Peki ikisini aynı soy ağacına koyarsak?",
         "text": "Peki ikisini aynı soy ağacına koyarsak?",
-        "rate": "+6%",
         "pitch": "+2Hz"
       },
       {
-        "id": "l14",
-        "tts": "George'un ardında bıraktığı yavru sayısı sıfır. Diego'nunki ise",
-        "text": "George'un ardında bıraktığı yavru sayısı sıfır. Diego'nunki ise",
-        "rate": "+6%"
-      },
-      {
-        "id": "l15",
-        "tts": "yaklaşık dokuz yüz.",
-        "text": "yaklaşık 900.",
-        "rate": "-4%",
-        "pitch": "-4Hz"
-      },
-      {
-        "id": "l16",
-        "tts": "Programdan çıkan yavruların yaklaşık yüzde kırkının babası o.",
-        "text": "Programdan çıkan yavruların yaklaşık %40'ının babası o.",
-        "rate": "+4%",
+        "id": "l10",
+        "tts": "Corc'un ardında bıraktığı yavru sayısı sıfır. Diego'nunki ise sekiz yüzü aşkın.",
+        "text": "George'un ardında bıraktığı yavru sayısı sıfır. Diego'nunki ise 800'ü aşkın.",
+        "rate": "+2%",
         "pitch": "-2Hz"
       },
       {
-        "id": "l17",
-        "tts": "Sen hangisine şaşırdın?",
-        "text": "Sen hangisine şaşırdın?",
-        "rate": "+8%",
-        "pitch": "+3Hz"
+        "id": "l11",
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "text": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "rate": "+4%",
+        "pitch": "+2Hz"
       }
     ]
   },
@@ -161,7 +109,7 @@
       "returned": 2020
     }
   },
-  "caption": "Hangisi daha şaşırtıcı? Galapagos'taki Pinta Adası'na getirilen keçiler bitki örtüsünü yok etti ve Pinta dev kaplumbağaları neredeyse tamamen kayboldu. 1 Kasım 1971'de adada tek bir erkek kaplumbağa bulundu: Yalnız George, türünün bilinen son üyesi. Charles Darwin Araştırma İstasyonu ona uygun bir eş bulana 10.000 dolar ödül koydu. Başka türden dişilerle bıraktığı yumurtaların hiçbiri açılmadı. George 24 Haziran 2012'de, 100 yaşını geçmiş hâlde öldü.\n\nKomşu Española Adası'nda da keçiler yüzünden 1976'da yalnızca 12 dişi ve 3 erkek kaplumbağa kalmıştı. Onlara 1977'de ABD'deki San Diego Hayvanat Bahçesi'nde yaşayan Diego katıldı. Santa Cruz'daki üretim programında Diego yaklaşık 900 yavrunun babası oldu; bu, programdan çıkan yavruların yaklaşık %40'ı. 15 Haziran 2020'de, 100 yaşını geçmiş hâlde Española'ya geri bırakıldı.\n\nSen hangisine şaşırdın? Yorumlara GEORGE ya da DIEGO yaz.\n\nKaynaklar: Wikipedia (Lonesome George; Diego (tortoise)), Galapagos Milli Parkı.",
+  "caption": "Hangisi daha şaşırtıcı? Galapagos'taki Pinta Adası'na getirilen keçiler bitki örtüsünü yok etti ve Pinta dev kaplumbağaları neredeyse tamamen kayboldu. 1 Kasım 1971'de adada tek bir erkek kaplumbağa bulundu: Yalnız George, türünün bilinen son üyesi. Charles Darwin Araştırma İstasyonu ona uygun bir eş bulana 10.000 dolar ödül koydu. Başka türden dişilerle bıraktığı yumurtaların hiçbiri açılmadı. George 24 Haziran 2012'de, 100 yaşını geçmiş hâlde öldü.\n\nKomşu Española Adası'nda da keçiler yüzünden 1960'larda yalnızca 12 dişi ve 2 erkek kaplumbağa kalmıştı. Onlara 1977'de ABD'deki San Diego Hayvanat Bahçesi'nden gelen üçüncü erkek Diego katıldı. Santa Cruz'daki üretim programında Diego 800'ü aşkın yavrunun babası oldu; bu, programdan çıkan yavruların yaklaşık %40'ı. Bugün Española'da 2.000'den fazla kaplumbağa yaşıyor. 15 Haziran 2020'de, 100 yaşını geçmiş hâlde Española'ya geri bırakıldı.\n\nSen hangisine şaşırdın? Yorumlara GEORGE ya da DIEGO yaz.\n\nKaynaklar: Wikipedia (Lonesome George; Diego (tortoise)), Galapagos Milli Parkı.",
   "hashtags": [
     "#kaçsıfır",
     "#ilginçbilgiler",
@@ -169,5 +117,11 @@
     "#galapagos",
     "#hayvanlar"
   ],
-  "ytTitle": "Hangisi daha şaşırtıcı? Türünün son üyesi Yalnız George mu, 900 yavrunun babası Diego mu?"
+  "ytTitle": "Hangisi daha şaşırtıcı? Türünün son üyesi Yalnız George mu, 900 yavrunun babası Diego mu?",
+  "gl": true,
+  "samples": 6,
+  "question": [
+    "Hangisi daha",
+    "şaşırtıcı?"
+  ]
 }

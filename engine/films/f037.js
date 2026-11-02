@@ -50,7 +50,7 @@ export async function film(A) {
   const row0 = seatRow(t0.g, 3);
   const jul0 = character('juliane', t0, t => ({ pos: [0, 0, 0.02], rot: 0, pose: { ...POSE.sit(), lShoulder: [-0.5, 0, -0.5], rShoulder: [-0.5, 0, 0.5], lElbow: [-0.4, 0, 0], rElbow: [-0.4, 0, 0], head: [-0.15, 0, 0.1] }, face: t < 2 ? FACE.closed : FACE.fear }));
   row0.add(jul0.root);
-  { const n = 70, r = mulberry32(4), C = []; for (let i = 0; i < n; i++) { const a = r() * TAU, rad = 3 + r() * 22; C.push([Math.cos(a) * rad, r(), Math.sin(a) * rad, 2 + r() * 5]); }
+  { const n = 70, r = mulberry32(4), C = []; for (let i = 0; i < n; i++) { const a = r() * TAU, rad = 9 + r() * 20; C.push([Math.cos(a) * rad, r(), Math.sin(a) * rad, 2 + r() * 5]); }
     const im = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(1, 2), new THREE.MeshStandardMaterial({ color: lin('#F2F2F4'), roughness: 1, transparent: true, opacity: 0.9 }), n); im.frustumCulled = false; t0.g.add(im);
     const k = Math.max(1, Math.round(D * 16 / 90));
     updates.push(t => { C.forEach(([x, u, z, s], i) => { const y = ((u + k * t / D) % 1) * 90 - 50; _m.makeScale(s, s * 0.6, s); _m.setPosition(x, y, z); im.setMatrixAt(i, _m); }); im.instanceMatrix.needsUpdate = true; });

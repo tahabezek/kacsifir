@@ -3,15 +3,19 @@
 // Yazılar karartmayla değil kırpma + kaymayla girer; hepsi güvenli alanın (x 90–920) ortasına hizalanır.
 import { W, H, ease, seg, lerp } from './core.js';
 import { F, setFont, wrap } from './tower.js';
-import { shadowText } from './sinema.js';
+import { shadowText as shadowTextS } from './sinema.js';
 
 export const SAFE = { x0: 90, x1: 920 };
 export const CX = (SAFE.x0 + SAFE.x1) / 2;
 export const GOLD = '#FFC845', WHITE = '#FFFFFF';
 
 export function makeOverlay(ctx, tl, opts = {}) {
-  const accent = opts.accent || GOLD;
+  const paper = !!opts.paper;   // 2B çizgi filmler: karartma yerine kâğıt kart, beyaz yerine mürekkep yazı
+  const INK = '#1F2421', PAPER = '#F4EFE3';
+  const accent = opts.accent || (paper ? '#C2412F' : GOLD);
+  const shadowText = (c, s, x, y, col, blur) => { if (!paper) return shadowTextS(c, s, x, y, col, blur); c.fillStyle = col === WHITE ? INK : col; c.fillText(s, x, y); };
   function scrim(cx, cy, w, h, a = 0.55) {
+    if (paper) { if (a <= 0.01) return; const cw = w * 0.86, ch = h * 0.6; ctx.save(); ctx.globalAlpha = Math.min(1, a / 0.5); ctx.fillStyle = PAPER; ctx.strokeStyle = INK; ctx.lineWidth = 5; ctx.beginPath(); ctx.roundRect(cx - cw / 2, cy - ch / 2, cw, ch, 18); ctx.fill(); ctx.stroke(); ctx.restore(); return; }
     ctx.save(); ctx.translate(cx, cy); ctx.scale(w / 2, h / 2);
     const g = ctx.createRadialGradient(0, 0, 0, 0, 0, 1); g.addColorStop(0, `rgba(8,7,6,${a})`); g.addColorStop(0.6, `rgba(8,7,6,${a * 0.7})`); g.addColorStop(1, 'rgba(8,7,6,0)');
     ctx.fillStyle = g; ctx.fillRect(-1, -1, 2, 2); ctx.restore();

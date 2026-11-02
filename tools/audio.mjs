@@ -119,7 +119,7 @@ export function synth(ep) {
   if (ep.template === 'buzates') return synthBuzates(ep);
   if (ep.template === 'dag') return synthDag(ep);
   if (ep.template === 'mumlar') return synthMumlar(ep);
-  if (ep.template === 'hikaye') return synthHikaye(ep);
+  if (ep.template === 'hikaye' || ep.template === 'cizgi') return synthHikaye(ep);
   if (ep.template === 'bulut') return synthBulut(ep);
   if (ep.template === 'agac') return synthAgac(ep);
   if (ep.template === 'pi') return synthPi(ep);

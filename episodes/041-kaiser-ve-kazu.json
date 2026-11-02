@@ -1,13 +1,12 @@
 {
   "id": "041",
   "slug": "kaiser-ve-kazu",
-  "template": "hikaye",
-  "gl": true,
+  "template": "cizgi",
+  "gl": false,
   "serial": "№ 041 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-04T17:30Z",
-  "samples": 6,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

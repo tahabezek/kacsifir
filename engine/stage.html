@@ -15,7 +15,8 @@ await Promise.all([
 ]);
 await document.fonts.ready;
 const canvas = document.getElementById('c');
-const r = ep.template === 'hikaye' ? await (await import('./hikaye.js')).makeHikayeRenderer(ep, canvas)
+const r = ep.template === 'cizgi' ? await (await import('./cizgi.js')).makeCizgiRenderer(ep, canvas)
+  : ep.template === 'hikaye' ? await (await import('./hikaye.js')).makeHikayeRenderer(ep, canvas)
   : ep.template === 'figtest' ? await (await import('./scenes/figtest.js')).makeFigtestRenderer(ep, canvas)
   : ep.template === 'mumlar' ? await (await import('./scenes/mumlar.js')).makeMumlarRenderer(ep, canvas)
   : ep.template === 'dag' ? await (await import('./scenes/dag.js')).makeDagRenderer(ep, canvas)

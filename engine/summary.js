@@ -93,7 +93,7 @@ export function summary(ep) {
   if (ep.template === 'buzates') return buzatesSummary(ep);
   if (ep.template === 'dag') return dagSummary(ep);
   if (ep.template === 'mumlar') return mumlarSummary(ep);
-  if (ep.template === 'hikaye') return hikayeSummary(ep);
+  if (ep.template === 'hikaye' || ep.template === 'cizgi') return hikayeSummary(ep);
   if (ep.template === 'bulut') return bulutSummary(ep);
   if (ep.template === 'agac') return agacSummary(ep);
   if (ep.template === 'pi') return piSummary(ep);

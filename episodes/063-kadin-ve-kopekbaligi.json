@@ -1,52 +1,91 @@
 {
   "id": "063",
   "slug": "kadin-ve-kopekbaligi",
-  "template": "omur",
+  "template": "hikaye",
   "serial": "№ 063 · HANGİSİ?",
   "bpm": 96,
   "coverAt": 0,
   "publishAt": "2026-11-07T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+8%",
     "gaps": {
-      "l01": 0.25,
-      "l02": 0.4,
-      "l03": 0.4,
-      "l04": 0.4,
-      "l05": 0.4,
-      "l06": 0.4,
-      "l07": 1.2,
-      "l08": 0.15,
-      "l09": 0.45,
-      "l10": 0.4,
-      "l11": 0.4,
-      "l12": 0.4,
-      "l13": 0.8,
-      "l14": 0.35,
-      "l15": 0.5,
-      "l16": 0.8,
-      "l17": 0.6
+      "l01": 0.8,
+      "l02": 0.6,
+      "l03": 0.9,
+      "l04": 0.6,
+      "l05": 1,
+      "l06": 0.8,
+      "l07": 0.7,
+      "l08": 0.8,
+      "l09": 0.9,
+      "l10": 0.9,
+      "l11": 0.3
     },
     "lines": [
-      { "id": "l01", "tts": "Hangisi daha şaşırtıcı?", "text": "Hangisi daha şaşırtıcı?", "rate": "+8%", "pitch": "+3Hz" },
-      { "id": "l02", "tts": "Jan Kalman, bin sekiz yüz yetmiş beşte Fransa'nın güneyinde, Arl şehrinde doğuyor.", "text": "Jeanne Calment, 1875'te Fransa'nın güneyinde, Arles şehrinde doğuyor." },
-      { "id": "l03", "tts": "Eyfel Kulesi açıldığında daha on dört yaşında.", "text": "Eyfel Kulesi açıldığında daha 14 yaşında." },
-      { "id": "l04", "tts": "Kendi anlatımına göre, amcasının dükkânında Van Gog'la karşılaşıyor.", "text": "Kendi anlatımına göre, amcasının dükkânında Van Gogh'la karşılaşıyor." },
-      { "id": "l05", "tts": "Yüz yaşında hâlâ bisiklete biniyor.", "text": "100 yaşında hâlâ bisiklete biniyor." },
-      { "id": "l06", "tts": "Bin dokuz yüz doksan yedide öldüğünde, belgelerle doğrulanmış en uzun insan ömrünü yaşamış oluyor.", "text": "1997'de öldüğünde, belgelerle doğrulanmış en uzun insan ömrünü yaşamış oluyor.", "rate": "+6%" },
-      { "id": "l07", "tts": "Ömrü tam yüz yirmi iki yıl, yüz altmış dört gün sürüyor.", "text": "Ömrü tam 122 yıl 164 gün sürüyor.", "rate": "+2%", "pitch": "-2Hz" },
-      { "id": "l08", "tts": "Yoksa bu köpekbalığı mı?", "text": "Yoksa bu köpekbalığı mı?", "rate": "+4%", "pitch": "+3Hz" },
-      { "id": "l09", "tts": "Grönland köpekbalığı, Kuzey Atlantik'in buz gibi, karanlık sularında yavaşça yüzüyor.", "text": "Grönland köpekbalığı, Kuzey Atlantik'in buz gibi, karanlık sularında yavaşça yüzüyor." },
-      { "id": "l10", "tts": "Bu tür, ancak yüz elli yaşına yaklaşınca yetişkin oluyor.", "text": "Bu tür, ancak 150 yaşına yaklaşınca yetişkin oluyor." },
-      { "id": "l11", "tts": "İki bin on altıda bilim insanları, yirmi sekiz köpekbalığının yaşını göz merceklerinden ölçüyor.", "text": "2016'da bilim insanları, 28 köpekbalığının yaşını göz merceklerinden ölçüyor." },
-      { "id": "l12", "tts": "En büyüğü muhtemelen bin beş yüzlerle bin yedi yüzler arasında doğmuş.", "text": "En büyüğü muhtemelen 1500'lerle 1700'ler arasında doğmuş." },
-      { "id": "l13", "tts": "Bilim insanlarına göre yaklaşık üç yüz doksan iki yaşında.", "text": "Bilim insanlarına göre yaklaşık 392 yaşında.", "rate": "+4%", "pitch": "-2Hz" },
-      { "id": "l14", "tts": "Peki ikisini aynı cetvele koyarsak?", "text": "Peki ikisini aynı cetvele koyarsak?" },
-      { "id": "l15", "tts": "Kalman'ın bütün ömrü, yüz yirmi iki yıl sürdü.", "text": "Calment'ın bütün ömrü 122 yıl sürdü.", "rate": "-2%" },
-      { "id": "l16", "tts": "Bu köpekbalığı ise, o ömrün", "text": "Bu köpekbalığı ise o ömrün", "rate": "-4%", "pitch": "-1Hz" },
-      { "id": "l17", "tts": "üç katından fazlasını yaşamış olabilir.", "text": "3 katından fazlasını yaşamış olabilir.", "rate": "-6%", "pitch": "-2Hz" },
-      { "id": "l18", "tts": "Sen hangisine şaşırdın?", "text": "Sen hangisine şaşırdın?", "rate": "+4%", "pitch": "+3Hz" }
+      {
+        "id": "l01",
+        "tts": "Bu köpekbalığı, yaklaşık dört yüz yıldır aynı karanlık suda yüzüyor olabilir.",
+        "text": "Bu köpekbalığı, yaklaşık 400 yıldır aynı karanlık suda yüzüyor olabilir.",
+        "rate": "+2%",
+        "pitch": "-1Hz"
+      },
+      {
+        "id": "l02",
+        "tts": "Ama önce bir kadın. Jan Kalman on üç yaşındayken, amcasının dükkânına bir gün Van Gogh girdi.",
+        "text": "Ama önce bir kadın. Jeanne Calment 13 yaşındayken, amcasının dükkânına bir gün Van Gogh girdi."
+      },
+      {
+        "id": "l03",
+        "tts": "Yıllar sonra onu şöyle anlattı: Çok çirkindi, kabaydı, biraz da deliydi.",
+        "text": "Yıllar sonra onu şöyle anlattı: \"Çok çirkindi, kabaydı, biraz da deliydi.\""
+      },
+      {
+        "id": "l04",
+        "tts": "Doksan yaşındayken bir avukat evini satın aldı. O ölene kadar her ay para ödeyecek, sonra ev onun olacaktı.",
+        "text": "90 yaşındayken bir avukat evini satın aldı. O ölene kadar her ay para ödeyecek, sonra ev onun olacaktı."
+      },
+      {
+        "id": "l05",
+        "tts": "Avukat otuz yıl ödedi. Sonunda avukat öldü, Kalman ise yaşamaya devam etti.",
+        "text": "Avukat 30 yıl ödedi. Sonunda avukat öldü, Calment ise yaşamaya devam etti.",
+        "rate": "+2%"
+      },
+      {
+        "id": "l06",
+        "tts": "Yüz yirmi iki yaşında öldüğünde, belgelenmiş en uzun insan ömrünü yaşamıştı.",
+        "text": "122 yaşında öldüğünde, belgelenmiş en uzun insan ömrünü yaşamıştı."
+      },
+      {
+        "id": "l07",
+        "tts": "Kuzey Atlantik'in karanlığında ise Grönland köpekbalığı yılda bir santimetre kadar büyür. Ancak yüz elli yaşına yaklaşınca yetişkin olur.",
+        "text": "Kuzey Atlantik'in karanlığında ise Grönland köpekbalığı yılda bir santimetre kadar büyür. Ancak 150 yaşına yaklaşınca yetişkin olur."
+      },
+      {
+        "id": "l08",
+        "tts": "Bilim insanları yaşını göz merceğinden ölçtü. En büyüğü yaklaşık dört yüz yaşında çıktı.",
+        "text": "Bilim insanları yaşını göz merceğinden ölçtü. En büyüğü yaklaşık 400 yaşında çıktı."
+      },
+      {
+        "id": "l09",
+        "tts": "Peki ikisini yan yana koyarsak?",
+        "text": "Peki ikisini yan yana koyarsak?",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l10",
+        "tts": "Kalman'ın bütün ömrü yüz yirmi iki yıl sürdü. Bu köpekbalığı ise o ömrün üç katından fazlasını yaşamış olabilir.",
+        "text": "Calment'ın bütün ömrü 122 yıl sürdü. Bu köpekbalığı ise o ömrün 3 katından fazlasını yaşamış olabilir.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
+      },
+      {
+        "id": "l11",
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "text": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "rate": "+4%",
+        "pitch": "+2Hz"
+      }
     ]
   },
   "facts": {
@@ -54,7 +93,10 @@
       "born": "1875-02-21",
       "died": "1997-08-04",
       "place": "Arles, Fransa",
-      "lonlat": [4.63, 43.68],
+      "lonlat": [
+        4.63,
+        43.68
+      ],
       "age": "122 yıl 164 gün",
       "eiffel": "Kule 1889'da açıldı (Calment 14 yaşında)",
       "vanGogh": "kendi anlatımına göre, gençken amcasının dükkânında (Van Gogh Arles'da 1888–1889)",
@@ -69,7 +111,10 @@
       "n": 28,
       "sampled": "Grönland açıklarında bilimsel taramalarda yakalanan dişiler (2010–2013)",
       "oldestAge": 392,
-      "ci95": [272, 512],
+      "ci95": [
+        272,
+        512
+      ],
       "oldestLengthCm": 502,
       "maturity": "dişiler 4 m üstünde olgunlaşıyor; tahmini yaş yaklaşık 150 (NatGeo: 156)",
       "bornApprox": "yaklaşık 1620'ler (aralık yaklaşık 1500–1740)"
@@ -83,7 +128,19 @@
       "https://www.grg-supercentenarians.org/jeanne-calment/"
     ]
   },
-  "caption": "Hangisi daha şaşırtıcı?\n\nJeanne Calment 21 Şubat 1875'te Fransa'nın Arles kentinde doğdu ve 4 Ağustos 1997'de 122 yıl 164 gün yaşında öldü. Eyfel Kulesi açıldığında 14 yaşındaydı; kendi anlatımına göre gençken amcasının dükkânında Van Gogh'la karşılaştı ve 100 yaşına kadar bisiklete bindi. Doğum belgesi ve 14 nüfus sayımıyla doğrulanan bu ömür, Guinness'e göre belgelenmiş en uzun insan ömrü.\n\n2016'da Science dergisinde yayımlanan bir çalışma, Grönland açıklarında yakalanan 28 Grönland köpekbalığının yaşını göz merceklerindeki radyokarbonla ölçtü. Yaklaşık 5 metrelik en büyüğünün yaşı yaklaşık 392 yıl çıktı; bilim insanlarının verdiği aralık 272 ile 512 yıl. Bu tür ancak yaklaşık 150 yaşında yetişkin oluyor.\n\nHesap: 392 ÷ 122 ≈ 3,2. En düşük tahmin (272 yıl) bile Calment'ın ömrünün 2 katından fazla.\n\nNot: Bazı araştırmacılar 2018'de Calment'ın yaşına itiraz etti; Guinness ve Gerontoloji Araştırma Grubu kaydı geçerli sayıyor.\n\nSen hangisine şaşırdın? Yorumlara CALMENT ya da KÖPEKBALIĞI yaz.\n\nKaç Sıfır? her hafta yeni bir Hangisi? getiriyor; takip et.\n\nKaynaklar: Nielsen ve ark., \"Eye lens radiocarbon reveals centuries of longevity in the Greenland shark\", Science 353 (2016), doi:10.1126/science.aaf1703; Science News ve National Geographic (Ağustos 2016); Guinness World Records (Şubat 2024); Gerontology Research Group.",
-  "hashtags": ["#kaçsıfır", "#hangisi", "#ilginçbilgiler", "#şaşırtıcıbilgiler", "#köpekbalığı"],
-  "ytTitle": "Hangisi daha şaşırtıcı? 122 yıl yaşayan kadın mı, 392 yaşındaki köpekbalığı mı?"
+  "caption": "Hangisi daha şaşırtıcı?\n\nJeanne Calment 21 Şubat 1875'te Fransa'nın Arles kentinde doğdu ve 4 Ağustos 1997'de 122 yıl 164 gün yaşında öldü. Eyfel Kulesi açıldığında 14 yaşındaydı; kendi anlatımına göre gençken amcasının dükkânında Van Gogh'la karşılaştı ve 100 yaşına kadar bisiklete bindi. Doğum belgesi ve 14 nüfus sayımıyla doğrulanan bu ömür, Guinness'e göre belgelenmiş en uzun insan ömrü.\n\n2016'da Science dergisinde yayımlanan bir çalışma, Grönland açıklarında yakalanan 28 Grönland köpekbalığının yaşını göz merceklerindeki radyokarbonla ölçtü. Yaklaşık 5 metrelik en büyüğünün yaşı yaklaşık 392 yıl çıktı; bilim insanlarının verdiği aralık 272 ile 512 yıl. Bu tür ancak yaklaşık 150 yaşında yetişkin oluyor.\n\nHesap: 392 ÷ 122 = yaklaşık 3,2. En düşük tahmin (272 yıl) bile Calment'ın ömrünün 2 katından fazla.\n\nNot: Bazı araştırmacılar 2018'de Calment'ın yaşına itiraz etti; Guinness ve Gerontoloji Araştırma Grubu kaydı geçerli sayıyor.\n\nSen hangisine şaşırdın? Yorumlara CALMENT ya da KÖPEKBALIĞI yaz.\n\nTakip et: her gün yeni bir sayı.\n\nKaynaklar: Nielsen ve ark., \"Eye lens radiocarbon reveals centuries of longevity in the Greenland shark\", Science 353 (2016), doi:10.1126/science.aaf1703; Science News ve National Geographic (Ağustos 2016); Guinness World Records (Şubat 2024); Gerontology Research Group.",
+  "hashtags": [
+    "#kaçsıfır",
+    "#hangisi",
+    "#ilginçbilgiler",
+    "#şaşırtıcıbilgiler",
+    "#köpekbalığı"
+  ],
+  "ytTitle": "Hangisi daha şaşırtıcı? 122 yıl yaşayan kadın mı, 392 yaşındaki köpekbalığı mı?",
+  "gl": true,
+  "samples": 6,
+  "question": [
+    "Hangisi daha",
+    "şaşırtıcı?"
+  ]
 }

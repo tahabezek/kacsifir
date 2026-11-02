@@ -1,136 +1,84 @@
 {
   "id": "061",
   "slug": "zamani-ve-yonu-kaybeden",
-  "template": "kayip",
+  "template": "hikaye",
   "serial": "№ 061 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-11T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+10%",
     "gaps": {
-      "l01": 0.25,
-      "l02": 0.4,
-      "l03": 0.4,
-      "l04": 0.4,
-      "l05": 0.4,
-      "l06": 0.4,
-      "l07": 1.2,
-      "l08": 0.15,
-      "l09": 0.4,
-      "l10": 0.4,
-      "l11": 0.4,
-      "l12": 0.4,
-      "l13": 0.8,
-      "l14": 0.35,
-      "l15": 0.5,
-      "l16": 0.8,
-      "l17": 0.6
+      "l01": 0.8,
+      "l02": 0.6,
+      "l03": 0.9,
+      "l04": 1.1,
+      "l05": 0.8,
+      "l06": 0.9,
+      "l07": 0.9,
+      "l08": 0.9,
+      "l09": 0.9,
+      "l10": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Hangisi daha şaşırtıcı?",
-        "text": "Hangisi daha şaşırtıcı?",
-        "rate": "+8%",
-        "pitch": "+3Hz"
+        "tts": "Saatini çıkardı ve yerin yüz otuz metre altına indi.",
+        "text": "Saatini çıkardı ve yerin 130 metre altına indi.",
+        "rate": "+2%",
+        "pitch": "-1Hz"
       },
       {
         "id": "l02",
-        "tts": "Bin dokuz yüz altmış ikide Mişel Sifr, yerin yüz otuz metre altındaki bir buzul mağarasına iniyor.",
-        "text": "1962'de Michel Siffre, yerin 130 metre altındaki bir buzul mağarasına iniyor."
+        "tts": "Bin dokuz yüz altmış iki. Fransız mağaracı Mişel Sifr yirmi üç yaşındaydı. Bir buzulun yanındaki mağarada, saatsiz ve takvimsiz yaşamaya karar verdi.",
+        "text": "1962. Fransız mağaracı Michel Siffre 23 yaşındaydı. Bir buzulun yanındaki mağarada, saatsiz ve takvimsiz yaşamaya karar verdi."
       },
       {
         "id": "l03",
-        "tts": "Yanında saat de takvim de yok; gün ışığını hiç görmüyor.",
-        "text": "Yanında saat de takvim de yok; gün ışığını hiç görmüyor."
+        "tts": "Ayakları hep ıslaktı, vücut sıcaklığı otuz dört dereceye kadar düştü. Yukarıdaki ekibin ona saati söylemesi yasaktı.",
+        "text": "Ayakları hep ıslaktı, vücut sıcaklığı 34 dereceye kadar düştü. Yukarıdaki ekibin ona saati söylemesi yasaktı."
       },
       {
         "id": "l04",
-        "tts": "Uyanınca, yemekte ve uyumadan önce yukarıdaki ekibi arıyor.",
-        "text": "Uyanınca, yemekte ve uyumadan önce yukarıdaki ekibi arıyor."
+        "tts": "Ekip deneyin bittiğini söylediğinde, onun takvimine göre daha yirmi Ağustos'tu. Oysa günlerden on dört Eylül'dü.",
+        "text": "Ekip deneyin bittiğini söylediğinde, onun takvimine göre daha 20 Ağustos'tu. Oysa günlerden 14 Eylül'dü.",
+        "rate": "+4%"
       },
       {
         "id": "l05",
-        "tts": "İki ay sonra ekip, deneyin bittiğini söylüyor.",
-        "text": "İki ay sonra ekip, deneyin bittiğini söylüyor."
+        "tts": "Bin dokuz yüz doksan dört. İtalyan polis memuru Mauro Prosperi, Sahra'da bir ultramaratonda koşuyordu. Kırk altı derecede bir kum fırtınası çıktı.",
+        "text": "1994. İtalyan polis memuru Mauro Prosperi, Sahra'da bir ultramaratonda koşuyordu. 46 derecede bir kum fırtınası çıktı."
       },
       {
         "id": "l06",
-        "tts": "Sifr ise daha yirmi Ağustos olduğunu sanıyor; oysa günlerden on dört Eylül.",
-        "text": "Siffre ise daha 20 Ağustos olduğunu sanıyor; oysa günlerden 14 Eylül.",
-        "rate": "+4%",
-        "pitch": "-2Hz"
+        "tts": "Fırtına dindiğinde ne işaretler kalmıştı ne de başka koşucular. Kendi anlattığına göre terk edilmiş bir türbeye sığındı ve yarasaları yiyerek hayatta kaldı.",
+        "text": "Fırtına dindiğinde ne işaretler kalmıştı ne de başka koşucular. Kendi anlattığına göre terk edilmiş bir türbeye sığındı ve yarasaları yiyerek hayatta kaldı."
       },
       {
         "id": "l07",
-        "tts": "Tam yirmi beş gün hesabından sessizce düşmüş.",
-        "text": "Tam 25 gün hesabından sessizce düşmüş.",
-        "rate": "+0%",
-        "pitch": "-2Hz"
+        "tts": "Dokuzuncu gün göçebe bir kız onu gördü ve korkuyla kaçtı. Prosperi farkında olmadan Cezayir'e geçmişti.",
+        "text": "Dokuzuncu gün göçebe bir kız onu gördü ve korkuyla kaçtı. Prosperi farkında olmadan Cezayir'e geçmişti."
       },
       {
         "id": "l08",
-        "tts": "Yoksa bu adam mı?",
-        "text": "Yoksa bu adam mı?",
-        "rate": "+4%",
-        "pitch": "+3Hz"
+        "tts": "Peki ikisini aynı haritaya koyarsak?",
+        "text": "Peki ikisini aynı haritaya koyarsak?",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Bin dokuz yüz doksan dörtte İtalyan polis memuru Mauro Prosperi, Fas'ta Sahra'yı geçen bir ultramaratona katılıyor.",
-        "text": "1994'te İtalyan polis memuru Mauro Prosperi, Fas'ta Sahra'yı geçen bir ultramaratona katılıyor."
+        "tts": "Sifr yerinden kıpırdamadan yirmi beş gün kaybetti. Prosperi ise dokuz günde yolundan iki yüz doksan bir kilometre saptı.",
+        "text": "Siffre yerinden kıpırdamadan 25 gün kaybetti. Prosperi ise dokuz günde yolundan 291 kilometre saptı.",
+        "rate": "+2%",
+        "pitch": "-2Hz"
       },
       {
         "id": "l10",
-        "tts": "Dördüncü etapta bir kum fırtınası çıkıyor ve Prosperi yolunu kaybediyor.",
-        "text": "Dördüncü etapta bir kum fırtınası çıkıyor ve Prosperi yolunu kaybediyor."
-      },
-      {
-        "id": "l11",
-        "tts": "Terk edilmiş bir türbeye sığınıyor ve yarasaların kanını içerek hayatta kalıyor.",
-        "text": "Terk edilmiş bir türbeye sığınıyor ve yarasaların kanını içerek hayatta kalıyor."
-      },
-      {
-        "id": "l12",
-        "tts": "Dokuz gün sonra onu göçebe bir kız buluyor; Prosperi farkında olmadan Cezayir'e geçmiş.",
-        "text": "Dokuz gün sonra onu göçebe bir kız buluyor; Prosperi farkında olmadan Cezayir'e geçmiş."
-      },
-      {
-        "id": "l13",
-        "tts": "Bu sürede yaklaşık on beş kilo veriyor.",
-        "text": "Bu sürede yaklaşık 15 kilo veriyor."
-      },
-      {
-        "id": "l14",
-        "tts": "Peki ikisini aynı haritaya koyarsak?",
-        "text": "Peki ikisini aynı haritaya koyarsak?"
-      },
-      {
-        "id": "l15",
-        "tts": "Sifr yerinden hiç ayrılmadan yirmi beş gün kaybetti.",
-        "text": "Siffre yerinden hiç ayrılmadan 25 gün kaybetti."
-      },
-      {
-        "id": "l16",
-        "tts": "Prosperi ise dokuz günde yolundan",
-        "text": "Prosperi ise 9 günde yolundan",
-        "rate": "+0%"
-      },
-      {
-        "id": "l17",
-        "tts": "İki yüz doksan bir kilometre saptı.",
-        "text": "291 kilometre saptı.",
-        "rate": "-6%",
-        "pitch": "-3Hz"
-      },
-      {
-        "id": "l18",
-        "tts": "Sen hangisine şaşırdın?",
-        "text": "Sen hangisine şaşırdın?",
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "text": "Sen hangisine şaşırdın? Yoruma yaz.",
         "rate": "+4%",
-        "pitch": "+3Hz"
+        "pitch": "+2Hz"
       }
     ]
   },
@@ -186,5 +134,11 @@
     "#şaşırtıcıbilgiler",
     "#hayattakalma"
   ],
-  "ytTitle": "Hangisi daha şaşırtıcı? Zamanını kaybeden adam mı, yönünü kaybeden adam mı?"
+  "ytTitle": "Hangisi daha şaşırtıcı? Zamanını kaybeden adam mı, yönünü kaybeden adam mı?",
+  "gl": true,
+  "samples": 6,
+  "question": [
+    "Hangisi daha",
+    "şaşırtıcı?"
+  ]
 }

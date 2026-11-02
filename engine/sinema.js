@@ -148,7 +148,9 @@ export function makeSinema(ep, overlay, opts = {}) {
     const NS = window.__samples || ep.samples || 16;
     const r = mulberry32(Math.round(t * FPS) * 7919 + 13);
     gl.setRenderTarget(rtA); gl.setClearColor(0x000000, 0); gl.clear();
+    gl.shadowMap.autoUpdate = false;                // gölge haritası karede bir kez (örnek başına değil): hız
     for (let i = 0; i < NS; i++) {
+      gl.shadowMap.needsUpdate = i === 0;
       const ts = t + ((i + r()) / NS - 0.5) * (shutter(t) / FPS);
       const a = 2 * Math.PI * ((i * 0.618034 + r()) % 1), rr = Math.sqrt((i + 0.5) / NS);
       pose(ts, NS > 1 ? [Math.cos(a) * rr, Math.sin(a) * rr] : null, NS > 1 ? [r() - 0.5, r() - 0.5] : null);

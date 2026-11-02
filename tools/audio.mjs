@@ -51,6 +51,8 @@ import { synthAltin } from './audio_altin.mjs';
 import { synthStadyum } from './audio_stadyum.mjs';
 import { synthBuzates } from './audio_buzates.mjs';
 import { synthDag } from './audio_dag.mjs';
+import { synthMumlar } from './audio_mumlar.mjs';
+import { synthHikaye } from './audio_hikaye.mjs';
 import { synthBulut } from './audio_bulut.mjs';
 import { synthAgac } from './audio_agac.mjs';
 import { synthPi } from './audio_pi.mjs';
@@ -116,6 +118,8 @@ export function synth(ep) {
   if (ep.template === 'stadyum') return synthStadyum(ep);
   if (ep.template === 'buzates') return synthBuzates(ep);
   if (ep.template === 'dag') return synthDag(ep);
+  if (ep.template === 'mumlar') return synthMumlar(ep);
+  if (ep.template === 'hikaye') return synthHikaye(ep);
   if (ep.template === 'bulut') return synthBulut(ep);
   if (ep.template === 'agac') return synthAgac(ep);
   if (ep.template === 'pi') return synthPi(ep);

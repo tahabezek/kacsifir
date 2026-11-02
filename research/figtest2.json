@@ -1,0 +1,1 @@
+{ "id": "figtest", "slug": "figtest", "template": "figtest", "gl": true, "samples": 4, "voice": { "lines": [] }, "cards": ["kaiser", "anna", "ludger"], "camPos": [0, 1.55, 3.0], "camTgt": [0, 1.25, 0], "fov": 40 }

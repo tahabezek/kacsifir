@@ -49,6 +49,8 @@ import { altinSummary } from './scenes/altin_summary.js';
 import { stadyumSummary } from './scenes/stadyum_summary.js';
 import { buzatesSummary } from './scenes/buzates_summary.js';
 import { dagSummary } from './scenes/dag_summary.js';
+import { mumlarSummary } from './scenes/mumlar_summary.js';
+import { hikayeSummary } from './hikaye_summary.js';
 import { bulutSummary } from './scenes/bulut_summary.js';
 import { agacSummary } from './scenes/agac_summary.js';
 import { piSummary } from './scenes/pi_summary.js';
@@ -90,6 +92,8 @@ export function summary(ep) {
   if (ep.template === 'stadyum') return stadyumSummary(ep);
   if (ep.template === 'buzates') return buzatesSummary(ep);
   if (ep.template === 'dag') return dagSummary(ep);
+  if (ep.template === 'mumlar') return mumlarSummary(ep);
+  if (ep.template === 'hikaye') return hikayeSummary(ep);
   if (ep.template === 'bulut') return bulutSummary(ep);
   if (ep.template === 'agac') return agacSummary(ep);
   if (ep.template === 'pi') return piSummary(ep);

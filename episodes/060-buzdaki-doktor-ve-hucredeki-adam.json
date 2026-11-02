@@ -1,72 +1,71 @@
 {
   "id": "060",
   "slug": "buzdaki-doktor-ve-hucredeki-adam",
-  "template": "buzates",
+  "template": "hikaye",
   "serial": "№ 060 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-05T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+8%",
     "gaps": {
-      "l01": 0.3,
-      "l02": 0.2,
-      "l03": 0.25,
-      "l04": 0.3,
-      "l05": 0.45,
-      "l06": 0.2,
-      "l07": 0.25,
-      "l08": 0.35,
+      "l01": 0.7,
+      "l02": 0.4,
+      "l03": 0.8,
+      "l04": 1,
+      "l05": 0.8,
+      "l06": 0.4,
+      "l07": 0.9,
+      "l08": 0.8,
       "l09": 0.9,
-      "l10": 0.5,
-      "l11": 0.7,
-      "l12": 0.3
+      "l10": 0.8,
+      "l11": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Donan doktor mu, yanan kentten kurtulan mahkûm mu?",
-        "text": "Donan doktor mu, yanan kentten kurtulan mahkûm mu?",
-        "rate": "+12%",
-        "pitch": "+3Hz"
+        "tts": "Buzun altında, başı aşağıda, nefes alacak bir boşluk arıyor.",
+        "text": "Buzun altında, başı aşağıda, nefes alacak bir boşluk arıyor.",
+        "rate": "+0%",
+        "pitch": "-1Hz"
       },
       {
         "id": "l02",
-        "tts": "Anna Bogenholm, Norveç'te buzu kırıp donmuş bir nehre düştü.",
-        "text": "Anna Bågenholm, Norveç'te buzu kırıp donmuş bir nehre düştü."
+        "tts": "Mayıs bin dokuz yüz doksan dokuz, Norveç. Genç doktor Anna Bogenholm arkadaşlarıyla kayağa çıktı.",
+        "text": "Mayıs 1999, Norveç. Genç doktor Anna Bågenholm arkadaşlarıyla kayağa çıktı."
       },
       {
         "id": "l03",
-        "tts": "Buzun altındaki bir hava cebinde yaklaşık kırk dakika dayandı.",
-        "text": "Buzun altındaki bir hava cebinde yaklaşık 40 dakika dayandı."
+        "tts": "Dik bir yamaçta dengesini kaybetti ve baş aşağı, donmuş bir derenin buzuna düştü. Buz kırıldı.",
+        "text": "Dik bir yamaçta dengesini kaybetti ve baş aşağı, donmuş bir derenin buzuna düştü. Buz kırıldı."
       },
       {
         "id": "l04",
-        "tts": "Sonra kalbi durdu ve vücudu on üç virgül yedi dereceye indi.",
-        "text": "Sonra kalbi durdu ve vücudu 13,7 dereceye indi.",
-        "rate": "+6%"
+        "tts": "Arkadaşları kayaklarından tuttu ama onu çekip çıkaramadı. Anna buzun altında küçük bir hava cebi buldu ve kırk dakika orada nefes aldı.",
+        "text": "Arkadaşları kayaklarından tuttu ama onu çekip çıkaramadı. Anna buzun altında küçük bir hava cebi buldu ve 40 dakika orada nefes aldı.",
+        "rate": "+0%"
       },
       {
         "id": "l05",
-        "tts": "Kalbi iki buçuk saatten uzun süre atmadı ama doktorlar onu geri getirdi.",
-        "text": "Kalbi iki buçuk saatten uzun süre atmadı ama doktorlar onu geri getirdi."
+        "tts": "Sudan çıkarıldığında kalbi durmuştu ve vücudu on üç virgül yedi dereceye inmişti. Ama kalbi saatler sonra yeniden attı.",
+        "text": "Sudan çıkarıldığında kalbi durmuştu ve vücudu 13,7 dereceye inmişti. Ama kalbi saatler sonra yeniden attı."
       },
       {
         "id": "l06",
-        "tts": "Lüdjer Silbaris ise Martinik'te taş bir hücrede tutuluyordu.",
-        "text": "Ludger Sylbaris ise Martinik'te taş bir hücrede tutuluyordu."
+        "tts": "Ondan doksan yedi yıl önce Martinik'te bir mahkûm, taş bir hücrede tek başınaydı.",
+        "text": "Ondan 97 yıl önce Martinik'te bir mahkûm, taş bir hücrede tek başınaydı."
       },
       {
         "id": "l07",
-        "tts": "Yanardağ patladı ve kızgın bir bulut bütün kenti dakikalar içinde yok etti.",
-        "text": "Yanardağ patladı ve kızgın bir bulut bütün kenti dakikalar içinde yok etti.",
-        "rate": "+14%"
+        "tts": "Sabah sekize doğru yanardağ patladı. Kızgın bir bulut bütün kenti bir dakikadan kısa sürede yuttu.",
+        "text": "Sabah sekize doğru yanardağ patladı. Kızgın bir bulut bütün kenti bir dakikadan kısa sürede yuttu.",
+        "rate": "+2%"
       },
       {
         "id": "l08",
-        "tts": "Yaklaşık yirmi sekiz bin kişi öldü ama o kurtuldu.",
-        "text": "Yaklaşık 28 bin kişi öldü ama o kurtuldu."
+        "tts": "Dar ızgaradan içeri yakıcı hava doldu. Lüdjer Silbaris yanıklar içinde üç gün bekledi, sonunda biri sesini duydu.",
+        "text": "Dar ızgaradan içeri yakıcı hava doldu. Ludger Sylbaris yanıklar içinde üç gün bekledi, sonunda biri sesini duydu."
       },
       {
         "id": "l09",
@@ -76,23 +75,16 @@
       },
       {
         "id": "l10",
-        "tts": "Anna'nın vücudu on üç virgül yedi dereceye indi.",
-        "text": "Anna'nın vücudu 13,7 dereceye indi.",
-        "rate": "+2%",
+        "tts": "Anna'nın vücudu on üç virgül yedi dereceye indi. Hücrenin dışındaki bulut ise tahminen dört yüz dereceye yakındı.",
+        "text": "Anna'nın vücudu 13,7 dereceye indi. Hücrenin dışındaki bulut ise tahminen 400 dereceye yakındı.",
+        "rate": "-2%",
         "pitch": "-2Hz"
       },
       {
         "id": "l11",
-        "tts": "Hücrenin dışındaki bulut ise tahminen dört yüz dereceye yakındı.",
-        "text": "Hücrenin dışındaki bulut ise tahminen 400 dereceye yakındı.",
-        "rate": "+4%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l12",
         "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+6%",
+        "rate": "+4%",
         "pitch": "+2Hz"
       }
     ]
@@ -145,7 +137,7 @@
   ],
   "ytTitle": "Vücudu 13,7 dereceye düşen doktor mu, yanardağ bulutundan hücresi sayesinde kurtulan adam mı?",
   "gl": true,
-  "samples": 16,
+  "samples": 6,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

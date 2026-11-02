@@ -1,86 +1,83 @@
 {
   "id": "035",
   "slug": "dag-adami-ve-madenciler",
-  "template": "dag",
+  "template": "hikaye",
   "serial": "№ 035 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-06T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+10%",
     "gaps": {
-      "l01": 0.3,
-      "l02": 0.2,
-      "l03": 0.25,
-      "l04": 0.3,
-      "l05": 0.45,
-      "l06": 0.2,
-      "l07": 0.3,
-      "l08": 0.35,
-      "l09": 0.9,
-      "l10": 0.5,
-      "l11": 0.7,
+      "l01": 0.8,
+      "l02": 0.9,
+      "l03": 1.1,
+      "l04": 0.6,
+      "l05": 0.8,
+      "l06": 0.5,
+      "l07": 0.8,
+      "l08": 0.8,
+      "l09": 0.6,
+      "l10": 0.9,
+      "l11": 0.9,
       "l12": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Dağı tek başına yaran adam mı, yerin altında mahsur kalan otuz üç madenci mi?",
-        "text": "Dağı tek başına yaran adam mı, yerin altında mahsur kalan 33 madenci mi?",
-        "pitch": "+3Hz"
+        "tts": "Bir adam, karısını kaybettiği dağa çekiçle vuruyor.",
+        "text": "Bir adam, karısını kaybettiği dağa çekiçle vuruyor.",
+        "rate": "+2%",
+        "pitch": "-1Hz"
       },
       {
         "id": "l02",
-        "tts": "Dashrath Mancı'nin karısı, Hindistan'da dağı aşarken düşüp yaralandı.",
-        "text": "Dashrath Manjhi'nin karısı, Hindistan'da dağı aşarken düşüp yaralandı."
+        "tts": "Hindistan'da bir köy. Köyle kasaba arasında dik, kayalık bir sırt vardı. Dashrath Mancı'nin karısı Falguni o patikada düştü.",
+        "text": "Hindistan'da bir köy. Köyle kasaba arasında dik, kayalık bir sırt vardı. Dashrath Manjhi'nin karısı Falguni o patikada düştü."
       },
       {
         "id": "l03",
-        "tts": "Kasabaya gitmek için dağı dolanıp elli beş kilometre yürümek gerekiyordu.",
-        "text": "Kasabaya gitmek için dağı dolanıp 55 kilometre yürümek gerekiyordu."
+        "tts": "En yakın doktor yetmiş kilometre ötedeydi. Falguni kurtarılamadı.",
+        "text": "En yakın doktor 70 kilometre ötedeydi. Falguni kurtarılamadı.",
+        "rate": "+0%",
+        "pitch": "-2Hz"
       },
       {
         "id": "l04",
-        "tts": "Mancı bir çekiç ve bir keski aldı ve yirmi iki yıl boyunca dağı tek başına yardı.",
-        "text": "Manjhi bir çekiç ve bir keski aldı ve 22 yıl boyunca dağı tek başına yardı."
+        "tts": "Bir gün Mancı bir çekiç ve bir keski alıp sırta çıktı. Köylüler ona deli dedi.",
+        "text": "Bir gün Manjhi bir çekiç ve bir keski alıp sırta çıktı. Köylüler ona deli dedi."
       },
       {
         "id": "l05",
-        "tts": "Sonunda yüz on metrelik bir yol açtı ve mesafe on beş kilometreye indi.",
-        "text": "Sonunda 110 metrelik bir yol açtı ve mesafe 15 kilometreye indi."
-      },
-      {
-        "id": "l06",
-        "tts": "Şili'de ise bir maden çöktü ve otuz üç işçi yedi yüz metre derinde kaldı.",
-        "text": "Şili'de ise bir maden çöktü ve 33 işçi 700 metre derinde kaldı."
+        "tts": "Yirmi iki yıl boyunca her gün vurdu. Saçları ağardı, sırt yavaş yavaş açıldı. Sonunda yüz on metrelik bir yol açtı.",
+        "text": "22 yıl boyunca her gün vurdu. Saçları ağardı, sırt yavaş yavaş açıldı. Sonunda 110 metrelik bir yol açtı."
       },
       {
         "id": "l07",
-        "tts": "On yedi gün sonra sondaj ucu bir notla geri geldi: Sığınaktayız, otuz üç kişi iyiyiz.",
-        "text": "17 gün sonra sondaj ucu bir notla geri geldi: \"Sığınaktayız, 33 kişi iyiyiz.\""
+        "tts": "Ağustos iki bin on, Şili. Maden çöktü ve otuz üç işçi yedi yüz metre aşağıda kaldı. İki günde bir, iki kaşık ton balığıyla on yedi gün dayandılar.",
+        "text": "Ağustos 2010, Şili. Maden çöktü ve 33 işçi 700 metre aşağıda kaldı. İki günde bir, iki kaşık ton balığıyla 17 gün dayandılar."
       },
       {
         "id": "l08",
-        "tts": "Altmış dokuzuncu günde hepsi tek tek yukarı çekildi.",
-        "text": "69. günde hepsi tek tek yukarı çekildi."
+        "tts": "On yedinci gün tavandan bir matkap ucu çıktı. Ucuna bir not bağladılar: Sığınaktayız, otuz üç kişi iyiyiz.",
+        "text": "17. gün tavandan bir matkap ucu çıktı. Ucuna bir not bağladılar: \"Sığınaktayız, 33 kişi iyiyiz.\""
       },
       {
         "id": "l09",
+        "tts": "Altmış dokuzuncu gün dar bir kapsül onları tek tek yukarı çekti.",
+        "text": "69. gün dar bir kapsül onları tek tek yukarı çekti."
+      },
+      {
+        "id": "l10",
         "tts": "Peki ikisini aynı kayayla ölçersek?",
         "text": "Peki ikisini aynı kayayla ölçersek?",
         "pitch": "+2Hz"
       },
       {
-        "id": "l10",
-        "tts": "Kurtarma kuyusu yaklaşık iki yüz elli metreküp kaya deldi.",
-        "text": "Kurtarma kuyusu yaklaşık 250 metreküp kaya deldi.",
-        "rate": "+4%"
-      },
-      {
         "id": "l11",
-        "tts": "Mancı ise bunun en az on beş katını tek başına kırdı.",
-        "text": "Manjhi ise bunun en az 15 katını tek başına kırdı.",
+        "tts": "Kurtarma kuyusu yaklaşık iki yüz elli metreküp kaya deldi. Mancı ise elleriyle bunun en az on beş katını kırdı.",
+        "text": "Kurtarma kuyusu yaklaşık 250 metreküp kaya deldi. Manjhi ise elleriyle bunun en az 15 katını kırdı.",
         "rate": "+2%",
         "pitch": "-2Hz"
       },
@@ -88,7 +85,7 @@
         "id": "l12",
         "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+6%",
+        "rate": "+4%",
         "pitch": "+2Hz"
       }
     ]
@@ -128,7 +125,7 @@
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? Dağı 22 yılda elle yaran adam mı, 700 metre derinde 69 gün bekleyen 33 madenci mi?",
   "gl": true,
-  "samples": 16,
+  "samples": 6,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

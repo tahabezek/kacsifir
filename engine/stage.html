@@ -15,7 +15,10 @@ await Promise.all([
 ]);
 await document.fonts.ready;
 const canvas = document.getElementById('c');
-const r = ep.template === 'dag' ? await (await import('./scenes/dag.js')).makeDagRenderer(ep, canvas)
+const r = ep.template === 'hikaye' ? await (await import('./hikaye.js')).makeHikayeRenderer(ep, canvas)
+  : ep.template === 'figtest' ? await (await import('./scenes/figtest.js')).makeFigtestRenderer(ep, canvas)
+  : ep.template === 'mumlar' ? await (await import('./scenes/mumlar.js')).makeMumlarRenderer(ep, canvas)
+  : ep.template === 'dag' ? await (await import('./scenes/dag.js')).makeDagRenderer(ep, canvas)
   : ep.template === 'buzates' ? await (await import('./scenes/buzates.js')).makeBuzatesRenderer(ep, canvas)
   : ep.template === 'stadyum' ? await (await import('./scenes/stadyum.js')).makeStadyumRenderer(ep, canvas)
   : ep.template === 'altin' ? await (await import('./scenes/altin.js')).makeAltinRenderer(ep, canvas)

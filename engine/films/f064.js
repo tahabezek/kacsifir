@@ -24,7 +24,7 @@ export async function film(A) {
   const w = (id, k) => T.w(id, k);
   const X = i => i * 120;
   const _m = new THREE.Matrix4();
-  const glass = new THREE.MeshPhysicalMaterial({ color: lin('#FFFFFF'), roughness: 0.05, transparent: true, opacity: 0.07, clearcoat: 0.4, envMapIntensity: 0.25, depthWrite: false });
+  const glass = new THREE.MeshPhysicalMaterial({ color: lin('#FFFFFF'), roughness: 0.05, transparent: true, opacity: 0.035, clearcoat: 0.2, envMapIntensity: 0.08, depthWrite: false });
   const pitchM = new THREE.MeshPhysicalMaterial({ color: lin('#0A0806'), roughness: 0.08, clearcoat: 1 });
   // huni + damla (dünyada yeniden kullanılan düzenek)
   function funnelRig(g, x, z) {
@@ -82,7 +82,7 @@ export async function film(A) {
   const set = (f, fn) => { f.act = fn; };
   const dead = w('l06', 'öldü');
   set(mstone, t => { const gone = t > dead - 0.2 && t < T.loop0; const miss = (t > w('l04', 'kaçırdı') - 1.0 && t < w('l04', 'kaçırdı') + 0.4) || (t > w('l04', 15) && t < T.l04end + 0.4); return { visible: !gone, pos: miss ? [-1.6, 0, 0.9] : [-0.55, 0.02, 0.2], rot: miss ? 2.6 : 0.9, pose: miss ? POSE.walk((t * 0.8) % 1, 0.6) : POSE.sit(), face: t > w('l05', 'Tam') && t < dead ? FACE.sad : { ...FACE.neutral, look: 0.5 } }; });
-  set(parnell, t => { const pour = t < w('l02', 'Zift'); const sw = seg(t, w('l02', 'çekiçle') - 0.3, 0.4); return { pos: pour ? [0.2, 0, 0.1] : [-0.6, 0, 0.3], rot: pour ? -0.4 : 0.2, pose: pour ? { ...POSE.stand(), rShoulder: [-1.3, 0, 0.2], rElbow: [-0.6, 0, 0], lShoulder: [-0.9, 0, -0.1], lElbow: [-0.8, 0, 0] } : mixPose({ ...POSE.stand(), rShoulder: [-2.6, 0, 0.2], rElbow: [-0.4, 0, 0] }, { ...POSE.stand(), rShoulder: [-1.0, 0, 0.2], rElbow: [-0.2, 0, 0], spine: [0.3, 0, 0] }, ease.enter(sw)), face: FACE.determined }; });
+  set(parnell, t => { const pour = t < w('l02', 14); const sw = seg(t, w('l02', 'çekiçle') - 0.3, 0.4); return { pos: pour ? [0.2, 0, 0.1] : [-0.6, 0, 0.3], rot: pour ? -0.4 : 0.2, pose: pour ? { ...POSE.stand(), rShoulder: [-1.3, 0, 0.2], rElbow: [-0.6, 0, 0], lShoulder: [-0.9, 0, -0.1], lElbow: [-0.8, 0, 0] } : mixPose({ ...POSE.stand(), rShoulder: [-2.6, 0, 0.2], rElbow: [-0.4, 0, 0] }, { ...POSE.stand(), rShoulder: [-1.0, 0, 0.2], rElbow: [-0.2, 0, 0], spine: [0.3, 0, 0] }, ease.enter(sw)), face: FACE.determined }; });
 
   // ——— kamera ———
   const cut = (t, a, b) => [[t - 0.001, ...a], [t, ...b]];
@@ -93,8 +93,8 @@ export async function film(A) {
     [0.6, P(0, 0.22, 1.24, 2.2), P(0, -0.05, 1.0, -0.1), 42, null, 0.02],
     [T.l01end, P(0, 0.7, 1.2, 0.6), P(0, 0.5, 1.15, -0.3), 34, null, 0.006],      // huniye yakın: asılı damla
     ...cut(T.l02 - 0.15, [P(0, 0.7, 1.2, 0.58), P(0, 0.5, 1.15, -0.3), 34], [P(1, 0.9, 1.6, 2.6), P(1, 0.2, 1.2, -0.4), 42]),
-    [w('l02', 'Zift') - 0.1, P(1, 0.4, 1.5, 2.4), P(1, -0.3, 1.1, -0.3), 42],
-    [T.l02end + 0.3, P(1, -0.2, 1.3, 1.2), P(1, -0.5, 1.0, -0.3), 38],
+    [w('l02', 14) - 0.1, P(1, 0.6, 1.6, 3.4), P(1, -0.4, 1.1, -0.1), 42],
+    [T.l02end + 0.3, P(1, 0.4, 1.4, 2.6), P(1, -0.4, 1.0, -0.1), 40],
     [w('l03', 'İlk') - 0.2, P(1, 0.9, 1.3, 0.9), P(1, 0.55, 1.2, -0.4), 34, null, 0.006],
     ...cut(T.l04 - 0.15, [P(1, 0.9, 1.3, 0.88), P(1, 0.55, 1.2, -0.4), 34], [P(0, 0.4, 1.5, 2.8), P(0, 0, 1.1, -0.2), 42]),
     [w('l04', 'kaçırdı'), P(0, 0.2, 1.6, 3.2), P(0, -0.3, 1.0, 0), 44],
@@ -104,7 +104,7 @@ export async function film(A) {
     [T.l06 + 0.2, P(0, 0.2, 1.3, 2.4), P(0, -0.55, 0.7, 0.2), 40],
     [T.l06end + 0.6, P(0, 0.0, 1.2, 1.8), P(0, -0.55, 0.65, 0.2), 38, null, 0.02],
     ...cut(T.l07 - 0.15, [P(0, 0.0, 1.2, 1.78), P(0, -0.55, 0.65, 0.2), 38], [P(2, 0.9, 1.5, 2.6), P(2, 0.1, 1.2, -0.3), 42]),
-    [w('l07', 'bilye') + 0.2, P(2, 0.25, 1.25, 0.65), P(2, 0, 1.12, -0.3), 34, null, 0.004],
+    [w('l07', 'bilye') + 0.2, P(2, 0.12, 1.06, 0.5), P(2, 0, 1.02, -0.3), 30, null, 0.004],
     [T.l08end + 0.3, P(2, 0.6, 1.4, 1.8), P(2, 0.2, 1.2, -0.2), 40],
     ...cut(T.l09 - 0.15, [P(2, 0.6, 1.4, 1.78), P(2, 0.2, 1.2, -0.2), 40], [P(3, 0, 1.5, 2.6), P(3, 0, 1.1, -0.2), 42]),
     [T.l10, P(3, 0, 1.4, 2.3), P(3, 0, 1.1, -0.2), 42],
@@ -120,7 +120,7 @@ export async function film(A) {
 
   return {
     cam, cuts,
-    names: [[w('l02', 'Profesör') - 0.1, T.l03 - 0.2, 'THOMAS PARNELL', 'Queensland Üniversitesi · 1927'], [w('l04', 'Con') - 0.1, w('l04', 'Bir') - 0.2, 'JOHN MAINSTONE', 'Deneyin bekçisi · 1961–2013'], [w('l07', 'cam') - 0.2, w('l07', 'iki') - 0.2, 'OXFORD ELEKTRİKLİ ÇANI', '1840\'tan beri çalıyor']],
+    names: [[w('l02', 'Profesör') - 0.1, T.l03 - 0.2, 'THOMAS PARNELL', 'Queensland Üniversitesi · 1927'], [w('l04', 'Con') - 0.1, w('l04', 'Bir') - 0.2, 'JOHN MAINSTONE', 'Deneyin bekçisi · 1961–2013'], [w('l07', 'cam') - 0.2, w('l07', 'iki') - 0.2, 'OXFORD ÇANI', '1840\'tan beri çalıyor']],
     numbers: [[w('l10', 'dokuz') - 0.1, w('l10', 6) - 0.25, '9 yıl', 'BİR ZİFT DAMLASI'], [w('l10', 6) - 0.1, T.l11 + 0.3, t => fmt(ringsAt(t)), 'ÇANIN VURUŞU']],
     update(t) {
       // vitrin: damla uzar; kaçırılan anlarda düşer; 2000'de karartma
@@ -132,8 +132,8 @@ export async function film(A) {
       room.intensity = 2.5 * 22 * (1 - black); rec.visible = t > T.l05 - 0.5 && t < T.l06 && !black;
       camRig.visible = t > T.l05 - 0.5 && t < T.l06 + 0.2;
       // 1927: döküm, çekiç
-      const pr = seg(t, w('l02', 'Profesör'), w('l02', 'Zift') - w('l02', 'Profesör'));
-      pot.position.set(0.42, 1.65, -0.3); pot.rotation.z = 1.2 * Math.min(1, pr * 3); pot.visible = t < w('l02', 'Zift') + 0.3;
+      const pr = seg(t, w('l02', 'Profesör'), w('l02', 14) - w('l02', 'Profesör'));
+      pot.position.set(0.42, 1.65, -0.3); pot.rotation.z = 1.2 * Math.min(1, pr * 3); pot.visible = t < w('l02', 14) + 0.3;
       stream.visible = pr > 0.15 && pr < 0.95; stream.scale.y = 0.35; stream.position.set(0.53, 1.45, -0.4);
       const hit = seg(t, w('l02', 'paramparça') - 0.1, 0.6); block.visible = hit <= 0;
       bits.forEach((b, i) => { const r = mulberry32(i + 2); b.visible = hit > 0; b.position.set(-0.5 + (r() - 0.5) * 0.6 * hit, 0.97 + 0.15 * Math.sin(hit * Math.PI) * r(), -0.3 + (r() - 0.5) * 0.4 * hit); b.rotation.set(hit * 6 * r(), hit * 4, 0); });

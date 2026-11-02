@@ -18,7 +18,7 @@ export const CARDS = {
   yamaguchiB: { height: 1.68, heads: 7.2, build: 0.9, skin: '#E0BC94', hair: '#141414', hairStyle: 'short', top: '#C9CBC6', bottom: '#4A4A48', shoes: '#2A2420', bandage: true },
   parnell: { height: 1.76, heads: 7.4, build: 1.05, skin: '#E8C9AE', hair: '#5A4A3A', hairStyle: 'short', mustache: '#5A4A3A', top: '#6A5A44', bottom: '#4A3E30', shoes: '#2A2420' },
   mainstone: { height: 1.75, heads: 7.4, build: 1.0, skin: '#E8C9AE', hair: '#E6E2DA', hairStyle: 'short', beard: '#E6E2DA', glasses: '#4A4A4A', top: '#7A6A5A', bottom: '#3A3A3E', shoes: '#2A2420' },
-  siffre: { height: 1.74, heads: 7.3, build: 0.95, skin: '#E6C4A6', hair: '#2A1E16', hairStyle: 'curly', beard: '#2A1E16', top: '#C8642A', bottom: '#3A3E44', hat: 'helmet', hatColor: '#E8E2D2', shoes: '#2A2420' },
+  siffre: { height: 1.74, heads: 7.3, build: 0.95, skin: '#E6C4A6', hair: '#2A1E16', hairStyle: 'curly', beard: '#2A1E16', top: '#C8642A', bottom: '#3A3E44', hat: 'helmet', hatColor: '#C89A2A', shoes: '#2A2420' },
   prosperi: { height: 1.78, heads: 7.5, build: 1.0, skin: '#C99A72', hair: '#1E1612', hairStyle: 'short', top: '#E8E2D6', bottom: '#1E2A44', legs: 'shorts', sleeve: 'short', hat: 'cap', hatColor: '#E8E2D6', shoes: '#C9C2B4' },
   wallis: { height: 1.76, heads: 7.4, build: 1.05, skin: '#E8C9AE', hair: '#6A4A2A', hairStyle: 'short', mustache: '#6A4A2A', top: '#ECE8DC', bottom: '#ECE8DC', hat: 'ranger', hatColor: '#E6E0CE', shoes: '#2A2420' },
   alaskan: { height: 1.8, heads: 7.4, build: 1.15, skin: '#E6C4A6', hair: '#4A3A2A', hairStyle: 'short', beard: '#4A3A2A', top: '#8A2E2A', bottom: '#3A3E4A', shoes: '#2A2420' },

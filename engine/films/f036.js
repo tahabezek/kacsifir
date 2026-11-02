@@ -103,7 +103,7 @@ export async function film(A) {
 
   // ——— hareketler ———
   const set = (f, fn) => { f.act = fn; };
-  set(v0, t => { const grab = seg(t, 1.4, 0.8); return { pos: [0.2, 0.05, -0.8], rot: 0.3 + 2.6 * ease.state(seg(t, 2.6, 0.7)) * (t < 5 ? 1 : 0), pose: t < 1.4 ? POSE.run((t * 1.2) % 1) : mixPose(POSE.crouch(), { ...POSE.stand(), rShoulder: [-1.2, 0, 0.3], rElbow: [-1.4, 0, 0] }, ease.state(grab)), face: FACE.determined }; });
+  set(v0, tq => { const t = tq >= T.loop0 ? tq - D : tq; const grab = seg(t, 1.4, 0.8); return { pos: [0.2, 0.05, -0.8], rot: 0.3 + 2.6 * ease.state(seg(t, 2.6, 0.7)) * (t < 5 ? 1 : 0), pose: t < 1.4 ? POSE.run((t * 1.2) % 1) : mixPose(POSE.crouch(), { ...POSE.stand(), rShoulder: [-1.2, 0, 0.3], rElbow: [-1.4, 0, 0] }, ease.state(grab)), face: FACE.determined }; });
   set(v2, t => ({ pos: [0, 0.2, 0.1], rot: -Math.PI / 2, pose: t > w('l03', 'uzattı') ? POSE.holdOut() : POSE.sit(), face: t > w('l03', 'uzattı') ? FACE.fear : FACE.sad }));
   set(v3, t => { const j = seg(t, w('l04', 'suya'), 0.7); return { pos: [lerp(0.3, 0.9, j), 0.3 + 1.0 * Math.sin(j * Math.PI) - 0.9 * j * j, lerp(0, 0.6, j)], rot: 0.6, pose: j > 0 ? POSE.armsUp() : POSE.stand(), face: FACE.fear }; });
   set(y4, t => { const back = seg(t, w('l06', 18) - 0.6, 0.6); return { pos: [0, 0, lerp(-1, 2.5, seg(t, T.l06, T.l06end - T.l06 + 0.5))], rot: lerp(Math.PI, 0, ease.state(back)), pose: POSE.walk((t * 0.9) % 1, 0.7), face: FACE.neutral }; });
@@ -140,8 +140,7 @@ export async function film(A) {
     [T.l10, P(7, 0, 1.6, 5.4), P(7, 0, 1.3, -0.6), 44],
     [hero(T), P(7, 0, 1.6, 4.6), P(7, 0, 1.35, -0.8), 44],
     [T.l11end + 0.6, P(7, 0, 1.8, 4.8), P(7, 0, 1.6, -0.6), 44],
-    ...cut(T.loop0, [P(7, 0, 1.8, 4.82), P(7, 0, 1.6, -0.6), 44], [P(0, 1.1, 1.45, 1.75), P(0, 0.1, 1.2, -0.8), 40, null, 0.02]),
-    [T.D - 0.6, P(0, 1.0, 1.42, 1.58), P(0, 0.1, 1.2, -0.8), 40, null, 0.02],
+    ...cut(T.loop0, [P(7, 0, 1.8, 4.82), P(7, 0, 1.6, -0.6), 44], [...F0, null, 0.02]),
     [T.D, ...F0, null, 0.02],
   ];
   const cuts = cam.filter((k, i) => i > 0 && k[0] - cam[i - 1][0] < 0.01).map(k => k[0]);
@@ -154,7 +153,7 @@ export async function film(A) {
       for (const u of updates) u(t);
       lamp1.rotation.z = 0.35 * Math.sin(t * 2.2) * seg(t, w('l02', 'gıcırtı'), 0.3);
       lampC.material.color.setScalar(t > 1 ? 8 * (0.6 + 0.4 * Math.abs(Math.sin(t * 17))) : 8);
-      water0.position.y = 0.1 + 0.5 * seg(t, 0, 4) + (t > T.l04 ? 0.6 : 0);
+      { const tw = t >= T.loop0 ? t - D : t; water0.position.y = 0.1 + 0.5 * seg(tw, 0, 4) + (tw > T.l04 ? 0.6 : 0); }
       tb0.visible = t > 2.2 || (t > T.l04 && t < T.l06);
       bb.visible = t > w('l03', 'uzattı');
       boat.position.set(0, lerp(4.2, 0.2, ease.state(seg(t, T.l03, T.l03end - T.l03))), 0);

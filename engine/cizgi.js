@@ -74,7 +74,7 @@ export async function makeCizgiRenderer(ep, canvas) {
     ctx.setTransform(z, 0, 0, z, W / 2 - cx * z, H / 2 - cy * z);
     film.draw(t);
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    O.title(t, ['Hangisi daha', 'şaşırtıcı?'], T.l01end + 0.15, 470, D - 0.45);
+    O.title(t, film.title || ['Hangisi daha', 'şaşırtıcı?'], film.titleOut ?? T.l01end + 0.15, 470, D - 0.45);   // sayı filmleri kendi kanca başlığını verir
     for (const nc of film.names || []) O.nameCard(t, nc[0], nc[1], nc[2], nc[3]);
     for (const bn of film.numbers || []) O.bigNumber(t, bn[0], bn[1], bn[2], bn[3]);
     film.overlay?.(t, ctx, O);

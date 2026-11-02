@@ -1,91 +1,92 @@
 {
   "id": "038",
   "slug": "uykusuz-ve-hafizasiz",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 038 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-16T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.9,
-      "l02": 0.9,
-      "l03": 1,
-      "l04": 0.9,
-      "l05": 1,
-      "l06": 0.9,
-      "l07": 1,
-      "l08": 1,
-      "l09": 1.1,
-      "l10": 0.9,
-      "l11": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Günlüğüne her birkaç dakikada aynı cümleyi yazıyordu: Şimdi gerçekten uyandım.",
-        "text": "Günlüğüne her birkaç dakikada aynı cümleyi yazıyordu: \"Şimdi gerçekten uyandım.\"",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Bir bilim fuarı için on bir gün boyunca hiç uyumayan on yedi yaşında bir çocuk mu?",
+        "tts": "Hangisi daha şaşırtıcı? Bir bilim fuarı için on bir gün boyunca hiç uyumayan on yedi yaşında bir çocuk mu?"
       },
       {
         "id": "l02",
-        "tts": "Bin dokuz yüz altmış üçün sonunda on yedi yaşındaki Rendi Gardnır, bir bilim fuarı için hiç uyumamaya karar verdi. İki arkadaşı onu gece gündüz izledi.",
-        "text": "1963'ün sonunda 17 yaşındaki Randy Gardner, bir bilim fuarı için hiç uyumamaya karar verdi. İki arkadaşı onu gece gündüz izledi."
+        "who": "S",
+        "text": "On bir gün hiç mi uyumamış?",
+        "tts": "On bir gün hiç mi uyumamış?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Dördüncü gün bir sokak tabelasını insan sandı. Bir süre sonra kendini ünlü bir Amerikan futbolu oyuncusu sandı.",
-        "text": "Dördüncü gün bir sokak tabelasını insan sandı. Bir süre sonra kendini ünlü bir Amerikan futbolu oyuncusu sandı.",
-        "rate": "+4%"
+        "who": "A",
+        "text": "1963, Amerika. Randy Gardner'ı iki arkadaşı gece gündüz izliyor, gözünü kapamasına izin vermiyor. Dördüncü gün bir sokak tabelasını insan sanıyor. Sonra kendini ünlü bir futbolcu sanmaya başlıyor. On birinci gün ondan yüzden geriye yedişer saymasını istiyorlar. Altmış beşte duruyor, çünkü ne yaptığını unutuyor.",
+        "tts": "bin dokuz yüz altmış üç, Amerika. Rendi Gardnır'ı iki arkadaşı gece gündüz izliyor, gözünü kapamasına izin vermiyor. Dördüncü gün bir sokak tabelasını insan sanıyor. Sonra kendini ünlü bir futbolcu sanmaya başlıyor. On birinci gün ondan yüzden geriye yedişer saymasını istiyorlar. Altmış beşte duruyor, çünkü ne yaptığını unutuyor."
       },
       {
         "id": "l04",
-        "tts": "On birinci gün yüzden geriye yedişer yedişer saymaya başladı. Altmış beşte durdu, çünkü ne yaptığını unutmuştu.",
-        "text": "11. gün 100'den geriye yedişer yedişer saymaya başladı. 65'te durdu, çünkü ne yaptığını unutmuştu."
+        "who": "S",
+        "text": "Beyni resmen kapanmış.",
+        "tts": "Beyni resmen kapanmış.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "İngiltere'de ise bir adam her gün yeniden uyanıyor. Klayv Viring ünlü bir orkestra şefiydi. Bin dokuz yüz seksen beşte bir virüs, beynindeki hafıza merkezini yok etti.",
-        "text": "İngiltere'de ise bir adam her gün yeniden uyanıyor. Clive Wearing ünlü bir orkestra şefiydi. 1985'te bir virüs, beynindeki hafıza merkezini yok etti."
+        "who": "A",
+        "text": "Yoksa hafızası her birkaç saniyede sıfırlanan ama karısını her gördüğünde ilk kez görmüş gibi sevinen bir adam mı?",
+        "tts": "Yoksa hafızası her birkaç saniyede sıfırlanan ama karısını her gördüğünde ilk kez görmüş gibi sevinen bir adam mı?"
       },
       {
         "id": "l06",
-        "tts": "O günden beri hafızası birkaç saniyeden fazla sürmüyor. Günlüğüne yazıyor, sonra bir önceki satırın üstünü çiziyor.",
-        "text": "O günden beri hafızası birkaç saniyeden fazla sürmüyor. Günlüğüne yazıyor, sonra bir önceki satırın üstünü çiziyor."
+        "who": "S",
+        "text": "Her birkaç saniyede mi?",
+        "tts": "Her birkaç saniyede mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Karısı Debora odadan çıkıp birkaç dakika sonra döndüğünde, onu yıllardır görmemiş gibi kollarını açıp sarılıyor.",
-        "text": "Karısı Deborah odadan çıkıp birkaç dakika sonra döndüğünde, onu yıllardır görmemiş gibi kollarını açıp sarılıyor.",
-        "rate": "+4%"
+        "who": "A",
+        "text": "Clive Wearing İngiltere'de bir orkestra şefi. 1985'te bir virüs beynindeki hafıza merkezini yok ediyor. Günlüğüne \"Şimdi gerçekten uyandım.\" yazıyor, sonra bir önceki satırın üstünü çiziyor. Karısı odadan çıkıp birkaç dakika sonra döndüğünde, yıllardır görmemiş gibi ona sarılıyor. Ama piyanonun başına oturunca zor parçaları hâlâ çalabiliyor.",
+        "tts": "Klayv Viring İngiltere'de bir orkestra şefi. bin dokuz yüz seksen beşte bir virüs beynindeki hafıza merkezini yok ediyor. Günlüğüne Şimdi gerçekten uyandım. yazıyor, sonra bir önceki satırın üstünü çiziyor. Karısı odadan çıkıp birkaç dakika sonra döndüğünde, yıllardır görmemiş gibi ona sarılıyor. Ama piyanonun başına oturunca zor parçaları hâlâ çalabiliyor."
       },
       {
         "id": "l08",
-        "tts": "Ama piyanonun başına oturunca zor parçaları hâlâ çalabiliyor.",
-        "text": "Ama piyanonun başına oturunca zor parçaları hâlâ çalabiliyor."
+        "who": "S",
+        "text": "Ben Clive'ı seçtim; içim parçalandı.",
+        "tts": "Ben Klayv'ı seçtim; içim parçalandı.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Peki ikisini aynı saatle ölçersek?",
-        "text": "Peki ikisini aynı saatle ölçersek?",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l10",
-        "tts": "Randy on bir gün hiç uyumadı. O on bir günde Klayv'ın hafızası otuz bin kezden fazla sıfırlanırdı.",
-        "text": "Randy 11 gün hiç uyumadı. O 11 günde Clive'ın hafızası 30 bin kezden fazla sıfırlanırdı.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l11",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -115,8 +116,7 @@
     "#hafıza"
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? 11 gün hiç uyumayan genç mi, hafızası 30 saniye süren adam mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

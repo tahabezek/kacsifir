@@ -1,91 +1,92 @@
 {
   "id": "039",
   "slug": "yalniz-george-ve-diego",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 039 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-17T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.9,
-      "l02": 0.9,
-      "l03": 1,
-      "l04": 0.9,
-      "l05": 1,
-      "l06": 0.9,
-      "l07": 1,
-      "l08": 1,
-      "l09": 1.1,
-      "l10": 0.9,
-      "l11": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Bir sabah bakıcısı onu, boynu su birikintisine doğru uzanmış halde buldu.",
-        "text": "Bir sabah bakıcısı onu, boynu su birikintisine doğru uzanmış halde buldu.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Türünün bilinen son üyesi olduğu için kırk yıl boyunca eş bekleyen bir kaplumbağa mı?",
+        "tts": "Hangisi daha şaşırtıcı? Türünün bilinen son üyesi olduğu için kırk yıl boyunca eş bekleyen bir kaplumbağa mı?"
       },
       {
         "id": "l02",
-        "tts": "Galapagos'taki Pinta Adası'na bin dokuz yüz elli dokuzda balıkçılar üç keçi bıraktı. Keçiler on binlerce oldu ve adanın bütün yeşilini yedi.",
-        "text": "Galapagos'taki Pinta Adası'na 1959'da balıkçılar üç keçi bıraktı. Keçiler on binlerce oldu ve adanın bütün yeşilini yedi."
+        "who": "S",
+        "text": "Kırk yıl mı beklemiş?",
+        "tts": "Kırk yıl mı beklemiş?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Bin dokuz yüz yetmiş birde bir bilim insanı adada tek bir kaplumbağa gördü. Türünün bilinen son üyesiydi. Adı Yalnız Corc oldu.",
-        "text": "1971'de bir bilim insanı adada tek bir kaplumbağa gördü. Türünün bilinen son üyesiydi. Adı Yalnız George oldu.",
-        "rate": "+4%"
+        "who": "A",
+        "text": "Galapagos'taki Pinta Adası'na balıkçılar üç keçi bırakıyor. Keçiler on binlerce oluyor ve adanın bütün yeşilini yiyor. 1971'de adada tek bir kaplumbağa bulunuyor: Yalnız George. Ona eş bulana on bin dolar ödül konuyor, kimse bulamıyor. Yanına konan dişilerin yumurtalarının hiçbiri açılmıyor. 2012'de bir sabah bakıcısı onu ölü buluyor.",
+        "tts": "Galapagos'taki Pinta Adası'na balıkçılar üç keçi bırakıyor. Keçiler on binlerce oluyor ve adanın bütün yeşilini yiyor. bin dokuz yüz yetmiş birde adada tek bir kaplumbağa bulunuyor: Yalnız Corc. Ona eş bulana on bin dolar ödül konuyor, kimse bulamıyor. Yanına konan dişilerin yumurtalarının hiçbiri açılmıyor. iki bin on ikide bir sabah bakıcısı onu ölü buluyor."
       },
       {
         "id": "l04",
-        "tts": "Ona eş bulana on bin dolar ödül kondu. Kimse bulamadı. Yanına konan dişilerin yumurtalarının hiçbiri açılmadı.",
-        "text": "Ona eş bulana 10 bin dolar ödül kondu. Kimse bulamadı. Yanına konan dişilerin yumurtalarının hiçbiri açılmadı."
+        "who": "S",
+        "text": "Çok üzücü.",
+        "tts": "Çok üzücü.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Kırk yıl ona aynı bakıcı baktı. Yirmi dört Haziran iki bin on iki sabahı Fausto onu ağılında buldu. Türünün bilinen son üyesi de gitmişti.",
-        "text": "40 yıl ona aynı bakıcı baktı. 24 Haziran 2012 sabahı Fausto onu ağılında buldu. Türünün bilinen son üyesi de gitmişti.",
-        "rate": "+4%"
+        "who": "A",
+        "text": "Yoksa yüz yaşını geçmiş ve sekiz yüzü aşkın yavrunun babası olan bir kaplumbağa mı?",
+        "tts": "Yoksa yüz yaşını geçmiş ve sekiz yüzü aşkın yavrunun babası olan bir kaplumbağa mı?"
       },
       {
         "id": "l06",
-        "tts": "Komşu Espanyola Adası'nda ise bin dokuz yüz altmışlarda yalnızca on iki dişi ve iki erkek kalmıştı.",
-        "text": "Komşu Española Adası'nda ise 1960'larda yalnızca 12 dişi ve 2 erkek kalmıştı."
+        "who": "S",
+        "text": "Sekiz yüz mü?",
+        "tts": "Sekiz yüz mü?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Sonra Amerika'daki bir hayvanat bahçesinde, adadan yıllar önce götürülmüş bir erkek bulundu: Diego. Sekiz yüzü aşkın yavrunun babası oldu.",
-        "text": "Sonra Amerika'daki bir hayvanat bahçesinde, adadan yıllar önce götürülmüş bir erkek bulundu: Diego. 800'ü aşkın yavrunun babası oldu."
+        "who": "A",
+        "text": "Komşu Española Adası'nda yalnızca on iki dişi ve iki erkek kalmış. Sonra Amerika'da bir hayvanat bahçesinde yıllar önce adadan götürülmüş bir erkek bulunuyor: Diego. Galapagos'a getiriliyor ve sekiz yüzü aşkın yavrunun babası oluyor. Bugün adada iki binden fazla kaplumbağa yaşıyor.",
+        "tts": "Komşu Española Adası'nda yalnızca on iki dişi ve iki erkek kalmış. Sonra Amerika'da bir hayvanat bahçesinde yıllar önce adadan götürülmüş bir erkek bulunuyor: Diego. Galapagos'a getiriliyor ve sekiz yüzü aşkın yavrunun babası oluyor. Bugün adada iki binden fazla kaplumbağa yaşıyor."
       },
       {
         "id": "l08",
-        "tts": "İki bin yirmide, yüz yaşını geçmişken adasına geri döndü. Bugün adada iki binden fazla kaplumbağa yaşıyor.",
-        "text": "2020'de, 100 yaşını geçmişken adasına geri döndü. Bugün adada 2.000'den fazla kaplumbağa yaşıyor."
+        "who": "S",
+        "text": "Ben Diego'yu seçtim; sekiz yüz yavru inanılır gibi değil.",
+        "tts": "Ben Diego'yu seçtim; sekiz yüz yavru inanılır gibi değil.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Peki ikisini aynı soy ağacına koyarsak?",
-        "text": "Peki ikisini aynı soy ağacına koyarsak?",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l10",
-        "tts": "Corc'un ardında bıraktığı yavru sayısı sıfır. Diego'nunki ise sekiz yüzü aşkın.",
-        "text": "George'un ardında bıraktığı yavru sayısı sıfır. Diego'nunki ise 800'ü aşkın.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l11",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -118,8 +119,7 @@
     "#hayvanlar"
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? Türünün son üyesi Yalnız George mu, 900 yavrunun babası Diego mu?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

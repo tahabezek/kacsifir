@@ -1,91 +1,92 @@
 {
   "id": "066",
   "slug": "nefes-tutan-dalgic-ve-balina",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 066 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-15T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.9,
-      "l02": 0.9,
-      "l03": 1,
-      "l04": 0.9,
-      "l05": 1,
-      "l06": 0.9,
-      "l07": 1,
-      "l08": 1,
-      "l09": 1.1,
-      "l10": 0.9,
-      "l11": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Yirmi dakika olmuştu ve hâlâ nefes almıyordu.",
-        "text": "Yirmi dakika olmuştu ve hâlâ nefes almıyordu.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Yüzü suda, yirmi dokuz dakika boyunca tek bir nefes almayan bir adam mı?",
+        "tts": "Hangisi daha şaşırtıcı? Yüzü suda, yirmi dokuz dakika boyunca tek bir nefes almayan bir adam mı?"
       },
       {
         "id": "l02",
-        "tts": "Haziran iki bin yirmi beş, Hırvatistan. Dalgıç Vitomir Mariçiç bir havuzun başında on dakika boyunca saf oksijen soludu. Sonra yüzünü suya gömdü.",
-        "text": "Haziran 2025, Hırvatistan. Dalgıç Vitomir Maričić bir havuzun başında 10 dakika boyunca saf oksijen soludu. Sonra yüzünü suya gömdü."
+        "who": "S",
+        "text": "Yirmi dokuz dakika mı? Nasıl?",
+        "tts": "Yirmi dokuz dakika mı? Nasıl?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Diyaframı defalarca kasıldı. Sonradan anlattığına göre kendine hep aynı şeyi söyledi: sadece on saniye daha.",
-        "text": "Diyaframı defalarca kasıldı. Sonradan anlattığına göre kendine hep aynı şeyi söyledi: \"Sadece on saniye daha.\"",
-        "rate": "+4%"
+        "who": "A",
+        "text": "2025, Hırvatistan. Dalgıç Vitomir Maričić on dakika saf oksijen soluyor, sonra yüzünü havuza gömüyor. Beş hakem saati başlatıyor. Diyaframı defalarca kasılıyor; sonradan anlattığına göre kendine hep \"Sadece on saniye daha.\" diyor. Yirminci dakikadan sonra her şey kolaylaşıyor. Kronometre yirmi dokuz dakika üç saniyede duruyor.",
+        "tts": "iki bin yirmi beş, Hırvatistan. Dalgıç Vitomir Mariçiç on dakika saf oksijen soluyor, sonra yüzünü havuza gömüyor. Beş hakem saati başlatıyor. Diyaframı defalarca kasılıyor; sonradan anlattığına göre kendine hep Sadece on saniye daha. diyor. Yirminci dakikadan sonra her şey kolaylaşıyor. Kronometre yirmi dokuz dakika üç saniyede duruyor."
       },
       {
         "id": "l04",
-        "tts": "Kronometre yirmi dokuz dakika üç saniyede durdu.",
-        "text": "Kronometre 29 dakika 3 saniyede durdu."
+        "who": "S",
+        "text": "Bu insan değil.",
+        "tts": "Bu insan değil.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Ama insanın en uzun nefesi bile bir balinanın sıradan dalışından kısa. Küvye gagalı balinası, memeliler arasında en derine dalan tür.",
-        "text": "Ama insanın en uzun nefesi bile bir balinanın sıradan dalışından kısa. Cuvier gagalı balinası, memeliler arasında en derine dalan tür."
+        "who": "A",
+        "text": "Yoksa yüzeye çıkmadan üç saat kırk iki dakika dalışta kalan bir balina mı?",
+        "tts": "Yoksa yüzeye çıkmadan üç saat kırk iki dakika dalışta kalan bir balina mı?"
       },
       {
         "id": "l06",
-        "tts": "Tipik bir dalışı yaklaşık bir saat sürüyor. Oysa hesaplara göre oksijeni yarım saat kadar yetmeliydi.",
-        "text": "Tipik bir dalışı yaklaşık bir saat sürüyor. Oysa hesaplara göre oksijeni yarım saat kadar yetmeliydi."
+        "who": "S",
+        "text": "Üç saat mi?",
+        "tts": "Üç saat mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Bilim insanları uydu vericili bir balinayı izlerken o, yüzeye çıkmadı. Bir saat geçti. İki saat. Üç saat.",
-        "text": "Bilim insanları uydu vericili bir balinayı izlerken o, yüzeye çıkmadı. Bir saat geçti. İki saat. Üç saat.",
-        "rate": "+4%"
+        "who": "A",
+        "text": "Cuvier gagalı balinası memeliler arasında en derine dalan tür. Hesaplara göre oksijeni yarım saat kadar yetmeli. Bilim insanları uydu vericili bir balinayı izliyor. Bir saat geçiyor. İki saat. Üç saat. Balina ancak üç saat kırk iki dakika sonra yüzeye çıkıyor; insan rekorunun yedi katından uzun.",
+        "tts": "Küvye gagalı balinası memeliler arasında en derine dalan tür. Hesaplara göre oksijeni yarım saat kadar yetmeli. Bilim insanları uydu vericili bir balinayı izliyor. Bir saat geçiyor. İki saat. Üç saat. Balina ancak üç saat kırk iki dakika sonra yüzeye çıkıyor; insan rekorunun yedi katından uzun."
       },
       {
         "id": "l08",
-        "tts": "Sonunda, dalıştan üç saat kırk iki dakika sonra yüzeye çıktı.",
-        "text": "Sonunda, dalıştan 3 saat 42 dakika sonra yüzeye çıktı."
+        "who": "S",
+        "text": "Ben balinayı seçtim; üç buçuk saat tek nefes.",
+        "tts": "Ben balinayı seçtim; üç buçuk saat tek nefes.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Peki ikisini aynı kronometreye koyarsak?",
-        "text": "Peki ikisini aynı kronometreye koyarsak?",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l10",
-        "tts": "İnsanın rekoru oksijen desteğiyle bile yirmi dokuz dakika. Bu balinanın tek dalışı ise bunun yedi katından uzun.",
-        "text": "İnsanın rekoru oksijen desteğiyle bile 29 dakika. Bu balinanın tek dalışı ise bunun yedi katından uzun.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l11",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -127,8 +128,7 @@
     "#dünyarekoru"
   ],
   "ytTitle": "29 dakika nefes tutan dalgıç mı, 3 saat 42 dakika dalan balina mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

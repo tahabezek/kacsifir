@@ -1,7 +1,7 @@
 {
   "id": "029",
   "slug": "jupiter-terazi",
-  "template": "terazi",
+  "template": "cizgi",
   "publishAt": "2026-11-05T05:30Z",
   "serial": "№ 029 · HANGİSİ AĞIR?",
   "bpm": 100,
@@ -154,5 +154,73 @@
     "#uzay",
     "#jüpiter",
     "#astronomi"
-  ]
+  ],
+  "gl": false,
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+25%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Bir terazinin bir kefesine Jüpiter'i, öbür kefesine kalan yedi gezegeni koysak, terazi Jüpiter'den yana ezilirdi.",
+        "tts": "Bir terazinin bir kefesine Jüpiter'i, öbür kefesine kalan yedi gezegeni koysak, terazi Jüpiter'den yana ezilirdi."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Yedi gezegenin hepsi mi?",
+        "tts": "Nasıl yani? Yedi gezegenin hepsi mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Merkür, Venüs, Dünya, Mars, Satürn, Uranüs ve Neptün. Hepsi bir arada yaklaşık 129 Dünya ağırlığında. Jüpiter tek başına 318 Dünya. Yani Jüpiter, geri kalan bütün gezegenlerin toplamından iki buçuk kat daha ağır.",
+        "tts": "Merkür, Venüs, Dünya, Mars, Satürn, Uranüs ve Neptün. Hepsi bir arada yaklaşık yüz yirmi dokuz Dünya ağırlığında. Jüpiter tek başına üç yüz on sekiz Dünya. Yani Jüpiter, geri kalan bütün gezegenlerin toplamından iki buçuk kat daha ağır."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Satürn bile işe yaramıyor mu?",
+        "tts": "Satürn bile işe yaramıyor mu?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Satürn de dev, ama Jüpiter'in yanında üçte bir kalıyor. Güneş Sistemi'ndeki bütün gezegenlerin kütlesinin yüzde yetmiş biri yalnızca Jüpiter'de.",
+        "tts": "Satürn de dev, ama Jüpiter'in yanında üçte bir kalıyor. Güneş Sistemi'ndeki bütün gezegenlerin kütlesinin yüzde yetmiş biri yalnızca Jüpiter'de."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Dünya o kefede bir toz tanesi kadar kalıyor.",
+        "tts": "Dünya o kefede bir toz tanesi kadar kalıyor.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Sence Jüpiter olmasaydı Güneş Sistemi nasıl olurdu? Yoruma yaz.",
+        "tts": "Sence Jüpiter olmasaydı Güneş Sistemi nasıl olurdu? Yoruma yaz."
+      }
+    ]
+  }
 }

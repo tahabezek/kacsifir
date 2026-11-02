@@ -1,74 +1,75 @@
 {
   "id": "040",
   "slug": "turkiye-kadikoye-sigar-mi",
-  "template": "kalabalik",
+  "template": "cizgi",
   "serial": "№ 040 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-07T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.4,
-      "l02": 0.35,
-      "l03": 0.5,
-      "l04": 0.4,
-      "l05": 0.8,
-      "l06": 0.6,
-      "l07": 0.6
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Türkiye'deki herkes Kadıköy'e sığar mı?",
-        "text": "Türkiye'deki herkes Kadıköy'e sığar mı?",
-        "rate": "+6%",
-        "pitch": "+3Hz"
+        "who": "A",
+        "text": "Türkiye'nin bütün nüfusu, yalnızca İstanbul'un Kadıköy ilçesine sığıyor.",
+        "tts": "Türkiye'nin bütün nüfusu, yalnızca İstanbul'un Kadıköy ilçesine sığıyor."
       },
       {
         "id": "l02",
-        "tts": "Türkiye'nin nüfusu yaklaşık seksen altı milyon.",
-        "text": "Türkiye'nin nüfusu yaklaşık 86 milyon.",
-        "rate": "+8%"
+        "who": "S",
+        "text": "Nasıl yani? Seksen altı milyon kişi mi?",
+        "tts": "Nasıl yani? Seksen altı milyon kişi mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Kadıköy ise yalnızca yirmi beş kilometrekare.",
-        "text": "Kadıköy ise yalnızca 25 km².",
-        "rate": "+4%"
+        "who": "A",
+        "text": "Kadıköy yirmi beş kilometrekare. Herkesi omuz omuza, metrekareye dört kişi dizelim. Edirne'den Hakkari'ye bütün şehirler Kadıköy'e doğru yola çıkıyor. Seksen altı milyon kişi yalnızca yirmi bir kilometrekare kaplıyor. Kadıköy'de dört kilometrekare de boş yer kalıyor.",
+        "tts": "Kadıköy yirmi beş kilometrekare. Herkesi omuz omuza, metrekareye dört kişi dizelim. Edirne'den Hakkari'ye bütün şehirler Kadıköy'e doğru yola çıkıyor. Seksen altı milyon kişi yalnızca yirmi bir kilometrekare kaplıyor. Kadıköy'de dört kilometrekare de boş yer kalıyor."
       },
       {
         "id": "l04",
-        "tts": "Herkesi omuz omuza, metrekareye dört kişi dizelim.",
-        "text": "Herkesi omuz omuza, metrekareye 4 kişi dizelim.",
-        "rate": "+8%"
+        "who": "S",
+        "text": "Peki bütün dünya?",
+        "tts": "Peki bütün dünya?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Edirne'den Hakkari'ye bütün şehirler Kadıköy'e doğru yola çıkıyor.",
-        "text": "Edirne'den Hakkari'ye bütün şehirler Kadıköy'e doğru yola çıkıyor.",
-        "rate": "+10%"
+        "who": "A",
+        "text": "Sekiz milyar insanın hepsi aynı sıklıkla İstanbul'un yarısına bile sığıyor.",
+        "tts": "Sekiz milyar insanın hepsi aynı sıklıkla İstanbul'un yarısına bile sığıyor."
       },
       {
         "id": "l06",
-        "tts": "Seksen altı milyon kişi, yirmi bir kilometrekareye sığıyor.",
-        "text": "86 milyon kişi, 21 km²'ye sığıyor.",
-        "rate": "-2%",
-        "pitch": "-4Hz"
+        "who": "S",
+        "text": "Sabah metrobüsü de böyle zaten.",
+        "tts": "Sabah metrobüsü de böyle zaten.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Kadıköy'de dört kilometrekare de boş yer kalıyor.",
-        "text": "Kadıköy'de 4 km² de boş yer kalıyor.",
-        "rate": "+4%"
-      },
-      {
-        "id": "l08",
-        "tts": "Dünyadaki herkes ise İstanbul'un yarısına bile sığıyor.",
-        "text": "Dünyadaki herkes ise İstanbul'un yarısına bile sığıyor.",
-        "rate": "+6%",
-        "pitch": "+2Hz"
+        "who": "A",
+        "text": "Sence en kalabalık hissettiren yer neresi? Yoruma yaz.",
+        "tts": "Sence en kalabalık hissettiren yer neresi? Yoruma yaz."
       }
     ]
   },
@@ -90,5 +91,6 @@
     "#ilginçbilgiler",
     "#türkiye"
   ],
-  "ytTitle": "Türkiye'deki herkes Kadıköy'e sığar mı? 86 milyon kişiyi omuz omuza dizdik"
+  "ytTitle": "Türkiye'deki herkes Kadıköy'e sığar mı? 86 milyon kişiyi omuz omuza dizdik",
+  "gl": false
 }

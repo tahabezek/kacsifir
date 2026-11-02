@@ -1,90 +1,92 @@
 {
   "id": "063",
   "slug": "kadin-ve-kopekbaligi",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 063 · HANGİSİ?",
   "bpm": 96,
   "coverAt": 0,
   "publishAt": "2026-11-07T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+8%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.8,
-      "l02": 0.6,
-      "l03": 0.9,
-      "l04": 0.6,
-      "l05": 1,
-      "l06": 0.8,
-      "l07": 0.7,
-      "l08": 0.8,
-      "l09": 0.9,
-      "l10": 0.9,
-      "l11": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Bu köpekbalığı, yaklaşık dört yüz yıldır aynı karanlık suda yüzüyor olabilir.",
-        "text": "Bu köpekbalığı, yaklaşık 400 yıldır aynı karanlık suda yüzüyor olabilir.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Ölünce evini almak için ona otuz yıl para ödeyen avukattan daha uzun yaşayan bir kadın mı?",
+        "tts": "Hangisi daha şaşırtıcı? Ölünce evini almak için ona otuz yıl para ödeyen avukattan daha uzun yaşayan bir kadın mı?"
       },
       {
         "id": "l02",
-        "tts": "Ama önce bir kadın. Jan Kalman on üç yaşındayken, amcasının dükkânına bir gün Van Gogh girdi.",
-        "text": "Ama önce bir kadın. Jeanne Calment 13 yaşındayken, amcasının dükkânına bir gün Van Gogh girdi."
+        "who": "S",
+        "text": "Nasıl yani, avukat önce mi ölmüş?",
+        "tts": "Nasıl yani, avukat önce mi ölmüş?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Yıllar sonra onu şöyle anlattı: Çok çirkindi, kabaydı, biraz da deliydi.",
-        "text": "Yıllar sonra onu şöyle anlattı: \"Çok çirkindi, kabaydı, biraz da deliydi.\""
+        "who": "A",
+        "text": "1965, Fransa. Jeanne Calment doksan yaşında. Bir avukat ona teklif ediyor: \"Ölene kadar sana her ay para ödeyeyim, sen ölünce ev benim olsun.\" Ama Jeanne ölmüyor. Avukat otuz yıl ödüyor ve 1995'te kendisi ölüyor. Ödemelere ailesi devam ediyor. Jeanne yüz yirmi iki yaşına kadar yaşıyor.",
+        "tts": "bin dokuz yüz altmış beş, Fransa. Jan Kalman doksan yaşında. Bir avukat ona teklif ediyor: Ölene kadar sana her ay para ödeyeyim, sen ölünce ev benim olsun. Ama Jan ölmüyor. Avukat otuz yıl ödüyor ve bin dokuz yüz doksan beşte kendisi ölüyor. Ödemelere ailesi devam ediyor. Jan yüz yirmi iki yaşına kadar yaşıyor."
       },
       {
         "id": "l04",
-        "tts": "Doksan yaşındayken bir avukat evini satın aldı. O ölene kadar her ay para ödeyecek, sonra ev onun olacaktı.",
-        "text": "90 yaşındayken bir avukat evini satın aldı. O ölene kadar her ay para ödeyecek, sonra ev onun olacaktı."
+        "who": "S",
+        "text": "Avukat kendi tuzağına düşmüş.",
+        "tts": "Avukat kendi tuzağına düşmüş.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Avukat otuz yıl ödedi. Sonunda avukat öldü, Kalman ise yaşamaya devam etti.",
-        "text": "Avukat 30 yıl ödedi. Sonunda avukat öldü, Calment ise yaşamaya devam etti.",
-        "rate": "+2%"
+        "who": "A",
+        "text": "Yoksa yaklaşık dört yüz yıldır yüzdüğü tahmin edilen bir köpekbalığı mı?",
+        "tts": "Yoksa yaklaşık dört yüz yıldır yüzdüğü tahmin edilen bir köpekbalığı mı?"
       },
       {
         "id": "l06",
-        "tts": "Yüz yirmi iki yaşında öldüğünde, belgelenmiş en uzun insan ömrünü yaşamıştı.",
-        "text": "122 yaşında öldüğünde, belgelenmiş en uzun insan ömrünü yaşamıştı."
+        "who": "S",
+        "text": "Dört yüz yıl mı? Bunu nasıl ölçmüşler?",
+        "tts": "Dört yüz yıl mı? Bunu nasıl ölçmüşler?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Kuzey Atlantik'in karanlığında ise Grönland köpekbalığı yılda bir santimetre kadar büyür. Ancak yüz elli yaşına yaklaşınca yetişkin olur.",
-        "text": "Kuzey Atlantik'in karanlığında ise Grönland köpekbalığı yılda bir santimetre kadar büyür. Ancak 150 yaşına yaklaşınca yetişkin olur."
+        "who": "A",
+        "text": "Grönland köpekbalığı Kuzey Atlantik'in buz gibi karanlığında yılda yaklaşık bir santimetre büyüyor. 2016'da bilim insanları göz merceğindeki karbonu ölçüyor. En büyüğünün yaşı iki yüz yetmiş iki ile beş yüz on iki yıl arasında çıkıyor. En olası tahmine göre o doğduğunda Osmanlı tahtında Dördüncü Murat oturuyordu.",
+        "tts": "Grönland köpekbalığı Kuzey Atlantik'in buz gibi karanlığında yılda yaklaşık bir santimetre büyüyor. iki bin on altıda bilim insanları göz merceğindeki karbonu ölçüyor. En büyüğünün yaşı iki yüz yetmiş iki ile beş yüz on iki yıl arasında çıkıyor. En olası tahmine göre o doğduğunda Osmanlı tahtında Dördüncü Murat oturuyordu."
       },
       {
         "id": "l08",
-        "tts": "Bilim insanları yaşını göz merceğinden ölçtü. En büyüğü yaklaşık dört yüz yaşında çıktı.",
-        "text": "Bilim insanları yaşını göz merceğinden ölçtü. En büyüğü yaklaşık 400 yaşında çıktı."
+        "who": "S",
+        "text": "Ben köpekbalığını seçtim; Dördüncü Murat'ı görmüş olabilir.",
+        "tts": "Ben köpekbalığını seçtim; Dördüncü Murat'ı görmüş olabilir.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Peki ikisini yan yana koyarsak?",
-        "text": "Peki ikisini yan yana koyarsak?",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l10",
-        "tts": "Kalman'ın bütün ömrü yüz yirmi iki yıl sürdü. Bu köpekbalığı ise o ömrün üç katından fazlasını yaşamış olabilir.",
-        "text": "Calment'ın bütün ömrü 122 yıl sürdü. Bu köpekbalığı ise o ömrün 3 katından fazlasını yaşamış olabilir.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l11",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -137,8 +139,7 @@
     "#köpekbalığı"
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? 122 yıl yaşayan kadın mı, 392 yaşındaki köpekbalığı mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

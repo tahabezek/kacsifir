@@ -1,85 +1,92 @@
 {
   "id": "036",
   "slug": "hostes-ve-gemi-tasarimcisi",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 036 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-08T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.8,
-      "l02": 0.7,
-      "l03": 1,
-      "l04": 0.9,
-      "l05": 0.5,
-      "l06": 0.5,
-      "l07": 1,
-      "l08": 0.9,
-      "l09": 0.9,
-      "l10": 0.9,
-      "l11": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Gemi batarken geri dönüp tek bir şey aldı: diş fırçasını.",
-        "text": "Gemi batarken geri dönüp tek bir şey aldı: diş fırçasını.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Titanik dahil üç büyük gemi kazasında da gemide olan ve hepsinden sağ çıkan bir hostes mi?",
+        "tts": "Hangisi daha şaşırtıcı? Titanik dahil üç büyük gemi kazasında da gemide olan ve hepsinden sağ çıkan bir hostes mi?"
       },
       {
         "id": "l02",
-        "tts": "Bin dokuz yüz on iki. Hostes Violet Cesup gece kamarasında alçak, yırtılan bir gıcırtı duydu. Gemi Titanik'ti ve bir buzdağına çarpmıştı.",
-        "text": "1912. Hostes Violet Jessop gece kamarasında alçak, yırtılan bir gıcırtı duydu. Gemi Titanik'ti ve bir buzdağına çarpmıştı."
+        "who": "S",
+        "text": "Üçünde de mi?",
+        "tts": "Üçünde de mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "On altı numaralı filikaya bindirildi. Filika inerken bir subay kucağına bir bebek uzattı: Bu bebeğe göz kulak ol.",
-        "text": "16 numaralı filikaya bindirildi. Filika inerken bir subay kucağına bir bebek uzattı: \"Bu bebeğe göz kulak ol.\""
+        "who": "A",
+        "text": "1911'de Violet Jessop'un çalıştığı Olympic bir savaş gemisiyle çarpışıyor. Yedi ay sonra Violet, Olympic'in ikizi Titanik'te. Gemi batarken onu bir filikaya bindiriyorlar; kendi anlattığına göre bir subay kucağına bir bebek veriyor. 1916'da bindiği Britannic Ege'de mayına çarpıyor. Violet suya atlıyor, başını çarpıyor. Yine kurtuluyor.",
+        "tts": "bin dokuz yüz on birde Violet Cesup'un çalıştığı Olympic bir savaş gemisiyle çarpışıyor. Yedi ay sonra Violet, Olympic'in ikizi Titanik'te. Gemi batarken onu bir filikaya bindiriyorlar; kendi anlattığına göre bir subay kucağına bir bebek veriyor. bin dokuz yüz on altıda bindiği Britannic Ege'de mayına çarpıyor. Violet suya atlıyor, başını çarpıyor. Yine kurtuluyor."
       },
       {
         "id": "l04",
-        "tts": "Dört yıl sonra Ege'de bindiği hastane gemisi mayına çarptı. Bu kez önce diş fırçasını aldı, sonra suya atlayıp yine kurtuldu.",
-        "text": "Dört yıl sonra Ege'de bindiği hastane gemisi mayına çarptı. Bu kez önce diş fırçasını aldı, sonra suya atlayıp yine kurtuldu."
+        "who": "S",
+        "text": "Batmayan kadın.",
+        "tts": "Batmayan kadın.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Yoksa iki atom bombasından da sağ kurtulan bir mühendis mi?",
+        "tts": "Yoksa iki atom bombasından da sağ kurtulan bir mühendis mi?"
       },
       {
         "id": "l06",
-        "tts": "Otuz üç yıl sonra, altı Ağustos bin dokuz yüz kırk beş. Gemi mühendisi Tsutomu Yamaguçi, Hiroşima'daki iş gezisinin son günündeydi.",
-        "text": "33 yıl sonra, 6 Ağustos 1945. Gemi mühendisi Tsutomu Yamaguchi, Hiroşima'daki iş gezisinin son günündeydi."
+        "who": "S",
+        "text": "İkisinden de mi? Bu nasıl olur?",
+        "tts": "İkisinden de mi? Bu nasıl olur?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Saat sekizi on beş geçe gökyüzünde dev bir ışık parladı. Yamaguçi havaya savruldu, yüzü ve kolları yandı.",
-        "text": "Saat sekizi on beş geçe gökyüzünde dev bir ışık parladı. Yamaguchi havaya savruldu, yüzü ve kolları yandı.",
-        "rate": "+2%"
+        "who": "A",
+        "text": "6 Ağustos 1945. Tsutomu Yamaguchi iş için Hiroşima'da. Gökyüzünde dev bir ışık parlıyor; kulak zarı patlıyor, yüzü ve kolları yanıyor. Trenle evine, Nagazaki'ye dönüyor. Üç gün sonra sargılar içinde patronuna Hiroşima'yı anlatırken ofisi aynı beyaz ışık dolduruyor. Yamaguchi doksan üç yaşına kadar yaşıyor.",
+        "tts": "altı Ağustos bin dokuz yüz kırk beş. Tsutomu Yamaguçi iş için Hiroşima'da. Gökyüzünde dev bir ışık parlıyor; kulak zarı patlıyor, yüzü ve kolları yanıyor. Trenle evine, Nagazaki'ye dönüyor. Üç gün sonra sargılar içinde patronuna Hiroşima'yı anlatırken ofisi aynı beyaz ışık dolduruyor. Yamaguçi doksan üç yaşına kadar yaşıyor."
       },
       {
         "id": "l08",
-        "tts": "Trenle evine, Nagazaki'ye döndü. Üç gün sonra sargılar içinde patronuna Hiroşima'yı anlatırken odayı aynı beyaz ışık doldurdu.",
-        "text": "Trenle evine, Nagazaki'ye döndü. Üç gün sonra sargılar içinde patronuna Hiroşima'yı anlatırken odayı aynı beyaz ışık doldurdu."
+        "who": "S",
+        "text": "Ben Yamaguchi'yi seçtim; iki bomba, üç gün arayla.",
+        "tts": "Ben Yamaguçi'yi seçtim; iki bomba, üç gün arayla.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Peki ikisini aynı takvime koyarsak?",
-        "text": "Peki ikisini aynı takvime koyarsak?",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l10",
-        "tts": "Violet'in iki batışı arasında dört yıldan fazla vardı. Yamaguçi ise iki atom bombasını üç gün arayla yaşadı.",
-        "text": "Violet'in iki batışı arasında dört yıldan fazla vardı. Yamaguchi ise iki atom bombasını üç gün arayla yaşadı.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l11",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -109,8 +116,7 @@
     "#tarih"
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? Üç gemi kazasından sağ çıkan kadın mı, iki atom bombasından sağ çıkan adam mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

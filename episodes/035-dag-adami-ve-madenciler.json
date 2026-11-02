@@ -1,92 +1,92 @@
 {
   "id": "035",
   "slug": "dag-adami-ve-madenciler",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 035 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-06T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.8,
-      "l02": 0.9,
-      "l03": 1.1,
-      "l04": 0.6,
-      "l05": 0.8,
-      "l06": 0.5,
-      "l07": 0.8,
-      "l08": 0.8,
-      "l09": 0.6,
-      "l10": 0.9,
-      "l11": 0.9,
-      "l12": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Bir adam, karısını kaybettiği dağa çekiçle vuruyor.",
-        "text": "Bir adam, karısını kaybettiği dağa çekiçle vuruyor.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Karısını bir kaya sırtı yüzünden kaybettiği için yirmi iki yıl boyunca çekiç ve keskiyle dağı yaran bir adam mı?",
+        "tts": "Hangisi daha şaşırtıcı? Karısını bir kaya sırtı yüzünden kaybettiği için yirmi iki yıl boyunca çekiç ve keskiyle dağı yaran bir adam mı?"
       },
       {
         "id": "l02",
-        "tts": "Hindistan'da bir köy. Köyle kasaba arasında dik, kayalık bir sırt vardı. Dashrath Mancı'nin karısı Falguni o patikada düştü.",
-        "text": "Hindistan'da bir köy. Köyle kasaba arasında dik, kayalık bir sırt vardı. Dashrath Manjhi'nin karısı Falguni o patikada düştü."
+        "who": "S",
+        "text": "Dağı mı yarmış? Tek başına mı?",
+        "tts": "Dağı mı yarmış? Tek başına mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "En yakın doktor yetmiş kilometre ötedeydi. Falguni kurtarılamadı.",
-        "text": "En yakın doktor 70 kilometre ötedeydi. Falguni kurtarılamadı.",
-        "rate": "+0%",
-        "pitch": "-2Hz"
+        "who": "A",
+        "text": "Hindistan'da bir köy. Dashrath Manjhi'nin karısı kasabaya giden kayalık sırtta düşüyor; en yakın doktor yetmiş kilometre ötede ve kurtarılamıyor. Manjhi eline bir çekiç ve bir keski alıyor. Köylüler ona deli diyor. Yirmi iki yıl sonra kayanın içinden yüz on metrelik bir yol açılıyor. Elli beş kilometrelik yol on beş kilometreye iniyor.",
+        "tts": "Hindistan'da bir köy. Dashrath Mancı'nın karısı kasabaya giden kayalık sırtta düşüyor; en yakın doktor yetmiş kilometre ötede ve kurtarılamıyor. Mancı eline bir çekiç ve bir keski alıyor. Köylüler ona deli diyor. Yirmi iki yıl sonra kayanın içinden yüz on metrelik bir yol açılıyor. Elli beş kilometrelik yol on beş kilometreye iniyor."
       },
       {
         "id": "l04",
-        "tts": "Bir gün Mancı bir çekiç ve bir keski alıp sırta çıktı. Köylüler ona deli dedi.",
-        "text": "Bir gün Manjhi bir çekiç ve bir keski alıp sırta çıktı. Köylüler ona deli dedi."
+        "who": "S",
+        "text": "Bu nasıl bir sevgi?",
+        "tts": "Bu nasıl bir sevgi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Yirmi iki yıl boyunca her gün vurdu. Saçları ağardı, sırt yavaş yavaş açıldı. Sonunda yüz on metrelik bir yol açtı.",
-        "text": "22 yıl boyunca her gün vurdu. Saçları ağardı, sırt yavaş yavaş açıldı. Sonunda 110 metrelik bir yol açtı."
+        "who": "A",
+        "text": "Yoksa yerin yedi yüz metre altında altmış dokuz gün mahsur kalan otuz üç madenci mi?",
+        "tts": "Yoksa yerin yedi yüz metre altında altmış dokuz gün mahsur kalan otuz üç madenci mi?"
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Altmış dokuz gün mü? Ne yemişler?",
+        "tts": "Altmış dokuz gün mü? Ne yemişler?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Ağustos iki bin on, Şili. Maden çöktü ve otuz üç işçi yedi yüz metre aşağıda kaldı. İki günde bir, iki kaşık ton balığıyla on yedi gün dayandılar.",
-        "text": "Ağustos 2010, Şili. Maden çöktü ve 33 işçi 700 metre aşağıda kaldı. İki günde bir, iki kaşık ton balığıyla 17 gün dayandılar."
+        "who": "A",
+        "text": "2010, Şili. Maden çöküyor, otuz üç işçi bir sığınağa kaçıyor. Kırk sekiz saatte bir kişi başı iki kaşık ton balığı ve bir yudum süt. On yedi gün boyunca kimse yaşadıklarını bilmiyor. Sonra tavandan bir matkap ucu çıkıyor ve ucuna bir not bağlıyorlar: \"Sığınakta iyiyiz, otuz üç kişiyiz.\"",
+        "tts": "iki bin on, Şili. Maden çöküyor, otuz üç işçi bir sığınağa kaçıyor. Kırk sekiz saatte bir kişi başı iki kaşık ton balığı ve bir yudum süt. On yedi gün boyunca kimse yaşadıklarını bilmiyor. Sonra tavandan bir matkap ucu çıkıyor ve ucuna bir not bağlıyorlar: Sığınakta iyiyiz, otuz üç kişiyiz."
       },
       {
         "id": "l08",
-        "tts": "On yedinci gün tavandan bir matkap ucu çıktı. Ucuna bir not bağladılar: Sığınaktayız, otuz üç kişi iyiyiz.",
-        "text": "17. gün tavandan bir matkap ucu çıktı. Ucuna bir not bağladılar: \"Sığınaktayız, 33 kişi iyiyiz.\""
+        "who": "S",
+        "text": "Ben Manjhi'yi seçtim; yirmi iki yıl, tek başına.",
+        "tts": "Ben Mancı'yı seçtim; yirmi iki yıl, tek başına.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Altmış dokuzuncu gün dar bir kapsül onları tek tek yukarı çekti.",
-        "text": "69. gün dar bir kapsül onları tek tek yukarı çekti."
-      },
-      {
-        "id": "l10",
-        "tts": "Peki ikisini aynı kayayla ölçersek?",
-        "text": "Peki ikisini aynı kayayla ölçersek?",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l11",
-        "tts": "Kurtarma kuyusu yaklaşık iki yüz elli metreküp kaya deldi. Mancı ise elleriyle bunun en az on beş katını kırdı.",
-        "text": "Kurtarma kuyusu yaklaşık 250 metreküp kaya deldi. Manjhi ise elleriyle bunun en az 15 katını kırdı.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l12",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -124,8 +124,7 @@
     "#biliyormuydunuz"
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? Dağı 22 yılda elle yaran adam mı, 700 metre derinde 69 gün bekleyen 33 madenci mi?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

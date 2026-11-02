@@ -1,91 +1,109 @@
 {
   "id": "060",
   "slug": "buzdaki-doktor-ve-hucredeki-adam",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 060 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-05T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+8%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.7,
-      "l02": 0.4,
-      "l03": 0.8,
-      "l04": 1,
-      "l05": 0.8,
-      "l06": 0.4,
-      "l07": 0.9,
-      "l08": 0.8,
-      "l09": 0.9,
-      "l10": 0.8,
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.2,
+      "l10": 0.15,
       "l11": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Buzun altında, başı aşağıda, nefes alacak bir boşluk arıyor.",
-        "text": "Buzun altında, başı aşağıda, nefes alacak bir boşluk arıyor.",
-        "rate": "+0%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Buz gibi bir derede kalbi iki buçuk saatten fazla durup yeniden çalışan bir doktor mu?",
+        "tts": "Hangisi daha şaşırtıcı? Buz gibi bir derede kalbi iki buçuk saatten fazla durup yeniden çalışan bir doktor mu?"
       },
       {
         "id": "l02",
-        "tts": "Mayıs bin dokuz yüz doksan dokuz, Norveç. Genç doktor Anna Bogenholm arkadaşlarıyla kayağa çıktı.",
-        "text": "Mayıs 1999, Norveç. Genç doktor Anna Bågenholm arkadaşlarıyla kayağa çıktı."
+        "who": "S",
+        "text": "Kalbi durmuş da nasıl geri gelmiş?",
+        "tts": "Kalbi durmuş da nasıl geri gelmiş?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Dik bir yamaçta dengesini kaybetti ve baş aşağı, donmuş bir derenin buzuna düştü. Buz kırıldı.",
-        "text": "Dik bir yamaçta dengesini kaybetti ve baş aşağı, donmuş bir derenin buzuna düştü. Buz kırıldı."
+        "who": "A",
+        "text": "1999, Norveç. Anna Bågenholm kayak yaparken düşüp donmuş bir derenin buzunun altına kayıyor. Arkadaşları ayaklarını tutuyor ama çekip çıkaramıyorlar. Anna buzun altındaki küçük bir hava cebinde kırk dakika nefes alıyor. Sonra kalbi duruyor.",
+        "tts": "bin dokuz yüz doksan dokuz, Norveç. Anna Bogenholm kayak yaparken düşüp donmuş bir derenin buzunun altına kayıyor. Arkadaşları ayaklarını tutuyor ama çekip çıkaramıyorlar. Anna buzun altındaki küçük bir hava cebinde kırk dakika nefes alıyor. Sonra kalbi duruyor."
       },
       {
         "id": "l04",
-        "tts": "Arkadaşları kayaklarından tuttu ama onu çekip çıkaramadı. Anna buzun altında küçük bir hava cebi buldu ve kırk dakika orada nefes aldı.",
-        "text": "Arkadaşları kayaklarından tuttu ama onu çekip çıkaramadı. Anna buzun altında küçük bir hava cebi buldu ve 40 dakika orada nefes aldı.",
-        "rate": "+0%"
+        "who": "S",
+        "text": "Ve sonra?",
+        "tts": "Ve sonra?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Sudan çıkarıldığında kalbi durmuştu ve vücudu on üç virgül yedi dereceye inmişti. Ama kalbi saatler sonra yeniden attı.",
-        "text": "Sudan çıkarıldığında kalbi durmuştu ve vücudu 13,7 dereceye inmişti. Ama kalbi saatler sonra yeniden attı."
+        "who": "A",
+        "text": "Vücudu on üç virgül yedi dereceye iniyor. Doktorlar kanını bir makineyle yavaş yavaş ısıtıyor ve kalbi iki saat otuz beş dakika sonra yeniden atıyor. Anna yıllar sonra kendisini kurtaran hastanede doktor oluyor.",
+        "tts": "Vücudu on üç virgül yedi dereceye iniyor. Doktorlar kanını bir makineyle yavaş yavaş ısıtıyor ve kalbi iki saat otuz beş dakika sonra yeniden atıyor. Anna yıllar sonra kendisini kurtaran hastanede doktor oluyor."
       },
       {
         "id": "l06",
-        "tts": "Ondan doksan yedi yıl önce Martinik'te bir mahkûm, taş bir hücrede tek başınaydı.",
-        "text": "Ondan 97 yıl önce Martinik'te bir mahkûm, taş bir hücrede tek başınaydı."
+        "who": "S",
+        "text": "Tıp mucizesi bu.",
+        "tts": "Tıp mucizesi bu.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Sabah sekize doğru yanardağ patladı. Kızgın bir bulut bütün kenti bir dakikadan kısa sürede yuttu.",
-        "text": "Sabah sekize doğru yanardağ patladı. Kızgın bir bulut bütün kenti bir dakikadan kısa sürede yuttu.",
-        "rate": "+2%"
+        "who": "A",
+        "text": "Yoksa bütün bir kenti yakan volkan bulutunu taş bir hücrede atlatan bir mahkûm mu?",
+        "tts": "Yoksa bütün bir kenti yakan volkan bulutunu taş bir hücrede atlatan bir mahkûm mu?"
       },
       {
         "id": "l08",
-        "tts": "Dar ızgaradan içeri yakıcı hava doldu. Lüdjer Silbaris yanıklar içinde üç gün bekledi, sonunda biri sesini duydu.",
-        "text": "Dar ızgaradan içeri yakıcı hava doldu. Ludger Sylbaris yanıklar içinde üç gün bekledi, sonunda biri sesini duydu."
+        "who": "S",
+        "text": "Yani hücre onu korumuş mu?",
+        "tts": "Yani hücre onu korumuş mu?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Peki ikisini aynı termometreye koyarsak?",
-        "text": "Peki ikisini aynı termometreye koyarsak?",
-        "pitch": "+2Hz"
+        "who": "A",
+        "text": "1902, Martinik. Ludger Sylbaris kavga yüzünden kalın duvarlı bir hücrede. Pelée Yanardağı patlıyor; kızgın bir bulut birkaç dakikada kenti yakıyor ve yaklaşık otuz bin kişi ölüyor. Kapıdaki küçük ızgaradan dolan sıcak hava Ludger'ın her yerini yakıyor ama ölmüyor. Üç gün sonra çığlıkları duyuluyor. Sonra bir sirkte dünyayı geziyor.",
+        "tts": "bin dokuz yüz iki, Martinik. Lüdjer Silbaris kavga yüzünden kalın duvarlı bir hücrede. Pelée Yanardağı patlıyor; kızgın bir bulut birkaç dakikada kenti yakıyor ve yaklaşık otuz bin kişi ölüyor. Kapıdaki küçük ızgaradan dolan sıcak hava Lüdjer'in her yerini yakıyor ama ölmüyor. Üç gün sonra çığlıkları duyuluyor. Sonra bir sirkte dünyayı geziyor."
       },
       {
         "id": "l10",
-        "tts": "Anna'nın vücudu on üç virgül yedi dereceye indi. Hücrenin dışındaki bulut ise tahminen dört yüz dereceye yakındı.",
-        "text": "Anna'nın vücudu 13,7 dereceye indi. Hücrenin dışındaki bulut ise tahminen 400 dereceye yakındı.",
-        "rate": "-2%",
-        "pitch": "-2Hz"
+        "who": "S",
+        "text": "Ben Anna'yı seçtim; kalp iki buçuk saat durmuş.",
+        "tts": "Ben Anna'yı seçtim; kalp iki buçuk saat durmuş.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l11",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -136,8 +154,7 @@
     "#tarih"
   ],
   "ytTitle": "Vücudu 13,7 dereceye düşen doktor mu, yanardağ bulutundan hücresi sayesinde kurtulan adam mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

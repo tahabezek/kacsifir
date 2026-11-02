@@ -94,7 +94,7 @@ export async function film(A) {
 
   // ——— hareketler ———
   const set = (f, fn) => { f.act = fn; };
-  set(s0, t => { const down = seg(t, 1.3, 2.2); return { pos: [0, 2.6 - 2.2 * ease.state(down), 0], rot: Math.PI, pose: t < 1.3 ? { ...POSE.stand(), rShoulder: [-1.2, 0, 0.2], rElbow: [-1.3, 0, 0], lShoulder: [-1.0, 0.3, -0.1], lElbow: [-1.2, 0, 0] } : POSE.climb((t * 0.8) % 1), face: FACE.determined }; });
+  set(s0, tq => { const t = tq >= T.loop0 ? tq - D : tq; const down = seg(t, 1.3, 2.2); return { pos: [0, 2.6 - 2.2 * ease.state(down), 0], rot: Math.PI, pose: t < 1.3 ? { ...POSE.stand(), rShoulder: [-1.2, 0, 0.2], rElbow: [-1.3, 0, 0], lShoulder: [-1.0, 0.3, -0.1], lElbow: [-1.2, 0, 0] } : POSE.climb((t * 0.8) % 1), face: FACE.determined }; });
   set(s1, t => { const phone = t > w('l03', 'Yukarıdaki') - 0.2; const shiver = 0.04 * Math.sin(t * 40); return { pos: [phone ? 0.55 : -0.4, 0.02, phone ? -0.05 : -0.2], rot: phone ? 0.4 : 0.2, pose: phone ? { ...POSE.phone(), spine: [0.1, 0, shiver] } : { ...POSE.sitHunched(), spine: [0.45, 0, shiver] }, face: t > w('l04', 'Oysa') ? FACE.surprise : FACE.sad }; });
   set(pro3, t => { const storm = seg(t, w('l05', 'kum'), 1.2); return { visible: true, pos: [lerp(2, 8, seg(t, T.l05, T.l06 - T.l05)), 0, 0.3], rot: Math.PI / 2 - storm * 0.6, pose: t > T.l06 ? POSE.stand() : POSE.run((t * 1.2) % 1), face: t > T.l06 ? { ...FACE.fear, look: 0.8 } : FACE.determined }; });
   set(kiz, t => { const run = seg(t, w('l07', 'korkuyla') - 0.1, 1.2); return { pos: [lerp(0.8, 3.6, run), 0, lerp(0.2, -1.4, run)], rot: run > 0 ? -2.2 : -1.6, pose: run > 0 ? POSE.run((t * 1.6) % 1) : POSE.stand(), face: run > 0 ? FACE.fear : FACE.surprise }; });

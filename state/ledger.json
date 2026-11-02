@@ -687,6 +687,19 @@
         "status": "scheduled",
         "dueAt": "2026-11-04T05:30:00.000Z"
       }
+    },
+    "2026-11-04T17:30Z": {
+      "episode": "041",
+      "media": "v/041-kaiser-ve-kazu.mp4",
+      "status": "scheduled",
+      "at": "2026-11-02T20:53:29.157Z",
+      "postId": "6ae8f89fc8ee2961312f49fd",
+      "dueAt": "2026-11-04T17:30:00.000Z",
+      "yt": {
+        "postId": "6ae8f8a0b665951ec2fb1c74",
+        "status": "scheduled",
+        "dueAt": "2026-11-04T17:30:00.000Z"
+      }
     }
   }
 }

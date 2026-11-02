@@ -11,7 +11,20 @@ Kullanıcı: "Tüm karar sende, izin alma, hepsini bitir, sabah kontrol edeceği
 - **Render:** `KACSIFIR_SAMPLES=10`, ardından CRF 21 ile yeniden kodlama, `prebuilt/` klasörüne kopyalama ve commit. CI, gönderiyi yayından yaklaşık 48 saat önce Buffer'a yükler. Gönderi daha önce yüklenmişse `tools/remedia.mjs <id>` kullanılır.
 - **Sıra:** yayın tarihine göre: 041 (4 Kas), 060 (5), 035 (6), 063 (7), 036 (8), 064 (9), 061 (11), 065 (13), 037 (14), 066 (15), 038 (16), 039 (17).
 
-## Durum
-| Bölüm | Hikâye | Sahne | Render | Commit |
+## Durum (03:00Z)
+Her film önce düşük örneklemli karelerle kontrol edildi; hatalar render'dan önce düzeltildi. Render kuyruğu: out/queue.log.
+
+| Bölüm | Süre | Ön kontrolde düzeltilen | Render | Prebuilt commit |
 |---|---|---|---|---|
-| figure.js | — | ⏳ | — | — |
+| 041 | 77 sn | açılış karanlıktı, patron duvarın arkasındaydı | 1. render bitti; 2. kuyrukta | 1. sürüm commit'li |
+| 060 | 81 sn | kamera çamın içinde kalıyordu (siyah), hücre karanlıktı | 1. render hatalı; 2. kuyrukta | hayır (eski Sinema sürümü yayında kalır) |
+| 035 | 79 sn | — | bitti (dikiş SSIM 0,77) | evet |
+| 063 | 74 sn | köpekbalığı kadraj dışındaydı, isim kartı taşıyordu | kuyrukta | — |
+| 036 | 79 sn | kamera hastane gemisinin gövdesinin içindeydi (yeşil ekran) | kuyrukta | — |
+| 064 | 77 sn | Parnell kadraj dışı, Oxford çanı okunmuyordu, Zift yanlış kelimeye bağlıydı | kuyrukta | — |
+| 061 | 82 sn | Siffre'nin kaskı yüzünü beyaz topa çeviriyordu | kuyrukta | — |
+| 065 | 71 sn | patlama ekranı beyaza boğuyordu, Alaska karanlıktı, merdiven adamın içinden geçiyordu | kuyrukta | — |
+| 037 | 86 sn | yeni film | kuyrukta | — |
+| 066 | 81 sn | yeni film | kuyrukta | — |
+| 038 | 86 sn | yeni film | kuyrukta | — |
+| 039 | 88 sn | yeni film | kuyrukta | — |

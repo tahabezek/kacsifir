@@ -2,7 +2,7 @@
   "id": "003",
   "slug": "dunyanin-merkezi",
   "publishAt": "2026-11-17T05:30Z",
-  "template": "depth",
+  "template": "cizgi",
   "serial": "№ 003 · DERİNLİK",
   "bpm": 96,
   "question": [
@@ -112,5 +112,73 @@
     "#coğrafya",
     "#bilgiler"
   ],
-  "actor": true
+  "actor": true,
+  "gl": false,
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+25%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "İnsanlığın kazdığı en derin delik, Dünya'nın merkezine giden yolun yalnızca binde ikisi.",
+        "tts": "İnsanlığın kazdığı en derin delik, Dünya'nın merkezine giden yolun yalnızca binde ikisi."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Bu kadar mı az?",
+        "tts": "Nasıl yani? Bu kadar mı az?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "En derin kuyu Rusya'daki Kola Kuyusu: on iki kilometre. Kazı yirmi yıl sürdü. Ama kıtaların kabuğu yaklaşık otuz beş kilometre kalınlığında; yani kabuğu bile delemedik. Dünya'nın merkezi ise altı bin üç yüz yetmiş bir kilometre aşağıda.",
+        "tts": "En derin kuyu Rusya'daki Kola Kuyusu: on iki kilometre. Kazı yirmi yıl sürdü. Ama kıtaların kabuğu yaklaşık otuz beş kilometre kalınlığında; yani kabuğu bile delemedik. Dünya'nın merkezi ise altı bin üç yüz yetmiş bir kilometre aşağıda."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Neden daha derine inemediler?",
+        "tts": "Neden daha derine inemediler?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "On iki kilometrede kaya yüz seksen derece sıcaklıktaydı ve matkap ilerleyemedi.",
+        "tts": "On iki kilometrede kaya yüz seksen derece sıcaklıktaydı ve matkap ilerleyemedi."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Yani ayağımızın altını uzaydan az tanıyoruz.",
+        "tts": "Yani ayağımızın altını uzaydan az tanıyoruz.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Sence merkezde ne var? Yoruma yaz.",
+        "tts": "Sence merkezde ne var? Yoruma yaz."
+      }
+    ]
+  }
 }

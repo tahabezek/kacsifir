@@ -1,7 +1,7 @@
 {
   "id": "030",
   "slug": "jupiter-hacim",
-  "template": "hacim",
+  "template": "cizgi",
   "publishAt": "2026-11-14T05:30Z",
   "serial": "№ 030 · PARADOKS",
   "bpm": 100,
@@ -120,5 +120,73 @@
   "question2": [
     "Peki kaç Dünya",
     "ağırlığında?"
-  ]
+  ],
+  "gl": false,
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+25%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Jüpiter'in içine bin üç yüzden fazla Dünya sığıyor, ama Jüpiter yalnızca üç yüz on sekiz Dünya ağırlığında.",
+        "tts": "Jüpiter'in içine bin üç yüzden fazla Dünya sığıyor, ama Jüpiter yalnızca üç yüz on sekiz Dünya ağırlığında."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Bu kadar büyükse neden daha ağır değil?",
+        "tts": "Nasıl yani? Bu kadar büyükse neden daha ağır değil?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Jüpiter'in çapı Dünya'nın on bir katı. Dünyaları eritip Jüpiter'e doldursaydık bin üç yüz yirmi bir Dünya gerekirdi. Ama Jüpiter çoğunlukla hidrojen ve helyumdan oluşuyor. Dünya ise kaya ve metal.",
+        "tts": "Jüpiter'in çapı Dünya'nın on bir katı. Dünyaları eritip Jüpiter'e doldursaydık bin üç yüz yirmi bir Dünya gerekirdi. Ama Jüpiter çoğunlukla hidrojen ve helyumdan oluşuyor. Dünya ise kaya ve metal."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Yani Jüpiter kocaman ama hafif bir balon gibi.",
+        "tts": "Yani Jüpiter kocaman ama hafif bir balon gibi.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Aynen öyle. Aynı hacimde Jüpiter, Dünya'nın dörtte biri kadar ağır.",
+        "tts": "Aynen öyle. Aynı hacimde Jüpiter, Dünya'nın dörtte biri kadar ağır."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Dünya küçük ama sağlam.",
+        "tts": "Dünya küçük ama sağlam.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Sen bunu biliyor muydun? Yoruma yaz.",
+        "tts": "Sen bunu biliyor muydun? Yoruma yaz."
+      }
+    ]
+  }
 }

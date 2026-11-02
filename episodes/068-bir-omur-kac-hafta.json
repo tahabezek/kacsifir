@@ -1,0 +1,105 @@
+{
+  "id": "068",
+  "slug": "bir-omur-kac-hafta",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "SENİN SAYIN",
+  "kicker": "SENİN SAYIN · ÖMÜR",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-19T05:30Z",
+  "question": [
+    "Bir ömür",
+    "kaç hafta?"
+  ],
+  "facts": {
+    "lifeExpectancy": 78.5,
+    "weeks": 4096,
+    "at30": 1565,
+    "sources": [
+      "https://www.alomaliye.com/2026/07/29/kadinlarin-erkeklerden-5-2-yil-daha-uzun-yasadigi-goruldu-2/",
+      "https://en.wikipedia.org/wiki/Four_Thousand_Weeks:_Time_Management_for_Mortals"
+    ],
+    "notes": [
+      "78,5 × 52,18 = 4.096 hafta (64 × 64)",
+      "30 × 52,18 = 1.565 hafta",
+      "Fikir: Oliver Burkeman, Four Thousand Weeks (2021)"
+    ]
+  },
+  "caption": "Türkiye'de ortalama bir ömür 4.096 hafta. Hepsi tek bir sayfaya sığıyor. ⬛\n\nNE DEMEK?\nTÜİK'e göre Türkiye'de doğuşta beklenen yaşam süresi 78,5 yıl. Bu 4.096 hafta eder: 64 satır, 64 sütun. Oliver Burkeman da \"Dört Bin Hafta\" kitabında aynı hesabı yapar.\n\n30 YAŞINDAYSAN\n1.565 kutu dolmuş. Ama sayfanın çoğu hâlâ boş.\n\nKÜÇÜK BİR EGZERSİZ\nBu haftanın kutusuna bir isim yaz. O kişiyle bu hafta bir şey yap.\n\nBu haftanın kutusunu kiminle doldurmak istersin? Bunu ona gönder.\n\nKaynaklar: TÜİK, Hayat Tabloları 2023–2025 (29 Temmuz 2026); Oliver Burkeman, Four Thousand Weeks (2021).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#hayat",
+    "#zaman",
+    "#ömür",
+    "#farkındalık",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Bir ömür kaç hafta? Türkiye'de ortalama ömür 4.096 hafta",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Türkiye'de ortalama bir insan ömrü 4.096 hafta. Hepsi bu tek sayfaya sığıyor.",
+        "tts": "Türkiye'de ortalama bir insan ömrü dört bin doksan altı hafta. Hepsi bu tek sayfaya sığıyor."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Bütün ömrüm bu kadar mı?",
+        "tts": "Nasıl yani? Bütün ömrüm bu kadar mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "TÜİK'e göre ortalama ömür yetmiş sekiz buçuk yıl. Her hafta bir kutu: altmış dört satır, altmış dört sütun.",
+        "tts": "TÜİK'e göre ortalama ömür yetmiş sekiz buçuk yıl. Her hafta bir kutu: altmış dört satır, altmış dört sütun."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Ben otuz yaşındayım. Kaçı gitti?",
+        "tts": "Ben otuz yaşındayım. Kaçı gitti?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "1.565 kutu dolmuş bile. Ama sayfanın çoğu hâlâ boş.",
+        "tts": "bin beş yüz altmış beş kutu dolmuş bile. Ama sayfanın çoğu hâlâ boş."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Bu haftanın kutusu da şu an doluyor.",
+        "tts": "Bu haftanın kutusu da şu an doluyor.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Bu haftanın kutusunu kiminle doldurmak istersin? Bunu ona gönder.",
+        "tts": "Bu haftanın kutusunu kiminle doldurmak istersin? Bunu ona gönder."
+      }
+    ]
+  }
+}

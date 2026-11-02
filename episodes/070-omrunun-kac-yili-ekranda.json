@@ -1,0 +1,110 @@
+{
+  "id": "070",
+  "slug": "omrunun-kac-yili-ekranda",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "SENİN SAYIN",
+  "kicker": "SENİN SAYIN · EKRAN",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-21T05:30Z",
+  "question": [
+    "Ömrünün kaç yılı",
+    "ekranda geçiyor?"
+  ],
+  "facts": {
+    "weeklyOnline": "41 sa 37 dk",
+    "dailyOnline": 5.95,
+    "weeklySocial": "25 sa 04 dk",
+    "dailySocial": 3.58,
+    "worldWeeklyOnline": "33 sa 27 dk",
+    "yearsScreen": 15.7,
+    "yearsSocial": 9.5,
+    "sources": [
+      "https://www.dailysabah.com/turkiye/turkiye-leads-global-social-media-use-with-41-hours-weekly/news",
+      "https://www.alomaliye.com/2026/07/29/kadinlarin-erkeklerden-5-2-yil-daha-uzun-yasadigi-goruldu-2/"
+    ],
+    "notes": [
+      "Meltwater / We Are Social, Digital 2026 (Ulaştırma Bakanı Uraloğlu aktardı, 29 Mart 2026)",
+      "41 sa 37 dk / 7 = 5 sa 57 dk/gün; dünya ortalaması 33 sa 27 dk/hafta -> fark ~ 8 sa",
+      "ömür: 15 -> 78,5 yaş = 63,5 yıl × 5,95/24 = 15,7 yıl; sosyal medya 3,58/24 × 63,5 = 9,5 yıl",
+      "varsayım: bugünkü kullanım ömür boyu sabit kalırsa"
+    ]
+  },
+  "caption": "Bu hızla giderse ömrünün yaklaşık 16 yılı bir ekranın karşısında geçecek. 📱\n\nNE KADAR?\nDigital 2026 raporuna göre Türkiye'de insanlar haftada 41 saat 37 dakika internette. Bu günde yaklaşık 6 saat eder ve dünya ortalamasından haftada 8 saat fazla. Bunun 25 saati, yani günde yaklaşık 3,5 saati sosyal medyada geçiyor.\n\nHESAP\nBugünkü kullanım hiç değişmezse 15 yaşından ortalama ömre (78,5 yıl) kadar: yaklaşık 16 yıl ekranda, bunun 9 yıldan fazlası sosyal medyada.\n\nKÜÇÜK BİR EGZERSİZ\nBu video bitince telefonu 30 dakika ters çevir.\n\nBunu en çok telefona bakan arkadaşına gönder.\n\nKaynaklar: Meltwater ve We Are Social, Digital 2026 (Ulaştırma ve Altyapı Bakanlığı'nın aktarımı, 29 Mart 2026); TÜİK, Hayat Tabloları 2023–2025 (29 Temmuz 2026).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#telefon",
+    "#sosyalmedya",
+    "#zaman",
+    "#farkındalık",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Ömrünün kaç yılı ekranda geçiyor?",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Bu hızla giderse ömrünün on altı yılı bir ekranın karşısında geçecek.",
+        "tts": "Bu hızla giderse ömrünün on altı yılı bir ekranın karşısında geçecek."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? On altı yıl mı?",
+        "tts": "Nasıl yani? On altı yıl mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Türkiye'de insanlar haftada kırk bir saatten fazla internette. Bu, günde yaklaşık altı saat demek. Dünya ortalamasından haftada sekiz saat fazla.",
+        "tts": "Türkiye'de insanlar haftada kırk bir saatten fazla internette. Bu, günde yaklaşık altı saat demek. Dünya ortalamasından haftada sekiz saat fazla."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "O altı saatin çoğu da sosyal medya.",
+        "tts": "O altı saatin çoğu da sosyal medya.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Günde üç buçuk saati. On beş yaşından başlayıp hesaplarsan ömrünün on altı yılı ekranda, bunun dokuz yıldan fazlası sosyal medyada geçiyor.",
+        "tts": "Günde üç buçuk saati. On beş yaşından başlayıp hesaplarsan ömrünün on altı yılı ekranda, bunun dokuz yıldan fazlası sosyal medyada geçiyor."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Şu an da ekrandayım.",
+        "tts": "Şu an da ekrandayım.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "O zaman bu video bitince telefonu bırak. Bunu en çok telefona bakan arkadaşına gönder.",
+        "tts": "O zaman bu video bitince telefonu bırak. Bunu en çok telefona bakan arkadaşına gönder."
+      }
+    ]
+  }
+}

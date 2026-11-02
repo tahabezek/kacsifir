@@ -10,6 +10,26 @@ const base = (o) => ({
 });
 
 export const CARDS = {
+  // "Senin sayın" serisinin tek kahramanı: izleyici. Hardal kapüşonlu, dağınık koyu saç; her filmde aynı kişi.
+  sen: base({
+    key: 'sen', name: 'Sen', seed: 201,
+    torso: { len: 0.8, shoulder: 0.64, hip: 0.52, depth: 0.4, belly: 0, color: '#E2A23A', shade: '#C4852A' },
+    arm: { upper: 0.4, lower: 0.38, w: 0.18, color: '#E2A23A', shade: '#C4852A', hand: 0.13 },
+    leg: { upper: 0.4, lower: 0.38, w: 0.2, color: '#34404E', shade: '#27303B' },
+    shoe: { color: '#F4F1EA', len: 0.29, h: 0.11 },
+    skin: '#EEC6A0', skinShade: '#D6A882', hair: '#2E221B',
+    features: ['hoodie', 'hairMessy'],
+  }),
+  // "Senin sayın" · anne (60'larında): kır topuz, bordo hırka, etek
+  anne: base({
+    key: 'anne', name: 'Anne', seed: 211,
+    torso: { len: 0.8, shoulder: 0.64, hip: 0.74, depth: 0.5, belly: 0.07, color: '#7A3A4A', shade: '#5E2C39' },
+    arm: { upper: 0.37, lower: 0.35, w: 0.19, color: '#7A3A4A', shade: '#5E2C39', hand: 0.13 },
+    leg: { upper: 0.35, lower: 0.33, w: 0.2, color: '#3A3A48', shade: '#2A2A36' },
+    shoe: { color: '#3A2420', len: 0.27, h: 0.11 },
+    skin: '#EBC29E', skinShade: '#D2A580', hair: '#9C948C',
+    features: ['cardigan', 'skirt', 'bun'],
+  }),
   // № 041 · Carlos Kaiser: kıvırcık koyu saç, bıyık, kırmızı forma, beyaz şort
   kaiser: base({
     key: 'kaiser', name: 'Carlos Kaiser', seed: 101,

@@ -1,0 +1,108 @@
+{
+  "id": "069",
+  "slug": "kalbin-kac-kez-atti",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "SENİN SAYIN",
+  "kicker": "SENİN SAYIN · KALP",
+  "bpm": 70,
+  "coverAt": 0,
+  "publishAt": "2026-11-20T05:30Z",
+  "question": [
+    "Kalbin bugüne kadar",
+    "kaç kez attı?"
+  ],
+  "facts": {
+    "bpm": 70,
+    "perDay": 100800,
+    "at30": 1104000000,
+    "lifetime": 2890000000,
+    "sources": [
+      "https://www.mayoclinic.org/healthy-lifestyle/fitness/expert-answers/heart-rate/faq-20057979",
+      "https://www.pbs.org/wgbh/nova/heart/heartfacts.html",
+      "https://www.alomaliye.com/2026/07/29/kadinlarin-erkeklerden-5-2-yil-daha-uzun-yasadigi-goruldu-2/"
+    ],
+    "notes": [
+      "dinlenirken yetişkin nabzı 60–100 (Mayo Clinic); hesapta 70",
+      "70 × 1.440 = 100.800/gün",
+      "30 yıl × 365,25 × 100.800 = 1,10 milyar",
+      "78,5 yıl -> 2,89 milyar; NOVA: \"2,5 milyardan fazla\""
+    ]
+  },
+  "caption": "Sen bu cümleyi okurken kalbin birkaç kez attı. ❤️\n\nNE KADAR?\nDinlenirken yetişkin bir kalp dakikada 60 ile 100 arasında atar. Dakikada 70 alırsak bir günde yaklaşık 100.800 atış eder.\n\nBUGÜNE KADAR\n30 yaşındaysan kalbin bir milyardan fazla kez attı. Türkiye'deki ortalama ömür (78,5 yıl) boyunca yaklaşık 2,9 milyar kez atıyor. Uyurken de, sen hiç düşünmezken de.\n\nKalbini en hızlı attıran kişi kimse, bunu ona gönder.\n\nKaynaklar: Mayo Clinic (dinlenme nabzı); PBS NOVA, Heart Facts; TÜİK, Hayat Tabloları 2023–2025 (29 Temmuz 2026).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#kalp",
+    "#hayat",
+    "#bilim",
+    "#sevgi",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Kalbin bugüne kadar kaç kez attı?",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Sen bu cümleyi dinlerken kalbin üç kez attı.",
+        "tts": "Sen bu cümleyi dinlerken kalbin üç kez attı."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Saydın mı?",
+        "tts": "Nasıl yani? Saydın mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Dinlenirken dakikada yetmiş kadar atıyor. Bir günde yüz bin kez. Sen uyurken, yemek yerken, bu videoyu izlerken hiç durmadan.",
+        "tts": "Dinlenirken dakikada yetmiş kadar atıyor. Bir günde yüz bin kez. Sen uyurken, yemek yerken, bu videoyu izlerken hiç durmadan."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Peki bugüne kadar kaç kez attı?",
+        "tts": "Peki bugüne kadar kaç kez attı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Otuz yaşındaysan bir milyardan fazla. Bir ömür boyunca yaklaşık üç milyar kez atıyor ve bir kez bile izin istemiyor.",
+        "tts": "Otuz yaşındaysan bir milyardan fazla. Bir ömür boyunca yaklaşık üç milyar kez atıyor ve bir kez bile izin istemiyor."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Bazı insanları görünce daha hızlı atıyor ama.",
+        "tts": "Bazı insanları görünce daha hızlı atıyor ama.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Kalbini en hızlı attıran kişi kimse, bunu ona gönder.",
+        "tts": "Kalbini en hızlı attıran kişi kimse, bunu ona gönder."
+      }
+    ]
+  }
+}

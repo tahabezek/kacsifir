@@ -1,0 +1,112 @@
+{
+  "id": "077",
+  "slug": "tek-bacakla-143-gun",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "BİR HİKÂYE",
+  "kicker": "BİR HİKÂYE · 143 GÜN",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-22T17:30Z",
+  "question": [
+    "Tek bacakla",
+    "5.373 km"
+  ],
+  "facts": {
+    "diagnosed": "1977-03-04, 18 yaşında",
+    "amputated": "1977-03-09, dizin 15 cm üstü",
+    "start": "1980-04-12, St. John's",
+    "stop": "1980-09-01, Thunder Bay yakını",
+    "km": 5373,
+    "days": 143,
+    "perDay": "yaklaşık 42 km (Parks Canada: ~40)",
+    "died": "1981-06-28, 22 yaşında",
+    "goal": "her Kanadalı için 1 dolar: 1 Şubat 1981'de 24,17 milyon $",
+    "total": "2026 başında 1 milyar CAD'yi geçti",
+    "sources": [
+      "https://thecanadianencyclopedia.ca/en/timeline/terry-fox",
+      "https://parks.canada.ca/culture/designation/personnage-person/terry-fox",
+      "https://www.cp24.com/news/canada/2026/09/20/terry-fox-foundation-surpasses-1b-in-donations-meet-some-of-the-runners-who-helped-get-it-there/"
+    ],
+    "notes": [
+      "Türkiye'de Terry Fox koşusu bulunamadı; iddia edilmez",
+      "\"bir milyar dolar\" = Kanada doları"
+    ]
+  },
+  "caption": "Bir bacağını kansere kaybeden bir genç, 143 gün boyunca her gün neredeyse bir maraton koştu. 🏃\n\nHİKÂYE\nTerry Fox 1977'de, 18 yaşında kemik kanseri oldu; sağ bacağı dizinin 15 cm üstünden kesildi. 12 Nisan 1980'de protez bacağını Atlantik Okyanusu'na batırıp St. John's'tan yola çıktı. Amacı Kanada'yı baştan sona koşmak ve her Kanadalıdan 1 dolar toplamaktı.\n\n143 GÜN\nGünde yaklaşık 42 km koştu. 143 günde 5.373 km yol aldı. 1 Eylül 1980'de Thunder Bay yakınlarında durmak zorunda kaldı: kanser akciğerlerine yayılmıştı. 28 Haziran 1981'de, 22 yaşında öldü.\n\nSONRA\nŞubat 1981'de bağışlar 24,17 milyon dolara ulaştı: her Kanadalı için 1 dolar. Onun adına her yıl koşulan Terry Fox koşuları 2026'da toplam 1 milyar Kanada dolarını geçti.\n\nBunu pes etmek üzere olan birine gönder.\n\nKaynaklar: The Canadian Encyclopedia; Parks Canada; CP24 (Eylül 2026).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#terryfox",
+    "#umut",
+    "#koşu",
+    "#ilham",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Tek bacakla 143 günde 5.373 km koşan genç: Terry Fox",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+25%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Bir bacağını kansere kaybeden bir genç, yüz kırk üç gün boyunca her gün neredeyse bir maraton koştu.",
+        "tts": "Bir bacağını kansere kaybeden bir genç, yüz kırk üç gün boyunca her gün neredeyse bir maraton koştu."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Tek bacakla mı?",
+        "tts": "Nasıl yani? Tek bacakla mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Kanada, 1977. Terry Fox on sekiz yaşında kemik kanseri oluyor ve sağ bacağı dizinin üstünden kesiliyor. Hastanede bir karar veriyor: Kanada'yı baştan sona koşacak ve her Kanadalıdan bir dolar toplayacak.",
+        "tts": "Kanada, bin dokuz yüz yetmiş yedi. Teri Foks on sekiz yaşında kemik kanseri oluyor ve sağ bacağı dizinin üstünden kesiliyor. Hastanede bir karar veriyor: Kanada'yı baştan sona koşacak ve her Kanadalıdan bir dolar toplayacak."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Protez bacakla mı?",
+        "tts": "Protez bacakla mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Evet. Nisan 1980'de protezini Atlantik Okyanusu'na batırıp yola çıkıyor. Günde yaklaşık kırk iki kilometre. Yüz kırk üç günde beş bin üç yüz yetmiş üç kilometre koşuyor.",
+        "tts": "Evet. Nisan bin dokuz yüz seksende protezini Atlantik Okyanusu'na batırıp yola çıkıyor. Günde yaklaşık kırk iki kilometre. Yüz kırk üç günde beş bin üç yüz yetmiş üç kilometre koşuyor."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Bitirebiliyor mu?",
+        "tts": "Bitirebiliyor mu?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Hayır. Kanser akciğerlerine yayılıyor ve durmak zorunda kalıyor. Ertesi yaz, yirmi iki yaşında ölüyor. Ama hedefini tutturuyor: her Kanadalı için bir dolar. Bugün onun adına koşulan yarışlar bir milyar doları geçti. Bunu pes etmek üzere olan birine gönder.",
+        "tts": "Hayır. Kanser akciğerlerine yayılıyor ve durmak zorunda kalıyor. Ertesi yaz, yirmi iki yaşında ölüyor. Ama hedefini tutturuyor: her Kanadalı için bir dolar. Bugün onun adına koşulan yarışlar bir milyar doları geçti. Bunu pes etmek üzere olan birine gönder."
+      }
+    ]
+  }
+}

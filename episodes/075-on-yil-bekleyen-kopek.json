@@ -1,0 +1,110 @@
+{
+  "id": "075",
+  "slug": "on-yil-bekleyen-kopek",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "BİR HİKÂYE",
+  "kicker": "BİR HİKÂYE · 9 YIL 9 AY",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-20T17:30Z",
+  "question": [
+    "On yıl",
+    "bekleyen köpek"
+  ],
+  "facts": {
+    "born": "Kasım 1923, Ōdate",
+    "uenoDied": "1925-05-21",
+    "together": "16 ay",
+    "asahi": "1932-10-04",
+    "statue": "1934-04-21",
+    "died": "1935-03-08",
+    "wait": "9 yıl 9,5 ay",
+    "ageAtDeath": "yaklaşık 11",
+    "sources": [
+      "https://www.nippon.com/en/japan-glances/jg00137/hachiko-the-faithful-dog.html",
+      "https://en.wikipedia.org/wiki/Hachik%C5%8D",
+      "https://www.u-tokyo.ac.jp/focus/en/features/z1304_00280.html"
+    ],
+    "notes": [
+      "yakitori şişi efsanesi kullanılmadı (2011: kanser + kalp kurdu)",
+      "ilk yıllarda bakıcılar arasında el değiştirdi; \"yaklaşık on yıl\""
+    ]
+  },
+  "caption": "Bir köpek, sahibi öldükten sonra yaklaşık 10 yıl boyunca her gün aynı istasyonda onu bekledi. 🐕\n\nHİKÂYE\nHachikō 1923'te Akita'da doğdu ve Tokyo'daki Profesör Hidesaburō Ueno'nun evine geldi. Her akşam Shibuya İstasyonu'nda trenden inen sahibini karşıladı. Birlikte yalnızca 16 ay geçirdiler: Ueno 21 Mayıs 1925'te üniversitede beyin kanamasından öldü.\n\nBEKLEYİŞ\nHachikō yıllarca trenin geldiği saatte istasyona gitti. 1932'de Asahi Shimbun gazetesi hikâyesini yazınca bütün Japonya onu tanıdı. 21 Nisan 1934'te istasyonun önüne heykeli dikildi; açılışta kendisi de oradaydı. 8 Mart 1935'te, yaklaşık 11 yaşında öldü. Bekleyiş 9 yıl 9,5 ay sürdü.\n\nBugün Ueno ile Hachikō'nun buluşmasını gösteren bir heykel de Tokyo Üniversitesi'nde duruyor (2015).\n\nBunu seni hep bekleyen birine gönder.\n\nKaynaklar: nippon.com, \"Hachikō: The Faithful Dog\"; Tokyo Üniversitesi; Wikipedia.\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#hachiko",
+    "#köpek",
+    "#sadakat",
+    "#japonya",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Sahibini 9 yıl 9 ay bekleyen köpek: Hachikō",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+25%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Bir köpek, sahibi öldükten sonra yaklaşık on yıl boyunca her gün aynı istasyonda onu bekledi.",
+        "tts": "Bir köpek, sahibi öldükten sonra yaklaşık on yıl boyunca her gün aynı istasyonda onu bekledi."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? On yıl mı?",
+        "tts": "Nasıl yani? On yıl mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "1924, Tokyo. Profesör Ueno'nun köpeği Hachikō her akşam Shibuya İstasyonu'na gidip trenden inen sahibini karşılıyor. Birlikte yalnızca on altı ay geçiriyorlar. Mayıs 1925'te profesör üniversitede ölüyor ve bir daha eve dönmüyor.",
+        "tts": "bin dokuz yüz yirmi dört, Tokyo. Profesör Ueno'nun köpeği Haçiko her akşam Şibuya İstasyonu'na gidip trenden inen sahibini karşılıyor. Birlikte yalnızca on altı ay geçiriyorlar. Mayıs bin dokuz yüz yirmi beşte profesör üniversitede ölüyor ve bir daha eve dönmüyor."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Köpek bunu bilmiyor mu?",
+        "tts": "Köpek bunu bilmiyor mu?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Hachikō yine de her gün trenin geldiği saatte istasyona gidiyor. İlk yıllarda kimse onu umursamıyor, bazıları ona kötü davranıyor. 1932'de bir gazete hikâyesini yazıyor ve bütün Japonya onu tanıyor.",
+        "tts": "Haçiko yine de her gün trenin geldiği saatte istasyona gidiyor. İlk yıllarda kimse onu umursamıyor, bazıları ona kötü davranıyor. bin dokuz yüz otuz ikide bir gazete hikâyesini yazıyor ve bütün Japonya onu tanıyor."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Sonunda ne oluyor?",
+        "tts": "Sonunda ne oluyor?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "1934'te istasyonun önüne heykeli dikiliyor; açılışta kendisi de orada. Bir yıl sonra ölüyor. Dokuz yıl, dokuz buçuk ay. Bunu seni hep bekleyen birine gönder.",
+        "tts": "bin dokuz yüz otuz dörtte istasyonun önüne heykeli dikiliyor; açılışta kendisi de orada. Bir yıl sonra ölüyor. Dokuz yıl, dokuz buçuk ay. Bunu seni hep bekleyen birine gönder."
+      }
+    ]
+  }
+}

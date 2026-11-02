@@ -48,6 +48,14 @@ export async function makeCizgiRenderer(ep, canvas) {
     }
   };
 
+  // kâğıt uçak: "gönder" simgesi (Senin sayın / Bir insan bir sayı kapanışı); (x, y) burun, k ölçek, rot yön
+  const plane = (x, y, k = 1, rot = -0.35, fill = '#FFFFFF') => {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(k, k);
+    poly([[0, 0], [-120, -46], [-86, 0], [-120, 46]], fill, LW / k * 1.1);
+    poly([[0, 0], [-86, 0], [-104, 30]], '#DCD6C8', LW / k * 0.9);
+    ctx.restore();
+  };
+
   // ——— kamera: anahtarlar [t, zoom, cx, cy]; (cx, cy) ekranın ortasına gelir; zoom log uzayında, durum eğrisiyle ———
   function camAt(K, t) {
     if (t <= K[0][0]) return K[0].slice(1);
@@ -59,7 +67,7 @@ export async function makeCizgiRenderer(ep, canvas) {
     return K.at(-1).slice(1);
   }
 
-  const A = { ctx, T, D, W, H, PAL, INK, ease, seg, lerp, clamp01, mulberry32, poly, rect, circ, ell, line, text, bg, path, fs, ch, crowd, CARDS, mixExpr, LW };
+  const A = { ctx, T, D, W, H, PAL, INK, ease, seg, lerp, clamp01, mulberry32, poly, rect, circ, ell, line, text, bg, path, fs, ch, crowd, plane, CARDS, mixExpr, LW };
   const film = await mod.film(A);
   const chunks = film.chunks || autoChunks(ep, tl);
   { const H0 = 'Hangisi daha şaşırtıcı?', c0 = chunks.l01?.[0];   // kanca başlıkta duruyor: altyazıda tekrarlanmaz
@@ -74,7 +82,7 @@ export async function makeCizgiRenderer(ep, canvas) {
     ctx.setTransform(z, 0, 0, z, W / 2 - cx * z, H / 2 - cy * z);
     film.draw(t);
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    O.title(t, film.title || ['Hangisi daha', 'şaşırtıcı?'], film.titleOut ?? T.l01end + 0.15, 470, D - 0.45);   // sayı filmleri kendi kanca başlığını verir
+    O.title(t, film.title || ['Hangisi daha', 'şaşırtıcı?'], film.titleOut ?? T.l01end + 0.15, 470, D - 0.45, film.kicker || ep.kicker);   // sayı filmleri kendi kanca başlığını verir
     for (const nc of film.names || []) O.nameCard(t, nc[0], nc[1], nc[2], nc[3]);
     for (const bn of film.numbers || []) O.bigNumber(t, bn[0], bn[1], bn[2], bn[3]);
     film.overlay?.(t, ctx, O);

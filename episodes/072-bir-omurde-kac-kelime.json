@@ -1,0 +1,107 @@
+{
+  "id": "072",
+  "slug": "bir-omurde-kac-kelime",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "SENİN SAYIN",
+  "kicker": "SENİN SAYIN · SÖZ",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-23T05:30Z",
+  "question": [
+    "Bir ömürde",
+    "kaç kelime konuşursun?"
+  ],
+  "facts": {
+    "women": 16215,
+    "men": 15669,
+    "lifetime": 447000000,
+    "participants": 396,
+    "sources": [
+      "https://doi.org/10.1126/science.1139940",
+      "https://www.alomaliye.com/2026/07/29/kadinlarin-erkeklerden-5-2-yil-daha-uzun-yasadigi-goruldu-2/"
+    ],
+    "notes": [
+      "Mehl ve ark., Science 317:82 (6 Temmuz 2007): kadın 16.215, erkek 15.669; fark anlamlı değil",
+      "2 -> 78,5 yaş = 76,5 yıl × 365,25 × 16.000 = 447 milyon",
+      "EAR: gün boyunca kısa ses kesitleri",
+      "2025 izleme çalışması (Vazire ve Mehl) daha düşük sayılar buldu; açıklamada belirtilir"
+    ]
+  },
+  "caption": "Bir insan ömrü boyunca yaklaşık 450 milyon kelime konuşuyor. 💬\n\nKİM SAYDI?\n2007'de psikolog Matthias Mehl ve ekibi 396 üniversite öğrencisine küçük ses kaydediciler taktı. Cihaz gün boyunca kısa ses kesitleri kaydetti. Sonuç: kadınlar günde ortalama 16.215, erkekler 15.669 kelime konuşuyordu. Fark istatistiksel olarak anlamlı değildi.\n\nHESAP\nGünde 16.000 kelime, 2 yaşından ortalama ömre (78,5 yıl) kadar: yaklaşık 450 milyon kelime. (Aynı ekibin 2025'teki daha büyük çalışması biraz daha düşük sayılar buldu.)\n\nBugünkü kelimelerinin yalnızca ikisini birine ayır: seni seviyorum. Bunu o kişiye gönder.\n\nKaynaklar: Mehl ve ark., Science (2007), doi:10.1126/science.1139940; TÜİK, Hayat Tabloları 2023–2025 (29 Temmuz 2026).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#kelime",
+    "#iletişim",
+    "#bilim",
+    "#sevgi",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Bir ömürde kaç kelime konuşursun?",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Bir insan ömrü boyunca yaklaşık dört yüz elli milyon kelime konuşuyor.",
+        "tts": "Bir insan ömrü boyunca yaklaşık dört yüz elli milyon kelime konuşuyor."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Bunu kim saymış?",
+        "tts": "Nasıl yani? Bunu kim saymış?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "2007'de psikologlar dört yüze yakın üniversite öğrencisinin üstüne küçük ses kaydediciler taktı. Cihaz gün boyunca birkaç dakikada bir kısa kayıt aldı. Sonuç: günde ortalama on altı bin kelime.",
+        "tts": "iki bin yedide psikologlar dört yüze yakın üniversite öğrencisinin üstüne küçük ses kaydediciler taktı. Cihaz gün boyunca birkaç dakikada bir kısa kayıt aldı. Sonuç: günde ortalama on altı bin kelime."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Kadınlar daha çok konuşuyordur.",
+        "tts": "Kadınlar daha çok konuşuyordur.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Hayır. Kadınlar da erkekler de günde yaklaşık on altı bin kelime konuşuyor; fark yok denecek kadar az.",
+        "tts": "Hayır. Kadınlar da erkekler de günde yaklaşık on altı bin kelime konuşuyor; fark yok denecek kadar az."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Peki bu kelimelerin kaçı gerçekten önemli?",
+        "tts": "Peki bu kelimelerin kaçı gerçekten önemli?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Bugünkü on altı bin kelimenin yalnızca ikisini birine ayır: seni seviyorum. Bunu o kişiye gönder.",
+        "tts": "Bugünkü on altı bin kelimenin yalnızca ikisini birine ayır: seni seviyorum. Bunu o kişiye gönder."
+      }
+    ]
+  }
+}

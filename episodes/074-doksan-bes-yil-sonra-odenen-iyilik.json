@@ -1,0 +1,114 @@
+{
+  "id": "074",
+  "slug": "doksan-bes-yil-sonra-odenen-iyilik",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "BİR HİKÂYE",
+  "kicker": "BİR HİKÂYE · 95 YIL",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-19T17:30Z",
+  "question": [
+    "95 yıl sonra",
+    "ödenen iyilik"
+  ],
+  "facts": {
+    "sank": "1890-09-16 gece, Kaşinozaki (Kii-Ōshima, Kuşimoto)",
+    "aboard": "600+ (kaynaklar 607–656)",
+    "dead": 587,
+    "survivors": 69,
+    "ultimatum": "17 Mart 1985: 48 saat; 19 Mart 20.00 sonrası İran üstündeki her uçak hedef",
+    "rescued": 215,
+    "planes": 2,
+    "turksOverland": "yaklaşık 500",
+    "years": 95,
+    "sources": [
+      "https://www.nippon.com/en/behind/l00127/",
+      "https://www.pref.wakayama.lg.jp/prefg/022300/kokusaikouryu/torikumi/tyukeykouryu.html",
+      "https://www.mofa.go.jp/mofaj/kaidan/s_abe2/130306_02.html",
+      "https://www.sabah.com.tr/yazarlar/ovur/2015/12/01/japonlari-tahrandan-kurtarma-operasyonu/amp"
+    ],
+    "notes": [
+      "bedenleriyle ısıtma sahnesi filmden; kullanılmadı",
+      "pilot adı tartışmalı (Orhan Suyolcu / Ali Özdemir); videoda ad yok",
+      "köylülerin tavuklarını vermesi zayıf kaynaklı; \"yiyeceklerini\" denildi",
+      "iki uçak: nippon.com ve ja.wikipedia"
+    ]
+  },
+  "caption": "1890'da Japonya'da bir köy, batan bir Osmanlı gemisinin denizcilerini kurtardı. 95 yıl sonra Türkiye bu iyiliği ödedi. 🇹🇷🇯🇵\n\n1890\nErtuğrul Fırkateyni Japonya'ya yaptığı dostluk ziyaretinden dönerken 16 Eylül 1890 gecesi bir tayfuna yakalandı ve Kuşimoto açıklarında, Kaşinozaki'de kayalara çarptı. 600'den fazla kişiden 587'si hayatını kaybetti. 69 denizci deniz fenerinin ışığına doğru uçurumu tırmandı. Kii-Ōshima köylüleri onlara yiyeceklerini ve kıyafetlerini verdi. Kurtulanlar Hiei ve Kongō gemileriyle İstanbul'a getirildi.\n\n1985\nİran-Irak Savaşı sırasında Saddam Hüseyin 17 Mart'ta, 48 saat sonra İran hava sahasındaki her uçağın hedef olacağını duyurdu. Tahran'da 200'den fazla Japon mahsur kaldı. 19 Mart'ta Türkiye'nin gönderdiği uçaklar 215 Japon vatandaşını çıkardı. Yaklaşık 500 Türk ülkeden karayoluyla ayrıldı.\n\nKuşimoto ile Mersin 1975'ten beri kardeş şehir.\n\nBunu iyiliği unutmayan birine gönder.\n\nKaynaklar: nippon.com, \"The Sinking of the Ertuğrul\" (2015); Wakayama Valiliği; Japonya Dışişleri Bakanlığı (2013); Sabah (2015).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#ertuğrul",
+    "#japonya",
+    "#tarih",
+    "#iyilik",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "95 yıl sonra ödenen iyilik: Ertuğrul Fırkateyni ve 1985 Tahran",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+25%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "1890'da Japonya'da bir köy, batan bir Osmanlı gemisinin denizcilerini kurtardı. Doksan beş yıl sonra Türkiye bu iyiliği iki uçakla ödedi.",
+        "tts": "bin sekiz yüz doksanda Japonya'da bir köy, batan bir Osmanlı gemisinin denizcilerini kurtardı. Doksan beş yıl sonra Türkiye bu iyiliği iki uçakla ödedi."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Osmanlı gemisi Japonya'da ne arıyor?",
+        "tts": "Nasıl yani? Osmanlı gemisi Japonya'da ne arıyor?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Ertuğrul Fırkateyni bir dostluk ziyaretinden dönüyor. Gece tayfuna yakalanıyor ve Kuşimoto açıklarında kayalara çarpıyor. Beş yüz seksen yedi denizci ölüyor. Altmış dokuz kişi bir deniz fenerinin ışığına doğru uçurumu tırmanıyor. Köylüler onlara yiyeceklerini ve kıyafetlerini veriyor.",
+        "tts": "Ertuğrul Fırkateyni bir dostluk ziyaretinden dönüyor. Gece tayfuna yakalanıyor ve Kuşimoto açıklarında kayalara çarpıyor. Beş yüz seksen yedi denizci ölüyor. Altmış dokuz kişi bir deniz fenerinin ışığına doğru uçurumu tırmanıyor. Köylüler onlara yiyeceklerini ve kıyafetlerini veriyor."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Peki iyilik nasıl ödeniyor?",
+        "tts": "Peki iyilik nasıl ödeniyor?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "1985, İran-Irak Savaşı. Saddam, kırk sekiz saat sonra İran üstündeki her uçağı vuracağını duyuruyor. Tahran'da iki yüzden fazla Japon mahsur kalıyor. Süre dolmadan iki Türk uçağı iniyor ve iki yüz on beş Japonu çıkarıyor.",
+        "tts": "bin dokuz yüz seksen beş, İran-Irak Savaşı. Saddam, kırk sekiz saat sonra İran üstündeki her uçağı vuracağını duyuruyor. Tahran'da iki yüzden fazla Japon mahsur kalıyor. Süre dolmadan iki Türk uçağı iniyor ve iki yüz on beş Japonu çıkarıyor."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Peki oradaki Türkler?",
+        "tts": "Peki oradaki Türkler?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Yaklaşık beş yüz Türk karadan, arabalarla çıkıyor. Bir iyilik doksan beş yıl unutulmadı. Bunu iyiliği unutmayan birine gönder.",
+        "tts": "Yaklaşık beş yüz Türk karadan, arabalarla çıkıyor. Bir iyilik doksan beş yıl unutulmadı. Bunu iyiliği unutmayan birine gönder."
+      }
+    ]
+  }
+}

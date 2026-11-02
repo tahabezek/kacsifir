@@ -1,0 +1,111 @@
+{
+  "id": "073",
+  "slug": "bir-omurde-kac-dolunay",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "SENİN SAYIN",
+  "kicker": "SENİN SAYIN · BU AKŞAM",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-24T05:30Z",
+  "question": [
+    "Bir ömürde",
+    "kaç dolunay?"
+  ],
+  "facts": {
+    "perYear": 12.37,
+    "lifetime": 971,
+    "at30Left": 622,
+    "fullMoonUTC": "2026-11-24T14:53Z",
+    "istanbulMoonrise": "17:08",
+    "larger": "6,5%",
+    "brighter": "13,5%",
+    "sources": [
+      "https://aa.usno.navy.mil/data/RS_OneDay",
+      "https://starwalk.space/en/news/full-moon-november",
+      "https://www.alomaliye.com/2026/07/29/kadinlarin-erkeklerden-5-2-yil-daha-uzun-yasadigi-goruldu-2/"
+    ],
+    "notes": [
+      "365,2422 / 29,5306 = 12,37 dolunay/yıl",
+      "78,5 × 12,37 = 971; 30 yaşında kalan ömür 50,3 yıl × 12,37 = 622",
+      "USNO: dolunay 14.53 UTC (17.53 TSİ); İstanbul Ay doğuşu 17.08",
+      "süper ay: Star Walk ve BBC Sky at Night; tanım kaynağa göre değişir"
+    ]
+  },
+  "caption": "Bu akşam dolunay var. Bir ömürde yalnızca yaklaşık 970 kez dolunay görebiliyorsun. 🌕\n\nHESAP\nAy her 29,5 günde bir dolar: yılda ortalama 12,37 dolunay. Türkiye'de ortalama ömür 78,5 yıl: yaklaşık 970 dolunay. 30 yaşındaysan önünde 620 kadar var; bulutlu geceleri ve hiç bakmadıklarımızı çıkarınca çok daha az.\n\nBU AKŞAM\nAy tam olarak 17.53'te dolunay evresinde. İstanbul'da 17.08'de doğuyor. Dünya'ya yakın olduğu için \"süper ay\" olarak anılıyor: ortalama bir dolunaydan yaklaşık %6,5 büyük ve %13,5 parlak görünüyor.\n\nKiminle bakmak istiyorsan bunu ona gönder.\n\nKaynaklar: ABD Deniz Gözlemevi (USNO); Star Walk; TÜİK, Hayat Tabloları 2023–2025 (29 Temmuz 2026).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#dolunay",
+    "#süperay",
+    "#ay",
+    "#gökyüzü",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Bir ömürde kaç dolunay görürsün? Bu akşam süper ay",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.55,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Bu akşam dolunay var. Ve bir ömürde yalnızca dokuz yüz yetmiş kez dolunay görebiliyorsun.",
+        "tts": "Bu akşam dolunay var. Ve bir ömürde yalnızca dokuz yüz yetmiş kez dolunay görebiliyorsun."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Her ay yok mu zaten?",
+        "tts": "Nasıl yani? Her ay yok mu zaten?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Var. Ay yirmi dokuz buçuk günde bir doluyor; yılda on iki, bazen on üç kez. Türkiye'de ortalama ömür yetmiş sekiz buçuk yıl. Toplam yaklaşık dokuz yüz yetmiş dolunay.",
+        "tts": "Var. Ay yirmi dokuz buçuk günde bir doluyor; yılda on iki, bazen on üç kez. Türkiye'de ortalama ömür yetmiş sekiz buçuk yıl. Toplam yaklaşık dokuz yüz yetmiş dolunay."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Ben otuz yaşındayım.",
+        "tts": "Ben otuz yaşındayım.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "O zaman önünde altı yüz yirmi kadar var. Bulutlu geceleri ve hiç bakmadıklarını çıkarınca çok daha az.",
+        "tts": "O zaman önünde altı yüz yirmi kadar var. Bulutlu geceleri ve hiç bakmadıklarını çıkarınca çok daha az."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Bu akşamkine bakacağım.",
+        "tts": "Bu akşamkine bakacağım.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Bu akşamki biraz daha büyük ve parlak; süper ay. İstanbul'da saat beşi sekiz geçe doğuyor. Kiminle bakmak istiyorsan bunu ona gönder.",
+        "tts": "Bu akşamki biraz daha büyük ve parlak; süper ay. İstanbul'da saat beşi sekiz geçe doğuyor. Kiminle bakmak istiyorsan bunu ona gönder."
+      }
+    ]
+  }
+}

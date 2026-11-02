@@ -26,7 +26,8 @@ const OKUNUS = [[/Ludger'ın/g, "Lüdjer'in"], [/Ludger Sylbaris/g, 'Lüdjer Sil
   [/Jeanne Calment/g, 'Jan Kalman'], [/Jeanne/g, 'Jan'], [/Jessop'un/g, "Cesup'un"], [/Jessop/g, 'Cesup'], [/Yamaguchi'yi/g, "Yamaguçi'yi"], [/Yamaguchi/g, 'Yamaguçi'],
   [/John Mainstone/g, 'Con Meynstoun'], [/Mainstone'u/g, "Meynstoun'u"], [/Mainstone/g, 'Meynstoun'], [/Michel Siffre/g, 'Mişel Sifr'], [/Siffre'nin/g, "Sifr'in"], [/Siffre/g, 'Sifr'],
   [/Juliane Koepcke'nin/g, "Yuliane Köpke'nin"], [/Juliane'yi/g, "Yuliane'yi"], [/Juliane/g, 'Yuliane'], [/Roy Sullivan/g, 'Roy Salivın'], [/Maričić/g, 'Mariçiç'], [/Cuvier/g, 'Küvye'],
-  [/Randy Gardner/g, 'Rendi Gardnır'], [/Clive Wearing/g, 'Klayv Viring'], [/Clive'ı/g, "Klayv'ı"], [/Clive/g, 'Klayv'], [/George/g, 'Corc'], [/Mauro Prosperi/g, 'Mauro Prosperi']];
+  [/Randy Gardner/g, 'Rendi Gardnır'], [/Clive Wearing/g, 'Klayv Viring'], [/Clive'ı/g, "Klayv'ı"], [/Clive/g, 'Klayv'], [/George/g, 'Corc'], [/Mauro Prosperi/g, 'Mauro Prosperi'],
+  [/Hachikō/g, 'Haçiko'], [/Shibuya/g, 'Şibuya'], [/Terry Fox/g, 'Teri Foks'], [/Hiroo Onoda/g, 'Hiro Onoda']];
 const okunus = s => OKUNUS.reduce((a, [r, b]) => a.replace(r, b), s);
 export const seslendir = s => okunus(s).replace(/(\d{1,3}(?:\.\d{3})+|\d+)(?:'(\p{L}+))?/gu, (_, num, ek) => sayi(Number(num.replace(/\./g, ''))) + (ek || ''));
 
@@ -35,14 +36,17 @@ const want = process.argv.slice(2);
 for (const block of md.split(/^### № /m).slice(1)) {
   const id = block.slice(0, 3);
   if (want.length && !want.includes(id)) continue;
+  // başlıkta "· sakin" varsa (Senin sayın serisi) iki ses de daha yavaş okur
+  const calm = /· sakin\s*$/.test(block.split('\n')[0]);
+  const VA = calm ? { ...VOICE_A, rate: '+14%' } : VOICE_A, VS = calm ? { ...VOICE_S, rate: '+8%' } : VOICE_S;
   const rows = [...block.matchAll(/^- \*\*([AS]):\*\* (.+)$/gm)].map(m => ({ who: m[1], text: m[2].trim() }));
-  const lines = rows.map((r, i) => ({ id: 'l' + String(i + 1).padStart(2, '0'), who: r.who, text: r.text, tts: seslendir(r.text.replace(/[“”"]/g, '')), ...(r.who === 'S' ? VOICE_S : {}) }));
+  const lines = rows.map((r, i) => ({ id: 'l' + String(i + 1).padStart(2, '0'), who: r.who, text: r.text, tts: seslendir(r.text.replace(/[“”"]/g, '')), ...(r.who === 'S' ? VS : {}) }));
   const gaps = {};
   lines.forEach((l, i) => { const nx = lines[i + 1]; gaps[l.id] = !nx ? 0.3 : l.who === 'S' ? 0.15 : nx.who === 'S' ? 0.2 : /^Yoksa/.test(nx.text) ? 0.45 : 0.3; });
   const file = fs.readdirSync('episodes').find(f => f.startsWith(id + '-') && f.endsWith('.json'));
   const f = path.join('episodes', file), ep = JSON.parse(fs.readFileSync(f, 'utf8'));
   ep.template = 'cizgi'; ep.gl = false; delete ep.samples;
-  ep.voice = { ...VOICE_A, tight: 0.28, gaps, lines };
+  ep.voice = { ...VA, tight: 0.28, gaps, lines };
   fs.writeFileSync(f, JSON.stringify(ep, null, 2) + '\n');
   console.log(id, lines.length, 'satır', lines.map(l => l.who).join(''));
 }

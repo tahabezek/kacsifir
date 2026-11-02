@@ -75,12 +75,19 @@ export function makeOverlay(ctx, tl, opts = {}) {
 
   // kanca başlığı: kare 0'dan tam; t1'de yukarı kayarak kırpılır
   // tin verilirse döngü sonunda yeniden girer (son kare = ilk kare)
-  function title(t, lines, t1, y0 = 470, tin = Infinity) {
+  // kicker: başlığın üstünde küçük seri etiketi ("SENİN SAYIN · ÖMÜR"); her kapakta aynı yerde durur
+  function title(t, lines, t1, y0 = 470, tin = Infinity, kicker = null) {
     const out = t >= tin ? 1 - ease.enter(seg(t, tin, 0.35)) : ease.exit(seg(t, t1, 0.3)); if (out >= 1) return;
     let q = 104; setFont(ctx, F.head(q));
     while (q > 70 && lines.some(l => ctx.measureText(l).width > SAFE.x1 - SAFE.x0)) { q -= 2; setFont(ctx, F.head(q)); }
     ctx.textAlign = 'center';
-    scrim(CX, y0 + q * 0.15 - out * q * 1.2, 1060, q * 3.4, 0.55 * (1 - out));
+    scrim(CX, y0 + q * 0.15 - out * q * 1.2 - (kicker ? 22 : 0), 1060, q * 3.4 + (kicker ? 60 : 0), 0.55 * (1 - out));
+    if (kicker) {
+      const ky = y0 - q * 1.02 - out * q * 1.2;
+      ctx.save(); ctx.beginPath(); ctx.rect(0, ky - 44, W, 60); ctx.clip();
+      setFont(ctx, F.mono(40)); shadowText(ctx, kicker, CX, ky, paper ? '#4A453C' : WHITE, 12);
+      ctx.restore(); setFont(ctx, F.head(q));
+    }
     lines.forEach((s, i) => {
       const y = y0 + i * (q * 1.02);
       ctx.save(); ctx.beginPath(); ctx.rect(0, y - q * 1.0, W, q * 1.3); ctx.clip();

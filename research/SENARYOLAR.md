@@ -376,3 +376,125 @@ Biçim: **A** anlatıcı, **S** soran. Ekrandaki yazıda sayılar rakamla, sesle
 - **A:** Saniyede on yedi kilometre. Bu hızla en yakın yıldıza varması yetmiş beş bin yıl sürerdi.
 - **S:** Uzay düşündüğümden çok daha büyük.
 - **A:** Sen Voyager'a bir mesaj yazsan ne derdin? Yoruma yaz.
+
+## 5. Yeni seriler (19 Kasım ve sonrası; research/rakip_icimdekikasvet.md)
+
+**Ders:** @icimdekikasvet 12 günde 6.800 takipçiye ulaştı; bizim hesabımız 42 gönderide 58 takipçide.
+- Fark izleyicinin kendi hayatına dokunan konularda ve "bunu ona gönder" çağrısında.
+- En iyi videoları tek fikirli, sakin ve 29–50 sn.
+
+**Sabah: "Senin sayın"**
+- İzleyicinin kendi hayatının sayısı.
+- Kahraman her filmde aynı kişi: "sen" kartı, hardal kapüşonlu.
+- 30–45 sn; anlatıcı +14 %, Soran +8 % (başlıkta "· sakin").
+- Son cümle belirli bir kişiye gönderme çağrısıdır.
+
+**Akşam: "Bir insan, bir sayı"**
+- Tek kişi, tek hikâye, 45–55 sn, iki ses.
+- Son cümle hikâyenin anlamını söyler ve belirli bir kişiye gönderme çağrısı yapar.
+
+### № 068 · Bir ömür kaç hafta · sakin
+- **A:** Türkiye'de ortalama bir insan ömrü 4.096 hafta. Hepsi bu tek sayfaya sığıyor.
+- **S:** Nasıl yani? Bütün ömrüm bu kadar mı?
+- **A:** TÜİK'e göre ortalama ömür yetmiş sekiz buçuk yıl. Her hafta bir kutu: altmış dört satır, altmış dört sütun.
+- **S:** Ben otuz yaşındayım. Kaçı gitti?
+- **A:** 1.565 kutu dolmuş bile. Ama sayfanın çoğu hâlâ boş.
+- **S:** Bu haftanın kutusu da şu an doluyor.
+- **A:** Bu haftanın kutusunu kiminle doldurmak istersin? Bunu ona gönder.
+
+### № 069 · Kalbin kaç kez attı · sakin
+- **A:** Sen bu cümleyi dinlerken kalbin üç kez attı.
+- **S:** Nasıl yani? Saydın mı?
+- **A:** Dinlenirken dakikada yetmiş kadar atıyor. Bir günde yüz bin kez. Sen uyurken, yemek yerken, bu videoyu izlerken hiç durmadan.
+- **S:** Peki bugüne kadar kaç kez attı?
+- **A:** Otuz yaşındaysan bir milyardan fazla. Bir ömür boyunca yaklaşık üç milyar kez atıyor ve bir kez bile izin istemiyor.
+- **S:** Bazı insanları görünce daha hızlı atıyor ama.
+- **A:** Kalbini en hızlı attıran kişi kimse, bunu ona gönder.
+
+### № 070 · Ömrünün kaç yılı ekranda · sakin
+- **A:** Bu hızla giderse ömrünün on altı yılı bir ekranın karşısında geçecek.
+- **S:** Nasıl yani? On altı yıl mı?
+- **A:** Türkiye'de insanlar haftada kırk bir saatten fazla internette. Bu, günde yaklaşık altı saat demek. Dünya ortalamasından haftada sekiz saat fazla.
+- **S:** O altı saatin çoğu da sosyal medya.
+- **A:** Günde üç buçuk saati. On beş yaşından başlayıp hesaplarsan ömrünün on altı yılı ekranda, bunun dokuz yıldan fazlası sosyal medyada geçiyor.
+- **S:** Şu an da ekrandayım.
+- **A:** O zaman bu video bitince telefonu bırak. Bunu en çok telefona bakan arkadaşına gönder.
+
+### № 071 · Annenle kaç gün kaldı · sakin
+- **A:** Annenle birlikte geçireceğin günlerin büyük kısmını belki de çoktan yaşadın.
+- **S:** Nasıl yani? Daha çok zamanımız var.
+- **A:** Çocukken onunla her gün birlikteydin. On sekiz yaşına kadar yaklaşık altı bin beş yüz gün. Sonra okul, iş, başka bir şehir geldi. Şimdi onu yılda belki on gün görüyorsun.
+- **S:** Bayramlarda ve tatilde, evet.
+- **A:** Annen altmış beş yaşındaysa, TÜİK'e göre önünde ortalama yirmi yıl var. Yirmi yıl, yılda on gün: iki yüz gün.
+- **S:** Altı bin beş yüz güne karşı iki yüz gün mü?
+- **A:** Bu hesap korkutmak için değil. O iki yüz günü artırmak senin elinde. Bunu kardeşine gönder; bu hafta annenizi birlikte arayın.
+
+### № 072 · Bir ömürde kaç kelime · sakin
+- **A:** Bir insan ömrü boyunca yaklaşık dört yüz elli milyon kelime konuşuyor.
+- **S:** Nasıl yani? Bunu kim saymış?
+- **A:** 2007'de psikologlar dört yüze yakın üniversite öğrencisinin üstüne küçük ses kaydediciler taktı. Cihaz gün boyunca birkaç dakikada bir kısa kayıt aldı. Sonuç: günde ortalama on altı bin kelime.
+- **S:** Kadınlar daha çok konuşuyordur.
+- **A:** Hayır. Kadınlar da erkekler de günde yaklaşık on altı bin kelime konuşuyor; fark yok denecek kadar az.
+- **S:** Peki bu kelimelerin kaçı gerçekten önemli?
+- **A:** Bugünkü on altı bin kelimenin yalnızca ikisini birine ayır: seni seviyorum. Bunu o kişiye gönder.
+
+### № 073 · Bir ömürde kaç dolunay · sakin
+- **A:** Bu akşam dolunay var. Ve bir ömürde yalnızca dokuz yüz yetmiş kez dolunay görebiliyorsun.
+- **S:** Nasıl yani? Her ay yok mu zaten?
+- **A:** Var. Ay yirmi dokuz buçuk günde bir doluyor; yılda on iki, bazen on üç kez. Türkiye'de ortalama ömür yetmiş sekiz buçuk yıl. Toplam yaklaşık dokuz yüz yetmiş dolunay.
+- **S:** Ben otuz yaşındayım.
+- **A:** O zaman önünde altı yüz yirmi kadar var. Bulutlu geceleri ve hiç bakmadıklarını çıkarınca çok daha az.
+- **S:** Bu akşamkine bakacağım.
+- **A:** Bu akşamki biraz daha büyük ve parlak; süper ay. İstanbul'da saat beşi sekiz geçe doğuyor. Kiminle bakmak istiyorsan bunu ona gönder.
+
+**Akşam serisi "Bir hikâye"** için kaçınılanlar (araştırma 2 Kasım):
+- Ertuğrul: köylülerin denizcileri bedenleriyle ısıttığı sahne filmden geliyor, kaynağı yok. 1985'teki pilotun Ali Özdemir olduğu tartışmalı.
+- Selimiye: "ustalık eserim" sözü kaynakta yok. Kubbe Ayasofya'nınkinden büyük değil, çapları neredeyse eşit.
+- Hachikō: 13 değil, yaklaşık 11 yaşında öldü. Yakitori şişleri onu öldürmedi.
+- Onoda: köylülerin "30 kişi öldürdü" iddiası kesin değil. Kahraman gibi anlatılmaz.
+- Terry Fox: Türkiye'de koşusu olduğu iddia edilmez.
+
+### № 074 · Doksan beş yıl sonra ödenen iyilik
+- **A:** 1890'da Japonya'da bir köy, batan bir Osmanlı gemisinin denizcilerini kurtardı. Doksan beş yıl sonra Türkiye bu iyiliği iki uçakla ödedi.
+- **S:** Nasıl yani? Osmanlı gemisi Japonya'da ne arıyor?
+- **A:** Ertuğrul Fırkateyni bir dostluk ziyaretinden dönüyor. Gece tayfuna yakalanıyor ve Kuşimoto açıklarında kayalara çarpıyor. Beş yüz seksen yedi denizci ölüyor. Altmış dokuz kişi bir deniz fenerinin ışığına doğru uçurumu tırmanıyor. Köylüler onlara yiyeceklerini ve kıyafetlerini veriyor.
+- **S:** Peki iyilik nasıl ödeniyor?
+- **A:** 1985, İran-Irak Savaşı. Saddam, kırk sekiz saat sonra İran üstündeki her uçağı vuracağını duyuruyor. Tahran'da iki yüzden fazla Japon mahsur kalıyor. Süre dolmadan iki Türk uçağı iniyor ve iki yüz on beş Japonu çıkarıyor.
+- **S:** Peki oradaki Türkler?
+- **A:** Yaklaşık beş yüz Türk karadan, arabalarla çıkıyor. Bir iyilik doksan beş yıl unutulmadı. Bunu iyiliği unutmayan birine gönder.
+
+### № 075 · On yıl bekleyen köpek
+- **A:** Bir köpek, sahibi öldükten sonra yaklaşık on yıl boyunca her gün aynı istasyonda onu bekledi.
+- **S:** Nasıl yani? On yıl mı?
+- **A:** 1924, Tokyo. Profesör Ueno'nun köpeği Hachikō her akşam Shibuya İstasyonu'na gidip trenden inen sahibini karşılıyor. Birlikte yalnızca on altı ay geçiriyorlar. Mayıs 1925'te profesör üniversitede ölüyor ve bir daha eve dönmüyor.
+- **S:** Köpek bunu bilmiyor mu?
+- **A:** Hachikō yine de her gün trenin geldiği saatte istasyona gidiyor. İlk yıllarda kimse onu umursamıyor, bazıları ona kötü davranıyor. 1932'de bir gazete hikâyesini yazıyor ve bütün Japonya onu tanıyor.
+- **S:** Sonunda ne oluyor?
+- **A:** 1934'te istasyonun önüne heykeli dikiliyor; açılışta kendisi de orada. Bir yıl sonra ölüyor. Dokuz yıl, dokuz buçuk ay. Bunu seni hep bekleyen birine gönder.
+
+### № 076 · Savaşı yirmi dokuz yıl bitmeyen asker
+- **A:** Bir Japon askeri Filipinler'de bir adada yirmi dokuz yıl savaştı. Oysa savaş, o ormana girdikten sekiz ay sonra bitmişti.
+- **S:** Nasıl yani? Kimse ona söylemedi mi?
+- **A:** Teğmen Hiroo Onoda'nın emri açık: asla teslim olma. Köylüler savaşın bittiğini yazan bir not bırakıyor; propaganda diyor. Uçaklardan bildiriler atılıyor; sahte diyor. Ailesinin mektuplarını ve fotoğraflarını atıyorlar; bunu da tuzak sanıyor.
+- **S:** Ormanda tek başına mı?
+- **A:** Üç arkadaşı var. Biri teslim oluyor, ikisi çatışmalarda ölüyor. 1972'den sonra tek başına kalıyor.
+- **S:** Peki sonunda nasıl ikna oluyor?
+- **A:** 1974'te genç bir Japon gezgin onu buluyor. Onoda tek bir şartla teslim olacağını söylüyor: emri veren komutanı gelip emri geri almalı. O komutan artık bir kitapçı. Adaya uçuyor ve emri okuyor. Onoda ancak o zaman silahını bırakıyor. Bunu inadını hiç bırakmayan birine gönder.
+
+### № 077 · Tek bacakla yüz kırk üç gün
+- **A:** Bir bacağını kansere kaybeden bir genç, yüz kırk üç gün boyunca her gün neredeyse bir maraton koştu.
+- **S:** Nasıl yani? Tek bacakla mı?
+- **A:** Kanada, 1977. Terry Fox on sekiz yaşında kemik kanseri oluyor ve sağ bacağı dizinin üstünden kesiliyor. Hastanede bir karar veriyor: Kanada'yı baştan sona koşacak ve her Kanadalıdan bir dolar toplayacak.
+- **S:** Protez bacakla mı?
+- **A:** Evet. Nisan 1980'de protezini Atlantik Okyanusu'na batırıp yola çıkıyor. Günde yaklaşık kırk iki kilometre. Yüz kırk üç günde beş bin üç yüz yetmiş üç kilometre koşuyor.
+- **S:** Bitirebiliyor mu?
+- **A:** Hayır. Kanser akciğerlerine yayılıyor ve durmak zorunda kalıyor. Ertesi yaz, yirmi iki yaşında ölüyor. Ama hedefini tutturuyor: her Kanadalı için bir dolar. Bugün onun adına koşulan yarışlar bir milyar doları geçti. Bunu pes etmek üzere olan birine gönder.
+
+### № 078 · Seksen üç yaşında en büyük eser
+- **A:** Seksen yaşını geçmiş bir mimar, hayatının en büyük eserini bitirdi: Edirne'deki Selimiye Camii.
+- **S:** Nasıl yani? Seksen yaşında mı?
+- **A:** Mimar Sinan önce bir yeniçeri; seferlerde köprüler ve gemiler yapıyor. Baş mimar olduğunda elli yaşına yaklaşmış. Sonraki elli yılda üç yüzü aşkın yapı inşa ediyor: camiler, köprüler, hamamlar, çeşmeler.
+- **S:** Peki neden en büyüğü Selimiye?
+- **A:** Yıllarca Ayasofya'nın kubbesine yetişmeyi hedefliyor. Selimiye'nin kubbesi otuz bir metreyi aşıyor ve sekiz ayağın üstünde duruyor. Kendi anlatımına göre sonunda Ayasofya'yı geçiyor. Cami bittiğinde Sinan seksen üç yaşında.
+- **S:** Sonra emekli mi oluyor?
+- **A:** Hayır. Doksan yaşını geçtikten sonra da çalışıyor; 1588'de ölene kadar baş mimar. Bunu yaşının çok geç olduğunu düşünen birine gönder.

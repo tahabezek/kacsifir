@@ -1,0 +1,111 @@
+{
+  "id": "076",
+  "slug": "savasi-bitmeyen-asker",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "BİR HİKÂYE",
+  "kicker": "BİR HİKÂYE · 29 YIL",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-21T17:30Z",
+  "question": [
+    "Savaşı 29 yıl",
+    "bitmeyen asker"
+  ],
+  "facts": {
+    "arrived": "1944-12-26, Lubang",
+    "warEnded": "1945-08-15",
+    "akatsu": "Eylül 1949 ayrıldı, 1950 teslim",
+    "shimada": "1954-05-07 öldü",
+    "kozuka": "1972-10-19 öldü",
+    "suzuki": "1974-02-20",
+    "taniguchi": "1974-03-09",
+    "surrender": "1974-03-10",
+    "years": "29 yıl (Aralık 1944–Mart 1974); teslimden sonra 28 yıl 6,5 ay",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Hiroo_Onoda",
+      "https://www.aljazeera.com/news/2014/1/17/imperial-japans-last-holdout-soldier-dies",
+      "https://news.usni.org/2014/01/17/japanese-soldier-surrendered-29-years-world-war-ii-dies-91"
+    ],
+    "notes": [
+      "\"30 kişi öldürdü\" iddiası tartışmalı; açıklamada köylülerin ölümüne yol açtığı belirtilir",
+      "kahraman gibi anlatılmaz"
+    ]
+  },
+  "caption": "Bir Japon askeri Filipinler'deki Lubang Adası'nda 29 yıl savaştı. Oysa savaş, o ormana girdikten 8 ay sonra bitmişti.\n\nHİKÂYE\nTeğmen Hiroo Onoda Aralık 1944'te adaya gönderildi. Emri açıktı: asla teslim olma. 1945'te köylülerin bıraktığı notu, uçaklardan atılan bildirileri ve 1952'de atılan aile mektuplarını tuzak sandı. Üç arkadaşından biri 1950'de teslim oldu; ikisi 1954'te ve 1972'de çatışmalarda öldü.\n\nTESLİM\n20 Şubat 1974'te genç Japon gezgin Norio Suzuki onu buldu. Onoda ancak eski komutanının gelip emri geri almasıyla teslim olacağını söyledi. Artık kitapçılık yapan Binbaşı Yoshimi Taniguchi 9 Mart 1974'te adaya gelip emri okudu. Onoda ertesi gün silahını bıraktı.\n\nBu hikâyenin karanlık bir yanı da var: Onoda ve arkadaşları ormanda geçen yıllarda adadaki köylülerle çatıştı ve ölümlere yol açtı. Sayı tartışmalı.\n\nBunu inadını hiç bırakmayan birine gönder.\n\nKaynaklar: Al Jazeera (2014); USNI News (2014); Wikipedia, \"Hiroo Onoda\".\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#tarih",
+    "#japonya",
+    "#savaş",
+    "#hikaye",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Savaş bittikten sonra 29 yıl ormanda savaşan asker: Hiroo Onoda",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+25%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Bir Japon askeri Filipinler'de bir adada yirmi dokuz yıl savaştı. Oysa savaş, o ormana girdikten sekiz ay sonra bitmişti.",
+        "tts": "Bir Japon askeri Filipinler'de bir adada yirmi dokuz yıl savaştı. Oysa savaş, o ormana girdikten sekiz ay sonra bitmişti."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Kimse ona söylemedi mi?",
+        "tts": "Nasıl yani? Kimse ona söylemedi mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Teğmen Hiroo Onoda'nın emri açık: asla teslim olma. Köylüler savaşın bittiğini yazan bir not bırakıyor; propaganda diyor. Uçaklardan bildiriler atılıyor; sahte diyor. Ailesinin mektuplarını ve fotoğraflarını atıyorlar; bunu da tuzak sanıyor.",
+        "tts": "Teğmen Hiro Onoda'nın emri açık: asla teslim olma. Köylüler savaşın bittiğini yazan bir not bırakıyor; propaganda diyor. Uçaklardan bildiriler atılıyor; sahte diyor. Ailesinin mektuplarını ve fotoğraflarını atıyorlar; bunu da tuzak sanıyor."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Ormanda tek başına mı?",
+        "tts": "Ormanda tek başına mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Üç arkadaşı var. Biri teslim oluyor, ikisi çatışmalarda ölüyor. 1972'den sonra tek başına kalıyor.",
+        "tts": "Üç arkadaşı var. Biri teslim oluyor, ikisi çatışmalarda ölüyor. bin dokuz yüz yetmiş ikiden sonra tek başına kalıyor."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Peki sonunda nasıl ikna oluyor?",
+        "tts": "Peki sonunda nasıl ikna oluyor?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "1974'te genç bir Japon gezgin onu buluyor. Onoda tek bir şartla teslim olacağını söylüyor: emri veren komutanı gelip emri geri almalı. O komutan artık bir kitapçı. Adaya uçuyor ve emri okuyor. Onoda ancak o zaman silahını bırakıyor. Bunu inadını hiç bırakmayan birine gönder.",
+        "tts": "bin dokuz yüz yetmiş dörtte genç bir Japon gezgin onu buluyor. Onoda tek bir şartla teslim olacağını söylüyor: emri veren komutanı gelip emri geri almalı. O komutan artık bir kitapçı. Adaya uçuyor ve emri okuyor. Onoda ancak o zaman silahını bırakıyor. Bunu inadını hiç bırakmayan birine gönder."
+      }
+    ]
+  }
+}

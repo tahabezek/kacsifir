@@ -1,0 +1,107 @@
+{
+  "id": "071",
+  "slug": "annenle-kac-gun-kaldi",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "SENİN SAYIN",
+  "kicker": "SENİN SAYIN · AİLE",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-22T05:30Z",
+  "question": [
+    "Annenle",
+    "kaç gün kaldı?"
+  ],
+  "facts": {
+    "childhoodDays": 6574,
+    "perYear": 10,
+    "mother65FemaleRemaining": 20,
+    "daysLeft": 200,
+    "sources": [
+      "https://www.alomaliye.com/2026/07/29/kadinlarin-erkeklerden-5-2-yil-daha-uzun-yasadigi-goruldu-2/",
+      "https://waitbutwhy.com/2015/12/the-tail-end.html"
+    ],
+    "notes": [
+      "18 × 365,25 = 6.574 = \"yaklaşık 6.500 gün\"",
+      "TÜİK 2023–2025: 65 yaşındaki kadının kalan ömrü 20,0 yıl",
+      "varsayım: yılda 10 gün (Tim Urban, The Tail End, 2015)",
+      "esin: Tim Urban, Wait But Why, \"The Tail End\""
+    ]
+  },
+  "caption": "Annenle geçireceğin günlerin büyük kısmını belki de çoktan yaşadın. 🤍\n\nHESAP\n18 yaşına kadar annenle neredeyse her gün birlikteydin: yaklaşık 6.500 gün. Sonra okul, iş, başka bir şehir. Diyelim ki artık onu yılda 10 gün görüyorsun.\n\nTÜİK'e göre 65 yaşındaki bir kadının önünde ortalama 20 yıl var. 20 yıl × 10 gün = 200 gün.\n\nBu hesap Tim Urban'ın \"The Tail End\" yazısından esinlendi. Korkutmak için değil: o 200 günü artırmak senin elinde.\n\nKÜÇÜK BİR EGZERSİZ\nBu hafta annene bir saat ayır. Telefonda değil, yanında.\n\nBunu kardeşine gönder; bu hafta annenizi birlikte arayın.\n\nKaynaklar: TÜİK, Hayat Tabloları 2023–2025 (29 Temmuz 2026); Tim Urban, \"The Tail End\", Wait But Why (2015).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#anne",
+    "#aile",
+    "#zaman",
+    "#hayat",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Annenle kaç gün kaldı?",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.45,
+      "l05": 0.5,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Annenle birlikte geçireceğin günlerin büyük kısmını belki de çoktan yaşadın.",
+        "tts": "Annenle birlikte geçireceğin günlerin büyük kısmını belki de çoktan yaşadın."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Daha çok zamanımız var.",
+        "tts": "Nasıl yani? Daha çok zamanımız var.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Çocukken onunla her gün birlikteydin. On sekiz yaşına kadar yaklaşık altı bin beş yüz gün. Sonra okul, iş, başka bir şehir geldi. Şimdi onu yılda belki on gün görüyorsun.",
+        "tts": "Çocukken onunla her gün birlikteydin. On sekiz yaşına kadar yaklaşık altı bin beş yüz gün. Sonra okul, iş, başka bir şehir geldi. Şimdi onu yılda belki on gün görüyorsun."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Bayramlarda ve tatilde, evet.",
+        "tts": "Bayramlarda ve tatilde, evet.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Annen altmış beş yaşındaysa, TÜİK'e göre önünde ortalama yirmi yıl var. Yirmi yıl, yılda on gün: iki yüz gün.",
+        "tts": "Annen altmış beş yaşındaysa, TÜİK'e göre önünde ortalama yirmi yıl var. Yirmi yıl, yılda on gün: iki yüz gün."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Altı bin beş yüz güne karşı iki yüz gün mü?",
+        "tts": "Altı bin beş yüz güne karşı iki yüz gün mü?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Bu hesap korkutmak için değil. O iki yüz günü artırmak senin elinde. Bunu kardeşine gönder; bu hafta annenizi birlikte arayın.",
+        "tts": "Bu hesap korkutmak için değil. O iki yüz günü artırmak senin elinde. Bunu kardeşine gönder; bu hafta annenizi birlikte arayın."
+      }
+    ]
+  }
+}

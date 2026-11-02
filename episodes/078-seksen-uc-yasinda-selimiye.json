@@ -1,0 +1,114 @@
+{
+  "id": "078",
+  "slug": "seksen-uc-yasinda-selimiye",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "BİR HİKÂYE",
+  "kicker": "BİR HİKÂYE · SELİMİYE",
+  "bpm": 100,
+  "coverAt": 0,
+  "publishAt": "2026-11-23T17:30Z",
+  "question": [
+    "83 yaşında",
+    "en büyük eseri"
+  ],
+  "facts": {
+    "born": "1491 öncesi (Ağırnas, Kayseri)",
+    "chief": "1537 sonrası, ~48 yaşında",
+    "works": "~350–452 (kaynağa göre)",
+    "selimiye": "1568–1574",
+    "ageAtCompletion": "yaklaşık 83 (TDV)",
+    "domeD": "31,30 m",
+    "domeH": "42,25 m",
+    "minaret": "70,89 m",
+    "piers": 8,
+    "unesco": 2011,
+    "died": "1588",
+    "sources": [
+      "https://islamansiklopedisi.org.tr/sinan",
+      "https://islamansiklopedisi.org.tr/selimiye-camii-ve-kulliyesi--edirne",
+      "https://whc.unesco.org/en/list/1366"
+    ],
+    "notes": [
+      "\"ustalık eserim\" sözü kaynakta yok; kullanılmadı",
+      "Ayasofya kubbesi ~31 m (eliptik), tepe 55,6 m; Selimiye çapı neredeyse aynı: \"kendi anlatımına göre geçiyor\" denildi",
+      "eser sayısı: \"üç yüzü aşkın\""
+    ]
+  },
+  "caption": "Seksen yaşını geçmiş bir mimar, hayatının en büyük eserini bitirdi: Edirne'deki Selimiye Camii. 🕌\n\nHİKÂYE\nMimar Sinan Kayseri'nin Ağırnas köyünde doğdu, yeniçeri oldu ve seferlerde köprüler, gemiler yaptı. 1537'den sonra, 50 yaşına yaklaşırken baş mimar oldu. Kaynaklara göre 350 ile 450 arasında yapıya imzasını attı: camiler, köprüler, hamamlar, çeşmeler.\n\nSELİMİYE\n1568–1574 arasında yapıldı. Kubbesinin çapı 31,30 m; sekiz ayağın üstünde duruyor. Minareleri 70,89 m. Sinan kendi anlatımında bu kubbeyle Ayasofya'yı geçtiğini söyler; iki kubbenin çapı neredeyse aynıdır. Cami bittiğinde Sinan yaklaşık 83 yaşındaydı. 2011'de UNESCO Dünya Mirası Listesi'ne girdi.\n\nSinan 1588'de, ölene kadar baş mimar olarak çalıştı. Mezarı Süleymaniye Külliyesi'nin bir köşesindeki küçük türbededir.\n\nBunu yaşının çok geç olduğunu düşünen birine gönder.\n\nKaynaklar: TDV İslâm Ansiklopedisi, \"Sinan\" ve \"Selimiye Camii ve Külliyesi\"; UNESCO (1366).\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#mimarsinan",
+    "#selimiye",
+    "#edirne",
+    "#tarih",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Mimar Sinan 83 yaşında Selimiye'yi bitirdi",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+25%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Seksen yaşını geçmiş bir mimar, hayatının en büyük eserini bitirdi: Edirne'deki Selimiye Camii.",
+        "tts": "Seksen yaşını geçmiş bir mimar, hayatının en büyük eserini bitirdi: Edirne'deki Selimiye Camii."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Nasıl yani? Seksen yaşında mı?",
+        "tts": "Nasıl yani? Seksen yaşında mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Mimar Sinan önce bir yeniçeri; seferlerde köprüler ve gemiler yapıyor. Baş mimar olduğunda elli yaşına yaklaşmış. Sonraki elli yılda üç yüzü aşkın yapı inşa ediyor: camiler, köprüler, hamamlar, çeşmeler.",
+        "tts": "Mimar Sinan önce bir yeniçeri; seferlerde köprüler ve gemiler yapıyor. Baş mimar olduğunda elli yaşına yaklaşmış. Sonraki elli yılda üç yüzü aşkın yapı inşa ediyor: camiler, köprüler, hamamlar, çeşmeler."
+      },
+      {
+        "id": "l04",
+        "who": "S",
+        "text": "Peki neden en büyüğü Selimiye?",
+        "tts": "Peki neden en büyüğü Selimiye?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Yıllarca Ayasofya'nın kubbesine yetişmeyi hedefliyor. Selimiye'nin kubbesi otuz bir metreyi aşıyor ve sekiz ayağın üstünde duruyor. Kendi anlatımına göre sonunda Ayasofya'yı geçiyor. Cami bittiğinde Sinan seksen üç yaşında.",
+        "tts": "Yıllarca Ayasofya'nın kubbesine yetişmeyi hedefliyor. Selimiye'nin kubbesi otuz bir metreyi aşıyor ve sekiz ayağın üstünde duruyor. Kendi anlatımına göre sonunda Ayasofya'yı geçiyor. Cami bittiğinde Sinan seksen üç yaşında."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Sonra emekli mi oluyor?",
+        "tts": "Sonra emekli mi oluyor?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Hayır. Doksan yaşını geçtikten sonra da çalışıyor; 1588'de ölene kadar baş mimar. Bunu yaşının çok geç olduğunu düşünen birine gönder.",
+        "tts": "Hayır. Doksan yaşını geçtikten sonra da çalışıyor; bin beş yüz seksen sekizde ölene kadar baş mimar. Bunu yaşının çok geç olduğunu düşünen birine gönder."
+      }
+    ]
+  }
+}

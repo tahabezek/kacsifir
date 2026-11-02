@@ -1,89 +1,75 @@
 {
   "id": "042",
   "slug": "aya-merdivenle",
-  "template": "merdiven",
+  "template": "cizgi",
   "serial": "№ 042 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-09T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.4,
-      "l02": 0.6,
-      "l03": 0.4,
-      "l04": 0.4,
-      "l05": 0.4,
-      "l06": 0.4,
-      "l07": 0.9,
-      "l08": 0.6,
-      "l09": 0.5
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Ay'a merdivenle çıksan kaç yıl sürer?",
-        "text": "Ay'a merdivenle çıksan kaç yıl sürer?",
-        "rate": "+6%",
-        "pitch": "+3Hz"
+        "who": "A",
+        "text": "Ay'a merdivenle çıkmaya kalksan, hiç durmadan bile yetmiş iki yıl sürerdi. Neredeyse bir insan ömrü.",
+        "tts": "Ay'a merdivenle çıkmaya kalksan, hiç durmadan bile yetmiş iki yıl sürerdi. Neredeyse bir insan ömrü."
       },
       {
         "id": "l02",
-        "tts": "Her basamak on yedi santim olsun. Saniyede bir basamak çıkıyorsun ve hiç durmuyorsun.",
-        "text": "Her basamak 17 cm olsun. Saniyede bir basamak çıkıyorsun ve hiç durmuyorsun.",
-        "rate": "+8%"
+        "who": "S",
+        "text": "Nasıl yani? Hiç durmadan mı?",
+        "tts": "Nasıl yani? Hiç durmadan mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "On dört buçuk saat sonra Everest'in zirvesini geçiyorsun.",
-        "text": "14,5 saat sonra Everest'in zirvesini geçiyorsun.",
-        "rate": "+10%"
+        "who": "A",
+        "text": "Her basamak on yedi santim, saniyede bir basamak. On dört buçuk saat sonra Everest'in zirvesini geçiyorsun. Bir hafta sonra uzayın sınırındasın. Uzay İstasyonu'na yaklaşık bir ayda varıyorsun. Ama Ay için iki milyardan fazla basamak gerekiyor.",
+        "tts": "Her basamak on yedi santim, saniyede bir basamak. On dört buçuk saat sonra Everest'in zirvesini geçiyorsun. Bir hafta sonra uzayın sınırındasın. Uzay İstasyonu'na yaklaşık bir ayda varıyorsun. Ama Ay için iki milyardan fazla basamak gerekiyor."
       },
       {
         "id": "l04",
-        "tts": "Bir hafta sonra uzayın sınırındasın.",
-        "text": "Bir hafta sonra uzayın sınırındasın.",
-        "rate": "+8%"
+        "who": "S",
+        "text": "Yemek molası bile yok mu?",
+        "tts": "Yemek molası bile yok mu?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Uluslararası Uzay İstasyonu'na yaklaşık bir ayda varıyorsun.",
-        "text": "Uluslararası Uzay İstasyonu'na yaklaşık bir ayda varıyorsun.",
-        "rate": "+10%"
+        "who": "A",
+        "text": "Hiç yok. Oysa Apollo 11 aynı yolu yalnızca üç günde almıştı.",
+        "tts": "Hiç yok. Oysa Apollo on bir aynı yolu yalnızca üç günde almıştı."
       },
       {
         "id": "l06",
-        "tts": "GPS uydularının yörüngesine dört yıla yakın bir sürede ulaşıyorsun.",
-        "text": "GPS uydularının yörüngesine dört yıla yakın bir sürede ulaşıyorsun.",
-        "rate": "+10%"
+        "who": "S",
+        "text": "Ben asansörü beklerim.",
+        "tts": "Ben asansörü beklerim.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Ay'a ise iki milyar iki yüz milyondan fazla basamaktan sonra varıyorsun.",
-        "text": "Ay'a ise 2,2 milyardan fazla basamaktan sonra varıyorsun.",
-        "rate": "+6%"
-      },
-      {
-        "id": "l08",
-        "tts": "Tam yetmiş iki yıl sonra.",
-        "text": "Tam 72 yıl sonra.",
-        "rate": "-6%",
-        "pitch": "-4Hz"
-      },
-      {
-        "id": "l09",
-        "tts": "Neredeyse bir insan ömrü.",
-        "text": "Neredeyse bir insan ömrü.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l10",
-        "tts": "Apollo on bir ise bu yolu üç günde almıştı.",
-        "text": "Apollo 11 ise bu yolu 3 günde almıştı.",
-        "rate": "+6%",
-        "pitch": "+2Hz"
+        "who": "A",
+        "text": "Sen Ay'a kaç yaşında varırdın? Yoruma yaz.",
+        "tts": "Sen Ay'a kaç yaşında varırdın? Yoruma yaz."
       }
     ]
   },
@@ -110,5 +96,6 @@
     "#ilginçbilgiler",
     "#bilim"
   ],
-  "ytTitle": "Ay'a merdivenle çıksan kaç yıl sürer? 2,26 milyar basamak"
+  "ytTitle": "Ay'a merdivenle çıksan kaç yıl sürer? 2,26 milyar basamak",
+  "gl": false
 }

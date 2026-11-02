@@ -1,74 +1,75 @@
 {
   "id": "046",
   "slug": "deste-evrende-ilk-kez",
-  "template": "deste",
+  "template": "cizgi",
   "serial": "№ 046 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-13T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.6,
-      "l02": 0.4,
-      "l03": 0.4,
-      "l04": 0.6,
-      "l05": 0.5,
-      "l06": 0.8,
-      "l07": 1.6
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Bu desteyi her karıştırdığında, büyük ihtimalle evrende ilk kez görülen bir sıra yaratıyorsun.",
-        "text": "Bu desteyi her karıştırdığında, büyük ihtimalle evrende ilk kez görülen bir sıra yaratıyorsun.",
-        "rate": "+6%",
-        "pitch": "+2Hz"
+        "who": "A",
+        "text": "Bir deste kartı her karıştırdığında, büyük ihtimalle evrende daha önce hiç görülmemiş bir sıra yaratıyorsun.",
+        "tts": "Bir deste kartı her karıştırdığında, büyük ihtimalle evrende daha önce hiç görülmemiş bir sıra yaratıyorsun."
       },
       {
         "id": "l02",
-        "tts": "Elli iki kart kaç farklı sırada dizilebilir?",
-        "text": "52 kart kaç farklı sırada dizilebilir?",
-        "rate": "+8%"
+        "who": "S",
+        "text": "Nasıl yani? Sadece elli iki kart var.",
+        "tts": "Nasıl yani? Sadece elli iki kart var.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "İlk kart için elli iki seçenek var, ikincisi için elli bir, sonra elli...",
-        "text": "İlk kart için 52 seçenek var, ikincisi için 51, sonra 50…",
-        "rate": "+10%"
+        "who": "A",
+        "text": "İlk kart için elli iki seçenek var, ikincisi için elli bir, sonra elli. Hepsini çarpınca altmış sekiz basamaklı bir sayı çıkıyor. Şimdi Dünya'daki herkes Büyük Patlama'dan beri her saniye bir deste karıştırsın.",
+        "tts": "İlk kart için elli iki seçenek var, ikincisi için elli bir, sonra elli. Hepsini çarpınca altmış sekiz basamaklı bir sayı çıkıyor. Şimdi Dünya'daki herkes Büyük Patlama'dan beri her saniye bir deste karıştırsın."
       },
       {
         "id": "l04",
-        "tts": "Hepsini çarpınca altmış sekiz basamaklı bir sayı çıkıyor.",
-        "text": "Hepsini çarpınca 68 basamaklı bir sayı çıkıyor.",
-        "rate": "+6%"
+        "who": "S",
+        "text": "O zaman hepsi denenmiş olmaz mı?",
+        "tts": "O zaman hepsi denenmiş olmaz mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Şimdi Dünya'daki herkes, Büyük Patlama'dan beri her saniye bir deste karıştırsın.",
-        "text": "Şimdi Dünya'daki herkes, Büyük Patlama'dan beri her saniye bir deste karıştırsın.",
-        "rate": "+8%"
+        "who": "A",
+        "text": "Olmaz. O kadar karıştırma bile olası sıraların yanında sıfır virgül, ardından kırk sıfır kalıyor.",
+        "tts": "Olmaz. O kadar karıştırma bile olası sıraların yanında sıfır virgül, ardından kırk sıfır kalıyor."
       },
       {
         "id": "l06",
-        "tts": "Bütün bu karıştırmaların olası sıralara oranı:",
-        "text": "Bütün bu karıştırmaların olası sıralara oranı:",
-        "rate": "+6%"
+        "who": "S",
+        "text": "Yani elimdeki deste tarihte bir ilk.",
+        "tts": "Yani elimdeki deste tarihte bir ilk.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "sıfır virgül, ardından kırk sıfır daha.",
-        "text": "sıfır virgül, ardından kırk sıfır daha.",
-        "rate": "-4%",
-        "pitch": "-4Hz"
-      },
-      {
-        "id": "l08",
-        "tts": "Yani elindeki sıra, büyük ihtimalle daha önce hiç var olmadı.",
-        "text": "Yani elindeki sıra, büyük ihtimalle daha önce hiç var olmadı.",
-        "rate": "+4%",
-        "pitch": "-2Hz"
+        "who": "A",
+        "text": "Sen en son ne zaman deste karıştırdın? Yoruma yaz.",
+        "tts": "Sen en son ne zaman deste karıştırdın? Yoruma yaz."
       }
     ]
   },
@@ -90,5 +91,6 @@
     "#bilim",
     "#iskambil"
   ],
-  "ytTitle": "Bu desteyi karıştırdığında evrende ilk kez görülen bir sıra yaratıyorsun"
+  "ytTitle": "Bu desteyi karıştırdığında evrende ilk kez görülen bir sıra yaratıyorsun",
+  "gl": false
 }

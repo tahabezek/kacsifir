@@ -45,7 +45,7 @@ export async function film(A) {
   const stands = (g, z0, x0 = -12, x1 = 12) => { for (let r = 0; r < 8; r++) box(x1 - x0, 0.55, 0.8, '#26282E', (x0 + x1) / 2, 0.5 + r * 0.55, z0 - r * 0.8, g); };
 
   // ═══ 0 · kulübe (Bangu, gece) ═══
-  const t0 = tableau('kulube', { x: X(0), floorMat: grass, spots: [{ x: 1.5, h: 6, z: 3, tx: 0, tz: 0, I: 70, angle: 0.4 }, { x: 2.6, h: 5, z: 0, tx: 2.6, tz: -2.2, I: 40, angle: 0.35, shadow: false }], fog: ['#07090C', 0.03], hemi: ['#3A4A60', '#101410', 0.4] });
+  const t0 = tableau('kulube', { x: X(0), floorMat: grass, spots: [{ x: 1.5, h: 6, z: 3, tx: 0, tz: 0, I: 70, angle: 0.4 }, { x: 2.6, h: 5, z: 0, tx: 2.6, tz: -2.2, I: 40, angle: 0.35, shadow: false }, { x: 0.7, h: 1.7, z: 2.4, tx: 0.1, tz: 0, I: 9, angle: 0.55, color: '#FFE8CC', shadow: false }, { x: 1.0, h: 1.9, z: 1.8, tx: 1.35, tz: -0.15, I: 22, angle: 0.5, shadow: false }], fog: ['#07090C', 0.03], hemi: ['#4A5A72', '#101410', 0.7] });
   floodBokeh(t0.g); box(4.2, 0.08, 0.5, '#5A6068', 0, 0.48, 0, t0.g); box(4.4, 1.2, 0.08, '#20242A', 0, 0.9, -0.45, t0.g); box(4.4, 0.08, 1.4, '#20242A', 0, 2.1, 0.1, t0.g);
   const mot0 = motes(t0, 80);
   const kaiser0 = character('kaiser', t0, poseTrack([[0, POSE.sitHunched(), FACE.neutral], [w('l01', 'Kaiser') - 0.2, POSE.sit(), FACE.surprise]]));
@@ -148,7 +148,7 @@ export async function film(A) {
   // hareketli karakterler: act(t) → { pos, rot, pose, face } (tablonun yerel koordinatında)
   const setAct = (f, fn) => { f.act = fn; };
   setAct(kaiser0, t => { const p = poseTrack([[0, POSE.sit(), { ...FACE.neutral, look: -0.4 }], [w('l01', 'Kaiser') - 0.2, POSE.sit(), FACE.surprise]])(t); return { pos: [0, 0.06, 0], rot: 0.2, ...p }; });
-  setAct(patron, t => ({ pos: [2.6, 0, -2.2], rot: -0.5, ...patTrack(t) }));
+  setAct(patron, t => ({ pos: [1.35, 0, -0.15], rot: -0.35, ...patTrack(t) }));
   setAct(kaiser1, t => { const u = ease.state(seg(t, T.l02, w('l02', 'Ama') - T.l02)); const p = k1pose(t); return { pos: [lerp(-2.6, 0.4, u), 0, 0.3], rot: u < 1 && t < w('l02', 'Ama') ? Math.PI / 2 : 0.2, ...p }; });
   setAct(kaiser2, t => { const u = seg(t, T.l03 - 0.3, w('l03', 'sakatlanmış') - T.l03 + 0.3); const p = k2pose(t); const down = seg(t, w('l03', 'sakatlanmış'), 0.5); return { pos: [lerp(-1.6, -0.4, ease.state(u)), 0, 0.2], rot: Math.PI / 2, rotZ: 0, rotX: -1.4 * ease.exit(down), ...p }; });
   setAct(kaiser3, t => { const talk = 0.5 + 0.5 * Math.sin(t * 13); return { pos: [0, 0.06, -0.5], rot: 0, pose: POSE.phone(), face: { ...FACE.grin, open: 0.25 + 0.6 * talk * talk } }; });
@@ -165,7 +165,7 @@ export async function film(A) {
   const cam = [
     [0, ...F0, null, 0.02],
     [0.6, P(0, 0.44, 1.44, 1.42), P(0, 0.05, 1.18, 0), 36, null, 0.02],
-    [w('l01', 'Patron') - 0.2, P(0, 0.6, 1.6, 2.8), P(0, 1.6, 1.4, -1.4), 42],          // arkada telsizli patron
+    [w('l01', 'Patron') - 0.2, P(0, 0.3, 1.55, 2.6), P(0, 0.9, 1.35, -0.1), 42],          // arkada telsizli patron
     [T.l01end, P(0, 0.45, 1.45, 1.35), P(0, 0.05, 1.4, 0), 34, null, 0.02],
     ...cut(T.l02 - 0.15, [P(0, 0.44, 1.45, 1.32), P(0, 0.05, 1.4, 0), 34], [P(1, -1.8, 1.5, 3.4), P(1, -1.2, 1.35, -0.2), 42]),
     [w('l02', 'Ama') - 0.3, P(1, 0.6, 1.5, 3.0), P(1, 0.3, 1.35, -0.2), 42],

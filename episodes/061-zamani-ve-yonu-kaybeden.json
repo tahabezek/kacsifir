@@ -1,84 +1,92 @@
 {
   "id": "061",
   "slug": "zamani-ve-yonu-kaybeden",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 061 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-11T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.8,
-      "l02": 0.6,
-      "l03": 0.9,
-      "l04": 1.1,
-      "l05": 0.8,
-      "l06": 0.9,
-      "l07": 0.9,
-      "l08": 0.9,
-      "l09": 0.9,
-      "l10": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Saatini çıkardı ve yerin yüz otuz metre altına indi.",
-        "text": "Saatini çıkardı ve yerin 130 metre altına indi.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Saatsiz bir mağarada yaşarken hiç fark etmeden yirmi beş günü kaybeden bir adam mı?",
+        "tts": "Hangisi daha şaşırtıcı? Saatsiz bir mağarada yaşarken hiç fark etmeden yirmi beş günü kaybeden bir adam mı?"
       },
       {
         "id": "l02",
-        "tts": "Bin dokuz yüz altmış iki. Fransız mağaracı Mişel Sifr yirmi üç yaşındaydı. Bir buzulun yanındaki mağarada, saatsiz ve takvimsiz yaşamaya karar verdi.",
-        "text": "1962. Fransız mağaracı Michel Siffre 23 yaşındaydı. Bir buzulun yanındaki mağarada, saatsiz ve takvimsiz yaşamaya karar verdi."
+        "who": "S",
+        "text": "Yirmi beş günü nasıl kaybetmiş?",
+        "tts": "Yirmi beş günü nasıl kaybetmiş?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Ayakları hep ıslaktı, vücut sıcaklığı otuz dört dereceye kadar düştü. Yukarıdaki ekibin ona saati söylemesi yasaktı.",
-        "text": "Ayakları hep ıslaktı, vücut sıcaklığı 34 dereceye kadar düştü. Yukarıdaki ekibin ona saati söylemesi yasaktı."
+        "who": "A",
+        "text": "1962. Michel Siffre yerin yüz otuz metre altındaki bir buzula iniyor. Saati yok, güneşi görmüyor. Uyanınca ve yatarken yukarıdaki ekibi arıyor; ekip ona saati asla söylemiyor. Vücut sıcaklığı otuz dört dereceye düşüyor. Ekip deneyin bittiğini söylediğinde Siffre'nin takvimine göre daha 20 Ağustos. Gerçek tarih 14 Eylül.",
+        "tts": "bin dokuz yüz altmış iki. Mişel Sifr yerin yüz otuz metre altındaki bir buzula iniyor. Saati yok, güneşi görmüyor. Uyanınca ve yatarken yukarıdaki ekibi arıyor; ekip ona saati asla söylemiyor. Vücut sıcaklığı otuz dört dereceye düşüyor. Ekip deneyin bittiğini söylediğinde Sifr'in takvimine göre daha yirmi Ağustos. Gerçek tarih on dört Eylül."
       },
       {
         "id": "l04",
-        "tts": "Ekip deneyin bittiğini söylediğinde, onun takvimine göre daha yirmi Ağustos'tu. Oysa günlerden on dört Eylül'dü.",
-        "text": "Ekip deneyin bittiğini söylediğinde, onun takvimine göre daha 20 Ağustos'tu. Oysa günlerden 14 Eylül'dü.",
-        "rate": "+4%"
+        "who": "S",
+        "text": "Beyninin saati durmuş.",
+        "tts": "Beyninin saati durmuş.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Bin dokuz yüz doksan dört. İtalyan polis memuru Mauro Prosperi, Sahra'da bir ultramaratonda koşuyordu. Kırk altı derecede bir kum fırtınası çıktı.",
-        "text": "1994. İtalyan polis memuru Mauro Prosperi, Sahra'da bir ultramaratonda koşuyordu. 46 derecede bir kum fırtınası çıktı."
+        "who": "A",
+        "text": "Yoksa çölde kaybolup dokuz gün sonra başka bir ülkede bulunan bir maratoncu mu?",
+        "tts": "Yoksa çölde kaybolup dokuz gün sonra başka bir ülkede bulunan bir maratoncu mu?"
       },
       {
         "id": "l06",
-        "tts": "Fırtına dindiğinde ne işaretler kalmıştı ne de başka koşucular. Kendi anlattığına göre terk edilmiş bir türbeye sığındı ve yarasaları yiyerek hayatta kaldı.",
-        "text": "Fırtına dindiğinde ne işaretler kalmıştı ne de başka koşucular. Kendi anlattığına göre terk edilmiş bir türbeye sığındı ve yarasaları yiyerek hayatta kaldı."
+        "who": "S",
+        "text": "Başka bir ülkede mi?",
+        "tts": "Başka bir ülkede mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Dokuzuncu gün göçebe bir kız onu gördü ve korkuyla kaçtı. Prosperi farkında olmadan Cezayir'e geçmişti.",
-        "text": "Dokuzuncu gün göçebe bir kız onu gördü ve korkuyla kaçtı. Prosperi farkında olmadan Cezayir'e geçmişti."
+        "who": "A",
+        "text": "1994. İtalyan polis Mauro Prosperi Sahra'da bir ultramaratonda. Kum fırtınası dindiğinde ne işaret kalmış ne koşucu. Kendi anlattığına göre terk edilmiş bir türbeye sığınıyor ve yarasa yiyerek hayatta kalıyor. Dokuzuncu gün bir çoban kız onu görüp korkuyla kaçıyor. Prosperi farkında olmadan Cezayir'e geçmiş; rotasından iki yüz doksan bir kilometre sapmış.",
+        "tts": "bin dokuz yüz doksan dört. İtalyan polis Mauro Prosperi Sahra'da bir ultramaratonda. Kum fırtınası dindiğinde ne işaret kalmış ne koşucu. Kendi anlattığına göre terk edilmiş bir türbeye sığınıyor ve yarasa yiyerek hayatta kalıyor. Dokuzuncu gün bir çoban kız onu görüp korkuyla kaçıyor. Prosperi farkında olmadan Cezayir'e geçmiş; rotasından iki yüz doksan bir kilometre sapmış."
       },
       {
         "id": "l08",
-        "tts": "Peki ikisini aynı haritaya koyarsak?",
-        "text": "Peki ikisini aynı haritaya koyarsak?",
+        "who": "S",
+        "text": "Ben Prosperi'yi seçtim; yarasa yemek ayrı bir şey.",
+        "tts": "Ben Prosperi'yi seçtim; yarasa yemek ayrı bir şey.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
         "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Sifr yerinden kıpırdamadan yirmi beş gün kaybetti. Prosperi ise dokuz günde yolundan iki yüz doksan bir kilometre saptı.",
-        "text": "Siffre yerinden kıpırdamadan 25 gün kaybetti. Prosperi ise dokuz günde yolundan 291 kilometre saptı.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l10",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -135,8 +143,7 @@
     "#hayattakalma"
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? Zamanını kaybeden adam mı, yönünü kaybeden adam mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

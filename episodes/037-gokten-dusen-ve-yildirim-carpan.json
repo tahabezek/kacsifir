@@ -1,90 +1,92 @@
 {
   "id": "037",
   "slug": "gokten-dusen-ve-yildirim-carpan",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 037 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-14T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.9,
-      "l02": 0.9,
-      "l03": 1,
-      "l04": 0.9,
-      "l05": 1,
-      "l06": 0.9,
-      "l07": 1,
-      "l08": 1,
-      "l09": 1.1,
-      "l10": 0.9,
-      "l11": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Koltuğuna bağlı halde, üç kilometre yükseklikten düşüyordu.",
-        "text": "Koltuğuna bağlı halde, üç kilometre yükseklikten düşüyordu.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Koltuğuna bağlı halde üç kilometre yükseklikten ormana düşüp yaşayan on yedi yaşında bir kız mı?",
+        "tts": "Hangisi daha şaşırtıcı? Koltuğuna bağlı halde üç kilometre yükseklikten ormana düşüp yaşayan on yedi yaşında bir kız mı?"
       },
       {
         "id": "l02",
-        "tts": "Noel arifesi, bin dokuz yüz yetmiş bir, Peru. On yedi yaşındaki Yuliane Köpke annesiyle bir uçağa bindi. Uçak bir fırtınaya girdi ve kanadına yıldırım düştü.",
-        "text": "Noel arifesi, 1971, Peru. 17 yaşındaki Juliane Koepcke annesiyle bir uçağa bindi. Uçak bir fırtınaya girdi ve kanadına yıldırım düştü."
+        "who": "S",
+        "text": "Üç kilometreden düşüp nasıl yaşamış?",
+        "tts": "Üç kilometreden düşüp nasıl yaşamış?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Bir anda uçağın dışındaydı ve her yer sessizdi. Ağaçların arasına düştü. Köprücük kemiği kırılmıştı, annesi yanında yoktu.",
-        "text": "Bir anda uçağın dışındaydı ve her yer sessizdi. Ağaçların arasına düştü. Köprücük kemiği kırılmıştı, annesi yanında yoktu.",
-        "rate": "+4%"
+        "who": "A",
+        "text": "Noel arifesi, 1971, Peru. Juliane Koepcke'nin uçağına yıldırım düşüyor ve uçak havada parçalanıyor. Juliane gözünü açtığında koltuğuyla birlikte ağaçların arasında. Köprücük kemiği kırık, annesi yok. Babasının öğüdünü hatırlıyor: \"Suyu bul, akıntıyı izle.\" Günlerce derenin içinde yürüyor. On birinci gün ormancılar onu buluyor. Uçaktaki doksan iki kişiden hayatta kalan tek kişi o.",
+        "tts": "Noel arifesi, bin dokuz yüz yetmiş bir, Peru. Yuliane Köpke'nin uçağına yıldırım düşüyor ve uçak havada parçalanıyor. Yuliane gözünü açtığında koltuğuyla birlikte ağaçların arasında. Köprücük kemiği kırık, annesi yok. Babasının öğüdünü hatırlıyor: Suyu bul, akıntıyı izle. Günlerce derenin içinde yürüyor. On birinci gün ormancılar onu buluyor. Uçaktaki doksan iki kişiden hayatta kalan tek kişi o."
       },
       {
         "id": "l04",
-        "tts": "Babasının öğüdünü hatırladı: suyu bul ve akıntıyı izle. On bir gün boyunca derenin içinde yürüdü.",
-        "text": "Babasının öğüdünü hatırladı: \"Suyu bul ve akıntıyı izle.\" 11 gün boyunca derenin içinde yürüdü."
+        "who": "S",
+        "text": "Bu kız bir kahraman.",
+        "tts": "Bu kız bir kahraman.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Sonunda ormancılar onu bir kulübede buldu. Uçaktaki doksan iki kişiden yalnızca o hayatta kaldı.",
-        "text": "Sonunda ormancılar onu bir kulübede buldu. Uçaktaki 92 kişiden yalnızca o hayatta kaldı."
+        "who": "A",
+        "text": "Yoksa ömrü boyunca yedi kez yıldırım çarpan ve hepsinden sağ çıkan bir adam mı?",
+        "tts": "Yoksa ömrü boyunca yedi kez yıldırım çarpan ve hepsinden sağ çıkan bir adam mı?"
       },
       {
         "id": "l06",
-        "tts": "Yuliane'nin uçağına tek bir yıldırım düştü. Bir adama ise tam yedi kez.",
-        "text": "Juliane'nin uçağına tek bir yıldırım düştü. Bir adama ise tam yedi kez."
+        "who": "S",
+        "text": "Yedi kez mi?",
+        "tts": "Yedi kez mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Roy Salivın bir milli parkta korucuydu. Bin dokuz yüz kırk ikide ilk yıldırım ayakkabısını delip geçti. Sonra kaşları yandı, omzu yandı, saçı tutuştu.",
-        "text": "Roy Sullivan bir milli parkta korucuydu. 1942'de ilk yıldırım ayakkabısını delip geçti. Sonra kaşları yandı, omzu yandı, saçı tutuştu."
+        "who": "A",
+        "text": "Roy Sullivan Amerika'da bir park korucusu. İlk yıldırım ayakkabısını delip geçiyor. Sonra kaşları yanıyor, omzu yanıyor, saçı tutuşuyor. Yedincisi balık tutarken çarpıyor. Yedisinden de sağ çıkıyor. Oysa bir insana ömrü boyunca yıldırım çarpma ihtimali on beş bin üç yüzde bir.",
+        "tts": "Roy Salivın Amerika'da bir park korucusu. İlk yıldırım ayakkabısını delip geçiyor. Sonra kaşları yanıyor, omzu yanıyor, saçı tutuşuyor. Yedincisi balık tutarken çarpıyor. Yedisinden de sağ çıkıyor. Oysa bir insana ömrü boyunca yıldırım çarpma ihtimali on beş bin üç yüzde bir."
       },
       {
         "id": "l08",
-        "tts": "Yedinci yıldırım ona balık tutarken çarptı. Yedisinden de sağ çıktı.",
-        "text": "Yedinci yıldırım ona balık tutarken çarptı. Yedisinden de sağ çıktı."
+        "who": "S",
+        "text": "Ben Juliane'yi seçtim; ormanda tek başına.",
+        "tts": "Ben Yuliane'yi seçtim; ormanda tek başına.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Peki ikisini aynı gökyüzünde ölçersek?",
-        "text": "Peki ikisini aynı gökyüzünde ölçersek?",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l10",
-        "tts": "Bir insana ömrü boyunca yıldırım çarpma ihtimali on beş bin üç yüzde bir. Roy'a ise yedi kez çarptı.",
-        "text": "Bir insana ömrü boyunca yıldırım çarpma ihtimali 15.300'de bir. Roy'a ise yedi kez çarptı.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l11",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -119,8 +121,7 @@
     "#hayattakalma"
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? 3 km yükseklikten düşüp yaşayan kız mı, 7 kez yıldırım çarpan adam mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

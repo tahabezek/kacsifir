@@ -1,91 +1,99 @@
 {
   "id": "064",
   "slug": "zift-ve-can",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 064 · HANGİSİ?",
   "bpm": 92,
   "coverAt": 0,
   "publishAt": "2026-11-09T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.8,
-      "l02": 0.6,
-      "l03": 0.8,
-      "l04": 0.9,
-      "l05": 1.1,
-      "l06": 1,
-      "l07": 0.6,
-      "l08": 0.8,
-      "l09": 0.9,
-      "l10": 0.9,
-      "l11": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.45,
+      "l06": 0.2,
+      "l07": 0.15,
+      "l08": 0.2,
+      "l09": 0.15,
+      "l10": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Bu adam, bir damlanın düşmesini görmek için ömrünü bekledi.",
-        "text": "Bu adam, bir damlanın düşmesini görmek için ömrünü bekledi.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Bir damlanın düşüşünü görmek için elli iki yıl bekleyip yine de göremeyen bir adam mı?",
+        "tts": "Hangisi daha şaşırtıcı? Bir damlanın düşüşünü görmek için elli iki yıl bekleyip yine de göremeyen bir adam mı?"
       },
       {
         "id": "l02",
-        "tts": "Bin dokuz yüz yirmi yedi, Avustralya. Profesör Tomas Parnel ısıttığı zifti bir huniye döktü. Zift o kadar sertti ki çekiçle vurunca paramparça oluyordu.",
-        "text": "1927, Avustralya. Profesör Thomas Parnell ısıttığı zifti bir huniye döktü. Zift o kadar sertti ki çekiçle vurunca paramparça oluyordu."
+        "who": "S",
+        "text": "Bir damlayı mı? Ne damlası?",
+        "tts": "Bir damlayı mı? Ne damlası?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Üç yıl bekledi ve huninin ucunu kesti. İlk damla ancak sekiz yıl sonra düştü.",
-        "text": "Üç yıl bekledi ve huninin ucunu kesti. İlk damla ancak sekiz yıl sonra düştü."
+        "who": "A",
+        "text": "Zift. Öyle sert ki çekiçle vurunca kırılıyor, ama yine de akıyor: bir huniden dokuz yılda bir damla düşüyor. John Mainstone bu deneyin başında elli iki yıl bekliyor. 1979'da bir damlayı hafta sonu yüzünden kaçırıyor. 1988'de çay almaya çıkıyor; döndüğünde damla düşmüş. 2000'de kamera kayıtta, ama tam o anda elektrik kesiliyor.",
+        "tts": "Zift. Öyle sert ki çekiçle vurunca kırılıyor, ama yine de akıyor: bir huniden dokuz yılda bir damla düşüyor. Con Meynstoun bu deneyin başında elli iki yıl bekliyor. bin dokuz yüz yetmiş dokuzda bir damlayı hafta sonu yüzünden kaçırıyor. bin dokuz yüz seksen sekizde çay almaya çıkıyor; döndüğünde damla düşmüş. iki binde kamera kayıtta, ama tam o anda elektrik kesiliyor."
       },
       {
         "id": "l04",
-        "tts": "Yıllar sonra deneyin başına Con Meynstoun geçti. Bir damlayı bir gün farkla kaçırdı. Bir sonrakini beş dakika farkla.",
-        "text": "Yıllar sonra deneyin başına John Mainstone geçti. Bir damlayı bir gün farkla kaçırdı. Bir sonrakini beş dakika farkla."
+        "who": "S",
+        "text": "Bu kadar şanssızlık olur mu?",
+        "tts": "Bu kadar şanssızlık olur mu?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "İki binde damla düşerken bir kamera çekiyordu. Tam o anda elektrik kesildi.",
-        "text": "2000'de damla düşerken bir kamera çekiyordu. Tam o anda elektrik kesildi."
+        "who": "A",
+        "text": "Mainstone 2013'te ölüyor. Bir sonraki damla birkaç ay sonra düşüyor.",
+        "tts": "Meynstoun iki bin on üçte ölüyor. Bir sonraki damla birkaç ay sonra düşüyor."
       },
       {
         "id": "l06",
-        "tts": "Meynstoun, bir damlanın düşüşünü bir kez bile görmeden öldü.",
-        "text": "Mainstone, bir damlanın düşüşünü bir kez bile görmeden öldü.",
-        "rate": "+0%",
-        "pitch": "-2Hz"
+        "who": "A",
+        "text": "Yoksa 1840'tan beri hiç durmadan çalan ve neyle çalıştığını kimsenin bilmediği bir zil mi?",
+        "tts": "Yoksa bin sekiz yüz kırktan beri hiç durmadan çalan ve neyle çalıştığını kimsenin bilmediği bir zil mi?"
       },
       {
         "id": "l07",
-        "tts": "Oxford'da ise bir cam fanusun altında küçük bir bilye, bin sekiz yüz kırktan beri iki çanın arasında gidip geliyor.",
-        "text": "Oxford'da ise bir cam fanusun altında küçük bir bilye, 1840'tan beri iki çanın arasında gidip geliyor."
+        "who": "S",
+        "text": "1840'tan beri mi? Pili ne?",
+        "tts": "bin sekiz yüz kırktan beri mi? Pili ne?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l08",
-        "tts": "Sesi camın ardından duyulmuyor. Pilin içinde ne olduğunu kimse bilmiyor, çünkü açmak deneyi bitirebilir.",
-        "text": "Sesi camın ardından duyulmuyor. Pilin içinde ne olduğunu kimse bilmiyor, çünkü açmak deneyi bitirebilir."
+        "who": "A",
+        "text": "Oxford'da cam bir fanusun altında iki küçük zil ve aralarında bir top var. Top 1840'tan beri zillerin arasında gidip geliyor. Pillerin içinde ne olduğunu kimse bilmiyor, çünkü açmak deneyi bitirmek demek. Bir zift damlası düşene kadar bu zil yaklaşık beş yüz altmış milyon kez çalıyor.",
+        "tts": "Oxford'da cam bir fanusun altında iki küçük zil ve aralarında bir top var. Top bin sekiz yüz kırktan beri zillerin arasında gidip geliyor. Pillerin içinde ne olduğunu kimse bilmiyor, çünkü açmak deneyi bitirmek demek. Bir zift damlası düşene kadar bu zil yaklaşık beş yüz altmış milyon kez çalıyor."
       },
       {
         "id": "l09",
-        "tts": "Peki ikisini aynı saatle ölçersek?",
-        "text": "Peki ikisini aynı saatle ölçersek?",
+        "who": "S",
+        "text": "Ben Mainstone'u seçtim; elli iki yıl bekledi.",
+        "tts": "Ben Meynstoun'u seçtim; elli iki yıl bekledi.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
         "pitch": "+2Hz"
       },
       {
         "id": "l10",
-        "tts": "Zift ortalama dokuz yılda bir damlıyor. O tek damla düşene kadar çan yarım milyardan fazla kez çalıyor.",
-        "text": "Zift ortalama dokuz yılda bir damlıyor. O tek damla düşene kadar çan yarım milyardan fazla kez çalıyor.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
-      },
-      {
-        "id": "l11",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -141,8 +149,7 @@
     "#fizik"
   ],
   "ytTitle": "100 yılda 9 damla mı, 186 yıldır çalan çan mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

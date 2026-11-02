@@ -1,78 +1,92 @@
 {
   "id": "065",
   "slug": "krakatoa-ve-tonga",
-  "template": "hikaye",
+  "template": "cizgi",
   "serial": "№ 065 · HANGİSİ?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-13T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+10%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.8,
-      "l02": 0.9,
-      "l03": 0.9,
-      "l04": 1,
-      "l05": 0.9,
-      "l06": 0.9,
-      "l07": 0.9,
-      "l08": 0.9,
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
       "l09": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Ses dört saat yol aldı ve okyanusun öbür ucunda top sesi sanıldı.",
-        "text": "Ses dört saat yol aldı ve okyanusun öbür ucunda top sesi sanıldı.",
-        "rate": "+2%",
-        "pitch": "-1Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? Sesi dört saat sonra okyanusun öbür ucunda top sesi sanılan bir yanardağ mı?",
+        "tts": "Hangisi daha şaşırtıcı? Sesi dört saat sonra okyanusun öbür ucunda top sesi sanılan bir yanardağ mı?"
       },
       {
         "id": "l02",
-        "tts": "Yirmi yedi Ağustos bin sekiz yüz seksen üç, sabah saat ona doğru. Endonezya'daki Krakatoa yanardağı, tarihin en gürültülü patlamalarından biriyle infilak etti.",
-        "text": "27 Ağustos 1883, sabah saat ona doğru. Endonezya'daki Krakatoa yanardağı, tarihin en gürültülü patlamalarından biriyle infilak etti."
+        "who": "S",
+        "text": "Dört saat sonra mı duyulmuş?",
+        "tts": "Dört saat sonra mı duyulmuş?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Altmış dört kilometre ötedeki bir geminin kaptanı, tayfasının yarısından fazlasının kulak zarlarının patladığını yazdı.",
-        "text": "64 kilometre ötedeki bir geminin kaptanı, tayfasının yarısından fazlasının kulak zarlarının patladığını yazdı."
+        "who": "A",
+        "text": "27 Ağustos 1883. Endonezya'da Krakatoa patlıyor. Altmış dört kilometre ötedeki bir gemide tayfanın yarısından fazlasının kulak zarı patlıyor. Dört saat sonra dört bin sekiz yüz kilometre ötedeki Rodrigues Adası'nda polis şefi deftere şunu yazıyor: \"Doğudan, uzaktan gelen ağır top sesleri.\" Basınç dalgası günlerce Dünya'nın çevresini dolaşıyor.",
+        "tts": "yirmi yedi Ağustos bin sekiz yüz seksen üç. Endonezya'da Krakatoa patlıyor. Altmış dört kilometre ötedeki bir gemide tayfanın yarısından fazlasının kulak zarı patlıyor. Dört saat sonra dört bin sekiz yüz kilometre ötedeki Rodrigues Adası'nda polis şefi deftere şunu yazıyor: Doğudan, uzaktan gelen ağır top sesleri. Basınç dalgası günlerce Dünya'nın çevresini dolaşıyor."
       },
       {
         "id": "l04",
-        "tts": "Dört saat sonra, dört bin sekiz yüz kilometre ötedeki Rodrigues Adası'nda polis şefi deftere şunu yazdı: Doğudan, uzaktan gelen ağır top sesleri.",
-        "text": "Dört saat sonra, 4.800 kilometre ötedeki Rodrigues Adası'nda polis şefi deftere şunu yazdı: \"Doğudan, uzaktan gelen ağır top sesleri.\""
+        "who": "S",
+        "text": "Dünyayı dolaşan bir ses.",
+        "tts": "Dünyayı dolaşan bir ses.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Yüz otuz dokuz yıl sonra, Tonga açıklarında denizin altındaki bir yanardağ patladı. Bulutu elli yedi kilometre yükseğe çıktı.",
-        "text": "139 yıl sonra, Tonga açıklarında denizin altındaki bir yanardağ patladı. Bulutu 57 kilometre yükseğe çıktı."
+        "who": "A",
+        "text": "Yoksa denizin altından patlayıp sesini dokuz bin kilometreden uzağa, Alaska'ya ulaştıran bir yanardağ mı?",
+        "tts": "Yoksa denizin altından patlayıp sesini dokuz bin kilometreden uzağa, Alaska'ya ulaştıran bir yanardağ mı?"
       },
       {
         "id": "l06",
-        "tts": "Gece saat üç buçukta Alaska'da insanlar gümbürtülerle uyandı. Kimi havai fişek sandı, kimi bodrumda kazı yapan bir geyik.",
-        "text": "Gece saat üç buçukta Alaska'da insanlar gümbürtülerle uyandı. Kimi havai fişek sandı, kimi bodrumda kazı yapan bir geyik.",
-        "rate": "+4%"
+        "who": "S",
+        "text": "Alaska'da mı duyulmuş?",
+        "tts": "Alaska'da mı duyulmuş?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "Peki iki sesi yan yana koyarsak?",
-        "text": "Peki iki sesi yan yana koyarsak?",
-        "pitch": "+2Hz"
+        "who": "A",
+        "text": "2022, Tonga. Denizin altındaki bir yanardağın bulutu elli yedi kilometre yükseğe çıkıyor. Gece üç buçukta Alaska'da insanlar gümbürtülerle uyanıyor. Kimi havai fişek sanıyor, kimi bodrumda kazı yapan bir geyik. Gümbürtüler Krakatoa'nın sesinin yaklaşık iki katı uzağa ulaşıyor.",
+        "tts": "iki bin yirmi iki, Tonga. Denizin altındaki bir yanardağın bulutu elli yedi kilometre yükseğe çıkıyor. Gece üç buçukta Alaska'da insanlar gümbürtülerle uyanıyor. Kimi havai fişek sanıyor, kimi bodrumda kazı yapan bir geyik. Gümbürtüler Krakatoa'nın sesinin yaklaşık iki katı uzağa ulaşıyor."
       },
       {
         "id": "l08",
-        "tts": "Krakatoa'nın sesi dört bin sekiz yüz kilometre öteden duyuldu. Tonga'nın gümbürtüleri ise yaklaşık iki kat uzağa, Alaska'ya ulaştı.",
-        "text": "Krakatoa'nın sesi 4.800 kilometre öteden duyuldu. Tonga'nın gümbürtüleri ise yaklaşık iki kat uzağa, Alaska'ya ulaştı.",
-        "rate": "+2%",
-        "pitch": "-2Hz"
+        "who": "S",
+        "text": "Ben Krakatoa'yı seçtim; kulak zarı patlatmış.",
+        "tts": "Ben Krakatoa'yı seçtim; kulak zarı patlatmış.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },
@@ -123,8 +137,7 @@
     "#krakatoa"
   ],
   "ytTitle": "Hangisi daha şaşırtıcı? 4.800 km'den duyulan Krakatoa mı, 10.000 km'den duyulan Tonga mı?",
-  "gl": true,
-  "samples": 6,
+  "gl": false,
   "question": [
     "Hangisi daha",
     "şaşırtıcı?"

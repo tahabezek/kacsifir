@@ -3,6 +3,117 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-11-02 turu
+
+**Tur notu:** Web araması bu turda da özet düzeyinde kaldı: Reddit (r/theydidthemath), Ekşi Sözlük ve Google Trends'ten güncel, tarihli bir liste çekilemedi; yalnızca önbellekteki eski gönderi başlıkları göründü (örn. "denizaltı kablolarını suşiyle değiştirmek için ne kadar balık gerekir?", "Dünya'yı saran köprü yüzer mi?"; oy sayıları doğrulanamadı). Bu yüzden öneriler (1) önümüzdeki 2–4 haftadaki gerçek takvim olayları (BepiColombo, Efsane Cuma) ve (2) kalıcı, tek satırda hesaplanabilen sorular üzerine kuruldu. Aritmetik yeniden hesaplandı; "doğrulanmalı" yazan değerler yayından önce birincil kaynaktan teyit edilmeli.
+
+**Güncel notlar (tekrar önermedim, yalnızca tarih teyidi):**
+- **Voyager 1 bir ışık günü:** NASA'nın bu turda görülen açıklamasına göre **18 Kasım 2026** (EarthSky'ye göre 00.16 CST = Türkiye saatiyle 09.16; NASA sayfası science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/ ile teyit edilmeli). 13 ve 15 Kasım diyen eski tahminler yanlış.
+- **Hera:** Varış "Kasım 2026"; kesin gün hâlâ yok (15 Kasım yalnızca resmî olmayan geri sayım sitesinde).
+- **BepiColombo:** Merkür yörüngesine giriş Kasım 2026; 21 Kasım yalnızca ikincil kaynaklarda (ESA teyidi yok). Aşağıda konu 1 olarak önerildi.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Bir nanosaniyede ışık kaç santimetre gider? (Grace Hopper'ın teli)
+- Kanca: Bir nanosaniye, bir cetvel kadar uzunluktadır.
+- Sayılar: ışık hızı 299.792.458 m/s. 1 ns = 10⁻⁹ s → 299.792.458 × 10⁻⁹ = **0,2998 m ≈ 30 cm**. 1 mikrosaniye = 299,8 m (≈ Eyfel Kulesi'ne yakın bir yükseklik); 1 milisaniye = 299,8 km (İstanbul–Ankara kuş uçuşu ≈ 350 km → ışık ≈ 1,2 ms; mesafe doğrulanmalı); 1 pikosaniye = 0,3 mm (yaklaşık üç kâğıt kalınlığı).
+- Kaynaklar: https://www.nist.gov/si-redefinition/meter · https://americanhistory.si.edu/collections/search/object/nmah_692464 (Smithsonian, Hopper'ın nanosaniye telleri; nesne kaydı doğrulanmalı).
+- Görsel metafor: **Bir telin kesilmesi.** Masada 30 cm'lik bakır tel dilimi; yanına mikrosaniye için 300 m'lik, milisaniye için 300 km'lik tel eklenir. Cetvelin kendisi nesne olur: ilk 30 cm kırmızı kalemle işaretlenir (doruk).
+- Türkiye bağlantısı: İstanbul–Ankara hattında ışık yolculuğu; bilgisayar saati 3 GHz ise tek saat darbesi 10 cm ışık yolu.
+- Neden şimdi / tarih: Grace Hopper'ın doğum günü 9 Aralık (1906; 120. yıl). Kalıcı konu; Aralık başında yayın uygun.
+- Puan (8/10): Soyut bir birim somut bir cetvele iniyor, "aha" net, görsel temiz ve ölçü defteri kimliğine tam uyuyor; bilgisayar kullanan herkes için tanıdık.
+- Tuzaklar: Hopper'ın telleri havada/boşlukta ışık yolunu gösterir; bakır kablodaki sinyal ≈ %60–95 c hızındadır. "Tam 30 cm" değil 29,98 cm. Hopper'ın tel gösterisi anlatısı sözlü aktarımdır; ayrıntıyı müze kaydıyla teyit et.
+
+### Dünya'ya en yakın gezegen Venüs mü? Hayır, Merkür (BepiColombo ~21 Kasım)
+- Kanca: Dünya'ya en yakın gezegen Venüs değil, Merkür'dür.
+- Sayılar: Venüs Dünya'ya en çok yaklaştığında ≈ 38 milyon km; Merkür en çok ≈ 77 milyon km. Ama zaman ortalamasında Merkür daha yakındır: Stockman ve ark. (2019) Merkür'ün ortalama uzaklığını ≈ 1,04 AU, Venüs'ünkini ≈ 1,14 AU olarak verir (değerler doğrulanmalı). 1 AU ≈ 149,6 milyon km → fark ≈ 0,10 AU ≈ 15 milyon km. Merkür'den Dünya'ya radyo gecikmesi 77.000.000 ÷ 299.792 = 257 sn (4,3 dk) ile ≈ 12 dk arasında.
+- Kaynaklar: https://www.physicstoday.com/do/10.1063/PT.6.3.20190312a/full/ (Physics Today, "Venus is not Earth's closest neighbor") · https://www.esa.int/Science_Exploration/Space_Science/BepiColombo
+- Görsel metafor: **Gezegen yörüngelerinin kurşun kalem izi.** Güneş etrafında iç içe halkalar; zamanla her gezegenin Dünya'ya olan uzaklığını gösteren bir ip her gün yeniden ölçülüp ortalaması alınır. Doruk: ipler kısalıp uzarken Merkür'ün ortalama ipinin en kısa çıkması (kırmızı kalemle tek nesne).
+- Türkiye bağlantısı: İzleyici "Venüs en yakın" diye öğrendi; Türkçe ders kitaplarındaki ifade sorgulanır (ders kitabı ifadesi doğrulanmalı).
+- Neden şimdi / tarih: BepiColombo'nun Merkür yörüngesine girişi Kasım 2026 (21 Kasım yalnızca ikincil kaynaklarda; ESA teyidi şart); haber akışında "Merkür" geçtiği hafta yayınla.
+- Puan (8/10): Efsane kırıcı kanca, hesabın arkasındaki "ortalama" fikri zarif; yayın tarihiyle uyumlu. Güven: makale yayımlı, ama sonuç "ortalama tanımına" bağlı.
+- Tuzaklar: "En yakın" tanımı değişir: tek bir anda en yakın Venüs'tür; zaman ortalamasında Merkür'dür ve aynı mantıkla Merkür her gezegene ortalamada en yakındır (Neptün dahil). Videoda tanımı ilk 5 saniyede söyle.
+
+### Yazı tura gerçekten yarı yarıya mı? (350.757 atışlık deney)
+- Kanca: Yazı tura attığında yarı yarıya şans yoktur: elinde hangi yüz yukarıdaysa o gelme eğilimindedir.
+- Sayılar: Diaconis, Holmes ve Montgomery (2007) modeline göre madalyon başladığı yüzle bitme olasılığı ≈ %51. Bartoš ve ark. (arXiv 2023) 350.757 atışta aynı yüzün gelme oranını yaklaşık **%50,8** buldu (178.079 ÷ 350.757 ≈ 0,5077; rakamlar doğrulanmalı). Fark: 0,0077 × 350.757 ≈ 2.700 fazladan "aynı yüz".
+- Kaynaklar: https://epubs.siam.org/doi/10.1137/S0036144504446436 (Diaconis ve ark., SIAM Review 2007) · https://arxiv.org/abs/2310.04153 (Bartoš ve ark., 2023; numara doğrulanmalı)
+- Görsel metafor: **Havada dönen metal para, yanında bir hız göstergesi.** Para yavaşça döner, tur sayacı ve yarım turlarla yazı/tura mürekkep damgaları sıralanır; 350.757 küçük damga kareye dizilir, dorukta fazladan 2.700 damga kırmızıya boyanır.
+- Türkiye bağlantısı: Maç başında hakemin yazı turası; 1 TL madalyonu ("yazı" yerine arka yüz) ve kura kültürü.
+- Neden şimdi / tarih: Kalıcı konu; derbi haftası yayınlanabilir.
+- Puan (8/10): Herkesin güvendiği "adil kura" sezgisini bozuyor; basit görsel; kanca tek cümle. Güven: orta-yüksek (önbaskı hakem sürecinde olabilir; durumunu kontrol et).
+- Tuzaklar: Etki küçüktür (%1 civarı) ve atışın havada kaç kez döndüğüne göre değişir; ustaca çevrilen atış rastgeledir. Kumar/bahis çağrışımı yapma; yalnızca fizik.
+
+### %50 indirim üstüne %50 indirim, ürünü bedava yapar mı? (Efsane Cuma tarihli)
+- Kanca: Yüzde 50 indirimin üstüne bir yüzde 50 daha gelirse ürün bedava olmaz.
+- Sayılar: 100 TL × 0,50 × 0,50 = **25 TL** (toplam indirim %75, %100 değil). %20 + %30 ardışık: 100 × 0,80 × 0,70 = 56 TL (toplam %44, %50 değil). Zam/indirim: %20 zam sonra %20 indirim: 100 × 1,20 × 0,80 = **96 TL**, yani 4 TL kayıp.
+- Kaynaklar: https://www.khanacademy.org/math/cc-seventh-grade-math/cc-7th-ratios-prop-topic/cc-7th-percent-word-problems/v/percent-word-problems (saf aritmetik; kaynak sayfa doğrulanmalı) · https://tr.wikipedia.org/wiki/Y%C3%BCzde (genel tanım)
+- Görsel metafor: **Fiyat etiketinin ikiye katlanması.** Etiket tekrar tekrar yarıya bölünür; kalan her seferinde yarım kalan parçadır, "sıfıra" hiç ulaşmaz; kesilen parçalar rafa dizilir.
+- Türkiye bağlantısı: Efsane Cuma/11.11 kampanyaları, "sepette ekstra %20" ifadeleri.
+- Neden şimdi / tarih: Efsane Cuma / Black Friday: 27 Kasım 2026 Cuma (Şükran Günü 26 Kasım); kampanya haftası 23–30 Kasım, bu yüzden 22–25 Kasım arasında yayınla.
+- Puan (8/10): Herkesin o hafta karşılaşacağı bir durum, kanca net, tek satırda ispat; güvenilirlik %100 (aritmetik). Satın alma tavsiyesi verilmez, yalnızca hesap.
+- Tuzaklar: Kampanya koşulları mağazaya göre değişir; "ardışık" ile "toplanan" yüzde farkını açıkça söyle. Belirli bir markayı ya da kampanyayı adlandırma.
+
+### Çanakkale Köprüsü'nün iki kulesi arasına kaç Eyfel Kulesi sığar?
+- Kanca: Çanakkale Köprüsü'nün iki kulesi arasında altı Eyfel Kulesi yan yana yatabilir.
+- Sayılar: 1915 Çanakkale Köprüsü orta açıklığı **2.023 m**, kule yüksekliği 318 m, toplam uzunluk 3.563 m, açılış 18 Mart 2022. Eyfel Kulesi (antenle) ≈ 330 m. 2.023 ÷ 330 = **6,13** (yaklaşık altı Eyfel yatay). Önceki rekor Akashi Kaikyō ≈ 1.991 m → fark 2.023 − 1.991 = 32 m. Burj Halife 828 m: 2.023 ÷ 828 = 2,44.
+- Kaynaklar: https://tr.wikipedia.org/wiki/1915_%C3%87anakkale_K%C3%B6pr%C3%BCs%C3%BC · Karayolları Genel Müdürlüğü (kgm.gov.tr) proje sayfası; rakamlar doğrulanmalı.
+- Görsel metafor: **Köprünün askı kabloları ve kule.** İki kule arasındaki çelik halat çizgisi, altında altı küçük Eyfel silüeti sırayla yatırılır; kırmızı kalem yalnızca son (altıncı) kulenin ucunu işaretler.
+- Türkiye bağlantısı: Zaten Türkiye'nin kendi rekoru; 2.023 = Cumhuriyet'in yüzüncü yılı (2023 hedefi), 1915 = savaş yılı.
+- Neden şimdi / tarih: Kalıcı; 18 Mart yıldönümü (2027'de 5. yıl) için saklanabilir.
+- Puan (7,5/10): Yerel gurur, kolay görsel; viral potansiyeli Türk izleyicide yüksek. Rekorun hâlâ geçerliliği doğrulanmalı (yeni köprüler yapım aşamasında olabilir).
+- Tuzaklar: "Orta açıklık" ile toplam uzunluk karıştırılır; Eyfel yüksekliği antenle/antensiz 324–330 m arası değişir. Siyasi/proje maliyeti tartışmasına girme.
+
+### Büyük Hadron Çarpıştırıcısı'ndaki bir proton saniyede kaç tur atar?
+- Kanca: Bir proton, 27 kilometrelik halkada bir saniyede 11.245 tur atar.
+- Sayılar: LHC çevresi 26.659 m; proton ışık hızının ≈ %99,999999'unda. Tur sayısı: 299.792.458 ÷ 26.659 ≈ **11.245 tur/sn**. Bir tur ≈ 89 mikrosaniye (1 ÷ 11.245). 27 km ≈ İstanbul Boğazı'nın kabaca uzunluğu (≈ 30 km; doğrulanmalı).
+- Kaynaklar: https://home.cern/science/accelerators/large-hadron-collider · https://home.cern/resources/faqs/facts-and-figures-about-lhc
+- Görsel metafor: **Boğaz haritası üzerine çizilmiş halka.** Bir nokta Boğaz çizgisini hızla turlar; tur sayacı bir mekanik kilometre sayacı gibi döner, saniye bitiminde 11.245'e dururken kırmızı kalemle sayaç işaretlenir.
+- Türkiye bağlantısı: Türkiye CERN'e 2015'ten beri ilişkili üye (2015; durum doğrulanmalı); halka İstanbul Boğazı'na yerleştirilir.
+- Neden şimdi / tarih: Kalıcı.
+- Puan (7,5/10): Kanca rakamla vuruyor; görsel net; "aha" hız ölçeğinde. Doğruluk güveni yüksek (CERN birincil kaynak).
+- Tuzaklar: Hız enerjiye bağlı (6,8 TeV/ışın için ≈ %99,999999 c); 11.245 değeri yaklaşık bir sınır (ışık hızı alındığında). "27 km" yuvarlama, tam 26,659 km.
+
+### Denizaltı kablolarını uç uca eklesen Ay'a kaç kez gidersin?
+- Kanca: İnternet denizin altından geçer ve kabloların toplamı Ay'a üç buçuk kez gidip gelir.
+- Sayılar: Dünya genelinde ≈ 1,4 milyon km denizaltı kablosu (değer doğrulanmalı; TeleGeography/ICPC). Ay'a uzaklık 384.400 km → 1.400.000 ÷ 384.400 = **3,64 kez**. Dünya çevresi 40.075 km → 1.400.000 ÷ 40.075 = **34,9 kez**. Kıtalararası veri trafiğinin büyük bölümü (ITU: ≈ %99) kablolardan geçer.
+- Kaynaklar: https://www.submarinecablemap.com/ (TeleGeography) · https://www.itu.int/en/ITU-D/Technology/Pages/Submarine-cables.aspx (ITU; sayfa adresi doğrulanmalı)
+- Görsel metafor: **Okyanus tabanında ince bir ip.** Dünya haritasında kablolar tek bir ipe sarılır, ip Ay'a doğru gerilir, 3,6 tur gösterilir; kırmızı kalem yalnızca Ay'a ulaşan ucu işaretler.
+- Türkiye bağlantısı: İstanbul ve Marmaris gibi kablo çıkış noktaları (doğrulanmalı); "WhatsApp mesajın bile bir kabloda yolculuk eder".
+- Neden şimdi / tarih: Kalıcı; Reddit'te benzer "kabloları suşiyle değiştir" gönderisi önbellekte görüldü (oy doğrulanamadı).
+- Puan (7/10): Görünmez altyapı konusu merak uyandırıyor, hesap basit; veri güncelliği (yeni kablolar) ve güven orta.
+- Tuzaklar: Kablo uzunluğu kaynağa ve yıla göre değişir (1,3–1,5 milyon km); uydu interneti payı küçüktür ama sıfır değil. "%99" değerini birincil kaynaktan teyit et.
+
+### Seni sen yapan genetik şifre kaç DVD tutar?
+- Kanca: İnsanın bütün genetik şifresi bir DVD'ye altı kez sığar.
+- Sayılar: T2T-CHM13 insan genomu ≈ 3.117.275.501 baz çifti. Her baz 4 seçenekten biri → 2 bit. 3.117.275.501 × 2 = 6.234.551.002 bit ÷ 8 = **779.318.875 bayt ≈ 0,78 GB**. Tek katmanlı DVD 4,7 GB → 4,7 ÷ 0,78 = **6,03** (≈ 6 kez). Fotoğraf: telefon fotoğrafı ≈ 3–5 MB → genom ≈ 150–250 fotoğraf.
+- Kaynaklar: https://www.science.org/doi/10.1126/science.abj6987 (Nurk ve ark. 2022, T2T) · https://www.genome.gov/genetics-glossary/Human-Genome-Project
+- Görsel metafor: **DNA sarmalı ve DVD'ler.** DNA bantı bir DVD kutusuna sarılır; altı DVD raf üstüne sıralanır; dorukta tek bir DVD'nin yalnızca %16'sı dolu olduğu gösterilir (kırmızı kalem: boş kalan alan değil, dolu şerit).
+- Türkiye bağlantısı: DVD kuşağına nostalji; "oyuncakçıdaki oyun diski daha büyük".
+- Neden şimdi / tarih: Kalıcı.
+- Puan (6,5/10): Şaşırtıcı küçük sonuç; görsellik iyi; ama biyoloji "bilgi miktarı" ile "karmaşıklık" ayrımı ayrıntılı anlatım gerektirir.
+- Tuzaklar: Bu yalnızca tek kopya (haploid); diploit genom ≈ 1,6 GB (iki kopya). Sıkıştırma ve epigenetik bilgiyi saymaz; "yalnızca bu kadar basit" izlenimi verme. Sağlık tavsiyesi yok.
+
+### Ay, Dünya'nın içine 49 kez sığar
+- Kanca: Dünya'nın içine tam 49 tane Ay sığar.
+- Sayılar: Dünya hacmi ≈ 1,0832 × 10¹² km³; Ay hacmi ≈ 2,1958 × 10¹⁰ km³ → 1,0832 × 10¹² ÷ 2,1958 × 10¹⁰ ≈ **49,3**. Kütle: 5,972 × 10²⁴ kg ÷ 7,346 × 10²² kg ≈ 81,3 (kütle oranı hacimden büyüktür, Dünya daha yoğundur). Çap: Ay 3.474,8 km; Türkiye'nin doğu-batı uzunluğu ≈ 1.600 km → Ay'ın çapı 3.474,8 ÷ 1.600 ≈ 2,2 Türkiye (Türkiye uzunluğu doğrulanmalı).
+- Kaynaklar: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html · https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html
+- Görsel metafor: **Küre ve bilyeler.** Şeffaf büyük küre, içine bilyeler tek tek konur, 49 bilye dolunca küre kapanır; 49'uncu bilye kırmızı.
+- Türkiye bağlantısı: Ay'ın çapı Türkiye'nin iki katından büyük; haritaya yerleşir (24 Kasım süper dolunay anlatısıyla eşleştirilebilir).
+- Neden şimdi / tarih: 24 Kasım 2026 süper dolunay haftası (ilgili 29 Ekim önerisiyle bağlanır).
+- Puan (6,5/10): Sağlam kaynak, basit görsel; viral potansiyel ortalama, çünkü öneri benzer "gezegenler Dünya–Ay arasına sığar" bölümüne (028) yakın.
+- Tuzaklar: Küreleri hacimce "sığdırmak" paketlenme boşluğunu (≈ %64) hesaba katmaz: gerçekte yaklaşık 31–32 bilye. Videoda "hacim olarak" ifadesini kullan.
+
+### Google'a saniyede kaç kişi bir şey soruyor?
+- Kanca: Google'a şu an saniyede yüz binden fazla soru soruluyor.
+- Sayılar: Google yılda ≈ 5 trilyon arama yaptığını açıkladı (2025; doğrulanmalı). Yıl = 365 × 24 × 3.600 = 31.536.000 sn. 5 × 10¹² ÷ 31.536.000 ≈ **158.000 arama/sn**. Günde ≈ 13,7 milyar (5 × 10¹² ÷ 365).
+- Kaynaklar: https://searchengineland.com/google-search-5-trillion-searches-per-year-451745 (adres doğrulanmalı) · https://www.internetlivestats.com/google-search-statistics/
+- Görsel metafor: **Posta kutusu ve harf yağmuru.** Bir mektup kutusuna her saniye zarflar düşer, zarf sayacı 1 saniye boyunca 158.000'e koşar; Kadıköy ilçesinin nüfusu 3 saniyede (≈ 470.000) gösterilir.
+- Türkiye bağlantısı: Türkiye'de en çok aranan şeyler (Google Trends Türkiye yıllık listesi, doğrulanmalı).
+- Neden şimdi / tarih: Aralık başında "Yılın Aramaları" yayımlanır (Google Yılın Aramaları genelde Aralık; tarih doğrulanmalı).
+- Puan (6/10): Büyük sayı güçlü ama hesabın "aha"sı zayıf; güncel veri tek kaynaklı.
+- Tuzaklar: "Arama" ile "kişi" aynı değil; bir kişi çok arama yapar. Sayı yaklaşık ve yıllık ortalamadır (anlık değil).
+
 ## 2026-10-29 turu
 
 **Tur notu:** Web araması bu turda da yalnızca özet düzeyinde çalıştı; Reddit, X, Ekşi Sözlük ve Google Trends'ten güvenilir, tarihli bir "en çok oy alan" listesi çekilemedi (r/theydidthemath sorgusu hiçbir sonuç getirmedi). Bu yüzden öneriler iki ölçütle seçildi: (1) önümüzdeki 2–4 haftada gerçek bir takvim olayı olanlar (Kasım 2026 gökyüzü takvimi, BM nüfus dönüm noktası yıldönümü), (2) kalıcı merak sorusu + tek satırda doğrulanabilir hesap. Aritmetik bu turda yeniden hesaplandı. "Doğrulanmalı" yazan değerler yalnızca ikincil özette görüldü; yayından önce birincil kaynaktan teyit edilmeli.

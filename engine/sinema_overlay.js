@@ -37,12 +37,32 @@ export function makeOverlay(ctx, tl, opts = {}) {
   }
   for (let i = 0; i + 1 < chunks.length; i++) chunks[i].t1 = Math.min(chunks[i].t1, chunks[i + 1].t0);   // üst üste binmez
   const CAP_SIZE = opts.capSize || 70, CAP_LH = CAP_SIZE * 1.17, CAP_BASE = opts.capBase || 1330;
+  // Soran'ın cümlesi: sarı konuşma balonu, sağ altta kuyruk ve küçük yüz (iki sesli anlatım)
+  function soranBalon(t, c, lines, u) {
+    const tw = Math.max(...lines.map(l => ctx.measureText(l).width)), bw = tw + 90, bh = lines.length * CAP_LH + 50;
+    const x = CX - bw / 2 - 40, y = CAP_BASE - lines.length * CAP_LH + 10 + (1 - u) * 30;
+    ctx.save(); ctx.globalAlpha = Math.min(1, u * 1.6);
+    ctx.fillStyle = '#F6C445'; ctx.strokeStyle = INK; ctx.lineWidth = 6; ctx.lineJoin = 'round';
+    ctx.beginPath(); ctx.roundRect(x, y, bw, bh, 28); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x + bw - 70, y + bh - 3); ctx.lineTo(x + bw + 10, y + bh + 50); ctx.lineTo(x + bw - 20, y + bh - 3); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#F6C445'; ctx.fillRect(x + bw - 66, y + bh - 9, 42, 10);
+    const fx = x + bw + 48, fy = y + bh + 66;   // Soran'ın yüzü: topuzlu kısa saç, iri gözler
+    ctx.beginPath(); ctx.arc(fx, fy - 40, 22, 0, 7); ctx.fillStyle = '#3A2A20'; ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.arc(fx, fy, 46, 0, 7); ctx.fillStyle = '#F2C9A5'; ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.arc(fx, fy - 10, 46, Math.PI * 1.05, Math.PI * 1.95); ctx.fillStyle = '#3A2A20'; ctx.fill();
+    for (const ex of [-16, 16]) { ctx.beginPath(); ctx.arc(fx + ex, fy + 2, 8, 0, 7); ctx.fillStyle = INK; ctx.fill(); }
+    const talkO = 4 + 6 * Math.abs(Math.sin(t * 17)); ctx.beginPath(); ctx.ellipse(fx, fy + 24, 9, talkO, 0, 0, 7); ctx.fillStyle = '#7A2E2A'; ctx.fill(); ctx.lineWidth = 4; ctx.stroke();
+    ctx.fillStyle = INK; ctx.textAlign = 'center';
+    lines.forEach((ln, i) => ctx.fillText(ln, x + bw / 2, y + 28 + CAP_SIZE * 0.85 + i * CAP_LH));
+    ctx.restore(); ctx.textAlign = 'left';
+  }
   function caption(t) {
     const c = chunks.find(c => t >= c.t0 && t < c.t1); if (!c) return;
     setFont(ctx, F.head(CAP_SIZE)); ctx.textAlign = 'center';
     const lines = wrap(ctx, c.s, SAFE.x1 - SAFE.x0), u = ease.enter(seg(t, c.t0, 0.2));
     if (lines.length === 2 && !lines[1].includes(' ')) { const w = lines[0].split(' '); lines[1] = w.pop() + ' ' + lines[1]; lines[0] = w.join(' '); }
     if (lines.length === 2 && /^[%~]?\d[\d.,]*$/.test(lines[0].split(' ').at(-1)) && lines[0].includes(' ')) { const w = lines[0].split(' '); lines[1] = w.pop() + ' ' + lines[1]; lines[0] = w.join(' '); }   // sayı sonraki sözcüğünden ayrılmaz
+    if (paper && opts.who?.[c.id] === 'S') { soranBalon(t, c, lines, u); return; }
     scrim(CX, CAP_BASE - (lines.length - 1) * CAP_LH / 2 - CAP_SIZE * 0.35, 1000, 180 + lines.length * CAP_LH, 0.66);
     lines.forEach((ln, i) => {
       const y = CAP_BASE - (lines.length - 1 - i) * CAP_LH + (1 - u) * 26;

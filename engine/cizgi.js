@@ -61,11 +61,16 @@ export async function makeCizgiRenderer(ep, canvas) {
 
   const A = { ctx, T, D, W, H, PAL, INK, ease, seg, lerp, clamp01, mulberry32, poly, rect, circ, ell, line, text, bg, path, fs, ch, crowd, CARDS, mixExpr, LW };
   const film = await mod.film(A);
-  const O = makeOverlay(ctx, tl, { chunks: film.chunks || autoChunks(ep, tl), capBase: 1380, paper: true });
+  const chunks = film.chunks || autoChunks(ep, tl);
+  { const H0 = 'Hangisi daha şaşırtıcı?', c0 = chunks.l01?.[0];   // kanca başlıkta duruyor: altyazıda tekrarlanmaz
+    if (c0 && c0[0].startsWith(H0)) { const rest = c0[0].slice(H0.length).trim(); if (rest) chunks.l01[0] = [rest, c0[1] + 3]; else chunks.l01.shift(); } }
+  const O = makeOverlay(ctx, tl, { chunks, capBase: 1380, paper: true, who: Object.fromEntries(ep.voice.lines.map(l => [l.id, l.who || 'A'])) });
 
   function render(t) {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    const [z, cx, cy] = camAt(film.cam, t);
+    let [z, cx, cy] = camAt(film.cam, t);
+    // yavaş kamera nefesi: hiçbir an tamamen durmaz; D'ye göre periyodik (döngü dikişi korunur)
+    const ph = 2 * Math.PI * t / D; z *= 1 + 0.018 * Math.sin(ph * 11); cx += 7 * Math.sin(ph * 7); cy += 6 * Math.cos(ph * 9);
     ctx.setTransform(z, 0, 0, z, W / 2 - cx * z, H / 2 - cy * z);
     film.draw(t);
     ctx.setTransform(1, 0, 0, 1, 0, 0);

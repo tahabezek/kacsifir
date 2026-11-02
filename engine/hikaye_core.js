@@ -16,14 +16,21 @@ export function hikayeTimes(ep, voice) {
 // başlangıcı, okunan metindeki ilk kelimesinin ölçülmüş zamanıdır. Uzun parçalar 44 karakteri aşmayacak biçimde bölünür.
 export function autoChunks(ep) {
   const out = {};
-  const split = s => s.split(/(?<=[.?!:;,])\s+/).filter(Boolean);
+  const split = s => s.split(/(?<=[.?!:;,]["”“]?)\s+/).filter(Boolean);   // tırnakla biten cümle de bölünür
   for (const ln of ep.voice.lines) {
     let a = split(ln.text), b = split(ln.tts);
     if (a.length !== b.length) { a = ln.text.split(/(?<=[.?!:])\s+/); b = ln.tts.split(/(?<=[.?!:])\s+/); }
     if (a.length !== b.length) { out[ln.id] = [[ln.text, 0]]; continue; }
     const res = []; let wi = 0, cur = null;
     a.forEach((s, i) => {
-      const n = b[i].trim().split(/\s+/).length;
+      const n = b[i].trim().split(/\s+/).length, tw = s.trim().split(/\s+/);
+      // uzun cümle: ekrandaki ve okunan kelime sayısı eşitse (rakam yoksa) kelime sınırından ~42 karakterlik parçalara bölünür
+      if (s.length > 48 && tw.length === n) {
+        if (cur) { res.push(cur); cur = null; }
+        const k = Math.ceil(s.length / 42), per = Math.ceil(tw.length / k);
+        for (let j = 0; j < tw.length; j += per) res.push([tw.slice(j, j + per).join(' '), wi + j]);
+        wi += n; return;
+      }
       if (cur && (cur[0] + ' ' + s).length <= 44 && !/[.?!]$/.test(cur[0])) cur[0] += ' ' + s;
       else { if (cur) res.push(cur); cur = [s, wi]; }
       wi += n;

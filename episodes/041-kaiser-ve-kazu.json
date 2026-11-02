@@ -13,91 +13,102 @@
   ],
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+5%",
+    "rate": "+25%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.7,
-      "l02": 0.45,
-      "l03": 0.5,
-      "l04": 1,
-      "l05": 0.8,
-      "l06": 0.45,
-      "l07": 0.6,
-      "l08": 0.9,
-      "l09": 0.6,
-      "l10": 0.9,
-      "l11": 0.9,
-      "l12": 0.3
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.2,
+      "l06": 0.15,
+      "l07": 0.2,
+      "l08": 0.15,
+      "l09": 0.2,
+      "l10": 0.15,
+      "l11": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Takım iki sıfır geride. Patron telsize bağırıyor: Kaiser'i oyuna sokun!",
-        "text": "Takım iki sıfır geride. Patron telsize bağırıyor: Kaiser'i oyuna sokun!",
-        "rate": "+6%",
-        "pitch": "+2Hz"
+        "who": "A",
+        "text": "Hangisi daha şaşırtıcı? On üç yıl boyunca Brezilya'nın büyük kulüplerinde tek bir resmî maça çıkmadan futbolculuk yapan bir adam mı?",
+        "tts": "Hangisi daha şaşırtıcı? On üç yıl boyunca Brezilya'nın büyük kulüplerinde tek bir resmî maça çıkmadan futbolculuk yapan bir adam mı?"
       },
       {
         "id": "l02",
-        "tts": "Carlos Kaiser, Brezilya'nın en büyük kulüplerine imza atmış bir golcüydü. Ama bir sırrı vardı: futbol oynamak istemiyordu.",
-        "text": "Carlos Kaiser, Brezilya'nın en büyük kulüplerine imza atmış bir golcüydü. Ama bir sırrı vardı: futbol oynamak istemiyordu."
+        "who": "S",
+        "text": "Nasıl yani, hiç mi oynamamış?",
+        "tts": "Nasıl yani, hiç mi oynamamış?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l03",
-        "tts": "Top ayağına gelince sakatlanmış gibi yere yığıldı. Soyunma odasında oyuncak bir telefonla sahte transfer pazarlıkları yaptı.",
-        "text": "Top ayağına gelince sakatlanmış gibi yere yığıldı. Soyunma odasında oyuncak bir telefonla sahte transfer pazarlıkları yaptı."
+        "who": "A",
+        "text": "Hiç. Carlos Kaiser imzayı atıyor, ilk antrenmanda bacağını tutup yere yığılıyor. Sakatlık sahte. Soyunma odasında oyuncak bir telefonla \"Avrupa'dan teklif var\" diye konuşuyor. Kulüp sözleşmesini uzatıyor.",
+        "tts": "Hiç. Carlos Kaiser imzayı atıyor, ilk antrenmanda bacağını tutup yere yığılıyor. Sakatlık sahte. Soyunma odasında oyuncak bir telefonla Avrupa'dan teklif var diye konuşuyor. Kulüp sözleşmesini uzatıyor."
       },
       {
         "id": "l04",
-        "tts": "O gün oyuna girmesi istenince tribüne döndü. Tel örgüyü aştı ve taraftarlarla kavgaya tutuştu. Hakem onu sahaya bile girmeden oyundan attı.",
-        "text": "O gün oyuna girmesi istenince tribüne döndü. Tel örgüyü aştı ve taraftarlarla kavgaya tutuştu. Hakem onu sahaya bile girmeden oyundan attı."
+        "who": "S",
+        "text": "Hiç mi yakalanmamış?",
+        "tts": "Hiç mi yakalanmamış?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "On üç yıl boyunca tek bir resmî maça çıkmadı.",
-        "text": "13 yıl boyunca tek bir resmî maça çıkmadı.",
-        "rate": "-2%",
-        "pitch": "-2Hz"
+        "who": "A",
+        "text": "Bir gün takım iki sıfır geride, patron \"Kaiser'i sokun!\" diye bağırıyor. Kaiser tel örgüyü aşıp taraftarlarla kavgaya tutuşuyor ve sahaya girmeden kırmızı kart görüyor. Kendi anlattığına göre patrona \"Size laf ettiler, dayanamadım.\" diyor. Patron maaşına zam yapıyor.",
+        "tts": "Bir gün takım iki sıfır geride, patron Kaiser'i sokun! diye bağırıyor. Kaiser tel örgüyü aşıp taraftarlarla kavgaya tutuşuyor ve sahaya girmeden kırmızı kart görüyor. Kendi anlattığına göre patrona Size laf ettiler, dayanamadım. diyor. Patron maaşına zam yapıyor."
       },
       {
         "id": "l06",
-        "tts": "Aynı yıllarda Japonya'da on beş yaşında bir çocuk, cebinde yedi yüz dolarla tek başına Brezilya'ya uçtu.",
-        "text": "Aynı yıllarda Japonya'da 15 yaşında bir çocuk, cebinde 700 dolarla tek başına Brezilya'ya uçtu."
+        "who": "S",
+        "text": "Bu adam dâhi.",
+        "tts": "Bu adam dâhi.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l07",
-        "tts": "İlk yıllarda evini çok özledi. Tribünler ona adıyla bile seslenmedi.",
-        "text": "İlk yıllarda evini çok özledi. Tribünler ona adıyla bile seslenmedi.",
-        "rate": "-2%"
+        "who": "A",
+        "text": "Yoksa on beş yaşında tek başına Brezilya'ya giden ve elli dokuz yaşında hâlâ sahada olan bir Japon mu?",
+        "tts": "Yoksa on beş yaşında tek başına Brezilya'ya giden ve elli dokuz yaşında hâlâ sahada olan bir Japon mu?"
       },
       {
         "id": "l08",
-        "tts": "Bir gün attığı bir penaltıdan sonra bütün stadyum ilk kez onun adını haykırdı: Kazu!",
-        "text": "Bir gün attığı bir penaltıdan sonra bütün stadyum ilk kez onun adını haykırdı: Kazu!"
+        "who": "S",
+        "text": "Elli dokuz yaşında mı?",
+        "tts": "Elli dokuz yaşında mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l09",
-        "tts": "Kazu Miura bugün elli dokuz yaşında ve hâlâ sahada.",
-        "text": "Kazu Miura bugün 59 yaşında ve hâlâ sahada."
+        "who": "A",
+        "text": "Kazu Miura dil bilmeden, cebinde yedi yüz dolarla Brezilya'ya uçuyor. Yıllarca tribünler adını bile bilmiyor. Bir penaltıdan sonra bütün stadyum ilk kez \"Kazu!\" diye haykırıyor. Bugün resmî maç sayısı dokuz yüz on bir.",
+        "tts": "Kazu Miura dil bilmeden, cebinde yedi yüz dolarla Brezilya'ya uçuyor. Yıllarca tribünler adını bile bilmiyor. Bir penaltıdan sonra bütün stadyum ilk kez Kazu! diye haykırıyor. Bugün resmî maç sayısı dokuz yüz on bir."
       },
       {
         "id": "l10",
-        "tts": "Peki ikisinin resmî maç sayısı ne?",
-        "text": "Peki ikisinin resmî maç sayısı ne?",
+        "who": "S",
+        "text": "Ben Kaiser'i seçtim; on üç yıl yalanla yaşamak da emek.",
+        "tts": "Ben Kaiser'i seçtim; on üç yıl yalanla yaşamak da emek.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+15%",
         "pitch": "+2Hz"
       },
       {
         "id": "l11",
-        "tts": "Kaiser'inki sıfır. Kazu'nunki dokuz yüz on bir.",
-        "text": "Kaiser'inki sıfır. Kazu'nunki 911.",
-        "rate": "-4%",
-        "pitch": "-3Hz"
-      },
-      {
-        "id": "l12",
-        "tts": "Sen hangisine şaşırdın? Yoruma yaz.",
+        "who": "A",
         "text": "Sen hangisine şaşırdın? Yoruma yaz.",
-        "rate": "+4%",
-        "pitch": "+2Hz"
+        "tts": "Sen hangisine şaşırdın? Yoruma yaz."
       }
     ]
   },

@@ -2,12 +2,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { hikayeTimes } from './hikaye_core.js';
-import { FILMS } from '../tools/audio_hikaye.mjs';
+import { filmOf } from '../tools/audio_hikaye.mjs';
 
 export function hikayeSummary(ep) {
   const voice = JSON.parse(fs.readFileSync(path.join('assets', 'voice', ep.id, 'words.json'), 'utf8'));
   const { tl, T } = hikayeTimes(ep, voice), D = tl.duration;
-  const mod = FILMS[ep.id];
+  const mod = filmOf(ep);
   const hero = mod?.hero ? mod.hero(T) : T.lastEnd - 3;
   return {
     duration: D, rw0: tl.loop0, rw1: D, heroTl: hero, cover: 0,

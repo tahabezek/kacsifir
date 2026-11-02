@@ -10,7 +10,13 @@ const dir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'engin
 export const FILMS = {};
 if (fs.existsSync(dir)) for (const f of fs.readdirSync(dir)) if (/^f\d+\.js$/.test(f)) FILMS[f.slice(1, -3)] = await import(pathToFileURL(path.join(dir, f)).href);
 
+// Çizgi filmleri (engine/cizgi/f<id>.js) kendi ses ipuçlarını taşır; çizgi bölümünde önce onlara bakılır
+const dirC = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'engine', 'cizgi');
+export const FILMS_C = {};
+if (fs.existsSync(dirC)) for (const f of fs.readdirSync(dirC)) if (/^f\d+\.js$/.test(f)) FILMS_C[f.slice(1, -3)] = await import(pathToFileURL(path.join(dirC, f)).href);
+export const filmOf = ep => (ep.template === 'cizgi' && FILMS_C[ep.id]?.cues ? FILMS_C[ep.id] : FILMS[ep.id]);
+
 export function synthHikaye(ep) {
   const { tl, T } = hikayeTimes(ep, readVoice(ep));
-  return mixVoiceFilm(ep, tl, FILMS[ep.id].cues(T), Number(ep.id));
+  return mixVoiceFilm(ep, tl, filmOf(ep).cues(T), Number(ep.id));
 }

@@ -16,7 +16,9 @@ old = json.load(open(words_file, encoding='utf-8')) if os.path.exists(words_file
 async def say(line):
     # satır bazında hız ve perde (dramatik satırlar daha yavaş ve pes): yoksa bölümün genel değeri
     rate, pitch = line.get('rate', v.get('rate', '+0%')), line.get('pitch', v.get('pitch', '+0Hz'))
-    key = hashlib.sha1(f"{line['tts']}|{v['name']}|{rate}|{pitch}".encode()).hexdigest()[:12]
+    name = line.get('voice', v['name'])   # iki sesli anlatım: satır kendi sesini taşıyabilir (Anlatıcı / Soran)
+    tight = v.get('tight')   # cümle arası sessizlikleri bu süreye kısalt (sn); iki sesli hızlı anlatım için
+    key = hashlib.sha1(f"{line['tts']}|{name}|{rate}|{pitch}|{tight}".encode()).hexdigest()[:12]
     mp3 = os.path.join(out, line['id'] + '.mp3')
     if old.get(line['id'], {}).get('key') == key and os.path.exists(mp3):
         return line['id'], old[line['id']]
@@ -24,7 +26,7 @@ async def say(line):
     # (tools/voice_words.py). Servis ara sıra boş yanıt veriyor: artan beklemeyle yeniden denenir.
     for k in range(30):
         try:
-            com = edge_tts.Communicate(line['tts'], v['name'], rate=rate, pitch=pitch, boundary='SentenceBoundary')
+            com = edge_tts.Communicate(line['tts'], name, rate=rate, pitch=pitch, boundary='SentenceBoundary')
             words, audio = [], bytearray()
             async for ch in com.stream():
                 if ch['type'] == 'audio':
@@ -37,6 +39,12 @@ async def say(line):
     else:
         raise SystemExit(f"{line['id']}: ses alınamadı")
     open(mp3, 'wb').write(audio)
+    if tight:
+        import subprocess, shutil
+        ff = os.path.join('node_modules', 'ffmpeg-static', 'ffmpeg.exe' if os.name == 'nt' else 'ffmpeg')
+        tmp = mp3 + '.tmp.mp3'
+        subprocess.run([ff, '-v', 'error', '-y', '-i', mp3, '-af', f'silenceremove=stop_periods=-1:stop_duration={tight}:stop_threshold=-45dB:stop_silence={tight}', tmp], check=True)
+        shutil.move(tmp, mp3)
     return line['id'], {'key': key, 'words': words}
 
 async def main():

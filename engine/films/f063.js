@@ -109,7 +109,7 @@ export async function film(A) {
   // ═══ 4 · derin su: göz merceği ═══
   const t4 = tableau('derin2', { x: X(4), floor: null, spots: [{ x: 1, h: 6, z: 3, tx: 0, I: 60, angle: 0.6, color: '#BFE3EA', shadow: false }], fog: ['#0B2A33', 0.1], hemi: ['#5C97A6', '#06100F', 1.0] });
   sea(t4);
-  const sk2 = shark(t4.g); updates.push(t => { sk2.swim(t); sk2.g.position.set(lerp(-3, 4, seg(t, T.l07, T.l08end - T.l07)), -0.12, 0); });
+  const sk2 = shark(t4.g); updates.push(t => { sk2.swim(t); const gz = w('l08', 'göz') - 0.2; sk2.g.position.set(t < gz ? lerp(0.6, 1.9, seg(t, T.l07, gz - T.l07)) : lerp(1.9, 4, seg(t, gz, T.l08end - gz)), -0.12, 0); });
 
   // ═══ 5 · iki sıra ═══
   const t5 = tableau('ikisira', { x: X(5), floor: '#1A1410', floorR: 40, spots: [{ x: 20, h: 6, z: 4, tx: 20, I: 4, angle: 1.2, color: '#B0C8FF', shadow: false }], fog: ['#07060A', 0.03], hemi: ['#3A3040', '#120C08', 0.3] });
@@ -135,7 +135,7 @@ export async function film(A) {
     [T.l05end + 0.5, P(2, -0.15, 1.2, 0.95), P(2, -1.0, 1.05, 0), 38, null, 0.02],
     ...cut(T.l06 - 0.15, [P(2, -0.15, 1.2, 0.94), P(2, -1.0, 1.05, 0), 38], [P(3, -1.2, 1.1, 2.2), P(3, 2, 0.8, -0.2), 40]),
     [T.l06end + 0.3, P(3, 13.6, 1.3, 2.6), P(3, 15.2, 0.9, 0.3), 40],
-    ...cut(T.l07 - 0.15, [P(3, 13.6, 1.3, 2.58), P(3, 15.2, 0.9, 0.3), 40], [P(4, -1, 0.6, 6.4), P(4, 0, 0, 0), 42]),
+    ...cut(T.l07 - 0.15, [P(3, 13.6, 1.3, 2.58), P(3, 15.2, 0.9, 0.3), 40], [P(4, -0.4, 0.7, 7.0), P(4, -1.2, 0, 0), 46]),
     [w('l08', 'göz') - 0.2, P(4, 2.2, 0.2, 1.6), P(4, 1.5, 0, 0.28), 36, null, 0.006],
     [T.l08end, P(4, 3.9, 0.12, 0.95), P(4, 3.58, 0, 0.29), 32, null, 0.004],
     ...cut(T.l09 - 0.15, [P(4, 3.9, 0.12, 0.94), P(4, 3.58, 0, 0.29), 32], [P(5, -1.4, 1.5, 2.2), P(5, 4, 0.75, -0.25), 40]),
@@ -150,7 +150,7 @@ export async function film(A) {
 
   return {
     cam, cuts,
-    names: [[w('l02', 'Jan') - 0.1, T.l03 - 0.2, 'JEANNE CALMENT', 'Arles, Fransa · 1875–1997'], [w('l07', 'Grönland') - 0.1, w('l07', 'Ancak') - 0.2, 'GRÖNLAND KÖPEKBALIĞI', 'Kuzey Atlantik ve Arktik']],
+    names: [[w('l02', 'Jan') - 0.1, T.l03 - 0.2, 'JEANNE CALMENT', 'Arles, Fransa · 1875–1997'], [w('l07', 'Grönland') - 0.1, w('l07', 'Ancak') - 0.2, 'GRÖNLAND', 'köpekbalığı · Kuzey Atlantik ve Arktik']],
     numbers: [[w('l06', 'Yüz') - 0.15, T.l07 - 0.3, '122 yıl', 'BELGELENMİŞ EN UZUN ÖMÜR'], [w('l08', 'yaklaşık') - 0.1, T.l09 - 0.3, '~400', 'TAHMİNİ YAŞ · ARALIK 272–512'],
       [T.l10 - 0.05, w('l10', 'Bu') - 0.3, '122 yıl', 'CALMENT'], [w('l10', 'o') - 0.15, T.l11 + 0.3, t => countS(t) + ' yıl', 'KÖPEKBALIĞI · TAHMİNİ']],
     update(t) {

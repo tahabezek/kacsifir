@@ -700,6 +700,19 @@
         "status": "scheduled",
         "dueAt": "2026-11-04T17:30:00.000Z"
       }
+    },
+    "2026-11-05T05:30Z": {
+      "episode": "029",
+      "media": "v/029-jupiter-terazi.mp4",
+      "status": "scheduled",
+      "at": "2026-11-03T06:32:25.418Z",
+      "postId": "6ae9803f3b00665c737ab67d",
+      "dueAt": "2026-11-05T05:30:00.000Z",
+      "yt": {
+        "postId": "6ae9803fee93f2557f2b0622",
+        "status": "scheduled",
+        "dueAt": "2026-11-05T05:30:00.000Z"
+      }
     }
   }
 }

@@ -781,7 +781,25 @@
       "manual": true,
       "note": "kurtarma: 2026-11-04T17:30Z",
       "postId": "6aeb7e497631b8ab98c03964",
-      "dueAt": "2026-11-04T19:45:00.000Z"
+      "dueAt": "2026-11-04T19:45:00.000Z",
+      "yt": {
+        "postId": "6aeb7f76ff365be0286e234c",
+        "status": "scheduled",
+        "dueAt": "2026-11-04T19:45:00.000Z"
+      }
+    },
+    "2026-11-06T17:30Z": {
+      "episode": "035",
+      "media": "v/035-dag-adami-ve-madenciler.mp4",
+      "status": "scheduled",
+      "at": "2026-11-04T18:52:04.323Z",
+      "postId": "6aeb7f76600b02e627218227",
+      "dueAt": "2026-11-06T17:30:00.000Z",
+      "yt": {
+        "postId": "6aeb7f7709e5f61702c32e78",
+        "status": "scheduled",
+        "dueAt": "2026-11-06T17:30:00.000Z"
+      }
     }
   }
 }

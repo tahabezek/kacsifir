@@ -1,146 +1,259 @@
-// № 042 · Ay'a merdivenle (çizgi motoru, iki sesli sayı filmi). Senaryo: research/SENARYOLAR.md §4.
-// Kanca: Dünya'dan Ay'a uzanan merdiven ve en altta tırmanan çocuk. Ara durak işaretleri: Everest, uzayın sınırı, İSS, Ay.
-// Doruk: 72 yıllık tırmanışın yanından 3 günde geçen Apollo roketi. Sahneler 1400 px arayla yan yana.
+// № 042 · Ay'a merdivenle (çizgi motoru, süreç dili, tek sesli + Soran tepkisi). Senaryo: research/SUREC_SENARYOLARI.md.
+// Kural (4 Kasım): sonucu değil süreci göster. Kapak: Ay'a uzanan merdivenin dibinde "sen". Tırmanış: kamera senle yükselir,
+// basamaklar akar; Everest, uzayın sınırı, İSS ve GPS sözcüklerinde yanından geçer; geçen süre sayacı saatten yıla döner,
+// saç kırlaşıp ağarır, Ay büyür. Doruk: "ayak basıyorsun"da Ay'a adım, vuruş ve kısa durgunluk (71 yıl 8 ay).
+// Son satır: Apollo 11 aynı yolu 3 günde geçer. Sahne 0 tırmanış (dünya kaydırılır), sahne 1 Ay yüzeyi.
 
 const SX = 1400;
-export function hero(T) { return T.w('l05', 9) + 0.3; }
+export function hero(T) { return T.w('l04', 8); }
 export function cues(T) {
-  const w = (id, k) => T.w(id, k);
+  const w = (id, k) => T.w(id, k), h = hero(T);
   return {
-    whip: [[T.l03 - 0.3, T.l03], [w('l03', 8) - 0.3, w('l03', 8)], [T.l04 - 0.3, T.l04], [T.l06 - 0.3, T.l06], [T.loop0 - 0.3, T.loop0 + 0.1]],
-    tick: [w('l03', 5), w('l03', 7), w('l03', 'everest'), w('l03', 19), w('l03', 22)],
-    thock: [w('l03', 'gerekiyor')],
-    scratch: [[w('l05', 'oysa'), hero(T), 0.02]],
-    riser: [w('l05', 'oysa') - 0.2, hero(T) - 0.3],
-    impact: hero(T) - 0.3,
+    whip: [[w('l02', 5) - 0.25, w('l02', 5)], [w('l02', 11) - 0.25, w('l02', 11)], [w('l02', 17) - 0.25, w('l02', 17)], [w('l03', 5) - 0.25, w('l03', 5)], [w('l06', 0) - 0.1, w('l06', 6)], [T.loop0 - 0.3, T.loop0 + 0.1]],
+    tick: [w('l01', 5), w('l01', 10), w('l01', 12), w('l02', 3), w('l02', 16), w('l03', 3)],
+    thock: [h + 0.05],
+    riser: [w('l03', 9), h - 0.45],
+    silence: [h - 0.45, h],
+    impact: h - 0.3,
     loopEnd: T.loop0,
   };
 }
 
-const base = o => ({ head: { w: 0.92, h: 1, ear: 0.12 }, neck: 0.06, eyes: { gap: 0.34, w: 0.19, h: 0.23, y: 0.03 }, line: 0.05, idle: { blink: [2.6, 5.4] }, ...o });
-const COCUK = base({
-  key: 'tirmanan', name: 'Tırmanan', seed: 421,
-  head: { w: 0.94, h: 1, ear: 0.13 }, neck: 0.05,
-  torso: { len: 0.66, shoulder: 0.58, hip: 0.5, depth: 0.4, belly: 0, color: '#E8A33D', shade: '#C8852A' },
-  arm: { upper: 0.32, lower: 0.3, w: 0.17, color: '#E8A33D', shade: '#C8852A', hand: 0.12 },
-  leg: { upper: 0.32, lower: 0.3, w: 0.19, color: '#3F4A57', shade: '#2E3740' },
-  shoe: { color: '#262626', len: 0.26, h: 0.11 },
-  skin: '#F2C9A5', skinShade: '#DDAA85', hair: '#3B2A20',
-  features: ['hoodie', 'hairMessy'],
-});
-
 export async function film(A) {
-  const { ctx, T, D, PAL, ease, seg, lerp, mulberry32, poly, rect, circ, ell, line, text, bg, ch, LW } = A;
+  const { ctx, T, D, PAL, ease, seg, lerp, clamp01, mulberry32, poly, rect, circ, ell, line, bg, ch, CARDS, LW } = A;
+  // yazı: font ve genişlik her çağrıda birlikte kurulur (fontStretch kareden kareye taşınmasın: determinizm)
+  const tx = (str, x, y, size, col = PAL.ink) => { ctx.font = `800 ${size}px Archivo`; ctx.fontStretch = 'semi-condensed'; ctx.fillStyle = col; ctx.textAlign = 'center'; ctx.fillText(str, x, y); ctx.textAlign = 'left'; };
   const w = (id, k) => T.w(id, k);
-  const GY = 1360;
   const loopT = t => (t >= T.loop0 ? t - D : t);
-  const NIGHT = '#1B2436', SPACE = '#0E1220';
+  const talk = (t, a, b) => (t > a && t < b ? 0.35 + 0.35 * Math.sin(t * 19) : 0);
+  const RED = PAL.red, H = hero(T);
+  const hex = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16));
+  const mix = (a, b, u) => { const A0 = hex(a), B0 = hex(b); return '#' + A0.map((v, i) => Math.round(lerp(v, B0[i], clamp01(u))).toString(16).padStart(2, '0')).join(''); };
 
-  const stars = (seed, n, x0, y0, wd, ht) => { const r = mulberry32(seed); ctx.fillStyle = '#F4F1EA'; for (let i = 0; i < n; i++) { const s = 2 + r() * 4; ctx.fillRect(x0 + r() * wd, y0 + r() * ht, s, s); } };
-  const moon = (x, y, r) => { circ(x, y, r, '#E9E4D6', LW); for (const [dx, dy, k] of [[-0.35, -0.2, 0.18], [0.3, 0.25, 0.14], [0.05, -0.45, 0.1], [-0.2, 0.4, 0.12]]) circ(x + dx * r, y + dy * r, k * r, '#CFC8B6', 4); };
-  // eğik merdiven (a → b), basamak aralığı gap
-  const ladder = (ax, ay, bx, by, wd = 70, gap = 46, col = '#B9874E') => {
-    const dx = bx - ax, dy = by - ay, L = Math.hypot(dx, dy), nx = -dy / L * wd / 2, ny = dx / L * wd / 2;
-    for (let s = 0; s < L; s += gap) { const u = s / L; line(ax + dx * u - nx, ay + dy * u - ny, ax + dx * u + nx, ay + dy * u + ny, 6, col); }
-    line(ax - nx, ay - ny, bx - nx, by - ny, 9, col); line(ax + nx, ay + ny, bx + nx, by + ny, 9, col);
+  // ——— tırmanış: dünya kaydırması s(t) (px, merdiven yönünde); önce saniyede bir basamak, l02'de hızlanan zaman atlaması ———
+  const RUN = 40, RISE = 34, L = Math.hypot(RUN, RISE), DX = RUN / L, DY = RISE / L;   // Ay'a doğru yükselen merdiven
+  const SA = [430, 1180];                                                          // sen'in ayak noktası (ekran)
+  const t0 = w('l01', 5), tA = T.l02 - 0.2, V0 = L, ACC = 220, VMAX = 380;
+  const tM = tA + (VMAX - V0) / ACC;
+  const s = t => {
+    if (t <= t0) return 0;
+    if (t >= H) t = H;
+    if (t < tA) return V0 * (t - t0);
+    const sA = V0 * (tA - t0);
+    if (t < tM) { const u = t - tA; return sA + V0 * u + 0.5 * ACC * u * u; }
+    const u = tM - tA; return sA + V0 * u + 0.5 * ACC * u * u + VMAX * (t - tM);
   };
-  // dikey merdiven (x merkez), kaydırma off (px)
-  const vLadder = (x, off, wd = 300, gap = 110, y0 = -400, y1 = 2400) => {
-    line(x - wd / 2, y0, x - wd / 2, y1, 18, '#7A5634'); line(x + wd / 2, y0, x + wd / 2, y1, 18, '#7A5634');
-    line(x - wd / 2, y0, x - wd / 2, y1, 10, '#B9874E'); line(x + wd / 2, y0, x + wd / 2, y1, 10, '#B9874E');
-    const st = ((off % gap) + gap) % gap;
-    for (let y = y0 + st; y < y1; y += gap) { line(x - wd / 2, y, x + wd / 2, y, 18, '#7A5634'); line(x - wd / 2, y, x + wd / 2, y, 10, '#D9A75A'); }
+  const vel = t => (t <= t0 || t >= H ? 0 : t < tA ? V0 : Math.min(VMAX, V0 + ACC * (t - tA)));
+  // duraklar kendi sabit hızlarıyla dikey akar: tk anında (sx, sy) noktasında, sen'in hizasında
+  const LV = 480, near = (t, tk) => Math.abs(t - tk) < 2.6;
+  const at = (t, tk, sx, sy) => [sx, sy + LV * (t - tk)];
+
+  // ——— geçen süre (sn): durak sözcüklerine kilitli çapalar, log uzayında doğrusal (hızlanan zaman) ———
+  const YR = 31557600;
+  // sayaç, anlatıcının söylediği değere sayının ilk sözcüğünde oturur ve cümle boyunca bekler (ekran = ses);
+  // cümleler arasında 0,5 sn'de bir sonrakine akar, son durak sonrası Ay'a kadar hızlanır
+  const HOLD = [[w('l02', 0), 14.5 * 3600], [w('l02', 8), 7 * 86400], [w('l02', 14), 28 * 86400], [w('l03', 0), (3 + 10 / 12) * YR]];
+  const AN = [[t0, 0]];
+  HOLD.forEach(([s, v], i) => { if (i) AN.push([s - 0.5, HOLD[i - 1][1]]); AN.push([s, v]); });
+  AN.push([w('l03', 9), HOLD.at(-1)[1]], [w('l04', 1), (71 + 8 / 12) * YR]);   // "yetmiş bir yıl sekiz ay" sözünde tam değer
+  const elapsed = t => {
+    if (t <= AN[0][0]) return 0;
+    if (t >= H) return AN.at(-1)[1];
+    for (let i = 0; i + 1 < AN.length; i++) {
+      const [a, ea] = AN[i], [b, eb] = AN[i + 1];
+      if (t <= b) return Math.pow(10, lerp(Math.log10(ea + 1), Math.log10(eb + 1), ease.state(clamp01((t - a) / Math.max(1e-6, b - a))))) - 1;
+    }
+    return AN.at(-1)[1];
   };
-  const climb = (x, y, s, t, expr = 'notr', rate = 1) => { const p = Math.sin(t * Math.PI * 2 * rate); ch(COCUK, { x, y, s, armL: { sh: 165 + 15 * p, el: 15 }, armR: { sh: 165 - 15 * p, el: 15 }, legL: { hip: 8, knee: 30 + 30 * Math.max(0, p) }, legR: { hip: 8, knee: 30 + 30 * Math.max(0, -p) }, expr }, t); };
-  const rocket = (x, y, s = 1, rot = 0) => { ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); poly([[-30, 60], [-30, -60], [0, -120], [30, -60], [30, 60]], '#F4F1EA', LW); poly([[-30, 20], [-60, 70], [-30, 60]], PAL.red, LW); poly([[30, 20], [60, 70], [30, 60]], PAL.red, LW); circ(0, -40, 14, '#8FB4C8', LW); poly([[-18, 60], [0, 120], [18, 60]], '#F2A23A', LW); ctx.restore(); };
+  const fmt = e => {
+    if (e < 60) return `${Math.floor(e)} saniye`;
+    if (e < 3600) return `${Math.floor(e / 60)} dakika`;
+    if (e < 2 * 86400) return `${(Math.floor(e / 360) / 10).toLocaleString('tr-TR')} saat`;
+    if (e < 60 * 86400) return `${Math.round(e / 86400)} gün`;
+    const y = e / YR, yy = Math.floor(y + 1e-6), mm = Math.floor((y - yy) * 12 + 1e-4);
+    return yy ? `${yy} yıl ${mm} ay` : `${Math.floor(y * 12 + 1e-4)} ay`;
+  };
+  // yaşlanma: saç koyu → kır → ak; hafif kambur
+  const years = t => elapsed(t) / YR;
+  const hairOf = y => (y < 12 ? CARDS.sen.hair : y < 38 ? mix(CARDS.sen.hair, '#8C8780', (y - 12) / 26) : mix('#8C8780', '#EEECE6', (y - 38) / 26));
+  const SEN = t => ({ ...CARDS.sen, hair: hairOf(years(t)) });
+
+  // ——— çizim parçaları ———
+  const R = mulberry32(4207);
+  const CLOUDS = Array.from({ length: 16 }, () => ({ sj: 200 + R() * 2600, x: 40 + R() * 1000, y: 300 + R() * 1100, k: 0.6 + R() * 0.7 }));
+  const STARS = Array.from({ length: 120 }, () => ({ x: R() * 1180 - 50, y: R() * 2300, r: 1.5 + R() * 3, ph: R() * 6 }));
+  const cloud = (x, y, k) => { ctx.save(); ctx.translate(x, y); ctx.scale(k, k); for (const [cx, cy, r] of [[-60, 10, 44], [0, -10, 60], [64, 8, 46], [20, 24, 46]]) circ(cx, cy, r, '#FBFAF6', 0); ctx.restore(); };
+  const stairs = (t, wear = 0) => {
+    const off = s(t), c0 = Math.floor(off / L);
+    // basamak i'nin sahanlık başı: SA + i·(RUN, −RISE) − off·(DX, −DY); zemin (i < 0) altında basamak yok
+    const P = i => [SA[0] - 18 + i * RUN - off * DX, SA[1] - i * RISE + off * DY];
+    const iMin = Math.max(0, c0 - 16), iMax = c0 + 24;
+    const pts = [];
+    for (let i = iMin; i <= iMax; i++) { const [x, y] = P(i); pts.push([x, y], [x + RUN, y], [x + RUN, y - RISE]); }
+    const [xa, ya] = P(iMin), [xb, yb] = P(iMax);
+    poly([...pts, [xb + RUN + 60, yb + 40], [xa + 70, ya + 70], [xa, ya + 40]], mix('#C9B48E', '#8E8A84', wear), LW);
+    // yan kiriş: merdivenin tutunma çubuğu
+    line(xa + 10, ya - 120, xb + 10, yb - 120, 7, '#6A5A48');
+  };
+  const mountain = (sx, sy) => {
+    poly([[sx, sy], [sx - 320, sy + 900], [sx + 360, sy + 900]], '#8C8F96', LW);
+    poly([[sx, sy], [sx - 70, sy + 190], [sx - 20, sy + 160], [sx + 20, sy + 200], [sx + 78, sy + 180]], '#FBFAF6', LW * 0.8);
+    line(sx, sy, sx, sy - 70, 5); poly([[sx, sy - 70], [sx + 46, sy - 58], [sx, sy - 46]], RED, 4);
+    tx('EVEREST', sx - 10, sy - 110, 46, PAL.ink); tx('8.849 m', sx - 10, sy - 66, 36, RED);
+  };
+  const karman = (sy, dark) => {
+    ctx.save(); ctx.setLineDash([26, 18]); line(-40, sy, 1120, sy, 7, RED); ctx.restore();
+    tx('UZAYIN SINIRI · 100 km', 300, sy - 26, 40, dark > 0.5 ? '#F4EFE3' : PAL.ink);
+  };
+  const astronaut = (x, y, t, k = 1, wave = 0) => {
+    ctx.save(); ctx.translate(x, y); ctx.scale(k, k);
+    const a = -1.9 + 0.6 * Math.sin(t * 7 + wave);
+    line(16, -6, 16 + Math.cos(a) * 34, -6 + Math.sin(a) * 34, 12, '#EDEDE8');
+    rect(-20, -20, 40, 52, '#EDEDE8', 4, 10); circ(0, -38, 22, '#EDEDE8', 4); ell(4, -38, 13, 10, '#2E4A6B', 3);
+    line(-10, 32, -14, 56, 12, '#EDEDE8'); line(10, 32, 14, 56, 12, '#EDEDE8');
+    ctx.restore();
+  };
+  const iss = (sx, sy, t) => {
+    line(sx - 210, sy, sx + 210, sy, 10, '#9AA0A8');
+    for (const px of [-190, -120, 120, 190]) { rect(sx + px - 26, sy - 92, 52, 76, '#2E5A8A', 4, 2); rect(sx + px - 26, sy + 16, 52, 76, '#2E5A8A', 4, 2); line(sx + px, sy - 16, sx + px, sy + 16, 5); }
+    rect(sx - 70, sy - 22, 140, 44, '#E9E6DE', LW, 16); rect(sx - 22, sy - 60, 44, 120, '#E9E6DE', LW, 14);
+    astronaut(sx + 30, sy - 120, t, 0.9, 0); astronaut(sx + 110, sy - 106, t, 0.9, 1.4);
+    tx('UZAY İSTASYONU · 408 km', sx, sy + 150, 38, '#F4EFE3');
+  };
+  const gps = (sx, sy) => {
+    rect(sx - 40, sy - 40, 80, 80, '#E2B13C', LW, 6); line(sx - 40, sy, sx - 70, sy, 6); line(sx + 40, sy, sx + 70, sy, 6);
+    rect(sx - 230, sy - 34, 160, 68, '#2E5A8A', 4, 3); rect(sx + 70, sy - 34, 160, 68, '#2E5A8A', 4, 3);
+    for (const px of [-190, -150, -110, 110, 150, 190]) line(sx + px, sy - 34, sx + px, sy + 34, 3, '#7FA6CF');
+    line(sx, sy + 40, sx, sy + 76, 5); circ(sx, sy + 84, 10, '#BFC4CA', 4);
+    tx('GPS · 20.200 km', sx, sy + 140, 38, '#F4EFE3');
+  };
+  const moonDisc = (x, y, r) => {
+    circ(x, y, r, '#EDE7D2', Math.min(LW, r * 0.12));
+    for (const [cx, cy, cr] of [[-0.3, -0.2, 0.18], [0.25, 0.1, 0.12], [-0.05, 0.35, 0.1], [0.32, -0.32, 0.08]]) circ(x + cx * r, y + cy * r, cr * r, '#D6CDB2', 0);
+  };
 
   const scenes = [];
-  // 0 · kanca: Dünya'dan Ay'a uzanan merdiven; en altta tırmanan çocuk
+  // 0 · tırmanış: kapakta merdivenin dibi; dünya merdiven yönünde kayar, duraklar sözcüklerinde sen'in hizasından geçer
   scenes[0] = t => {
     t = loopT(t);
-    bg(NIGHT); stars(7, 90, -300, -200, 1700, 1500);
-    moon(800, 720, 150);
-    ell(540, GY + 420, 1200, 520, '#4C8A5A', LW); ell(300, GY + 190, 220, 60, '#5E9A4E', 0);
-    ladder(250, GY + 20, 730, 820);
-    const u = 0.1 + 0.04 * (0.5 + 0.5 * Math.sin(2 * Math.PI * t / D));
-    const cx = lerp(250, 730, u), cy = lerp(GY + 20, 820, u);
-    climb(cx, cy + 30, 62, t, 'saskin', 1.2);
+    const off = s(t), sE = s(w('l02', 5)), sK = s(w('l02', 11));
+    const q = clamp01((off - sE * 0.6) / (sK - sE * 0.6));   // gökyüzü kararması
+    bg(mix('#BFD6DC', '#141B2A', q));
+    if (q > 0.05) for (const st of STARS) { const y = ((st.y + off * DY * 0.35) % 2300) - 160; circ(st.x - (off * DX * 0.35) % 1, y, st.r, `rgba(255,250,235,${q * (0.6 + 0.4 * Math.sin(t * 2 + st.ph))})`, 0); }
+    // Ay: yaklaştıkça büyür (geçen sürenin log'u ile)
+    const P = Math.log10(elapsed(t) + 1) / Math.log10(AN.at(-1)[1] + 1);
+    const mr = 46 * Math.exp(2.9 * Math.pow(P, 2.6));
+    moonDisc(lerp(860, 760, P), lerp(700, 520, P), mr);
+    // bulutlar (uzay sınırının altında)
+    for (const c of CLOUDS) { if (c.sj > sK) continue; const [x, y] = [c.x - DX * (off - c.sj), c.y + DY * (off - c.sj)]; if (y > -120 && y < 2100) cloud(x, y, c.k); }
+    // zemin, ev ve ağaçlar: yalnız başta görünür, aşağı kayar
+    const gy = SA[1] + 6 + DY * off;
+    if (gy < 2100) {
+      rect(-300, gy, 1700, 1400, '#7DAE5E', 0); line(-300, gy, 1400, gy, LW);
+      for (const [x, k] of [[120, 1], [230, 0.8], [960, 0.9]]) { rect(x - 10, gy - 70 * k, 20, 70 * k, '#7A5A3A', 4); circ(x, gy - 110 * k, 56 * k, '#5E9A4E', LW); }
+      rect(290, gy - 120, 150, 120, '#E9D9BC', LW); poly([[278, gy - 120], [365, gy - 190], [452, gy - 120]], '#B4563A', LW); rect(345, gy - 64, 36, 64, '#6A4A2E', 4);
+    }
+    // duraklar
+    const tE = w('l02', 5), tK = w('l02', 11), tI = w('l02', 17), tG = w('l03', 5);
+    if (near(t, tE)) { const [x, y] = at(t, tE, 220, SA[1] - 300); mountain(x, y); }
+    if (near(t, tK)) { const [, y] = at(t, tK, 0, SA[1] - 330); karman(y, q); }
+    if (near(t, tI)) { const [x, y] = at(t, tI, 250, SA[1] - 380); iss(x, y, t); }
+    if (near(t, tG)) { const [x, y] = at(t, tG, 250, SA[1] - 360); gps(x, y); }
+    // hız çizgileri
+    const v = vel(t);
+    if (v > 150) { const r = mulberry32(Math.floor(t * 6)); ctx.save(); ctx.globalAlpha = 0.35 * (v - 150) / 230; for (let i = 0; i < 9; i++) { const x = r() * 1080, y = r() * 1900; line(x, y, x - DX * 140, y + DY * 140, 4, q > 0.5 ? '#C9D2E0' : '#FFFFFF'); } ctx.restore(); }
+    stairs(t, q * 0.6);
+    // "17 santim": sen'in önündeki basamakta ölçü
+    const m = seg(t, w('l01', 7) - 0.1, 0.3) * (1 - seg(t, T.l01end + 0.3, 0.3));
+    if (m > 0) { ctx.save(); ctx.globalAlpha = m; line(SA[0] + 60, SA[1] - 50, SA[0] + 60, SA[1] - 50 - RISE, 6, RED); tx('17 cm', SA[0] + 140, SA[1] - 60, 40, RED); ctx.restore(); }
+    // sen: başta merdivenin dibinde Ay'a bakar; sonra sabit tempoda adım atar, yaşlandıkça hafif kamburlaşır
+    const y = years(t), climbing = t > t0, ph = climbing ? ((t - t0) * 0.8) % 1 : null;
+    const sas = t > T.l02 - 0.3 && t < T.l02 + 0.6;
+    ch(SEN(t), { x: SA[0], y: SA[1], s: 110, facing: 1, walk: ph ?? undefined, view: climbing ? 'side' : 'front', lean: 4 + 12 * clamp01(y / 70),
+      expr: y > 40 ? 'yorgun' : sas ? 'saskin' : 'notr', head: { look: climbing ? [0.4, -0.5] : [0.6, -0.7], tilt: climbing ? -4 : 0 },
+      ...(climbing ? {} : { armR: { sh: 70, el: 30 } }) }, t);
   };
-  // 1 · yakın: dikey merdiven, basamaklar kayar; 17 cm ve saniyede bir basamak
+  // 1 · Ay yüzeyi: merdivenin son basamağından Ay'a adım; Apollo 11 aynı yolu üç günde geçer
   scenes[1] = t => {
-    bg('#BFD6DC');
-    for (let i = 0; i < 5; i++) { circ(-100 + i * 300, 340 + (i % 2) * 70, 50, '#F4F1EA', 0); circ(-40 + i * 300, 330 + (i % 2) * 70, 62, '#F4F1EA', 0); }
-    vLadder(540, t * 110);
-    climb(540, 1260, 150, t, t > w('l03', 'everest') ? 'mutlu' : 'notr', 1);
-    if (t > w('l03', 2) - 0.2) { const y0 = 1500, y1 = y0 + 110; line(780, y0, 780, y1, 6, PAL.red); line(760, y0, 800, y0, 6, PAL.red); line(760, y1, 800, y1, 6, PAL.red); rect(810, y0 - 10, 230, 110, PAL.paper, LW, 14); text('17 cm', 925, y0 + 66, 64, PAL.red); }
-    if (t > w('l03', 5) - 0.2) { rect(60, 780, 320, 190, PAL.paper, LW, 16); circ(150, 875, 62, '#F4F1EA', LW); const a = (t % 1) * Math.PI * 2 - Math.PI / 2; line(150, 875, 150 + Math.cos(a) * 46, 875 + Math.sin(a) * 46, 8, PAL.red); text('1/sn', 290, 895, 56, A.INK); }
-  };
-  // 2 · yükseliş: gökyüzü kararır, işaretler aşağı kayar (Everest, uzayın sınırı, İSS)
-  const mark = (t, t0) => lerp(-400, 2300, seg(t, t0 - 1.0, 3.2));
-  scenes[2] = t => {
-    const k = seg(t, w('l03', 'everest'), w('l03', 21) - w('l03', 'everest'));
-    const sky = k < 0.33 ? '#8FB4D0' : k < 0.66 ? '#3A5276' : SPACE;
-    bg(sky); if (k > 0.33) stars(11, 120, -300, -200, 1700, 2400);
-    const ey = mark(t, w('l03', 'everest'));
-    poly([[-300, ey + 700], [140, ey], [300, ey + 160], [520, ey - 80], [900, ey + 700]], '#7A8A9A', LW); poly([[140, ey], [210, ey + 80], [300, ey + 160], [330, ey + 110], [520, ey - 80], [470, ey + 30], [420, ey + 20]], '#F4F1EA', 0);
-    line(520, ey - 80, 520, ey - 200, 6); poly([[520, ey - 200], [600, ey - 180], [520, ey - 160]], PAL.red, 4);
-    const ky = mark(t, w('l03', 19));
-    ctx.save(); ctx.setLineDash([30, 22]); line(-300, ky, 1400, ky, 8, '#8FB4D0'); ctx.restore(); rect(110, ky - 120, 440, 96, PAL.paper, LW, 14); text('UZAYIN SINIRI', 330, ky - 54, 50, A.INK);
-    const iy = mark(t, w('l03', 21));
-    ctx.save(); ctx.translate(820, iy); ctx.scale(1.6, 1.6); rect(-80, -20, 160, 40, '#C9CED2', LW, 6); for (const sx of [-1, 1]) { rect(sx * 150 - 60, -50, 120, 100, '#2E4A6B', LW, 4); line(sx * 30, 0, sx * 90, 0, 6); } ctx.restore(); text('İSS', 820, iy + 150, 60, '#F4F1EA');
-    vLadder(540, t * 160);
-    climb(540, 1300, 120, t, k > 0.66 ? 'saskin' : 'mutlu', 1.3);
-  };
-  // 3 · Ay: 2 milyar basamak; yorgun tırmanıcı; Apollo yanından geçer
-  scenes[3] = t => {
-    bg(SPACE); stars(13, 140, -300, -200, 1700, 2400);
-    moon(540, -40, 420);
-    vLadder(380, t * 40, 240, 90, 300, 2400);
-    const tired = t > T.l04 - 0.2;
-    ch(COCUK, { x: 380, y: 1310, s: 130, armL: { sh: 170, el: 10 }, armR: tired ? { sh: 60, el: 80 } : { sh: 160, el: 20 }, legL: { hip: 6, knee: 40 }, legR: { hip: 6, knee: 10 }, expr: tired ? 'yorgun' : 'saskin', head: { tilt: tired ? 10 : 0, look: [0.5, -0.6] } }, t);
-    const ap = seg(t, w('l05', 'apollo') - 0.4, 3.4);
-    if (ap > 0 && ap < 1) { const x = lerp(780, 820, ap), y = lerp(1900, -300, ap); ctx.save(); ctx.globalAlpha = 0.6; for (let i = 1; i < 6; i++) line(x, y + 120 + i * 60, x, y + 160 + i * 60, 10, '#F2A23A'); ctx.restore(); rocket(x, y, 1.4); }
-  };
-  // 4 · asansör şakası ve kapanış: merdivenin yanında asansör kapısı
-  scenes[4] = t => {
-    bg('#E9DFC9'); rect(-500, GY, 2080, 900, '#CDBFA8', 0); line(-500, GY, 1580, GY, LW);
-    rect(560, 620, 360, 740, '#9AA3AA', LW, 6); rect(580, 700, 150, 660, '#C9CED2', LW, 0); rect(750, 700, 150, 660, '#C9CED2', LW, 0); rect(680, 640, 120, 46, '#1F2421', 4, 6); text('AY', 740, 678, 34, '#F6C445');
-    circ(950, 1000, 18, '#F6C445', LW);
-    vLadder(250, 0, 200, 90, -800, GY);
-    const go = seg(t, T.l06, 0.8);
-    ch(COCUK, { x: lerp(250, 470, ease.state(go)), y: GY, s: 150, view: go > 0 && go < 1 ? 'side' : 'front', facing: 1, armR: go >= 1 ? { sh: 100, el: 10 } : undefined, expr: go >= 1 ? 'mutlu' : 'yorgun', head: { look: [0.6, 0] } }, t);
+    bg('#141B2A');
+    for (const st of STARS) circ(st.x, st.y * 0.55, st.r, `rgba(255,250,235,${0.55 + 0.4 * Math.sin(t * 2 + st.ph)})`, 0);
+    circ(250, 560, 70, '#3E78B8', LW); poly([[214, 520], [250, 506], [270, 540], [236, 566]], '#5E9A4E', 0); poly([[260, 586], [296, 572], [300, 600], [270, 612]], '#5E9A4E', 0);
+    // yüzey
+    ctx.beginPath(); ctx.moveTo(-200, 1060); ctx.quadraticCurveTo(540, 990, 1300, 1060); ctx.lineTo(1300, 2400); ctx.lineTo(-200, 2400); ctx.closePath(); ctx.fillStyle = '#CFC8B4'; ctx.fill(); ctx.lineWidth = LW; ctx.strokeStyle = PAL.ink; ctx.stroke();
+    for (const [x, y, r] of [[780, 1180, 70], [960, 1120, 40], [180, 1240, 50], [640, 1320, 34]]) ell(x, y, r, r * 0.32, '#B9B19B', 4);
+    // merdivenin üst ucu: soldan aşağıdan yüzeye çıkar
+    const steps = [];
+    for (let i = 0; i < 10; i++) { const x = 300 - (9 - i) * RUN * 1.2, y = 1062 + (9 - i) * RISE; steps.push([x, y], [x + RUN * 1.2, y], [x + RUN * 1.2, y - RISE]); }
+    poly([...steps.slice(0, -1), [330, 1100], [200, 1600], [120, 1600]], '#8E8A84', LW);
+    // sen: H'de son basamaktan Ay'a "hop"
+    const u = ease.state(seg(t, H - 0.1, 0.55));
+    const x = lerp(300, 470, u), y = lerp(1062, 1050, u) - Math.sin(u * Math.PI) * 46;
+    const land = seg(t, H + 0.42, 0.7);
+    if (land > 0 && land < 1) for (let k = 0; k < 6; k++) { const a = Math.PI + k * Math.PI / 5; circ(470 + Math.cos(a) * 60 * land, 1052 + Math.sin(a) * 18 * land, 16 * (1 - land), '#DCD6C4', 0); }
+    if (t > H + 0.45) ell(500, 1062, 22, 7, '#A39B86', 0);
+    const appU = seg(t, w('l06', 0) - 0.1, w('l06', 6) - w('l06', 0) + 0.2);
+    const sas = appU > 0 && t < w('l06', 8);
+    ch(SEN(H), { x, y, s: 118, facing: 1, view: u < 1 ? 'side' : 'front', walk: u > 0 && u < 1 ? u * 0.5 : undefined, lean: 16 - 6 * seg(t, H + 0.6, 0.6),
+      expr: sas ? 'saskin' : t > T.l05 && t < T.l05end + 0.3 ? 'yorgun' : t > H + 0.5 ? 'mutlu' : 'notr',
+      head: { look: sas ? [0.8, -0.6] : t > w('l06', 8) ? [0, 0] : [0.4, -0.3] }, armR: { sh: t > H + 0.6 && t < T.l05 ? 150 : 20, el: 20 } }, t);
+    // Apollo 11: Dünya'dan Ay'a, kesik izle
+    if (appU > 0) {
+      const p = ease.state(appU), rx = lerp(310, 760, p), ry = lerp(560, 1030, p) - Math.sin(p * Math.PI) * 160;
+      ctx.save(); ctx.setLineDash([10, 12]); ctx.beginPath(); ctx.moveTo(310, 560);
+      for (let k = 1; k <= 20; k++) { const pk = p * k / 20; ctx.lineTo(lerp(310, 760, pk), lerp(560, 1030, pk) - Math.sin(pk * Math.PI) * 160); }
+      ctx.lineWidth = 5; ctx.strokeStyle = '#F4EFE3'; ctx.stroke(); ctx.restore();
+      const ang = p < 1 ? Math.atan2(lerp(560, 1030, Math.min(1, p + 0.02)) - Math.sin(Math.min(1, p + 0.02) * Math.PI) * 160 - ry, lerp(310, 760, Math.min(1, p + 0.02)) - rx) : Math.PI / 2;
+      ctx.save(); ctx.translate(rx, ry); ctx.rotate(ang + Math.PI / 2);
+      if (p < 1) poly([[-10, 30], [0, 62 + 10 * Math.sin(t * 40)], [10, 30]], '#F2A23A', 3);
+      rect(-14, -30, 28, 60, '#F4F1EA', 4, 4); poly([[-14, -30], [0, -56], [14, -30]], '#F4F1EA', 4); poly([[-14, 18], [-26, 32], [-14, 30]], RED, 3); poly([[14, 18], [26, 32], [14, 30]], RED, 3);
+      ctx.restore();
+    }
   };
 
   // ——— kamera ———
   const P = (z, x, y, i) => [z, i * SX + x, y];
   const cut = (t, a, b) => [[t - 0.001, ...a], [t, ...b]];
-  const F0 = P(1.0, 560, 960, 0);
+  const F0 = P(1.0, 540, 960, 0);
   const cam = [
     [0, ...F0],
-    [T.l01end, ...P(1.06, 560, 960, 0)],
-    [T.l02end + 0.1, ...P(1.9, 310, 1330, 0)],
-    ...cut(T.l03 - 0.15, P(1.9, 310, 1330, 0), P(1.0, 540, 1000, 1)),
-    [w('l03', 'everest') - 0.6, ...P(1.05, 540, 1040, 1)],
-    ...cut(w('l03', 'everest') - 0.5, P(1.05, 540, 1040, 1), P(1.0, 540, 960, 2)),
-    [w('l03', 27) - 0.3, ...P(0.95, 540, 940, 2)],
-    ...cut(w('l03', 27) - 0.15, P(0.95, 540, 940, 2), P(0.9, 540, 980, 3)),
-    [T.l04end + 0.2, ...P(1.0, 500, 1040, 3)],
-    [hero(T), ...P(0.85, 560, 960, 3)],
-    ...cut(T.l06 - 0.15, P(0.85, 560, 960, 3), P(1.0, 540, 1000, 4)),
-    [T.loop0 - 0.001, ...P(1.06, 560, 1000, 4)],
-    [T.loop0, ...P(1.03, 560, 960, 0)],
+    [T.l01end, ...P(1.06, 540, 960, 0)],
+    [w('l02', 5), ...P(1.0, 520, 960, 0)],
+    [w('l03', 8), ...P(1.0, 520, 960, 0)],
+    [T.l03end - 0.2, ...P(1.55, 520, 1010, 0)],           // "saçların ağarıyor": yüzüne yaklaş
+    [w('l04', 6), ...P(1.0, 560, 900, 0)],                // Ay belirir
+    ...cut(H - 0.12, P(1.0, 560, 900, 0), P(1.05, 520, 960, 1)),
+    [H + 1.1, ...P(1.12, 480, 980, 1)],                   // varış: durgunluk
+    [T.l06, ...P(1.12, 480, 980, 1)],
+    [w('l06', 7), ...P(0.98, 540, 900, 1)],
+    [T.l06end + 0.2, ...P(1.05, 520, 940, 1)],
+    [T.loop0 - 0.001, ...P(1.05, 520, 940, 1)],
+    [T.loop0, ...P(1.03, 540, 960, 0)],
     [T.D, ...F0],
   ];
 
   return {
     cam,
-    title: ["Ay'a merdivenle", 'kaç yılda çıkılır?'],
+    title: ["Ay'a merdivenle", 'kaç yıl?'],
+    kicker: 'KAÇ SIFIR? · UZAY',
     draw(t) {
+      ctx.fontStretch = 'semi-condensed';   // kaplamanın setFont'u bunu kareden kareye taşıyor: ilk karede de aynı olsun (determinizm)
       let k = 0; for (let i = 0; i < cam.length; i++) if (cam[i][0] <= t) k = i;
       const i = Math.round((cam[k][2] - 540) / SX);
-      ctx.save(); ctx.translate(i * SX, 0); scenes[i](t); ctx.restore();
+      ctx.save(); ctx.translate(i * SX, 0); scenes[Math.max(0, Math.min(1, i))](t); ctx.restore();
     },
     names: [],
-    numbers: [[w('l03', 8) - 0.1, w('l03', 16) - 0.2, '14,5 saat', 'EVEREST · 8.849 m'], [w('l03', 16) - 0.05, w('l03', 21) - 0.2, '~7 gün', 'UZAYIN SINIRI · 100 km'], [w('l03', 21) - 0.05, w('l03', 27) - 0.2, '~28 gün', 'İSS · 408 km'], [w('l03', 28) - 0.1, T.l04 - 0.2, '2 milyar+', 'BASAMAK · TAM 2,26 MİLYAR'], [w('l05', 'apollo') - 0.1, T.l06 - 0.2, '72 yıl', 'APOLLO 11 İSE 3 GÜN']],
+    numbers: [[w('l06', 5) - 0.1, w('l06', 8) + 0.6, '3 gün', 'APOLLO 11 · 1969']],
+    // geçen süre sayacı: başlık çıkınca belirir, varışta "71 yıl 8 ay"da donar ve kızarır
+    overlay(t, c, O) {
+      const t1 = T.l01end + 0.5, t2 = w('l06', 5) - 0.2;
+      const inU = ease.enter(seg(t, t1, 0.3)), out = ease.exit(seg(t, t2, 0.25));
+      if (inU <= 0 || out >= 1 || t >= T.loop0) return;
+      const e = elapsed(t), done = t >= H, y = 470 + (1 - inU) * 50 - out * 60;
+      c.save(); c.globalAlpha = 1 - out; c.fontStretch = 'semi-condensed';
+      O.scrim(540, y, 900, 300, 0.5);
+      tx(fmt(e), 540, y + 6, done ? 104 : 92, done ? RED : PAL.ink);
+      tx(done ? "AY'A VARIŞ" : 'MERDİVENDE GEÇEN SÜRE', 540, y + 58, 36, done ? PAL.ink : RED);
+      c.restore();
+    },
   };
 }

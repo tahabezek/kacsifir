@@ -1,67 +1,55 @@
 {
   "id": "044",
   "slug": "otomobiller-dunyayi-sarar-mi",
-  "template": "otomobil",
-  "serial": "№ 044 · KAÇ SIFIR?",
+  "template": "cizgi",
+  "serial": "KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-08T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+12%",
+    "rate": "+14%",
+    "tight": 0.28,
     "gaps": {
-      "l01": 0.4,
-      "l02": 0.4,
-      "l03": 0.6,
-      "l04": 0.4,
-      "l05": 0.8,
-      "l06": 0.6,
-      "l07": 0.5
+      "l01": 0.3,
+      "l02": 0.3,
+      "l03": 0.2,
+      "l04": 0.15,
+      "l05": 0.3
     },
     "lines": [
       {
         "id": "l01",
-        "tts": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?",
-        "text": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?",
-        "rate": "+6%",
-        "pitch": "+3Hz"
+        "who": "A",
+        "text": "Türkiye'deki bütün otomobilleri arka arkaya dizsek, kuyruk nereye kadar uzanırdı?",
+        "tts": "Türkiye'deki bütün otomobilleri arka arkaya dizsek, kuyruk nereye kadar uzanırdı?"
       },
       {
         "id": "l02",
-        "tts": "Türkiye'de trafiğe kayıtlı yaklaşık on yedi milyon dört yüz bin otomobil var.",
-        "text": "Türkiye'de trafiğe kayıtlı yaklaşık 17,4 milyon otomobil var.",
-        "rate": "+8%"
+        "who": "A",
+        "text": "İlk araba Ankara'da, Kızılay'da duruyor. Arkasına bir tane daha, bir tane daha. Kuyruk Eskişehir'i geçiyor, İstanbul'a varıyor. On yedi milyon otomobilin daha yüzde biri bile bitmedi.",
+        "tts": "İlk araba Ankara'da, Kızılay'da duruyor. Arkasına bir tane daha, bir tane daha. Kuyruk Eskişehir'i geçiyor, İstanbul'a varıyor. On yedi milyon otomobilin daha yüzde biri bile bitmedi."
       },
       {
         "id": "l03",
-        "tts": "Her birini ortalama dört buçuk metre sayalım ve hepsini tampon tampona dizelim.",
-        "text": "Her birini ortalama 4,5 metre sayalım ve hepsini tampon tampona dizelim.",
-        "rate": "+8%"
+        "who": "A",
+        "text": "Kuyruk Avrupa'ya giriyor, okyanusu aşıyor, Amerika'yı ve Pasifik'i geçiyor. Dünyanın çevresini dolanıyor ve… ilk arabanın tamponuna değiyor. Kırk bin kilometre.",
+        "tts": "Kuyruk Avrupa'ya giriyor, okyanusu aşıyor, Amerika'yı ve Pasifik'i geçiyor. Dünyanın çevresini dolanıyor ve… ilk arabanın tamponuna değiyor. Kırk bin kilometre."
       },
       {
         "id": "l04",
-        "tts": "Kuyruk İstanbul'dan çıkıyor ve Dünya'nın çevresini dolanmaya başlıyor.",
-        "text": "Kuyruk İstanbul'dan çıkıyor ve Dünya'nın çevresini dolanmaya başlıyor.",
-        "rate": "+10%"
+        "who": "S",
+        "text": "Arabalar bitti mi?",
+        "tts": "Arabalar bitti mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l05",
-        "tts": "Dünya'nın çevresi kırk bin kilometre. Kuyruk ise yetmiş sekiz bin kilometre.",
-        "text": "Dünya'nın çevresi 40.000 km. Kuyruk ise 78.000 km.",
-        "rate": "+6%"
-      },
-      {
-        "id": "l06",
-        "tts": "Yani Dünya'yı neredeyse iki kez sarıyor.",
-        "text": "Yani Dünya'yı neredeyse iki kez sarıyor.",
-        "rate": "-4%",
-        "pitch": "-4Hz"
-      },
-      {
-        "id": "l07",
-        "tts": "Bu kuyruğun yanından saatte yüz kilometreyle geçmek otuz üç gün sürerdi.",
-        "text": "Bu kuyruğun yanından saatte 100 km hızla geçmek 33 gün sürerdi.",
-        "rate": "+4%"
+        "who": "A",
+        "text": "Bitmedi. Kuyruk Dünya'yı bir kez daha dolanıyor ve ikinci turu da neredeyse tamamlıyor. Saatte yüz kilometreyle bu kuyruğun yanından geçmek otuz üç gün sürerdi. Senin araban bu kuyrukta nerede? Yoruma yaz.",
+        "tts": "Bitmedi. Kuyruk Dünya'yı bir kez daha dolanıyor ve ikinci turu da neredeyse tamamlıyor. Saatte yüz kilometreyle bu kuyruğun yanından geçmek otuz üç gün sürerdi. Senin araban bu kuyrukta nerede? Yoruma yaz."
       }
     ]
   },
@@ -84,5 +72,11 @@
     "#ilginçbilgiler",
     "#trafik"
   ],
-  "ytTitle": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?"
+  "ytTitle": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?",
+  "gl": false,
+  "kicker": "KAÇ SIFIR? · YOL",
+  "question": [
+    "Bütün otomobiller",
+    "arka arkaya dizilse?"
+  ]
 }

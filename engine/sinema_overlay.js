@@ -21,6 +21,14 @@ export function makeOverlay(ctx, tl, opts = {}) {
     ctx.fillStyle = g; ctx.fillRect(-1, -1, 2, 2); ctx.restore();
   }
 
+  // kâğıt kart (2B çizgi filmler): verilen sınırlarla; kutu yazıya göre ölçülür, yazı kutudan taşmaz
+  const mt = s => { const m = ctx.measureText(s); return { w: m.width, a: m.actualBoundingBoxAscent, d: m.actualBoundingBoxDescent }; };
+  function pcard(x0, y0, x1, y1, a = 1) {
+    if (a <= 0.01) return;
+    ctx.save(); ctx.globalAlpha = Math.min(1, a); ctx.fillStyle = PAPER; ctx.strokeStyle = INK; ctx.lineWidth = 5;
+    ctx.beginPath(); ctx.roundRect(x0, y0, x1 - x0, y1 - y0, 18); ctx.fill(); ctx.stroke(); ctx.restore();
+  }
+
   // CH: { lineId: [[metin, ilk kelime sırası], ...] }
   const chunks = [];
   for (const [id, list] of Object.entries(opts.chunks || {})) {
@@ -63,7 +71,10 @@ export function makeOverlay(ctx, tl, opts = {}) {
     if (lines.length === 2 && !lines[1].includes(' ')) { const w = lines[0].split(' '); lines[1] = w.pop() + ' ' + lines[1]; lines[0] = w.join(' '); }
     if (lines.length === 2 && /^[%~]?\d[\d.,]*$/.test(lines[0].split(' ').at(-1)) && lines[0].includes(' ')) { const w = lines[0].split(' '); lines[1] = w.pop() + ' ' + lines[1]; lines[0] = w.join(' '); }   // sayı sonraki sözcüğünden ayrılmaz
     if (paper && opts.who?.[c.id] === 'S') { soranBalon(t, c, lines, u); return; }
-    scrim(CX, CAP_BASE - (lines.length - 1) * CAP_LH / 2 - CAP_SIZE * 0.35, 1000, 180 + lines.length * CAP_LH, 0.66);
+    if (paper) {
+      const ms = lines.map(l => mt(l)), w = Math.max(...ms.map(m => m.w)), y0 = CAP_BASE - (lines.length - 1) * CAP_LH;
+      pcard(CX - w / 2 - 36, y0 - Math.max(...ms.map(m => m.a)) - 20, CX + w / 2 + 36, CAP_BASE + Math.max(...ms.map(m => m.d)) + 22, 1);
+    } else scrim(CX, CAP_BASE - (lines.length - 1) * CAP_LH / 2 - CAP_SIZE * 0.35, 1000, 180 + lines.length * CAP_LH, 0.66);
     lines.forEach((ln, i) => {
       const y = CAP_BASE - (lines.length - 1 - i) * CAP_LH + (1 - u) * 26;
       ctx.save(); ctx.beginPath(); ctx.rect(0, y - CAP_SIZE * 1.05, W, CAP_SIZE * 1.4); ctx.clip();
@@ -81,7 +92,12 @@ export function makeOverlay(ctx, tl, opts = {}) {
     let q = 104; setFont(ctx, F.head(q));
     while (q > 70 && lines.some(l => ctx.measureText(l).width > SAFE.x1 - SAFE.x0)) { q -= 2; setFont(ctx, F.head(q)); }
     ctx.textAlign = 'center';
-    scrim(CX, y0 + q * 0.15 - out * q * 1.2 - (kicker ? 22 : 0), 1060, q * 3.4 + (kicker ? 60 : 0), 0.55 * (1 - out));
+    if (paper) {   // kart yazının ölçülmüş sınırlarından: etiket ve son satırın alt çıkıntıları da içeride kalır
+      const ms = lines.map(l => mt(l)), lastY = y0 + (lines.length - 1) * q * 1.02, sh = -out * q * 1.2;
+      let top = y0 - ms[0].a, w = Math.max(...ms.map(m => m.w));
+      if (kicker) { setFont(ctx, F.mono(40)); const k = mt(kicker); top = y0 - q * 1.02 - k.a; w = Math.max(w, k.w); setFont(ctx, F.head(q)); }
+      pcard(CX - w / 2 - 44, top - 26 + sh, CX + w / 2 + 44, lastY + ms.at(-1).d + 26 + sh, 1 - out);
+    } else scrim(CX, y0 + q * 0.15 - out * q * 1.2 - (kicker ? 22 : 0), 1060, q * 3.4 + (kicker ? 60 : 0), 0.55 * (1 - out));
     if (kicker) {
       const ky = y0 - q * 1.02 - out * q * 1.2;
       ctx.save(); ctx.beginPath(); ctx.rect(0, ky - 44, W, 60); ctx.clip();
@@ -102,13 +118,20 @@ export function makeOverlay(ctx, tl, opts = {}) {
   function bigNumber(t, t0, t1, value, unit, y = 470, size = 170) {
     const inU = ease.enter(seg(t, t0, 0.3)), outU = ease.exit(seg(t, t1, 0.25));
     if (inU <= 0 || outU >= 1) return;
-    const v = typeof value === 'function' ? value(t) : value;
-    setFont(ctx, F.head(size)); ctx.textAlign = 'center';
+    const v = typeof value === 'function' ? value(t) : value, s = typeof v === 'string' ? v : fmt(v);
     const dy = (1 - inU) * 60 - outU * 80;
-    scrim(CX, y - 10 + dy, 860, size * 2.1, 0.5 * inU * (1 - outU));
+    let us = 56;
+    if (paper) {   // yazı güvenli alana sığana kadar küçülür; kart ölçülmüş yazıyı çevreler
+      setFont(ctx, F.head(size)); while (size > 90 && mt(s).w > SAFE.x1 - SAFE.x0 - 60) { size -= 4; setFont(ctx, F.head(size)); }
+      const n = mt(s); let u = { w: 0, d: n.d };
+      if (unit) { setFont(ctx, F.head(us)); while (us > 34 && mt(unit).w > SAFE.x1 - SAFE.x0 - 60) { us -= 2; setFont(ctx, F.head(us)); } u = mt(unit); }
+      const w = Math.max(n.w, u.w), bot = unit ? y + 76 + u.d : y + n.d;
+      pcard(CX - w / 2 - 40, y - n.a - 22 + dy, CX + w / 2 + 40, bot + 22 + dy, inU * (1 - outU));
+    } else scrim(CX, y - 10 + dy, 860, size * 2.1, 0.5 * inU * (1 - outU));
+    setFont(ctx, F.head(size)); ctx.textAlign = 'center';
     ctx.save(); ctx.beginPath(); ctx.rect(0, y - size * 1.0, W, size * 1.75); ctx.clip();
-    shadowText(ctx, typeof v === 'string' ? v : fmt(v), CX, y + dy, WHITE, 34);
-    if (unit) { setFont(ctx, F.head(56)); shadowText(ctx, unit, CX, y + 76 + dy, accent, 22); }
+    shadowText(ctx, s, CX, y + dy, WHITE, 34);
+    if (unit) { setFont(ctx, F.head(us)); shadowText(ctx, unit, CX, y + 76 + dy, accent, 22); }
     ctx.restore(); ctx.textAlign = 'left';
   }
 
@@ -116,12 +139,19 @@ export function makeOverlay(ctx, tl, opts = {}) {
   function nameCard(t, t0, t1, name, sub, y = 430) {
     const inU = ease.enter(seg(t, t0, 0.35)), out = ease.exit(seg(t, t1, 0.25));
     if (inU <= 0 || out >= 1) return;
-    setFont(ctx, F.head(92)); ctx.textAlign = 'center';
+    let ns = 92, ss = 52;
+    setFont(ctx, F.head(ns)); while (ns > 60 && mt(name).w > SAFE.x1 - SAFE.x0 - 60) { ns -= 2; setFont(ctx, F.head(ns)); }
+    ctx.textAlign = 'center';
     const dy = -out * 70;
-    scrim(CX, y + 10 + dy, 980, 300, 0.5 * (1 - out));
+    if (paper) {
+      const n = mt(name); setFont(ctx, F.head(ss)); while (ss > 34 && mt(sub).w > SAFE.x1 - SAFE.x0 - 60) { ss -= 2; setFont(ctx, F.head(ss)); }
+      const u = mt(sub), w = Math.max(n.w, u.w);
+      pcard(CX - w / 2 - 40, y - n.a - 22 + dy, CX + w / 2 + 40, y + 66 + u.d + 22 + dy, inU * (1 - out));
+      setFont(ctx, F.head(ns));
+    } else scrim(CX, y + 10 + dy, 980, 300, 0.5 * (1 - out));
     ctx.save(); ctx.beginPath(); ctx.rect(0, y - 92 + dy, W, 175); ctx.clip();
     shadowText(ctx, name, CX, y + (1 - inU) * 90 + dy, WHITE, 26);
-    setFont(ctx, F.head(52)); shadowText(ctx, sub, CX, y + 66 + (1 - inU) * 120 + dy, accent, 20);
+    setFont(ctx, F.head(ss)); shadowText(ctx, sub, CX, y + 66 + (1 - inU) * 120 + dy, accent, 20);
     ctx.restore(); ctx.textAlign = 'left';
   }
 

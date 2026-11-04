@@ -721,7 +721,7 @@
     },
     "2026-11-05T17:30Z": {
       "episode": "060",
-      "media": "v/060-buzdaki-doktor-ve-hucredeki-adam.mp4",
+      "media": "v/060-buzdaki-doktor-ve-hucredeki-adam-179763ca.mp4",
       "status": "scheduled",
       "at": "2026-11-03T18:41:45.639Z",
       "postId": "6aea2ba481bf336f271ee813",
@@ -730,7 +730,9 @@
         "postId": "6aea2ba4b9b964f04f2ff301",
         "status": "scheduled",
         "dueAt": "2026-11-05T17:30:00.000Z"
-      }
+      },
+      "prevMedia": "v/060-buzdaki-doktor-ve-hucredeki-adam.mp4",
+      "remediaAt": "2026-11-04T21:43:03.447Z"
     },
     "2026-11-06T05:30Z": {
       "episode": "031",
@@ -796,7 +798,7 @@
     },
     "2026-11-06T17:30Z": {
       "episode": "035",
-      "media": "v/035-dag-adami-ve-madenciler.mp4",
+      "media": "v/035-dag-adami-ve-madenciler-c9708a3b.mp4",
       "status": "scheduled",
       "at": "2026-11-04T18:52:04.323Z",
       "postId": "6aeb7f76600b02e627218227",
@@ -805,7 +807,9 @@
         "postId": "6aeb7f7709e5f61702c32e78",
         "status": "scheduled",
         "dueAt": "2026-11-06T17:30:00.000Z"
-      }
+      },
+      "prevMedia": "v/035-dag-adami-ve-madenciler.mp4",
+      "remediaAt": "2026-11-04T21:43:03.448Z"
     }
   }
 }

@@ -3204,6 +3204,29 @@
         "metricsUpdatedAt": "2026-11-04T05:30:03.401Z"
       },
       {
+        "postId": "6aead98bdc38f4d7bad519e2",
+        "episode": "067",
+        "slug": "butun-altin-bir-kup",
+        "template": "cizgi",
+        "sentAt": "2026-11-04T11:02:02.826Z",
+        "link": "https://www.instagram.com/reel/DfUTSMDCiOl/",
+        "views": 0,
+        "reach": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "avgWatchS": null,
+        "durationS": 47.1,
+        "watchRatio": null,
+        "sharesPer1k": 0,
+        "savesPer1k": 0,
+        "followsPer1k": 0,
+        "score": 0,
+        "metricsUpdatedAt": "2026-11-04T07:06:51.503Z"
+      },
+      {
         "postId": "6ae37b503361c982e45cd952",
         "episode": "023",
         "slug": "cumhuriyet-saniye",
@@ -3225,29 +3248,6 @@
         "followsPer1k": 0,
         "score": 0,
         "metricsUpdatedAt": "2026-11-04T05:30:03.401Z"
-      },
-      {
-        "postId": "6ae22fd1992232523c32b60e",
-        "episode": "014",
-        "slug": "kus-ve-yuruyen-adam",
-        "template": "carousel",
-        "sentAt": "2026-10-30T14:04:18.283Z",
-        "link": "https://www.instagram.com/p/DfHwMSkkVBG/",
-        "views": 3,
-        "reach": 3,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0,
-        "saves": 0,
-        "follows": 0,
-        "avgWatchS": null,
-        "durationS": null,
-        "watchRatio": null,
-        "sharesPer1k": 0,
-        "savesPer1k": 0,
-        "followsPer1k": 0,
-        "score": 0,
-        "metricsUpdatedAt": "2026-11-04T05:30:03.402Z"
       }
     ]
   }

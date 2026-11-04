@@ -1,6 +1,6 @@
-# Performans raporu · 2026-11-04 06:03 UTC
+# Performans raporu · 2026-11-04 14:12 UTC
 
-Gönderi: 10 · izlenme: 16847 · paylaşım: 23 · takip: 0
+Gönderi: 10 · izlenme: 16844 · paylaşım: 23 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -12,8 +12,8 @@ Gönderi: 10 · izlenme: 16847 · paylaşım: 23 · takip: 0
 | 6 | [054 dunyada-kac-karinca-var](https://www.instagram.com/reel/DfJ5VhfjeMP/) | karinca | 2382 | 1892 | 0.41 | 0 | 0.5 | 0 | 17.6 |
 | 7 | [034 balikci-ve-asci](https://www.instagram.com/reel/DfNRjXyDTVu/) | okyanus | 2080 | 1796 | 0.26 | 0.6 | 0.6 | 0 | 13.8 |
 | 8 | [033 kozmonot-ve-asker](https://www.instagram.com/reel/DfKsytRikKU/) | zaman | 1600 | 1481 | 0.21 | 0 | 0.7 | 0 | 9.8 |
-| 9 | [023 cumhuriyet-saniye](https://www.instagram.com/p/DfKVB36HLTs/) | carousel | 16 | 3 | – | 0 | 0 | 0 | 0 |
-| 10 | [014 kus-ve-yuruyen-adam](https://www.instagram.com/p/DfHwMSkkVBG/) | carousel | 3 | 3 | – | 0 | 0 | 0 | 0 |
+| 9 | [067 butun-altin-bir-kup](https://www.instagram.com/reel/DfUTSMDCiOl/) | cizgi | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 10 | [023 cumhuriyet-saniye](https://www.instagram.com/p/DfKVB36HLTs/) | carousel | 16 | 3 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
 - doz: 36.5 (1 gönderi)
@@ -24,7 +24,8 @@ Gönderi: 10 · izlenme: 16847 · paylaşım: 23 · takip: 0
 - karinca: 17.6 (1 gönderi)
 - okyanus: 13.8 (1 gönderi)
 - zaman: 9.8 (1 gönderi)
-- carousel: 0.0 (2 gönderi)
+- cizgi: 0.0 (1 gönderi)
+- carousel: 0.0 (1 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)
 - İzlenme oranı < 0,5: kanca/ilk 3 sn sorunu → başlığı ve kare 0'ı yeniden yaz.

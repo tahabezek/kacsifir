@@ -264,13 +264,14 @@ export async function film(A) {
     overlay(t) {
       const u = ease.enter(seg(t, w('l02', 17) - 0.1, 0.35)), out = ease.exit(seg(t, T.l03 - 0.1, 0.25));
       if (u <= 0 || out >= 1) return;
-      const y = 1110 + (1 - u) * 40, x0 = 150, wd = 780;
+      // kutu 1068–1192: üstte ESKİŞEHİR etiketi (≤1040), altta iki satırlık altyazı (≥1215) ile çakışmaz
+      const y = 1150 + (1 - u) * 40, x0 = 150, wd = 780;
       ctx.save(); ctx.globalAlpha = 1 - out;
-      ctx.fillStyle = '#F4EFE3'; ctx.strokeStyle = INK; ctx.lineWidth = 5; ctx.beginPath(); ctx.roundRect(x0 - 30, y - 92, wd + 60, 150, 18); ctx.fill(); ctx.stroke();
-      ctx.font = '800 38px Archivo'; ctx.fillStyle = INK; ctx.textAlign = 'left'; ctx.fillText('17,4 milyon otomobil', x0, y - 44);
-      ctx.beginPath(); ctx.roundRect(x0, y - 18, wd, 44, 10); ctx.fillStyle = '#FFFFFF'; ctx.fill(); ctx.stroke();
-      ctx.fillStyle = RED; ctx.fillRect(x0 + 3, y - 15, Math.max(5, wd * 0.006 * ease.enter(seg(t, w('l02', 22), 0.5))), 38);
-      ctx.textAlign = 'right'; ctx.fillStyle = RED; ctx.fillText('%0,6', x0 + wd, y - 44);
+      ctx.fillStyle = '#F4EFE3'; ctx.strokeStyle = INK; ctx.lineWidth = 5; ctx.beginPath(); ctx.roundRect(x0 - 30, y - 82, wd + 60, 124, 18); ctx.fill(); ctx.stroke();
+      ctx.font = '800 34px Archivo'; ctx.fillStyle = INK; ctx.textAlign = 'left'; ctx.fillText('17,4 milyon otomobil', x0, y - 38);
+      ctx.beginPath(); ctx.roundRect(x0, y - 16, wd, 34, 10); ctx.fillStyle = '#FFFFFF'; ctx.fill(); ctx.stroke();
+      ctx.fillStyle = RED; ctx.fillRect(x0 + 3, y - 13, Math.max(5, wd * 0.006 * ease.enter(seg(t, w('l02', 22), 0.5))), 28);
+      ctx.textAlign = 'right'; ctx.fillStyle = RED; ctx.fillText('%0,6', x0 + wd, y - 38);
       ctx.restore(); ctx.textAlign = 'left';
     },
     names: [],

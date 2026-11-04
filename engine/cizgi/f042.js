@@ -125,7 +125,7 @@ export async function film(A) {
     rect(sx - 230, sy - 34, 160, 68, '#2E5A8A', 4, 3); rect(sx + 70, sy - 34, 160, 68, '#2E5A8A', 4, 3);
     for (const px of [-190, -150, -110, 110, 150, 190]) line(sx + px, sy - 34, sx + px, sy + 34, 3, '#7FA6CF');
     line(sx, sy + 40, sx, sy + 76, 5); circ(sx, sy + 84, 10, '#BFC4CA', 4);
-    tx('GPS · 20.200 km', sx, sy + 140, 38, '#F4EFE3');
+    tx('GPS · 20.200 km', sx + 20, sy - 58, 38, '#F4EFE3');   // üstte: altta altyazı kartının arkasında kalıyordu
   };
   const moonDisc = (x, y, r) => {
     circ(x, y, r, '#EDE7D2', Math.min(LW, r * 0.12));
@@ -158,7 +158,8 @@ export async function film(A) {
     if (near(t, tE)) { const [x, y] = at(t, tE, 220, SA[1] - 300); mountain(x, y); }
     if (near(t, tK)) { const [, y] = at(t, tK, 0, SA[1] - 330); karman(y, q); }
     if (near(t, tI)) { const [x, y] = at(t, tI, 250, SA[1] - 380); iss(x, y, t); }
-    if (near(t, tG)) { const [x, y] = at(t, tG, 250, SA[1] - 360); gps(x, y); }
+    // GPS uzakta: paralaks için yavaş akar (260 px/sn), cümle boyunca sayı kartı ile altyazı arasında görünür kalır
+    if (near(t, tG)) gps(250, 660 + 260 * (t - tG));
     // hız çizgileri
     const v = vel(t);
     if (v > 150) { const r = mulberry32(Math.floor(t * 6)); ctx.save(); ctx.globalAlpha = 0.35 * (v - 150) / 230; for (let i = 0; i < 9; i++) { const x = r() * 1080, y = r() * 1900; line(x, y, x - DX * 140, y + DY * 140, 4, q > 0.5 ? '#C9D2E0' : '#FFFFFF'); } ctx.restore(); }

@@ -706,7 +706,7 @@
     },
     "2026-11-05T05:30Z": {
       "episode": "029",
-      "media": "v/029-jupiter-terazi.mp4",
+      "media": "v/029-jupiter-terazi-c07e8072.mp4",
       "status": "scheduled",
       "at": "2026-11-03T06:32:25.418Z",
       "postId": "6ae9803f3b00665c737ab67d",
@@ -715,7 +715,9 @@
         "postId": "6ae9803fee93f2557f2b0622",
         "status": "scheduled",
         "dueAt": "2026-11-05T05:30:00.000Z"
-      }
+      },
+      "prevMedia": "v/029-jupiter-terazi.mp4",
+      "remediaAt": "2026-11-04T20:11:06.571Z"
     },
     "2026-11-05T17:30Z": {
       "episode": "060",
@@ -732,7 +734,7 @@
     },
     "2026-11-06T05:30Z": {
       "episode": "031",
-      "media": "v/031-venus-gunu.mp4",
+      "media": "v/031-venus-gunu-b04a9f42.mp4",
       "status": "scheduled",
       "at": "2026-11-04T06:02:36.418Z",
       "postId": "6aeacac169ad1ef03b7e4dee",
@@ -741,7 +743,9 @@
         "postId": "6aeacac287b7c6d24c9467a1",
         "status": "scheduled",
         "dueAt": "2026-11-06T05:30:00.000Z"
-      }
+      },
+      "prevMedia": "v/031-venus-gunu.mp4",
+      "remediaAt": "2026-11-04T20:11:06.572Z"
     },
     "2026-11-04T11:00Z": {
       "episode": "067",
@@ -760,7 +764,7 @@
     },
     "2026-11-05T11:00Z": {
       "episode": "057",
-      "media": "v/057-pinin-kac-basamagi-yeter-1e5c30eb.mp4",
+      "media": "v/057-pinin-kac-basamagi-yeter-9b5b0105.mp4",
       "status": "scheduled",
       "at": "2026-11-04T07:05:49.584Z",
       "manual": true,
@@ -771,7 +775,9 @@
         "postId": "6aead98d2b43f8ba7d72734d",
         "status": "scheduled",
         "dueAt": "2026-11-05T11:00:00.000Z"
-      }
+      },
+      "prevMedia": "v/057-pinin-kac-basamagi-yeter-1e5c30eb.mp4",
+      "remediaAt": "2026-11-04T20:11:06.572Z"
     },
     "2026-11-04T19:45Z": {
       "episode": "041",

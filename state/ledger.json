@@ -693,7 +693,7 @@
     "2026-11-04T17:30Z": {
       "episode": "041",
       "media": "v/041-kaiser-ve-kazu.mp4",
-      "status": "scheduled",
+      "status": "failed",
       "at": "2026-11-02T20:53:29.157Z",
       "postId": "6ae8f89fc8ee2961312f49fd",
       "dueAt": "2026-11-04T17:30:00.000Z",
@@ -701,7 +701,8 @@
         "postId": "6ae8f8a0b665951ec2fb1c74",
         "status": "scheduled",
         "dueAt": "2026-11-04T17:30:00.000Z"
-      }
+      },
+      "error": "medya URL'si budandı (Instagram medya hatası); 4 Kasım'da yeniden planlandı -> 2026-11-04T19:45Z"
     },
     "2026-11-05T05:30Z": {
       "episode": "029",
@@ -771,6 +772,16 @@
         "status": "scheduled",
         "dueAt": "2026-11-05T11:00:00.000Z"
       }
+    },
+    "2026-11-04T19:45Z": {
+      "episode": "041",
+      "media": "v/041-kaiser-ve-kazu-0d7d8682.mp4",
+      "status": "scheduled",
+      "at": "2026-11-04T18:48:43.228Z",
+      "manual": true,
+      "note": "kurtarma: 2026-11-04T17:30Z",
+      "postId": "6aeb7e497631b8ab98c03964",
+      "dueAt": "2026-11-04T19:45:00.000Z"
     }
   }
 }

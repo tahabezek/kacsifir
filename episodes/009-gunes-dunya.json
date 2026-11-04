@@ -2,7 +2,7 @@
   "id": "009",
   "slug": "gunes-dunya",
   "publishAt": "2026-11-18T05:30Z",
-  "template": "cizgi",
+  "template": "sun",
   "serial": "№ 009 · HACİM",
   "bpm": 96,
   "question": [
@@ -51,73 +51,5 @@
     "#uzay",
     "#astronomi"
   ],
-  "actor": true,
-  "gl": false,
-  "voice": {
-    "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
-    "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
-    },
-    "lines": [
-      {
-        "id": "l01",
-        "who": "A",
-        "text": "Güneş'in içine bir milyon üç yüz bin Dünya sığıyor.",
-        "tts": "Güneş'in içine bir milyon üç yüz bin Dünya sığıyor."
-      },
-      {
-        "id": "l02",
-        "who": "S",
-        "text": "Nasıl yani? Bir milyon mu?",
-        "tts": "Nasıl yani? Bir milyon mu?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l03",
-        "who": "A",
-        "text": "Güneş'in çapı Dünya'nınkinin yüz dokuz katı. Yan yana dizsen yüz dokuz Dünya ancak bir uçtan öbür uca uzanıyor. Ama hacimde bu sayı kendisiyle iki kez daha çarpılıyor ve bir milyonu geçiyor.",
-        "tts": "Güneş'in çapı Dünya'nınkinin yüz dokuz katı. Yan yana dizsen yüz dokuz Dünya ancak bir uçtan öbür uca uzanıyor. Ama hacimde bu sayı kendisiyle iki kez daha çarpılıyor ve bir milyonu geçiyor."
-      },
-      {
-        "id": "l04",
-        "who": "S",
-        "text": "Peki Güneş Sistemi'nde başka ne kalıyor?",
-        "tts": "Peki Güneş Sistemi'nde başka ne kalıyor?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l05",
-        "who": "A",
-        "text": "Neredeyse hiçbir şey. Güneş Sistemi'nin bütün kütlesinin yüzde doksan dokuz virgül sekiz altısı Güneş'te.",
-        "tts": "Neredeyse hiçbir şey. Güneş Sistemi'nin bütün kütlesinin yüzde doksan dokuz virgül sekiz altısı Güneş'te."
-      },
-      {
-        "id": "l06",
-        "who": "S",
-        "text": "Biz Güneş'in yanında bir toz tanesiyiz.",
-        "tts": "Biz Güneş'in yanında bir toz tanesiyiz.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l07",
-        "who": "A",
-        "text": "Sen bunu biliyor muydun? Yoruma yaz.",
-        "tts": "Sen bunu biliyor muydun? Yoruma yaz."
-      }
-    ]
-  }
+  "actor": true
 }

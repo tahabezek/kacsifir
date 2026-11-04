@@ -1,7 +1,7 @@
 {
   "id": "031",
   "slug": "venus-gunu",
-  "template": "cizgi",
+  "template": "venus",
   "publishAt": "2026-11-06T05:30Z",
   "serial": "№ 031 · PARADOKS",
   "bpm": 100,
@@ -102,73 +102,5 @@
     "#uzay",
     "#venüs",
     "#astronomi"
-  ],
-  "gl": false,
-  "voice": {
-    "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
-    "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
-    },
-    "lines": [
-      {
-        "id": "l01",
-        "who": "A",
-        "text": "Venüs'te bir gün, bir yıldan daha uzun sürüyor.",
-        "tts": "Venüs'te bir gün, bir yıldan daha uzun sürüyor."
-      },
-      {
-        "id": "l02",
-        "who": "S",
-        "text": "Nasıl yani? Gün yıldan nasıl uzun olur?",
-        "tts": "Nasıl yani? Gün yıldan nasıl uzun olur?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l03",
-        "who": "A",
-        "text": "Venüs Güneş'in çevresini 225 günde dolanıyor; bu onun bir yılı. Ama kendi ekseni çevresinde bir tam turu 243 gün sürüyor. Yani Venüs kendi etrafında bir kez dönemeden Güneş'in çevresinde bir turu bitiriyor.",
-        "tts": "Venüs Güneş'in çevresini iki yüz yirmi beş günde dolanıyor; bu onun bir yılı. Ama kendi ekseni çevresinde bir tam turu iki yüz kırk üç gün sürüyor. Yani Venüs kendi etrafında bir kez dönemeden Güneş'in çevresinde bir turu bitiriyor."
-      },
-      {
-        "id": "l04",
-        "who": "S",
-        "text": "Bu çok tuhaf.",
-        "tts": "Bu çok tuhaf.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l05",
-        "who": "A",
-        "text": "Dahası var: Venüs, gezegenlerin çoğunun tersine dönüyor. Orada Güneş batıdan doğuyor ve doğudan batıyor.",
-        "tts": "Dahası var: Venüs, gezegenlerin çoğunun tersine dönüyor. Orada Güneş batıdan doğuyor ve doğudan batıyor."
-      },
-      {
-        "id": "l06",
-        "who": "S",
-        "text": "Orada yaşasam takvimi hiç anlamazdım.",
-        "tts": "Orada yaşasam takvimi hiç anlamazdım.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l07",
-        "who": "A",
-        "text": "Sence Venüs'te bir hafta kaç yıl sürerdi? Yoruma yaz.",
-        "tts": "Sence Venüs'te bir hafta kaç yıl sürerdi? Yoruma yaz."
-      }
-    ]
-  }
+  ]
 }

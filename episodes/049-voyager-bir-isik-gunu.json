@@ -1,75 +1,74 @@
 {
   "id": "049",
   "slug": "voyager-bir-isik-gunu",
-  "template": "cizgi",
+  "template": "voyager",
   "serial": "№ 049 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-18T17:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
+    "rate": "+12%",
     "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.5,
+      "l04": 0.5,
+      "l05": 0.6,
+      "l06": 0.8,
+      "l07": 0.6
     },
     "lines": [
       {
         "id": "l01",
-        "who": "A",
-        "text": "İnsanlığın en uzağa giden aracı, kırk dokuz yılda ancak ışığın bir günde aldığı yolu alabildi.",
-        "tts": "İnsanlığın en uzağa giden aracı, kırk dokuz yılda ancak ışığın bir günde aldığı yolu alabildi."
+        "tts": "İnsanlığın en uzağa giden aracı, kırk dokuz yılda nereye vardı?",
+        "text": "İnsanlığın en uzağa giden aracı, 49 yılda nereye vardı?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l02",
-        "who": "S",
-        "text": "Nasıl yani? Kırk dokuz yıl mı?",
-        "tts": "Nasıl yani? Kırk dokuz yıl mı?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Voyager bir, bin dokuz yüz yetmiş yedide fırlatıldı.",
+        "text": "Voyager 1, 1977'de fırlatıldı.",
+        "rate": "+6%"
       },
       {
         "id": "l03",
-        "who": "A",
-        "text": "Voyager 1, 1977'de fırlatıldı. Jüpiter'in, sonra Satürn'ün yanından geçti ve Güneş'in etki alanından çıktı. Bugün Dünya'dan bir ışık günü uzakta. Oradan gönderilen bir sinyal bize tam bir günde geliyor.",
-        "tts": "Voyager bir, bin dokuz yüz yetmiş yedide fırlatıldı. Jüpiter'in, sonra Satürn'ün yanından geçti ve Güneş'in etki alanından çıktı. Bugün Dünya'dan bir ışık günü uzakta. Oradan gönderilen bir sinyal bize tam bir günde geliyor."
+        "tts": "Jüpiter'in, sonra Satürn'ün yanından geçti ve Güneş'in etki alanından çıktı.",
+        "text": "Jüpiter'in, sonra Satürn'ün yanından geçti ve Güneş'in etki alanından çıktı.",
+        "rate": "+10%"
       },
       {
         "id": "l04",
-        "who": "S",
-        "text": "Saniyede kaç kilometre gidiyor?",
-        "tts": "Saniyede kaç kilometre gidiyor?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Bugün, on sekiz Kasım iki bin yirmi altıda, Dünya'dan bir ışık günü uzaklığa ulaşıyor.",
+        "text": "Bugün, 18 Kasım 2026'da, Dünya'dan bir ışık günü uzaklığa ulaşıyor.",
+        "rate": "+6%"
       },
       {
         "id": "l05",
-        "who": "A",
-        "text": "Saniyede on yedi kilometre. Bu hızla en yakın yıldıza varması yetmiş beş bin yıl sürerdi.",
-        "tts": "Saniyede on yedi kilometre. Bu hızla en yakın yıldıza varması yetmiş beş bin yıl sürerdi."
+        "tts": "Yani oradan gönderilen bir sinyal bize tam bir günde geliyor.",
+        "text": "Yani oradan gönderilen bir sinyal bize tam bir günde geliyor.",
+        "rate": "+6%"
       },
       {
         "id": "l06",
-        "who": "S",
-        "text": "Uzay düşündüğümden çok daha büyük.",
-        "tts": "Uzay düşündüğümden çok daha büyük.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Işık o yolu bir günde alıyor. Voyager ise",
+        "text": "Işık o yolu bir günde alıyor. Voyager ise",
+        "rate": "+6%"
       },
       {
         "id": "l07",
-        "who": "A",
-        "text": "Sen Voyager'a bir mesaj yazsan ne derdin? Yoruma yaz.",
-        "tts": "Sen Voyager'a bir mesaj yazsan ne derdin? Yoruma yaz."
+        "tts": "kırk dokuz yılda aldı.",
+        "text": "49 yılda aldı.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
+      },
+      {
+        "id": "l08",
+        "tts": "Bu hızla en yakın yıldıza varması, yetmiş beş bin yıl sürerdi.",
+        "text": "Bu hızla en yakın yıldıza varması, 75.000 yıl sürerdi.",
+        "rate": "+4%",
+        "pitch": "-2Hz"
       }
     ]
   },
@@ -93,6 +92,5 @@
     "#nasa",
     "#ilginçbilgiler"
   ],
-  "ytTitle": "Voyager 1 bugün Dünya'dan bir ışık günü uzakta: 49 yılda",
-  "gl": false
+  "ytTitle": "Voyager 1 bugün Dünya'dan bir ışık günü uzakta: 49 yılda"
 }

@@ -1,75 +1,68 @@
 {
   "id": "057",
   "slug": "pinin-kac-basamagi-yeter",
-  "template": "cizgi",
+  "template": "pi",
   "serial": "№ 057 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-04T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
+    "rate": "+10%",
     "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
+      "l01": 0.5,
+      "l02": 0.5,
+      "l03": 0.5,
+      "l04": 0.6,
+      "l05": 0.6,
+      "l06": 0.6,
+      "l06b": 0.6
     },
     "lines": [
       {
         "id": "l01",
-        "who": "A",
-        "text": "Bütün evreni hesaplamak için pi sayısının yalnızca otuz yedi basamağı yetiyor. Bilgisayarlar ise 314 trilyon basamak hesapladı.",
-        "tts": "Bütün evreni hesaplamak için pi sayısının yalnızca otuz yedi basamağı yetiyor. Bilgisayarlar ise üç yüz on dört trilyon basamak hesapladı."
+        "tts": "Bütün evreni ölçmek için pi sayısının kaç basamağı yeter?",
+        "text": "Bütün evreni ölçmek için pi sayısının kaç basamağı yeter?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l02",
-        "who": "S",
-        "text": "Otuz yedi mi? Geri kalanı ne işe yarıyor?",
-        "tts": "Otuz yedi mi? Geri kalanı ne işe yarıyor?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Pi'nin basamakları sonsuza kadar sürer ve bilgisayarlar bugüne kadar üç yüz on dört trilyon basamağını hesapladı.",
+        "text": "Pi'nin basamakları sonsuza kadar sürer ve bilgisayarlar bugüne kadar 314 trilyon basamağını hesapladı."
       },
       {
         "id": "l03",
-        "who": "A",
-        "text": "Pi'nin basamakları hiç bitmiyor. Ama NASA uzay araçlarını yönlendirirken yalnızca on beş ondalık basamak kullanıyor. Bu, Voyager 1'in uzaklığı kadar yarıçaplı dev bir çemberin çevresini yaklaşık bir santimetre hatayla hesaplamaya yetiyor.",
-        "tts": "Pi'nin basamakları hiç bitmiyor. Ama NASA uzay araçlarını yönlendirirken yalnızca on beş ondalık basamak kullanıyor. Bu, Voyager birin uzaklığı kadar yarıçaplı dev bir çemberin çevresini yaklaşık bir santimetre hatayla hesaplamaya yetiyor."
+        "tts": "Ama NASA uzay araçlarını yönlendirirken yalnızca on beş ondalık basamak kullanıyor.",
+        "text": "Ama NASA uzay araçlarını yönlendirirken yalnızca 15 ondalık basamak kullanıyor."
       },
       {
         "id": "l04",
-        "who": "S",
-        "text": "Peki bütün evren?",
-        "tts": "Peki bütün evren?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Bu, Voyager bir'in uzaklığı kadar yarıçaplı bir çemberin çevresini yaklaşık bir santimetre hatayla hesaplamaya yeter.",
+        "text": "Bu, Voyager 1'in uzaklığı kadar yarıçaplı bir çemberin çevresini yaklaşık 1 santimetre hatayla hesaplamaya yeter."
       },
       {
         "id": "l05",
-        "who": "A",
-        "text": "Gözlemlenebilir evrenin çevresini bir hidrojen atomundan küçük hatayla hesaplamak için otuz yedi basamak yeter. Geri kalan trilyonlarca basamak çoğunlukla rekor ve merak için hesaplanıyor.",
-        "tts": "Gözlemlenebilir evrenin çevresini bir hidrojen atomundan küçük hatayla hesaplamak için otuz yedi basamak yeter. Geri kalan trilyonlarca basamak çoğunlukla rekor ve merak için hesaplanıyor."
+        "tts": "Peki bütün evren için kaç basamak gerekir?",
+        "text": "Peki bütün evren için kaç basamak gerekir?"
       },
       {
         "id": "l06",
-        "who": "S",
-        "text": "Yani okuldaki üç virgül on dört çoğu iş için yetiyor.",
-        "tts": "Yani okuldaki üç virgül on dört çoğu iş için yetiyor.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Gözlemlenebilir evrenin çevresini, bir hidrojen atomundan küçük hatayla hesaplamak için",
+        "text": "Gözlemlenebilir evrenin çevresini, bir hidrojen atomundan küçük hatayla hesaplamak için"
+      },
+      {
+        "id": "l06b",
+        "tts": "otuz yedi ondalık basamak yeter.",
+        "text": "37 ondalık basamak yeter.",
+        "rate": "-6%",
+        "pitch": "-2Hz"
       },
       {
         "id": "l07",
-        "who": "A",
-        "text": "Sen pi'nin kaç basamağını ezbere biliyorsun? Yoruma yaz.",
-        "tts": "Sen pi'nin kaç basamağını ezbere biliyorsun? Yoruma yaz."
+        "tts": "Geri kalan trilyonlarca basamak ise çoğunlukla rekor ve merak için hesaplanıyor.",
+        "text": "Geri kalan trilyonlarca basamak ise çoğunlukla rekor ve merak için hesaplanıyor.",
+        "pitch": "+2Hz"
       }
     ]
   },
@@ -102,6 +95,5 @@
     "#nasa",
     "#ilginçbilgiler"
   ],
-  "ytTitle": "Evreni ölçmek için pi'nin kaç basamağı yeter?",
-  "gl": false
+  "ytTitle": "Evreni ölçmek için pi'nin kaç basamağı yeter?"
 }

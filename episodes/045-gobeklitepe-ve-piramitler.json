@@ -1,75 +1,81 @@
 {
   "id": "045",
   "slug": "gobeklitepe-ve-piramitler",
-  "template": "cizgi",
+  "template": "katman",
   "serial": "№ 045 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-11T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
+    "rate": "+12%",
     "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.6,
+      "l04": 0.5,
+      "l05": 0.8,
+      "l06": 0.5,
+      "l07": 0.8,
+      "l08": 0.5
     },
     "lines": [
       {
         "id": "l01",
-        "who": "A",
-        "text": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor: aralarında yedi bin yıl var.",
-        "tts": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor: aralarında yedi bin yıl var."
+        "tts": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor.",
+        "text": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor.",
+        "rate": "+4%",
+        "pitch": "+2Hz"
       },
       {
         "id": "l02",
-        "who": "S",
-        "text": "Nasıl yani? Piramitler en eski şey değil mi?",
-        "tts": "Nasıl yani? Piramitler en eski şey değil mi?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Göbeklitepe yaklaşık on bir bin beş yüz yıl önce, Şanlıurfa'da dikildi.",
+        "text": "Göbeklitepe yaklaşık 11.500 yıl önce, Şanlıurfa'da dikildi.",
+        "rate": "+8%"
       },
       {
         "id": "l03",
-        "who": "A",
-        "text": "Göbeklitepe yaklaşık 11.500 yıl önce Şanlıurfa'da dikildi. O sırada yazı yoktu, tekerlek yoktu; insanlar hâlâ avcı toplayıcıydı. Keops Piramidi ise yaklaşık 4.600 yıl önce yapıldı. Yani Göbeklitepe'den piramitlere geçen süre, piramitlerden bugüne geçen süreden çok daha uzun.",
-        "tts": "Göbeklitepe yaklaşık on bir bin beş yüz yıl önce Şanlıurfa'da dikildi. O sırada yazı yoktu, tekerlek yoktu; insanlar hâlâ avcı toplayıcıydı. Keops Piramidi ise yaklaşık dört bin altı yüz yıl önce yapıldı. Yani Göbeklitepe'den piramitlere geçen süre, piramitlerden bugüne geçen süreden çok daha uzun."
+        "tts": "O sırada yazı yoktu, tekerlek yoktu; insanlar hâlâ avcı toplayıcıydı.",
+        "text": "O sırada yazı yoktu, tekerlek yoktu; insanlar hâlâ avcı toplayıcıydı.",
+        "rate": "+8%"
       },
       {
         "id": "l04",
-        "who": "S",
-        "text": "Bu kafamı karıştırdı.",
-        "tts": "Bu kafamı karıştırdı.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Keops Piramidi ise yaklaşık dört bin altı yüz yıl önce yapıldı.",
+        "text": "Keops Piramidi ise yaklaşık 4.600 yıl önce yapıldı.",
+        "rate": "+8%"
       },
       {
         "id": "l05",
-        "who": "A",
-        "text": "Daha da tuhafı: piramitler yapılırken son yünlü mamutlar hâlâ yaşıyordu.",
-        "tts": "Daha da tuhafı: piramitler yapılırken son yünlü mamutlar hâlâ yaşıyordu."
+        "tts": "Yani Göbeklitepe'den piramitlere geçen süre, yaklaşık",
+        "text": "Yani Göbeklitepe'den piramitlere geçen süre, yaklaşık",
+        "rate": "+6%"
       },
       {
         "id": "l06",
-        "who": "S",
-        "text": "Göbeklitepe'yi bir de yerinde görmek lazım.",
-        "tts": "Göbeklitepe'yi bir de yerinde görmek lazım.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "yedi bin yıl.",
+        "text": "7.000 yıl.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
       },
       {
         "id": "l07",
-        "who": "A",
-        "text": "Sen Göbeklitepe'ye gittin mi? Yoruma yaz.",
-        "tts": "Sen Göbeklitepe'ye gittin mi? Yoruma yaz."
+        "tts": "Piramitlerden bugüne ise yalnızca dört bin altı yüz yıl geçti.",
+        "text": "Piramitlerden bugüne ise yalnızca 4.600 yıl geçti.",
+        "rate": "+4%"
+      },
+      {
+        "id": "l08",
+        "tts": "Dahası, piramitler yapılırken mamutlar hâlâ yaşıyordu.",
+        "text": "Dahası, piramitler yapılırken mamutlar hâlâ yaşıyordu.",
+        "rate": "+6%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l09",
+        "tts": "Kleopatra ise piramitlerden çok, Ay'a inişe yakın yaşadı.",
+        "text": "Kleopatra ise piramitlerden çok, Ay'a inişe yakın yaşadı.",
+        "rate": "+6%"
       }
     ]
   },
@@ -95,6 +101,5 @@
     "#şanlıurfa",
     "#ilginçbilgiler"
   ],
-  "ytTitle": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor",
-  "gl": false
+  "ytTitle": "Piramitler bile Göbeklitepe'nin yanında yeni kalıyor"
 }

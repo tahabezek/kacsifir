@@ -1,75 +1,73 @@
 {
   "id": "048",
   "slug": "evrenin-takvimi",
-  "template": "cizgi",
+  "template": "takvim",
   "serial": "№ 048 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-16T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
+    "rate": "+12%",
     "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.5,
+      "l04": 0.5,
+      "l05": 0.6,
+      "l06": 0.8,
+      "l07": 0.6
     },
     "lines": [
       {
         "id": "l01",
-        "who": "A",
-        "text": "Evrenin bütün tarihi tek bir yıl olsaydı, senin bütün hayatın saniyenin beşte birinden kısa sürerdi.",
-        "tts": "Evrenin bütün tarihi tek bir yıl olsaydı, senin bütün hayatın saniyenin beşte birinden kısa sürerdi."
+        "tts": "Evrenin tarihi tek bir yıl olsaydı, sen ne zaman doğardın?",
+        "text": "Evrenin tarihi tek bir yıl olsaydı, sen ne zaman doğardın?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l02",
-        "who": "S",
-        "text": "Nasıl yani? Bütün hayatım mı?",
-        "tts": "Nasıl yani? Bütün hayatım mı?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Büyük Patlama: bir Ocak, gece yarısı.",
+        "text": "Büyük Patlama: 1 Ocak, gece yarısı.",
+        "rate": "+4%"
       },
       {
         "id": "l03",
-        "who": "A",
-        "text": "Büyük Patlama 1 Ocak gece yarısı. Güneş ve Dünya ancak Eylül başında doğuyor. Dinozorlar 25 Aralık'ta ortaya çıkıyor ve 30 Aralık'ta yok oluyor. İnsan türü 31 Aralık'ta, gece yarısına on bir dakika kala geliyor.",
-        "tts": "Büyük Patlama bir Ocak gece yarısı. Güneş ve Dünya ancak Eylül başında doğuyor. Dinozorlar yirmi beş Aralık'ta ortaya çıkıyor ve otuz Aralık'ta yok oluyor. İnsan türü otuz bir Aralık'ta, gece yarısına on bir dakika kala geliyor."
+        "tts": "Güneş ve Dünya ancak Eylül başında doğuyor.",
+        "text": "Güneş ve Dünya ancak Eylül başında doğuyor.",
+        "rate": "+8%"
       },
       {
         "id": "l04",
-        "who": "S",
-        "text": "Peki piramitler?",
-        "tts": "Peki piramitler?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Dinozorlar yirmi beş Aralık'ta ortaya çıkıyor ve otuz Aralık'ta yok oluyor.",
+        "text": "Dinozorlar 25 Aralık'ta ortaya çıkıyor ve 30 Aralık'ta yok oluyor.",
+        "rate": "+8%"
       },
       {
         "id": "l05",
-        "who": "A",
-        "text": "Piramitler, gece yarısından yaklaşık on saniye önce yapılıyor.",
-        "tts": "Piramitler, gece yarısından yaklaşık on saniye önce yapılıyor."
+        "tts": "İnsan türü otuz bir Aralık'ta, gece yarısına on bir dakika kala geliyor.",
+        "text": "İnsan türü 31 Aralık'ta, gece yarısına 11 dakika kala geliyor.",
+        "rate": "+6%"
       },
       {
         "id": "l06",
-        "who": "S",
-        "text": "Biz yılın son saniyesine yetişmişiz.",
-        "tts": "Biz yılın son saniyesine yetişmişiz.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Piramitler, gece yarısından yaklaşık on saniye önce yapılıyor.",
+        "text": "Piramitler, gece yarısından yaklaşık 10 saniye önce yapılıyor.",
+        "rate": "+6%"
       },
       {
         "id": "l07",
-        "who": "A",
-        "text": "Sen o saniyeyi neyle geçirmek isterdin? Yoruma yaz.",
-        "tts": "Sen o saniyeyi neyle geçirmek isterdin? Yoruma yaz."
+        "tts": "Senin bütün hayatın ise",
+        "text": "Senin bütün hayatın ise",
+        "rate": "+4%"
+      },
+      {
+        "id": "l08",
+        "tts": "saniyenin beşte birinden kısa.",
+        "text": "saniyenin beşte birinden kısa.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
       }
     ]
   },
@@ -92,6 +90,5 @@
     "#ilginçbilgiler",
     "#bilim"
   ],
-  "ytTitle": "Evrenin tarihi tek bir yıl olsaydı, sen ne zaman doğardın?",
-  "gl": false
+  "ytTitle": "Evrenin tarihi tek bir yıl olsaydı, sen ne zaman doğardın?"
 }

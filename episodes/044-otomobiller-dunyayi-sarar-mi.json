@@ -1,75 +1,67 @@
 {
   "id": "044",
   "slug": "otomobiller-dunyayi-sarar-mi",
-  "template": "cizgi",
+  "template": "otomobil",
   "serial": "№ 044 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-08T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
+    "rate": "+12%",
     "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
+      "l01": 0.4,
+      "l02": 0.4,
+      "l03": 0.6,
+      "l04": 0.4,
+      "l05": 0.8,
+      "l06": 0.6,
+      "l07": 0.5
     },
     "lines": [
       {
         "id": "l01",
-        "who": "A",
-        "text": "Türkiye'deki bütün otomobilleri tampon tampona dizsek, bu kuyruk Dünya'yı neredeyse iki kez sarardı.",
-        "tts": "Türkiye'deki bütün otomobilleri tampon tampona dizsek, bu kuyruk Dünya'yı neredeyse iki kez sarardı."
+        "tts": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?",
+        "text": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l02",
-        "who": "S",
-        "text": "Nasıl yani? İki kez mi?",
-        "tts": "Nasıl yani? İki kez mi?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Türkiye'de trafiğe kayıtlı yaklaşık on yedi milyon dört yüz bin otomobil var.",
+        "text": "Türkiye'de trafiğe kayıtlı yaklaşık 17,4 milyon otomobil var.",
+        "rate": "+8%"
       },
       {
         "id": "l03",
-        "who": "A",
-        "text": "Türkiye'de trafiğe kayıtlı on yedi milyondan fazla otomobil var. Her birini dört buçuk metre sayalım. Kuyruk İstanbul'dan çıkıyor ve doğuya doğru uzuyor: yetmiş sekiz bin kilometre. Dünya'nın çevresi ise kırk bin kilometre.",
-        "tts": "Türkiye'de trafiğe kayıtlı on yedi milyondan fazla otomobil var. Her birini dört buçuk metre sayalım. Kuyruk İstanbul'dan çıkıyor ve doğuya doğru uzuyor: yetmiş sekiz bin kilometre. Dünya'nın çevresi ise kırk bin kilometre."
+        "tts": "Her birini ortalama dört buçuk metre sayalım ve hepsini tampon tampona dizelim.",
+        "text": "Her birini ortalama 4,5 metre sayalım ve hepsini tampon tampona dizelim.",
+        "rate": "+8%"
       },
       {
         "id": "l04",
-        "who": "S",
-        "text": "Bu kuyruğun sonunu görmek ne kadar sürer?",
-        "tts": "Bu kuyruğun sonunu görmek ne kadar sürer?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Kuyruk İstanbul'dan çıkıyor ve Dünya'nın çevresini dolanmaya başlıyor.",
+        "text": "Kuyruk İstanbul'dan çıkıyor ve Dünya'nın çevresini dolanmaya başlıyor.",
+        "rate": "+10%"
       },
       {
         "id": "l05",
-        "who": "A",
-        "text": "Saatte yüz kilometre hızla, hiç durmadan bu kuyruğun yanından geçmek otuz üç gün sürerdi.",
-        "tts": "Saatte yüz kilometre hızla, hiç durmadan bu kuyruğun yanından geçmek otuz üç gün sürerdi."
+        "tts": "Dünya'nın çevresi kırk bin kilometre. Kuyruk ise yetmiş sekiz bin kilometre.",
+        "text": "Dünya'nın çevresi 40.000 km. Kuyruk ise 78.000 km.",
+        "rate": "+6%"
       },
       {
         "id": "l06",
-        "who": "S",
-        "text": "Bayram trafiği de aynen böyle.",
-        "tts": "Bayram trafiği de aynen böyle.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Yani Dünya'yı neredeyse iki kez sarıyor.",
+        "text": "Yani Dünya'yı neredeyse iki kez sarıyor.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
       },
       {
         "id": "l07",
-        "who": "A",
-        "text": "Sence bu kuyruğun en sonunda kimin arabası var? Yoruma yaz.",
-        "tts": "Sence bu kuyruğun en sonunda kimin arabası var? Yoruma yaz."
+        "tts": "Bu kuyruğun yanından saatte yüz kilometreyle geçmek otuz üç gün sürerdi.",
+        "text": "Bu kuyruğun yanından saatte 100 km hızla geçmek 33 gün sürerdi.",
+        "rate": "+4%"
       }
     ]
   },
@@ -92,6 +84,5 @@
     "#ilginçbilgiler",
     "#trafik"
   ],
-  "ytTitle": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?",
-  "gl": false
+  "ytTitle": "Türkiye'deki bütün otomobiller arka arkaya dizilse Dünya'yı sarar mı?"
 }

@@ -1,7 +1,7 @@
 {
   "id": "032",
   "slug": "uranus-kutup",
-  "template": "cizgi",
+  "template": "uranus",
   "publishAt": "2026-11-12T05:30Z",
   "serial": "№ 032 · DÜŞÜNCE DENEYİ",
   "bpm": 100,
@@ -101,73 +101,5 @@
     "#uzay",
     "#uranüs",
     "#astronomi"
-  ],
-  "gl": false,
-  "voice": {
-    "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
-    "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
-    },
-    "lines": [
-      {
-        "id": "l01",
-        "who": "A",
-        "text": "Uranüs'ün kutbunda Güneş bir kez battığında, tam kırk iki yıl boyunca doğmuyor.",
-        "tts": "Uranüs'ün kutbunda Güneş bir kez battığında, tam kırk iki yıl boyunca doğmuyor."
-      },
-      {
-        "id": "l02",
-        "who": "S",
-        "text": "Nasıl yani? Kırk iki yıl gece mi?",
-        "tts": "Nasıl yani? Kırk iki yıl gece mi?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l03",
-        "who": "A",
-        "text": "Uranüs Güneş'in çevresini seksen dört yılda dolanıyor ve neredeyse yan yatmış hâlde dönüyor. Bu yüzden kutuplarından biri kırk iki yıl boyunca Güneş'e bakıyor, sonraki kırk iki yıl Güneş'i hiç görmüyor.",
-        "tts": "Uranüs Güneş'in çevresini seksen dört yılda dolanıyor ve neredeyse yan yatmış hâlde dönüyor. Bu yüzden kutuplarından biri kırk iki yıl boyunca Güneş'e bakıyor, sonraki kırk iki yıl Güneş'i hiç görmüyor."
-      },
-      {
-        "id": "l04",
-        "who": "S",
-        "text": "Orada doğsam ilk gün doğumunu kırk yaşımda görürdüm.",
-        "tts": "Orada doğsam ilk gün doğumunu kırk yaşımda görürdüm.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l05",
-        "who": "A",
-        "text": "Ve sonra Güneş kırk iki yıl hiç batmazdı. Bir ömrün yarısı tek bir gece, öbür yarısı tek bir gündüz.",
-        "tts": "Ve sonra Güneş kırk iki yıl hiç batmazdı. Bir ömrün yarısı tek bir gece, öbür yarısı tek bir gündüz."
-      },
-      {
-        "id": "l06",
-        "who": "S",
-        "text": "Uyku düzenim zaten öyle.",
-        "tts": "Uyku düzenim zaten öyle.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
-      },
-      {
-        "id": "l07",
-        "who": "A",
-        "text": "Sen kırk iki yıllık gecede ne yapardın? Yoruma yaz.",
-        "tts": "Sen kırk iki yıllık gecede ne yapardın? Yoruma yaz."
-      }
-    ]
-  }
+  ]
 }

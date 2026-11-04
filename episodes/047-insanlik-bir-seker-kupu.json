@@ -1,75 +1,67 @@
 {
   "id": "047",
   "slug": "insanlik-bir-seker-kupu",
-  "template": "cizgi",
+  "template": "seker",
   "serial": "№ 047 · KAÇ SIFIR?",
   "bpm": 100,
   "coverAt": 0,
   "publishAt": "2026-11-15T05:30Z",
   "voice": {
     "name": "tr-TR-AhmetNeural",
-    "rate": "+25%",
-    "tight": 0.28,
+    "rate": "+12%",
     "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
-      "l03": 0.2,
-      "l04": 0.15,
-      "l05": 0.2,
-      "l06": 0.15,
-      "l07": 0.3
+      "l01": 0.5,
+      "l02": 0.4,
+      "l03": 0.6,
+      "l04": 0.8,
+      "l05": 0.6,
+      "l06": 0.5
     },
     "lines": [
       {
         "id": "l01",
-        "who": "A",
-        "text": "Sekiz milyar insanın hepsi, bir çay şekerinden daha küçük bir küpe sığabilirdi.",
-        "tts": "Sekiz milyar insanın hepsi, bir çay şekerinden daha küçük bir küpe sığabilirdi."
+        "tts": "Bütün insanlık bir çay şekerine sığar mı?",
+        "text": "Bütün insanlık bir çay şekerine sığar mı?",
+        "rate": "+6%",
+        "pitch": "+3Hz"
       },
       {
         "id": "l02",
-        "who": "S",
-        "text": "Nasıl yani? Bütün insanlık mı?",
-        "tts": "Nasıl yani? Bütün insanlık mı?",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Vücudun atomlardan oluşuyor ve bir atomun neredeyse tamamı boşluk.",
+        "text": "Vücudun atomlardan oluşuyor ve bir atomun neredeyse tamamı boşluk.",
+        "rate": "+8%"
       },
       {
         "id": "l03",
-        "who": "A",
-        "text": "Vücudun atomlardan oluşuyor ve bir atomun neredeyse tamamı boşluk. Çekirdek bir bezelye kadar olsaydı, atom bir stadyumdan büyük olurdu. Sekiz milyar insanın bütün atomlarındaki boşluğu çıkaralım. Geriye kalan, bir çay şekerinden küçük.",
-        "tts": "Vücudun atomlardan oluşuyor ve bir atomun neredeyse tamamı boşluk. Çekirdek bir bezelye kadar olsaydı, atom bir stadyumdan büyük olurdu. Sekiz milyar insanın bütün atomlarındaki boşluğu çıkaralım. Geriye kalan, bir çay şekerinden küçük."
+        "tts": "Çekirdek bir bezelye kadar olsaydı, atom bir stadyumdan büyük olurdu.",
+        "text": "Çekirdek bir bezelye kadar olsaydı, atom bir stadyumdan büyük olurdu.",
+        "rate": "+6%"
       },
       {
         "id": "l04",
-        "who": "S",
-        "text": "O zaman çok hafif olur.",
-        "tts": "O zaman çok hafif olur.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Şimdi sekiz milyar insanın bütün atomlarındaki boşluğu çıkaralım.",
+        "text": "Şimdi sekiz milyar insanın bütün atomlarındaki boşluğu çıkaralım.",
+        "rate": "+6%"
       },
       {
         "id": "l05",
-        "who": "A",
-        "text": "Hayır. O küçük küp yaklaşık beş yüz milyon ton gelirdi. Bütün insanlık, dünyanın en ağır şeker küpü olurdu.",
-        "tts": "Hayır. O küçük küp yaklaşık beş yüz milyon ton gelirdi. Bütün insanlık, dünyanın en ağır şeker küpü olurdu."
+        "tts": "Geriye kalan, bir çay şekerinden küçük.",
+        "text": "Geriye kalan, bir çay şekerinden küçük.",
+        "rate": "-4%",
+        "pitch": "-4Hz"
       },
       {
         "id": "l06",
-        "who": "S",
-        "text": "Çaya atsan bardağın dibi delinir.",
-        "tts": "Çaya atsan bardağın dibi delinir.",
-        "voice": "tr-TR-EmelNeural",
-        "rate": "+15%",
-        "pitch": "+2Hz"
+        "tts": "Ama o şeker küpü yaklaşık beş yüz milyon ton gelir.",
+        "text": "Ama o şeker küpü yaklaşık 500 milyon ton gelir.",
+        "rate": "+4%"
       },
       {
         "id": "l07",
-        "who": "A",
-        "text": "Sence bu küpü kim kaldırabilirdi? Yoruma yaz.",
-        "tts": "Sence bu küpü kim kaldırabilirdi? Yoruma yaz."
+        "tts": "Bütün insanlık, dünyanın en ağır şeker küpü olurdu.",
+        "text": "Bütün insanlık, dünyanın en ağır şeker küpü olurdu.",
+        "rate": "+4%",
+        "pitch": "+2Hz"
       }
     ]
   },
@@ -92,6 +84,5 @@
     "#ilginçbilgiler",
     "#bilim"
   ],
-  "ytTitle": "Bütün insanlık bir çay şekerine sığar mı?",
-  "gl": false
+  "ytTitle": "Bütün insanlık bir çay şekerine sığar mı?"
 }

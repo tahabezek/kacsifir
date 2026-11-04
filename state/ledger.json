@@ -665,28 +665,30 @@
     "2026-11-03T17:30Z": {
       "episode": "067",
       "media": "v/067-butun-altin-bir-kup.mp4",
-      "status": "scheduled",
+      "status": "failed",
       "at": "2026-11-01T21:06:32.018Z",
       "postId": "6ae7aa1b779ee9f13cb67aec",
       "dueAt": "2026-11-03T17:30:00.000Z",
       "yt": {
         "postId": "6ae7aa1c779ee9f13cb67b5d",
-        "status": "scheduled",
+        "status": "failed",
         "dueAt": "2026-11-03T17:30:00.000Z"
-      }
+      },
+      "error": "medya URL'si budandı (remedia defteri itilmedi); 4 Kasım'da yeniden planlandı -> 2026-11-04T11:00Z"
     },
     "2026-11-04T05:30Z": {
       "episode": "057",
       "media": "v/057-pinin-kac-basamagi-yeter.mp4",
-      "status": "scheduled",
+      "status": "failed",
       "at": "2026-11-02T05:51:18.482Z",
       "postId": "6ae825297817c41d1a46e517",
       "dueAt": "2026-11-04T05:30:00.000Z",
       "yt": {
         "postId": "6ae8252964604db314422231",
-        "status": "scheduled",
+        "status": "failed",
         "dueAt": "2026-11-04T05:30:00.000Z"
-      }
+      },
+      "error": "medya URL'si budandı (remedia defteri itilmedi); 4 Kasım'da yeniden planlandı -> 2026-11-05T11:00Z"
     },
     "2026-11-04T17:30Z": {
       "episode": "041",
@@ -738,6 +740,36 @@
         "postId": "6aeacac287b7c6d24c9467a1",
         "status": "scheduled",
         "dueAt": "2026-11-06T05:30:00.000Z"
+      }
+    },
+    "2026-11-04T11:00Z": {
+      "episode": "067",
+      "media": "v/067-butun-altin-bir-kup-acdc3217.mp4",
+      "status": "scheduled",
+      "at": "2026-11-04T07:05:49.584Z",
+      "manual": true,
+      "note": "kurtarma: 2026-11-03T17:30Z",
+      "postId": "6aead98bdc38f4d7bad519e2",
+      "dueAt": "2026-11-04T11:00:00.000Z",
+      "yt": {
+        "postId": "6aead98bd59713e4342801f4",
+        "status": "scheduled",
+        "dueAt": "2026-11-04T11:00:00.000Z"
+      }
+    },
+    "2026-11-05T11:00Z": {
+      "episode": "057",
+      "media": "v/057-pinin-kac-basamagi-yeter-1e5c30eb.mp4",
+      "status": "scheduled",
+      "at": "2026-11-04T07:05:49.584Z",
+      "manual": true,
+      "note": "kurtarma: 2026-11-04T05:30Z",
+      "postId": "6aead98cc63bd995bd163037",
+      "dueAt": "2026-11-05T11:00:00.000Z",
+      "yt": {
+        "postId": "6aead98d2b43f8ba7d72734d",
+        "status": "scheduled",
+        "dueAt": "2026-11-05T11:00:00.000Z"
       }
     }
   }

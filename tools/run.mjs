@@ -119,7 +119,7 @@ function publishMedia(ledger, newFiles) {
   let hasBranch = true;
   try { git(['fetch', '--depth=1', 'origin', cfg.mediaBranch]); } catch { hasBranch = false; }
   const keepAfter = Date.now() - cfg.mediaKeepDays * 86400e3;
-  const keep = new Set(Object.entries(ledger.slots).filter(([k]) => new Date(k).getTime() > keepAfter).flatMap(([, s]) => [].concat(s.media || [])));
+  const keep = new Set(Object.entries(ledger.slots).filter(([k]) => new Date(k).getTime() > keepAfter).flatMap(([, s]) => [].concat(s.media || [], s.prevMedia || [])));
   if (hasBranch) {
     for (const f of git(['ls-tree', '-r', '--name-only', 'FETCH_HEAD']).split('\n')) {
       if (keep.has(f)) { fs.mkdirSync(path.dirname(path.join(dir, f)), { recursive: true }); fs.writeFileSync(path.join(dir, f), spawnSync('git', ['show', `FETCH_HEAD:${f}`], { cwd: root, maxBuffer: 1 << 30 }).stdout); }

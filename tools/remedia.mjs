@@ -12,6 +12,8 @@ import { summary } from '../engine/summary.js';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const cfg = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
 const ledgerPath = path.join(root, 'state', 'ledger.json');
+// CI defteri her koşuda iter: yerel kopya eskiyse onun üstüne yazılmasın
+if (spawnSync('git', ['pull', '--rebase', '--autostash'], { cwd: root, encoding: 'utf8' }).status) throw new Error('git pull başarısız; defter güncel değil');
 const ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
 const git = (args, o = {}) => { const r = spawnSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 1 << 30, ...o }); if (r.status) throw new Error(`git ${args[0]}: ${r.stderr}`); return r.stdout.trim(); };
 const ids = process.argv.slice(2);
@@ -29,6 +31,21 @@ for (const id of ids) {
   jobs.push({ id, key, slot, mp4, rel, size: buf.length, ep: eps[id].ep });
 }
 if (!jobs.length) process.exit(0);
+
+// Defter ÖNCE itilir: CI'ın medya budaması yalnızca defterde adı geçen dosyaları korur. Defter yerelde kalırsa
+// yeni video bir sonraki CI koşusunda silinir ve gönderi yayın anında 404 alır (3–4 Kasım'da 067 ve 057 böyle düştü).
+// Eski dosya prevMedia olarak korunur; editPost başarısız olsa da gönderinin bağlı olduğu video silinmez.
+function pushLedger(msg) {
+  fs.writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2) + '\n');
+  git(['add', 'state/ledger.json']);
+  if (spawnSync('git', ['diff', '--cached', '--quiet'], { cwd: root }).status === 0) return;
+  git(['commit', '-m', msg]);
+  git(['pull', '--rebase', '--autostash']);
+  git(['push']);
+}
+for (const j of jobs) ledger.slots[j.key] = { ...j.slot, media: j.rel, prevMedia: j.slot.media, remediaAt: new Date().toISOString() };
+pushLedger(`defter: medya yenileme ${ids.join(',')}`);
+console.log('defter itildi');
 
 // medya dalı: mevcut her dosya korunur + yeniler
 const dir = path.join(root, '.media');
@@ -77,7 +94,5 @@ for (const j of jobs) {
     } });
     console.log(j.id, ': youtube', yt.editPost.message ? 'hatası: ' + yt.editPost.message : 'güncellendi');
   }
-  ledger.slots[j.key] = { ...j.slot, media: j.rel, prevMedia: j.slot.media, remediaAt: new Date().toISOString() };
-  fs.writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2) + '\n');
   console.log(j.id, ': gönderi yeni videoya bağlandı →', url);
 }

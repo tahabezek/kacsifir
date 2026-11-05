@@ -1,6 +1,6 @@
-# Performans raporu · 2026-11-05 14:27 UTC
+# Performans raporu · 2026-11-05 18:57 UTC
 
-Gönderi: 10 · izlenme: 15092 · paylaşım: 14 · takip: 0
+Gönderi: 10 · izlenme: 13491 · paylaşım: 14 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -11,18 +11,17 @@ Gönderi: 10 · izlenme: 15092 · paylaşım: 14 · takip: 0
 | 5 | [055 bir-bulut-kac-ton](https://www.instagram.com/reel/DfOj0dNjPEY/) | bulut | 2033 | 1823 | 0.39 | 0.5 | 0 | 0 | 17.6 |
 | 6 | [067 butun-altin-bir-kup](https://www.instagram.com/reel/DfUTSMDCiOl/) | cizgi | 1740 | 1580 | 0.32 | 0 | 1.3 | 0 | 15.4 |
 | 7 | [034 balikci-ve-asci](https://www.instagram.com/reel/DfNRjXyDTVu/) | okyanus | 2080 | 1796 | 0.26 | 0.6 | 0.6 | 0 | 13.8 |
-| 8 | [033 kozmonot-ve-asker](https://www.instagram.com/reel/DfKsytRikKU/) | zaman | 1601 | 1482 | 0.21 | 0 | 0.7 | 0 | 9.8 |
-| 9 | [057 pinin-kac-basamagi-yeter](https://www.instagram.com/reel/DfW4JvAEic1/) | pi | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 8 | [057 pinin-kac-basamagi-yeter](https://www.instagram.com/reel/DfW4JvAEic1/) | pi | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 9 | [060 buzdaki-doktor-ve-hucredeki-adam](https://www.instagram.com/reel/DfXkwnDnFMh/) | cizgi | 0 | 0 | – | 0 | 0 | 0 | 0 |
 | 10 | [029 jupiter-terazi](https://www.instagram.com/reel/DfWSMn6AVbC/) | terazi | 0 | 0 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
 - doz: 36.5 (1 gönderi)
 - agac: 33.6 (1 gönderi)
 - sinif: 18.6 (1 gönderi)
-- cizgi: 16.7 (2 gönderi)
+- cizgi: 11.1 (3 gönderi)
 - bulut: 17.6 (1 gönderi)
 - okyanus: 13.8 (1 gönderi)
-- zaman: 9.8 (1 gönderi)
 - pi: 0.0 (1 gönderi)
 - terazi: 0.0 (1 gönderi)
 

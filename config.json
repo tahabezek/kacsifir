@@ -19,11 +19,12 @@
   "quietDaysTR": [
     "2026-11-10"
   ],
-  "youtube": {
+  "youtube_kapali": {
     "channelId": "6ad932d2778b240e2f81af17",
     "categoryId": "27",
     "privacy": "public",
     "madeForKids": false,
-    "notifySubscribers": true
+    "notifySubscribers": true,
+    "_not": "2026-11-05: Kacsifir YouTube'da tutmadı; kanal Bilmece Mesaisi'ne dönüştürüldü. Bu blok bilerek kapalı."
   }
 }

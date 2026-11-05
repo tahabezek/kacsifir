@@ -3,6 +3,92 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-11-05 turu
+
+**Tur notu:** Web araması bu turda da yalnızca özet düzeyinde sonuç verdi: Reddit'in güncel "bu hafta en çok oy alanlar" listesi, Ekşi Sözlük ve Google Trends çekilemedi (yalnızca eski yansıma sayfaları göründü). Bu yüzden öneriler (1) tarihleri sabit olan yıldönümleri ve (2) tek satırda hesaplanabilen kalıcı sorular üzerine kuruldu. Çakışma kontrolü yapıldı: Rubik küpü (topics.md #32) bu yüzden önerilmedi. Tüm aritmetik yeniden hesaplandı; "doğrulanmalı" yazan değerler yayından önce birincil kaynaktan teyit edilmeli. Önceki turun tarihli notları (Voyager 18 Kasım, Hera, BepiColombo) geçerlidir; ek bir güncelleme bulunamadı.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Dünya'dan uzaya gönderilen ilk mesaj kaç bit? 1.679 ve neden tam 23 × 73 (tarihli: 16 Kasım)
+- Kanca: Uzaya gönderdiğimiz mesajın uzunluğu, tesadüfen değil, iki asal sayının çarpımıdır.
+- Sayılar: Arecibo mesajı 16 Kasım 1974'te yayınlandı. Uzunluk 1.679 bit = 23 × 73 (ikisi de asal; başka çarpan yok). 10 bit/sn hızında 1.679 ÷ 10 = 167,9 sn ≈ 2 dk 48 sn sürdü. Hedef M13 kümesi ≈ 22.200 ışık yılı uzakta (kaynaklara göre 21.000–25.000; doğrulanmalı). En erken cevap: 22.200 × 2 = 44.400 yıl sonra. Kuruluş yıl dönümü: 2026 − 1974 = 52. yıl.
+- Kaynaklar: https://www.universetoday.com/articles/what-is-the-arecibo-message · https://www.seti.org/ (SETI Enstitüsü arşivi; ayrıntılı sayfa doğrulanmalı) · https://en.wikipedia.org/wiki/Arecibo_message
+- Görsel metafor: **Kareli defter.** 1.679 kareli tek satırlık şerit önce 23 sütunluk, sonra 73 sütunluk ızgaraya katlanır. 23 × 73 yanlışsa dağınık gürültü, 73 satır × 23 sütun doğruysa resim belirir. Doruk (kırmızı kalem): resmin ortaya çıktığı an; kırmızı yalnızca insan figürü.
+- Türkiye bağlantısı: "Sen bir mesajı kaç sütuna katlardın?" Kareli defter alışkanlığı; asal sayılar okul müfredatından tanıdık (sınıf düzeyi doğrulanmalı).
+- Neden şimdi / tarih: 16 Kasım 2026 (52. yıl). Bir gün önce ya da o gün yayınla; 18 Kasım Voyager "bir ışık günü" haberiyle aynı hafta uzay merakına binmek için.
+- Puan (9/10): Kanca tek cümle ve şaşırtıcı; "aha" iki satırda anlatılıyor (asal çarpan = tek geçerli şekil); görsel kare kare kendini açıyor; güven yüksek (rakamlar birden çok kaynakta aynı).
+- Tuzaklar: Güç değeri kaynaklarda 20 gigawatt ya da 20 trilyon watt diye geçiyor (birim hatası olasılığı; videoda güç söyleme). M13 yıldızları zamanla yer değiştirir, mesaj hedefi tam tutmayabilir (iddia olarak ekleme). Ayrıntılı çözümleme (nükleotid, DNA şeması) hesaba dahil değil; anlatıyı tek hile ile sınırla.
+
+### Hanoi Kulesi'nin 64 diski: saniyede bir hamleyle evrenin yaşının 42 katı
+- Kanca: 64 diski tek tek taşısan, evrenin yaşının 42 katı kadar zaman gerekir.
+- Sayılar: n disk için en az 2ⁿ − 1 hamle. 20 disk: 2²⁰ − 1 = 1.048.575 hamle ÷ 86.400 = **≈ 12,1 gün** (saniyede 1 hamle). 30 disk: 1.073.741.823 s ÷ 31.557.600 = **≈ 34 yıl**. 64 disk: 2⁶⁴ − 1 = 18.446.744.073.709.551.615 s ÷ 31.557.600 = **≈ 5,85 × 10¹¹ yıl = 584,5 milyar yıl**; evrenin yaşı ≈ 13,8 milyar yıl → 584,5 ÷ 13,8 ≈ **42,4 kat**.
+- Kaynaklar: https://en.wikipedia.org/wiki/Tower_of_Hanoi · https://mathworld.wolfram.com/TowerofHanoi.html · Evrenin yaşı için https://science.nasa.gov/universe/overview/ (sayfa doğrulanmalı)
+- Görsel metafor: **Üç çivi ve altın diskler.** Önce 3 disk (7 hamle), sonra 5, 10, 20 diskin hamle sayacı büyür; her basamakta sayaç gün → yıl → evren yaşı eşiğinden geçer. Doruk (kırmızı): 64. diskin tek başına ilk hamlesi.
+- Türkiye bağlantısı: Disklerin yerine Anadolu'daki sofra tepsileri ya da Galata Kulesi'nin katları.
+- Neden şimdi / tarih: Kalıcı konu. Rubik küpü konusuyla (topics.md #32) aynı "sayı patlaması" duygusunu taşır; aynı hafta yayınlama.
+- Puan (8,5/10): Basit kural, sezgiye aykırı sonuç; Paradoks serisine tam uyuyor; viral klasik. Güven: yüksek (kapalı form kanıtlı).
+- Tuzaklar: "Brahma'nın tapınağı" efsanesi 1883'te Édouard Lucas'ın eseridir, gerçek bir ayin değildir. Evrenin yaşı 13,8 milyar yıl (≈ 13,787 ± 0,02). 365,25 günlük yıl kullanıldı; ekranda belirt.
+
+### Güneş'ten Dünya'ya 1 saatte gelen enerji, insanlığın bir yıllık enerji tüketimine yaklaşır
+- Kanca: Güneş'in bir saatte Dünya'ya gönderdiği enerji, insanlığın bir yılda harcadığına yaklaşır.
+- Sayılar: Güneş sabiti ≈ 1.361 W/m². Dünya'nın kesit alanı π × (6,371×10⁶ m)² ≈ 1,275×10¹⁴ m². Güç = 1,275×10¹⁴ × 1.361 ≈ 1,735×10¹⁷ W (≈ 173.500 TW). 1 saat = 3.600 s → 6,25×10²⁰ J ≈ **625 EJ**. Dünya birincil enerji tüketimi 2023'te ≈ 620 EJ (doğrulanmalı). Atmosfer ve bulutlar yaklaşık %30'unu geri yansıtır: 625 × 0,7 ≈ 437 EJ → yüzeye inen kısım için süre ≈ 1,4 saat.
+- Kaynaklar: https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html (güneş sabiti) · https://www.energyinst.org/statistical-review (Energy Institute, küresel birincil enerji; yıl ve değer doğrulanmalı)
+- Görsel metafor: **Güneş ışını şeridi.** Dünya silüetine bir saatlik ışık şeridi (turuncu değil, mürekkep çizgileri) yağar; yanında yıllık tüketim şeridi 12 aylık takvim yaprağı olarak dizilir. Doruk (kırmızı): iki şeridin eşitlendiği tek çizgi.
+- Türkiye bağlantısı: Türkiye'ye düşen güneş payı (alan ≈ 783.562 km²; doğrulanmalı) ve Konya Karapınar gibi büyük güneş santralleri sahnede nokta olarak çizilir.
+- Neden şimdi / tarih: Kalıcı konu; enerji haberi çıktığı hafta kullanılabilir. Politika/siyaset yorumundan kaçın.
+- Puan (8/10): Çok net bir kıyas, hesap üç adım; "aha" güçlü. Güven: orta-yüksek (tüketim rakamı yıla göre kayar).
+- Tuzaklar: Bu gelen enerjidir, kullanılabilir enerji değil; yüzeye ulaşan miktar daha azdır. "Tüketim" birincil enerjidir (elektrik değil). Video "güneş enerjisi yeter" iddiasına dönmemeli.
+
+### Maraton neden 42,195 km? Kral ailesi çocukları başlangıcı pencereden görsün diye (tarihli: Kasım ayı İstanbul Maratonu)
+- Kanca: Maraton mesafesi 42,195 kilometredir, çünkü bir kraliyet ailesi pencereden izlemek istedi.
+- Sayılar: 26 mil = 26 × 1,609344 = 41,843 km. 385 yarda = 385 × 0,9144 = 352,0 m = 0,352 km. Toplam = 41,843 + 0,352 = **42,195 km**. Eski plan ≈ 25 mil = 40,234 km → fark 42,195 − 40,234 ≈ **1,96 km**. Mesafe 27 Mayıs 1921'de IAAF tarafından 42,195 km olarak standartlaştırıldı.
+- Kaynaklar: https://www.history.com/articles/why-is-a-marathon-26-2-miles · https://www.olympedia.org/ (1908 maraton sayfası; adres doğrulanmalı) · https://aims-worldrunning.org/articles/797-royal-re-run-1908-2018.html
+- Görsel metafor: **Parkur haritası ve ölçü şeridi.** 25 mil'lik şerit Windsor'dan başlar, kraliyet locasının önüne gelmek için son 385 yarda "bir uzatma" olarak ayrı bir parça ekler; kırmızı kalem yalnızca o ekstra parça.
+- Türkiye bağlantısı: İstanbul Maratonu Boğaz'ı geçiyor; Türkiye'de ikinci kıtaya geçiş (Asya→Avrupa) mesafe 42,195 km'nin kaçta kaçı? (köprü uzunluğu doğrulanmalı). Vodafone İstanbul Maratonu geleneksel olarak Kasım'da koşulur; 2026 tarihi doğrulanamadı (8 Kasım Pazar olması tahmindir, resmî sayfadan teyit et).
+- Neden şimdi / tarih: İstanbul Maratonu haftası (tarih teyidi şart). Spor güncesi olduğu için viral potansiyel yüksek.
+- Puan (8/10): Efsane kırıcı kanca; bilgi herkesin bildiği bir sayının "gizli sebebi". Güven: orta (hikâyenin ayrıntısı tartışmalı).
+- Tuzaklar: History.com "iddiaya göre" der; Olympedia son mesafeyi "rastgele" nitelendirir. Anlatıda "kesin böyle oldu" deme; "yaygın anlatıya göre" de. Eski Yunan Pheidippides'in (MÖ 490) ≈ 40 km koştuğu da tarihsel olarak tartışmalıdır; ayrı anlat.
+
+### Öğretmenlerin ömründe kaç öğrenciye dokunuyor? (tarihli: 24 Kasım Öğretmenler Günü)
+- Kanca: Bir öğretmen mesleği boyunca binlerce öğrenciye ders verir.
+- Sayılar (varsayım, kaynakla düzeltilecek): Sınıf öğretmeni: 4 yıllık döngü, 35 yıl ÷ 4 ≈ 8 sınıf × 28 öğrenci ≈ **224–250 öğrenci**. Branş öğretmeni: yılda ≈ 8 şube × 28 = 224 öğrenci; 35 yıl × 224 = **7.840 öğrenci**.
+- Kaynaklar: MEB örgün eğitim istatistikleri (ortalama sınıf mevcudu için): https://sgb.meb.gov.tr/ (sayfa doğrulanmalı) · https://istatistik.meb.gov.tr/ (doğrulanmalı). Varsayım uydurma sayılmaz; ekranda "varsayım" etiketiyle göster.
+- Görsel metafor: **Sınıf defteri yoklama listesi.** Her yıl bir sayfa yoklama listesi çevrilir; 35 sayfa yığılıp bir yığın olur. Doruk (kırmızı): son sayfada toplam isim sayısı.
+- Türkiye bağlantısı: Doğrudan; "senin ilkokul öğretmenin kaç öğrenci okuttu?"; yorumlarda "adı: ___ öğretmenim" etkileşimi.
+- Neden şimdi / tarih: 24 Kasım 2026 Salı (Öğretmenler Günü); önceki gün yayınla.
+- Puan (7,5/10): Duygusal paylaşım gücü yüksek; "Kafadan hesap" serisine uyar. Güven: orta (varsayıma dayalı).
+- Tuzaklar: Şube sayısı ve sınıf mevcudu okula göre değişir; ortalamayı MEB verisiyle düzelt. Siyasi tartışmaya (maaş, atama) girme.
+
+### Bir insanın saçı ömründe kaç kilometre uzar?
+- Kanca: Bir insanın saç telleri ömür boyu uç uca eklense yaklaşık bin kilometre eder.
+- Sayılar: Saç ≈ 0,35 mm/gün (≈ 1 cm/ay; kaynaklara göre 0,3–0,4 mm; doğrulanmalı). Baş derisinde ≈ 100.000 tel (90.000–150.000; doğrulanmalı). Günlük toplam = 100.000 × 0,35 mm = 35 m. 80 yıl = 29.200 gün → 35 × 29.200 = **1.022 km**. Her telin yalnızca ≈ %85'i büyüme evresindedir (doğrulanmalı): 1.022 × 0,85 ≈ 870 km → "900–1.000 km". İstanbul–Ankara karayolu ≈ 450 km (doğrulanmalı) → yaklaşık iki katı.
+- Kaynaklar: https://www.aad.org/public/everyday-care/hair-scalp-care/hair/hair-growth-faqs (doğrulanmalı) · https://my.clevelandclinic.org/health/body/23204-hair (doğrulanmalı). Sağlık tavsiyesi verilmez; yalnızca ölçü.
+- Görsel metafor: **Kıl çeker bir iplik makarası.** Başın silüetinden tek bir ince çizgi makaraya sarılır; makara İstanbul–Ankara haritasına açılır. Doruk (kırmızı): çizginin Ankara'yı geçmesi.
+- Türkiye bağlantısı: Berber/kuaför koltuğu; "bir kuaföre gitmenin 2 cm'i = ...".
+- Neden şimdi / tarih: Kalıcı.
+- Puan (7,5/10): Herkesin başında olan bir nesne; sürpriz sayı; hesap kısa. Güven: orta (tel sayısı değişkenliği yüksek).
+- Tuzaklar: Her tel yalnızca 2–6 yıl yaşar ve dökülür; tek telin ömrü boyunca uzunluğu 1 m'yi geçmez. Toplam, "üretilen" uzunluktur. Saç dökülmesi/tedavi konusuna girme.
+
+### Philae'nin "Dünya'ya merhaba"sı 28 dakikada geldi: kuyruklu yıldıza inişin gecikmesi (tarihli: 12 Kasım)
+- Kanca: İlk kez bir kuyruklu yıldıza indik; "indim" haberi bize yarım saat sonra ulaştı.
+- Sayılar: Philae 12 Kasım 2014'te 67P/Churyumov–Gerasimenko'ya indi (12. yıl). O sırada uzaklık ≈ 510 milyon km (doğrulanmalı). Işık gecikmesi = 510.000.000 ÷ 299.792 ≈ 1.701 s ≈ **28,4 dk** (ESA'nın duyurusu ≈ 28 dk 20 sn; doğrulanmalı). Rosetta 2004'te fırlatıldı; yolculuk ≈ 10 yıl. 
+- Kaynaklar: https://www.esa.int/Science_Exploration/Space_Science/Rosetta · https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Philae (sayfa doğrulanmalı)
+- Görsel metafor: **Posta zarfı.** Küçük bir zarf (işaret) kuyruklu yıldızdan yola çıkar; yanında 28 dakikalık bir saat yelkovanı çizilir; zarf Dünya'ya ulaştığında kırmızı mühür. Voyager'ın "ışık günü" konusunun küçük ölçekli ön hazırlığı olur.
+- Türkiye bağlantısı: İstanbul–Ankara ışık 1,2 ms ile 28 dk kıyası: 28,4 dk = 1.704 s; 1,2 ms ile oranı ≈ 1,4 milyon kat (1.704 ÷ 0,0012).
+- Neden şimdi / tarih: 12 Kasım 2026 (12. yıl). Voyager konusunun hemen öncesine yerleşir (18 Kasım).
+- Puan (7/10): Net ama daha önceki ışık gecikmesi konularıyla (Uranüs 5 saat, Voyager) benzer; seriye ek olarak güçlü. Güven: yüksek.
+- Tuzaklar: 28 dk Philae'nin o günkü uzaklığına özgüdür; sabit değildir. Philae iniş sonrası üç kez zıpladı ve pili bitti; "başarısız" ya da "başarılı" tartışmasına girme.
+
+### Bekârlar Günü'nde (11.11) saniyede kaç milyon yuan harcandı? 2019: 268,4 milyar yuan (tarihli: 11 Kasım)
+- Kanca: Çin'de tek bir günde harcanan para, her saniye üç milyon yuan demektir.
+- Sayılar: Alibaba'nın 2019 11.11 GMV'si 268,4 milyar yuan (≈ 38,4 milyar dolar). 24 saat = 86.400 s. 268,4×10⁹ ÷ 86.400 = **≈ 3,107 milyon yuan/sn**. Dolar karşılığı: 38,4×10⁹ ÷ 86.400 ≈ **444.444 $/sn**. Siparişlerin zirvesi 544.000 sipariş/sn (şirket iddiası).
+- Kaynaklar: https://www.yicaiglobal.com/news/alibaba-breaks-singles-day-sales-record-but-growth-ebbs · https://techpp.com/2019/11/19/alibaba-singles-day-2019-record/ · Alibaba resmî açıklaması: https://www.alibabagroup.com/ (doğrulanmalı)
+- Görsel metafor: **Kasa fişi.** Uzun bir kasa fişi saniyede 3,1 milyon yuan basar; fiş 24 saatlik saat kadranı etrafında sarılır. Doruk (kırmızı): tek bir saniyenin fişi (3,1 milyon yuan).
+- Türkiye bağlantısı: Efsane Cuma (27 Kasım) ile kıyas; "Türkiye'nin e-ticareti kaç saniyede?" (TCMB/Ticaret Bakanlığı verisi doğrulanmalı).
+- Neden şimdi / tarih: 11 Kasım 2026. Satış/alışveriş tavsiyesi verme.
+- Puan (7/10): Dikkat çeken bir bölme işlemi; ama Reddit'te şu an viral olduğu doğrulanamadı. Güven: orta (GMV iç şirket sayısı, bağımsız doğrulama yok).
+- Tuzaklar: GMV ciro değildir; iade edilen siparişler dahildir. Alibaba sonraki yıllarda toplam GMV açıklamasını bıraktı (doğrulanmalı); en güncel yıl yerine 2019 kullan ve yılı ekranda yaz. "583.000 sipariş/sn" 2020'ye aittir.
+
 ## 2026-11-02 turu
 
 **Tur notu:** Web araması bu turda da özet düzeyinde kaldı: Reddit (r/theydidthemath), Ekşi Sözlük ve Google Trends'ten güncel, tarihli bir liste çekilemedi; yalnızca önbellekteki eski gönderi başlıkları göründü (örn. "denizaltı kablolarını suşiyle değiştirmek için ne kadar balık gerekir?", "Dünya'yı saran köprü yüzer mi?"; oy sayıları doğrulanamadı). Bu yüzden öneriler (1) önümüzdeki 2–4 haftadaki gerçek takvim olayları (BepiColombo, Efsane Cuma) ve (2) kalıcı, tek satırda hesaplanabilen sorular üzerine kuruldu. Aritmetik yeniden hesaplandı; "doğrulanmalı" yazan değerler yayından önce birincil kaynaktan teyit edilmeli.

@@ -839,6 +839,14 @@
       "at": "2026-11-06T06:24:11.424Z",
       "postId": "6aed72d186fe9b837978c75d",
       "dueAt": "2026-11-08T05:30:00.000Z"
+    },
+    "2026-11-08T17:30Z": {
+      "episode": "036",
+      "media": "v/036-hostes-ve-gemi-tasarimcisi.mp4",
+      "status": "scheduled",
+      "at": "2026-11-06T18:23:30.605Z",
+      "postId": "6aee1bdeaf7e526d43d402ee",
+      "dueAt": "2026-11-08T17:30:00.000Z"
     }
   }
 }

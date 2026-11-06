@@ -1,6 +1,6 @@
-# Performans raporu · 2026-11-06 14:04 UTC
+# Performans raporu · 2026-11-06 18:26 UTC
 
-Gönderi: 10 · izlenme: 16444 · paylaşım: 20 · takip: 0
+Gönderi: 10 · izlenme: 14363 · paylaşım: 19 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -12,17 +12,16 @@ Gönderi: 10 · izlenme: 16444 · paylaşım: 20 · takip: 0
 | 6 | [055 bir-bulut-kac-ton](https://www.instagram.com/reel/DfOj0dNjPEY/) | bulut | 2037 | 1823 | 0.39 | 0.5 | 0 | 0 | 17.6 |
 | 7 | [067 butun-altin-bir-kup](https://www.instagram.com/reel/DfUTSMDCiOl/) | cizgi | 1813 | 1664 | 0.32 | 0 | 1.2 | 0 | 15.4 |
 | 8 | [029 jupiter-terazi](https://www.instagram.com/reel/DfWSMn6AVbC/) | terazi | 1904 | 1591 | 0.31 | 0 | 0.6 | 0 | 13.8 |
-| 9 | [034 balikci-ve-asci](https://www.instagram.com/reel/DfNRjXyDTVu/) | okyanus | 2081 | 1796 | 0.26 | 0.6 | 0.6 | 0 | 13.8 |
+| 9 | [035 dag-adami-ve-madenciler](https://www.instagram.com/reel/DfaJk6RnP5Z/) | cizgi | 0 | 0 | – | 0 | 0 | 0 | 0 |
 | 10 | [031 venus-gunu](https://www.instagram.com/reel/DfY3G0iDUBT/) | venus | 0 | 0 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
 - doz: 36.4 (1 gönderi)
 - pi: 36.2 (1 gönderi)
 - agac: 33.6 (1 gönderi)
-- cizgi: 18.1 (3 gönderi)
+- cizgi: 13.5 (4 gönderi)
 - bulut: 17.6 (1 gönderi)
 - terazi: 13.8 (1 gönderi)
-- okyanus: 13.8 (1 gönderi)
 - venus: 0.0 (1 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)

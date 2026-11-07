@@ -3716,37 +3716,14 @@
     ],
     "2026-11-07": [
       {
-        "postId": "6ae64f69cf3a3112f3c0f161",
-        "episode": "059",
-        "slug": "isindan-gecen-ve-asilamayan",
-        "template": "doz",
-        "sentAt": "2026-11-02T17:33:32.544Z",
-        "link": "https://www.instagram.com/reel/DfP2fTsjQr5/",
-        "views": 2162,
-        "reach": 1842,
-        "likes": 0,
-        "comments": 0,
-        "shares": 8,
-        "saves": 6,
-        "follows": 0,
-        "avgWatchS": 20.36,
-        "durationS": 65.3,
-        "watchRatio": 0.31,
-        "sharesPer1k": 4.3,
-        "savesPer1k": 3.3,
-        "followsPer1k": 0,
-        "score": 36.4,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.477Z"
-      },
-      {
         "postId": "6ae6d36bab019b9087426d93",
         "episode": "056",
         "slug": "agac-mi-yildiz-mi",
         "template": "agac",
         "sentAt": "2026-11-03T05:30:44.428Z",
         "link": "https://www.instagram.com/reel/DfRInCumnzL/",
-        "views": 1903,
-        "reach": 1564,
+        "views": 1904,
+        "reach": 1565,
         "likes": 0,
         "comments": 0,
         "shares": 4,
@@ -3759,7 +3736,7 @@
         "savesPer1k": 4.5,
         "followsPer1k": 0,
         "score": 33.6,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.477Z"
+        "metricsUpdatedAt": "2026-11-07T19:30:34.981Z"
       },
       {
         "postId": "6aead98cc63bd995bd163037",
@@ -3768,21 +3745,44 @@
         "template": "pi",
         "sentAt": "2026-11-05T11:03:25.761Z",
         "link": "https://www.instagram.com/reel/DfW4JvAEic1/",
-        "views": 1600,
-        "reach": 1341,
+        "views": 1604,
+        "reach": 1347,
         "likes": 0,
         "comments": 0,
         "shares": 6,
         "saves": 1,
         "follows": 0,
-        "avgWatchS": 14.89,
+        "avgWatchS": 14.88,
         "durationS": 43.1,
         "watchRatio": 0.35,
         "sharesPer1k": 4.5,
         "savesPer1k": 0.7,
         "followsPer1k": 0,
-        "score": 33.2,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.477Z"
+        "score": 33.1,
+        "metricsUpdatedAt": "2026-11-07T19:30:34.997Z"
+      },
+      {
+        "postId": "6aec22c1e22643a987953a08",
+        "episode": "040",
+        "slug": "turkiye-kadikoye-sigar-mi",
+        "template": "cizgi",
+        "sentAt": "2026-11-07T05:30:47.606Z",
+        "link": "https://www.instagram.com/reel/DfbbygHjzdW/",
+        "views": 1661,
+        "reach": 1434,
+        "likes": 0,
+        "comments": 0,
+        "shares": 1,
+        "saves": 2,
+        "follows": 0,
+        "avgWatchS": 21.72,
+        "durationS": 42.8,
+        "watchRatio": 0.51,
+        "sharesPer1k": 0.7,
+        "savesPer1k": 1.4,
+        "followsPer1k": 0,
+        "score": 25.9,
+        "metricsUpdatedAt": "2026-11-07T19:30:34.948Z"
       },
       {
         "postId": "6aeb7e497631b8ab98c03964",
@@ -3805,7 +3805,7 @@
         "savesPer1k": 1.3,
         "followsPer1k": 0,
         "score": 20.6,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.477Z"
+        "metricsUpdatedAt": "2026-11-07T19:30:34.989Z"
       },
       {
         "postId": "6aeb7f76600b02e627218227",
@@ -3814,21 +3814,21 @@
         "template": "cizgi",
         "sentAt": "2026-11-06T17:33:30.518Z",
         "link": "https://www.instagram.com/reel/DfaJk6RnP5Z/",
-        "views": 1735,
-        "reach": 1539,
+        "views": 1744,
+        "reach": 1550,
         "likes": 0,
         "comments": 0,
         "shares": 0,
         "saves": 0,
         "follows": 0,
-        "avgWatchS": 26.27,
+        "avgWatchS": 26.26,
         "durationS": 60.6,
         "watchRatio": 0.43,
         "sharesPer1k": 0,
         "savesPer1k": 0,
         "followsPer1k": 0,
-        "score": 17.4,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.476Z"
+        "score": 17.3,
+        "metricsUpdatedAt": "2026-11-07T19:30:35.029Z"
       },
       {
         "postId": "6aea2ba481bf336f271ee813",
@@ -3851,7 +3851,7 @@
         "savesPer1k": 1.3,
         "followsPer1k": 0,
         "score": 17.1,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.477Z"
+        "metricsUpdatedAt": "2026-11-07T19:30:34.991Z"
       },
       {
         "postId": "6aeacac169ad1ef03b7e4dee",
@@ -3860,21 +3860,21 @@
         "template": "venus",
         "sentAt": "2026-11-06T05:31:41.935Z",
         "link": "https://www.instagram.com/reel/DfY3G0iDUBT/",
-        "views": 2089,
-        "reach": 1691,
+        "views": 2095,
+        "reach": 1700,
         "likes": 0,
         "comments": 0,
         "shares": 0,
         "saves": 2,
         "follows": 0,
-        "avgWatchS": 9.77,
+        "avgWatchS": 9.75,
         "durationS": 26.9,
         "watchRatio": 0.36,
         "sharesPer1k": 0,
         "savesPer1k": 1.2,
         "followsPer1k": 0,
         "score": 16.9,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.477Z"
+        "metricsUpdatedAt": "2026-11-07T19:30:34.966Z"
       },
       {
         "postId": "6aead98bdc38f4d7bad519e2",
@@ -3897,7 +3897,7 @@
         "savesPer1k": 1.2,
         "followsPer1k": 0,
         "score": 15.4,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.477Z"
+        "metricsUpdatedAt": "2026-11-07T19:30:34.995Z"
       },
       {
         "postId": "6ae9803f3b00665c737ab67d",
@@ -3920,30 +3920,30 @@
         "savesPer1k": 0.6,
         "followsPer1k": 0,
         "score": 13.8,
-        "metricsUpdatedAt": "2026-11-07T02:30:31.477Z"
+        "metricsUpdatedAt": "2026-11-07T19:30:35.023Z"
       },
       {
-        "postId": "6aec22c1e22643a987953a08",
-        "episode": "040",
-        "slug": "turkiye-kadikoye-sigar-mi",
+        "postId": "6aecd1af0a3dd0f3ff1974ec",
+        "episode": "063",
+        "slug": "kadin-ve-kopekbaligi",
         "template": "cizgi",
-        "sentAt": "2026-11-07T05:30:47.606Z",
-        "link": "https://www.instagram.com/reel/DfbbygHjzdW/",
-        "views": 0,
-        "reach": 0,
+        "sentAt": "2026-11-07T17:32:58.866Z",
+        "link": "https://www.instagram.com/reel/DfcuWsID-6A/",
+        "views": 587,
+        "reach": 403,
         "likes": 0,
         "comments": 0,
         "shares": 0,
         "saves": 0,
         "follows": 0,
-        "avgWatchS": null,
-        "durationS": 42.8,
-        "watchRatio": null,
+        "avgWatchS": 13.66,
+        "durationS": 60.9,
+        "watchRatio": 0.22,
         "sharesPer1k": 0,
         "savesPer1k": 0,
         "followsPer1k": 0,
-        "score": 0,
-        "metricsUpdatedAt": "2026-11-05T06:31:29.538Z"
+        "score": 9,
+        "metricsUpdatedAt": "2026-11-07T19:30:35.002Z"
       }
     ]
   }

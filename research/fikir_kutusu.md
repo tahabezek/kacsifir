@@ -3,6 +3,92 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-11-09 turu
+
+**Tur notu:** Web araması bu turda da özet düzeyinde kaldı: Reddit "haftanın en çok oy alanları" yalnızca üçüncü taraf yansıma sayfalarından, sıralama doğrulanmadan görüldü (r/theydidthemath'te yüksek oy alan örnekler: borç/para hesapları, "kablolar sushi olsa kaç balık", "Titanik'i helyumla kaldırmak"); Ekşi Sözlük ve Google Trends çekilemedi. Uzay takvimi için 2026 Kasım'da doğrulanmış yeni bir rekor ya da yıldönümü bulunamadı; önceki turların tarihli notları (16 Kasım Arecibo, 17–18 Kasım Leonid/Voyager, 24 Kasım Süper Ay ve Öğretmenler Günü, 25 Kasım Uranüs) geçerlidir. Bu tur, tarihli iki fırsatı (24 ve 26 Kasım) ve kalıcı, kanal kimliğine ("Kaç Sıfır?") oturan altı konuyu ekler. Çakışma kontrolü yapıldı: ISS kesintisiz yıldönümü, otomobil/dünya sarma, saçın uzaması ve Google/googol önceki turlarda olduğu için önerilmedi. Web aramasıyla doğrulanan: Lucy (24 Kasım 1974, %40, ≈3,2 milyon yıl), zeytin ağacı sayısı (≈200–205 milyon), çay tüketimi (3,16–3,5 kg), Plymouth makak deneyi. Diğer sayılar kapalı form hesaplardır.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Bir maymun "olmak ya da olmamak" yazmak için kaç yıl klavyeye vurmalı? (Hamlet için 214.000 basamaklı sayı)
+- Kanca: Klavyeye rastgele basan bir maymun, sadece "olmak ya da olmamak" cümlesini yazmak için evrenin yaşının 133 milyon katı kadar zamana ihtiyaç duyar.
+- Sayılar: Klavyede 26 harf + boşluk = 27 tuş (varsayım). "to be or not to be" = 18 karakter. Olasılık 1/27¹⁸; log₁₀(27) = 1,4314 → 18 × 1,4314 = 25,764 → 27¹⁸ ≈ **5,8 × 10²⁵** deneme. Saniyede 1 vuruşla 18'lik pencere denemesi: 5,8×10²⁵ ÷ 31.557.600 s/yıl ≈ **1,84 × 10¹⁸ yıl**; evrenin yaşı ≈ 1,38 × 10¹⁰ yıl → 1,84×10¹⁸ ÷ 1,38×10¹⁰ ≈ **1,3 × 10⁸ = 133 milyon kat** (yaklaşık; kayan pencere yaklaşımı). Hamlet'in tam metni ≈ 30.000 kelime ≈ 150.000 karakter (doğrulanmalı): 150.000 × 1,4314 = 214.705 → 27^150.000 ≈ 10²¹⁴·⁷⁰⁵, yani **yaklaşık 214.700 basamaklı bir sayı**. Gözlemlenebilir evrendeki atom sayısı ≈ 10⁸⁰ (yaklaşık, 81 basamak).
+- Kaynaklar: https://en.wikipedia.org/wiki/Infinite_monkey_theorem · https://cosmosmagazine.com/science/mathematics/infinite-monkey-theorem-shakespeare-type (Plymouth makak deneyi ve Shakespeare'in toplu eserleri tahmini) · https://www.livescience.com/physics-mathematics/mathematics/could-monkeys-really-type-the-complete-works-of-shakespeare (sayfa doğrulanmalı). Plymouth/Paignton Hayvanat Bahçesi deneyi: altı Sulawesi makağı, yaklaşık beş sayfa, çoğunlukla "S" harfi; sanat projesiydi, bilimsel deney değil.
+- Görsel metafor: **Daktilo şeridi.** Tek satırlık kâğıt şeridine her saniye bir rastgele harf basılır; doğru dizilmiş kısım mürekkep, yanlış kısım grafit görünür. Şerit "to be or not to be"ye ulaşmak için Dünya'dan Güneş'e uzanır, sonra sayaç yıl → evrenin yaşı basamaklarından geçer. Doruk (kırmızı kalem): Hamlet için sıfır sayacı 214 binde durur (kırmızı yalnızca sıfır sayısı).
+- Türkiye bağlantısı: "Maymun yerine sen 'Yaşar ne yaşar ne yaşamaz' yazsan?" (Nâzım'ın dizesi gibi bilinen bir cümleyle) ya da klavyede Türkçe 29 harf; tuş sayısı artınca süre katlanır (29 harfle 29¹⁸ ≈ 1,6×10²⁶, yaklaşık 2,8 kat). Kanal adı ("Kaç sıfır?") ile doğrudan örtüşür.
+- Neden şimdi / tarih: Kalıcı; ilk hafta yoğun "Paradoks" serisi için uygun.
+- Puan (8,5/10): Kanca kanalın adıyla örtüşüyor, "sıfır" sayısı kendiliğinden görsel; viral klasik; hesap iki adım. Güven: yüksek (kapalı form), ancak "kayan pencere" yaklaşımı ekranda "yaklaşık" etiketiyle gösterilmeli.
+- Tuzaklar: Bazı yayınlar bu cümle için "evrenin yaşının trilyon katı" gibi çok daha büyük süreler yazıyor; varsayımlar (tuş sayısı, hız, büyük/küçük harf, noktalama) sonucu on kat değiştirir; ekranda varsayımı göster. Plymouth deneyini "kanıt" gibi anlatma, sanat projesiydi. 2003 mü 2002 mi tarihi kaynaklarda değişiyor; yıl söyleme.
+
+### Lucy 3,2 milyon yıl önce yaşadı: senin kaç büyükannen var? (tarihli: 24 Kasım, keşfin 52. yılı)
+- Kanca: Lucy'den bu yana yaklaşık 128.000 kuşak geçti, yani senin 128.000 büyükannen sıralanır.
+- Sayılar: Lucy, Etiyopya'nın Hadar bölgesinde **24 Kasım 1974**'te Donald Johanson ve Tom Gray tarafından bulundu; yaş ≈ **3,2 milyon yıl**; iskeletin ≈ **%40**'ı. Yıldönümü: 2026 − 1974 = 52. yıl. Kleopatra (MÖ 30) ≈ 2026 + 30 = 2.056 yıl önce → 3.200.000 ÷ 2.056 ≈ **1.556 kat** daha eski. Kuşak başına 25 yıl varsayımıyla 3.200.000 ÷ 25 = **128.000 kuşak**. Her kuşağa 1 cm çentik: 128.000 × 1 cm = 1.280 m = **1,28 km** (Galata Köprüsü ≈ 490 m → ≈ 2,6 köprü; uzunluk doğrulanmalı).
+- Kaynaklar: https://iho.asu.edu/node/15 (ASU İnsan Kökenleri Enstitüsü, Lucy'nin hikâyesi) · https://en.wikipedia.org/wiki/Lucy_(Australopithecus) · https://www.livescience.com/archaeology/we-now-know-much-more-about-how-our-ancestor-lucy-lived-and-died
+- Görsel metafor: **Soy ipi.** Bir mimari ölçü şeridi üzerinde her 1 cm bir kuşak çentiği; şerit sola doğru uzar: 25 yıl (annen) → 1.000 yıl (40 kuşak) → Göbeklitepe'nin yapımı (≈ 11.500 yıl, 460 kuşak; ayrı bölüm 045 ile bağlanır) → Lucy'de şerit biter. Doruk (kırmızı): son çentikte Lucy'nin kemik silüeti (yalnızca %40'ı çizilir, geri kalanı boş çerçeve).
+- Türkiye bağlantısı: "Senin soyağacın nüfus kayıtlarında kaç kuşak geriye gidiyor?" (çoğu aile 4–6 kuşak); Anadolu'nun en eski yerleşimleri şeritte işaretlenir. Etiyopya–Türkiye bağlantısı için uydurma bir bağ kurma.
+- Neden şimdi / tarih: 24 Kasım 2026 Salı (52. yıl); aynı gün Öğretmenler Günü ve Süper Ay önerileri olduğundan 23 Kasım'a ya da 25 Kasım'a kaydır.
+- Puan (8/10): "Senin büyükannen" kişisel kanca; görsel tek şeritle çözülüyor; sayı büyük ama sezgisel. Güven: yüksek (üç kaynak aynı).
+- Tuzaklar: %40 mı %50 mi tartışması var (ASU ve Live Science %40; bir ansiklopedi %50 ve 30 Kasım yazıyor); %40 ve 24 Kasım kullan. "Lucy atamız" ifadesi tartışmalı; Lucy doğrudan atamız olmayabilir, "akrabamız / yakın dalın üyesi" de. 25 yıllık kuşak ortalama varsayımdır, ekranda belirt.
+
+### Türkiye'deki zeytin ağaçları uç uca dizilse Ay'a kaç kez gidip gelir? (tarihli: 26 Kasım Dünya Zeytin Ağacı Günü)
+- Kanca: Türkiye'deki zeytin ağaçlarını bir sıraya dizsen sıra Dünya'yı 25 kez dolanır.
+- Sayılar: Türkiye'de zeytin ağacı sayısı haberlerde **≈ 200–205 milyon** (TÜİK temelli; 189 milyon ve 201,77 milyon değerleri de geçiyor). 205 milyon × 5 m (varsayılan sıra aralığı) = 1,025 × 10⁹ m = **1.025.000 km**. Dünya çevresi 40.075 km → 1.025.000 ÷ 40.075 ≈ **25,6 tur**. Ay'a uzaklık 384.400 km → 1.025.000 ÷ 384.400 ≈ **2,7 gidiş**. 2024 rekoltesi ≈ 3,75 milyon ton: 3,75×10⁹ kg ÷ 205×10⁶ ağaç ≈ **18 kg/ağaç** (meyve vermeyen dahil). Kişi başı: 205 ÷ 86 milyon nüfus ≈ **2,4 ağaç**.
+- Kaynaklar: https://www.ntv.com.tr/ntvpara/turkiyenin-zeytin-uretimi-2024te-rekora-ulasti,PyljGSs4jkGiNpV7uBnQZA · https://www.diken.com.tr/?p=1519682 (TÜİK verisine dayanan haber) · TÜİK bitkisel üretim istatistikleri: https://data.tuik.gov.tr (kesin tablo doğrulanmalı); Ticaret Bakanlığı Zeytin ve Zeytinyağı Raporu 2023: 170.859.878 meyve veren + 31.281.898 meyve vermeyen = 202,1 milyon (rapor, ağaç varlığının tam bilinmediğini belirtiyor).
+- Görsel metafor: **Zeytin ağacı sırası.** Bir mimari plandaki zeytin ağacı simgesi (mürekkep, tek dal) her 5 m'de bir çentik verir; sıra Türkiye kıyısını (Ege) izleyip Dünya haritasına açılır. Kırmızı kalem: yalnızca zeytin ağaçlarının Ay'a değdiği çentik.
+- Türkiye bağlantısı: Doğrudan; Ayvalık, Edremit, Kemalpaşa gibi Ege zeytin sahalarını haritada göster; "evindeki zeytinin kaç ağaçtan geldiğini" hesapla.
+- Neden şimdi / tarih: 26 Kasım Dünya Zeytin Ağacı Günü (UNESCO; tarih doğrulanmalı); zeytin hasat sezonuyla aynı dönem.
+- Puan (7,5/10): Türkiye'ye çeken ölçek; "Ay'a gidiş" imgesi güçlü. Güven: orta (ağaç sayısı kaynağa göre ±%8 değişiyor; 5 m aralık varsayımdır).
+- Tuzaklar: Sayı kaynaklara göre 189–205 milyon arasında; videoda "yaklaşık 200 milyon" de. Zeytin ihracatı, fiyat ve siyaset tartışmasına girme.
+
+### Bir A4 kâğıdı neden 297 × 210 mm? Tek oran √2 ve ağırlığı tam 5 gram
+- Kanca: Bir A4 kâğıdını ikiye katladığında şeklinin değişmemesi tesadüf değil, matematiğin zarif bir hilesi.
+- Sayılar: Koşul: x : 1 oranlı dikdörtgen yarıya bölününce 1 : (x/2) → benzerlik için x/1 = 1/(x/2) ⇒ x² = 2 ⇒ x = **√2 ≈ 1,41421**. 297 ÷ 210 = 1,4143 ✓. A0 = 841 × 1.189 mm → 0,841 × 1,189 = 0,99995 m² ≈ **1 m²**. Her katlama alanı yarıya indirir: A4 = A0 ÷ 2⁴ = 1/16 m² = 0,0625 m². 80 g/m² kâğıtta 80 × 0,0625 = **5 g** (gerçekte 210×297 mm = 0,06237 m² → 4,99 g). 500 yaprak = 2,5 kg.
+- Kaynaklar: https://en.wikipedia.org/wiki/ISO_216 · https://www.iso.org/standard/36631.html (ISO 216 sayfa adresi doğrulanmalı) · Lichtenberg'in 1786 mektubu (yorumda tarih, doğrulanmalı).
+- Görsel metafor: **Kâğıt katlama planı.** Bir A0 çerçevesi (mürekkep çizgisi) ikiye, dörde katlanarak A4'e iner; her katlamada köşegen çizgisi (ölçü çizgisi) aynı açıda kalır. Doruk (kırmızı): köşegenin tüm boyutlarda tek bir çizgi olarak üst üste binmesi.
+- Türkiye bağlantısı: Okulda, dilekçede, fotokopicide hep A4; "Kaç yaprak A4 bir adım uzunluğundadır?" sorusuyla yerel sahne (kırtasiye).
+- Neden şimdi / tarih: Kalıcı; "10 saniyede ispat" serisine uygun.
+- Puan (8/10): "Bunu hiç düşünmemiştim" aha'sı güçlü; hesap bir adım; görsel kendiliğinden hareketli. Güven: yüksek.
+- Tuzaklar: Boyutlar mm'ye yuvarlanır, bu yüzden oran tam √2 değil (1,4143); A0 alanı tam 1 m² değil 0,99995 m². "Letter" boyutu (ABD) bu mantıkta değildir; kıyaslamak istersen ayrı anlat.
+
+### Bütün Türkiye el ele tutuşsa Dünya'yı 3 kez sarar; bütün insanlık el ele olsa Ay'a 32 kez gider
+- Kanca: Türkiye'deki herkes el ele tutuşursa Dünya'yı üç kez sarar.
+- Sayılar: Ortalama insan kol açıklığı ≈ boyu; çocuklar dahil ortalama 1,5 m varsayımı. Türkiye: 86 milyon × 1,5 m = 129 × 10⁶ m = **129.000 km** ÷ 40.075 km ≈ **3,2 tur**. Dünya: 8,2 milyar × 1,5 m = 12,3 × 10⁹ m = **12,3 milyon km**; ÷ 40.075 ≈ **307 tur**; ÷ 384.400 km ≈ **32 Ay gidişi**; ÷ 149,6 milyon km ≈ **%8,2 Güneş mesafesi**.
+- Kaynaklar: https://population.un.org/wpp/ (BM Dünya Nüfus Beklentileri; 2026 değeri doğrulanmalı) · https://data.tuik.gov.tr (Adrese Dayalı Nüfus Kayıt Sistemi; güncel nüfus doğrulanmalı) · https://ncdrisc.org (NCD-RisC, ülkelere göre ortalama boy; ortalama boy doğrulanmalı).
+- Görsel metafor: **Kâğıt bebek zinciri.** Mimari ölçü çizgisiyle birbirine bağlı, kâğıttan kesilmiş insan silüetleri bir zincir olur; zincir Türkiye haritasını sarar, Dünya'ya çıkar, Ay'a uzanır. Kırmızı kalem: zincirin Ay'a değdiği halka.
+- Türkiye bağlantısı: Doğrudan; zincir Türkiye sınırı boyunca (≈ 2.800 km kara sınırı, doğrulanmalı) önce kendi içinde kapanır, sonra Dünya'ya çıkar.
+- Neden şimdi / tarih: Kalıcı. 15 Kasım "8 milyar" konusu ve Ay'a mesafe konularıyla ilişkili tek hafta yayınla.
+- Puan (7/10): Basit görsel, tahmin ettiren kanca. Güven: orta (ortalama kol açıklığı ve nüfus varsayımdır; sonuç ±%10).
+- Tuzaklar: Gerçekte el ele tutuşunca kol açıklığından kısa mesafe kalır (parmak uçları yerine eller tutuşur, mesafe ≈ %10–15 daha kısa); "yaklaşık" de. Okyanuslar ve Ay'a ulaşamama (fiziksel imkânsızlık) konusunu esprili geç.
+
+### 1,10 TL'lik raket ve top: topun fiyatı kaç kuruş? (çoğu kişi 10 kuruş diyor)
+- Kanca: Bir raket ve top toplam 1,10 liradır; raket toptan 1 lira pahalıysa top kaç kuruştur?
+- Sayılar: Top x, raket x + 1,00. Toplam: x + (x + 1,00) = 1,10 ⇒ 2x = 0,10 ⇒ x = **0,05 TL = 5 kuruş**; raket 1,05 TL. Yaygın yanlış cevap 10 kuruş: raket 1,10, toplam 1,20 ✗. Shane Frederick'in 2005 Bilişsel Yansıma Testi (CRT) çalışmasında Harvard, MIT, Princeton gibi üniversitelerin öğrencilerinin yaklaşık yarısı bile hatalı cevap vermiş (oran doğrulanmalı). Yerelleştirme: toplam 11 TL, simit çaydan 10 TL pahalı ⇒ 2x + 10 = 11 ⇒ çay **0,50 TL**, simit 10,50 TL.
+- Kaynaklar: https://www.aeaweb.org/articles?id=10.1257/089533005775196732 (Frederick, "Cognitive Reflection and Decision Making", Journal of Economic Perspectives, 2005) · https://en.wikipedia.org/wiki/Cognitive_reflection_test
+- Görsel metafor: **Terazi.** Bir kefede "toplam 1,10" ağırlığı, öbürde raket ve top; top kefesi 10 kuruş konunca terazi dengelenmez (kırmızı değil mürekkep eğik), 5 kuruş konunca denge. Doruk (kırmızı): terazinin dengelendiği an.
+- Türkiye bağlantısı: Simit–çay versiyonu, ya da ekmek–su; izleyicilerden yorumda "ben de yanlış yaptım" etkileşimi beklenir.
+- Neden şimdi / tarih: Kalıcı; "Paradoks" serisine uygun.
+- Puan (7,5/10): Yorum ve paylaşım gücü yüksek (insanlar yanlış cevabı yazıyor); anlatım 10 saniye. Güven: yüksek (cebirsel ispat), vaka oranları orta.
+- Tuzaklar: "Üniversite öğrencilerinin %50'si" iddiası tek çalışmaya dayanıyor; kesin yüzde söyleme. Kuruş kullan, 1,10 TL'nin kuruş birimi hâlâ geçerli (resmî bozuk para 1 kuruştan başlar).
+
+### Nilüfer yaprağı her gün iki katına çıkıyor: göl 48. günde doluyorsa yarısı hangi gündü?
+- Kanca: Bir gölü her gün iki katına çıkan nilüferler 48 günde kaplıyorsa gölün yarısı kaçıncı gün doluydu?
+- Sayılar: Cevap **47. gün** (48. günde yarıdan iki katına çıkar). İlk gün göl alanının 1/2⁴⁷ = 1 ÷ 140.737.488.355.328 ≈ **1/140,7 trilyon**'u kaplıdır (2⁴⁷ = 2⁴⁰ × 2⁷ = 1.099.511.627.776 × 128 ≈ 1,407 × 10¹⁴). 40. günde: 1/2⁸ = 1/256 ≈ **%0,39** (neredeyse hiç görünmez). 44. gün: 1/16 = %6,25; 46. gün: %25; 47. gün: %50.
+- Kaynaklar: https://www.aeaweb.org/articles?id=10.1257/089533005775196732 (CRT'nin 3. sorusu; Frederick 2005) · https://en.wikipedia.org/wiki/Exponential_growth · https://en.wikipedia.org/wiki/Cognitive_reflection_test
+- Görsel metafor: **Göl krokisi.** Mimari plan görünümünde bir göl; her gün nilüfer alanı (mürekkep tarama) iki katına çıkar. 40. güne kadar neredeyse boş görünür, son 7 gün gölü doldurur. Kırmızı kalem yalnızca 47. günde yarı çizgisi.
+- Türkiye bağlantısı: Eğirdir ya da Abant gibi bilinen bir göl yerine hayalî göl (yanlış ekolojik iddia kurma); "yosun/müsilaj" gibi gerçek bir olayı ima etme (güncel çevre tartışması çıkabilir).
+- Neden şimdi / tarih: Kalıcı; viral akışların sevdiği "üstel büyüme" klasiği.
+- Puan (7,5/10): Anlaşılır, cevap şaşırtıcı; "Kafadan hesap" serisine uygun; viral örnekler çok. Güven: yüksek. Not: raket-top önerisiyle aynı kaynağı (CRT) paylaşıyor; aynı hafta yayınlama, ikisini ayır.
+- Tuzaklar: Gerçek göl hayal üründür; doğadaki üstel büyüme sınırsız değildir. Süre sabit 48 gün seçildi, orijinal soru bu sayıyı kullanır (Frederick 2005'te 48 gün).
+
+### Bir Türk gününde kaç bardak çay? İnce belli bardak 130 metre yükseliyor
+- Kanca: Ortalama bir Türk bir yılda bin 300 bardak çay içiyor; bunları üst üste dizsen Galata Kulesi'nin iki katı olur.
+- Sayılar: Yıllık kişi başı çay tüketimi kuru çay olarak **≈ 3,16 kg (Statista, 2020)** ya da **3,5 kg (Dünya Çay Komitesi, 2018 raporu)**; Türkiye bu listelerde birinci. Bardak sayısı için tek kaynak İstanbul Kıraathaneciler, Kahveciler Esnaf Odası'nın "yılda ≈ 1.300 bardak" açıklaması (resmî veri değil). 1.300 ÷ 365 ≈ **3,6 bardak/gün**. Bir ince belli bardak ≈ 10 cm yüksekliğinde: 1.300 × 10 cm = 130 m (Galata Kulesi ≈ 67 m → ≈ 1,9 kat, yükseklik doğrulanmalı). Türkiye: 86 milyon × 1.300 = 111,8 milyar bardak/yıl ÷ 31.557.600 s ≈ **saniyede ≈ 3.540 bardak**. Hacim: 1.300 × 100 ml = **130 litre/yıl** (bardak hacmi 100 ml varsayımı).
+- Kaynaklar: https://www.haberturk.com/istanbul-haberleri/17355442-tur-halki-yillik-kisi-basi-ortalama-bin-300-bardak-cay-tuketiyor (esnaf odası açıklaması; resmî değil) · https://www.karar.com/guncel-haberler/listenin-zirvesi-sasirtmadi-en-cok-cay-tuketen-ulkeler-siralandi-2026257 · TEPGE Çay Raporu 2023: https://arastirma.tarimorman.gov.tr/tepge/ (rapor bağlantısı doğrulanmalı; resmî tüketim verisi için bu rapor esas alınmalı).
+- Görsel metafor: **İnce belli bardak kulesi.** Çubuk grafik yerine bardaklar mürekkeple çizilir ve üst üste, ardından yan yana dizilir; kulenin yanında Galata Kulesi silüeti ölçü çizgisiyle gösterilir. Kırmızı kalem: yalnızca bardaktaki çay rengi (tek kırmızı nesne).
+- Türkiye bağlantısı: Doğrudan; "senin günlük bardak sayın?" etkileşimi; çay ocağı, vapur simidi sahnesi.
+- Neden şimdi / tarih: Kasım–Aralık soğuk günlerinde çay sahneleri paylaşım alıyor; tarihli değil.
+- Puan (7,5/10): Yerel kimlik ve paylaşım gücü yüksek; yorum ("ben 10 bardak içiyorum") etkileşim getirir. Güven: orta (bardak sayısı resmî değil).
+- Tuzaklar: Sağlık yorumu yapma ("çok çay zararlı" gibi haber başlıklarından uzak dur). 6,87 kg gibi başka rakamlar da geziyor ama diğer kaynaklarla uyuşmuyor; kullanma. "Dünya birincisi" iddiası yıla ve kaynağa göre değişebilir (bir haber Türkiye'nin liderliği kaptırdığını yazıyor); video öncesi güncel listeyi kontrol et.
+
 ## 2026-11-05 turu
 
 **Tur notu:** Web araması bu turda da yalnızca özet düzeyinde sonuç verdi: Reddit'in güncel "bu hafta en çok oy alanlar" listesi, Ekşi Sözlük ve Google Trends çekilemedi (yalnızca eski yansıma sayfaları göründü). Bu yüzden öneriler (1) tarihleri sabit olan yıldönümleri ve (2) tek satırda hesaplanabilen kalıcı sorular üzerine kuruldu. Çakışma kontrolü yapıldı: Rubik küpü (topics.md #32) bu yüzden önerilmedi. Tüm aritmetik yeniden hesaplandı; "doğrulanmalı" yazan değerler yayından önce birincil kaynaktan teyit edilmeli. Önceki turun tarihli notları (Voyager 18 Kasım, Hera, BepiColombo) geçerlidir; ek bir güncelleme bulunamadı.

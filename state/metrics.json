@@ -4596,29 +4596,6 @@
         "metricsUpdatedAt": "2026-11-09T23:31:02.371Z"
       },
       {
-        "postId": "6aead98bdc38f4d7bad519e2",
-        "episode": "067",
-        "slug": "butun-altin-bir-kup",
-        "template": "cizgi",
-        "sentAt": "2026-11-04T11:02:02.826Z",
-        "link": "https://www.instagram.com/reel/DfUTSMDCiOl/",
-        "views": 1818,
-        "reach": 1666,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0,
-        "saves": 2,
-        "follows": 0,
-        "avgWatchS": 15.32,
-        "durationS": 47.1,
-        "watchRatio": 0.32,
-        "sharesPer1k": 0,
-        "savesPer1k": 1.2,
-        "followsPer1k": 0,
-        "score": 15.4,
-        "metricsUpdatedAt": "2026-11-09T23:31:02.371Z"
-      },
-      {
         "postId": "6aecd1af0a3dd0f3ff1974ec",
         "episode": "063",
         "slug": "kadin-ve-kopekbaligi",
@@ -4640,6 +4617,29 @@
         "followsPer1k": 0,
         "score": 11.1,
         "metricsUpdatedAt": "2026-11-09T23:31:02.371Z"
+      },
+      {
+        "postId": "6af07459562f2e6de9bcd863",
+        "episode": "051",
+        "slug": "dokuzu-bes-gece",
+        "template": "dokuzbes",
+        "sentAt": "2026-11-10T06:06:03.978Z",
+        "link": "https://www.instagram.com/reel/DfjOKtDgEfP/",
+        "views": 0,
+        "reach": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "avgWatchS": null,
+        "durationS": 41.7,
+        "watchRatio": null,
+        "sharesPer1k": 0,
+        "savesPer1k": 0,
+        "followsPer1k": 0,
+        "score": 0,
+        "metricsUpdatedAt": "2026-11-08T13:08:41.703Z"
       }
     ]
   }

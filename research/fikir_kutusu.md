@@ -3,6 +3,112 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-11-12 turu
+
+**Tur notu:** Reddit yalnızca üçüncü taraf yansıma sayfalarından görüldü (r/theydidthemath'te öne çıkanlar: borç/para hesapları, "Titanik'i helyumla kaldırmak", "kabloları suşiyle değiştirmek"; sıralama doğrulanamadı, Titanik/helyum iddiası bu yüzden önerilmedi). Ekşi Sözlük, Google Trends ve X çekilemedi. Web araması doğrulayabildi: Artemis II mesafe rekoru, Wright ilk uçuşu, Geminid takvimi (13–14 Aralık, ZHR 120), en büyük asal sayının hâlâ M136279841 olması, Webb güneş kalkanı ölçüleri, Boğaz debisi (Türkçe akademik kaynaklar), kar tanesi molekül sayısı. Doğrulanamayanlar ilgili öneride açıkça yazıldı (özellikle CP-1 güç değerleri ve 747 kanat açıklığı). Önceki turlarla çakışma kontrol edildi (Güneş enerjisi, Kola Kuyusu, Voyager, Leonid, Süper Ay vb. tekrar edilmedi). Önümüzdeki 2–4 haftanın tarihli fırsatları: 2 Aralık (CP-1, 84. yıl), 13–14 Aralık (Geminid), 14 Aralık (Amundsen, 115. yıl), 17 Aralık (Wright, 123. yıl), 25 Aralık (Webb'in 5. fırlatma yıldönümü). Ayrıca Aralık 2026'da planlanan görevler (ESA PLATO, JAXA MMX) var ama tarihleri kaymış olabilir; fırlatma kesinleşmeden önerilmedi.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Artemis II, Apollo 13'ün 56 yıllık mesafe rekorunu 6.600 km farkla kırdı
+- Kanca: Dört astronot, insanlığın Dünya'dan en uzağa gitme rekorunu 56 yıl sonra kırdı; peki rekor kaç kilometre arttı?
+- Sayılar: Apollo 13 (Nisan 1970): 400.171 km. Artemis II (6 Nisan 2026): yaklaşık 406.771–406.788 km (kaynaklar birkaç km farklı veriyor; "yaklaşık 406.800 km" denir). Fark ≈ 406.778 − 400.171 = **6.607 km**. Türkiye'nin doğu-batı uzunluğu ≈ 1.600 km → 6.607 ÷ 1.600 ≈ **4,1 Türkiye boyu**. Rekor oranı: 6.607 ÷ 400.171 ≈ %1,65 (yani dev bir uçuşta küçük bir artış). Ay'a ortalama uzaklık 384.400 km; yani Orion Ay'ın arkasından dolanırken Ay'ın uzağında kalarak Ay'a olan uzaklığın bile ötesine geçti.
+- Kaynaklar: https://www.aljazeera.com/news/2026/4/6/artemis-ii-breaks-record-for-the-furthest-human-travel-from-earth · https://gizmodo.com/the-artemis-2-astronauts-are-now-farther-from-earth-than-any-have-gone-before-2000742810 · NASA'nın kendi sayfası bu turda çekilemedi; tam rakam için NASA Artemis II görev sayfası doğrulanmalı.
+- Görsel metafor: **Mesafe şeridi (cetvel).** Tek bir yatay ölçü şeridi: Dünya'dan Ay'a çentikler; Apollo 13 çentiği mürekkep, Artemis II çentiği kırmızı kalem. İki çentik arasındaki 6.607 km, Türkiye silueti 4 kez art arda dizilerek ölçülür.
+- Türkiye bağlantısı: Rekor farkı, İstanbul–Ankara arası (≈ 350 km) yolun yaklaşık 19 katıdır (6.607 ÷ 350 ≈ 18,9) ya da Türkiye'nin doğu-batı genişliğinin 4 katıdır.
+- Neden şimdi / tarih: Kalıcı konu; Artemis haberleri sürerken (Artemis III hazırlıkları) her zaman güncel. Tarihli bağ yok.
+- Puan (8/10): kanca güçlü ve tarihî bir rekor; görsel basit ama net; doğruluk güveni iyi (rakam birkaç km oynuyor).
+- Tuzaklar: Kesin tepe mesafesi kaynağa göre 406.771–406.788 km arasında değişir; "en uzak insan" rekorudur, en uzak nesne değil. Mesafe Dünya merkezinden mi yüzeyinden mi ölçüldüğü NASA'dan teyit edilmeli.
+
+### Wright kardeşlerin ilk uçuşu Boeing 747'nin kanat açıklığından kısaydı (tarihli: 17 Aralık, 123. yıl)
+- Kanca: İlk uçak uçuşu o kadar kısaydı ki bugünkü bir yolcu uçağının kanat boyundan bile kısa sürdü.
+- Sayılar: 17 Aralık 1903, Orville Wright'ın ilk uçuşu: 120 ft = 120 × 0,3048 = **36,6 m**, yaklaşık 12 saniye. O günün en uzun uçuşu (Wilbur): 852 ft = 259,7 m, 59 saniye. Hız (yere göre): 36,6 ÷ 12 ≈ 3,0 m/s ≈ 11 km/h. Boeing 747-400 kanat açıklığı yaklaşık 64,4 m (**doğrulanmalı; 747-8 için 68,4 m**) → 36,6 ÷ 64,4 ≈ %57. Bir futbol sahasının uzunluğu 105 m: ilk uçuş sahanın üçte biri; son uçuş yarısından biraz fazla (259,7 ÷ 105 ≈ 2,5 saha).
+- Kaynaklar: https://www.history.com/this-day-in-history/first-airplane-flies · https://en.wikipedia.org/wiki/Wright_Flyer (747 karşılaştırması burada geçer) · 747 kanat açıklığı için Boeing resmî sayfası doğrulanmalı.
+- Görsel metafor: **Pist çizgisi.** Kum rengi bir pist üzerinde 12 saniyelik izin ayak izi; yanına 747'nin kanat açıklığı ölçü çizgisiyle konur, iz kanat boyuna ulaşmaz. Sonra Wilbur'un 59 saniyelik uçuşu ve Türk futbol sahası ölçüsü eklenir.
+- Türkiye bağlantısı: Vecihi Hürkuş'un ilk Türk uçağı (1925, Vecihi XIV) ve Türkiye'de ilk uçak yolcusu hikâyesiyle ya da "İstanbul Havalimanı'nın pistinin (3.750 m–4.100 m civarı, doğrulanmalı) kaçta kaçı" kıyasıyla yerelleşir. 36,6 m ÷ 3.750 m ≈ %1.
+- Neden şimdi / tarih: 17 Aralık 2026 (123. yıl dönümü) yayın için ideal.
+- Puan (8/10): 747 kıyası görsel ve paylaşılabilir; hesabı çok basit; doğruluk güveni iyi (747 modeline dikkat).
+- Tuzaklar: "Hangi uçuş ilk uçuş?" tartışması (aynı gün dört uçuş); yere göre hız ile hava hızı farklıdır (rüzgâr ~ 40 km/h civarı esiyordu, doğrulanmalı).
+
+### İstanbul Boğazı'ndan her saniye 5 olimpik havuz dolusu su akıyor, hem de iki yöne
+- Kanca: Boğaz'dan her saniye beş olimpik yüzme havuzu dolusu su Marmara'ya akıyor.
+- Sayılar: Üst tabaka (Karadeniz → Marmara) ortalama debi ≈ **13.347 m³/s** (2010–2018 model çalışması; uzun dönem ortalaması ≈ 13.700 m³/s). Olimpik havuz = 50 × 25 × 2 = 2.500 m³ → 13.347 ÷ 2.500 ≈ **5,3 havuz/s**. Günlük: 13.347 × 86.400 ≈ 1,15 milyar m³ = 1,15 km³. Yıllık: 13.347 × 31.557.600 ≈ 421 km³ (kaynaklardaki 432 km³ ile uyumlu). Alt tabaka (Marmara → Karadeniz, ters yönde) ≈ 6.559 m³/s ≈ 2,6 havuz/s. Net: 13.347 − 6.559 ≈ 6.800 m³/s.
+- Kaynaklar: https://www.medipol.edu.tr/sites/default/files/document/SD_Dergi_Sayi60-76-81.sayfalar_Izzet_Ozturk.pdf (İzzet Öztürk, debi değerleri) · https://dergipark.org.tr/en/download/article-file/4404910 (432 km³/yıl). Debi aralığı yöntemlere göre çok geniş (88–1012 km³/yıl); tek kesin rakam yoktur.
+- Görsel metafor: **Üst üste iki ırmak.** Boğaz enine kesit çizimi: üstte mürekkep rengi ırmak kuzeyden güneye, altta grafit rengi ters ırmak; her saniye bir olimpik havuz silueti geçer, saymaç 5'te donar. Doruk: kırmızı kalemle alt akıntı.
+- Türkiye bağlantısı: Doğrudan İstanbul; vapurdan bakınca "aynı anda iki yöne akıyor" şaşkınlığı. İSKİ'nin günlük su tüketimi (≈ 3 milyon m³/gün civarı, doğrulanmalı) ile kıyas: Boğaz bir günde ≈ 1.150 milyon m³; yaklaşık 380 günlük içme suyu (hesap, İSKİ verisi doğrulanırsa).
+- Neden şimdi / tarih: Kalıcı; kış fırtınalarında Boğaz haberleri çıktığında güncellenir.
+- Puan (7/10): yerel, görsel ve "iki yöne akış" bir aha; ama kaynaklar rakamı farklı veriyor.
+- Tuzaklar: Debi mevsime, rüzgâra ve hava basıncına göre dalgalanır; "ortalama" ifadesi şart. Marmara su bütçesi (562 km³ vs 263 km³) farklı yöntemle bulunmuş rakamlardır, karıştırılmamalı.
+
+### Geminid yağmurunda saatte 120 meteor: ama şehirde saatte 10 (tarihli: 13–14 Aralık)
+- Kanca: Aralık'ın en iyi meteor yağmurunda saatte 120 yıldız kayabilir, ama şehirde bunun on ikide birini görürsün.
+- Sayılar: ZHR (ideal koşul, tepe noktasında radyant) = 120 meteor/saat → 3600 ÷ 120 = **30 saniyede 1 meteor**. Kırsal gökyüzünde gerçekçi sayı ≈ 60 meteor/saat (kaynaklara göre 60–100) → dakikada 1. Şehir merkezinde ≈ 10 meteor/saat → 3600 ÷ 10 = 6 dakikada 1. Kaynak cisim: 3200 Phaethon asteroidi (çap ≈ 5–6 km, **doğrulanmalı**); parçacıklar kum tanesi–bezelye boyutunda, ≈ 35 km/s hızla yanar (EarthSky/AMS verisi doğrulanmalı).
+- Kaynaklar: https://earthsky.org/astronomy-essentials/everything-you-need-to-know-geminid-meteor-shower/ · https://www.amsmeteors.org/meteor-showers/meteor-shower-calendar/ (ZHR 120 referansı için) · 2026 tepe zamanı kaynaklarda farklı (14 Aralık 05:44 UTC önerisi var); ay evresi (ince hilal, ışık %15–20, akşam batar) çoğu kaynakta uyumlu, bir kaynak çelişiyor.
+- Görsel metafor: **Kara kâğıda tebeşir.** Kâğıt gökyüzü, her saniye bir sayaç; her 30 saniyede bir tebeşir çizgisi (ZHR) beliriyor. Işık kirliliği, "ışık kirliliği" katmanı çekilince 120 → 60 → 10'a düşen çizgi sayısı. Doruk: şehirde 6 dakikada tek çizgi (kırmızı).
+- Türkiye bağlantısı: İstanbul, Ankara, İzmir "kaç meteor?" karşılaştırması; kırsal rasat: Erzurum Atatürk Üniversitesi, TÜBİTAK Ulusal Gözlemevi (Antalya Bakırlıtepe, 2.500 m) gibi karanlık gök noktaları.
+- Neden şimdi / tarih: 13–14 Aralık 2026; yayın 11–12 Aralık.
+- Puan (7/10): tarihli, "ne zaman bakmalı" faydası var; görsel kolay; sayılar iyi doğrulandı.
+- Tuzaklar: ZHR gerçekte görülenden hep fazladır; tepe saatleri kaynaklara göre değişir. Kesin tarihten önce NASA/IMO takvimiyle yeniden teyit et.
+
+### Bilinen en büyük asal sayıyı saniyede bir basamak okusan 475 gün sürer
+- Kanca: Bilinen en büyük asal sayı 41 milyon basamaklı ve onu sesli okumak bir yıldan uzun sürer.
+- Sayılar: M136279841 = 2^136.279.841 − 1 (Ekim 2024, Luke Durant, GIMPS). Basamak = ⌊136.279.841 × log₁₀2⌋ + 1 = ⌊136.279.841 × 0,30103⌋ + 1 = **41.024.320**. Saniyede 1 basamak: 41.024.320 ÷ 86.400 ≈ **474,8 gün**. Sayfa başına yaklaşık 3.000 basamak (varsayım) → ≈ 13.700 sayfa. Bu, bir A4'te 3.000 basamakla yaklaşık 27 ciltlik 500 sayfalık bir ansiklopedi eder (hesap, varsayıma bağlı). Evrendeki atom sayısı ≈ 10⁸⁰ (81 basamak); asal sayı bunun yanında 41 milyon basamak.
+- Kaynaklar: https://www.smithsonianmag.com/smart-news/amateur-mathematician-discovers-the-largest-known-prime-number-with-more-than-41-million-digits-180985321/ · https://www.livescience.com/physics-mathematics/mathematics/largest-known-prime-number-spanning-41-million-digits-discovered-by-amateur-mathematician-using-free-software · https://www.mersenne.org (güncel rekor teyidi). Bu turda aramalarda daha yeni bir rekor görülmedi.
+- Görsel metafor: **Tomar kâğıdı.** Kasa fişi gibi bir kâğıt şeridine her saniye bir rakam basılır; şerit Boğaz'ı geçer, Türkiye'yi geçer. Doruk: sayaç 475 günde durur.
+- Türkiye bağlantısı: "Sana 475 gün lazım" ile kıyas: iki Ramazan, bir askerlik süresi (6 ay) ≈ 183 gün → 2,6 askerlik. Yeni asal bulunursa haberle birlikte güncellenir.
+- Neden şimdi / tarih: Yeni bir Mersenne asalı bulunduğunda zamanlı olur; kalıcı konu.
+- Puan (7/10): kanca temiz, hesap kolay; görsel orta; doğruluk güveni yüksek.
+- Tuzaklar: Rekor değişirse rakamlar eskir; yayın öncesi GIMPS sayfasına bak. Sayfa başı basamak sayısı varsayımdır; "yaklaşık" denir.
+
+### Bir milyon gün önce İlk Olimpiyatlar'dan 64 yıl sonrasındaydık
+- Kanca: Bir milyon günü geriye sarsan, ilk antik Olimpiyat Oyunları'ndan bile 64 yıl sonrasına varırsın.
+- Sayılar: 1.000.000 gün ÷ 365,2425 = **2.737,9 yıl** (1 milyar saniye = 31,7 yıl; 001 bölümüyle bağlanır). 2026 − 2.738 ≈ MÖ 712 (astronomik yıl −711; Gregoryen takvimle geriye hesap, bölüm başlığında "yaklaşık"). İlk antik Olimpiyat: MÖ 776 → 776 − 712 = 64 yıl. Bir milyon gün = 1.000.000 ÷ 7 ≈ 142.857 hafta.
+- Kaynaklar: https://www.britannica.com/sports/Olympic-Games (ilk Olimpiyat MÖ 776) · https://www.timeanddate.com/date/dateadded.html (gün hesabı) · hesap Python/kapalı form; doğrulanmalı: Roma'nın kuruluşu (MÖ 753, gelenek) daha eski.
+- Görsel metafor: **Zaman şeridi/tomar.** Her 100 günde bir çentik; çentikler Cumhuriyet'ten geriye Osmanlı'ya, Selçuklu'ya, Roma'ya, Truva Savaşı'na doğru geçer; doruk: Olimpiyat meşalesi (kırmızı kalem tek nesne).
+- Türkiye bağlantısı: Aynı dönemde Anadolu'da Frigya (Gordion) ve Lidya, Efes ve Milet kentleri vardı; Truva yerelleşmesi: "Çanakkale'de Truva'ya bir milyon gün sonra bile varılmaz" gibi bağ kurulabilir.
+- Neden şimdi / tarih: Kalıcı; "1 milyon gün" kutlaması (kişisel ömür için ≈ 2.738 yıl) sosyal medya sorusu olarak çalışır.
+- Puan (7/10): sorulu hook ("kaç yıl eder?"); 001'in ruhuna yakın; ama 001 ile benzerlik riski var.
+- Tuzaklar: MÖ takvim sorunu (0. yıl yok, Jülyen–Gregoryen farkı); ilk Olimpiyat tarihi geleneksel kabuldür.
+
+### Webb'in güneş kalkanı bir tenis kortundan büyük ve iki yüzü arasında 300 °C'den fazla fark var (tarihli: 25 Aralık, 5. fırlatma yıldönümü)
+- Kanca: Bir tenis kortu büyüklüğündeki kalkanın bir yüzü kaynar sudan sıcak, öbür yüzü donmuş azottan soğuk.
+- Sayılar: Kalkan 21,197 m × 14,162 m = **300,2 m²**; çift kişilik tenis kortu 23,77 × 10,97 = 260,8 m² → ≈ 1,15 kort. Sıcak yüz ≈ 85 °C, soğuk yüz ≈ −233 °C → fark 85 − (−233) = **318 °C** (NASA "yaklaşık 600 °F ≈ 333 K" diyor; aradaki fark yuvarlama ve ölçüm noktasındandır). Kalkan 5 katmanlı, yüksekliği 4,8 m. Not: NASA'nın bazı sayfaları "her katman bir tenis kortu alanı (~150 m²)" der; bu kaynak çelişkisi nedeniyle "tenis kortu kadar" ifadesi kullanılır, "1,15 kort" denmez.
+- Kaynaklar: https://science.nasa.gov/mission/webb/webbs-sunshield · https://science.nasa.gov/mission/webb/fact-sheet · https://spectrum.ieee.org/james-webb-telescope-sunshield
+- Görsel metafor: **Katmanlı çizim.** Kalkanın beş katmanını yan kesitte çiz; her katmanda termometre çizgisi 85 °C'den −233 °C'ye düşer. Üstte güneş sembolü yerine ölçü çizgisi. Doruk: soğuk taraftaki −233 °C (kırmızı).
+- Türkiye bağlantısı: Sıcak yüz 85 °C ≈ Şanlıurfa'nın çöl yazında asfalt sıcaklığı kıyası (doğrulanmalı); soğuk yüz için Ağrı Dağı'nın kış sıcaklığı. Kalkan boyutu için halı saha ölçüsü.
+- Neden şimdi / tarih: 25 Aralık 2026 Webb'in fırlatılışının 5. yıl dönümü (25 Aralık 2021).
+- Puan (7/10): kıyas tanıdık; sıcaklık zıtlığı güçlü; doğruluk güveni orta-yüksek (NASA, ama rakam tutarsızlığı var).
+- Tuzaklar: NASA sayfaları arasında 85 °C / 110 °C (230 °F) ve katman alanı tutarsızlığı; yalnızca "NASA fact sheet" değerleri kullanılmalı.
+
+### Bir kar tanesinde 10¹⁸ ile 10¹⁹ arası su molekülü var (ve iki kar tanesi gerçekten aynı olamaz mı?)
+- Kanca: Avucuna düşen tek bir kar tanesinde, Dünya'daki insan sayısının yüz milyon katından fazla su molekülü vardır.
+- Sayılar: Tipik küçük kristal ≈ 10¹⁸ molekül (Libbrecht; başka kaynaklar 10¹⁹ der). Kütle: 10¹⁸ × 18 g/mol ÷ 6,022×10²³ ≈ 3,0×10⁻⁵ g = **30 mikrogram**. Kıyas: 10¹⁸ ÷ 8×10⁹ (insan sayısı) ≈ 1,25×10⁸ = **125 milyon kat**. (Yıldız sayısıyla kıyas yapılmaz: evrendeki yıldız sayısı ≈ 10²²–10²⁴, kar tanesinden büyüktür.)
+- Kaynaklar: https://hypertextbook.com/facts/2001/JudyMoy.shtml · https://sciencenotes.org/no-two-snowflakes-alike/ · Libbrecht'in kendi sayfası (snowcrystals.com) bu turda çekilemedi; doğrulanmalı.
+- Görsel metafor: **Kristal çizimi.** Altıgen kar tanesi çizgiyle büyür; her kolda moleküller nokta nokta eklenir, sayaç 10¹⁸'e kadar. Doruk: tek molekülün büyük çizimi (kırmızı).
+- Türkiye bağlantısı: İlk kar haberi (Erzurum, Kars, Ardahan, Uludağ) ve "Kar kalınlığı santimetre" günlük konuşması.
+- Neden şimdi / tarih: Kasım–Aralık, kış başlangıcı; kar yağışı haberleriyle birlikte.
+- Puan (6/10): sezonluk; kıyas sayıları zayıf; "iki kar tanesi aynı mı?" efsanesi viral ama net cevap yok.
+- Tuzaklar: Libbrecht'in "10¹⁵ farklı molekül" cümlesi izotop (döteryum) farkıyla ilgilidir; "iki kar tanesi asla aynı olmaz" kesin bilimsel iddia değildir. Moleküllerin sayısı kristale göre değişir.
+
+### Tarihin ilk nükleer reaktörü bir ampulü bile yakacak kadar güç üretmedi (tarihli: 2 Aralık, 84. yıl) — güç değerleri doğrulanamadı
+- Kanca: İnsanlığın ilk kontrollü nükleer zincirleme tepkimesi, bir spor salonunun altında, bir ampulü yakacak enerjiyle başladı.
+- Sayılar: Chicago Pile-1, 2 Aralık 1942, saat 15.25: yaklaşık 771.000 pound (≈ 350 ton) grafit, ≈ 80.590 pound uranyum oksit, ≈ 12.400 pound uranyum metal, 57 katman. Güç: ilk kritik anda ≈ 0,5 W, daha sonra 12 Aralık'ta ≈ 200 W'a çıkarıldığı iddiası **bu turda doğrulanamadı** (kaynak sayfalarında yok). Doğrulanırsa: 200 W ≈ 2 adet 100 W'lık ampul; modern bir nükleer santral ≈ 1.000 MW (10⁹ W) → 200 W'ın 5 milyon katı (10⁹ ÷ 200 = 5×10⁶).
+- Kaynaklar: https://ahf.nuclearmuseum.org/ranger/tour-stop/chicago-pile-1/ · https://www.osti.gov/opennet/manhattan-project-history/Events/1942-1944_pu/cp-1_critical.htm · güç değeri için Argonne (anl.gov) bu oturumda erişilemedi; doğrulanmalı.
+- Görsel metafor: **Grafit tuğla yığını.** Katman katman çizilen grafit blok, aralarına çizilen çubuk (kadmiyum kontrol çubuğu); ampul çizimi yakınında ışık yanmaz. Doruk: modern santral silueti yanında bu yığın (kırmızı: santralin gücü).
+- Türkiye bağlantısı: Akkuyu Nükleer Santrali (4 × 1.200 MW = 4.800 MW, doğrulanmalı): 4.800 MW ÷ 200 W = 24 milyon kat.
+- Neden şimdi / tarih: 2 Aralık 2026 (84. yıl). Güç değerleri doğrulanana kadar taslak.
+- Puan (6/10): tarihli ve çarpıcı kıyas; ama çekirdek sayı doğrulanmadı, güven düşük.
+- Tuzaklar: "Ampul" kıyası, güç değeri doğrulanmadan kullanılamaz. Nükleer enerji tartışması siyasî bir konuya kayabilir; yalnızca tarihî ölçek anlatılır.
+
+### Amundsen Güney Kutbu'na 52 köpekle yola çıktı: kaçı döndü? (tarihli: 14 Aralık, 115. yıl) — köpek sayıları kaynaklarda tutarsız
+- Kanca: Amundsen, Güney Kutbu'na 52 köpekle yola çıktı ve geri dönenlerin sayısı şaşırtıcı derecede azdı.
+- Sayılar: 20 Ekim 1911'de 5 kişi, 4 kızak, 52 köpekle yola çıkış; 14 Aralık 1911'de kutba varış (55 gün). Kutba tek yön ≈ 800 mil ≈ 1.287 km (800 × 1,609); gidiş-dönüş ≈ 2.000 mil ≈ 3.200 km. Kutupta köpek sayısı 13–16 (kaynaklara göre); dönüşte 11 köpek kaldığı bir kaynakta geçiyor. 52 köpekten 11'in dönmesi = %21 (kaynak doğrulanırsa). Yürüyüş süresi: 20 Ekim → 14 Aralık = 11 + 30 + 14 = 55 gün.
+- Kaynaklar: https://www.amnh.org/explore/curriculum-collections/antarctica/exploration/at-the-pole-by-roald-amundsen · https://www.nationalgeographic.com/adventure/article/100th-anniversary-of-norwegian-roald-amundsen-reaching-south-polefind-out-how-the-grueling-race-was · köpek sayıları için Amundsen'in "The South Pole" kitabı doğrulanmalı.
+- Görsel metafor: **Kızak izi.** Beyaz kâğıt üzerinde köpek ayak izi sıraları; her birkaç santimde bir iz kaybolur (köpek sayısı 52 → 11'e düşer). Doruk: kutupta bayrak (kırmızı).
+- Türkiye bağlantısı: Kutba tek yön yaklaşık 1.287 km; bu, İstanbul'dan Erzurum'a karayolu mesafesinden (yaklaşık 1.200 km, doğrulanmalı) biraz uzundur; yolculuk 55 gün, yani yaklaşık iki ay sürdü.
+- Neden şimdi / tarih: 14 Aralık 2026 (115. yıl). Köpeklerin yem olması konusu çocuk izleyiciler için hassas; dil dikkatli seçilmeli.
+- Puan (5/10): hikâye güçlü ama sayılar tutarsız; güven düşük; içerik duygusal olarak ağır.
+- Tuzaklar: Köpek sayıları ve yolculuk süresi kaynaklarda farklı; yalnızca "52 köpek" ve "14 Aralık 1911" kesin kabul edilir.
+
 ## 2026-11-09 turu
 
 **Tur notu:** Web araması bu turda da özet düzeyinde kaldı: Reddit "haftanın en çok oy alanları" yalnızca üçüncü taraf yansıma sayfalarından, sıralama doğrulanmadan görüldü (r/theydidthemath'te yüksek oy alan örnekler: borç/para hesapları, "kablolar sushi olsa kaç balık", "Titanik'i helyumla kaldırmak"); Ekşi Sözlük ve Google Trends çekilemedi. Uzay takvimi için 2026 Kasım'da doğrulanmış yeni bir rekor ya da yıldönümü bulunamadı; önceki turların tarihli notları (16 Kasım Arecibo, 17–18 Kasım Leonid/Voyager, 24 Kasım Süper Ay ve Öğretmenler Günü, 25 Kasım Uranüs) geçerlidir. Bu tur, tarihli iki fırsatı (24 ve 26 Kasım) ve kalıcı, kanal kimliğine ("Kaç Sıfır?") oturan altı konuyu ekler. Çakışma kontrolü yapıldı: ISS kesintisiz yıldönümü, otomobil/dünya sarma, saçın uzaması ve Google/googol önceki turlarda olduğu için önerilmedi. Web aramasıyla doğrulanan: Lucy (24 Kasım 1974, %40, ≈3,2 milyon yıl), zeytin ağacı sayısı (≈200–205 milyon), çay tüketimi (3,16–3,5 kg), Plymouth makak deneyi. Diğer sayılar kapalı form hesaplardır.

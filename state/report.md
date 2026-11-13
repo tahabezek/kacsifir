@@ -1,6 +1,6 @@
-# Performans raporu · 2026-11-12 22:41 UTC
+# Performans raporu · 2026-11-13 06:26 UTC
 
-Gönderi: 10 · izlenme: 13193 · paylaşım: 8 · takip: 0
+Gönderi: 10 · izlenme: 11460 · paylaşım: 8 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -11,15 +11,16 @@ Gönderi: 10 · izlenme: 13193 · paylaşım: 8 · takip: 0
 | 5 | [042 aya-merdivenle](https://www.instagram.com/reel/DfglZLNFfxi/) | cizgi | 1671 | 1518 | 0.42 | 0.7 | 0 | 0 | 19.4 |
 | 6 | [036 hostes-ve-gemi-tasarimcisi](https://www.instagram.com/reel/DffTF4SDd1x/) | cizgi | 1289 | 1155 | 0.34 | 0 | 0.9 | 0 | 15.4 |
 | 7 | [061 zamani-ve-yonu-kaybeden](https://www.instagram.com/reel/DfnBrhnij4b/) | cizgi | 1021 | 900 | 0.28 | 0 | 1.1 | 0 | 13.3 |
-| 8 | [063 kadin-ve-kopekbaligi](https://www.instagram.com/reel/DfcuWsID-6A/) | cizgi | 1733 | 1472 | 0.28 | 0 | 0 | 0 | 11.1 |
-| 9 | [045 gobeklitepe-ve-piramitler](https://www.instagram.com/reel/Dflu_pdlCg1/) | katman | 309 | 258 | 0.25 | 0 | 0 | 0 | 9.9 |
-| 10 | [043 demir-ve-balina](https://www.instagram.com/reel/DfpmUKdipLI/) | cizgi | 307 | 264 | 0.22 | 0 | 0 | 0 | 9 |
+| 8 | [045 gobeklitepe-ve-piramitler](https://www.instagram.com/reel/Dflu_pdlCg1/) | katman | 309 | 258 | 0.25 | 0 | 0 | 0 | 9.9 |
+| 9 | [043 demir-ve-balina](https://www.instagram.com/reel/DfpmUKdipLI/) | cizgi | 307 | 264 | 0.22 | 0 | 0 | 0 | 9 |
+| 10 | [046 deste-evrende-ilk-kez](https://www.instagram.com/reel/Dfq4k-aFKSt/) | deste | 0 | 0 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
 - uranus: 23.7 (1 gönderi)
-- cizgi: 15.6 (7 gönderi)
+- cizgi: 16.3 (6 gönderi)
 - dokuzbes: 20.7 (1 gönderi)
 - katman: 9.9 (1 gönderi)
+- deste: 0.0 (1 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)
 - İzlenme oranı < 0,5: kanca/ilk 3 sn sorunu → başlığı ve kare 0'ı yeniden yaz.

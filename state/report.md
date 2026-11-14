@@ -1,27 +1,27 @@
-# Performans raporu · 2026-11-14 17:17 UTC
+# Performans raporu · 2026-11-14 21:21 UTC
 
-Gönderi: 10 · izlenme: 10723 · paylaşım: 28 · takip: 0
+Gönderi: 10 · izlenme: 12855 · paylaşım: 28 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | [046 deste-evrende-ilk-kez](https://www.instagram.com/reel/Dfq4k-aFKSt/) | deste | 1578 | 1380 | 0.35 | 15.2 | 1.4 | 0 | 77.7 |
-| 2 | [032 uranus-kutup](https://www.instagram.com/reel/DfoTy94GpjZ/) | uranus | 1600 | 1338 | 0.29 | 2.2 | 2.2 | 0 | 25.2 |
-| 3 | [051 dokuzu-bes-gece](https://www.instagram.com/reel/DfjOKtDgEfP/) | dokuzbes | 1696 | 1550 | 0.26 | 1.9 | 1.3 | 0 | 20.7 |
-| 4 | [064 zift-ve-can](https://www.instagram.com/reel/Dfh3_-jAeei/) | cizgi | 1519 | 1349 | 0.39 | 0 | 2.2 | 0 | 19.9 |
-| 5 | [042 aya-merdivenle](https://www.instagram.com/reel/DfglZLNFfxi/) | cizgi | 1673 | 1520 | 0.42 | 0.7 | 0 | 0 | 19.4 |
-| 6 | [061 zamani-ve-yonu-kaybeden](https://www.instagram.com/reel/DfnBrhnij4b/) | cizgi | 1023 | 903 | 0.28 | 0 | 1.1 | 0 | 13.3 |
-| 7 | [045 gobeklitepe-ve-piramitler](https://www.instagram.com/reel/Dflu_pdlCg1/) | katman | 311 | 259 | 0.25 | 0 | 0 | 0 | 10 |
-| 8 | [043 demir-ve-balina](https://www.instagram.com/reel/DfpmUKdipLI/) | cizgi | 1164 | 1031 | 0.24 | 0 | 0 | 0 | 9.7 |
-| 9 | [065 krakatoa-ve-tonga](https://www.instagram.com/reel/DfsLHaSCAYD/) | cizgi | 159 | 135 | 0.21 | 0 | 0 | 0 | 8.6 |
-| 10 | [030 jupiter-hacim](https://www.instagram.com/reel/DftdYgkFbhm/) | hacim | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 1 | [046 deste-evrende-ilk-kez](https://www.instagram.com/reel/Dfq4k-aFKSt/) | deste | 1734 | 1510 | 0.36 | 13.9 | 1.3 | 0 | 72.5 |
+| 2 | [032 uranus-kutup](https://www.instagram.com/reel/DfoTy94GpjZ/) | uranus | 1601 | 1340 | 0.29 | 2.2 | 2.2 | 0 | 25.2 |
+| 3 | [051 dokuzu-bes-gece](https://www.instagram.com/reel/DfjOKtDgEfP/) | dokuzbes | 1697 | 1550 | 0.26 | 1.9 | 1.3 | 0 | 20.7 |
+| 4 | [064 zift-ve-can](https://www.instagram.com/reel/Dfh3_-jAeei/) | cizgi | 1520 | 1349 | 0.39 | 0 | 2.2 | 0 | 19.9 |
+| 5 | [030 jupiter-hacim](https://www.instagram.com/reel/DftdYgkFbhm/) | hacim | 2017 | 1659 | 0.34 | 0.6 | 0.6 | 0 | 17.1 |
+| 6 | [061 zamani-ve-yonu-kaybeden](https://www.instagram.com/reel/DfnBrhnij4b/) | cizgi | 1025 | 904 | 0.28 | 0 | 1.1 | 0 | 13.3 |
+| 7 | [065 krakatoa-ve-tonga](https://www.instagram.com/reel/DfsLHaSCAYD/) | cizgi | 1644 | 1498 | 0.23 | 0 | 1.3 | 0 | 12 |
+| 8 | [045 gobeklitepe-ve-piramitler](https://www.instagram.com/reel/Dflu_pdlCg1/) | katman | 312 | 260 | 0.25 | 0 | 0 | 0 | 10 |
+| 9 | [043 demir-ve-balina](https://www.instagram.com/reel/DfpmUKdipLI/) | cizgi | 1165 | 1031 | 0.24 | 0 | 0 | 0 | 9.7 |
+| 10 | [037 gokten-dusen-ve-yildirim-carpan](https://www.instagram.com/reel/Dfuv1zXE9KM/) | cizgi | 140 | 116 | 0.15 | 0 | 0 | 0 | 6 |
 
 ## Şablona göre ortalama puan
-- deste: 77.7 (1 gönderi)
+- deste: 72.5 (1 gönderi)
 - uranus: 25.2 (1 gönderi)
 - dokuzbes: 20.7 (1 gönderi)
-- cizgi: 14.2 (5 gönderi)
+- cizgi: 12.2 (5 gönderi)
+- hacim: 17.1 (1 gönderi)
 - katman: 10.0 (1 gönderi)
-- hacim: 0.0 (1 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)
 - İzlenme oranı < 0,5: kanca/ilk 3 sn sorunu → başlığı ve kare 0'ı yeniden yaz.

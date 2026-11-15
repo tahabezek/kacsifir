@@ -975,6 +975,14 @@
       "at": "2026-11-15T06:12:40.486Z",
       "postId": "6af94d88e86a5789a6f236d0",
       "dueAt": "2026-11-17T05:30:00.000Z"
+    },
+    "2026-11-17T17:30Z": {
+      "episode": "039",
+      "media": "v/039-yalniz-george-ve-diego.mp4",
+      "status": "scheduled",
+      "at": "2026-11-15T17:57:48.299Z",
+      "postId": "6af9f2beb9a106584cc5c9b4",
+      "dueAt": "2026-11-17T17:30:00.000Z"
     }
   }
 }

@@ -1,6 +1,6 @@
-# Performans raporu · 2026-11-15 21:39 UTC
+# Performans raporu · 2026-11-16 06:10 UTC
 
-Gönderi: 10 · izlenme: 13349 · paylaşım: 25 · takip: 0
+Gönderi: 10 · izlenme: 13035 · paylaşım: 25 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -12,8 +12,8 @@ Gönderi: 10 · izlenme: 13349 · paylaşım: 25 · takip: 0
 | 6 | [061 zamani-ve-yonu-kaybeden](https://www.instagram.com/reel/DfnBrhnij4b/) | cizgi | 1026 | 904 | 0.28 | 0 | 1.1 | 0 | 13.4 |
 | 7 | [065 krakatoa-ve-tonga](https://www.instagram.com/reel/DfsLHaSCAYD/) | cizgi | 1645 | 1499 | 0.23 | 0 | 1.3 | 0 | 12 |
 | 8 | [066 nefes-tutan-dalgic-ve-balina](https://www.instagram.com/reel/DfxUo3WABbU/) | cizgi | 490 | 314 | 0.26 | 0 | 0 | 0 | 10.4 |
-| 9 | [045 gobeklitepe-ve-piramitler](https://www.instagram.com/reel/Dflu_pdlCg1/) | katman | 314 | 261 | 0.25 | 0 | 0 | 0 | 10 |
-| 10 | [043 demir-ve-balina](https://www.instagram.com/reel/DfpmUKdipLI/) | cizgi | 1167 | 1033 | 0.24 | 0 | 0 | 0 | 9.8 |
+| 9 | [043 demir-ve-balina](https://www.instagram.com/reel/DfpmUKdipLI/) | cizgi | 1167 | 1033 | 0.24 | 0 | 0 | 0 | 9.8 |
+| 10 | [048 evrenin-takvimi](https://www.instagram.com/reel/Dfym86TGdCp/) | takvim | 0 | 0 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
 - deste: 72.4 (1 gönderi)
@@ -21,7 +21,7 @@ Gönderi: 10 · izlenme: 13349 · paylaşım: 25 · takip: 0
 - seker: 23.7 (1 gönderi)
 - hacim: 17.0 (1 gönderi)
 - cizgi: 12.1 (5 gönderi)
-- katman: 10.0 (1 gönderi)
+- takvim: 0.0 (1 gönderi)
 
 ## Okuma kuralları (PLAYBOOK §8)
 - İzlenme oranı < 0,5: kanca/ilk 3 sn sorunu → başlığı ve kare 0'ı yeniden yaz.

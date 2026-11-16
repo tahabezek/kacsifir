@@ -72,7 +72,8 @@ export async function makeCizgiRenderer(ep, canvas) {
   const chunks = film.chunks || autoChunks(ep, tl);
   { const H0 = 'Hangisi daha şaşırtıcı?', c0 = chunks.l01?.[0];   // kanca başlıkta duruyor: altyazıda tekrarlanmaz
     if (c0 && c0[0].startsWith(H0)) { const rest = c0[0].slice(H0.length).trim(); if (rest) chunks.l01[0] = [rest, c0[1] + 3]; else chunks.l01.shift(); } }
-  const O = makeOverlay(ctx, tl, { chunks, capBase: 1380, paper: true, who: Object.fromEntries(ep.voice.lines.map(l => [l.id, l.who || 'A'])) });
+  // film.open (yeni iskelet): kutusuz büyük altyazı; film.capSize / capBase / cards (yalnız isim ve doruk sayısına kart)
+  const O = makeOverlay(ctx, tl, { chunks, capBase: film.capBase || 1380, capSize: film.capSize, open: !!film.open, cards: film.cards, paper: true, who: Object.fromEntries(ep.voice.lines.map(l => [l.id, l.who || 'A'])) });
 
   function render(t) {
     ctx.setTransform(1, 0, 0, 1, 0, 0);

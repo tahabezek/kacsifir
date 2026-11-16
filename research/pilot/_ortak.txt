@@ -1,0 +1,57 @@
+ORTAK BRIEF · 17 Kasım pilotları (079–083) · yeni iskelet
+Ana plan: research/GECE_PLANI_PILOT.md (önce bunu oku: teşhis, kurallar, kendi filmin bölümü).
+
+NEDEN: Çizgi filmlerimiz slayt gösterisi gibi: her 3 sn'de durağan sahne + ortada duran karakter + altta kutulu altyazı.
+İzlenme oranı 0,23–0,37. Kullanıcı: "tek düze, kendini izlettirmiyor". Bu pilotlar İSKELETİ değiştirir; çizim dili aynı kalır.
+
+ZORUNLU KURALLAR
+1. Kare 0'da açık döngü: izleyicinin sonucunu beklediği bir şey (dolan terazi, akan saat/takvim, yarış) kare 0'dan
+   itibaren ekranda ve sonuna kadar kalır. Kare 0 boş olamaz, hareket ilk 15 karede başlar, ses ≤0,5 sn'de girer.
+2. Resim olayın kendisi: her cümlede ekranda bir şey FİİLEN değişir (dolar, düşer, ilerler, eğilir, yaşlanır).
+   "Karakter durur, altta yazı belirir" sahnesi yasak. Görselin gösterdiğini anlatıcı tekrar etmez.
+3. Tek plan: kesme yok (en fazla 2, nesne taşıyarak). Kamera tek sürekli yolculuk: film.cam anahtarları [t, zoom, x, y].
+4. Kutusuz büyük altyazı: film nesnesinde `open: true`, `capSize: 76` (≥64), gerekirse `capBase`. Kart yalnızca isim
+   kartı ve doruk sayısı için: `cards: true` verilirse O.nameCard/O.bigNumber kart çizer; yoksa kontürlü yazı.
+   Altyazı güvenli alanda: x 90–920, y 280–1420. Okunurken hareket etmez.
+5. Az kelime: ≤ 2,3 kelime/sn. Senaryo başlığında "· sakin" kullan (iki ses yavaş okur).
+6. Çizim dili korunur: engine/cizgi.js yardımcıları (poly, rect, circ, ell, line, text, ch, crowd, plane), kalın mürekkep
+   çizgisi (LW=6), düz renk, PAL paleti. Karakterler engine/cizgi/cast.js ile (eklem açılarıyla); örnek: engine/cizgi/f075.js.
+7. Son kare ilk kareyi kurar (döngü dikişi ≥ 0,9). Kapanış: "Bunu … gönder." cümlesi + mevcut TAKİP ET çipi (motor çizer)
+   + kâğıt uçak (A.plane) isteğe bağlı.
+8. Ses: tek riser, tek impact; doruktan önce 0,5–1 sn gerçek sessizlik (cues.silence), sonra vuruş. Efektler olaya kilitli.
+9. Yasaklar: gradyan üstünde ortalanmış başlık, karartmadan belirme, köşe etiketi, glow, rastgele parçacık patlaması,
+   zıplayan/elastik easing, süs daktilo, Math.random (yalnızca mulberry32), setTimeout. render(t) saf fonksiyon.
+10. Türkçe: devrik/eksiltili cümle yok, tam ve düzgün cümleler. Türkçe İ/i doğru; yabancı adlar Latin I.
+    Ekranda yarım cümle yok. Kutudan/ekrandan taşan yazı yok.
+11. Gerçekler: her sayı/tarih kaynaklı; episodes JSON'unda facts.sources dizisine URL yaz. Emin olmadığın sayı söylenmez
+    ya da "yaklaşık" denir. Anlatım abartmaz.
+
+DOSYALAR (yalnızca KENDİ dosyalarına yaz; başkalarının dosyalarına, engine/cizgi.js'e, sinema_overlay.js'e,
+tools/'a, state/'e DOKUNMA; git commit/push YAPMA; ana oturum yapacak)
+- episodes/<id>-<slug>.json  (075'i örnek al: id, slug, template "cizgi", gl false, serial, kicker, bpm, coverAt 0,
+  question, facts{..., sources:[]}, caption, hashtags). publishAt YAZMA.
+- research/pilot/<id>.md  → senaryo. Biçim (tools/senaryo_json.mjs okur):
+      ### № <id> · <başlık> · sakin
+      - **S:** <Soran'ın satırı>
+      - **A:** <Anlatıcı'nın satırı>
+  Sonra: node tools/senaryo_json.mjs <id>   (episode JSON'unun voice alanını yazar; rakamları yazıya döker)
+  Yabancı ad okunuşu: senaryo_json'dan SONRA kendi JSON'undaki voice.lines[i].tts alanını elle düzelt
+  (ör. "Phillips" → "Filips"); senaryo_json'u tekrar çalıştırırsan düzeltmeyi yeniden yap.
+- Ses: py -3.14 tools/voice_tts.py episodes/<dosya>.json   sonra   py -3.13 tools/voice_words.py episodes/<dosya>.json
+  (assets/voice/<id>/ altına; kelime zamanları ölçülür; süreyi hemen yazdır ve hedefle karşılaştır)
+- engine/cizgi/f<id>.js → export hero(T), cues(T), film(A) (f075.js yapısı). film(A) döner:
+  { cam, draw(t), title:[satırlar], titleOut, kicker?, open:true, capSize:76, cards?, names?, numbers?, overlay?(t,ctx,O) }
+  T.w(lineId, kelimeSırası) = o kelimenin ölçülmüş başlangıcı; T.l01, T.l01end, T.lastEnd, T.loop0, D.
+- Kareler: node tools/render.mjs episodes/<dosya>.json --stills 0,0.5,2,...   → out/<id>/still_*.png
+  Temas kâğıdı: node tools/sheet.mjs out/<id>/sheet.png 6 out/<id>/still_*.png   (Read ile BAK)
+- Tam render: node tools/render.mjs episodes/<dosya>.json   → out/<id>/video.mp4 (−14 LUFS otomatik)
+- Kapılar: node tools/critique.mjs episodes/<dosya>.json   → donma, dikiş, ses, güvenli alan raporları (out/<id>/critique)
+
+İLK RENDER'DAN ÖNCE (kullanıcı: "çok hata yapıyorsun"): her satır başında ve her ipucunda kare al, temas kâğıdına bak:
+kare 0 kancası; "slayt gibi mi?" (ardışık karelerde farklı bir şey hareket ediyor mu); yazı taşması; güvenli alan;
+sayılar = altyazı = kaynak; hiçbir yerde ≥1 sn donma; karakterler bir şeye basıyor; döngü dikişi.
+
+TESLİM: out/<id>/video.mp4 + out/<id>/sheet.png + critique.mjs çıktısı temiz. Bitirince kısa Türkçe rapor:
+süre, kelime/sn, kapı sonuçları, bildiğin kusurlar, kaynaklar, kulakla kontrol edilecek adlar.
+Zaman sınırı: tam render en geç 05:30 TSİ'de bitmiş olsun. Yetişmeyecekse yarım render verme; nerede kaldığını yaz.
+Ara dosyaları (frames/, gereksiz still'ler) bitince sil; disk dolu.

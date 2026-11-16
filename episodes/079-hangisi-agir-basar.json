@@ -1,0 +1,96 @@
+{
+  "id": "079",
+  "slug": "hangisi-agir-basar",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "TAHMİN ET",
+  "kicker": "TAHMİN ET",
+  "bpm": 96,
+  "coverAt": 0,
+  "question": [
+    "Hangisi",
+    "ağır basar?"
+  ],
+  "facts": {
+    "humansMt": 390,
+    "wildLandMammalsMt": 20,
+    "wildLandCI95": "13–38",
+    "wildMarineMammalsMt": 40,
+    "wildMarineCI95": "20–80",
+    "wildTotalMt": 60,
+    "ratio": "390 / 60 = yaklaşık 6,5 (güven aralığının üst sınırıyla bile yaklaşık 3,3)",
+    "unit": "ıslak kütle, milyon ton (Greenspoon ve ark. 2023, PNAS)",
+    "sources": [
+      "https://www.pnas.org/doi/10.1073/pnas.2204892120",
+      "https://wis-wander.weizmann.ac.il/environment/weight-responsibility-biomass-livestock-dwarfs-wild-mammals",
+      "https://www.eurekalert.org/news-releases/981685"
+    ],
+    "notes": [
+      "İlk fikir (bütün inekler vs bütün insanlar) bırakıldı: sığır yaklaşık 420 Mt, insan yaklaşık 390 Mt; fark 1,5 katın altında.",
+      "\"Altı kattan fazla\" ifadesi merkezi tahmine (6,5) dayanır."
+    ]
+  },
+  "caption": "Dünyadaki bütün vahşi memelileri terazinin bir kefesine, bütün insanları öbür kefesine koysak hangisi ağır basar? ⚖️\n\nCEVAP\nİnsanlar, altı kattan fazla. Bütün vahşi memelilerin (karada ve denizde; filler, balinalar, geyikler, yarasalar dâhil) toplam ağırlığı yaklaşık 60 milyon ton. Bütün insanlarınki yaklaşık 390 milyon ton.\n\nNASIL ÖLÇÜLDÜ?\nWeizmann Enstitüsü'nden araştırmacılar 2023'te yüzlerce türün sayım verilerini ve bir makine öğrenmesi modelini birleştirdi. Kara memelileri yaklaşık 20, deniz memelileri yaklaşık 40 milyon ton çıktı; yarıdan fazlası büyük balinalar.\n\nBunu hayvanları seven birine gönder.\n\nKaynak: Greenspoon ve ark., \"The global biomass of wild mammals\", PNAS, 2023.\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#doğa",
+    "#hayvanlar",
+    "#bilim",
+    "#tahminet",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Bütün vahşi memeliler mi, bütün insanlar mı daha ağır?",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 1,
+      "l04": 0.45,
+      "l05": 0.3,
+      "l06": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Bir kefede dünyadaki bütün vahşi memeliler var: filler, balinalar, geyikler.",
+        "tts": "Bir kefede dünyadaki bütün vahşi memeliler var: filler, balinalar, geyikler."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Bunlar kesin ağır basar.",
+        "tts": "Bunlar kesin ağır basar.",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Öbür kefeye bütün insanları koyuyoruz.",
+        "tts": "Öbür kefeye bütün insanları koyuyoruz."
+      },
+      {
+        "id": "l04",
+        "who": "A",
+        "text": "İnsanlar altı kattan fazla ağır basıyor.",
+        "tts": "İnsanlar altı kattan fazla ağır basıyor."
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Bütün vahşi memeliler 60 milyon ton. Biz 390 milyon tonuz.",
+        "tts": "Bütün vahşi memeliler altmış milyon ton. Biz üç yüz doksan milyon tonuz."
+      },
+      {
+        "id": "l06",
+        "who": "A",
+        "text": "Bunu hayvanları seven birine gönder.",
+        "tts": "Bunu hayvanları seven birine gönder."
+      }
+    ]
+  }
+}

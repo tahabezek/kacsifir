@@ -32,7 +32,9 @@ const okunus = s => OKUNUS.reduce((a, [r, b]) => a.replace(r, b), s);
 export const seslendir = s => okunus(s).replace(/(\d{1,3}(?:\.\d{3})+|\d+)(?:'(\p{L}+))?/gu, (_, num, ek) => sayi(Number(num.replace(/\./g, ''))) + (ek || ''));
 
 // SUREC_SENARYOLARI.md (4 Kasım, süreç dili) sonra okunur: aynı id iki dosyada varsa onun senaryosu geçerlidir
-const md = ['research/SENARYOLAR.md', 'research/SUREC_SENARYOLARI.md'].filter(f => fs.existsSync(f)).map(f => fs.readFileSync(f, 'utf8')).join('\n');
+// research/pilot/<id>.md (16 Kasım pilotları): her film kendi dosyasında; paralel yazımda çakışma olmaz
+const pilots = fs.existsSync('research/pilot') ? fs.readdirSync('research/pilot').filter(f => f.endsWith('.md')).map(f => 'research/pilot/' + f) : [];
+const md = ['research/SENARYOLAR.md', 'research/SUREC_SENARYOLARI.md', ...pilots].filter(f => fs.existsSync(f)).map(f => fs.readFileSync(f, 'utf8')).join('\n');
 const want = process.argv.slice(2);
 for (const block of md.split(/^### № /m).slice(1)) {
   const id = block.slice(0, 3);

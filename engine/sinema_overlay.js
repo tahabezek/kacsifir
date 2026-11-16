@@ -10,11 +10,16 @@ export const CX = (SAFE.x0 + SAFE.x1) / 2;
 export const GOLD = '#FFC845', WHITE = '#FFFFFF';
 
 export function makeOverlay(ctx, tl, opts = {}) {
-  const paper = !!opts.paper;   // 2B çizgi filmler: karartma yerine kâğıt kart, beyaz yerine mürekkep yazı
+  // open (16 Kasım pilotları, yeni iskelet): kutu yok; mürekkep yazı kalın kâğıt rengi konturla doğrudan sahnenin üstünde
+  const open = !!opts.open;
+  const paper = !!opts.paper || open;   // 2B çizgi filmler: karartma yerine kâğıt kart, beyaz yerine mürekkep yazı
   const INK = '#1F2421', PAPER = '#F4EFE3';
   const accent = opts.accent || (paper ? '#C2412F' : GOLD);
-  const shadowText = (c, s, x, y, col, blur) => { if (!paper) return shadowTextS(c, s, x, y, col, blur); c.fillStyle = col === WHITE ? INK : col; c.fillText(s, x, y); };
+  const pxOf = c => Number((/(\d+(?:\.\d+)?)px/.exec(c.font) || [0, 60])[1]);
+  const outlined = (c, s, x, y, fill, rim = '#FBF7EE') => { c.save(); c.lineJoin = 'round'; c.miterLimit = 2; c.lineWidth = Math.max(8, pxOf(c) * 0.2); c.strokeStyle = rim; c.strokeText(s, x, y); c.fillStyle = fill; c.fillText(s, x, y); c.restore(); };
+  const shadowText = (c, s, x, y, col, blur) => { if (!paper) return shadowTextS(c, s, x, y, col, blur); if (open) return outlined(c, s, x, y, col === WHITE ? INK : col); c.fillStyle = col === WHITE ? INK : col; c.fillText(s, x, y); };
   function scrim(cx, cy, w, h, a = 0.55) {
+    if (open) return;
     if (paper) { if (a <= 0.01) return; const cw = w * 0.86, ch = h * 0.6; ctx.save(); ctx.globalAlpha = Math.min(1, a / 0.5); ctx.fillStyle = PAPER; ctx.strokeStyle = INK; ctx.lineWidth = 5; ctx.beginPath(); ctx.roundRect(cx - cw / 2, cy - ch / 2, cw, ch, 18); ctx.fill(); ctx.stroke(); ctx.restore(); return; }
     ctx.save(); ctx.translate(cx, cy); ctx.scale(w / 2, h / 2);
     const g = ctx.createRadialGradient(0, 0, 0, 0, 0, 1); g.addColorStop(0, `rgba(8,7,6,${a})`); g.addColorStop(0.6, `rgba(8,7,6,${a * 0.7})`); g.addColorStop(1, 'rgba(8,7,6,0)');
@@ -24,7 +29,7 @@ export function makeOverlay(ctx, tl, opts = {}) {
   // kâğıt kart (2B çizgi filmler): verilen sınırlarla; kutu yazıya göre ölçülür, yazı kutudan taşmaz
   const mt = s => { const m = ctx.measureText(s); return { w: m.width, a: m.actualBoundingBoxAscent, d: m.actualBoundingBoxDescent }; };
   function pcard(x0, y0, x1, y1, a = 1) {
-    if (a <= 0.01) return;
+    if (a <= 0.01 || (open && !opts.cards)) return;
     ctx.save(); ctx.globalAlpha = Math.min(1, a); ctx.fillStyle = PAPER; ctx.strokeStyle = INK; ctx.lineWidth = 5;
     ctx.beginPath(); ctx.roundRect(x0, y0, x1 - x0, y1 - y0, 18); ctx.fill(); ctx.stroke(); ctx.restore();
   }
@@ -47,6 +52,11 @@ export function makeOverlay(ctx, tl, opts = {}) {
   const CAP_SIZE = opts.capSize || 70, CAP_LH = CAP_SIZE * 1.17, CAP_BASE = opts.capBase || 1330;
   // Soran'ın cümlesi: sarı konuşma balonu, sağ altta kuyruk ve küçük yüz (iki sesli anlatım)
   function soranBalon(t, c, lines, u) {
+    if (open) {   // kutusuz: Soran'ın sözü sarı konturla ayrılır
+      ctx.save(); ctx.globalAlpha = Math.min(1, u * 1.6); ctx.textAlign = 'center';
+      lines.forEach((ln, i) => outlined(ctx, ln, CX, CAP_BASE - (lines.length - 1 - i) * CAP_LH + (1 - u) * 26, INK, '#F6C445'));
+      ctx.restore(); ctx.textAlign = 'left'; return;
+    }
     const tw = Math.max(...lines.map(l => ctx.measureText(l).width)), bw = tw + 90, bh = lines.length * CAP_LH + 50;
     const x = CX - bw / 2 - 40, y = CAP_BASE - lines.length * CAP_LH + 10 + (1 - u) * 30;
     ctx.save(); ctx.globalAlpha = Math.min(1, u * 1.6);

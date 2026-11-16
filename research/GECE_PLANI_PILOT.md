@@ -249,7 +249,7 @@ Kullanıcı: "animasyonlarımız çok tek düze ve kötü… video kendini izlet
 8. **Teslim:**
    - Her film için `out/<id>/video.mp4` (079–083) üretilir ve `prebuilt/` klasörüne kopyalanır.
    - Temas kâğıtları `out/<id>/contact.png` olarak kaydedilir.
-   - **Buffer'a planlanmaz, `publishAt` boş bırakılır.** Kullanıcı sabah izleyip onaylarsa yayına konur.
+   - **Yayına alınır.** Ayrıntılar aşağıdaki "Yayına alma" bölümünde.
 9. **Sabah raporu:** `research/PILOT_RAPORU.md` yazılır. İçeriği:
    - ne yapıldı;
    - puanlar;
@@ -258,9 +258,60 @@ Kullanıcı: "animasyonlarımız çok tek düze ve kötü… video kendini izlet
    - yayın önerisi (hangi gün ve saat, hangi stok filmin yerine).
 10. **Kapanış:** Commit ve push yapılır. Deneme çıktıları, ara kareler ve kullanılmayan sesler silinir (disk dolu).
 
+## Yayına alma (kullanıcı, 16 Kasım 23.30)
+
+Kullanıcının sözü: "bunlar render olunca en kısa zamandaki videolarla değiştir ki etkiye bakalım". Kullanıcının sabah onayı beklenmez.
+
+**Hangi filmler alınır:** Yalnızca bütün kapıları ve 8+ kritiği geçen pilotlar. Geçemeyen pilot yayına girmez.
+
+**Yerleşim kuralı:**
+- Sabah yuvalarına (08.30 TSİ = 05:30Z) sayı filmleri gider: 079, 082, 081.
+- Akşam yuvalarına (20.30 TSİ = 17:30Z) hikâye filmleri gider: 080, 083.
+- Her pilot, kendi türündeki en yakın uygun yuvayı alır.
+- **083, 075'in yuvasını alır** (20 Kasım 20.30, aynı hikâye). 075 yayından çekilir: `disabled: true` olur ve `disabledNote` alanına "083 aynı hikâyenin yeni iskeletli sürümü; A/B sonrası karar" yazılır. 075 silinmez.
+- **049'a (Voyager, 18 Kasım 20.30) dokunulmaz.** Tarihe bağlı bir film.
+
+**Beklenen yerleşim (her şey zamanında biterse):**
+
+| Yuva (TSİ) | Şu an | Yeni |
+|---|---|---|
+| 17 Kas 08.30 | 003 | 079 |
+| 17 Kas 20.30 | 039 | 080 |
+| 18 Kas 08.30 | 009 | 082 |
+| 19 Kas 08.30 | 068 | 081 |
+| 20 Kas 20.30 | 075 | 083 |
+
+Bir film yuvasına yetişmezse aynı türdeki bir sonraki yuvaya kayar.
+
+**Yerinden çıkan stok filmler (003, 039, 009, 068):**
+- Silinmez, 24 Kasım 20.30'dan sonraki ilk boş yuvalara aynı türle yerleşir (`publishAt`).
+- 069–073'ün tarihleri **kaydırılmaz**: 071 "annen" Pazar gününe, 073 "dolunay" 24 Kasım süper ayına bağlı. 068 tek başına 25 Kasım 08.30'a taşınır.
+
+**Teknik:**
+- **Buffer'da zaten planlı yuva** (dueAt − şimdi < 48 sa; 17 Kas'taki iki yuva ve 18 Kas sabahı):
+  - `state/ledger.json` içinde o yuvanın `episode` alanı pilot no'suyla değiştirilir.
+  - Ardından `node tools/remedia.mjs <pilot>` çalıştırılır. Bu araç videoyu medya dalına iter, Pages'te 200 döndüğünü bekler, `editPost` ile video ve metni yeniler.
+  - Eski `media` değeri `prevMedia` olarak kalır.
+- **Henüz planlanmamış yuva:**
+  - Pilotun `publishAt` alanı yuvaya yazılır.
+  - Yerinden çıkan filmin `publishAt` alanı yeni tarihine taşınır.
+  - Buffer'a CI, yayından yaklaşık 48 saat önce yükler.
+- **Zaman sınırı:** Yuvaya 60 dakikadan az kalmışsa o yuvaya dokunulmaz, sıradaki yuvaya geçilir. Örneğin 079, 07.30 TSİ'ye kadar canlı değilse 17 Kas sabahı 003'te kalır.
+- **Doğrulama:**
+  - Her değişiklikten sonra Buffer durumu sorgulanır: `postsBetween` ile metin, video URL'si ve dueAt bakılır.
+  - Medya URL'si `curl -I` ile 200 ve `video/mp4` döndürmeli.
+- Defter (ledger) ve episode JSON'ları commit edilip push edilir. Bu adım atlanırsa CI medyayı budar.
+
+**Ölçüm notu:** Raporda her pilot için karşılaştırma tabanı yazılır:
+- çizgi ortalaması: izlenme oranı ≈ 0,30, 1–1,7K izlenme;
+- 083 için ayrıca 075 tahmini.
+
+Pilotlar yayımlandıktan 48 saat sonra IG Pro Pano'dan izlenme oranı, paylaşım ve takip bakılır.
+
 ## Zaman ve öncelik
 
 - Öncelik sırası tablodaki gibidir: 079, 083, 080, 082, 081.
 - Saat 07:00'de (TSİ) bitmemiş film yarım render olarak teslim edilmez. O filmden yalnızca senaryo ve stil kareleri bırakılır, raporda nerede kalındığı yazılır.
 - Beş vasat film yerine üç iyi film teslim edilir. 8+ kapısı hiçbir film için gevşetilmez.
-- Stoktaki 16 film ve Buffer takvimine dokunulmaz.
+- Takvim yalnızca "Yayına alma" bölümündeki kurala göre değişir. Başka hiçbir stok filme dokunulmaz.
+- Yayına alma işi 079 biter bitmez başlar. Sabah yuvası 08.30'da olduğu için her film bitince hemen yerleştirilir; bütün filmlerin bitmesi beklenmez.

@@ -3,6 +3,122 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-11-16 turu
+
+**Tur notu:** Reddit yalnızca üçüncü taraf yansıma sayfalarından görüldü; "bu haftanın en çok oy alanları" doğrulanamadı (görünenler: borç hesapları, Titanik'i helyumla kaldırma sorusu; ikincisi daha önce de doğrulanamadığı için önerilmedi). X, Ekşi Sözlük ve Google Trends çekilemedi. Web araması doğruladı: Parker Solar Probe'un 29. yaklaşması (4 Eylül 2026) ve rekor değerleri, Europa Clipper'ın 3 Aralık 2026 Dünya geçişi, Marconi'nin 12 Aralık 1901 sinyali (mesafe kaynaklar arasında 2.000–2.100 mil olarak değişiyor), Sultan Kösen'in Guinness değerleri, Armillaria alanı (kaynağa göre 9,1–9,6 km²), Sezar'ın son nefesi hesabının girdileri. Tarihli fırsatlar: **29 Kasım–1 Aralık** (Parker'ın bir sonraki yaklaşması, tahmin), **3 Aralık** (Europa Clipper), **7 Aralık** (Mavi Bilye, 54. yıl), **12 Aralık** (Marconi, 125. yıl, yuvarlak yıldönümü), 28 Aralık–1 Ocak (2027 asal yıl). Guinness Dünya Rekorlar Günü'nün 2026 tarihi kaynaklarda çelişiyor (16, 17 ya da 21 Kasım): tarihe bağlama, gününü Guinness'in kendi sayfasından teyit et. Önceki turlarla çakışma kontrol edildi; Kola Kuyusu, Voyager, Süper Ay, Geminid, Webb, Artemis II tekrar edilmedi.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Sezar'ın son nefesinden en az bir molekül şu an akciğerinde olabilir mi?
+- Kanca: Her nefeste, 2.000 yıl önce ölen Sezar'ın son nefesinden bir molekül çekiyor olabilirsin; peki bu gerçekten mümkün mü?
+- Sayılar: Atmosferin kütlesi ≈ 5,15×10¹⁸ kg; havanın mol kütlesi ≈ 0,02897 kg/mol → 5,15×10¹⁸ ÷ 0,02897 ≈ 1,78×10²⁰ mol × 6,022×10²³ ≈ **1,07×10⁴⁴ molekül** (kaynaklarda 1,04×10⁴⁴). Bir nefes 0,5 L ≈ 0,5 ÷ 24,45 mol × 6,022×10²³ ≈ **1,23×10²² molekül** (1 L'lik derin nefeste 2,46×10²²). Beklenen sayı = (nefes)² ÷ atmosfer = (1,23×10²²)² ÷ 1,07×10⁴⁴ ≈ **1,4** (1 L için ≈ 5,7). "En az bir tane" olasılığı = 1 − e^(−1,4) ≈ %76 (1 L için %99,7). Sezar: 15 Mart MÖ 44 → yaklaşık 2.070 yıl.
+- Kaynaklar: https://www.sciencefocus.com/planet-earth/are-we-really-breathing-caesars-last-breath/ · https://www.nationalgeographic.com/news/2017/08/air-gas-caesar-last-breath-sam-kean/ · (arama sonuçlarında görüldü, sayfaların tamamı bu turda okunmadı; yazmadan önce rakamlar bu iki sayfadan teyit edilmeli.) Hesap bu turda elle yeniden yapıldı.
+- Görsel metafor: **Bir bardak mürekkep ve okyanus.** Tek damla kırmızı mürekkep (Sezar'ın nefesi) dünya okyanuslarına damlar; karışır; sonra bir kaşık okyanus suyu çekilir ve içinde hâlâ kırmızı moleküller aranır. Sahnenin tek kırmızı nesnesi o damladır.
+- Türkiye bağlantısı: Nefesi Sezar yerine Roma döneminde Türkiye'de yaşamış biri (ör. Efes'te yaşayan bir tüccar) üzerinden anlatmak; "Efes'in son nefesi" kurgusu aynı hesabı verir.
+- Neden şimdi / tarih: Kalıcı konu. Tarihli bağ yok (15 Mart ideal ama uzak).
+- Puan (9/10): kanca çok güçlü, "aha" cümlesi net (nefesin karesi bölü atmosfer), görsel metafor özgün, hesap tamamen kontrol edilebilir.
+- Tuzaklar: Havanın tam karıştığı varsayımı idealdir; nefes verilen moleküllerin bir kısmı parçalanmış, bitkilerce emilmiş ya da okyanusa çözünmüş olabilir. Kesin ifade yerine "olasılıkla" denmeli. Sonuç "kaç molekül" değil "beklenen sayı"dır. Kaynaklar 1 ile 10 arası farklı sayılar veriyor; ekranda aralık gösterilmeli.
+
+### Dünyanın en uzun boylu yaşayan insanının eli, bir A4 kâğıdının neredeyse tamamı (Guinness Dünya Rekorlar Günü fırsatı)
+- Kanca: Mardinli Sultan Kösen'in eli bir A4 kâğıdının boyunun neredeyse tamamı kadar; peki boyu bir kapıyı ne kadar aşıyor?
+- Sayılar: Boy: **251 cm** (8 Şubat 2011'de Ankara'da ölçüldü; ilk unvanı 2009'da 246,5 cm ile aldı). El (bilekten orta parmak ucuna): **28,5 cm**. A4 uzun kenar = 29,7 cm → 28,5 ÷ 29,7 = **%96**. Standart kapı yüksekliği ≈ 200 cm (kabul) → 251 ÷ 200 = 1,25 kapı. Robert Wadlow'un eli 32,3 cm: Kösen "yaşayan" rekoru, Wadlow tüm zamanların rekorunu tutar.
+- Kaynaklar: https://www.guinnessworldrecords.com/world-records/tallest-man-living · https://www.guinnessworldrecords.com/records/hall-of-fame/sultan-kosen-tallest-living-man (Guinness sayfaları arama sonuçlarında görüldü; el ölçüsü "largest hands on a living person (male)" rekor sayfasında yer alıyor, yazmadan önce sayfadan teyit edilmeli).
+- Görsel metafor: **Gerçek ölçekli el çizimi.** Bir A4 kâğıdı sayfaya konur, üstüne Kösen'in el konturu çizilir; parmak ucu kâğıdın neredeyse kenarına ulaşır. Sonra kapı çerçevesi ve 251 cm'lik boy çizgisi. Kırmızı kalem yalnızca el ile kâğıdın arasındaki 1,2 cm'lik farkı çizer.
+- Türkiye bağlantısı: Mardin doğumlu bir Türk vatandaşı; iç kaynaklı gurur konusu. Yerel ölçü: dolmuş/otobüs kapısı ya da simit.
+- Neden şimdi / tarih: Guinness Dünya Rekorlar Günü (kasımın üçüncü haftasında); 2026 tarihi kaynaklarda çelişiyor (16/17/21 Kasım), Guinness'in sayfasından teyit edilmeli. Rekor bu yıl 70. yılını kutlayan Guinness'in haberleriyle de örtüşür.
+- Puan (8/10): Türk figür, tek bakışta anlaşılan metafor (A4), doğruluk güveni yüksek (Guinness resmî değeri). Kanca fiziksel ve görsel.
+- Tuzaklar: Rekor "yaşayan en uzun erkek"tir; en uzun insan Wadlow'dur (272 cm). Boy ölçümü 2011 tarihlidir, güncel boy farklı olabilir. Sağlıkla ilgili (hipofiz) yorum yapılmamalı. "El ölçüsü" bilekten orta parmak ucuna kadardır; avuç genişliği değildir.
+
+### Marconi'nin tek harflik mesajı Atlas Okyanusu'nu aştı: "S" (tarihli: 12 Aralık, 125. yıl)
+- Kanca: 125 yıl önce Atlas Okyanusu'nu aşan ilk telsiz mesajı tek bir harften oluşuyordu; hangi harf?
+- Sayılar: 12 Aralık 1901: Cornwall'daki Poldhu'dan gönderilen Mors "S" harfi (üç kısa sinyal: · · ·), Newfoundland'da Signal Hill'de uçurtmayla havaya kaldırılan bir tel anten ile alındı. Mesafe kaynaklara göre 2.000–2.100 mil ≈ 3.200–3.380 km (2.100 × 1,609 = 3.380 km). Türkiye'nin doğu-batı uzunluğu ≈ 1.600 km → 3.380 ÷ 1.600 ≈ **2,1 Türkiye boyu**. Yıldönümü: 1901 → 2026 = 125 yıl. Alıcı: tel anteni taşıyan uçurtma.
+- Kaynaklar: https://ethw.org/Milestones:Reception_of_Transatlantic_Radio_Signals,_1901 · https://www.rcinet.ca/en/2013/12/12/dec-12-1901-anniversay-of-first-trans-atlantic-wireless-signal/ (arama sonuçlarında görüldü, sayfaların içeriği bu turda tam okunmadı).
+- Görsel metafor: **Mors çizgisi ve uçurtma.** Ekranın solunda kayalık kıyıdaki verici, sağda uçurtmalı alıcı; ortada Atlas Okyanusu şeridi. Üç kısa çizgi okyanusun üstünden geçer; sağ uçta uçurtmaya ulaşınca kırmızıya döner. Altta Türkiye silueti iki kez art arda dizilerek ölçülür.
+- Türkiye bağlantısı: İstanbul–Londra (≈ 2.500 km, doğrulanmalı) mesafesinden bile uzak; "bugün Boğaz'dan Londra'ya sesli mesaj saniyenin altında gidiyor" kıyası ya da Türkiye'nin ilk telsiz yayınları.
+- Neden şimdi / tarih: **12 Aralık 2026 = 125. yıl** (yuvarlak yıldönümü; 10–12 Aralık arası yayın).
+- Puan (8/10): "hangi harf?" kancası güçlü, yuvarlak yıldönümü, görsel basit. Doğruluk güveni orta: mesafe ve olayın kendisi tartışmalı.
+- Tuzaklar: 1901 alımı tek şahitle (Marconi ve asistanı) bildirilmiş ve bazı tarihçiler tartışmalı bulur; iki ay sonra tanıklı bir alım yapıldı. Mesafe birimleri (mil/km) kaynaklarda karışık. "Radyonun icadı" yerine "okyanus aşan ilk telsiz sinyali" denmeli. Mors "S" üç noktadır; çizgi değildir.
+
+### Bir milyar dakika önce Roma'da Hadrianus dönemiydi
+- Kanca: Bir milyar dakika önce dünyada ne oluyordu; sence kaç yıl önce?
+- Sayılar: 1 yıl = 365,2425 gün × 1.440 dk = 525.949 dk. 10⁹ ÷ 525.949 ≈ **1.901,3 yıl**. 16 Kasım 2026'dan 1.901 yıl geri: yaklaşık **MS 125** (yıl 2026,87 − 1901,3 = 125,6; astronomik yıl numarasıyla). Aynı mantıkla: 1 milyon dakika = 694 gün ≈ 1,9 yıl; 1 milyar saniye = 31,7 yıl (001'de var). Hadrianus'un hükümdarlığı MS 117–138; Hadrianus Duvarı'nın yapımı MS 122'de başladı.
+- Kaynaklar: https://www.britannica.com/biography/Hadrian · https://www.worldhistory.org/Hadrian/ (bu turda çekilmedi; Hadrianus'un tarihleri ve duvar başlangıcı yazmadan önce teyit edilmeli). Hesap bu turda yeniden yapıldı (python, 1.901,3 yıl).
+- Görsel metafor: **Dakika kum saati ve zaman şeridi.** Kum saati 1 milyar dakikayı sayar (kum tanesi = 1.000 dk); alttaki zaman şeridi 2026'dan geriye akar, MS 125'te durur, kırmızı kalem Hadrianus'u çizer.
+- Türkiye bağlantısı: MS 125 sırasında Anadolu Roma eyaletidir; Hadrianus Efes, Side, Antalya (Hadrianus Kapısı, MS 130) gibi Türkiye şehirlerini ziyaret etti ya da onlar için yapılar yaptırdı. Antalya Hadrianus Kapısı, "bir milyar dakika önce" ile en yakın somut yapı.
+- Neden şimdi / tarih: Kalıcı konu; "bir milyon gün" (önceki tur) serisinin doğal devamı.
+- Puan (8/10): "bir milyar dakika" çok bilinen ama Türkçede az işlenmiş bir kanca; sürpriz yüksek; doğruluk güveni yüksek (aritmetik).
+- Tuzaklar: Bu sayı geçmişe doğru hesaplandığı için bugünkü tarihe bağlı; her yıl 1 yıl kayar. "MS 125" tahmindir (gün ve artık yıl farkı ±2 gün). Hadrianus Kapısı'nın tarihi (MS 130 civarı) doğrulanmalı.
+
+### Başının üstünde 10 tonluk hava var: neden ezilmiyorsun?
+- Kanca: Her an başının üstünde yaklaşık 10 ton hava duruyor; peki neden ezilmiyorsun?
+- Sayılar: Standart atmosfer basıncı = 101.325 Pa = 101.325 N/m². Ağırlık eşdeğeri: 101.325 ÷ 9,80665 ≈ **10.332 kg/m²** (≈ 10,3 ton). Bir insan yüzeyi ≈ 1,8 m² (varsayım) → 10.332 × 1,8 ≈ 18,6 ton kuvvet. Bir otomobil ≈ 1,4 ton (varsayım) → 10,3 ton ≈ 7 otomobil. Atmosferin toplam kütlesi ≈ 5,15×10¹⁸ kg (yüzey alanı ≈ 5,1×10¹⁴ m² × 10.332 ≈ 5,3×10¹⁸; yuvarlama farkı).
+- Kaynaklar: https://content.meteoblue.com/en/research-education/educational-resources/meteoscool/weather/pressure/ · https://www.britannica.com/science/standard-atmosphere-unit-of-measurement (arama sonuçlarında görüldü; yazmadan önce teyit edilmeli).
+- Görsel metafor: **Hava sütunu.** 1 m²'lik bir kare tabanın üstünde yükselen şeffaf sütun; içine otomobiller yığılır (7 tane). Sonra insanın etrafında içeriden dışarıya aynı basıncı gösteren oklar; kırmızı kalem yalnızca "iç basınç = dış basınç" okunu çizer.
+- Türkiye bağlantısı: İstanbul deniz seviyesinde (≈ 10,3 ton/m²); Erciyes zirvesi (3.917 m) ya da Ağrı Dağı'nda basınç yaklaşık yarıya iner (doğrulanmalı: Ağrı 5.137 m). Zirve karşılaştırması görsel merdiven olur.
+- Neden şimdi / tarih: Kalıcı konu.
+- Puan (7,5/10): klasik ama çok görsel; "neden ezilmiyorsun?" kancası net; doğruluk güveni yüksek.
+- Tuzaklar: "Ton" burada kuvvet eşdeğeridir (kgf); basınç ağırlık değildir. Vücut yüzey alanı kişiden kişiye değişir. Basınç hava durumuyla ±%5 oynar. Sağlık tavsiyesi verilmemeli.
+
+### Dünyanın en büyük canlısı bir mantar: 1.350 futbol sahası
+- Kanca: Dünyanın en büyük canlısı ne fil ne balina; yerin altında yaşayan bir mantar, peki kaç futbol sahası kadar?
+- Sayılar: Oregon'daki Malheur Ulusal Ormanı'ndaki *Armillaria ostoyae* kolonisi ≈ 965 hektar (≈ 9,65 km²; kaynaklarda 9,1–9,6 km²). Futbol sahası 105 × 68 m = 7.140 m² → 9,65×10⁶ ÷ 7.140 ≈ **1.350 saha** (9,1 km² için 1.275). Yaşı tahminen 2.000–8.000 yıl (kaynak çeşitliliği büyük). Kütle: tahminler 605 ton ile 35.000 ton arasında; tek bir sayı yok.
+- Kaynaklar: https://www.oregonencyclopedia.org/articles/humongous-fungus-armillaria-ostoyae/ · https://atlasobscura.com/articles/largest-organism-humongous-fungus (arama sonuçlarında görüldü; Pando'nun alanı bu turda doğrulanamadı, önerilmedi).
+- Görsel metafor: **Altından görünen kök ağı.** Orman kesiti: üstte ağaçlar, altta beyaz miselyum ağı. Kamera yukarı çıkınca ağ bir dev harita gibi yayılır ve futbol sahalarına bölünür; kırmızı kalem yalnızca ağın sınırını çizer.
+- Türkiye bağlantısı: Kadıköy ilçesinin yüzölçümü ≈ 25 km² (doğrulanmalı) → mantar ≈ Kadıköy'ün %38'i; ya da Bursa Uludağ ormanı kıyası.
+- Neden şimdi / tarih: Kasım mantar mevsimi; Reddit'te TIL türünde yinelenen bir konudur (güncel oy sayısı doğrulanamadı).
+- Puan (7,5/10): görselliği iyi, "en büyük canlı" kancası güçlü; doğruluk güveni orta (alan ve yaş tahmini).
+- Tuzaklar: "En büyük" tanımı alan mı kütle mi sorusuna bağlı; ağırlıkça Pando (titreyen kavak klonu) rakip gösterilir. Mavi balina "en büyük hayvan"dır; mantar "bireyi tartışmalı" bir koloni. Yaş ve kütle tahminleri çok geniş aralıkta.
+
+### Parker Solar Probe saatte 687.000 km hızla gidiyor: İstanbul–Ankara 2 saniyeden kısa (tarihli: yaklaşık 1 Aralık)
+- Kanca: Bir uzay aracı Güneş'e o kadar hızlı yaklaşıyor ki İstanbul'dan Ankara'ya 2 saniyeden kısa sürede gider.
+- Sayılar: Rekor hız ≈ 687.000 km/sa (NASA: 430.000 mil/sa). 687.000 ÷ 3.600 = **190,8 km/s**. İstanbul–Ankara ≈ 350 km → 350 ÷ 190,8 ≈ **1,83 sn**. En yakın mesafe: Güneş yüzeyinden ≈ 6,2 milyon km (3,8 milyon mil). Dünya'dan Ay'a (384.400 km): 384.400 ÷ 190,8 ≈ 2.015 sn ≈ 34 dakika. 29. yaklaşma 4 Eylül 2026; yaklaşık 88 günlük yörünge → sonraki ≈ 1 Aralık (**tahmin**).
+- Kaynaklar: https://science.nasa.gov/blogs/parker-solar-probe/2026/09/10/after-latest-swing-past-sun-nasas-parker-solar-probe-checks-in/ · https://science.nasa.gov/blogs/parker-solar-probe/2026/06/11/parker-solar-probe-makes-28th-close-pass-of-sun/ (NASA bloglarının varlığı arama sonuçlarında görüldü; içerik özeti arama motorundan alındı, sayfalar tam okunmadı). Sonraki yaklaşmanın tarihi NASA'dan doğrulanmadı.
+- Görsel metafor: **Haritada çizilen çizgi.** Türkiye haritasında İstanbul'dan Ankara'ya bir kırmızı çizgi; çizgi 1,83 saniyede biter. Sonra harita Ay'a doğru büyür, aynı çizgi 34 dakikada Ay'a varır.
+- Türkiye bağlantısı: İstanbul–Ankara (≈ 350 km): hızlı tren yolculuğu (yaklaşık 3,5 saat = 12.600 sn) ile kıyas: 12.600 ÷ 1,83 ≈ 6.900 kat hızlı.
+- Neden şimdi / tarih: 29 Kasım–1 Aralık civarı bir sonraki yaklaşma (tahmin); NASA bloğu genelde ~1 hafta sonra yazıyor.
+- Puan (7,5/10): kanca net, görselleştirmesi kolay; doğruluk güveni iyi; tarih belirsiz.
+- Tuzaklar: 687.000 km/sa **tepe hızdır**, sabit seyir hızı değil; Güneş'e göre ölçülür. Mesafe Güneş yüzeyinden, merkezden değil (merkezden ≈ 6,9 milyon km). Görev 2029'a uzatılmış (arama sonucu); sonraki yaklaşma tarihi doğrulanmalı.
+
+### 2027 yılı asal sayı: bir sonraki asal yıl ise 2029
+- Kanca: Yeni yıl 2027'nin, yalnızca 1'e ve kendisine bölünen bir yıl olduğunu biliyor muydun?
+- Sayılar: 2027 asaldır (√2027 ≈ 45,02; 43'e kadar tüm asallara bölünmeyi denedim: 3→kalan 2, 7→4, 11→3, 13→12, 17→4, 19→13, 23→3, 29→26, 31→12, 37→29, 41→18, 43→6; bölen yok). Önceki asal yıl **2017** (10 yıl önce); sonraki **2029**. 2027 ve 2029 ikiz asaldır (fark 2). 2027, asal sayılar sırasında **307.** sıradadır (python ile sayıldı). 2026 = 2 × 1013 (asal değil).
+- Kaynaklar: https://oeis.org/A000040 (asal sayılar dizisi) · https://en.wikipedia.org/wiki/Prime_number (bu turda çekilmedi; hesap python ile elle yapıldı, bağımsız kontrol önerilir).
+- Görsel metafor: **Kırılmayan blok.** 2027 adet küçük karo dikdörtgen sıralara dizilmeye çalışılır; hep bir karo artar. Karşıt: 2028'in (4 × 507) düzgün dizilişi. Kırmızı kalem yalnızca artan tek karoyu çizer.
+- Türkiye bağlantısı: Cumhuriyet'in 100. yılı 2023 (asal değil, 7 × 17²); 2027'de "Türkiye'nin ilk asal yıldönümü" tarzı sosyal medya hâlleri; ya da otogar peronları/kapı numaraları ile dizme sahnesi.
+- Neden şimdi / tarih: Yılbaşı fırsatı; yayın **28 Aralık–1 Ocak** (4 haftalık pencerenin dışı, önceden hazırlanabilir).
+- Puan (7/10): yılbaşı bağı güçlü, hızla anlaşılır, matematik seviyesi düşük; viral potansiyel orta (yılbaşı trafiği yüksek).
+- Tuzaklar: "Yıl asal mı?" bir takvim şakası; matematiksel derinliği yok. 2029'un asallığı ayrıca teyit edilmeli (elle denendi, bölen yok).
+
+### Beynin 20 watt harcıyor: bir telefon şarj adaptörü kadar
+- Kanca: Seni sen yapan 86 milyar nöron, bir telefon şarj adaptörünün gücüyle çalışıyor; peki bir gün kaç joule?
+- Sayılar: Beyin gücü ≈ **20 W** (vücut kütlesinin %2'si, enerjisinin ≈ %20'si). Bir günlük enerji = 20 W × 86.400 s = **1.728.000 J = 1,728 MJ**; 1 kcal = 4.184 J → ≈ **413 kcal**; 0,48 kWh. Nöron sayısı ≈ 86 milyar (Azevedo ve diğerleri, 2009).
+- Kaynaklar: https://www.psychologytoday.com/us/blog/consciousness-and-beyond/202309/the-staggering-complexity-of-the-human-brain (Herculano-Houzel 2012, PNAS ve Azevedo 2009'a atıf yapıyor; asıl makaleler bu turda doğrulanmadı) · Azevedo ve diğerleri 2009 (J Comp Neurol) ve Herculano-Houzel 2012 (PNAS) asıl kaynak olarak teyit edilmeli.
+- Görsel metafor: **Adaptör ve nöron ağı.** Bir telefon şarj adaptörü ekranın ortasında; ondan 86 milyar noktalı bir ağ yanar (noktalar büyüklükle gösterilir). Kırmızı kalem yalnızca "20 W" yazısını çizer.
+- Türkiye bağlantısı: Günlük 0,48 kWh = bir çaydanlığın birkaç dakikalık tüketimi (çaydanlık ≈ 2.000 W: 0,48 kWh ÷ 2 kW = 14,4 dk); çay demleme kıyası Türkiye'ye çeker.
+- Neden şimdi / tarih: Kalıcı konu; yapay zekâ veri merkezi enerji haberleri sürerken ("insan beyni 20 W") güncel.
+- Puan (6,5/10): kanca çok bilinen, yeni değil; Türkiye bağı ve çaydanlık kıyası ayırt edici.
+- Tuzaklar: "20 W" ortalama dinlenik değerdir; "bir ampul" kıyası gevşektir (LED ampuller 5–15 W, adaptörler 18–25 W). Sağlık veya beslenme tavsiyesi verilmemeli. Çaydanlık gücü (2.000 W) varsayımdır.
+
+### Europa Clipper 3 Aralık'ta Dünya'nın yanından geçip hızlanacak
+- Kanca: Jüpiter'e giden bir uzay aracı yakıt harcamadan hızlanmak için Dünya'ya geri dönüyor; peki nasıl?
+- Sayılar: Europa Clipper'ın Dünya geçişi **3 Aralık 2026** (en yakın nokta ≈ 21:15 UTC = 00:15 TSİ, 4 Aralık; Wikipedia ve bir geri sayım sitesi). Mars geçişi 1 Mart 2025'te yapıldı. Geçiş yüksekliği resmî kaynakta **doğrulanamadı** (bir geri sayım sitesi ≈ 2.000 mil ≈ 3.200 km diyor, güvenilir değil).
+- Kaynaklar: https://en.wikipedia.org/wiki/Europa_Clipper · https://www.jpl.nasa.gov/news/nasas-europa-clipper-uses-mars-to-go-the-distance/ (NASA/JPL sayfasının varlığı arama sonuçlarında görüldü; Dünya geçişi ayrıntıları için NASA/JPL'den teyit gerekli).
+- Görsel metafor: **Sapan.** Dünya, ekranın ortasında; uzay aracı kavisli bir yolla yaklaşır, yörüngesi bükülür ve yeni hızla kopar; kırmızı kalem yalnızca bükülen çizgiyi çizer.
+- Türkiye bağlantısı: Yeterli bağ bulunamadı; İstanbul'a en yakın geçiş saati (00:15 TSİ) ve gece gökyüzü ile bağ kurulabilir.
+- Neden şimdi / tarih: **3 Aralık 2026** (en yakın nokta saati kaynaklara göre değişebilir).
+- Puan (6/10): güncel ve görsel, ama yüksek yoğunlukta sayı yok; sayısal "aha" zayıf; doğruluk güveni orta (yükseklik doğrulanamadı).
+- Tuzaklar: Tarih kaynaklarda 1 ve 3 Aralık olarak değişti (güncel kaynaklar 3 Aralık diyor). Yükseklik ve hız kazancı doğrulanmadan söylenmemeli. NASA'dan teyit edilmeden yayınlanmamalı.
+
+### Mavi Bilye fotoğrafı: Dünya'dan 29.000 km uzakta çekildi (tarihli: 7 Aralık, 54. yıl)
+- Kanca: Tarihin en çok basılan fotoğrafı, Dünya'dan yaklaşık 29.000 km uzaktan çekildi; bu mesafe Ekvator'un kaçta kaçı?
+- Sayılar: Apollo 17, 7 Aralık 1972. Mesafe: yüzeyden ≈ **29.000–29.400 km** (bazı kaynaklar 45.000 km diyor; güvenilirliği belirsiz). Ekvator çevresi 40.075 km → 29.000 ÷ 40.075 ≈ **%72**. Dünya çapı 12.742 km → 29.000 ÷ 12.742 ≈ 2,3 Dünya çapı. Yıldönümü: 1972 → 2026 = 54 yıl.
+- Kaynaklar: https://en.wikipedia.org/wiki/The_Blue_Marble · https://www.wikiwand.com/simple/The_Blue_Marble (arama sonuçlarında görüldü; NASA'nın görüntü kaydında mesafe "N/A" yazıyor, rakam ikincil kaynaklardan; NASA'dan teyit edilmeli).
+- Görsel metafor: **Başparmakla Dünya.** Kolu uzatıp Dünya'yı başparmağın ucuyla kapatma sahnesi; sonra gerçek ölçekli mesafe çizgisi (Ekvator çevresinin %72'si).
+- Türkiye bağlantısı: Fotoğrafta Afrika ve Arabistan Yarımadası görünür; Türkiye kadrajın dışında kalır (doğrulanmalı). İstanbul'dan ters yönde bakış (fotoğraf "Güney yukarıda" yayımlandı).
+- Neden şimdi / tarih: **7 Aralık 2026 (54. yıl)**; yuvarlak yıldönümü değil.
+- Puan (6/10): ikonik görsel, ama mesafe değeri belirsiz; yuvarlak yıl değil.
+- Tuzaklar: Mesafe değerleri kaynaklarda 29.000–45.000 km arasında değişiyor; NASA kaydı mesafe vermiyor. Fotoğrafı kimin çektiği tartışmalı; adlandırma yapılmamalı. Fotoğraf "baş aşağı" yayımlandı (Güney Kutbu üstte), sonra çevrildi.
+
 ## 2026-11-12 turu
 
 **Tur notu:** Reddit yalnızca üçüncü taraf yansıma sayfalarından görüldü (r/theydidthemath'te öne çıkanlar: borç/para hesapları, "Titanik'i helyumla kaldırmak", "kabloları suşiyle değiştirmek"; sıralama doğrulanamadı, Titanik/helyum iddiası bu yüzden önerilmedi). Ekşi Sözlük, Google Trends ve X çekilemedi. Web araması doğrulayabildi: Artemis II mesafe rekoru, Wright ilk uçuşu, Geminid takvimi (13–14 Aralık, ZHR 120), en büyük asal sayının hâlâ M136279841 olması, Webb güneş kalkanı ölçüleri, Boğaz debisi (Türkçe akademik kaynaklar), kar tanesi molekül sayısı. Doğrulanamayanlar ilgili öneride açıkça yazıldı (özellikle CP-1 güç değerleri ve 747 kanat açıklığı). Önceki turlarla çakışma kontrol edildi (Güneş enerjisi, Kola Kuyusu, Voyager, Leonid, Süper Ay vb. tekrar edilmedi). Önümüzdeki 2–4 haftanın tarihli fırsatları: 2 Aralık (CP-1, 84. yıl), 13–14 Aralık (Geminid), 14 Aralık (Amundsen, 115. yıl), 17 Aralık (Wright, 123. yıl), 25 Aralık (Webb'in 5. fırlatma yıldönümü). Ayrıca Aralık 2026'da planlanan görevler (ESA PLATO, JAXA MMX) var ama tarihleri kaymış olabilir; fırlatma kesinleşmeden önerilmedi.

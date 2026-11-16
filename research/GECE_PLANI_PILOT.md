@@ -1,6 +1,14 @@
-# Gece planı (16 → 17 Kasım 2026): iki pilot film, yeni iskelet
+# Gece planı (16 → 17 Kasım 2026): beş pilot film, yeni iskelet
 
-Kullanıcı: "animasyonlarımız çok tek düze ve kötü… video kendini izlettirmiyor." Sonra: "bunu planla, gece yapacaksın."
+Kullanıcı: "animasyonlarımız çok tek düze ve kötü… video kendini izlettirmiyor." Sonra: "bunu planla, gece yapacaksın." Ardından: "iki tane değil 5 tane yap."
+
+| № | Yapı | Konu | Süre | Öncelik |
+|---|---|---|---|---|
+| 079 | B · tahmin et, fizik | Terazi: bütün insanlar mı, bütün inekler mi? | 22–32 sn | 1 (fizik altyapısını kurar) |
+| 083 | C · olay canlı akıyor | Hachikō'nun 3.578 günü, tek takvim, tek istasyon | 35–45 sn | 2 (075 ile birebir A/B testi) |
+| 080 | C · olay canlı akıyor | Titanik'in son 160 dakikası | 40–55 sn | 3 |
+| 082 | B · tahmin et, yarış | Ankara'da bir top patlasa: ses mi önce İstanbul'a varır, uçak mı? | 22–32 sn | 4 |
+| 081 | A · tek plan ölçek | Bir çay bardağından Türkiye'nin bir günde içtiği çaya | 22–32 sn | 5 |
 
 ## Teşhis (16 Kasım, veriyle)
 
@@ -94,11 +102,9 @@ Kullanıcı: "animasyonlarımız çok tek düze ve kötü… video kendini izlet
   - insan, çocuklar dâhil: Walpole 2012 ≈ 62 kg yetişkin, nüfus ortalaması daha düşük;
   - sığır ≈ 400–600 kg.
 - Bar-On ve ark. 2018 PNAS biyokütle karşılaştırması: hayvancılık ve insan, karbon tonu.
-- **Kural:** Oran kaynaklarla en az ~1,5 kat tutmuyorsa film iddiayı yumuşatmaz, konu değişir. Bu durumda yedek konuya geç.
+- **Kural:** Oran kaynaklarla en az ~1,5 kat tutmuyorsa film iddiayı yumuşatmaz, konu değişir.
 
-**Yedek konu:** "Ankara'da bir top patlasa sesi İstanbul'a uçaktan önce mi varır?"
-- Türkiye haritasında yarış: ses ≈ 17 dk, uçak ≈ 55 dk havada, YHT ≈ 4 sa.
-- Bütün süreler kaynaklı olmalı.
+**Yedek konu:** Sezgiye ters düşen başka bir ağırlık çifti. Oran ≥ 1,5 kat olmalı ve kaynakla doğrulanmalı.
 
 ## Pilot C: № 080 "Olay canlı akıyor": Titanik'in son 160 dakikası
 
@@ -136,7 +142,90 @@ Kullanıcı: "animasyonlarımız çok tek düze ve kötü… video kendini izlet
 - Carpathia'nın mesafesi ve varış saati.
 - Kurtulan ve ölen sayıları. Kaynaklar farklıysa resmî soruşturma rakamı kullanılır.
 
+## Pilot 081: "Tek plan ölçek": Türkiye'nin bir günlük çayı (yapı A)
+
+**Logline:** Tek bir ince belli çay bardağından başlayan kamera, kesmeden geri çekiliyor. Türkiye'nin bir günde içtiği bütün çay göz önünde birikiyor.
+
+**Akılda kalacak tek şey:** Türkiye bir günde [kaynaklı karşılaştırma nesnesi] dolusu çay içiyor.
+
+**Kare 0:**
+- Buharı tüten tek bir bardak, yakın plan.
+- Başlık: "Türkiye bir günde ne kadar çay içer?"
+- Kamera kare 0'da geri çekilmeye başlar.
+
+**Akış:**
+- Bardaklar çoğalır: bir masa, bir apartman, bir mahalle, bir şehir.
+- Çay tek bir hacimde birleşir. Tanıdık karşılaştırma nesnesi, yığın ona ulaşana kadar gösterilmez ([[feedback-surec-anlat]]).
+- Doruktan önce sessizlik, ardından varış. Karşılaştırma nesnesi örnek olarak bir olimpik havuz, Galata Kulesi ya da bir stadyum olabilir; seçim hesaba göre yapılır.
+- Kamera zoom'u logaritmik uzayda ilerler. Kesme yoktur.
+
+**Doğrulanacak gerçekler:**
+- Kişi başı yıllık çay tüketimi (Türkiye kg/kişi, dünyada birinci; kaynak gösterilir).
+- Kuru çaydan bardak sayısına dönüşüm.
+- Bardak hacmi.
+- Hesap `facts` alanına adım adım yazılır.
+- Sayılar tutarsızsa gösterilen sayı "yaklaşık" diye verilir ve kaynakların alt sınırı kullanılır.
+
+**Kapanış:** "Bunu çay demleyen birine gönder."
+
+## Pilot 082: "Tahmin et" yarışı: Ankara'dan İstanbul'a ses mi, uçak mı? (yapı B)
+
+**Logline:** Ankara'da dev bir top patlıyor; sesi ile Ankara'dan aynı anda kalkan bir uçak İstanbul'a yarışıyor. Hangisi önce varır?
+
+**Akılda kalacak tek şey:** Ses, yolcu uçağından daha hızlıdır.
+
+**Kare 0:**
+- Türkiye haritası; Ankara ve İstanbul işaretli.
+- Başlık: "Hangisi önce varır?"
+- İki şerit, iki çizgi ve büyük bir yarış saati.
+
+**Akış:**
+- Ses dalgası halka halka yayılır. Uçak kalkar.
+- Saat sıkıştırılmış gerçek zamanla akar.
+- Ses yaklaşık 17 dakikada varır. Uçak hâlâ havadadır.
+- İsteğe bağlı üçüncü yarışmacı: YHT geride kalır.
+- Doruktan önce 0,5 sn sessizlik, ardından ses İstanbul'a çarpar.
+
+**Doğrulanacak gerçekler:**
+- Ankara–İstanbul kuş uçuşu mesafesi.
+- Sesin hızı: 343 m/sn, 20 °C.
+- Esenboğa–İstanbul gerçek uçuş süresi.
+- YHT süresi.
+- **Dürüstlük notu:** Gerçekte ses bu mesafede duyulmaz. Metin bunu "Sesi oraya kadar ulaşsaydı…" diye kurar.
+
+**Kapanış:** "Bunu her şeyi bildiğini sanan birine gönder."
+
+## Pilot 083: "Olay canlı akıyor": Hachikō'nun 3.578 günü (yapı C, 075 ile A/B)
+
+**Neden:** 075 aynı hikâyeyi slayt iskeletiyle anlatıyor ve stokta duruyor. Aynı hikâye yeni iskeletle yapılırsa yalnızca iskeletin etkisi ölçülür. Hangisinin yayımlanacağına sabah kullanıcı karar verir.
+
+**Logline:** Shibuya İstasyonu tek bir sabit kadrajda. Kapıda bekleyen köpeğin önünde gerçek takvim 1925'ten 1935'e akıyor.
+
+**Kare 0:**
+- İstasyon kapısı, Hachikō ve sayaç: "0 GÜN".
+- Tren gelir, kapıdan insanlar çıkar.
+
+**Akış:**
+- Mevsimler kadrajda değişir: kar, kiraz çiçeği, yağmur.
+- Gün sayacı ve tarih durmadan akar.
+- Kalabalık her "tren saatinde" çıkar, köpek her seferinde başını kaldırır.
+- Gerçek olaylar zamanında kadraja girer:
+  - 1932 gazete haberi;
+  - 1934 heykeli kadraja girer;
+  - köpek yaşlanır.
+- Son kış kadrajda yalnızca heykel kalır. Sayaç 3.578'de durur.
+
+**Gerçekler:** `episodes/075-on-yil-bekleyen-kopek.json` dosyasındaki `facts` ve kaynaklar aynen kullanılır.
+
+**Kapanış:** "Bunu seni hep bekleyen birine gönder."
+
 ## Çalışma sırası ve kapılar (gece oturumu)
+
+**Paralel üretim:**
+- 079'da ortak altyapı ana oturumda kurulur. Bunlar: fizik önhesabı, kutusuz altyazı katmanı ve tek plan kamerası.
+- 079 stil kareleri geçince kalan dört film, her biri ayrı bir alt ajanda paralel üretilir. Her alt ajan bu dosyayı ve kendi bölümünü okur.
+- Render ve CPU çakışmasın diye tam render'lar sırayla kuyruğa girer.
+- Her filmin kritiğini yapıma katılmamış ayrı bir salt-okur alt ajan yapar.
 
 1. **Okuma:**
    - Bu dosya.
@@ -158,7 +247,7 @@ Kullanıcı: "animasyonlarımız çok tek düze ve kötü… video kendini izlet
    - "Kendini izlettiriyor mu? Hangi saniyede kaydırırdın?" sorusu ayrıca yanıtlanır.
    - Her başlık 8+ olana kadar en fazla 3 tur yapılır.
 8. **Teslim:**
-   - `out/079/video.mp4` ve `out/080/video.mp4` üretilir, `prebuilt/` klasörüne kopyalanır.
+   - Her film için `out/<id>/video.mp4` (079–083) üretilir ve `prebuilt/` klasörüne kopyalanır.
    - Temas kâğıtları `out/<id>/contact.png` olarak kaydedilir.
    - **Buffer'a planlanmaz, `publishAt` boş bırakılır.** Kullanıcı sabah izleyip onaylarsa yayına konur.
 9. **Sabah raporu:** `research/PILOT_RAPORU.md` yazılır. İçeriği:
@@ -171,6 +260,7 @@ Kullanıcı: "animasyonlarımız çok tek düze ve kötü… video kendini izlet
 
 ## Zaman ve öncelik
 
-- Sıra B, sonra C. B daha kısa; fizik altyapısı da burada kurulur.
-- Saat 06:30'da (TSİ) C bitmemişse yarım render teslim edilmez. B tam teslim edilir. C'den yalnızca stil kareleri ve senaryo bırakılır, raporda nerede kalındığı yazılır.
+- Öncelik sırası tablodaki gibidir: 079, 083, 080, 082, 081.
+- Saat 07:00'de (TSİ) bitmemiş film yarım render olarak teslim edilmez. O filmden yalnızca senaryo ve stil kareleri bırakılır, raporda nerede kalındığı yazılır.
+- Beş vasat film yerine üç iyi film teslim edilir. 8+ kapısı hiçbir film için gevşetilmez.
 - Stoktaki 16 film ve Buffer takvimine dokunulmaz.

@@ -994,15 +994,15 @@
     },
     "2026-11-18T05:30Z": {
       "episode": "082",
-      "media": "v/082-ses-mi-ucak-mi-cc19a954.mp4",
+      "media": "v/082-ses-mi-ucak-mi-597dff95.mp4",
       "status": "scheduled",
       "at": "2026-11-16T06:09:54.023Z",
       "postId": "6afa9e62a869c35e5bc04252",
       "dueAt": "2026-11-18T05:30:00.000Z",
       "swappedFrom": "009",
       "swapNote": "16 Kasım: pilot yeni iskelet, kullanıcı isteği",
-      "prevMedia": "v/009-gunes-dunya.mp4",
-      "remediaAt": "2026-11-17T01:05:14.331Z"
+      "prevMedia": "v/082-ses-mi-ucak-mi-cc19a954.mp4",
+      "remediaAt": "2026-11-17T01:14:54.857Z"
     },
     "2026-11-18T17:30Z": {
       "episode": "049",

@@ -1,57 +1,62 @@
 // № 079 · Hangisi ağır basar? (pilot, yeni iskelet: "tahmin et", tek plan, kutusuz altyazı). Senaryo: research/pilot/079.md
 // Tek sabit sahne: dev bir terazi. Sağ kefeye bütün vahşi memeliler dökülür (filler, balinalar, geyikler kelimelerine
-// kilitli), terazi sağa yatar; sol kefeye bütün insanlar yağar, terazi yavaşça dengeye gelir, sessizlik, son dalga
-// ve TAK: sol kefe dayanağa çarpar. Kütleler Greenspoon ve ark. 2023 (PNAS): insan ≈ 390 Mt, vahşi memeli ≈ 60 Mt.
+// kilitli), terazi sağa yatar; sol kefeye bütün insanlar yağar, terazi dengeye gelir, sessizlik, son dalga ve TAK.
+// Sonra sağ kefeye 60'ar milyon tonluk çuvallar iner: sayaç 60 → 390, terazi her çuvalda biraz kalkar ve 6,5 çuvalda
+// dengeye gelir (oran gözün önünde oluşur). Kütleler: Greenspoon ve ark. 2023 (PNAS): insan ≈ 390 Mt, vahşi memeli ≈ 60 Mt.
 // Terazinin açısı her iniş için kapalı formüllü (kritik sönümlü) bir adımın toplamıdır: önceki kareler simüle edilmez.
-// Döngü: kapanışta kefeler öne devrilip boşalır, terazi dengeye döner; son kare = ilk kare.
+// Döngü: kapanışta kefeler öne devrilip boşalır, terazi dengeye döner, ilk balina yeniden düşmeye başlar.
 
-const PIV = [540, 790], ARM = 300, STR = 230, STOP = 0.3;
-const HUMAN_ROWS = [10, 10, 9, 9, 8, 8, 7, 6, 5, 4, 3, 2];
-const ANIMAL_ROWS = [3, 3, 3, 2, 2, 1];
-const FALL = 0.55;
+const PIV = [540, 700], ARM = 280, STR = 220, STOP = 0.45, GY = 1180;
+const HUMAN_ROWS = [10, 9, 9, 8, 8, 7, 6, 5, 4, 3, 2, 1];
 const step = (tau, w) => (tau <= 0 ? 0 : 1 - (1 + w * tau) * Math.exp(-w * tau));   // kritik sönümlü adım yanıtı
 
-// iniş planı: hayvanlar (sağ) ve insanlar (sol); hepsi T'den, ses ve görüntü aynı takvimden
-function plan(T, mulberry32) {
+// hayvan yığını: tür, ölçek, yerel yuva (kefe ağzına göre), iniş anı; ilk balina kare 0'da havada
+function animalPlan(T) {
   const w = (id, k) => T.w(id, k);
-  const r = mulberry32(79);
-  // hayvanlar: ilk ikisi kare 0'da havada; filler / balinalar / geyikler kendi kelimelerine iner
-  const kinds = ['fil', 'balina', 'geyik', 'ayi', 'aslan'];
-  const aT = [0.18, 0.95, 1.5, 2.0, 2.45, w('l01', 7) + 0.02, w('l01', 8) + 0.02, w('l01', 9) + 0.02, 4.75, 5.2, 5.6, 6.0, 6.35, 6.65];
-  const aKind = ['balina', 'ayi', 'aslan', 'geyik', 'ayi', 'fil', 'balina', 'geyik', 'aslan', 'fil', 'geyik', 'ayi', 'balina', 'aslan'];
-  const animals = aT.map((land, i) => ({ land, kind: aKind[i] || kinds[i % 5], seed: r() }));
-  // insanlar: l03 boyunca yağmur (69 kişi), sessizlikte seyrek, l04 hemen önce son dalga (12 kişi)
-  const humans = [];
-  const n1 = 69, a = T.l03 + 0.05, b = T.l04 - 0.62;
-  for (let i = 0; i < n1; i++) humans.push({ land: a + (b - a) * Math.pow((i + 0.5) / n1, 0.85) + (r() - 0.5) * 0.04, wave: 0, seed: r() });
-  const c0 = T.l04 - 0.42, c1 = T.l04 - 0.2;
-  for (let i = 0; i < 12; i++) humans.push({ land: c0 + (c1 - c0) * (i / 11), wave: 1, seed: r() });
-  humans.sort((p, q) => p.land - q.land);
-  animals.sort((p, q) => p.land - q.land);
-  // yuvalar: alttan üste, ortadan dışa (yığın)
-  const slots = (rows, dx, dy, y0) => {
-    const out = [];
-    rows.forEach((n, ri) => { const order = [...Array(n).keys()].sort((p, q) => Math.abs(p - (n - 1) / 2) - Math.abs(q - (n - 1) / 2)); for (const j of order) out.push([(j - (n - 1) / 2) * dx, y0 - ri * dy]); });
-    return out;
-  };
-  const hs = slots(HUMAN_ROWS, 26, 30, 26), as = slots(ANIMAL_ROWS, 86, 50, 26);
-  humans.forEach((h, i) => { h.slot = hs[i]; h.slot[0] += (h.seed - 0.5) * 6; });
-  animals.forEach((h, i) => { h.slot = as[i]; });
-  return { animals, humans };
+  return [
+    { kind: 'balina', k: 1.55, slot: [-6, 30], land: 0.3, fall: 1.45 },
+    { kind: 'ayi', k: 0.9, slot: [72, -34], land: 1.05 },
+    { kind: 'aslan', k: 0.85, slot: [-74, -36], land: 1.6 },
+    { kind: 'geyik', k: 0.85, slot: [8, -52], land: 2.2 },
+    { kind: 'fil', k: 1.2, slot: [-52, -96], land: w('l01', 7) + 0.02 },
+    { kind: 'balina', k: 1.2, slot: [40, -140], land: w('l01', 8) + 0.02 },
+    { kind: 'geyik', k: 0.9, slot: [-40, -168], land: w('l01', 9) + 0.02 },
+    { kind: 'ayi', k: 0.8, slot: [60, -196], land: T.l02 + 0.25 },
+    { kind: 'aslan', k: 0.75, slot: [-10, -232], land: T.l02 + 0.75 },
+  ];
+}
+function humanPlan(T, mulberry32) {
+  const r = mulberry32(79), out = [];
+  const n1 = 60, a = T.l03 + 0.05, b = T.l04 - 0.62;
+  for (let i = 0; i < n1; i++) out.push({ land: a + (b - a) * Math.pow((i + 0.5) / n1, 0.85) + (r() - 0.5) * 0.04, wave: 0, seed: r() });
+  const c0 = T.l04 - 0.45, c1 = T.l04 - 0.2;
+  for (let i = 0; i < 12; i++) out.push({ land: c0 + (c1 - c0) * (i / 11), wave: 1, seed: r() });
+  out.sort((p, q) => p.land - q.land);
+  const slots = [];
+  HUMAN_ROWS.forEach((n, ri) => { const order = [...Array(n).keys()].sort((p, q) => Math.abs(p - (n - 1) / 2) - Math.abs(q - (n - 1) / 2)); for (const j of order) slots.push([(j - (n - 1) / 2) * 24, 30 - ri * 30]); });
+  out.forEach((h, i) => { h.slot = [slots[i][0] + (h.seed - 0.5) * 6, slots[i][1]]; });
+  return out;
+}
+// çuvallar: her biri 60 Mt (sonuncusu yarım, 30 Mt); l04'ün kelimelerine kilitli
+function sackPlan(T) {
+  const w = (id, k) => T.w(id, k);
+  const t = [T.l04 + 0.15, w('l04', 1) + 0.05, w('l04', 2) + 0.05, w('l04', 3) + 0.05, w('l04', 4) + 0.05, w('l04', 6) + 0.02];
+  const pos = [[-52, -262], [52, -262], [-52, -334], [52, -334], [0, -406], [0, -468]];
+  return t.map((land, i) => ({ land, half: i === 5, slot: pos[i] }));
 }
 
-export function hero(T) { return T.l04 - 0.15; }
+export function hero(T) { return T.l04 - 0.17; }
 
 export function cues(T) {
-  const w = (id, k) => T.w(id, k);
+  const A = animalPlan(T), S = sackPlan(T);
   return {
-    tick: [0.18, 0.95, 1.5, 2.0, 2.45, 4.75, 5.2, 5.6, 6.0, 6.35, 6.65],
-    thock: [w('l01', 7) + 0.02, w('l01', 8) + 0.02, w('l01', 9) + 0.02],
-    scratch: [[T.l03 + 0.05, T.l04 - 0.62, 0.022], [T.l04 - 0.44, T.l04 - 0.2, 0.04]],
+    tick: A.filter((_, i) => ![4, 5, 6].includes(i)).map(a => a.land),
+    thock: [...A.filter((_, i) => [4, 5, 6].includes(i)).map(a => a.land), ...S.map(s => s.land)],
+    scratch: [[T.l03 + 0.05, T.l04 - 0.62, 0.022], [T.l04 - 0.47, T.l04 - 0.2, 0.04]],
     riser: [T.l03 + 0.6, T.l04 - 0.2],
     silence: [T.l03end + 0.08, T.l04 - 0.17],
     impact: T.l04 - 0.17,
-    whip: [[T.loop0 - 1.05, T.loop0 - 0.6]],
+    whip: [[T.loop0 - 1.0, T.loop0 - 0.55]],
     loopEnd: T.loop0,
   };
 }
@@ -59,30 +64,29 @@ export function cues(T) {
 export async function film(A) {
   const { ctx, T, D, PAL, ease, seg, lerp, mulberry32, poly, rect, circ, ell, line, text, bg, plane, LW } = A;
   const w = (id, k) => T.w(id, k);
-  const P = plan(T, mulberry32);
-  const GY = 1270;
-  const dump0 = T.loop0 - 1.05, dump1 = T.loop0 - 0.15;
+  const AN = animalPlan(T), HU = humanPlan(T, mulberry32), SA = sackPlan(T);
+  const dump0 = T.loop0 - 1.0, dump1 = T.loop0 - 0.2;
   const loopT = t => (t >= T.loop0 ? t - D : t);
 
-  // terazi açısı (rad, + sol kefe aşağı): her iniş bir adım; son dalga dayanağa (STOP) çarpar
-  const dA = -0.2 / P.animals.length, dH = 0.24 / 69, dW = (0.4 - 0.04) / 12;
+  // terazi açısı (rad, + sol kefe aşağı)
+  const dA = -0.22 / AN.length, dH = 0.25 / 60, dW = (STOP + 0.08 - 0.03) / 12;
   const rawAngle = t => {
     let a = 0;
-    for (const h of P.animals) a += dA * step(t - h.land, 7);
-    for (const h of P.humans) a += (h.wave ? dW : dH) * step(t - h.land, h.wave ? 14 : 6);
+    for (const h of AN) a += dA * step(t - h.land, 7);
+    for (const h of HU) a += (h.wave ? dW : dH) * step(t - h.land, h.wave ? 11 : 6);
     return a;
   };
-  // çarpma anı (yükleme sırasında bir kez, sabit adımla): ses ve görüntü aynı anı kullanır
   let hit = T.l04;
-  for (let t = T.l04 - 0.5; t < T.l04 + 0.6; t += 1 / 600) if (rawAngle(t) >= STOP) { hit = t; break; }
+  for (let t = T.l04 - 0.6; t < T.l04 + 0.8; t += 1 / 600) if (rawAngle(t) >= STOP) { hit = t; break; }
   const angle = t => {
     let a = Math.min(STOP, rawAngle(t));
     if (t > T.l03end && t < hit) a += 0.006 * Math.sin((t - T.l03end) * 23) * seg(t, T.l03end, 0.4);   // gerilim: kol gıcırdar
+    for (const s of SA) a -= (STOP / 5.5) * (s.half ? 0.5 : 1) * step(t - s.land, 8);   // her çuval 60 Mt geri getirir
     return a * (1 - ease.state(seg(t, dump0, dump1 - dump0)));
   };
-  // kefe merkezi (ağız çizgisi); kol uçlarından sarkar, hep yatay
   const panAt = (side, a) => { const s = side === 'L' ? -1 : 1; return [PIV[0] + s * ARM * Math.cos(a), PIV[1] - s * ARM * Math.sin(a) + STR]; };
-  const tip = t => Math.sin(Math.PI * seg(t, dump0 + 0.1, dump1 - dump0 - 0.1)) * 1.05;   // boşaltma: kefe öne devrilir
+  const tip = t => Math.sin(Math.PI * seg(t, dump0 + 0.08, dump1 - dump0 - 0.08)) * 1.05;
+  const rightMass = t => 60 + SA.reduce((m, s) => m + (t >= s.land ? (s.half ? 30 : 60) : 0), 0);
 
   // ——— figürler ———
   const SK = ['#F2C9A5', '#D9A27A', '#B8805A', '#8A5A3A'], CL = ['#C2412F', '#2E4A6B', '#E2B13C', '#5E9A4E', '#7A4E8A', '#D8722E', '#3F7F86', '#F4EFE3'];
@@ -91,7 +95,7 @@ export async function film(A) {
     rect(x - 10, y - 28, 20, 26, c, 3.5, 8); circ(x, y - 36, 9, s, 3.5);
   };
   const GREY = '#9AA0A6';
-  const animal = (kind, x, y, k = 0.78, flip = 1) => {
+  const animal = (kind, x, y, k = 0.8, flip = 1) => {
     ctx.save(); ctx.translate(x, y); ctx.scale(k * flip, k); const lw = LW / k * 0.8;
     if (kind === 'fil') {
       for (const lx of [-36, -14, 16, 36]) rect(lx - 9, -40, 18, 40, '#868C92', lw, 6);
@@ -111,82 +115,105 @@ export async function film(A) {
       for (const lx of [-30, 26]) rect(lx - 12, -34, 24, 34, '#55392A', lw, 9);
       ell(0, -46, 50, 32, '#6A4A32', lw); circ(46, -60, 22, '#6A4A32', lw); circ(38, -80, 8, '#6A4A32', lw); circ(54, -80, 8, '#6A4A32', lw);
       ell(60, -54, 10, 8, '#C9A27A', 0); circ(64, -56, 3, PAL.ink, 0); circ(46, -66, 3, PAL.ink, 0);
-    } else {   // aslan
+    } else {
       for (const lx of [-30, -12, 16, 30]) rect(lx - 6, -38, 12, 38, '#C08A33', lw * 0.7, 5);
       ell(-50, -54, 6, 18, '#C08A33', lw * 0.6, 0.6);
       ell(-2, -48, 46, 24, '#D9A441', lw); circ(44, -64, 30, '#A8662E', lw); circ(46, -62, 19, '#D9A441', lw); circ(52, -66, 3, PAL.ink, 0);
     }
     ctx.restore();
   };
+  // çuval: bütün vahşi memelilerin bir kopyası (60 Mt); ağzından balina kuyruğu ve geyik boynuzu görünür
+  const sack = (x, y, half) => {
+    const k = half ? 0.62 : 1; ctx.save(); ctx.translate(x, y); ctx.scale(k, k); const lw = LW / k * 0.85;
+    poly([[-28, -86], [-40, -112], [-14, -100]], '#4E6E88', lw);
+    line(20, -92, 30, -122, lw * 0.8); line(26, -108, 38, -112, lw * 0.6);
+    ell(0, -42, 52, 44, '#D9C7A0', lw);
+    poly([[-20, -82], [20, -82], [12, -94], [-12, -94]], '#C7B285', lw * 0.8);
+    for (const dx of [-30, 0, 30]) line(dx, -78, dx * 0.6, -6, 2.5, '#A99467');
+    ctx.restore();
+    text(half ? '30' : '60', x, y - 30 * k, half ? 26 : 34, PAL.ink, 'Archivo', 800);
+  };
 
-  // ——— terazi parçaları ———
-  const PLATE = '#F6F1E4', BRASS = '#C9A23A', BRASS_D = '#A9842A';
+  // ——— terazi ———
+  const BRASS = '#C9A23A', BRASS_D = '#A9842A';
   const bowl = (cx, cy, part, label, tilt = 0) => {
     ctx.save(); ctx.translate(cx, cy); ctx.rotate(tilt);
-    if (part === 'back') ell(0, 0, 150, 22, BRASS_D, LW);
+    if (part === 'back') ell(0, 0, 130, 20, BRASS_D, LW);
     else {
-      poly([[-150, 0], [-118, 78], [118, 78], [150, 0]], BRASS, LW);
-      ell(0, 0, 150, 22, null, LW);
-      if (label.length > 1) label.forEach((s, i) => text(s, 0, 47 + i * 25, 26, PAL.ink, 'IBM Plex Mono', 700));
-      else text(label[0], 0, 60, 32, PAL.ink, 'IBM Plex Mono', 700);
+      poly([[-130, 0], [-102, 74], [102, 74], [130, 0]], BRASS, LW);
+      ell(0, 0, 130, 20, null, LW);
+      if (label.length > 1) label.forEach((s, i) => text(s, 0, 45 + i * 26, 26, PAL.ink, 'Archivo', 800));
+      else text(label[0], 0, 58, 36, PAL.ink, 'Archivo', 800);
     }
     ctx.restore();
   };
-  const scale = (t, a) => {
-    // gövde ve taban
-    poly([[440, GY], [470, GY - 50], [610, GY - 50], [640, GY]], '#8C6A42', LW);
-    rect(522, PIV[1] + 10, 36, GY - 60 - PIV[1], '#A87A4E', LW, 6);
-    // kol
+  const scale = a => {
+    poly([[450, GY], [478, GY - 46], [602, GY - 46], [630, GY]], '#8C6A42', LW);
+    rect(522, PIV[1] + 10, 36, GY - 56 - PIV[1], '#A87A4E', LW, 6);
     ctx.save(); ctx.translate(PIV[0], PIV[1]); ctx.rotate(-a);
     rect(-ARM - 14, -13, 2 * ARM + 28, 26, '#B08A54', LW, 13);
     circ(-ARM, 0, 12, BRASS, LW); circ(ARM, 0, 12, BRASS, LW);
     ctx.restore();
-    poly([[PIV[0], PIV[1] - 70], [PIV[0] - 14, PIV[1] - 10], [PIV[0] + 14, PIV[1] - 10]], '#C2412F', LW * 0.8);   // ibre
+    poly([[PIV[0], PIV[1] - 70], [PIV[0] - 14, PIV[1] - 10], [PIV[0] + 14, PIV[1] - 10]], PAL.red, LW * 0.8);
     circ(PIV[0], PIV[1], 20, BRASS, LW);
   };
   const strings = (side, a, pc, tilt) => {
-    const s = side === 'L' ? -1 : 1, ex = PIV[0] + s * ARM * Math.cos(a), ey = PIV[1] - s * ARM * Math.sin(a);
-    const lean = Math.sin(tilt) * 22;
-    line(ex, ey, pc[0] - 140, pc[1] - lean, 4); line(ex, ey, pc[0] + 140, pc[1] - lean, 4);
+    const s = side === 'L' ? -1 : 1, ex = PIV[0] + s * ARM * Math.cos(a), ey = PIV[1] - s * ARM * Math.sin(a), lean = Math.sin(tilt) * 22;
+    line(ex, ey, pc[0] - 122, pc[1] - lean, 4); line(ex, ey, pc[0] + 122, pc[1] - lean, 4);
   };
-
-  // tek düşen ya da yerleşmiş öğe: kefeyle birlikte hareket eder; boşaltmada yerçekimiyle kadrajdan düşer
-  const place = (t, it, pc, side) => {
-    const ts = it.land - FALL; if (t < ts) return null;
+  // düşen ya da yerleşmiş öğe (kefeyle birlikte); boşaltmada yerçekimiyle kadrajdan düşer
+  const place = (t, it, pc, side, fall = 0.55, from = -260) => {
+    const ts = it.land - fall; if (t < ts) return null;
     const tx = pc[0] + it.slot[0], ty = pc[1] + it.slot[1];
-    if (t < it.land) { const u = (t - ts) / FALL, x0 = tx + (it.seed - 0.5) * 60; return [lerp(x0, tx, u), lerp(-160, ty, u * u)]; }
-    if (t > dump0 + 0.25) { const d = t - dump0 - 0.25; return [tx + (side === 'L' ? -1 : 1) * d * 60 * (0.5 + it.seed), ty + 6400 * d * d + d * 160]; }
+    if (t < it.land) { const u = (t - ts) / fall; return [tx, lerp(from, ty, u * u)]; }
+    if (t > dump0 + 0.22) { const d = t - dump0 - 0.22; return [tx + (side === 'L' ? -1 : 1) * d * 70, ty + 6400 * d * d + d * 160]; }
     return [tx, ty];
   };
 
-  const SPEC = {};
   const draw = t0 => {
     const t = loopT(t0);
     bg('#EFE6D2');
-    rect(-600, GY, 2280, 900, '#DCCFB2', 0); line(-600, GY, 1680, GY, LW);
+    rect(-600, GY, 2280, 1200, '#DCCFB2', 0); line(-600, GY, 1680, GY, LW);
     const a = angle(t), pl = panAt('L', a), pr = panAt('R', a), tp = tip(t);
-    scale(t, a);
+    scale(a);
     strings('L', a, pl, tp); strings('R', a, pr, tp);
     bowl(pl[0], pl[1], 'back', null, tp); bowl(pr[0], pr[1], 'back', null, -tp);
-    for (const h of P.animals) { const p = place(t, h, pr, 'R'); if (p) animal(h.kind, p[0], p[1], 0.74, h.seed > 0.5 ? 1 : -1); }
-    for (const h of P.humans) { const p = place(t, h, pl, 'L'); if (p) person(p[0], p[1], h.seed); }
-    bowl(pl[0], pl[1], 'front', ['İNSANLAR'], tp); bowl(pr[0] - 10, pr[1], 'front', ['VAHŞİ', 'MEMELİLER'], -tp);
-    // l05: kütleler, yığınların üstünde (okunurken hareket etmez: terazi o sırada durgun)
-    const kL = ease.enter(seg(t, w('l05', 7) - 0.06, 0.35)), kR = ease.enter(seg(t, w('l05', 3) - 0.06, 0.35)), out = ease.exit(seg(t, T.l06 + 0.6, 0.3));
-    const tag = (x, y, big, k) => { if (k <= 0 || out >= 1) return; ctx.save(); ctx.globalAlpha = 1 - out; const dy = (1 - k) * 24; ctx.beginPath(); ctx.rect(x - 200, y - 90 + dy * 0, 400, 150); ctx.clip();
-      ctx.lineJoin = 'round'; ctx.font = '800 76px Archivo'; ctx.textAlign = 'center'; ctx.lineWidth = 15; ctx.strokeStyle = '#FBF7EE'; ctx.strokeText(big, x, y + dy); ctx.fillStyle = PAL.red; ctx.fillText(big, x, y + dy);
-      ctx.font = '700 40px Archivo'; ctx.lineWidth = 10; ctx.strokeText('milyon ton', x, y + 48 + dy); ctx.fillStyle = PAL.ink; ctx.fillText('milyon ton', x, y + 48 + dy); ctx.restore(); ctx.textAlign = 'left'; };
-    tag(pl[0], pl[1] - 480, '390', kL); tag(pr[0] - 50, pr[1] - 400, '60', kR);
-    // l06: gönder (kâğıt uçak sol alttan sağ üste)
-    const f = seg(t, w('l06', 4) - 0.2, 1.3);
-    if (f > 0 && f < 1) { const u = ease.state(f); plane(lerp(40, 1200, u), lerp(1180, 520, u) - Math.sin(u * Math.PI) * 90, 1.25, -0.5 + 0.2 * u); }
+    for (const h of AN) { const p = place(t, h, pr, 'R', h.fall || 0.6, h.fall ? -700 : -260); if (p) animal(h.kind, p[0], p[1], h.k, h.kind === 'balina' ? 1 : (h.slot[0] > 0 ? -1 : 1)); }
+    for (const s of SA) { const p = place(t, s, pr, 'R', 0.42, -200); if (p) sack(p[0], p[1], s.half); }
+    for (const h of HU) { const p = place(t, h, pl, 'L'); if (p) person(p[0], p[1], h.seed); }
+    bowl(pl[0], pl[1], 'front', ['İNSANLAR'], tp); bowl(pr[0], pr[1], 'front', ['VAHŞİ', 'MEMELİLER'], -tp);
+    const f = seg(t, w('l05', 4) - 0.25, 1.3);
+    if (f > 0 && f < 1) { const u = ease.state(f); plane(lerp(40, 1200, u), lerp(1120, 460, u) - Math.sin(u * Math.PI) * 90, 1.25, -0.5 + 0.2 * u); }
+  };
+
+  // ekran sabiti kütle etiketleri: sol 390 (TAK'ta), sağ 60 → 390 (çuvallarla); okunurken yerinde durur
+  const overlay = (t0, c) => {
+    const t = loopT(t0);
+    const out = ease.exit(seg(t, T.l05 + 0.2, 0.3));
+    const tag = (x, y, big, k, col) => {
+      if (k <= 0 || out >= 1) return;
+      c.save(); c.globalAlpha = 1 - out; c.beginPath(); c.rect(x - 230, y - 95, 460, 160); c.clip();
+      const dy = (1 - k) * 30; c.lineJoin = 'round'; c.textAlign = 'center';
+      c.font = '800 80px Archivo'; c.lineWidth = 16; c.strokeStyle = '#FBF7EE'; c.strokeText(big, x, y + dy); c.fillStyle = col; c.fillText(big, x, y + dy);
+      c.font = '700 40px Archivo'; c.lineWidth = 10; c.strokeText('milyon ton', x, y + 50 + dy); c.fillStyle = PAL.ink; c.fillText('milyon ton', x, y + 50 + dy);
+      c.restore(); c.textAlign = 'left';
+    };
+    tag(785, 345, String(rightMass(t)), ease.enter(seg(t, Math.max(AN[6].land + 0.15, T.l01end + 0.5), 0.35)), PAL.ink);
+    tag(300, 345, '390', ease.enter(seg(t, hit + 0.05, 0.3)), PAL.red);
+    const k = ease.enter(seg(t, w('l04', 5) - 0.05, 0.35));
+    if (k > 0 && out < 1) {
+      c.save(); c.globalAlpha = 1 - out; c.textAlign = 'center'; c.lineJoin = 'round';
+      c.font = '800 112px Archivo'; c.lineWidth = 18; c.strokeStyle = '#FBF7EE'; const y = 525 + (1 - k) * 30;
+      c.strokeText('6,5 kat', 495, y); c.fillStyle = PAL.red; c.fillText('6,5 kat', 495, y);
+      c.restore(); c.textAlign = 'left';
+    }
   };
 
   return {
-    open: true, capSize: 76, capBase: 1410,
+    open: true, capSize: 76, capBase: 1400,
     title: ['Hangisi', 'ağır basar?'], kicker: 'TAHMİN ET',
-    cam: [[0, 1.12, 540, 990], [T.l03, 1.14, 540, 985], [T.l04 - 0.2, 1.2, 532, 1000], [T.l05, 1.13, 540, 990], [T.l06 - 0.3, 1.2, 540, 960], [T.l06 + 1.6, 1.12, 540, 990], [D, 1.12, 540, 990]],
-    numbers: [[w('l04', 1) - 0.04, T.l05 - 0.15, '6,5 kat', 'insanlar daha ağır', 470, 170]],
+    cam: [[0, 1.12, 580, 860], [AN[3].land, 1.12, 580, 860], [T.l02end, 1.1, 540, 880], [T.l04 - 0.25, 1.16, 500, 900], [hit + 0.5, 1.1, 540, 880], [T.l05, 1.1, 560, 860], [T.l05end + 0.6, 1.1, 540, 880], [D, 1.12, 580, 860]],
+    overlay,
     draw,
   };
 }

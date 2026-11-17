@@ -30,7 +30,7 @@
       "\"Altı kattan fazla\" ifadesi merkezi tahmine (6,5) dayanır."
     ]
   },
-  "caption": "Dünyadaki bütün vahşi memelileri terazinin bir kefesine, bütün insanları öbür kefesine koysak hangisi ağır basar? ⚖️\n\nCEVAP\nİnsanlar, altı kattan fazla. Bütün vahşi memelilerin (karada ve denizde; filler, balinalar, geyikler, yarasalar dâhil) toplam ağırlığı yaklaşık 60 milyon ton. Bütün insanlarınki yaklaşık 390 milyon ton.\n\nNASIL ÖLÇÜLDÜ?\nWeizmann Enstitüsü'nden araştırmacılar 2023'te yüzlerce türün sayım verilerini ve bir makine öğrenmesi modelini birleştirdi. Kara memelileri yaklaşık 20, deniz memelileri yaklaşık 40 milyon ton çıktı; yarıdan fazlası büyük balinalar.\n\nBunu hayvanları seven birine gönder.\n\nKaynak: Greenspoon ve ark., \"The global biomass of wild mammals\", PNAS, 2023.\n\nTakip et: her gün yeni bir sayı.",
+  "caption": "Dünyadaki bütün vahşi memelileri terazinin bir kefesine, bütün insanları öbür kefesine koysak hangisi ağır basar? ⚖️\n\nCEVAP\nİnsanlar. Teraziyi dengelemek için bütün vahşi memelilerin 6,5 katı gerekir. Bütün vahşi memelilerin (karada ve denizde; filler, balinalar, geyikler, yarasalar dâhil) toplam ağırlığı yaklaşık 60 milyon ton. Bütün insanlarınki yaklaşık 390 milyon ton.\n\nNASIL ÖLÇÜLDÜ?\nWeizmann Enstitüsü'nden araştırmacılar 2023'te yüzlerce türün sayım verilerini ve bir makine öğrenmesi modelini birleştirdi. Kara memelileri yaklaşık 20, deniz memelileri yaklaşık 40 milyon ton çıktı; yarıdan fazlası büyük balinalar. Deniz memelilerinin tahmini belirsiz (20–80 milyon ton); üst sınırla bile insanlar 3 kattan ağır.\n\nBunu hayvanları seven birine gönder.\n\nKaynak: Greenspoon ve ark., \"The global biomass of wild mammals\", PNAS, 2023.\n\nTakip et: her gün yeni bir sayı.",
   "hashtags": [
     "#doğa",
     "#hayvanlar",
@@ -46,10 +46,9 @@
     "gaps": {
       "l01": 0.2,
       "l02": 0.15,
-      "l03": 1,
-      "l04": 0.45,
-      "l05": 0.3,
-      "l06": 0.3
+      "l03": 1.1,
+      "l04": 0.5,
+      "l05": 0.3
     },
     "lines": [
       {
@@ -76,17 +75,11 @@
       {
         "id": "l04",
         "who": "A",
-        "text": "İnsanlar altı kattan fazla ağır basıyor.",
-        "tts": "İnsanlar altı kattan fazla ağır basıyor."
+        "text": "Teraziyi dengelemek için vahşi memelilerin altı buçuk katı gerekiyor.",
+        "tts": "Teraziyi dengelemek için vahşi memelilerin altı buçuk katı gerekiyor."
       },
       {
         "id": "l05",
-        "who": "A",
-        "text": "Bütün vahşi memeliler 60 milyon ton. Biz 390 milyon tonuz.",
-        "tts": "Bütün vahşi memeliler altmış milyon ton. Biz üç yüz doksan milyon tonuz."
-      },
-      {
-        "id": "l06",
         "who": "A",
         "text": "Bunu hayvanları seven birine gönder.",
         "tts": "Bunu hayvanları seven birine gönder."

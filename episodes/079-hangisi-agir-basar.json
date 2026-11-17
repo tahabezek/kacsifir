@@ -47,7 +47,7 @@
       "l01": 0.25,
       "l02": 0.3,
       "l03": 1.1,
-      "l04": 0.15,
+      "l04": 0.08,
       "l05": 0.3
     },
     "lines": [
@@ -57,7 +57,7 @@
         "text": "Bütün insanlar mı ağır basar, bütün vahşi memeliler mi?",
         "tts": "Bütün insanlar mı ağır basar, bütün vahşi memeliler mi?",
         "voice": "tr-TR-EmelNeural",
-        "rate": "+8%",
+        "rate": "+16%",
         "pitch": "+2Hz"
       },
       {
@@ -86,5 +86,6 @@
       }
     ],
     "askHold": 1.9
-  }
+  },
+  "publishAt": "2026-11-17T05:30Z"
 }

@@ -1,0 +1,102 @@
+{
+  "id": "082",
+  "slug": "ses-mi-ucak-mi",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "№ 082 · HANGİSİ?",
+  "kicker": "ANKARA – İSTANBUL · 350 KM",
+  "bpm": 100,
+  "coverAt": 0,
+  "question": [
+    "Hangisi önce",
+    "İstanbul'a varır?"
+  ],
+  "facts": {
+    "distanceKm": 350,
+    "distanceNote": "Kızılay (39.9208 K, 32.8541 D) – Taksim (41.0369 K, 28.9850 D) büyük daire, d3-geo, R = 6371 km; luftlinie.org şehir merkezleri 351 km",
+    "soundMs": 343,
+    "soundKmh": 1235,
+    "soundNote": "20 °C kuru havada; 331,3 + 0,606 × 20 ~343 m/sn",
+    "soundTime": "350.000 m / 343 m/sn = 1.020 sn ~17 dk 0 sn",
+    "flightKm": 380,
+    "flightNote": "Esenboğa (ESB) – İstanbul Havalimanı (IST) büyük daire 380 km",
+    "flightTime": "THY tarifesi yaklaşık 1 sa 10 dk (kapıdan kapıya, blok süre); tarifelerde 1 sa 0 dk – 1 sa 25 dk",
+    "cruise": "dar gövdeli yolcu jetleri Mach 0,78–0,79 ~830–840 km/sa; genel aralık Mach 0,78–0,85 ~830–900 km/sa",
+    "fairness": "uçak bütün yolu 900 km/sa ile uçsa bile 380 km / 900 km/sa ~25 dk; ses 17 dk. Filmde uçak havada geçen süreyle yarışır (taksi sayılmaz), ekranda yazar.",
+    "honesty": "gerçekte bir topun sesi 350 km öteden duyulmaz; metin 'ulaşsaydı' diye kurar",
+    "sources": [
+      "https://www.luftlinie.org/Ankara",
+      "https://distancefyi.com/distance/ankara-to-istanbul/",
+      "https://en.wikipedia.org/wiki/Speed_of_sound",
+      "https://www.physicsclassroom.com/class/sound/u11l2c",
+      "https://www.turkishairlines.com/tr-tr/ankara-kalkisli-istanbul-varisli-ucak-bileti",
+      "https://www.airportroutes.com/routes/LTAC-LTFM/",
+      "https://theflyingengineer.com/how-fast-does-a-boeing-737-fly/",
+      "https://pilotinstitute.com/how-fast-do-airplanes-fly/",
+      "https://www.airportia.com/flights/tk2126/istanbul/ankara/"
+    ],
+    "airborne": "havada yaklaşık 45 dk: THY blok süresi ~1 sa 10 dk iki taksi süresini de içerir; airportia ortalama uçuş süresi (IST-ESB) 43 dk. Filmde yarış havalanma anında başlar; uçak ortalama hızla (380 km / 45 dk ~507 km/sa) ilerler, 17. dakikada rotanın %38 kadarında.",
+    "notes": [
+      "YHT kritik turu 1 sonrası filmden çıkarıldı (Ankara Garı–Pendik en hızlı 3 sa 43 dk; e-yasamrehberi)"
+    ]
+  },
+  "caption": "Ankara'da dev bir top patlasa, sesi mi İstanbul'a önce varır, aynı anda havalanan uçak mı? 🔊✈️\n\nHESAP\nKızılay ile Taksim arası kuş uçuşu yaklaşık 350 km. Ses 20 °C havada saniyede 343 metre, yani saatte yaklaşık 1.235 km gider. 350 km'yi yaklaşık 17 dakikada alır.\n\nYolcu jetleri seyirde saatte yaklaşık 830–900 km ile uçar; hepsi ses hızının altındadır. Esenboğa–İstanbul Havalimanı uçuşu havada yaklaşık 45 dakika sürer (tarifedeki 1 saat 10 dakika taksiyi de içerir). Uçak bütün yolu en yüksek hızıyla uçsa bile yaklaşık 25 dakika gerekir.\n\nNot: Gerçekte bir topun sesi 350 km öteden duyulmaz; hava sesi yol boyunca söndürür. Bu bir hız karşılaştırması.\n\nSen hangisini tahmin ettin? Yorumlara SES ya da UÇAK yaz.\n\nBunu her şeyi bildiğini sanan birine gönder.\n\nKaynaklar: luftlinie.org; Wikipedia, \"Speed of sound\"; THY Ankara–İstanbul uçuş sayfası; airportia.\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#ses",
+    "#uçak",
+    "#fizik",
+    "#ankara",
+    "#istanbul",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Ses mi önce varır, uçak mı? Ankara'dan İstanbul'a yarış",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 1,
+      "l04": 0.3,
+      "l05": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Ankara'da dev bir top patlıyor. Aynı anda bir uçak İstanbul'a havalanıyor.",
+        "tts": "Ankara'da dev bir top patlıyor. Aynı anda bir uçak İstanbul'a havalanıyor."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Uçak önce varır. Ses uçaktan hızlı olabilir mi?",
+        "tts": "Uçak önce varır. Ses uçaktan hızlı olabilir mi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Topun sesinin İstanbul'a kadar ulaştığını düşünelim.",
+        "tts": "Topun sesinin İstanbul'a kadar ulaştığını düşünelim."
+      },
+      {
+        "id": "l04",
+        "who": "A",
+        "text": "Ses 17 dakikada varır. Uçak o sırada yolun yarısına bile gelmemiş olur.",
+        "tts": "Ses on yedi dakikada varır. Uçak o sırada yolun yarısına bile gelmemiş olur."
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Uçak 45'inci dakikada, sesten 28 dakika sonra iner. Bunu her şeyi bildiğini sanan birine gönder.",
+        "tts": "Uçak kırk beşinci dakikada, sesten yirmi sekiz dakika sonra iner. Bunu her şeyi bildiğini sanan birine gönder."
+      }
+    ],
+    "askHold": 0.3
+  },
+  "publishAt": "2026-11-18T05:30Z"
+}

@@ -1,0 +1,150 @@
+{
+  "id": "080",
+  "slug": "titanik-son-160-dakika",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "BİR HİKÂYE",
+  "kicker": "BİR HİKÂYE · 160 DAKİKA",
+  "bpm": 64,
+  "coverAt": 0,
+  "question": [
+    "Yakındaki gemi",
+    "neden gelmedi?"
+  ],
+  "facts": {
+    "collision": "14 Nisan 1912, 23.40 (gemi saati) · British Inquiry",
+    "sank": "15 Nisan 1912, 02.20",
+    "firstBoat": "No. 7, 00.45 · 27 kişi (British Inquiry tablosu; kaynaklarda 26–28) · 65 kişilik",
+    "lastBoat": "Collapsible D, 02.05 (British Inquiry); A ve B gemi batarken yüzerek ayrıldı",
+    "boatsLaunched": "18 (A ve B hariç)",
+    "rockets": "yaklaşık 8 fişek, 00.45–01.45; Californian sekiz fişek gördü",
+    "carpathia": "58 deniz mili yaklaşık 107 km; ilk filikayı (No. 2) 04.10’da aldı; varış yaklaşık 04.00",
+    "californian": "British Inquiry: en fazla 8–10 deniz mili (15–19 km); MAIB 1992: 17–20 deniz mili (31–37 km); “kırk kilometre bile uzakta değildi”",
+    "evans": "Cyril Evans 23.30’da yattı (British Inquiry: “turned in at 11.30 p.m.”)",
+    "phillips": "Jack Phillips, baş telsizci, CQD ve SOS yolladı; 25 yaşında öldü",
+    "saved": "British: 712 (biri sonra öldü) · US Senate: 706",
+    "lost": "US Senate: 1.517 · British: yaklaşık 1.490–1.503; “yaklaşık 1.500”",
+    "sources": [
+      "https://www.titanicinquiry.org/BOTInq/BOTReport/BOTRepBoats.php",
+      "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepCalifornian.php",
+      "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepAssist.php",
+      "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepRescue.php",
+      "https://www.titanicinquiry.org/USInq/USReport/AmInqRep03.php",
+      "https://assets.publishing.service.gov.uk/media/54c15bf240f0b6158d000027/MAIBReport_ReappraisalOfEvidence-SSCalifornian-Titanic-1992.pdf",
+      "https://encyclopedia-titanica.org/titanic-lifeboat-7",
+      "https://kids.britannica.com/students/article/Titanic/313853",
+      "https://en.wikipedia.org/wiki/Jack_Phillips_(wireless_officer)",
+      "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepLSApp.php"
+    ],
+    "notes": [
+      "Californian mesafesi tartışmalı: tek sayı söylenmez, üst sınır (yaklaşık 37 km) kullanılır",
+      "İlk filikadaki kişi sayısı kaynaklara göre 26–28: anlatımda “30 kişi bile yok”, ekranda British Inquiry rakamı 27",
+      "Saat sıkıştırılmış; filikalar British Inquiry tablosundaki saatlerde iner (tablo “güvenilir değil” notludur)"
+    ],
+    "emptySeats": "Filika kapasitesi 1.178 (British Inquiry, Life-Saving Appliances: 14×65 + 2×40 + 4×47); kurtulan 706 (US) / 712 (British); boş yer yaklaşık 466–472, ekranda 470",
+    "californianNote": "Titanik’ten görülen geminin Californian olup olmadığı tartışmalıdır; anlatım “yakındaki bir gemi” der. Californian’ın sekiz fişek gördüğü ve sabaha kadar yerinden kıpırdamadığı British Inquiry’de"
+  },
+  "caption": "Titanik batarken yakında bir gemi vardı ve gelmedi. 🕯️\n\nGECE\n14 Nisan 1912, saat 23.40’ta Titanik bir buzdağına çarptı. Gece yarısından sonra baş telsizci Jack Phillips imdat çağrısı yollamaya başladı. Çağrıyı 58 deniz mili (yaklaşık 107 km) ötedeki Carpathia duydu ve hemen rotasını çevirdi.\n\nFİLİKALAR\nİlk filika (7 numara) 00.45 civarında indi. 65 kişilik filikada 30 kişi bile yoktu. Son filika 02.05’te indi. Gemi 02.20’de battı.\n\nCALIFORNIAN\nBuzlar arasında duran Californian, Titanik’in fişeklerini gördü. Telsizcisi Cyril Evans ise 23.30’da yatmıştı ve telsiz kapalıydı. Mesafe tartışmalıdır: 1912 İngiliz soruşturması en fazla 8–10 deniz mili, 1992 yeniden incelemesi 17–20 deniz mili dedi.\n\nCarpathia 04.00 civarında geldi ve 700’den fazla kişiyi filikalardan aldı. Yaklaşık 1.500 kişi öldü. Filikaların toplam yeri 1.178 kişilikti: yaklaşık 470 yer boş kaldı.\n\nBunu Titanik’i yalnızca filmden bilen birine gönder.\n\nKaynaklar: British Wreck Commissioner’s Inquiry (1912), ABD Senatosu soruşturması (1912), MAIB yeniden inceleme raporu (1992), Encyclopedia Titanica.\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#titanik",
+    "#tarih",
+    "#gerçekhikaye",
+    "#denizcilik",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Titanik’in son 160 dakikası: en yakın gemi neden gelmedi?",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.3,
+      "l02": 0.3,
+      "l03": 0.15,
+      "l04": 0.3,
+      "l05": 0.3,
+      "l06": 0.15,
+      "l07": 0.3,
+      "l08": 3.9,
+      "l09": 0.4,
+      "l10": 1.65,
+      "l11": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Titanik batarken yakınında bir gemi vardı.",
+        "tts": "Titanik batarken yakınında bir gemi vardı."
+      },
+      {
+        "id": "l02",
+        "who": "A",
+        "text": "Gelmedi.",
+        "tts": "Gelmedi."
+      },
+      {
+        "id": "l03",
+        "who": "S",
+        "text": "Yardım çağıramıyorlar mı?",
+        "tts": "Yardım çağıramıyorlar mı?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l04",
+        "who": "A",
+        "text": "Telsizci Jack Phillips durmadan imdat çağrısı yolluyor. 107 kilometre ötedeki Carpathia çağrıyı duyuyor ve rotasını çeviriyor.",
+        "tts": "Telsizci Cek Filips durmadan imdat çağrısı yolluyor. yüz yedi kilometre ötedeki Karpatya çağrıyı duyuyor ve rotasını çeviriyor."
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "İlk filika 65 kişilik ama içinde 30 kişi bile yok.",
+        "tts": "İlk filika altmış beş kişilik ama içinde otuz kişi bile yok."
+      },
+      {
+        "id": "l06",
+        "who": "S",
+        "text": "Peki yakındaki o gemi?",
+        "tts": "Peki yakındaki o gemi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "Californian ufukta duruyor ve sekiz fişek görüyor. Ama yerinden kıpırdamıyor.",
+        "tts": "Kaliforniyın ufukta duruyor ve sekiz fişek görüyor. Ama yerinden kıpırdamıyor."
+      },
+      {
+        "id": "l08",
+        "who": "A",
+        "text": "Son filika saat ikiyi beş geçe iniyor.",
+        "tts": "Son filika saat ikiyi beş geçe iniyor."
+      },
+      {
+        "id": "l09",
+        "who": "A",
+        "text": "Californian kırk kilometre bile uzakta değildi. Telsizcisi uyuyordu.",
+        "tts": "Kaliforniyın kırk kilometre bile uzakta değildi. Telsizcisi uyuyordu."
+      },
+      {
+        "id": "l10",
+        "who": "A",
+        "text": "Carpathia ancak sabah dörtte geliyor. Yedi yüzden fazla kişi kurtuluyor, yaklaşık 1.500 kişi ölüyor.",
+        "tts": "Karpatya ancak sabah dörtte geliyor. Yedi yüzden fazla kişi kurtuluyor, yaklaşık bin beş yüz kişi ölüyor."
+      },
+      {
+        "id": "l11",
+        "who": "A",
+        "text": "Bunu Titanik'i yalnızca filmden bilen birine gönder.",
+        "tts": "Bunu Titanik'i yalnızca filmden bilen birine gönder."
+      }
+    ],
+    "askHold": 1.9
+  },
+  "publishAt": "2026-11-17T17:30Z"
+}

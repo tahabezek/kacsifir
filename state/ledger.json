@@ -982,13 +982,15 @@
     },
     "2026-11-17T17:30Z": {
       "episode": "080",
-      "media": "v/039-yalniz-george-ve-diego.mp4",
+      "media": "v/080-titanik-son-160-dakika-1c2fc2b4.mp4",
       "status": "scheduled",
       "at": "2026-11-15T17:57:48.299Z",
       "postId": "6af9f2beb9a106584cc5c9b4",
       "dueAt": "2026-11-17T17:30:00.000Z",
       "swappedFrom": "039",
-      "swapNote": "16 Kasım: pilot yeni iskelet, kullanıcı isteği"
+      "swapNote": "16 Kasım: pilot yeni iskelet, kullanıcı isteği",
+      "prevMedia": "v/039-yalniz-george-ve-diego.mp4",
+      "remediaAt": "2026-11-17T01:13:09.742Z"
     },
     "2026-11-18T05:30Z": {
       "episode": "082",

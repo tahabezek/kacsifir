@@ -970,13 +970,15 @@
     },
     "2026-11-17T05:30Z": {
       "episode": "079",
-      "media": "v/003-dunyanin-merkezi.mp4",
+      "media": "v/079-hangisi-agir-basar-d4f67d95.mp4",
       "status": "scheduled",
       "at": "2026-11-15T06:12:40.486Z",
       "postId": "6af94d88e86a5789a6f236d0",
       "dueAt": "2026-11-17T05:30:00.000Z",
       "swappedFrom": "003",
-      "swapNote": "16 Kasım: pilot yeni iskelet, kullanıcı isteği"
+      "swapNote": "16 Kasım: pilot yeni iskelet, kullanıcı isteği",
+      "prevMedia": "v/003-dunyanin-merkezi.mp4",
+      "remediaAt": "2026-11-17T00:36:40.776Z"
     },
     "2026-11-17T17:30Z": {
       "episode": "039",

@@ -14,12 +14,12 @@ const step = (tau, w) => (tau <= 0 ? 0 : 1 - (1 + w * tau) * Math.exp(-w * tau))
 function animalPlan(T) {
   const w = (id, k) => T.w(id, k);
   return [
-    { kind: 'balina', k: 1.55, slot: [72, 30], land: 0.18, fall: 1.0, from: -100, flip: -1 },
-    { kind: 'ayi', k: 0.9, slot: [72, -34], land: 1.05 },
-    { kind: 'aslan', k: 0.85, slot: [-74, -36], land: 1.6 },
-    { kind: 'geyik', k: 0.85, slot: [8, -52], land: 2.2 },
+    { kind: 'balina', k: 1.45, slot: [50, 30], land: 0.18, fall: 1.0, from: -100, flip: -1 },
+    { kind: 'ayi', k: 0.9, slot: [72, -34], land: 1.05, dx: 170 },
+    { kind: 'aslan', k: 0.85, slot: [-74, -36], land: 1.6, dx: 260 },
+    { kind: 'geyik', k: 0.85, slot: [8, -52], land: 2.2, dx: 200 },
     { kind: 'fil', k: 1.2, slot: [-52, -96], land: w('l01', 7) + 0.02 },
-    { kind: 'balina', k: 1.2, slot: [40, -140], land: w('l01', 8) + 0.02 },
+    { kind: 'balina', k: 1.2, slot: [40, -140], land: w('l01', 8) + 0.02, flip: 1 },
     { kind: 'geyik', k: 0.9, slot: [-40, -168], land: w('l01', 9) + 0.02 },
     { kind: 'ayi', k: 0.8, slot: [60, -196], land: T.l02 + 0.25 },
     { kind: 'aslan', k: 0.75, slot: [-10, -232], land: T.l02 + 0.75 },
@@ -165,7 +165,7 @@ export async function film(A) {
   const place = (t, it, pc, side, fall = 0.55, from = -260) => {
     const ts = it.land - fall; if (t < ts) return null;
     const tx = pc[0] + it.slot[0], ty = pc[1] + it.slot[1];
-    if (t < it.land) { const u = (t - ts) / fall; return [tx, lerp(from, ty, u * u)]; }
+    if (t < it.land) { const u = (t - ts) / fall; return [tx + (it.dx || 0) * (1 - u), lerp(from, ty, u * u)]; }
     if (t > dump0 + 0.22) { const d = t - dump0 - 0.22; return [tx + (side === 'L' ? -1 : 1) * d * 70, ty + 6400 * d * d + d * 160]; }
     return [tx, ty];
   };
@@ -201,9 +201,11 @@ export async function film(A) {
     scale(a);
     strings('L', a, pl, tp); strings('R', a, pr, tp);
     bowl(pl[0], pl[1], 'back', null, tp); bowl(pr[0], pr[1], 'back', null, -tp);
+    ctx.save(); ctx.beginPath(); ctx.rect(-800, -3000, 2680, GY + 3000); ctx.clip();   // boşaltmada düşenler zeminin arkasında kaybolur
     for (const h of AN) { const p = place(t, h, pr, 'R', h.fall || 0.6, h.from ?? -260); if (p) animal(h.kind, p[0], p[1], h.k, h.flip ?? (h.kind === 'balina' ? 1 : (h.slot[0] > 0 ? -1 : 1))); }
     for (const s of SA) { const p = throwIn(t, s, pr); if (p) sack(p[0], p[1], s.half); }
     for (const h of HU) { const p = pourIn(t, h, pl); if (p) person(p[0], p[1], h.seed); }
+    ctx.restore();
     bowl(pl[0], pl[1], 'front', ['İNSANLAR'], tp); bowl(pr[0], pr[1], 'front', ['VAHŞİ', 'MEMELİLER'], -tp);
     const f = seg(t, w('l05', 4) - 0.25, 1.3);
     if (f > 0 && f < 1) { const u = ease.state(f); plane(lerp(40, 1200, u), lerp(1120, 460, u) - Math.sin(u * Math.PI) * 90, 1.25, -0.5 + 0.2 * u); }
@@ -235,8 +237,8 @@ export async function film(A) {
   return {
     open: true, capSize: 76, capBase: 1420,
     title: ['Hangisi', 'ağır basar?'], kicker: 'TAHMİN ET',
-    cam: [[0, 1.12, 580, 860], [AN[3].land, 1.12, 580, 860], [T.l02end, 1.1, 540, 880], [T.l04 - 0.25, 1.16, 500, 900], [hit + 0.5, 1.1, 540, 880], [T.l05 - 0.05, 1.1, 560, 860], [T.l05 + 0.6, 1.14, 540, 870], [T.loop0 - 1.05, 1.14, 540, 870], [D, 1.12, 580, 860]],
-    chunks: { l01: [['Bir kefede dünyadaki bütün vahşi memeliler var:', 0], ['filler, balinalar, geyikler.', 7]], l02: [['Bunlar kesin ağır basar.', 0]], l03: [['Öbür kefeye bütün insanları koyuyoruz.', 0]], l04: [['Teraziyi dengelemek için', 0], ['vahşi memelilerin altı buçuk katı gerekiyor.', 3]], l05: [['Bunu hayvanları seven birine gönder.', 0]] },
+    cam: [[0, 1.12, 580, 860], [AN[3].land, 1.12, 580, 860], [T.l02end, 1.1, 540, 880], [T.l04 - 0.25, 1.16, 520, 900], [hit + 0.5, 1.1, 540, 880], [w('l04', 5) - 0.05, 1.1, 540, 880], [w('l04', 5) + 0.55, 1.15, 540, 870], [T.loop0 - 1.0, 1.15, 540, 870], [D, 1.12, 580, 860]],
+    chunks: { l01: [['Bir kefede dünyadaki', 0], ['bütün vahşi memeliler var:', 3], ['filler, balinalar, geyikler.', 7]], l02: [['Bunlar kesin ağır basar.', 0]], l03: [['Öbür kefeye bütün insanları koyuyoruz.', 0]], l04: [['Teraziyi dengelemek için', 0], ['vahşi memelilerin altı buçuk katı gerekiyor.', 3]], l05: [['Bunu hayvanları seven birine gönder.', 0]] },
     overlay,
     draw,
   };

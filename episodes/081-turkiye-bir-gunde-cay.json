@@ -1,0 +1,107 @@
+{
+  "id": "081",
+  "slug": "turkiye-bir-gunde-cay",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "SAYILARLA TÜRKİYE",
+  "kicker": "SAYILARLA TÜRKİYE · ÇAY",
+  "bpm": 96,
+  "coverAt": 0,
+  "question": [
+    "Bir günlük çay",
+    "tek bardağa konsa?"
+  ],
+  "facts": {
+    "perCapitaKg": "3,16 kg kuru çay / kişi / yıl (Statista, haberlerde dünya birincisi; İrlanda 2,19, Birleşik Krallık 1,94). ÇAYKUR 2021-22: 3,5-4 kg. Senaryoda alt sınır: 'üç kilodan fazla'.",
+    "population": "86.092.168 (TÜİK ADNKS, 31 Aralık 2025)",
+    "glassesPerDay": "245 milyon bardak / gün (Rize Çay Araştırma ve Uygulama Merkezi, TRT Haber; Cumhuriyet 12.06.2026 aynı sayı). TRT girişte 'yaklaşık 250 milyon' da diyor; alt sınır 245 milyon kullanıldı.",
+    "crossCheck": [
+      "1) Yıllık kuru çay: 3,16 kg x 86.092.168 kişi yaklaşık 272.000 ton / yıl",
+      "2) Günlük: 272.000 ton / 365 yaklaşık 745 ton kuru çay / gün",
+      "3) Bardak başına kuru çay: 745.000.000 g / 245.000.000 bardak yaklaşık 3,0 g (demlikte bardak başına ~1 tatlı kaşığı ile uyumlu; ÇAYKUR 3,5-4 kg ile 3,4-3,8 g)",
+      "4) İki yol tutarlı: 245 milyon bardak / gün makul alt sınır."
+    ],
+    "glass": "İnce belli bardak (Paşabahçe İncebelli 125 cc): yükseklik 9-9,6 cm, çap 6 cm (satıcı ürün sayfaları). Servis edilen çay ~100 ml.",
+    "volume": "245.000.000 x ~0,1 L yaklaşık 24,5 milyon litre yaklaşık 24.500 m3 (yaklaşık 10 olimpik havuz; filmde kullanılmadı)",
+    "giantGlass": [
+      "Benzer (aynı biçimde) tek bir bardak 245 milyon bardağı aynı doluluk seviyesinde taşıyorsa hacim oranı 245.000.000, boy oranı bunun küp kökü:",
+      "küp kök 245.000.000 yaklaşık 626 (250 milyon için 630) => 'altı yüz kattan fazla'",
+      "Dev bardağın boyu: 626 x 9,0-9,6 cm yaklaşık 56-60 m (ortası ~58 m)",
+      "Galata Kulesi: 62,59 m (Kültür ve Turizm Bakanlığı, külah tepesine), 66,9 m (süs dahil); dış çap 16,45 m",
+      "56-60 m / 62,6-66,9 m yaklaşık %84-96 => 'neredeyse Galata Kulesi kadar'. Filmde dev bardak 58 m, kule 66,9 m çizildi; bardak ağzı külahın dibine yakın kalır."
+    ],
+    "sources": [
+      "https://www.trthaber.com/haber/ekonomi/turkiyenin-vazgecilmez-icecegi-cayin-100-yillik-hikayesi-868585.html",
+      "https://www.cumhuriyet.com.tr/ekonomi/245-milyon-bardak-icin-kalite-ve-deger-arayisi-2511457",
+      "https://www.ntv.com.tr/saglik/turkiye-cay-tuketiminde-dunya-birincisi-gunde-5-bardaktan-fazla-cay-zararli,SBFwhQRNq0illfMgZUGytw",
+      "https://arastirma.tarimorman.gov.tr/tepge/Belgeler/PDF%20Tarım%20Ürünleri%20Piyasaları/2025-Temmuz%20Tarım%20Ürünleri%20Raporu/Çay%20Tarım%20Ürünleri%20Piyasaları%20Raporu%20Temmuz-2025.pdf",
+      "https://data.tuik.gov.tr/Bulten/Index?p=Adrese-Dayali-Nufus-Kayit-Sistemi-Sonuclari-2025-53899&dil=1",
+      "https://www.kaufland.fr/product/319890453/",
+      "https://istanbul.ktb.gov.tr/EN-307578/galata-kulesi.html"
+    ],
+    "notes": [
+      "Kişi başı rakamın yılı haberlerde belirsiz (2016 / 2020 Statista); bu yüzden yıl söylenmedi, 'üç kilodan fazla' dendi.",
+      "245 milyon bardak bir tahmindir; anlatımda 'yaklaşık' denir.",
+      "2. sürüm: kanca iddiası \"neredeyse Galata Kulesi'ne yetişir\" (56-60 m / 62,6 m = yüzde 89-96). Ekranda dev bardak ~58 m (aralığın ortası), kule 62,6 m (külahın tepesi) etiketli; süs ucu 66,9 m çizildi.",
+      "Kişi başı dünya birinciliği anlatımdan çıkarıldı (süre); açıklamada duruyor."
+    ]
+  },
+  "caption": "Türkiye'nin bir günlük çayı tek bardağa konsa, o bardak İstanbul'un bir simgesine neredeyse yetişir: Galata Kulesi'ne. ☕\n\nKişi başına yılda üç kilodan fazla kuru çayla dünyada birinciyiz. Her gün yaklaşık 245 milyon bardak çay içiyoruz.\n\nHESAP\n245 milyon bardağın hepsini aynı biçimde tek bir ince belli bardağa doldurmak için bardağın boyu ∛245.000.000 ≈ 626 kat uzamalı. 9-9,6 cm'lik bir bardak böylece 56-60 metreye çıkar. Galata Kulesi 62,6 metre (külahın tepesine).\n\nBunu çay demleyen birine gönder.\n\nKaynaklar: Rize Çay Araştırma ve Uygulama Merkezi (TRT Haber); Statista (NTV); ÇAYKUR; TÜİK ADNKS 2025; Kültür ve Turizm Bakanlığı.\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#çay",
+    "#türkçay",
+    "#galatakulesi",
+    "#türkiye",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Türkiye'nin bir günlük çayı tek bardakta: Galata Kulesi boyu",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.2,
+      "l02": 0.15,
+      "l03": 0.3,
+      "l04": 0.9,
+      "l05": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "A",
+        "text": "Türkiye'nin bir günlük çayı tek bardağa konsa, o bardak İstanbul'un bir simgesine neredeyse yetişir.",
+        "tts": "Türkiye'nin bir günlük çayı tek bardağa konsa, o bardak İstanbul'un bir simgesine neredeyse yetişir."
+      },
+      {
+        "id": "l02",
+        "who": "S",
+        "text": "Bir günde o kadar çay mı içiyoruz?",
+        "tts": "Bir günde o kadar çay mı içiyoruz?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l03",
+        "who": "A",
+        "text": "Evet, her gün yaklaşık 245 milyon bardak içiyoruz.",
+        "tts": "Evet, her gün yaklaşık iki yüz kırk beş milyon bardak içiyoruz."
+      },
+      {
+        "id": "l04",
+        "who": "A",
+        "text": "Bardağın boyu altı yüz kattan fazla uzamalı.",
+        "tts": "Bardağın boyu altı yüz kattan fazla uzamalı."
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Galata Kulesi'ne neredeyse yetişti. Bunu çay demleyen birine gönder.",
+        "tts": "Galata Kulesi'ne neredeyse yetişti. Bunu çay demleyen birine gönder."
+      }
+    ],
+    "askHold": 1.4
+  },
+  "publishAt": "2026-11-19T05:30Z"
+}

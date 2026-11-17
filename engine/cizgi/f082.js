@@ -74,8 +74,16 @@ export async function film(A) {
 
   // ——— altyazı alanları (motorun parça kuralıyla): harita çizgileri altyazının arkasından geçmez ———
   const ep = await (await fetch('../episodes/082-ses-mi-ucak-mi.json')).json();
+  // altyazı parçaları elle: her parça tam cümle (kelime sırası seslendirme metnine göre)
+  const CH = {
+    l01: [["Ankara'da dev bir top patlıyor.", 0], ["Aynı anda bir uçak İstanbul'a havalanıyor.", 5]],
+    l02: [["Uçak önce varır. Ses uçaktan hızlı olabilir mi?", 0]],
+    l03: [["Topun sesinin İstanbul'a kadar ulaştığını düşünelim.", 0]],
+    l04: [["Ses 17 dakikada varır.", 0], ["Uçak o sırada yolun yarısına bile gelmemiş olur.", 5]],
+    l05: [["Uçak 45'inci dakikada, sesten 28 dakika sonra iner.", 0], ["Bunu her şeyi bildiğini sanan birine gönder.", 10]],
+  };
   const capBoxes = [];
-  { const ac = autoChunks(ep), list = [];
+  { const ac = CH, list = [];
     for (const [id, arr] of Object.entries(ac)) {
       const raw = arr.map(([s, i]) => ({ s, t0: T.w(id, i) - 0.04 }));
       raw.forEach((c, i) => { c.t1 = i + 1 < raw.length ? raw[i + 1].t0 : T[id + 'end'] + 0.3; });
@@ -310,7 +318,7 @@ export async function film(A) {
 
   return {
     cam,
-    open: true, capSize: 76,
+    open: true, capSize: 76, chunks: CH,
     title: ['Hangisi önce', "İstanbul'a varır?"],
     titleOut: K.tO,
     kicker: 'ANKARA – İSTANBUL · 350 KM',

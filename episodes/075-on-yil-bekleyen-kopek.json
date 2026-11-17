@@ -7,7 +7,6 @@
   "kicker": "BİR HİKÂYE · 9 YIL 9 AY",
   "bpm": 100,
   "coverAt": 0,
-  "publishAt": "2026-11-20T17:30Z",
   "question": [
     "On yıl",
     "bekleyen köpek"
@@ -106,5 +105,7 @@
         "tts": "bin dokuz yüz otuz dörtte istasyonun önüne heykeli dikiliyor; açılışta kendisi de orada. Bir yıl sonra ölüyor. Dokuz yıl, dokuz buçuk ay. Bunu seni hep bekleyen birine gönder."
       }
     ]
-  }
+  },
+  "disabled": true,
+  "disabledNote": "083 aynı hikâyenin yeni iskeletli sürümü (17 Kasım pilotu); A/B sonrası karar"
 }

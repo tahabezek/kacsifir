@@ -1,0 +1,136 @@
+{
+  "id": "083",
+  "slug": "hachiko-3578-gun",
+  "template": "cizgi",
+  "gl": false,
+  "serial": "BİR HİKÂYE",
+  "kicker": "BİR HİKÂYE · SHIBUYA",
+  "bpm": 90,
+  "coverAt": 0,
+  "question": [
+    "Bu köpek",
+    "kaç gün bekledi?"
+  ],
+  "facts": {
+    "born": "10 Kasım 1923, Ōdate",
+    "uenoDied": "1925-05-21",
+    "asahi": "1932-10-04",
+    "statue": "1934-04-21",
+    "died": "1935-03-08",
+    "days": "21.05.1925 ile 08.03.1935 arası = 3.578 gün (takvim farkı; 1928 ve 1932 artık yıl)",
+    "asahiDay": 2693,
+    "statueDay": 3257,
+    "wait": "9 yıl 9,5 ay",
+    "fed": "Wikipedia: \"People started to bring Hachikō food while he waited\"",
+    "mistreated": "Wikipedia: istasyon çalışanları, satıcılar ve çocuklar ona kötü davrandı; bir tanık yakitori satıcısının onu akşamları kovaladığını anlatır",
+    "trainTime": "Wikipedia: trenin geleceği saatte aynı yerde belirirdi",
+    "sources": [
+      "https://www.nippon.com/en/japan-glances/jg00137/hachiko-the-faithful-dog.html",
+      "https://en.wikipedia.org/wiki/Hachik%C5%8D",
+      "https://www.u-tokyo.ac.jp/focus/en/features/z1304_00280.html"
+    ],
+    "notes": [
+      "yakitori şişi efsanesi kullanılmadı (2011: kanser + kalp kurdu)",
+      "ölüm çizilmez; yalnızca boş yer ve heykel",
+      "yaş söylenmez (kaynaklar 11 ve 13 diyor: sayım farkı)"
+    ]
+  },
+  "caption": "Sahibi bir gün eve dönmedi. Köpeği onu 3.578 gün boyunca aynı kapıda bekledi. 🐕\n\nHİKÂYE\nHachikō her akşam Shibuya İstasyonu'nda trenden inen sahibi Profesör Hidesaburō Ueno'yu karşılıyordu. 21 Mayıs 1925'te Ueno üniversitede beyin kanamasından öldü ve bir daha dönmedi.\n\nBEKLEYİŞ\nHachikō bundan sonra her gün trenin geldiği saatte istasyona gitti. Kimi ona yemek verdi, kimi onu kovdu. 4 Ekim 1932'de Asahi Shimbun hikâyesini yazınca bütün Japonya onu tanıdı. 21 Nisan 1934'te istasyonun önüne heykeli dikildi; açılışta kendisi de oradaydı. 8 Mart 1935'te öldü.\n\n21 Mayıs 1925'ten 8 Mart 1935'e: 3.578 gün, yani 9 yıl 9,5 ay.\n\nBunu seni hep bekleyen birine gönder.\n\nKaynaklar: nippon.com, \"Hachikō: The Faithful Dog\"; Tokyo Üniversitesi; Wikipedia.\n\nTakip et: her gün yeni bir sayı.",
+  "hashtags": [
+    "#hachiko",
+    "#köpek",
+    "#sadakat",
+    "#japonya",
+    "#kaçsıfır"
+  ],
+  "ytTitle": "Hachikō sahibini 3.578 gün bekledi",
+  "voice": {
+    "name": "tr-TR-AhmetNeural",
+    "rate": "+14%",
+    "tight": 0.28,
+    "gaps": {
+      "l01": 0.3,
+      "l02": 0.45,
+      "l03": 0.3,
+      "l04": 0.6,
+      "l05": 3,
+      "l06": 1.1,
+      "l07": 2.4,
+      "l08": 2.9,
+      "l09": 0.8,
+      "l10": 0.3
+    },
+    "lines": [
+      {
+        "id": "l01",
+        "who": "S",
+        "text": "Bu köpek kaç gün bekledi?",
+        "tts": "Bu köpek kaç gün bekledi?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l02",
+        "who": "A",
+        "text": "Hachikō her akşam sahibini bu kapıda karşılıyor. Bir gün Profesör Ueno üniversitede ölüyor.",
+        "tts": "Haçiko her akşam sahibini bu kapıda karşılıyor. Bir gün Profesör Ueno üniversitede ölüyor."
+      },
+      {
+        "id": "l03",
+        "who": "S",
+        "text": "Köpek ne yapıyor?",
+        "tts": "Köpek ne yapıyor?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l04",
+        "who": "A",
+        "text": "Ertesi akşam yine trenin saatinde geliyor.",
+        "tts": "Ertesi akşam yine trenin saatinde geliyor."
+      },
+      {
+        "id": "l05",
+        "who": "A",
+        "text": "Kimi ona yemek veriyor, kimi onu kovuyor.",
+        "tts": "Kimi ona yemek veriyor, kimi onu kovuyor."
+      },
+      {
+        "id": "l06",
+        "who": "A",
+        "text": "1932'de bir gazete hikâyesini yazıyor ve bütün Japonya onu tanıyor.",
+        "tts": "bin dokuz yüz otuz ikide bir gazete hikâyesini yazıyor ve bütün Japonya onu tanıyor."
+      },
+      {
+        "id": "l07",
+        "who": "A",
+        "text": "1934'te heykelini dikiyorlar. Açılışta kendisi de orada.",
+        "tts": "bin dokuz yüz otuz dörtte heykelini dikiyorlar. Açılışta kendisi de orada."
+      },
+      {
+        "id": "l08",
+        "who": "S",
+        "text": "Sonunda ne oluyor?",
+        "tts": "Sonunda ne oluyor?",
+        "voice": "tr-TR-EmelNeural",
+        "rate": "+8%",
+        "pitch": "+2Hz"
+      },
+      {
+        "id": "l09",
+        "who": "A",
+        "text": "Bir gün o da gelmiyor.",
+        "tts": "Bir gün o da gelmiyor."
+      },
+      {
+        "id": "l10",
+        "who": "A",
+        "text": "Bunu seni hep bekleyen birine gönder.",
+        "tts": "Bunu seni hep bekleyen birine gönder."
+      }
+    ]
+  },
+  "publishAt": "2026-11-20T17:30Z"
+}

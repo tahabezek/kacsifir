@@ -6082,29 +6082,6 @@
         "metricsUpdatedAt": "2026-11-16T19:32:05.975Z"
       },
       {
-        "postId": "6af2c23e05af22d72611b2b7",
-        "episode": "032",
-        "slug": "uranus-kutup",
-        "template": "uranus",
-        "sentAt": "2026-11-12T05:31:01.300Z",
-        "link": "https://www.instagram.com/reel/DfoTy94GpjZ/",
-        "views": 1602,
-        "reach": 1341,
-        "likes": 0,
-        "comments": 0,
-        "shares": 3,
-        "saves": 3,
-        "follows": 0,
-        "avgWatchS": 7.91,
-        "durationS": 27,
-        "watchRatio": 0.29,
-        "sharesPer1k": 2.2,
-        "savesPer1k": 2.2,
-        "followsPer1k": 0,
-        "score": 25.1,
-        "metricsUpdatedAt": "2026-11-16T19:32:05.977Z"
-      },
-      {
         "postId": "6af6ad99ba218f326381ed92",
         "episode": "047",
         "slug": "insanlik-bir-seker-kupu",
@@ -6264,6 +6241,29 @@
         "followsPer1k": 0,
         "score": 7,
         "metricsUpdatedAt": "2026-11-16T19:32:06.011Z"
+      },
+      {
+        "postId": "6af94d88e86a5789a6f236d0",
+        "episode": "079",
+        "slug": "hangisi-agir-basar",
+        "template": "cizgi",
+        "sentAt": "2026-11-17T05:30:55.726Z",
+        "link": "https://www.instagram.com/reel/Df1LvwtD6wr/",
+        "views": 0,
+        "reach": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "avgWatchS": null,
+        "durationS": 19.2,
+        "watchRatio": null,
+        "sharesPer1k": 0,
+        "savesPer1k": 0,
+        "followsPer1k": 0,
+        "score": 0,
+        "metricsUpdatedAt": "2026-11-15T06:13:28.544Z"
       }
     ]
   }

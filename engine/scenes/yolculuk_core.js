@@ -21,7 +21,7 @@ export function buildYolTimeline(ep, voice) {
     t += Math.min(dur, (v.words?.at(-1)?.t1 ?? dur) + 0.12) + ((ep.voice.gaps || GAP)[ln.id] ?? 0.3);
   }
   const last = L[ep.voice.lines.at(-1).id];
-  const askEnd = last.end + ASK_HOLD;
+  const askEnd = last.end + (ep.voice.askHold ?? ASK_HOLD);   // askHold: film başına kapanış beklemesi (16 Kasım pilotları)
   // kelime zamanı: satırdaki n'inci kelime (0'dan) ya da kelimenin başladığı yer (önek eşleşmesi)
   const W = (id, key, edge = 't0') => {
     const ws = L[id].words;

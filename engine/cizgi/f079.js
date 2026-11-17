@@ -6,7 +6,7 @@
 // Terazinin açısı her iniş için kapalı formüllü (kritik sönümlü) bir adımın toplamıdır: önceki kareler simüle edilmez.
 // Döngü: kapanışta kefeler öne devrilip boşalır, terazi dengeye döner, ilk balina yeniden düşmeye başlar.
 
-const PIV = [540, 700], ARM = 280, STR = 220, STOP = 0.45, GY = 1180;
+const PIV = [540, 700], ARM = 280, STR = 220, STOP = 0.45, GY = 1130;
 const HUMAN_ROWS = [10, 9, 9, 8, 8, 7, 6, 5, 4, 3, 2, 1];
 const step = (tau, w) => (tau <= 0 ? 0 : 1 - (1 + w * tau) * Math.exp(-w * tau));   // kritik sönümlü adım yanıtı
 
@@ -14,7 +14,7 @@ const step = (tau, w) => (tau <= 0 ? 0 : 1 - (1 + w * tau) * Math.exp(-w * tau))
 function animalPlan(T) {
   const w = (id, k) => T.w(id, k);
   return [
-    { kind: 'balina', k: 1.55, slot: [-6, 30], land: 0.3, fall: 1.45 },
+    { kind: 'balina', k: 1.55, slot: [72, 30], land: 0.18, fall: 1.0, from: -100, flip: -1 },
     { kind: 'ayi', k: 0.9, slot: [72, -34], land: 1.05 },
     { kind: 'aslan', k: 0.85, slot: [-74, -36], land: 1.6 },
     { kind: 'geyik', k: 0.85, slot: [8, -52], land: 2.2 },
@@ -142,8 +142,8 @@ export async function film(A) {
     else {
       poly([[-130, 0], [-102, 74], [102, 74], [130, 0]], BRASS, LW);
       ell(0, 0, 130, 20, null, LW);
-      if (label.length > 1) label.forEach((s, i) => text(s, 0, 45 + i * 26, 26, PAL.ink, 'Archivo', 800));
-      else text(label[0], 0, 58, 36, PAL.ink, 'Archivo', 800);
+      if (label.length > 1) label.forEach((s, i) => text(s, 0, 42 + i * 29, 30, PAL.ink, 'Archivo', 800));
+      else text(label[0], 0, 58, 38, PAL.ink, 'Archivo', 800);
     }
     ctx.restore();
   };
@@ -170,6 +170,29 @@ export async function film(A) {
     return [tx, ty];
   };
 
+  // çuval: sağ kenarın dışından yay çizerek atılır (etiketlerin altından geçer)
+  const throwIn = (t, it, pc) => {
+    const d = 0.5, ts = it.land - d; if (t < ts) return null;
+    const tx = pc[0] + it.slot[0], ty = pc[1] + it.slot[1];
+    if (t < it.land) { const u = (t - ts) / d; return [lerp(1260, tx, u), lerp(600, ty, u) - 260 * u * (1 - u)]; }
+    if (t > dump0 + 0.22) { const q = t - dump0 - 0.22; return [tx + q * 70, ty + 6400 * q * q + q * 160]; }
+    return [tx, ty];
+  };
+  // insanlar: sol kenarın dışından yay çizerek akar (sayaç yazısının altından geçer)
+  const pourIn = (t, it, pc) => {
+    const d = 0.6, ts = it.land - d; if (t < ts) return null;
+    const tx = pc[0] + it.slot[0], ty = pc[1] + it.slot[1];
+    if (t < it.land) { const u = (t - ts) / d; return [lerp(-180 - it.seed * 80, tx, u), lerp(640 + it.seed * 60, ty, u) - 300 * u * (1 - u)]; }
+    if (t > dump0 + 0.22) { const q = t - dump0 - 0.22; return [tx - q * 70, ty + 6400 * q * q + q * 160]; }
+    return [tx, ty];
+  };
+  // sol sayaç: insanlar yağarken 0 → 60 (terazi dengeye gelir), son dalgada 60 → 390
+  let tLevel = T.l04 - 0.6;
+  for (let t = T.l03; t < T.l04; t += 1 / 300) if (rawAngle(t) >= 0) { tLevel = t; break; }
+  const landed = t => HU.reduce((n, h) => n + (t >= h.land ? 1 : 0), 0);
+  const nLevel = Math.max(1, landed(tLevel));
+  const leftMass = t => { const n = landed(t); if (t >= hit) return 390; if (n <= nLevel) return Math.round(60 * n / nLevel); return Math.min(390, Math.round(60 + 330 * (n - nLevel) / (HU.length - nLevel))); };
+
   const draw = t0 => {
     const t = loopT(t0);
     bg('#EFE6D2');
@@ -178,9 +201,9 @@ export async function film(A) {
     scale(a);
     strings('L', a, pl, tp); strings('R', a, pr, tp);
     bowl(pl[0], pl[1], 'back', null, tp); bowl(pr[0], pr[1], 'back', null, -tp);
-    for (const h of AN) { const p = place(t, h, pr, 'R', h.fall || 0.6, h.fall ? -700 : -260); if (p) animal(h.kind, p[0], p[1], h.k, h.kind === 'balina' ? 1 : (h.slot[0] > 0 ? -1 : 1)); }
-    for (const s of SA) { const p = place(t, s, pr, 'R', 0.42, -200); if (p) sack(p[0], p[1], s.half); }
-    for (const h of HU) { const p = place(t, h, pl, 'L'); if (p) person(p[0], p[1], h.seed); }
+    for (const h of AN) { const p = place(t, h, pr, 'R', h.fall || 0.6, h.from ?? -260); if (p) animal(h.kind, p[0], p[1], h.k, h.flip ?? (h.kind === 'balina' ? 1 : (h.slot[0] > 0 ? -1 : 1))); }
+    for (const s of SA) { const p = throwIn(t, s, pr); if (p) sack(p[0], p[1], s.half); }
+    for (const h of HU) { const p = pourIn(t, h, pl); if (p) person(p[0], p[1], h.seed); }
     bowl(pl[0], pl[1], 'front', ['İNSANLAR'], tp); bowl(pr[0], pr[1], 'front', ['VAHŞİ', 'MEMELİLER'], -tp);
     const f = seg(t, w('l05', 4) - 0.25, 1.3);
     if (f > 0 && f < 1) { const u = ease.state(f); plane(lerp(40, 1200, u), lerp(1120, 460, u) - Math.sin(u * Math.PI) * 90, 1.25, -0.5 + 0.2 * u); }
@@ -199,7 +222,7 @@ export async function film(A) {
       c.restore(); c.textAlign = 'left';
     };
     tag(785, 345, String(rightMass(t)), ease.enter(seg(t, Math.max(AN[6].land + 0.15, T.l01end + 0.5), 0.35)), PAL.ink);
-    tag(300, 345, '390', ease.enter(seg(t, hit + 0.05, 0.3)), PAL.red);
+    tag(300, 345, String(leftMass(t)), ease.enter(seg(t, T.l03 + 0.15, 0.35)), t >= hit ? PAL.red : PAL.ink);
     const k = ease.enter(seg(t, w('l04', 5) - 0.05, 0.35));
     if (k > 0 && out < 1) {
       c.save(); c.globalAlpha = 1 - out; c.textAlign = 'center'; c.lineJoin = 'round';
@@ -210,9 +233,10 @@ export async function film(A) {
   };
 
   return {
-    open: true, capSize: 76, capBase: 1400,
+    open: true, capSize: 76, capBase: 1420,
     title: ['Hangisi', 'ağır basar?'], kicker: 'TAHMİN ET',
-    cam: [[0, 1.12, 580, 860], [AN[3].land, 1.12, 580, 860], [T.l02end, 1.1, 540, 880], [T.l04 - 0.25, 1.16, 500, 900], [hit + 0.5, 1.1, 540, 880], [T.l05, 1.1, 560, 860], [T.l05end + 0.6, 1.1, 540, 880], [D, 1.12, 580, 860]],
+    cam: [[0, 1.12, 580, 860], [AN[3].land, 1.12, 580, 860], [T.l02end, 1.1, 540, 880], [T.l04 - 0.25, 1.16, 500, 900], [hit + 0.5, 1.1, 540, 880], [T.l05 - 0.05, 1.1, 560, 860], [T.l05 + 0.6, 1.14, 540, 870], [T.loop0 - 1.05, 1.14, 540, 870], [D, 1.12, 580, 860]],
+    chunks: { l01: [['Bir kefede dünyadaki bütün vahşi memeliler var:', 0], ['filler, balinalar, geyikler.', 7]], l02: [['Bunlar kesin ağır basar.', 0]], l03: [['Öbür kefeye bütün insanları koyuyoruz.', 0]], l04: [['Teraziyi dengelemek için', 0], ['vahşi memelilerin altı buçuk katı gerekiyor.', 3]], l05: [['Bunu hayvanları seven birine gönder.', 0]] },
     overlay,
     draw,
   };

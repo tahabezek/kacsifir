@@ -47,7 +47,7 @@
       "l01": 0.2,
       "l02": 0.15,
       "l03": 1.1,
-      "l04": 0.5,
+      "l04": 0.25,
       "l05": 0.3
     },
     "lines": [
@@ -84,6 +84,7 @@
         "text": "Bunu hayvanları seven birine gönder.",
         "tts": "Bunu hayvanları seven birine gönder."
       }
-    ]
+    ],
+    "askHold": 1.5
   }
 }

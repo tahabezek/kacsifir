@@ -44,8 +44,8 @@
     "rate": "+14%",
     "tight": 0.28,
     "gaps": {
-      "l01": 0.2,
-      "l02": 0.15,
+      "l01": 0.25,
+      "l02": 0.3,
       "l03": 1.1,
       "l04": 0.15,
       "l05": 0.3
@@ -53,24 +53,24 @@
     "lines": [
       {
         "id": "l01",
-        "who": "A",
-        "text": "Bir kefede dünyadaki bütün vahşi memeliler var: filler, balinalar, geyikler.",
-        "tts": "Bir kefede dünyadaki bütün vahşi memeliler var: filler, balinalar, geyikler."
-      },
-      {
-        "id": "l02",
         "who": "S",
-        "text": "Bunlar kesin ağır basar.",
-        "tts": "Bunlar kesin ağır basar.",
+        "text": "Bütün insanlar mı ağır basar, bütün vahşi memeliler mi?",
+        "tts": "Bütün insanlar mı ağır basar, bütün vahşi memeliler mi?",
         "voice": "tr-TR-EmelNeural",
         "rate": "+8%",
         "pitch": "+2Hz"
       },
       {
+        "id": "l02",
+        "who": "A",
+        "text": "Sağ kefede filler, balinalar, geyikler var.",
+        "tts": "Sağ kefede filler, balinalar, geyikler var."
+      },
+      {
         "id": "l03",
         "who": "A",
-        "text": "Öbür kefeye bütün insanları koyuyoruz.",
-        "tts": "Öbür kefeye bütün insanları koyuyoruz."
+        "text": "Sol kefeye bütün insanları koyuyoruz.",
+        "tts": "Sol kefeye bütün insanları koyuyoruz."
       },
       {
         "id": "l04",
@@ -85,6 +85,6 @@
         "tts": "Bunu hayvanları seven birine gönder."
       }
     ],
-    "askHold": 1.1
+    "askHold": 1.9
   }
 }

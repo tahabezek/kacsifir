@@ -3,6 +3,102 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-11-19 turu
+
+**Tur notu:** Bu turda nasa.gov, usgs.gov, wikipedia ve flightradar24 sayfaları ağ kısıtı yüzünden doğrudan açılamadı; veriler yalnızca web araması özetlerinden ve elle yapılan hesaplardan alındı, bu yüzden "Kaynaklar" satırındaki sayfalar yazmadan önce bir kez açılıp rakamlar teyit edilmeli. Reddit (r/theydidthemath yansıması), X, Ekşi Sözlük ve Google Trends'ten güvenilir bir "bu haftanın en çok oy alanları" listesi alınamadı (doğrulanamadı); öneriler bilinen klasik sorulara ve tarihli fırsatlara dayanıyor. Aritmetik `python3` ile yeniden hesaplandı. Tarihli fırsatlar: **20 Kasım** (ISS'in ilk modülü Zarya, 28. yıl), **27 Kasım** (Black Friday), **3 Aralık** (ilk SMS, 34. yıl), **11–14 Aralık** (Apollo 17, 54. yıl), **15 Ocak 2027** (Unix zamanı 1.800.000.000'a ulaşır). Önceki turlarla çakışma kontrol edildi: Parker, Europa Clipper, Marconi, Mavi Bilye, 2038 sorunu (Unix önerisi bunun devamıdır, ayrı açı), Süper Ay tekrar edilmedi.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Ay'a en son ayak basalı 54 yıl oldu: o günden beri kaç gün geçti?
+- Kanca: İnsanlar Ay'a en son 11 Aralık 1972'de indi; peki o günden bugüne kaç gün geçti?
+- Sayılar: İniş 11 Aralık 1972 (19:54 UTC), Ay'dan kalkış 14 Aralık 1972 (22:54 UTC). 11 Aralık 1972 → 11 Aralık 2026 = **19.723 gün** (54 yıl; python ile doğrulandı). Yüzey kalışı ≈ 75 saat; üç Ay yürüyüşü toplam 22 saat 4 dakika; Ay'a ayak basan toplam 12 kişi; örnek ≈ 110 kg (NASA 110,4 kg); araç sürüşü kaynağa göre 30,5–35,9 km. Kıyas: Ay'da kalınan süre (75 saat) ≈ 3 gün; Ay'dan uzak kalınan süre 19.723 gün → **her Ay günü için ≈ 263 gün Dünya'da beklendi** (19.723 ÷ 75 saat'e denk 3,125 gün ≈ 6.311 kat).
+- Kaynaklar: https://www.nasa.gov/missions/apollo/apollo-17-mission-details/ · https://www.astronomy.com/space-exploration/apollo-17-humanitys-last-trip-to-the-moon/ (arama sonuçlarında görüldü; araç mesafesi kaynaklar arasında çelişiyor, yazmadan önce NASA'dan teyit et).
+- Görsel metafor: **Ay yüzeyinde ayak izleri ve bir takvim yaprağı sayacı.** Tek bir bot izi sabit durur; üzerinden takvim yaprakları (her biri bir yıl) uçar, 54 yaprak dolar. Kırmızı: son iz.
+- Türkiye bağlantısı: Ayak izinin bırakıldığı gün doğan bir Türkiyeli bugün 54 yaşında; "1972 doğumlular" ile kıyas.
+- Neden şimdi / tarih: **11–14 Aralık 2026** (yuvarlak olmayan ama güçlü yıldönümü); Artemis II ile bağlanabilir.
+- Puan (1-10): 8 · Kanca güçlü, sayı kesin, duygusal; viral potansiyel orta-yüksek. Doğruluk güveni yüksek (tarihler tutarlı).
+- Tuzaklar: "Ay'a en son insan" Apollo 17'nin kalkışı (14 Aralık) ya da inişi (11 Aralık) olarak iki ayrı gün sayılabilir; tek tarih seç ve söyle. Araç mesafesi ve örnek kütlesi kaynağa göre değişir.
+
+### Okyanustaki bütün tuzu karaya yaysan kaç metre kalınlık olur?
+- Kanca: Okyanustaki bütün tuzu karalara serersek yaklaşık 150 metrelik bir tabaka oluşur; bu kaç katlı bina eder?
+- Sayılar: USGS metni "yaklaşık 500 fit (kaynakta 166 m yazılmış, ama 500 fit = 500 × 0,3048 = **152,4 m**)" der. Kıyas: 152,4 m ÷ 3 m (kat) ≈ 50 kat; Galata Kulesi 67 m → 152,4 ÷ 67 ≈ 2,3 kule. Metinde "40 katlı bina" benzetmesi geçer (40 × 3,8 ≈ 152 m).
+- Kaynaklar: https://www.usgs.gov/science/science-explorer/ocean/marine-geology · https://www.ecoticias.com/en/?p=53836 (arama özetinden; NOAA sayfasından kaldırıldığı belirtiliyor, "bazı tahminlere göre" ifadesi korunmalı, rakamı kesin gibi sunma).
+- Görsel metafor: **Bir tuzluk ve dünya haritası.** Dev bir tuzluk okyanusun üzerinde sallanır, tuz karaların üzerine yağar ve yükselen bir "tuz çizgisi" Galata Kulesi, sonra Çamlıca Kulesi (369 m'ye varmaz) ile kıyaslanır.
+- Türkiye bağlantısı: Tuz Gölü (Türkiye'nin tuzunun büyük bölümü) ve sofra tuzu kıyası.
+- Neden şimdi / tarih: Tarihsiz, sürekli geçerli.
+- Puan (1-10): 7 · Basit, görsel, "neden tuzlu?" merakıyla paylaşılır; ama rakam "tahmin" olduğu için doğruluk güveni orta.
+- Tuzaklar: 166 m yazan kaynaklar dönüştürme hatası taşıyor; 152 m kullan. Deniz tabanı tuzu ve kaya tuzu hesaba katılmaz.
+
+### İlk SMS 15 harfliydi: "Merry Christmas"
+- Kanca: 34 yıl önce atılan ilk kısa mesaj sadece 15 karakterdi; peki o ne yazıyordu?
+- Sayılar: 3 Aralık 1992; mesaj "Merry Christmas" = 5 + 1 + 9 = **15 karakter** (boşluk dahil). Alıcı Vodafone yöneticisi Richard Jarvis, gönderen mühendis Neil Papworth (22 yaşında); mesaj bilgisayardan Orbitel 901 telefona gitti. 1992 → 2026 = 34 yıl. SMS sınır değeri 160 karakter (kaynak: arama sonuçlarında rakam doğrulanamadı; Hillebrand'ın sınırı belirlediği anlatılıyor).
+- Kaynaklar: https://moneyweek.com/362427/3-december-1992-the-worlds-first-text-message-is-sent · https://theweek.com/articles/469869/text-message-turns-20-brief-history-sms
+- Görsel metafor: **Kâğıt şerit ve küçük ekran.** 160 karelik bir ızgara çizilir; "Merry Christmas" 15 kareyi doldurur, geri kalan 145 kare boş kalır.
+- Türkiye bağlantısı: Bayram mesajları ve "yeni yıl SMS'i" alışkanlığı; Türkiye'de ilk GSM aramaları 1994'tür (doğrulanmalı).
+- Neden şimdi / tarih: **3 Aralık 2026** (34. yıl).
+- Puan (1-10): 6 · Sevimli ama sayı büyüklüğü çarpıcı değil; kanca "ne yazıyordu?" merakına dayanıyor.
+- Tuzaklar: 160 karakter sınırının nasıl çıkarıldığı bu turda doğrulanamadı; "kâğıt kartpostal analizi" hikâyesi kaynaksız kullanılmamalı.
+
+### Black Friday: önce %30 zam, sonra %30 indirim fiyatı eski hâline getirir mi?
+- Kanca: Fiyatı önce %30 artırıp sonra %30 indirirsen ürün eski fiyatına döner mi?
+- Sayılar: 100 TL × 1,30 = 130 TL; 130 × 0,70 = **91 TL** (yani %9 daha ucuz değil, sadece %9 farkla geri kalır; eski fiyata dönmez). Karşı örnek: %50 zam sonra %50 indirim → 100 × 1,5 × 0,5 = **75 TL**. Genel formül: (1 + p)(1 − p) = 1 − p².
+- Kaynaklar: https://www.khanacademy.org/math/cc-seventh-grade-math/cc-7th-ratios-proportions/cc-7th-percent-word-problems/v/percent-word-problems · https://www.mathsisfun.com/numbers/percentage-change.html (genel kaynak; hesap elle ve python ile doğrulandı).
+- Görsel metafor: **Etiket ve makas.** Fiyat etiketi yukarı çıkar, sonra makas aynı oranda keser; kesik parça kırmızı kalır ve etiketin altındaki fark çubuğu görünür.
+- Türkiye bağlantısı: Efsane Cuma / Kasım indirimleri ve e-ticaret fiyat etiketleri.
+- Neden şimdi / tarih: **27 Kasım 2026 (Black Friday, Cuma)**; 22–27 Kasım arası yayın.
+- Puan (1-10): 7 · Kanca güçlü, çok kişinin yanıldığı bir hesap; ama "%50 + %50" önerisiyle (mevcut havuz) benzer, ayrıştır. Doğruluk güveni çok yüksek.
+- Tuzaklar: Önceki öneri (%50 üstüne %50) ile çakışmaması için "zam sonra indirim" açısı kullanılmalı; kampanya iddiası veya marka adı verme.
+
+### 100 kişi birbirine el sıkışsa kaç el sıkışma olur? (Bayramlaşma hesabı)
+- Kanca: Bir odada 100 kişi birbiriyle tokalaşsa kaç el sıkışma olur?
+- Sayılar: n(n − 1)/2 → 100 × 99 / 2 = **4.950**. 23 kişi: 23 × 22 / 2 = 253. 10 kişi: 45. Bir saniyede bir tokalaşma: 4.950 s = 82,5 dakika.
+- Kaynaklar: https://www.mathsisfun.com/combinatorics/combinations-permutations.html · https://en.wikipedia.org/wiki/Handshaking_lemma (genel matematik kaynağı; hesap python ile doğrulandı).
+- Görsel metafor: **Noktalar ve çizgiler.** Çember üzerinde 100 nokta; her tokalaşma bir çizgi, çizgiler yoğunlaşarak ağ örgüsü oluşturur. Son çizgi kırmızı.
+- Türkiye bağlantısı: Bayram sabahı mahalle bayramlaşması ve düğün tebrik kuyruğu.
+- Neden şimdi / tarih: Tarihsiz; bayram yaklaşırken (bir sonraki Ramazan Bayramı 2027) güçlenir.
+- Puan (1-10): 6 · Zarif ve yerel, ama viral potansiyel orta (yeni bilgi değil).
+- Tuzaklar: Doğum günü paradoksu (026) ile aynı "çiftler" mantığı; "aha" olarak 4.950'nin büyüklüğü vurgulanmalı.
+
+### Unix zamanı 1.800.000.000'a ulaşıyor: saniye sayacının dev "odometre" anı
+- Kanca: Bilgisayarların saniye sayacı 15 Ocak 2027'de 1,8 milyara ulaşacak; sayaç neyi sayıyor?
+- Sayılar: Unix zamanı 1 Ocak 1970 00:00 UTC'den beri geçen saniye. 1.800.000.000 saniye = **15 Ocak 2027 08:00:00 UTC** (11:00 Türkiye saati, `date` ile doğrulandı). Önceki dönüm: 1.700.000.000 = 14 Kasım 2023 22:13:20 UTC. Aradaki fark 100.000.000 s ÷ 86.400 = 1.157,4 gün ≈ 3,17 yıl. 2038 sınırı: 2.147.483.647.
+- Kaynaklar: https://en.wikipedia.org/wiki/Unix_time · https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html (arama sonuçları dışında; yazmadan önce teyit et).
+- Görsel metafor: **Arabanın kilometre sayacı.** Mekanik rakamlı bir sayaç 1.799.999.999'dan 1.800.000.000'a döner; arka planda 1970'den başlayan şerit.
+- Türkiye bağlantısı: 11:00 Türkiye saatinde; Türkiye'de sayacın 1.800.000.000 olduğu an telefon saatiyle gösterilir.
+- Neden şimdi / tarih: **15 Ocak 2027** (4 haftadan uzak; Aralık ortasında haber verilip tarih öncesi video hazırlanabilir).
+- Puan (1-10): 6 · Teknoloji meraklıları için güçlü; genel kitle için soyut.
+- Tuzaklar: 2038 sorunu bölümüyle çakışır; "bilgisayarlar bozulur" korkutması yok, çünkü 1,8 milyar sorun değil.
+
+### ISS saniyede 7,66 km: İstanbul'dan Ankara'ya bir dakikadan az
+- Kanca: Uluslararası Uzay İstasyonu İstanbul'dan Ankara'ya bir dakikadan kısa sürede gider; bu hız nasıl bir şey?
+- Sayılar: ISS hızı ≈ 7,66 km/s (≈ 27.600 km/s saat). Çevre ≈ 2π × (6.371 + 420) = 42.670 km → 42.670 ÷ 7,66 ≈ 5.570 s = **92,8 dakika/tur** (≈ 15,5 tur/gün, yani ≈ 16 gün doğumu). İstanbul–Ankara kuş uçuşu yaklaşık 350 km → 350 ÷ 7,66 ≈ **46 saniye** (kuş uçuşu mesafe harita kaynağından teyit edilmeli).
+- Kaynaklar: https://www.nasa.gov/international-space-station/space-station-facts-and-figures/ · https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station (arama yapılmadı, bilinen sayfalar; yazmadan önce teyit et).
+- Görsel metafor: **Türkiye haritası ve kırmızı nokta.** İstanbul'dan çıkan nokta Ankara'yı geçip İzmir'e ulaşır; harita üzerinde "bir göz kırpması" çizgisi.
+- Türkiye bağlantısı: İstanbul–Ankara YHT (≈ 3,5–4 saat) ile kıyas.
+- Neden şimdi / tarih: **20 Kasım** (ISS'in ilk modülü Zarya, 1998 fırlatması; 28. yıl).
+- Puan (1-10): 5 · Hız kıyası bilinen türden (Parker önerisiyle benzer), yalnızca yıldönümü bağlantısıyla taze.
+- Tuzaklar: Yükseklik 400–420 km arasında değişir; hız ve tur süresi yaklaşık değerdir.
+
+### Gökyüzünde şu an kaç uçak var? Rekor günde 153.359 uçuş
+- Kanca: Şu an dünyada gökyüzünde yaklaşık yirmi bin uçak olabilir; peki bir günde kaç uçuş yapılıyor?
+- Sayılar: Flightradar24'e göre 23 Temmuz 2026'da 24 saatte **153.359 ticari uçuş** (rekor); bir ana göre en yüksek eşzamanlı sayı 22.000+ (Mayıs 2023). 153.359 ÷ 86.400 = **1,77 uçuş/saniye**; yani bu videoyu izlerken yaklaşık 2 uçuş başladı.
+- Kaynaklar: https://briefly.co.za/people/248298-23-july-2026-breaks-world-record-busiest-air-travel-day/ · https://www.flightradar24.com/blog/inside-flightradar24/the-busy-summer-skies-continuing-to-break-flight-tracking-records/ (birincil rakam Flightradar24'ten teyit edilmeli; 153.359 değeri tek haber sitesinden görüldü, doğrulanamadı).
+- Görsel metafor: **Harita üzerinde küçük uçak silüetleri.** Bir saniyede birkaç uçak beliriyor; 24 saatlik sayaç hızla dönüyor.
+- Türkiye bağlantısı: İstanbul Havalimanı'nın günlük uçuş sayısı (veri bu turda aranmadı).
+- Neden şimdi / tarih: Yılbaşı seyahatleri; Aralık sonu.
+- Puan (1-10): 5 · Güncel ama kaynak güveni düşük; rakamlar tanım farkıyla (ticari / tüm uçuş) değişiyor.
+- Tuzaklar: 153.359 ve 287.364 gibi iki rakam ayrı tanımlardır; birini seç ve tanımını söyle.
+
+### Pizzayı 10 kesişle en çok kaç parçaya bölersin?
+- Kanca: Bir pizzayı yalnızca 10 düz kesişle en çok kaç parçaya bölebilirsin?
+- Sayılar: Formül n(n + 1)/2 + 1. n = 10 → 10 × 11 / 2 + 1 = **56 parça**. n = 3 → 7 parça; n = 4 → 11; n = 5 → 16. (python ile doğrulandı; "tembel aşçı dizisi", OEIS A000124.)
+- Kaynaklar: https://oeis.org/A000124 · https://mathworld.wolfram.com/CircleDivisionbyLines.html (arama yapılmadı; bilinen matematik sayfaları, yazmadan önce teyit et).
+- Görsel metafor: **Pizza dilimleri.** Her yeni kesiş mevcut tüm kesişleri çaprazlar; parçalar renkli sayıyla büyür. Kırmızı: 56. parça.
+- Türkiye bağlantısı: Pide/lahmacun ve yılbaşı pastası; "Doğum günü pastasını 10 kesişte kaç kişiye bölersin?"
+- Neden şimdi / tarih: Tarihsiz; yılbaşı yaklaşırken pasta/pizza konusu.
+- Puan (1-10): 5 · "10 saniyede ispat" serisine uygun, ama sayı küçük; viral potansiyel orta.
+- Tuzaklar: Tüm kesişlerin birbirini kesmesi ve üçlü kesişim olmaması gerekir; parçalar eşit değildir.
+
 ## 2026-11-16 turu
 
 **Tur notu:** Reddit yalnızca üçüncü taraf yansıma sayfalarından görüldü; "bu haftanın en çok oy alanları" doğrulanamadı (görünenler: borç hesapları, Titanik'i helyumla kaldırma sorusu; ikincisi daha önce de doğrulanamadığı için önerilmedi). X, Ekşi Sözlük ve Google Trends çekilemedi. Web araması doğruladı: Parker Solar Probe'un 29. yaklaşması (4 Eylül 2026) ve rekor değerleri, Europa Clipper'ın 3 Aralık 2026 Dünya geçişi, Marconi'nin 12 Aralık 1901 sinyali (mesafe kaynaklar arasında 2.000–2.100 mil olarak değişiyor), Sultan Kösen'in Guinness değerleri, Armillaria alanı (kaynağa göre 9,1–9,6 km²), Sezar'ın son nefesi hesabının girdileri. Tarihli fırsatlar: **29 Kasım–1 Aralık** (Parker'ın bir sonraki yaklaşması, tahmin), **3 Aralık** (Europa Clipper), **7 Aralık** (Mavi Bilye, 54. yıl), **12 Aralık** (Marconi, 125. yıl, yuvarlak yıldönümü), 28 Aralık–1 Ocak (2027 asal yıl). Guinness Dünya Rekorlar Günü'nün 2026 tarihi kaynaklarda çelişiyor (16, 17 ya da 21 Kasım): tarihe bağlama, gününü Guinness'in kendi sayfasından teyit et. Önceki turlarla çakışma kontrol edildi; Kola Kuyusu, Voyager, Süper Ay, Geminid, Webb, Artemis II tekrar edilmedi.

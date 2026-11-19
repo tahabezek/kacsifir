@@ -11,7 +11,7 @@ Sıralama puana göredir (yüksekten düşüğe).
 
 ### Ay'a en son ayak basalı 54 yıl oldu: o günden beri kaç gün geçti?
 - Kanca: İnsanlar Ay'a en son 11 Aralık 1972'de indi; peki o günden bugüne kaç gün geçti?
-- Sayılar: İniş 11 Aralık 1972 (19:54 UTC), Ay'dan kalkış 14 Aralık 1972 (22:54 UTC). 11 Aralık 1972 → 11 Aralık 2026 = **19.723 gün** (54 yıl; python ile doğrulandı). Yüzey kalışı ≈ 75 saat; üç Ay yürüyüşü toplam 22 saat 4 dakika; Ay'a ayak basan toplam 12 kişi; örnek ≈ 110 kg (NASA 110,4 kg); araç sürüşü kaynağa göre 30,5–35,9 km. Kıyas: Ay'da kalınan süre (75 saat) ≈ 3 gün; Ay'dan uzak kalınan süre 19.723 gün → **her Ay günü için ≈ 263 gün Dünya'da beklendi** (19.723 ÷ 75 saat'e denk 3,125 gün ≈ 6.311 kat).
+- Sayılar: İniş 11 Aralık 1972 (19:54 UTC), Ay'dan kalkış 14 Aralık 1972 (22:54 UTC). 11 Aralık 1972 → 11 Aralık 2026 = **19.723 gün** (54 yıl; python ile doğrulandı). Yüzey kalışı ≈ 75 saat; üç Ay yürüyüşü toplam 22 saat 4 dakika; Ay'a ayak basan toplam 12 kişi; örnek ≈ 110 kg (NASA 110,4 kg); araç sürüşü kaynağa göre 30,5–35,9 km. Kıyas: Yüzey kalışı 75 saat ≈ 3,125 gün; 19.723 ÷ 3,125 ≈ **6.311 kat** (insanlar Ay'da kaldığından 6.311 kat uzun süredir Ay'a gitmedi).
 - Kaynaklar: https://www.nasa.gov/missions/apollo/apollo-17-mission-details/ · https://www.astronomy.com/space-exploration/apollo-17-humanitys-last-trip-to-the-moon/ (arama sonuçlarında görüldü; araç mesafesi kaynaklar arasında çelişiyor, yazmadan önce NASA'dan teyit et).
 - Görsel metafor: **Ay yüzeyinde ayak izleri ve bir takvim yaprağı sayacı.** Tek bir bot izi sabit durur; üzerinden takvim yaprakları (her biri bir yıl) uçar, 54 yaprak dolar. Kırmızı: son iz.
 - Türkiye bağlantısı: Ayak izinin bırakıldığı gün doğan bir Türkiyeli bugün 54 yaşında; "1972 doğumlular" ile kıyas.
@@ -23,7 +23,7 @@ Sıralama puana göredir (yüksekten düşüğe).
 - Kanca: Okyanustaki bütün tuzu karalara serersek yaklaşık 150 metrelik bir tabaka oluşur; bu kaç katlı bina eder?
 - Sayılar: USGS metni "yaklaşık 500 fit (kaynakta 166 m yazılmış, ama 500 fit = 500 × 0,3048 = **152,4 m**)" der. Kıyas: 152,4 m ÷ 3 m (kat) ≈ 50 kat; Galata Kulesi 67 m → 152,4 ÷ 67 ≈ 2,3 kule. Metinde "40 katlı bina" benzetmesi geçer (40 × 3,8 ≈ 152 m).
 - Kaynaklar: https://www.usgs.gov/science/science-explorer/ocean/marine-geology · https://www.ecoticias.com/en/?p=53836 (arama özetinden; NOAA sayfasından kaldırıldığı belirtiliyor, "bazı tahminlere göre" ifadesi korunmalı, rakamı kesin gibi sunma).
-- Görsel metafor: **Bir tuzluk ve dünya haritası.** Dev bir tuzluk okyanusun üzerinde sallanır, tuz karaların üzerine yağar ve yükselen bir "tuz çizgisi" Galata Kulesi, sonra Çamlıca Kulesi (369 m'ye varmaz) ile kıyaslanır.
+- Görsel metafor: **Bir tuzluk ve dünya haritası.** Dev bir tuzluk okyanusun üzerinde sallanır, tuz karaların üzerine yağar ve yükselen bir "tuz çizgisi" Galata Kulesi, sonra Çamlıca Kulesi (369 m) ile kıyaslanır; tuz tabakası kuleden kısa kalır (152 m < 369 m).
 - Türkiye bağlantısı: Tuz Gölü (Türkiye'nin tuzunun büyük bölümü) ve sofra tuzu kıyası.
 - Neden şimdi / tarih: Tarihsiz, sürekli geçerli.
 - Puan (1-10): 7 · Basit, görsel, "neden tuzlu?" merakıyla paylaşılır; ama rakam "tahmin" olduğu için doğruluk güveni orta.
@@ -41,7 +41,7 @@ Sıralama puana göredir (yüksekten düşüğe).
 
 ### Black Friday: önce %30 zam, sonra %30 indirim fiyatı eski hâline getirir mi?
 - Kanca: Fiyatı önce %30 artırıp sonra %30 indirirsen ürün eski fiyatına döner mi?
-- Sayılar: 100 TL × 1,30 = 130 TL; 130 × 0,70 = **91 TL** (yani %9 daha ucuz değil, sadece %9 farkla geri kalır; eski fiyata dönmez). Karşı örnek: %50 zam sonra %50 indirim → 100 × 1,5 × 0,5 = **75 TL**. Genel formül: (1 + p)(1 − p) = 1 − p².
+- Sayılar: 100 TL × 1,30 = 130 TL; 130 × 0,70 = **91 TL** (yani fiyat eski değerin %9 altında kalır; eski fiyata dönmez). Karşı örnek: %50 zam sonra %50 indirim → 100 × 1,5 × 0,5 = **75 TL**. Genel formül: (1 + p)(1 − p) = 1 − p².
 - Kaynaklar: https://www.khanacademy.org/math/cc-seventh-grade-math/cc-7th-ratios-proportions/cc-7th-percent-word-problems/v/percent-word-problems · https://www.mathsisfun.com/numbers/percentage-change.html (genel kaynak; hesap elle ve python ile doğrulandı).
 - Görsel metafor: **Etiket ve makas.** Fiyat etiketi yukarı çıkar, sonra makas aynı oranda keser; kesik parça kırmızı kalır ve etiketin altındaki fark çubuğu görünür.
 - Türkiye bağlantısı: Efsane Cuma / Kasım indirimleri ve e-ticaret fiyat etiketleri.

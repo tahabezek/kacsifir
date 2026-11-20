@@ -1,6 +1,6 @@
-# Performans raporu · 2026-11-20 15:14 UTC
+# Performans raporu · 2026-11-20 19:16 UTC
 
-Gönderi: 10 · izlenme: 15128 · paylaşım: 9 · takip: 0
+Gönderi: 10 · izlenme: 13524 · paylaşım: 9 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -10,13 +10,13 @@ Gönderi: 10 · izlenme: 15128 · paylaşım: 9 · takip: 0
 | 4 | [080 titanik-son-160-dakika](https://www.instagram.com/reel/Df2ecL5oDRg/) | cizgi | 1790 | 1578 | 0.42 | 1.3 | 1.3 | 0 | 24.4 |
 | 5 | [079 hangisi-agir-basar](https://www.instagram.com/reel/Df1LvwtD6wr/) | cizgi | 2285 | 1928 | 0.58 | 0 | 0 | 0 | 23.2 |
 | 6 | [082 ses-mi-ucak-mi](https://www.instagram.com/reel/Df3wnGLDcN_/) | cizgi | 1913 | 1470 | 0.49 | 0 | 0.7 | 0 | 20.9 |
-| 7 | [066 nefes-tutan-dalgic-ve-balina](https://www.instagram.com/reel/DfxUo3WABbU/) | cizgi | 1604 | 1467 | 0.28 | 0 | 0.7 | 0 | 12.5 |
-| 8 | [038 uykusuz-ve-hafizasiz](https://www.instagram.com/reel/Dfz5nVyHB5f/) | cizgi | 1545 | 1411 | 0.2 | 0 | 0.7 | 0 | 9.6 |
-| 9 | [069 kalbin-kac-kez-atti](https://www.instagram.com/reel/Df86HitDrtG/) | cizgi | 157 | 146 | 0.15 | 0 | 0 | 0 | 5.8 |
-| 10 | [? ](https://www.instagram.com/reel/Df7n6rqFfdS/) | tower | 3 | 2 | – | 0 | 0 | 0 | 0 |
+| 7 | [038 uykusuz-ve-hafizasiz](https://www.instagram.com/reel/Dfz5nVyHB5f/) | cizgi | 1545 | 1411 | 0.2 | 0 | 0.7 | 0 | 9.6 |
+| 8 | [069 kalbin-kac-kez-atti](https://www.instagram.com/reel/Df86HitDrtG/) | cizgi | 157 | 146 | 0.15 | 0 | 0 | 0 | 5.8 |
+| 9 | [? ](https://www.instagram.com/reel/Df7n6rqFfdS/) | tower | 3 | 2 | – | 0 | 0 | 0 | 0 |
+| 10 | [083 hachiko-3578-gun](https://www.instagram.com/reel/Df-MoNfjlO3/) | cizgi | 0 | 0 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
-- cizgi: 17.8 (7 gönderi)
+- cizgi: 16.1 (7 gönderi)
 - takvim: 27.9 (1 gönderi)
 - voyager: 27.4 (1 gönderi)
 - tower: 0.0 (1 gönderi)

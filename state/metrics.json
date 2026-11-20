@@ -6870,29 +6870,6 @@
         "metricsUpdatedAt": "2026-11-20T12:32:52.849Z"
       },
       {
-        "postId": "6af75a8beea5d89b92e04dbf",
-        "episode": "066",
-        "slug": "nefes-tutan-dalgic-ve-balina",
-        "template": "cizgi",
-        "sentAt": "2026-11-15T17:32:18.899Z",
-        "link": "https://www.instagram.com/reel/DfxUo3WABbU/",
-        "views": 1604,
-        "reach": 1467,
-        "likes": 0,
-        "comments": 1,
-        "shares": 0,
-        "saves": 1,
-        "follows": 0,
-        "avgWatchS": 16.84,
-        "durationS": 60.2,
-        "watchRatio": 0.28,
-        "sharesPer1k": 0,
-        "savesPer1k": 0.7,
-        "followsPer1k": 0,
-        "score": 12.5,
-        "metricsUpdatedAt": "2026-11-20T12:32:52.849Z"
-      },
-      {
         "postId": "6af8d0efb9a106584c6df3c1",
         "episode": "038",
         "slug": "uykusuz-ve-hafizasiz",
@@ -6960,6 +6937,29 @@
         "followsPer1k": 0,
         "score": 0,
         "metricsUpdatedAt": "2026-11-20T12:32:52.849Z"
+      },
+      {
+        "postId": "6afdfdeb2560a2d3fadbfc40",
+        "episode": "083",
+        "slug": "hachiko-3578-gun",
+        "template": "cizgi",
+        "sentAt": "2026-11-20T17:31:38.899Z",
+        "link": "https://www.instagram.com/reel/Df-MoNfjlO3/",
+        "views": 0,
+        "reach": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "avgWatchS": null,
+        "durationS": 42.5,
+        "watchRatio": null,
+        "sharesPer1k": 0,
+        "savesPer1k": 0,
+        "followsPer1k": 0,
+        "score": 0,
+        "metricsUpdatedAt": "2026-11-18T19:35:07.467Z"
       }
     ]
   }

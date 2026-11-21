@@ -1,23 +1,22 @@
-# Performans raporu · 2026-11-20 23:02 UTC
+# Performans raporu · 2026-11-21 06:56 UTC
 
-Gönderi: 10 · izlenme: 13671 · paylaşım: 9 · takip: 0
+Gönderi: 10 · izlenme: 11778 · paylaşım: 7 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | [081 turkiye-bir-gunde-cay](https://www.instagram.com/reel/Df6VV-Jjg4K/) | cizgi | 1776 | 1493 | 0.51 | 2 | 0 | 0 | 28.5 |
-| 2 | [048 evrenin-takvimi](https://www.instagram.com/reel/Dfym86TGdCp/) | takvim | 1893 | 1526 | 0.37 | 1.3 | 3.9 | 0 | 27.9 |
-| 3 | [049 voyager-bir-isik-gunu](https://www.instagram.com/reel/Df5DVulirpT/) | voyager | 2171 | 1693 | 0.39 | 1.2 | 3.5 | 0 | 27.3 |
-| 4 | [080 titanik-son-160-dakika](https://www.instagram.com/reel/Df2ecL5oDRg/) | cizgi | 1791 | 1580 | 0.42 | 1.3 | 1.3 | 0 | 24.3 |
-| 5 | [079 hangisi-agir-basar](https://www.instagram.com/reel/Df1LvwtD6wr/) | cizgi | 2285 | 1928 | 0.58 | 0 | 0 | 0 | 23.2 |
-| 6 | [082 ses-mi-ucak-mi](https://www.instagram.com/reel/Df3wnGLDcN_/) | cizgi | 1913 | 1470 | 0.49 | 0 | 0.7 | 0 | 20.9 |
-| 7 | [038 uykusuz-ve-hafizasiz](https://www.instagram.com/reel/Dfz5nVyHB5f/) | cizgi | 1545 | 1411 | 0.2 | 0 | 0.7 | 0 | 9.6 |
-| 8 | [083 hachiko-3578-gun](https://www.instagram.com/reel/Df-MoNfjlO3/) | cizgi | 134 | 115 | 0.2 | 0 | 0 | 0 | 8 |
-| 9 | [069 kalbin-kac-kez-atti](https://www.instagram.com/reel/Df86HitDrtG/) | cizgi | 159 | 148 | 0.15 | 0 | 0 | 0 | 5.9 |
-| 10 | [? ](https://www.instagram.com/reel/Df7n6rqFfdS/) | tower | 4 | 3 | – | 0 | 0 | 0 | 0 |
+| 2 | [049 voyager-bir-isik-gunu](https://www.instagram.com/reel/Df5DVulirpT/) | voyager | 2171 | 1693 | 0.39 | 1.2 | 3.5 | 0 | 27.3 |
+| 3 | [080 titanik-son-160-dakika](https://www.instagram.com/reel/Df2ecL5oDRg/) | cizgi | 1791 | 1580 | 0.42 | 1.3 | 1.3 | 0 | 24.3 |
+| 4 | [079 hangisi-agir-basar](https://www.instagram.com/reel/Df1LvwtD6wr/) | cizgi | 2285 | 1928 | 0.58 | 0 | 0 | 0 | 23.2 |
+| 5 | [082 ses-mi-ucak-mi](https://www.instagram.com/reel/Df3wnGLDcN_/) | cizgi | 1913 | 1470 | 0.49 | 0 | 0.7 | 0 | 20.9 |
+| 6 | [038 uykusuz-ve-hafizasiz](https://www.instagram.com/reel/Dfz5nVyHB5f/) | cizgi | 1545 | 1411 | 0.2 | 0 | 0.7 | 0 | 9.6 |
+| 7 | [083 hachiko-3578-gun](https://www.instagram.com/reel/Df-MoNfjlO3/) | cizgi | 134 | 115 | 0.2 | 0 | 0 | 0 | 8 |
+| 8 | [069 kalbin-kac-kez-atti](https://www.instagram.com/reel/Df86HitDrtG/) | cizgi | 159 | 148 | 0.15 | 0 | 0 | 0 | 5.9 |
+| 9 | [? ](https://www.instagram.com/reel/Df7n6rqFfdS/) | tower | 4 | 3 | – | 0 | 0 | 0 | 0 |
+| 10 | [070 omrunun-kac-yili-ekranda](https://www.instagram.com/reel/Df_fABwHNf1/) | cizgi | 0 | 0 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
-- cizgi: 17.2 (7 gönderi)
-- takvim: 27.9 (1 gönderi)
+- cizgi: 15.1 (8 gönderi)
 - voyager: 27.3 (1 gönderi)
 - tower: 0.0 (1 gönderi)
 

@@ -1,22 +1,22 @@
-# Performans raporu · 2026-11-22 18:39 UTC
+# Performans raporu · 2026-11-22 22:24 UTC
 
-Gönderi: 10 · izlenme: 11252 · paylaşım: 16 · takip: 0
+Gönderi: 10 · izlenme: 12613 · paylaşım: 16 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | [071 annenle-kac-gun-kaldi](https://www.instagram.com/reel/DgCDs4wFB1r/) | cizgi | 1653 | 1434 | 0.26 | 7 | 2.1 | 0 | 42.7 |
-| 2 | [081 turkiye-bir-gunde-cay](https://www.instagram.com/reel/Df6VV-Jjg4K/) | cizgi | 1779 | 1499 | 0.51 | 2 | 0 | 0 | 28.5 |
-| 3 | [049 voyager-bir-isik-gunu](https://www.instagram.com/reel/Df5DVulirpT/) | voyager | 2182 | 1700 | 0.39 | 1.2 | 4.1 | 0 | 28.5 |
+| 1 | [071 annenle-kac-gun-kaldi](https://www.instagram.com/reel/DgCDs4wFB1r/) | cizgi | 1662 | 1438 | 0.26 | 7 | 2.1 | 0 | 42.5 |
+| 2 | [081 turkiye-bir-gunde-cay](https://www.instagram.com/reel/Df6VV-Jjg4K/) | cizgi | 1781 | 1501 | 0.51 | 2 | 0 | 0 | 28.5 |
+| 3 | [049 voyager-bir-isik-gunu](https://www.instagram.com/reel/Df5DVulirpT/) | voyager | 2183 | 1702 | 0.39 | 1.2 | 4.1 | 0 | 28.5 |
 | 4 | [082 ses-mi-ucak-mi](https://www.instagram.com/reel/Df3wnGLDcN_/) | cizgi | 1915 | 1472 | 0.49 | 0 | 0.7 | 0 | 20.9 |
-| 5 | [070 omrunun-kac-yili-ekranda](https://www.instagram.com/reel/Df_fABwHNf1/) | cizgi | 1270 | 1169 | 0.25 | 0.9 | 1.7 | 0 | 17 |
-| 6 | [076 savasi-bitmeyen-asker](https://www.instagram.com/reel/DgAxjlID_4w/) | cizgi | 2061 | 1904 | 0.31 | 0 | 1.1 | 0 | 14.3 |
-| 7 | [083 hachiko-3578-gun](https://www.instagram.com/reel/Df-MoNfjlO3/) | cizgi | 220 | 193 | 0.19 | 0 | 0 | 0 | 7.8 |
-| 8 | [069 kalbin-kac-kez-atti](https://www.instagram.com/reel/Df86HitDrtG/) | cizgi | 163 | 152 | 0.15 | 0 | 0 | 0 | 6 |
-| 9 | [077 tek-bacakla-143-gun](https://www.instagram.com/reel/DgDWPvCCqYj/) | cizgi | 0 | 0 | – | 0 | 0 | 0 | 0 |
+| 5 | [070 omrunun-kac-yili-ekranda](https://www.instagram.com/reel/Df_fABwHNf1/) | cizgi | 1271 | 1169 | 0.25 | 0.9 | 1.7 | 0 | 17 |
+| 6 | [076 savasi-bitmeyen-asker](https://www.instagram.com/reel/DgAxjlID_4w/) | cizgi | 2108 | 1946 | 0.3 | 0 | 1 | 0 | 14.2 |
+| 7 | [077 tek-bacakla-143-gun](https://www.instagram.com/reel/DgDWPvCCqYj/) | cizgi | 1301 | 971 | 0.25 | 0 | 1 | 0 | 12 |
+| 8 | [083 hachiko-3578-gun](https://www.instagram.com/reel/Df-MoNfjlO3/) | cizgi | 220 | 193 | 0.19 | 0 | 0 | 0 | 7.8 |
+| 9 | [069 kalbin-kac-kez-atti](https://www.instagram.com/reel/Df86HitDrtG/) | cizgi | 163 | 152 | 0.15 | 0 | 0 | 0 | 6 |
 | 10 | [? ](https://www.instagram.com/reel/Df7n6rqFfdS/) | tower | 9 | 7 | – | 0 | 0 | 0 | 0 |
 
 ## Şablona göre ortalama puan
-- cizgi: 17.1 (8 gönderi)
+- cizgi: 18.6 (8 gönderi)
 - voyager: 28.5 (1 gönderi)
 - tower: 0.0 (1 gönderi)
 

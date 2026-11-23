@@ -7448,7 +7448,7 @@
         "savesPer1k": 2.1,
         "followsPer1k": 0,
         "score": 42.5,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.555Z"
+        "metricsUpdatedAt": "2026-11-23T09:33:22.788Z"
       },
       {
         "postId": "6afc0640550bd70f2fb19d53",
@@ -7471,30 +7471,7 @@
         "savesPer1k": 0,
         "followsPer1k": 0,
         "score": 28.5,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.467Z"
-      },
-      {
-        "postId": "6afb72097a0e83c768db6799",
-        "episode": "049",
-        "slug": "voyager-bir-isik-gunu",
-        "template": "voyager",
-        "sentAt": "2026-11-18T17:34:41.928Z",
-        "link": "https://www.instagram.com/reel/Df5DVulirpT/",
-        "views": 2183,
-        "reach": 1702,
-        "likes": 0,
-        "comments": 0,
-        "shares": 2,
-        "saves": 7,
-        "follows": 0,
-        "avgWatchS": 14.48,
-        "durationS": 37.3,
-        "watchRatio": 0.39,
-        "sharesPer1k": 1.2,
-        "savesPer1k": 4.1,
-        "followsPer1k": 0,
-        "score": 28.5,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.415Z"
+        "metricsUpdatedAt": "2026-11-23T09:33:22.788Z"
       },
       {
         "postId": "6afea1523802f5b9fc765e67",
@@ -7504,7 +7481,7 @@
         "sentAt": "2026-11-21T05:31:30.103Z",
         "link": "https://www.instagram.com/reel/Df_fABwHNf1/",
         "views": 1271,
-        "reach": 1169,
+        "reach": 1171,
         "likes": 0,
         "comments": 1,
         "shares": 1,
@@ -7517,7 +7494,7 @@
         "savesPer1k": 1.7,
         "followsPer1k": 0,
         "score": 17,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.524Z"
+        "metricsUpdatedAt": "2026-11-23T09:33:22.788Z"
       },
       {
         "postId": "6aff503dafe792031258fc54",
@@ -7526,21 +7503,21 @@
         "template": "cizgi",
         "sentAt": "2026-11-21T17:33:08.969Z",
         "link": "https://www.instagram.com/reel/DgAxjlID_4w/",
-        "views": 2108,
-        "reach": 1946,
+        "views": 2113,
+        "reach": 1951,
         "likes": 0,
         "comments": 0,
         "shares": 0,
         "saves": 2,
         "follows": 0,
-        "avgWatchS": 16.28,
+        "avgWatchS": 16.26,
         "durationS": 53.7,
         "watchRatio": 0.3,
         "sharesPer1k": 0,
         "savesPer1k": 1,
         "followsPer1k": 0,
         "score": 14.2,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.417Z"
+        "metricsUpdatedAt": "2026-11-23T09:33:22.788Z"
       },
       {
         "postId": "6b009c9844c3619113558fe5",
@@ -7549,21 +7526,21 @@
         "template": "cizgi",
         "sentAt": "2026-11-22T17:32:22.314Z",
         "link": "https://www.instagram.com/reel/DgDWPvCCqYj/",
-        "views": 1301,
-        "reach": 971,
+        "views": 1696,
+        "reach": 1561,
         "likes": 0,
         "comments": 0,
         "shares": 0,
-        "saves": 1,
+        "saves": 2,
         "follows": 0,
-        "avgWatchS": 12.58,
+        "avgWatchS": 12.19,
         "durationS": 50.7,
-        "watchRatio": 0.25,
+        "watchRatio": 0.24,
         "sharesPer1k": 0,
-        "savesPer1k": 1,
+        "savesPer1k": 1.3,
         "followsPer1k": 0,
-        "score": 12,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.395Z"
+        "score": 12.2,
+        "metricsUpdatedAt": "2026-11-23T09:33:22.788Z"
       },
       {
         "postId": "6afdfdeb2560a2d3fadbfc40",
@@ -7586,7 +7563,30 @@
         "savesPer1k": 0,
         "followsPer1k": 0,
         "score": 7.8,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.441Z"
+        "metricsUpdatedAt": "2026-11-23T09:33:22.788Z"
+      },
+      {
+        "postId": "6b0140999ffbc8503c049439",
+        "episode": "072",
+        "slug": "bir-omurde-kac-kelime",
+        "template": "cizgi",
+        "sentAt": "2026-11-23T05:30:49.658Z",
+        "link": "https://www.instagram.com/reel/DgEohcqjlIE/",
+        "views": 181,
+        "reach": 164,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "avgWatchS": 6.77,
+        "durationS": 38.9,
+        "watchRatio": 0.17,
+        "sharesPer1k": 0,
+        "savesPer1k": 0,
+        "followsPer1k": 0,
+        "score": 7,
+        "metricsUpdatedAt": "2026-11-23T09:33:22.787Z"
       },
       {
         "postId": "6afd4f98152518c7f4677a0c",
@@ -7609,15 +7609,15 @@
         "savesPer1k": 0,
         "followsPer1k": 0,
         "score": 6,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.391Z"
+        "metricsUpdatedAt": "2026-11-23T09:33:22.788Z"
       },
       {
-        "postId": "6b0140999ffbc8503c049439",
-        "episode": "072",
-        "slug": "bir-omurde-kac-kelime",
+        "postId": "6b01dee0d864a01105664a87",
+        "episode": "078",
+        "slug": "seksen-uc-yasinda-selimiye",
         "template": "cizgi",
-        "sentAt": "2026-11-23T05:30:49.658Z",
-        "link": "https://www.instagram.com/reel/DgEohcqjlIE/",
+        "sentAt": "2026-11-23T17:33:14.790Z",
+        "link": "https://www.instagram.com/reel/DgF7IfEjnqY/",
         "views": 0,
         "reach": 0,
         "likes": 0,
@@ -7626,13 +7626,13 @@
         "saves": 0,
         "follows": 0,
         "avgWatchS": null,
-        "durationS": 38.9,
+        "durationS": 47.6,
         "watchRatio": null,
         "sharesPer1k": 0,
         "savesPer1k": 0,
         "followsPer1k": 0,
         "score": 0,
-        "metricsUpdatedAt": "2026-11-21T06:56:25.235Z"
+        "metricsUpdatedAt": "2026-11-21T18:11:44.919Z"
       },
       {
         "postId": "6aff4ed19ed2c00a6880f0c2",
@@ -7655,7 +7655,7 @@
         "savesPer1k": 0,
         "followsPer1k": 0,
         "score": 0,
-        "metricsUpdatedAt": "2026-11-22T19:33:05.529Z"
+        "metricsUpdatedAt": "2026-11-23T09:33:22.788Z"
       }
     ]
   }

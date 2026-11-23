@@ -3,6 +3,102 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-11-23 turu
+
+**Tur notu:** Reddit, X, Ekşi Sözlük ve Google Trends'ten güvenilir bir "son haftanın en çok oy alanları" listesi alınamadı (doğrulanamadı); öneriler klasik viral soru kalıplarına, tarihli fırsatlara ve web araması ile doğrulanan sayılara dayanıyor. Bu turda 9 öneri var (hedef 8–12). Tüm aritmetik `python3` ile yeniden hesaplandı. Tarihli fırsatlar: **4 Aralık** (Mars Pathfinder'ın fırlatılışı, 30. yıl), **21 Aralık** (kış gündönümü; Apollo 8 fırlatılışı, 58. yıl), **24 Aralık** (Earthrise fotoğrafı), **31 Aralık** (yılbaşı, 2027'nin ilk ve son girdiği yerler). Mevcut havuzla çakışma kontrolü yapıldı: Ay'a son iniş, Mavi Bilye, Artemis II, Sezar'ın nefesi, 2038 sorunu, Boğaz akışı ve 081 çay bölümü tekrar edilmedi.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Dünyayı sıkıştırıp bir bezelye boyutuna getirsen kara delik olur
+- Kanca: Dünya'yı bir bezelye kadar küçültürsen kara delik olur; peki Güneş'i küçültürsen ne kadar yer kaplar?
+- Sayılar: Schwarzschild yarıçapı r = 2GM/c². Dünya: 2 × 6,674×10⁻¹¹ × 5,972×10²⁴ ÷ (2,998×10⁸)² = **0,00887 m ≈ 8,87 mm** (çap ≈ 1,77 cm). Güneş (1,989×10³⁰ kg): **≈ 2,954 km** yarıçap (çap ≈ 5,9 km). Ay (7,342×10²² kg): **≈ 0,109 mm**. Güneş'in gerçek yarıçapı 696.000 km; 696.000 ÷ 2,954 ≈ **235.600 kat** küçülmesi gerekir.
+- Kaynaklar: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html (Dünya kütlesi) · https://physics.nist.gov/cuu/Constants/ (G ve c değerleri). Sayfalar bu turda açılmadı; sabitler elle bilinen standart değerlerdir, yazmadan önce teyit et.
+- Görsel metafor: **Bir cımbızın ucundaki bezelye.** Cımbız önce Dünya'yı, sonra Ay'ı tutar; sahnenin kahramanı bezelye boyutundaki kırmızı nokta. Güneş sahnesinde İstanbul haritasına 5,9 km'lik daire çizilir.
+- Türkiye bağlantısı: Güneş'in kara delik hâli İstanbul'un Avrupa yakasının Boğaz'dan Büyükçekmece'ye uzanan bölümüne sığar; ölçüyü "Kadıköy–Taksim" gibi bilinen mesafelerle ver (haritadan doğrula).
+- Neden şimdi / tarih: Tarihsiz, her zaman geçerli.
+- Puan (1-10): 9 · Kanca güçlü, nesne (bezelye) somut, sayı kesin ve doğrulanabilir; görsellik yüksek.
+- Tuzaklar: Bu "Dünya kara delik olur" demek değil, "bu yarıçapa sıkışırsa" demektir; Güneş'in kendiliğinden kara delik olması mümkün değil (kütlesi yetersiz). Yerçekimi aynı kalır, yalnızca yoğunluk değişir; bunu ilk cümlede söyle.
+
+### Herkes aynı anda zıplasa Dünya ne kadar kımıldar?
+- Kanca: Bütün insanlar aynı anda zıplarsa Dünya ne kadar yer değiştirir?
+- Sayılar: 8,2 milyar kişi × ortalama 55 kg = **4,51×10¹¹ kg** (tahmin; ortalama kütle varsayımdır). 30 cm sıçrama için v = √(2 × 9,81 × 0,3) = **2,43 m/s**. Momentum = 4,51×10¹¹ × 2,43 ≈ 1,09×10¹² kg·m/s. Dünya kütlesi 5,972×10²⁴ kg → Dünya'nın tepki hızı ≈ **1,8×10⁻¹³ m/s**; 0,3 s'de ≈ 5,5×10⁻¹⁴ m ≈ proton yarıçapının (8,4×10⁻¹⁶ m) **yaklaşık 65 katı**. Kıyas: bir atom ≈ 10⁻¹⁰ m, yani yer değiştirme atomdan 1.800 kat küçük.
+- Kaynaklar: https://population.un.org/wpp/ (dünya nüfusu) · https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html (Dünya kütlesi). Hesap basit momentum korunumudur; viral soru kalıbının kendisi için tek bir kaynak yok, "doğrulanamadı".
+- Görsel metafor: **Bir milimetrik cetvel ve yakınlaştırma.** Cetvelin ucundaki çizgi tekrar tekrar 1.000 kat büyür: mm → µm → nm → atom → çekirdek; kırmızı işaret en sonda, çekirdek ölçeğinde.
+- Türkiye bağlantısı: "Bütün Türkiye aynı anda zıplasa" ikinci bölüm olarak kullanılır (86 milyon kişi ≈ nüfusun %1'i, etki 100 kat daha küçük).
+- Neden şimdi / tarih: Tarihsiz; yılbaşında "herkes sayarken zıplar" ile bağlanabilir.
+- Puan (1-10): 8 · Viral kalıp (herkes aynı anda), kanca net; ama ortalama kütle ve sıçrama yüksekliği varsayım.
+- Tuzaklar: Sıçrama sırasında yer değiştiren yalnızca Dünya değil sistemin kütle merkezidir; dünya "dönerken" zıplamak da bu hesabı değiştirmez. Gerçek hareket bile ölçülemeyecek kadar küçüktür; bunu açıkça söyle.
+
+### Mars'ta İstanbul'dan Ankara'ya gitmek: Sojourner ile kaç yıl?
+- Kanca: Mars'taki ilk gezgin robot İstanbul'dan Ankara'ya gitseydi bunun kaç yılı gerekirdi?
+- Sayılar: Mars Pathfinder 4 Aralık 1996'da fırlatıldı; Sojourner'ın en yüksek hızı NASA'ya göre **0,39 inç/sn ≈ 1 cm/s**. İstanbul–Ankara yol mesafesi ≈ 450 km (teyit gerekli). 450.000 m ÷ 0,01 m/s = 45.000.000 s ÷ 86.400 = **≈ 521 gün ≈ 1,43 yıl** (hiç durmadan). Scientific American'ın verdiği 0,4 m/dk (≈ 0,67 cm/s) ile: ≈ 2,13 yıl. Görev 83 gün sürdü.
+- Kaynaklar: https://www.nasa.gov/history/25-years-ago-mars-pathfinder-launches-to-mars-to-deploy-sojourner-the-first-planetary-rover-2 · https://www.jpl.nasa.gov/missions/mars-pathfinder-sojourner-rover (arama sonuçlarında görüldü; hız değeri kaynaklar arasında farklı, NASA'nınkini kullan).
+- Görsel metafor: **Mars kumunda tek bir tekerlek izi ve Türkiye haritası.** Küçük bir araç haritanın üzerinde süründükçe gün sayacı döner; 83. günde iz yalnızca birkaç metre kadardır (gerçek toplam mesafe doğrulanmadı).
+- Türkiye bağlantısı: İstanbul–Ankara yolu; hızlı tren (yaklaşık 3,5 saat, doğrulanmalı) ile kıyas.
+- Neden şimdi / tarih: **4 Aralık 2026** (fırlatılışın 30. yılı); 3–5 Aralık yayını.
+- Puan (1-10): 8 · Hız–mesafe kıyası sezgisel, yerel ölçek var, yıldönümü güçlü.
+- Tuzaklar: Gerçek Sojourner günde birkaç metre gitti, sürekli sürmedi; "nonstop" varsayımını söyle. Mesafe teyidi yap.
+
+### Dünyada tavuklar insanlardan 3,4 kat fazla
+- Kanca: Dünyada her insana kaç tavuk düştüğünü tahmin edebilir misin?
+- Sayılar: Yaşayan tavuk sayısı FAO verisine göre **≈ 27,6 milyar** (ikincil kaynaklar 27,68 milyar diyor); insan ≈ 8,2 milyar. 27,6 ÷ 8,2 ≈ **3,37 tavuk/kişi**. Karşılaştırma: 1980'de 7,21 milyar, 2010'da 19,60 milyar (FAO); 2010 yılı 19,60 ÷ 7,21 ≈ 2,7 kat artış (FAO "yüzde 272 artış" diyor, yani 3,72 kat; bu iki ifade farklı oran kullanıyor, yazarken tek birini seç).
+- Kaynaklar: https://ourworldindata.org/grapher/poultry-livestock-count · https://openknowledge.fao.org/server/api/core/bitstreams/c533d118-4a94-46c1-aafe-b0731c0f9a8b/content/i3440e04.pdf (arama sonuçlarında görüldü; rakamın FAOSTAT'tan doğrudan teyidi yapılmadı).
+- Görsel metafor: **Bir insan ve etrafında kümeslik.** Tek bir figür etrafına yerleşen 3,37 tavuk silueti; sonra aynı figür 8 milyar kez çoğalır ve tavuk figürleri tarihin her yıl sayısı gibi üst üste yığılır.
+- Türkiye bağlantısı: Türkiye'nin tavuk sayısını TÜİK'ten ekle (bu turda doğrulanamadı); kişi başına yumurta yerel kıyas olabilir.
+- Neden şimdi / tarih: Tarihsiz; yılbaşı sofralarına yakın dönem.
+- Puan (1-10): 6 · Şaşırtıcı oran, ama beslenme/hayvan hakları tartışmasına kayabilir; konuyu yalnızca sayıyla tut.
+- Tuzaklar: "50 milyar tavuk" gibi rakamlar yıllık kesim sayısı ile karıştırılıyor (yıllık yaklaşık 74 milyar kesim); "yaşayan" ile "kesilen"i ayır. Yabani kuş sayısı (≈ 50 milyar) bu turda doğrulanamadı, kullanma.
+
+### Yeni yıl 26 saat sürer: İlk giren ile son giren arasında bir gün ve iki saat var
+- Kanca: Yeni yıl dünyanın her yerine aynı anda gelmez; peki ilk ve son kutlama arasında kaç saat var?
+- Sayılar: İlk giren Kiritimati (UTC+14), son giren Baker Adası (UTC−12). Fark = 14 − (−12) = **26 saat**. Türkiye (UTC+3): Kiritimati'de yılbaşı UTC 10:00'da (Türkiye saatiyle **13:00, 31 Aralık**); Türkiye'de yeni yıl 00:00'da, yani UTC 21:00. Baker Adası'nda yılbaşı UTC 12:00'da (Türkiye saatiyle **1 Ocak 15:00**). Yani Kiritimati yeni yılı Türkiye'den **11 saat önce**, Baker 15 saat sonra karşılar (11 + 15 = 26).
+- Kaynaklar: https://www.timeanddate.com/counters/firstnewyear.html · https://www.nationalgeographic.com/culture/article/new-year-map-first-last-countries-international-date-line (arama özetinde görüldü; saatler timeanddate sayfasından yayından önce teyit edilmeli).
+- Görsel metafor: **Dünyanın üzerinde ilerleyen gece-gündüz çizgisi ve saat dilimleri şeridi.** Bir "yeni yıl dalgası" Kiritimati'den başlar, Türkiye'de kırmızı duraklar, Baker Adası'nda söner.
+- Türkiye bağlantısı: "Sen saat 00:00'da kutlarken Kiritimati'dekiler 11 saattir 2027'de."
+- Neden şimdi / tarih: **31 Aralık 2026**; 29–31 Aralık yayını.
+- Puan (1-10): 7 · Yılbaşı bağlamı güçlü, sayı basit; ama bilinen bir bilgi, yenilik orta.
+- Tuzaklar: "Son giren yer" olarak Baker Adası ıssızdır; son yerleşim yeri Amerikan Samoası (UTC−11, 25 saat). Hangisini seçtiğini söyle.
+
+### Apollo 8 Ay'ın etrafında 10 tur attı, her turun 45 dakikası sessizdi
+- Kanca: Ay'ı ilk dolaşan insanlar her turda 45 dakika boyunca Dünya ile konuşamadı; neden?
+- Sayılar: Apollo 8 yörüngede yaklaşık **20 saat** kaldı ve **10 tur** attı; her tur ≈ 2 saat, bunun **45 dakikası** radyo kesintisi (Ay'ın arkasında). Toplam kesinti = 10 × 45 = **450 dk = 7,5 saat** ≈ yörünge süresinin **%37,5**'i. Yörünge yüksekliği yaklaşık 60–70 mil (≈ 97–113 km). Gidiş mesafesi ≈ 240.000 mil (≈ 386.000 km).
+- Kaynaklar: https://www.nasa.gov/history/apollo-8-mission-details/ · https://www.nasa.gov/history/50-years-ago-apollo-8-in-lunar-orbit/ (arama özetinde görüldü; 20 saat ve 10 tur değerlerini sayfadan teyit et).
+- Görsel metafor: **Ay'ın gölgesinde bir ışık huzmesi.** Dünya'dan Ay'a uzanan bir radyo çizgisi, uzay aracı Ay'ın arkasına geçince kesilir ve çizgi kırmızıya döner; her turda çizgi 45 dakika kaybolur.
+- Türkiye bağlantısı: "Telefonunda çekmediği yer" kıyası: 45 dakika tünelde kalmak.
+- Neden şimdi / tarih: **21 Aralık 2026** (fırlatılış, 58. yıl), **24 Aralık** (Earthrise); 21–24 Aralık yayını.
+- Puan (1-10): 7 · Duygusal ve görsel; "Artemis II" ile bağ kurulabilir, ama o konu havuzda var, bağımsız anlat.
+- Tuzaklar: Tur sayısı ve süre kaynaklarda küçük farklılık gösterebilir; "yaklaşık 20 saat" de. Earthrise fotoğrafının mesafesi doğrulanamadı, kullanma.
+
+### Kış gündönümünde İstanbul'da gündüz 9 saat 13 dakika: yazdan 5 saat 54 dakika kısa
+- Kanca: Yılın en kısa gününde İstanbul'da güneş kaç saat gökte kalır?
+- Sayılar: Enlem 41,01° K, güneş eğimi ±23,44°, ufuk düzeltmesi −0,833°; gün uzunluğu = (2/15) × arccos[(sin(−0,833°) − sin φ sin δ) ÷ (cos φ cos δ)] → kış: **9,22 saat ≈ 9 sa 13 dk**; yaz: **15,13 saat ≈ 15 sa 8 dk**; fark **5,91 saat ≈ 5 sa 54 dk**. Ankara (39,93°): kış ≈ 9,33 saat.
+- Kaynaklar: https://www.timeanddate.com/sun/turkey/istanbul · https://www.mgm.gov.tr (resmî güneş doğuş/batış tabloları). Sayfalar bu turda açılmadı; hesap basit astronomik formülle yapıldı ve gün başına ±5 dk sapabilir, yayından önce tabloyla karşılaştır.
+- Görsel metafor: **Güneşin gökte çizdiği yay ve altındaki çubuk.** Yaz yayı büyük, kış yayı küçük; gün boyu bir güneş ışığı şeridi 9 saat 13 dakikada biter.
+- Türkiye bağlantısı: İstanbul'un kış akşamı 17:00'de kararması.
+- Neden şimdi / tarih: **21 Aralık 2026** (gündönümü); 19–21 Aralık yayını.
+- Puan (1-10): 6 · Mevsimsel, yerel; ama yeni bir "aha" değil.
+- Tuzaklar: Gündönümü saat ve dakikası kaynağa göre değişir (tam anı doğrulanmadı); gün uzunluğu doğuş–batış tablosundan alınmalı.
+
+### 0,999… gerçekten 1'e eşit mi?
+- Kanca: 0,999999… ile 1 arasında tam olarak ne kadar fark vardır?
+- Sayılar: x = 0,999… ise 10x = 9,999…; 10x − x = 9 → 9x = 9 → **x = 1**. Aşil ve kaplumbağa: 1/2 + 1/4 + 1/8 + … = 1. 1/3 = 0,333… → 3 × 1/3 = 0,999… = 1.
+- Kaynaklar: https://www.khanacademy.org/math/algebra-home/alg-rational-and-irrational-numbers (genel kaynak) · https://en.wikipedia.org/wiki/0.999... (genel kaynak; açılmadı, "doğrulanamadı").
+- Görsel metafor: **Bir cetvel ve sonsuz bölünen mesafe.** Cetvelin sonuna doğru her adımın kalan boşluğu yarıya iner; kırmızı çizgi 1 işaretinde durur.
+- Türkiye bağlantısı: "Yarım ekmek, çeyrek, sekizde bir…" gibi yerel kıyas.
+- Neden şimdi / tarih: Tarihsiz.
+- Puan (1-10): 5 · Viral tartışma konusudur (yorum bırakır), ama 020 (Gauss) ve "10 saniyede ispat" serisiyle yakın; yeni bir yön değil.
+- Tuzaklar: Bazı izleyiciler "sonsuza kadar 1'e yaklaşır ama 1 olmaz" der; tanımın "limit" olduğunu bir cümleyle belirt.
+
+### Ford 12,5 saatlik işi 93 dakikaya indirdi: 8 kat hızlanma
+- Kanca: Bir araba artık 12 buçuk saatte değil, 93 dakikada üretildi; bu nasıl mümkün oldu?
+- Sayılar: Hareketli montaj hattı 7 Ekim 1913'te başladı; kaynaklar, Aralık 1913'te hattın uzunluğunun ikiye katlandığını ve süreye ek 20 dakika kazandırdığını söyler. 12,5 saat = 750 dk; 750 ÷ 93 = **≈ 8,06 kat** hızlanma. (Ara değer: 5 saat 50 dakika = 350 dk.)
+- Kaynaklar: https://corporate.ford.com/articles/history/moving-assembly-line/ · https://www.thehenryford.org/collections/explore/articles/ford-methods-and-the-ford-shops (arama sonuçlarında görüldü).
+- Görsel metafor: **Bir kronometre ve ip üzerinde yürüyen şasi.** İlk 750 dakikalık süre çemberi 93 dakikaya kadar daralır; çember kırmızıya döner.
+- Türkiye bağlantısı: Yerli otomobil üretim hattı bağlantısı (rakamlar bu turda doğrulanamadı; eklenecekse resmî kaynak gerekir).
+- Neden şimdi / tarih: Aralık 1913 (113. yıl; tam bir yıldönümü günü doğrulanamadı, "1 Aralık" iddiası kaynaklarda yok).
+- Puan (1-10): 5 · Güçlü hız çarpanı, ama tarihi anlatı ağırlıklı; sayısal "aha" orta.
+- Tuzaklar: 93 dakika rakamı farklı kaynaklarda 1914'e tarihleniyor; "93 dakika" ve "12,5 saat" işçi-saat tanımıyla farklı olabilir.
+
 ## 2026-11-19 turu
 
 **Tur notu:** Bu turda nasa.gov, usgs.gov, wikipedia ve flightradar24 sayfaları ağ kısıtı yüzünden doğrudan açılamadı; veriler yalnızca web araması özetlerinden ve elle yapılan hesaplardan alındı, bu yüzden "Kaynaklar" satırındaki sayfalar yazmadan önce bir kez açılıp rakamlar teyit edilmeli. Reddit (r/theydidthemath yansıması), X, Ekşi Sözlük ve Google Trends'ten güvenilir bir "bu haftanın en çok oy alanları" listesi alınamadı (doğrulanamadı); öneriler bilinen klasik sorulara ve tarihli fırsatlara dayanıyor. Aritmetik `python3` ile yeniden hesaplandı. Tarihli fırsatlar: **20 Kasım** (ISS'in ilk modülü Zarya, 28. yıl), **27 Kasım** (Black Friday), **3 Aralık** (ilk SMS, 34. yıl), **11–14 Aralık** (Apollo 17, 54. yıl), **15 Ocak 2027** (Unix zamanı 1.800.000.000'a ulaşır). Önceki turlarla çakışma kontrol edildi: Parker, Europa Clipper, Marconi, Mavi Bilye, 2038 sorunu (Unix önerisi bunun devamıdır, ayrı açı), Süper Ay tekrar edilmedi.

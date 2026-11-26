@@ -8124,6 +8124,29 @@
     ],
     "2026-11-26": [
       {
+        "postId": "6b047d584c7bbdb80d435c6d",
+        "episode": "062",
+        "slug": "ucak-mi-ebabil-mi",
+        "template": "ucus",
+        "sentAt": "2026-11-25T17:34:10.479Z",
+        "link": "https://www.instagram.com/reel/DgLEve9hbd3/",
+        "views": 137,
+        "reach": 125,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "avgWatchS": 134.66,
+        "durationS": 67.5,
+        "watchRatio": 2,
+        "sharesPer1k": 0,
+        "savesPer1k": 0,
+        "followsPer1k": 0,
+        "score": 79.8,
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
+      },
+      {
         "postId": "6afff01e0f5eda1a57cb97d2",
         "episode": "071",
         "slug": "annenle-kac-gun-kaldi",
@@ -8144,7 +8167,7 @@
         "savesPer1k": 2.1,
         "followsPer1k": 0,
         "score": 42.5,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.023Z"
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
       },
       {
         "postId": "6b03e9df4d584ce2682bcdfe",
@@ -8153,21 +8176,44 @@
         "template": "cizgi",
         "sentAt": "2026-11-25T05:30:45.728Z",
         "link": "https://www.instagram.com/reel/DgJyGlTSqqd/",
-        "views": 1697,
-        "reach": 1522,
+        "views": 1700,
+        "reach": 1528,
         "likes": 0,
         "comments": 0,
         "shares": 5,
         "saves": 2,
         "follows": 0,
-        "avgWatchS": 10.25,
+        "avgWatchS": 10.27,
         "durationS": 32,
         "watchRatio": 0.32,
         "sharesPer1k": 3.3,
         "savesPer1k": 1.3,
         "followsPer1k": 0,
-        "score": 28.6,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.030Z"
+        "score": 28.5,
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
+      },
+      {
+        "postId": "6b0336ded5eabfb8ccce59a7",
+        "episode": "039",
+        "slug": "yalniz-george-ve-diego",
+        "template": "cizgi",
+        "sentAt": "2026-11-24T17:34:36.039Z",
+        "link": "https://www.instagram.com/reel/DgIgAWnG9OO/",
+        "views": 2146,
+        "reach": 1923,
+        "likes": 0,
+        "comments": 0,
+        "shares": 4,
+        "saves": 1,
+        "follows": 0,
+        "avgWatchS": 25.51,
+        "durationS": 57.7,
+        "watchRatio": 0.44,
+        "sharesPer1k": 2.1,
+        "savesPer1k": 0.5,
+        "followsPer1k": 0,
+        "score": 27,
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
       },
       {
         "postId": "6b028cc2d5eabfb8cc89a65b",
@@ -8176,8 +8222,8 @@
         "template": "cizgi",
         "sentAt": "2026-11-24T05:33:46.731Z",
         "link": "https://www.instagram.com/reel/DgHNaycAlDq/",
-        "views": 1402,
-        "reach": 1251,
+        "views": 1404,
+        "reach": 1253,
         "likes": 0,
         "comments": 0,
         "shares": 5,
@@ -8190,53 +8236,30 @@
         "savesPer1k": 0.8,
         "followsPer1k": 0,
         "score": 27,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.007Z"
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
       },
       {
-        "postId": "6b0336ded5eabfb8ccce59a7",
-        "episode": "039",
-        "slug": "yalniz-george-ve-diego",
-        "template": "cizgi",
-        "sentAt": "2026-11-24T17:34:36.039Z",
-        "link": "https://www.instagram.com/reel/DgIgAWnG9OO/",
-        "views": 2136,
-        "reach": 1914,
-        "likes": 0,
-        "comments": 0,
-        "shares": 4,
-        "saves": 0,
-        "follows": 0,
-        "avgWatchS": 25.46,
-        "durationS": 57.7,
-        "watchRatio": 0.44,
-        "sharesPer1k": 2.1,
-        "savesPer1k": 0,
-        "followsPer1k": 0,
-        "score": 26,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.039Z"
-      },
-      {
-        "postId": "6b047d584c7bbdb80d435c6d",
-        "episode": "062",
-        "slug": "ucak-mi-ebabil-mi",
-        "template": "ucus",
-        "sentAt": "2026-11-25T17:34:10.479Z",
-        "link": "https://www.instagram.com/reel/DgLEve9hbd3/",
-        "views": 135,
-        "reach": 123,
+        "postId": "6b055c51d289cd5f3476242d",
+        "episode": "003",
+        "slug": "dunyanin-merkezi",
+        "template": "depth",
+        "sentAt": "2026-11-26T05:30:49.649Z",
+        "link": "https://www.instagram.com/reel/DgMW5UmTrBR/",
+        "views": 167,
+        "reach": 97,
         "likes": 0,
         "comments": 0,
         "shares": 0,
         "saves": 0,
         "follows": 0,
-        "avgWatchS": 41.71,
-        "durationS": 67.5,
-        "watchRatio": 0.62,
+        "avgWatchS": 10.93,
+        "durationS": 23.5,
+        "watchRatio": 0.47,
         "sharesPer1k": 0,
         "savesPer1k": 0,
         "followsPer1k": 0,
-        "score": 24.7,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.080Z"
+        "score": 18.6,
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
       },
       {
         "postId": "6b01dee0d864a01105664a87",
@@ -8259,7 +8282,7 @@
         "savesPer1k": 0.8,
         "followsPer1k": 0,
         "score": 14.4,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.051Z"
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
       },
       {
         "postId": "6aff503dafe792031258fc54",
@@ -8282,7 +8305,7 @@
         "savesPer1k": 1,
         "followsPer1k": 0,
         "score": 14.1,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.069Z"
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
       },
       {
         "postId": "6b009c9844c3619113558fe5",
@@ -8305,7 +8328,7 @@
         "savesPer1k": 1.3,
         "followsPer1k": 0,
         "score": 12.2,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.016Z"
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
       },
       {
         "postId": "6b0140999ffbc8503c049439",
@@ -8328,30 +8351,7 @@
         "savesPer1k": 0,
         "followsPer1k": 0,
         "score": 8.4,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.071Z"
-      },
-      {
-        "postId": "6aff4ed19ed2c00a6880f0c2",
-        "episode": "?",
-        "slug": "",
-        "template": "tower",
-        "sentAt": "2026-11-19T17:33:19.000Z",
-        "link": "https://www.instagram.com/reel/Df7n6rqFfdS/",
-        "views": 10,
-        "reach": 8,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0,
-        "saves": 0,
-        "follows": 0,
-        "avgWatchS": 6.59,
-        "durationS": null,
-        "watchRatio": null,
-        "sharesPer1k": 0,
-        "savesPer1k": 0,
-        "followsPer1k": 0,
-        "score": 0,
-        "metricsUpdatedAt": "2026-11-25T19:33:37.035Z"
+        "metricsUpdatedAt": "2026-11-26T06:33:52.261Z"
       }
     ]
   }

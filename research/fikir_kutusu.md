@@ -3,6 +3,92 @@
 Bu dosya fikir avcısının önerilerini tutar. Her tur en üste eklenir; eski turlar silinmez.
 Konular `research/topics.md` ve `research/new_topics.md` ile mevcut bölümlerle (001–017) çakışmaz.
 
+## 2026-11-26 turu
+
+**Tur notu:** Bu turda web erişimi sınırlıydı: Wikipedia, ICO gibi sayfalar oturumun ağ izni dışında kaldığı için açılamadı; Reddit, X, Ekşi Sözlük ve Google Trends'ten güvenilir bir "son haftanın en çok oy alanları" listesi de alınamadı (doğrulanamadı). Aşağıdaki sayıların tamamı bu turda Python ile yeniden hesaplandı; kaynak bağlantıları standart referans sayfalarıdır ve yayından önce açılıp teyit edilmelidir. Tarihli tek fırsat: James Webb'in fırlatılışının 5. yıldönümü (25 Aralık 2026). Mevcut havuzla ve 83 bölümle çakışma kontrol edildi.
+
+Sıralama puana göredir (yüksekten düşüğe).
+
+### Bir bardak sudaki molekül sayısı, okyanustaki bardak sayısından 1.565 kat fazla
+- Kanca: Bir bardak sudaki molekül sayısı, bütün okyanuslardaki bardak sayısından daha büyüktür; peki kaç kat?
+- Sayılar: 250 g su ÷ 18,015 g/mol = 13,88 mol; × 6,022×10²³ = **8,36×10²⁴ molekül**. Okyanus hacmi ≈ 1,335×10⁹ km³ = 1,335×10²¹ L; ÷ 0,25 L = **5,34×10²¹ bardak**. Oran: 8,36×10²⁴ ÷ 5,34×10²¹ = **≈ 1.565**.
+- Kaynaklar: https://oceanservice.noaa.gov/facts/oceanvolume.html (okyanus hacmi) · https://physics.nist.gov/cgi-bin/cuu/Value?na (Avogadro sabiti). Sayfalar bu turda açılamadı; yayından önce teyit edilmeli.
+- Görsel metafor: Bir su bardağı ve önünde bir okyanus: okyanustaki her bardak bir mürekkep noktası olur, bardağın içindeki moleküller ise 1.565 kat daha yoğun bir nokta bulutu. Kırmızı kalem yalnızca "1.565" sayısını işaretler.
+- Türkiye bağlantısı: İnce belli çay bardağı yerine standart su bardağı kullanılır; Karadeniz'in hacmi (≈ 547.000 km³) ile "Karadeniz'deki bardak sayısı" da ikinci bölüm olabilir (Karadeniz hacmi doğrulanmalı).
+- Neden şimdi / tarih: Tarihsiz.
+- Puan (1-10): 9 · Efsane kırıcı kıyas (kum/yıldız kalıbı), kanca net, hesap kısa ve kesin; görsellik orta-yüksek.
+- Tuzaklar: Bardak hacmi varsayımdır (250 mL). "Okyanus" için toplam okyanus hacmi alınır, deniz ve göller dâhil değildir. Moleküllerin "sayılması" mümkün değil, hesapla bulunur.
+
+### Bugün yüzünü ısıtan ışık, Güneş'in çekirdeğinde on binlerce yıl önce doğdu
+- Kanca: Güneş ışığı Dünya'ya 8 dakikada gelir; ama o ışığın Güneş'in içinden çıkması on binlerce yıl sürdü.
+- Sayılar: Güneş–Dünya mesafesi 149,6×10⁶ km ÷ 299.792 km/s = **499 s ≈ 8 dk 19 sn** (yolculuk). Çekirdekten yüzeye çıkış: foton milyarlarca kez saçılır; tahminler yaklaşık 10.000 ile birkaç yüz bin yıl arasında değişir (sık anılan değer ≈ 100.000 yıl). Kesin tek bir sayı yoktur; model bağımlıdır.
+- Kaynaklar: https://science.nasa.gov/sun/ (Güneş genel bilgisi) · https://www.britannica.com/place/Sun (iç yapı). Çıkış süresi aralığı bu turda doğrulanamadı; yayından önce bir güneş fiziği kaynağıyla (örn. Mitalas ve Sills, 1992) teyit edilmeli.
+- Görsel metafor: Bir labirent içindeki tek bir ışık noktası: zikzak çizgi labirenti her saçılmada yön değiştirir; sonunda labirentten çıkan çizgi düz bir ışın olarak Dünya'ya uzanır (8 dk 19 sn'lik düz cetvel). Sayaç yıl cinsinden ilerler.
+- Türkiye bağlantısı: "Sabah balkonda çayını içerken yüzüne vuran ışık, Neandertal çağında doğdu" cümlesi; İstanbul'da gün doğumu fotoğrafı kare 0.
+- Neden şimdi / tarih: Kış gündönümü (21 Aralık) öncesi "güneşin en az göründüğü gün" bağlantısıyla yayınlanabilir. 004 numaralı bölümün devamıdır.
+- Puan (1-10): 8 · Güçlü "aha"; kesin sayı olmaması doğruluk güvenini düşürür.
+- Tuzaklar: "Işık 100.000 yıl yaşında" yanlış bir basitleştirmedir: enerji aktarım süresidir, tek bir fotonun ömrü değildir (foton soğurulup yeniden yayılır). Aralığı açıkça belirt.
+
+### Webb 25 Aralık'ta 5 yaşına giriyor: Dünya'dan 1,5 milyon km uzakta, mesajı 5 saniyede gelir
+- Kanca: Dünya'dan 1,5 milyon kilometre uzakta duran Webb'e bir mesaj gönderirsen kaç saniyede ulaşır?
+- Sayılar: 1.500.000 km ÷ 299.792 km/s = **5,0 s**. Ay'a mesaj: 384.400 ÷ 299.792 = **1,28 s**. Mesafe/Ay mesafesi: 1.500.000 ÷ 384.400 = **3,9 kat**. Fırlatılış: 25 Aralık 2021 → 25 Aralık 2026 = tam 5 yıl.
+- Kaynaklar: https://science.nasa.gov/mission/webb/ (görev) · https://webb.nasa.gov/ (konum ve tarihler). Sayfalar bu turda açılamadı; "yaklaşık 1,5 milyon km" NASA'nın standart ifadesidir.
+- Görsel metafor: Bir cetvel üzerinde Dünya–Ay aralığı 1 birim; Webb 3,9 birim ötede, arada ışık noktası 1,28 sn'de Ay'ı, 5 sn'de Webb'i geçer. Sıfır "alo" der, cevap 10 sn'de gelir.
+- Türkiye bağlantısı: "İstanbul'dan Ankara'ya (≈ 450 km) ışık 1,5 ms'de gider; Webb'e gitmek bunun ≈ 3.300 katı." (1.500.000 ÷ 450 = 3.333.)
+- Neden şimdi / tarih: **25 Aralık 2026** (5. yıl dönümü); yayın 24–25 Aralık.
+- Puan (1-10): 8 · Tarihli, kanca somut, rakamlar kesin; görsellik iyi. Webb havuzda zaten bir bölüme sahip (güneş kalkanı) ama açı farklı.
+- Tuzaklar: Webb L2 noktasında bir "halo" yörüngede döner, mesafe sabit değildir (yaklaşık 1,5 milyon km). Mesaj "çift yön" ise gidiş-dönüş 10 sn.
+
+### Sudoku'nun 6,67 sextilyon farklı çözümü var: saniyede birini çözsen 211 trilyon yıl
+- Kanca: Her saniye yeni bir sudoku çözsen, bütün çözümleri bitirmen kaç yıl sürer?
+- Sayılar: Geçerli 9×9 sudoku ızgarası: **6.670.903.752.021.072.936.960 ≈ 6,67×10²¹** (Felgenhauer ve Jarvis, 2005). ÷ 31.557.600 (bir yılın saniyesi) = **2,11×10¹⁴ yıl ≈ 211 trilyon yıl**. Evrenin yaşı 13,8×10⁹ yıl; oran ≈ **15.300 evren yaşı**.
+- Kaynaklar: http://www.afjarvis.staff.shef.ac.uk/sudoku/ (Felgenhauer–Jarvis sayımı) · https://en.wikipedia.org/wiki/Mathematics_of_Sudoku. Sayfalar bu turda açılamadı; sayı literatürde yaygın ve tutarlı.
+- Görsel metafor: Bir bulmaca kitabı yığını: sayfa sayfa 9×9 ızgaralar; kitap yığını Ay'ı, güneş sistemini geçer. Kırmızı kalem tek bir çözüm ızgarasını işaretler.
+- Türkiye bağlantısı: Gazete bulmacası ve sudoku köşesi; "Günde bir sudoku çözen bir Türk emekli, bütün çözümleri bitirmek için 6,1×10¹⁸ yıl gerekir" (6,67×10²¹ ÷ 365,25 ≈ 1,83×10¹⁹ yıl; netleştirilmeli).
+- Neden şimdi / tarih: Tarihsiz; yılbaşı bulmaca hevesi.
+- Puan (1-10): 7 · Sayı büyük ve kesin; ama kanca "satranç/deste" kalıbına benziyor (tekrar riski).
+- Tuzaklar: "Farklı" sayımı simetriler eklenince 5.472.730.538 "özünde farklı" ızgaraya iner; videoda ikisini karıştırma. Sudoku bulmacası (ipuçlu) ile çözülmüş ızgara farklıdır.
+
+### Ay'a yürüyerek gitsen 175 yıl sürer
+- Kanca: Her gün 8.000 adım atarak Ay'a yürüsen kaç yılda varırsın?
+- Sayılar: 384.400 km = 384.400.000 m ÷ 0,75 m/adım = **512,5 milyon adım**; ÷ 8.000 adım/gün = 64.067 gün ÷ 365,25 = **175,4 yıl**.
+- Kaynaklar: https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html (Ay mesafesi) · adım uzunluğu için Harvard Health/WHO gibi bir kaynak (adım uzunluğu ≈ 0,7–0,8 m; kaynak bu turda doğrulanamadı).
+- Görsel metafor: Ayak izleri: Dünya'dan Ay'a uzanan bir ayak izi şeridi; Sıfır kendi adımlarını sayarken 512 milyonuncu adımda ayak izi şeridi kadrajdan taşar.
+- Türkiye bağlantısı: İstanbul–Ankara'yı (≈ 450 km) yürüsen 600.000 adım; sağlık uygulamalarındaki günlük adım hedefi (Türkiye'de Sağlık Bakanlığı da 10.000 adım öneriyor; doğrulanmalı).
+- Neden şimdi / tarih: Tarihsiz; yılbaşı "yeni yıl hedefi: 10.000 adım" ile bağlanabilir.
+- Puan (1-10): 7 · Kanca somut, ama 042 (Ay'a merdiven) ile konu benzerliği var.
+- Tuzaklar: Sağlık tavsiyesi verilmez; yalnızca hesap. Ay mesafesi ortalamadır (356.500–406.700 km arası değişir). Dünya'dan çıkış (atmosfer, boşluk) gerçekçi değildir, düşünce deneyi olarak sun.
+
+### Kahramanmaraş'ın iki depremi: 7,8 ile 7,5 arasında 2,8 kat enerji farkı var
+- Kanca: Büyüklük 7,8 ile 7,5 arasında yalnızca 0,3 fark var; peki enerji farkı kaç kat?
+- Sayılar: Enerji oranı = 10^(1,5 × ΔM). ΔM = 0,3 → 10^0,45 = **2,82 kat**. Karşılaştırma: Mw 9,5 (Valdivia, 1960) ile Mw 7,8: ΔM = 1,7 → 10^2,55 = **≈ 355 kat**. Genlik oranı 10^ΔM (0,3 için 2,0 kat).
+- Kaynaklar: https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity (büyüklük–enerji ilişkisi) · https://deprem.afad.gov.tr (6 Şubat 2023 verileri). Sayfalar bu turda açılamadı; Mw değerleri (7,8 ve 7,5) kurumlar arasında küçük farklar gösterebilir.
+- Görsel metafor: Bir terazi ve kum tartıları: her 0,3'lük adım için kefeye 2,8 kat daha büyük bir kum torbası; ölçek eşit aralıklı değil. Sıfır merdivenin her basamağında torbanın boyuna şaşırır.
+- Türkiye bağlantısı: Doğrudan Türkiye (6 Şubat 2023); ton hassasiyeti gerektirir.
+- Neden şimdi / tarih: Tarihsiz; 17 Ağustos, 6 Şubat gibi anma günlerinde yayınlama; anma günü dışında yayınlamak daha saygılıdır.
+- Puan (1-10): 7 · Bilgi değeri yüksek ("Richter doğrusal sanılır" efsanesi), ama konu hassas ve ton riski var.
+- Tuzaklar: Kayıp ve acı yaşanmış bir olay; ton ciddi ve sade olmalı; "korkutma/şaşırtma" havası verme. Enerji oranı yıkım oranı değildir (yıkım yerel zemine, derinliğe ve yapıya bağlıdır). "Richter" ile "Mw" ayrımı.
+
+### 10 parmakla 1.023'e kadar sayabilirsin
+- Kanca: İki elini kullanarak 10'a değil, 1.023'e kadar sayabileceğini biliyor muydun?
+- Sayılar: Her parmak bir bit (açık/kapalı): 2¹⁰ = **1.024 durum**, 0'dan 1.023'e. Başparmak = 1, işaret = 2, orta = 4, yüzük = 8, serçe = 16; diğer elde 32, 64, 128, 256, 512. Örnek: 1.023 = bütün parmaklar açık; 1.000 = 512+256+128+64+32+8.
+- Kaynaklar: https://en.wikipedia.org/wiki/Finger_binary · https://www.khanacademy.org/computing/computer-science (ikili sayı sistemi). Sayfalar bu turda açılamadı; matematik doğrudan doğrulanabilir.
+- Görsel metafor: İki çizili el: parmak uçlarında 1-2-4-8-16 / 32-64-128-256-512 etiketleri; parmaklar bir bir kalkarken sayı sayacı artar. Kırmızı kalem "1.000" göstergesini işaretler.
+- Türkiye bağlantısı: Çocuklukta "parmak hesabı"; el işaretiyle yaşını (örn. 86 = 64+16+4+2) göstermek.
+- Neden şimdi / tarih: Tarihsiz.
+- Puan (1-10): 7 · "10 sanırdın, 1.023" kanca güçlü; hem hesap hem eğlence; görseli zengin.
+- Tuzaklar: Bazı parmak kombinasyonları (örn. 4 numaralı orta parmak tek başına) fiziksel olarak zordur; ve 4 sayısı hoş olmayan bir jest olabilir; sunumda dikkat. "1.024" değil "1.023" (sıfırdan başlar).
+
+### Dünya'nın karşı noktasında çoğunlukla okyanus var: İstanbul'dan delik açsan Pasifik'e çıkarsın
+- Kanca: İstanbul'dan Dünya'nın içinden tam karşıya bir tünel açsan nereye çıkarsın?
+- Sayılar: Antipod koordinatı: enlem işareti değişir, boylam 180° kaydırılır. İstanbul ≈ 41,0° K, 29,0° D → **≈ 41,0° G, 151,0° B** (Güney Pasifik, Yeni Zelanda'nın güneydoğusunda açık okyanus). Kara oranı Dünya yüzeyinin ≈ %29; kara–kara antipod oranı çok daha düşüktür (rakam bu turda doğrulanamadı).
+- Kaynaklar: https://www.antipodesmap.com (etkileşimli antipod haritası; bu turda açılamadı) · https://www.usgs.gov/faqs/how-much-water-earth (kara/su oranı). Kesin antipod yüzdesi yayından önce doğrulanmalı.
+- Görsel metafor: İki yarım küre üst üste: şeffaf bir Dünya modelinde tünel çizgisi; çıkış noktasında dalgalı su. Kırmızı kalem yalnızca "çıkış yeri"ni işaretler.
+- Türkiye bağlantısı: Türkiye'nin hiçbir noktasının karşısında kara yoktur (Pasifik'e denk gelir; doğrulanmalı). 021 numaralı "Dünya tüneli" bölümünün devamı olarak, şehir şehir listelenebilir.
+- Neden şimdi / tarih: Tarihsiz.
+- Puan (1-10): 6 · Merak konusu, ama 021 ile çakışabilir; veri doğrulama eksiği var.
+- Tuzaklar: "Yalnızca %4 kara-kara" gibi viral rakamlar kaynaklara göre değişir (%4–15 aralığı dolaşıyor); doğrulanmadan söyleme. Hangi şehir seçilirse hesap yeniden yapılmalı.
+
 ## 2026-11-23 turu
 
 **Tur notu:** Reddit, X, Ekşi Sözlük ve Google Trends'ten güvenilir bir "son haftanın en çok oy alanları" listesi alınamadı (doğrulanamadı); öneriler klasik viral soru kalıplarına, tarihli fırsatlara ve web araması ile doğrulanan sayılara dayanıyor. Bu turda 9 öneri var (hedef 8–12). Tüm aritmetik `python3` ile yeniden hesaplandı. Tarihli fırsatlar: **4 Aralık** (Mars Pathfinder'ın fırlatılışı, 30. yıl), **21 Aralık** (kış gündönümü; Apollo 8 fırlatılışı, 58. yıl), **24 Aralık** (Earthrise fotoğrafı), **31 Aralık** (yılbaşı, 2027'nin ilk ve son girdiği yerler). Mevcut havuzla çakışma kontrolü yapıldı: Ay'a son iniş, Mavi Bilye, Artemis II, Sezar'ın nefesi, 2038 sorunu, Boğaz akışı ve 081 çay bölümü tekrar edilmedi.

@@ -44,7 +44,7 @@ Sıralama puana göredir (yüksekten düşüğe).
 - Sayılar: Geçerli 9×9 sudoku ızgarası: **6.670.903.752.021.072.936.960 ≈ 6,67×10²¹** (Felgenhauer ve Jarvis, 2005). ÷ 31.557.600 (bir yılın saniyesi) = **2,11×10¹⁴ yıl ≈ 211 trilyon yıl**. Evrenin yaşı 13,8×10⁹ yıl; oran ≈ **15.300 evren yaşı**.
 - Kaynaklar: http://www.afjarvis.staff.shef.ac.uk/sudoku/ (Felgenhauer–Jarvis sayımı) · https://en.wikipedia.org/wiki/Mathematics_of_Sudoku. Sayfalar bu turda açılamadı; sayı literatürde yaygın ve tutarlı.
 - Görsel metafor: Bir bulmaca kitabı yığını: sayfa sayfa 9×9 ızgaralar; kitap yığını Ay'ı, güneş sistemini geçer. Kırmızı kalem tek bir çözüm ızgarasını işaretler.
-- Türkiye bağlantısı: Gazete bulmacası ve sudoku köşesi; "Günde bir sudoku çözen bir Türk emekli, bütün çözümleri bitirmek için 6,1×10¹⁸ yıl gerekir" (6,67×10²¹ ÷ 365,25 ≈ 1,83×10¹⁹ yıl; netleştirilmeli).
+- Türkiye bağlantısı: Gazete bulmacası ve sudoku köşesi; "Günde bir sudoku çözen bir gazete okuru için bütün çözümler 6,67×10²¹ ÷ 365,25 ≈ 1,83×10¹⁹ yıl (18,3 milyar milyar yıl) sürer."
 - Neden şimdi / tarih: Tarihsiz; yılbaşı bulmaca hevesi.
 - Puan (1-10): 7 · Sayı büyük ve kesin; ama kanca "satranç/deste" kalıbına benziyor (tekrar riski).
 - Tuzaklar: "Farklı" sayımı simetriler eklenince 5.472.730.538 "özünde farklı" ızgaraya iner; videoda ikisini karıştırma. Sudoku bulmacası (ipuçlu) ile çözülmüş ızgara farklıdır.
@@ -77,7 +77,7 @@ Sıralama puana göredir (yüksekten düşüğe).
 - Türkiye bağlantısı: Çocuklukta "parmak hesabı"; el işaretiyle yaşını (örn. 86 = 64+16+4+2) göstermek.
 - Neden şimdi / tarih: Tarihsiz.
 - Puan (1-10): 7 · "10 sanırdın, 1.023" kanca güçlü; hem hesap hem eğlence; görseli zengin.
-- Tuzaklar: Bazı parmak kombinasyonları (örn. 4 numaralı orta parmak tek başına) fiziksel olarak zordur; ve 4 sayısı hoş olmayan bir jest olabilir; sunumda dikkat. "1.024" değil "1.023" (sıfırdan başlar).
+- Tuzaklar: Bazı parmak kombinasyonları fiziksel olarak zordur (yüzük parmağı tek başına kalkmaz); orta parmak tek başına 4 sayısıdır ve kaba bir jest olarak okunabilir, görselde bu karede dikkatli ol. "1.024" değil "1.023" (sıfırdan başlar).
 
 ### Dünya'nın karşı noktasında çoğunlukla okyanus var: İstanbul'dan delik açsan Pasifik'e çıkarsın
 - Kanca: İstanbul'dan Dünya'nın içinden tam karşıya bir tünel açsan nereye çıkarsın?

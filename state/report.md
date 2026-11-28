@@ -1,6 +1,6 @@
-# Performans raporu · 2026-11-28 00:27 UTC
+# Performans raporu · 2026-11-28 07:33 UTC
 
-Gönderi: 10 · izlenme: 12899 · paylaşım: 24 · takip: 0
+Gönderi: 10 · izlenme: 12908 · paylaşım: 24 · takip: 0
 
 | # | bölüm | şablon | izlenme | erişim | izlenme oranı | paylaşım/1k | kaydetme/1k | takip/1k | puan |
 |---|---|---|---|---|---|---|---|---|---|
@@ -9,7 +9,7 @@ Gönderi: 10 · izlenme: 12899 · paylaşım: 24 · takip: 0
 | 3 | [068 bir-omur-kac-hafta](https://www.instagram.com/reel/DgJyGlTSqqd/) | cizgi | 1702 | 1528 | 0.32 | 3.3 | 1.3 | 0 | 28.5 |
 | 4 | [039 yalniz-george-ve-diego](https://www.instagram.com/reel/DgIgAWnG9OO/) | cizgi | 2173 | 1949 | 0.44 | 2.1 | 0.5 | 0 | 26.9 |
 | 5 | [073 bir-omurde-kac-dolunay](https://www.instagram.com/reel/DgHNaycAlDq/) | cizgi | 1405 | 1254 | 0.24 | 4 | 0.8 | 0 | 26.9 |
-| 6 | [009 gunes-dunya](https://www.instagram.com/reel/DgO7t7rORqE/) | sun | 1354 | 1044 | 0.36 | 0 | 1 | 0 | 16.3 |
+| 6 | [009 gunes-dunya](https://www.instagram.com/reel/DgO7t7rORqE/) | sun | 1363 | 1051 | 0.36 | 0 | 1 | 0 | 16.3 |
 | 7 | [003 dunyanin-merkezi](https://www.instagram.com/reel/DgMW5UmTrBR/) | depth | 1103 | 899 | 0.38 | 0 | 0 | 0 | 15.1 |
 | 8 | [078 seksen-uc-yasinda-selimiye](https://www.instagram.com/reel/DgF7IfEjnqY/) | cizgi | 1380 | 1250 | 0.32 | 0 | 0.8 | 0 | 14.4 |
 | 9 | [077 tek-bacakla-143-gun](https://www.instagram.com/reel/DgDWPvCCqYj/) | cizgi | 1708 | 1571 | 0.24 | 0 | 1.3 | 0 | 12.2 |
